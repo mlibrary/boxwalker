@@ -1,0 +1,13 @@
+{
+  "name": "boxwalker",
+  "build": {
+    "dockerfile": "Dockerfile"
+  },
+  "forwardPorts": [3000],
+  "postCreateCommand": "bundle install",
+  "customizations": {
+    "jetbrains": {
+      "backend": "RubyMine"
+    }
+  }
+}
