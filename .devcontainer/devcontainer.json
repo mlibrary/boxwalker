@@ -1,14 +1,22 @@
 {
   "name": "boxwalker",
-  "dockerComposeFile": "../compose.yml",
+  "dockerComposeFile": ["../compose.yml", "compose.devcontainer.yml"],
   "service": "app",
+  "workspaceMount": "source=${localWorkspaceFolder},target=/rails,type=bind,consistency=cached",
   "workspaceFolder": "/rails",
+  "mounts": [
+    "source=${localEnv:HOME}/Library/Application Support/JetBrains,target=/home/rails/.local/share/JetBrains,type=bind,consistency=cached"
+  ],
   "overrideCommand": true,
   "forwardPorts": [3000],
+  "postStartCommand": "echo 'Dev container ready. Start Rails with: bundle exec rails server -b 0.0.0.0 -p 3000'",
   "postCreateCommand": "bundle install",
   "customizations": {
     "jetbrains": {
-      "backend": "RubyMine"
+      "backend": "RubyMine",
+      "plugins": [
+        "com.github.copilot"
+      ]
     }
   }
 }
