@@ -1,3 +1,3 @@
 #!/bin/bash
 
-docker compose exec solr solr create -c blacklight-core -d /opt/solr/conf
+docker compose exec solr solr create -c blacklight-collection -d /opt/solr/conf
