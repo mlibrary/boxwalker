@@ -1,6 +1,9 @@
 ---
 services:
   app:
+    build:
+      args:
+        INSTALL_DEV_TOOLS: "true"
     command: /bin/sh -lc "while sleep 1000; do :; done"
     tty: true
     stdin_open: true
