@@ -4,7 +4,9 @@
 # belong in git's global ignore instead:
 # `$XDG_CONFIG_HOME/git/ignore` or `~/.config/git/ignore`
 
-# Jetbrains IDE
+# Mac, Jetbrains IDE, and Devcontainer
+.devcontainer/
+.DS_Store
 .idea/
 
 # Ignore bundler config.
