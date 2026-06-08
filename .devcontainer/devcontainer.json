@@ -17,7 +17,7 @@
       "nodeGypDependencies": false
     },
     "ghcr.io/devcontainers-extra/features/apt-get-packages:1": {
-      "packages": ["vim"]
+      "packages": ["vim", "build-essential"]
     }
   },
   "forwardPorts": [3000, 8983],
