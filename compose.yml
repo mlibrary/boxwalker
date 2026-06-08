@@ -10,8 +10,6 @@ services:
       - '3000:3000'
     environment:
       - SOLR_URL=http://solr:8983/solr/blacklight-collection
-    env_file:
-      - .env
   solr:
     depends_on:
       zookeeper:
