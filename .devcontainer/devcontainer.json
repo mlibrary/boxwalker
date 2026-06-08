@@ -10,13 +10,18 @@
   "overrideCommand": true,
   "features": {
     "ghcr.io/devcontainers/features/git:1": {},
+    "ghcr.io/devcontainers/features/github-cli:1": {},
+    "ghcr.io/devcontainers/features/node:1": {
+      "version": "26",
+      "nodeGypDependencies": false
+    },
     "ghcr.io/devcontainers-extra/features/apt-get-packages:1": {
       "packages": ["vim"]
     }
   },
-  "forwardPorts": [3000],
-  "postStartCommand": "echo 'Dev container ready. Start Rails with: bundle exec rails server -b 0.0.0.0 -p 3000'",
-  "postCreateCommand": "bundle install",
+  "forwardPorts": [3000, 8983],
+  "postStartCommand": "echo 'Dev container ready. Start the app with: bin/dev (runs the Rails server + CSS watcher on port 3000).'",
+  "postCreateCommand": "bin/setup --skip-server",
   "customizations": {
     "jetbrains": {
       "backend": "RubyMine",

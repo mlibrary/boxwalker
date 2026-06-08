@@ -3,6 +3,37 @@
 This project runs in a JetBrains [Dev Container](https://www.jetbrains.com/help/idea/connect-to-devcontainer.html)
 with **RubyMine** as the backend IDE (see [`devcontainer.json`](./devcontainer.json)).
 
+## What's installed
+
+Beyond the RubyMine backend, the dev container provisions some tooling that the
+production `Dockerfile` deliberately omits (it's built for production, not
+development):
+
+- **git**, **GitHub CLI (`gh`)** — via Dev Container Features.
+- **Node.js 26 + Yarn** (Yarn classic, via Corepack) — required to build the
+  app's CSS (`yarn build:css` / `bin/dev`'s `css` process); the production image
+  only has Node in its throwaway build stage.
+- **vim** — via the `apt-get-packages` feature (add more CLI tools to that
+  `packages` array as needed).
+
+On container create, `bin/setup --skip-server` runs `bundle install`,
+`yarn install`, and `bin/rails db:prepare`. Start the app with **`bin/dev`**
+(runs the Rails server on port 3000 plus the CSS watcher). Solr's admin UI is
+forwarded on port **8983**.
+
+## Portability note (macOS only)
+
+The JetBrains settings mount in `devcontainer.json`:
+
+```
+source=${localEnv:HOME}/Library/Application Support/JetBrains
+```
+
+is **macOS-specific**. On Linux the equivalent is `~/.config/JetBrains`, and
+Windows differs again — there's no single cross-platform expression for it in
+`devcontainer.json`. If you're contributing from Linux/Windows and the mount
+comes up empty, adjust that `source` path locally (or drop the mount).
+
 ## How the IDE is split
 
 JetBrains remote development runs the IDE in two halves:
