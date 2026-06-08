@@ -21,18 +21,23 @@ On container create, `bin/setup --skip-server` runs `bundle install`,
 (runs the Rails server on port 3000 plus the CSS watcher). Solr's admin UI is
 forwarded on port **8983**.
 
-## Portability note (macOS only)
+## JetBrains settings mount (macOS / Linux)
 
-The JetBrains settings mount in `devcontainer.json`:
+The container mounts your local JetBrains settings directory into the backend.
+That directory lives at a different path per OS:
 
-```
-source=${localEnv:HOME}/Library/Application Support/JetBrains
-```
+- **macOS:** `~/Library/Application Support/JetBrains`
+- **Linux:** `~/.config/JetBrains`
 
-is **macOS-specific**. On Linux the equivalent is `~/.config/JetBrains`, and
-Windows differs again — there's no single cross-platform expression for it in
-`devcontainer.json`. If you're contributing from Linux/Windows and the mount
-comes up empty, adjust that `source` path locally (or drop the mount).
+`devcontainer.json` has no native OS conditional, so an `initializeCommand` runs
+on the **host** before the container is created. It detects the OS (`uname`),
+ensures the real settings directory exists, and points a stable symlink
+`~/.jetbrains-devcontainer` at it. The `mounts` entry then binds that symlink, so
+the same config works on both platforms with no per-developer edits.
+
+> **Windows:** the `initializeCommand` uses `bash` and POSIX paths, so it works
+> under WSL/Git Bash but is not set up for native Windows hosts. Run the dev
+> container from WSL, or adjust the mount manually.
 
 ## How the IDE is split
 

@@ -4,8 +4,9 @@
   "service": "app",
   "workspaceMount": "source=${localWorkspaceFolder},target=/rails,type=bind,consistency=cached",
   "workspaceFolder": "/rails",
+  "initializeCommand": "bash -c 'if [ \"$(uname)\" = \"Darwin\" ]; then SRC=\"$HOME/Library/Application Support/JetBrains\"; else SRC=\"$HOME/.config/JetBrains\"; fi; mkdir -p \"$SRC\"; ln -sfn \"$SRC\" \"$HOME/.jetbrains-devcontainer\"'",
   "mounts": [
-    "source=${localEnv:HOME}/Library/Application Support/JetBrains,target=/home/rails/.local/share/JetBrains,type=bind,consistency=cached"
+    "source=${localEnv:HOME}/.jetbrains-devcontainer,target=/home/rails/.local/share/JetBrains,type=bind,consistency=cached"
   ],
   "overrideCommand": true,
   "features": {
