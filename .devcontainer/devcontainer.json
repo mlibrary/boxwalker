@@ -27,7 +27,8 @@
     "jetbrains": {
       "backend": "RubyMine",
       "plugins": [
-        "com.github.copilot"
+        "com.github.copilot",
+        "com.github.jetbrains.plugins.github_copilot_premium_quota_monitor.github-copilot-premium-quota-monitor-for-ij"
       ]
     }
   }
