@@ -1,8 +1,9 @@
 {
   "name": "boxwalker",
-  "build": {
-    "dockerfile": "Dockerfile"
-  },
+  "dockerComposeFile": "../compose.yml",
+  "service": "app",
+  "workspaceFolder": "/rails",
+  "overrideCommand": true,
   "forwardPorts": [3000],
   "postCreateCommand": "bundle install",
   "customizations": {
