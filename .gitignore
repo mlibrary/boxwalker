@@ -5,6 +5,7 @@
 # `$XDG_CONFIG_HOME/git/ignore` or `~/.config/git/ignore`
 
 # Jetbrains IDE and Anthropic Claude files
+.agents
 .claude/
 .idea/
 
