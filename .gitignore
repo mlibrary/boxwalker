@@ -4,7 +4,8 @@
 # belong in git's global ignore instead:
 # `$XDG_CONFIG_HOME/git/ignore` or `~/.config/git/ignore`
 
-# Jetbrains IDE
+# Jetbrains IDE and Anthropic Claude files
+.claude/
 .idea/
 
 # Ignore bundler config.
