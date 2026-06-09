@@ -13,12 +13,12 @@ Rails.application.routes.draw do
   concern :exportable, Blacklight::Routes::Exportable.new
   concern :hierarchy, Arclight::Routes::Hierarchy.new
 
-  resources :solr_documents, only: [ :show ], path: "/catalog", controller: "catalog" do
-  concerns :hierarchy
+  resources :solr_documents, only: [:show], path: "/catalog", controller: "catalog" do
+    concerns :hierarchy
     concerns :exportable
   end
 
-  resources :bookmarks, only: [ :index, :update, :create, :destroy ] do
+  resources :bookmarks, only: [:index, :update, :create, :destroy] do
     concerns :exportable
 
     collection do
