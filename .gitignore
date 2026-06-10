@@ -10,9 +10,6 @@
 # Ingnore IntelliJ IDEA files, which are used for development environments and should not be committed to the repository.
 /.idea/
 
-# Ignore devcontainer files, which are used for development environments and should not be committed to the repository.
-/.devcontainer/
-
 # Ignore Claude Code local settings.
 /.claude/
 
