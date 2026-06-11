@@ -1,13 +1,13 @@
 services:
   app:
     build:
-      context: ..
+      context: .
       dockerfile: .devcontainer/Dockerfile
     command: sleep infinity
     working_dir: /workspaces/boxwalker
     env_file: []
     volumes:
-      - ..:/workspaces/boxwalker:cached
+      - .:/workspaces/boxwalker:cached
       - bundle-cache:/usr/local/bundle
       - node-modules:/workspaces/boxwalker/node_modules
     environment:
