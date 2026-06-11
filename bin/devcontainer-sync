@@ -1,0 +1,4 @@
+#!/usr/bin/env sh
+
+exec ruby script/verify_devcontainer_sync.rb "$@"
+

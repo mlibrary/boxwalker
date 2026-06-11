@@ -9,6 +9,14 @@ This project includes a dedicated devcontainer setup under `.devcontainer/` for 
 - `.devcontainer/devcontainer.json` loads both compose files in order (`../compose.yml`, then `.devcontainer/docker-compose.yml`).
 - Keep runtime version changes in one place by updating `.ruby-version` and `.node-version`, then apply the same values in `.devcontainer/Dockerfile` build args.
 
+Validate these rules locally with:
+
+```shell
+bin/devcontainer-sync
+```
+
+The same check runs in CI as the `devcontainer-sync` job.
+
 ## Quick Start
 
 1. Open the project in the devcontainer using `.devcontainer/devcontainer.json`.

@@ -65,6 +65,16 @@ jobs:
       - name: Lint code for consistent style
         run: bin/rubocop -f github
 
+  devcontainer-sync:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v6
+
+      - name: Verify devcontainer compose sync rules
+        run: ruby script/verify_devcontainer_sync.rb
+
   test:
     runs-on: ubuntu-latest
 
