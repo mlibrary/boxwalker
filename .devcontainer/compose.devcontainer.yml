@@ -14,4 +14,8 @@ services:
       - RAILS_ENV=development
       - BUNDLE_DEPLOYMENT=0
       - BUNDLE_WITHOUT=
+      # Bundler 4 installs gems under /usr/local/bundle/ruby/<abi>; expose it
+      # to plain RubyGems so IDE interpreter checks can find Rails.
+      - GEM_PATH=/usr/local/bundle/ruby/3.4.0:/usr/local/lib/ruby/gems/3.4.0
+      - PATH=/usr/local/bundle/ruby/3.4.0/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin
 

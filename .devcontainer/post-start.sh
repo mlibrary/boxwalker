@@ -1,6 +1,16 @@
 #!/usr/bin/env bash
 set -euo pipefail
 
+ruby_api_version="$(ruby -e 'print RbConfig::CONFIG["ruby_version"]')"
+bundler_bindir="/usr/local/bundle/ruby/${ruby_api_version}/bin"
+rubygems_bindir="/usr/local/bundle/bin"
+
+# RubyMine expects Gem.bindir to exist; Bundler 4 uses an ABI-specific bin dir.
+if [ -d "$bundler_bindir" ] && [ ! -e "$rubygems_bindir" ]; then
+  ln -s "$bundler_bindir" "$rubygems_bindir"
+  echo "Linked $rubygems_bindir -> $bundler_bindir for RubyMine gem discovery."
+fi
+
 # RubyMine Remote Dev can execute this runner directly; ensure it has a Ruby shebang.
 runner_glob='/.jbdevcontainer/JetBrains/RemoteDev/dist/*/plugins/ruby/rb/testing/runner/tunit_or_minitest_in_folder_runner.rb'
 patched_count=0
