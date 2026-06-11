@@ -1,0 +1,59 @@
+services:
+  app:
+    build:
+      context: ..
+      dockerfile: .devcontainer/Dockerfile
+    command: sleep infinity
+    working_dir: /workspaces/boxwalker
+    volumes:
+      - ..:/workspaces/boxwalker:cached
+      - bundle-cache:/usr/local/bundle
+      - node-modules:/workspaces/boxwalker/node_modules
+    environment:
+      SOLR_URL: http://solr:8983/solr/blacklight-collection
+      BUNDLE_PATH: /usr/local/bundle
+    depends_on:
+      solr:
+        condition: service_healthy
+
+  solr:
+    image: solr:9.7
+    volumes:
+      - solr-data:/var/solr
+      - ../solr/conf:/opt/solr/conf
+    healthcheck:
+      interval: 30s
+      timeout: 10s
+      start_period: 30s
+      retries: 5
+      test: ["CMD-SHELL", "curl -s -f 'http://localhost:8983/solr/admin/collections?action=CLUSTERSTATUS'"]
+    ports:
+      - "8983:8983"
+    command: solr-foreground
+    environment:
+      SOLR_JAVA_MEM: -Xms1024m -Xmx1024m
+      SOLR_HEAP: 1024m
+      ZK_HOST: zookeeper:2181
+    depends_on:
+      zookeeper:
+        condition: service_healthy
+
+  zookeeper:
+    image: zookeeper
+    healthcheck:
+      interval: 30s
+      timeout: 10s
+      start_period: 30s
+      retries: 5
+      test: ["CMD", "nc", "-z", "-w", "2", "localhost", "2181"]
+    ports:
+      - "2181:2181"
+    environment:
+      ZOO_MY_ID: 1
+      ZOO_SERVERS: server.1=0.0.0.0:2888:3888;2181
+
+volumes:
+  bundle-cache:
+  node-modules:
+  solr-data:
+

@@ -1,0 +1,24 @@
+{
+  "name": "boxwalker",
+  "dockerComposeFile": "docker-compose.yml",
+  "service": "app",
+  "runServices": ["app", "solr", "zookeeper"],
+  "workspaceFolder": "/workspaces/boxwalker",
+  "shutdownAction": "stopCompose",
+  "forwardPorts": [3000, 8983, 2181],
+  "postCreateCommand": "bundle install && yarn install",
+  "containerEnv": {
+    "SOLR_URL": "http://solr:8983/solr/blacklight-collection",
+    "BUNDLE_PATH": "/usr/local/bundle"
+  },
+  "customizations": {
+    "vscode": {
+      "extensions": [
+        "Shopify.ruby-lsp",
+        "bradlc.vscode-tailwindcss",
+        "ms-azuretools.vscode-docker"
+      ]
+    }
+  }
+}
+
