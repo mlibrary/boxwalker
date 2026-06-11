@@ -2,6 +2,13 @@
 
 This project includes a dedicated devcontainer setup under `.devcontainer/` for local Rails + Solr development.
 
+## Sync Strategy
+
+- `compose.yml` in the project root is the source of truth for shared services (`app`, `solr`, `zookeeper`).
+- `.devcontainer/docker-compose.yml` is an override file that only adjusts the `app` service for editor workflows.
+- `.devcontainer/devcontainer.json` loads both compose files in order (`../compose.yml`, then `.devcontainer/docker-compose.yml`).
+- Keep runtime version changes in one place by updating `.ruby-version` and `.node-version`, then apply the same values in `.devcontainer/Dockerfile` build args.
+
 ## Quick Start
 
 1. Open the project in the devcontainer using `.devcontainer/devcontainer.json`.

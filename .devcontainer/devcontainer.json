@@ -1,6 +1,9 @@
 {
   "name": "boxwalker",
-  "dockerComposeFile": "docker-compose.yml",
+  "dockerComposeFile": [
+    "../compose.yml",
+    "docker-compose.yml"
+  ],
   "service": "app",
   "runServices": ["app", "solr", "zookeeper"],
   "workspaceFolder": "/workspaces/boxwalker",

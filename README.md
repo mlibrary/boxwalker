@@ -28,3 +28,6 @@ bin/dev
 ```
 
 The devcontainer starts `app`, `solr`, and `zookeeper` services and sets `SOLR_URL` to `http://solr:8983/solr/blacklight-collection`.
+
+It uses `compose.yml` as the base and `.devcontainer/docker-compose.yml` as an app-only override. See `.devcontainer/README.md` for details and troubleshooting.
+
