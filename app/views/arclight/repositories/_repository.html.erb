@@ -1,0 +1,92 @@
+<%# Overrides ArcLight Core partial. %>
+<%# Last checked for updates: ArcLight v0.3.0. %>
+<%# https://github.com/projectblacklight/arclight/blob/master/app/views/arclight/repositories/_repository.html.erb %>
+
+
+<% if on_repositories_index? %>
+<%# renders as card display %>
+
+  <div class="col">
+    <div class="card al-repository">
+      <div class="card-img-top">
+     <%= image_tag repository.thumbnail_url, alt: '', class: 'card-img' %>
+    </div>
+    <div class="card-body">
+      <h2 class="card-title text-center">
+        <%= link_to_unless(params[:id] == repository.slug, repository.name, repository_collections_path(repository)) %>
+      </h2>
+
+      <p class="card-text" data-arclight-truncate="false">
+        <%= repository.description %>
+      </p>
+
+    </div>
+
+    <div class="card-footer">
+       <div class="collection-count-wrapper text-center">
+        <%= link_to(repository_collections_path(repository), class: 'btn btn-primary')  do %>
+          <%= t('arclight.views.repositories.browse') %> <%= t(:'arclight.views.repositories.number_of_collections', count: repository.collection_count) %>
+        <% end %>
+      </div>
+    </div>
+    </div>
+  </div>
+
+<% else %>
+<%# renders as horizontal for single use %>
+
+  <div class="card card-horizontal al-repository">
+
+    <div class="card-img">
+      <div class="img-wrapper">
+        <%= image_tag repository.thumbnail_url, alt: '', class: 'card-img' %>
+      </div>
+    </div>
+
+    <div class="card-body">
+      <h2 class="card-title page-sub-sub-heading">
+        <%= link_to_unless(params[:id] == repository.slug, repository.name, repository_collections_path(repository)) %>
+      </h2>
+      <p class="card-text" data-arclight-truncate="false">
+        <%= link_to_unless(params[:id] == repository.slug, "See More About This Repository", repository.about_url) %>
+      </p>
+    </div>
+
+
+    <div class="card-footer">
+      
+      <address>
+        <h3><%= t('arclight.views.repositories.address') %>:</h3>
+        <div class="al-repository-street-address">
+          <% %i[building address1 address2 city_state_zip_country].each do |f| %>
+            <% if repository.send(f).present? %>
+              <div class='al-repository-street-address-<%= f %>'>
+                <%= repository.send(f) %>
+              </div>
+            <% end %>
+          <% end %>
+        </div>
+
+        <div class="al-repository-contact-info">
+          <% if repository.phone.present? %>
+            <div class='al-repository-contact-info-phone'>
+              <%= repository.phone %>
+            </div>
+          <% end %>
+          <% if repository.contact_info.present? %>
+            <div class='al-repository-contact-info-contact_info'>
+              <% if repository.contact_info.include?('@') %>
+                <%= mail_to repository.contact_info %>
+              <% else %>
+                <%= repository.contact_info %>
+              <% end %>
+            </div>
+          <% end %>
+        </div>
+      </address>
+
+    </div>
+
+  </div>
+
+<% end %>

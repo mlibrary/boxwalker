@@ -1,0 +1,17 @@
+<%# Overrides ArcLight Core partial. %>
+<%# Last checked for updates: ArcLight v0.3.0. %>
+<%# https://github.com/projectblacklight/arclight/blob/master/app/views/arclight/repositories/index.html.erb %>
+
+<h1 class="sr-only"><%= t('arclight.repositories') %></h1>
+
+<div class="al-repositories">
+  <% @page_title = t('arclight.views.repositories.title', application_name: application_name) %>
+  <%= render 'shared/breadcrumbs' %>
+  
+  <%# added card-deck div %>
+  <div class="row row-cols-1 row-cols-md-2 g-4">
+  <!-- <div class="card-deck"> -->
+     <%= render @repositories %>
+  </div>
+  
+</div>
