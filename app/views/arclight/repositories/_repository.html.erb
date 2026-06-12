@@ -58,12 +58,17 @@
       <address>
         <h3><%= t('arclight.views.repositories.address') %>:</h3>
         <div class="al-repository-street-address">
-          <% %i[building address1 address2 city_state_zip_country].each do |f| %>
+          <% %i[building address1 address2].each do |f| %>
             <% if repository.send(f).present? %>
               <div class='al-repository-street-address-<%= f %>'>
                 <%= repository.send(f) %>
               </div>
             <% end %>
+          <% end %>
+          <% if repository.city and repository.state and repository.zip and repository.country %>
+            <div class='al-repository-street-address-city_state_zip_country'>
+              <%= city_state_zip_country(repository) %>
+            </div>
           <% end %>
         </div>
 
