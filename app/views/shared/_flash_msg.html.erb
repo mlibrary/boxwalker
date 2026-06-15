@@ -1,0 +1,10 @@
+<% icon_map = { notice: 'info', error: 'critical', alert: 'warning' } %>
+<div class="flash_messages pt-3">
+  <% [:success, :notice, :error, :alert].each do |type| %>
+    <% if flash[type] %>
+      <m-callout icon="<%= icon_map.fetch(type, type) %>" dismissable>
+        <p><%= flash[type].html_safe %></p>
+      </m-callout>
+    <% end %>
+  <% end %>
+</div>
