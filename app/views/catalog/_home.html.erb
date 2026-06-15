@@ -1,0 +1,65 @@
+<% @page_title = t('arclight.views.home.title', application_name: application_name) %>
+<% @random_feature = random_feature %>
+<div class="row homepage main-feature mt-5 mb-5">
+  <div class="col-md-12" >
+    <div class="imgback col-md-5 col-lg-6 col-xl-6 hidden-sm-down"></div>
+    <div class="imgback imgback-image col-md-5 col-lg-6 col-xl-6 hidden-sm-down"
+         style="background-image: url(<%= feature_img_url(@random_feature['image']) %>)">
+    <div class="feature-caption"><span class="sr-only">Featured image: </span><%= @random_feature['caption_html'].html_safe %></div>
+  </div>
+
+  <div class="col-md-7 col-lg-6 col-xl-5 rl-menu-title">
+    <h1 class="main-title">Find Archival Materials</h1>
+    <p>Detailed inventories of <%= number_with_delimiter(collection_count_home) %> collections</p>
+
+    <%#= render_search_bar %>
+
+    <div class="intro-buttons mt-3 mb-3 d-flex">
+      <div id="browse-links" class="btn-group mr-3">
+        <%= link_to t('um_arclight.home.browse_all'), arclight_engine.collections_path %>
+      </div>
+
+      <%#= render 'search_extra_controls' %>
+
+    </div>
+
+    <a class="d-flex align-items-center mt-4 mb-3" href="/repositories">
+      <div>Browse All Repositories</div>
+    </a>
+  </div>
+</div>
+<div class="container-fluid full-width">
+
+  <%# Configurable alert banner %>
+  <%# keys in config/locales/um_arclight.en.yml %>
+  <% if I18n.exists?('um_arclight.home.alert') %>
+    <div id="homepage-alert" class="mb-5 col-md-12 banner-wrapper banner-warning d-flex flex-row">
+      <div class="banner-part banner-heading">
+        <%= blacklight_icon :exclamation_triangle_solid %>
+        <span class="banner-heading-text d-none d-lg-inline pr-4">
+          <%= t('um_arclight.home.alert.title') %>
+        </span>
+      </div>
+      <div class="banner-part banner-shadow"></div>
+      <div class="banner-part banner-message flex-grow-1">
+        <div class="mb-0 banner-message-text p-2">
+          <%= t('um_arclight.home.alert.message_html').html_safe %>
+        </div>
+      </div>
+    </div>
+  <% end %>
+
+  <div id="homepage-text-blocks" class="row mt-4 mb-5 d-flex flex-wrap">
+    <div class="mb-2">
+      <div class="card-title d-flex align-items-center">
+        <div class="card-icon"><span class="material-icons">
+      info
+      </span></div>
+        <h2><%= t('um_arclight.home.about.heading') %></h2>
+      </div>
+      <div class="content-block">
+        <%= t('um_arclight.home.about.text_html').html_safe %>
+      </div>
+    </div>
+  </div>
+</div>
