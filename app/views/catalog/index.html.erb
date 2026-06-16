@@ -1,12 +1,6 @@
 <% content_for(:head) do %>
   <meta name="blacklight-search-storage" content="<%= blacklight_config.track_search_session.storage %>">
 <% end %>
-<% content_for(:sidebar) do %>
-  <% conf = blacklight_config.view_config(document_index_view_type) %>
-  <%= render conf.sidebar_component.new(blacklight_config: blacklight_config,
-                                        response: @response,
-                                        view_config: conf) %>
-<% end %>
 
 <%# Overriding base template so we use our own check for a query, since has_search_parameters always returns true %>
 <%# with our Blacklight config. %>
@@ -15,5 +9,9 @@
   <%= render 'home' %>
   <%= render 'shared/sitelinks_search_box' %>
 <% else %>
+  <% content_for(:sidebar) do %>
+    <% conf = blacklight_config.view_config(document_index_view_type) %>
+    <%= render conf.sidebar_component.new(blacklight_config: blacklight_config, response: @response, view_config: conf) %>
+  <% end %>
   <%= render 'search_results' %>
 <% end %>
