@@ -31,11 +31,11 @@
     </div>
   </div>
 </div>
-<div class="row">
 
-  <%# Configurable alert banner %>
-  <%# keys in config/locales/um_arclight.en.yml %>
-  <% if I18n.exists?('um_arclight.home.alert') %>
+<%# Configurable alert banner %>
+<%# keys in config/locales/um_arclight.en.yml %>
+<% if I18n.exists?('um_arclight.home.alert') %>
+  <div class="row">
     <div id="homepage-alert" class="mb-5 col-md-12 home banner-wrapper banner-warning d-flex flex-row">
       <div class="banner-part banner-heading">
         <%= blacklight_icon :exclamation_triangle_solid %>
@@ -50,17 +50,16 @@
         </div>
       </div>
     </div>
-  <% end %>
-
-  <div id="homepage-text-blocks" class="row mt-4 mb-5 d-flex flex-wrap">
-    <div class="mb-2">
-      <div class="card-title d-flex align-items-center">
-        <div class="card-icon"><span class="material-icons">info</span></div>
-        <h2><%= t('um_arclight.home.about.heading') %></h2>
-      </div>
-      <div class="content-block">
-        <%= t('um_arclight.home.about.text_html').html_safe %>
-      </div>
+  </div>
+<% end %>
+<div id="homepage-text-blocks" class="row mt-4 mb-5 d-flex flex-wrap">
+  <div class="mb-2">
+    <div class="card-title d-flex align-items-center">
+      <div class="card-icon"><span class="material-icons">info</span></div>
+      <h2><%= t('um_arclight.home.about.heading') %></h2>
+    </div>
+    <div class="content-block">
+      <%= t('um_arclight.home.about.text_html').html_safe %>
     </div>
   </div>
 </div>
