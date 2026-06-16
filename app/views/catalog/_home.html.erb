@@ -1,9 +1,9 @@
 <% @page_title = t('arclight.views.home.title', application_name: application_name) %>
 <% @random_feature = random_feature %>
 <div class="row homepage main-feature mt-5 mb-5">
-  <div class="col-md-12" >
-    <div class="imgback col-md-5 col-lg-6 col-xl-6 hidden-sm-down"></div>
-    <div class="imgback imgback-image col-md-5 col-lg-6 col-xl-6 hidden-sm-down"
+  <div class="col-md-12 home">
+    <div class="imgback col-md-5 col-lg-6 col-xl-6 d-none d-md-block"></div>
+    <div class="imgback imgback-image col-md-5 col-lg-6 col-xl-6 d-none d-md-block"
          style="background-image: url(<%= feature_img_url(@random_feature['image']) %>)">
     <div class="feature-caption"><span class="sr-only">Featured image: </span><%= @random_feature['caption_html'].html_safe %></div>
   </div>
@@ -33,7 +33,7 @@
   <%# Configurable alert banner %>
   <%# keys in config/locales/um_arclight.en.yml %>
   <% if I18n.exists?('um_arclight.home.alert') %>
-    <div id="homepage-alert" class="mb-5 col-md-12 banner-wrapper banner-warning d-flex flex-row">
+    <div id="homepage-alert" class="mb-5 col-md-12 home banner-wrapper banner-warning d-flex flex-row">
       <div class="banner-part banner-heading">
         <%= blacklight_icon :exclamation_triangle_solid %>
         <span class="banner-heading-text d-none d-lg-inline pr-4">
@@ -62,4 +62,5 @@
       </div>
     </div>
   </div>
+</div>
 </div>

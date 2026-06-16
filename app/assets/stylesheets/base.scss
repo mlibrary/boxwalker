@@ -287,3 +287,8 @@ mark, .mark {
     padding-top: .25rem; 
   }
 }
+
+/* Fix position:relative missing from BS5 col-md-12, homepage only */
+.col-md-12.home {
+  position:relative;
+}
