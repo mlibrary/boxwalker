@@ -27,7 +27,7 @@ module HomepageHelper
   def collection_count_home
     search_service = Blacklight.repository_class.new(blacklight_config)
     query = search_service.search(
-      q: 'level_sim:Collection',
+      q: 'level_ssim:Collection',
       rows: 1
     )
     query.response['numFound']
