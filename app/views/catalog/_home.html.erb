@@ -14,14 +14,16 @@
       <h1 class="main-title">Find Archival Materials</h1>
       <p>Detailed inventories of <%= number_with_delimiter(collection_count_home) %> collections</p>
 
-      <%#= render_search_bar %>
+      <%= render(blacklight_config.view_config(document_index_view_type).search_bar_component.new(
+        url: search_action_url,
+        advanced_search_url: search_action_url(action: 'advanced_search'),
+        params: search_state.params_for_search.except(:qt),
+        autocomplete_path: search_action_path(action: :suggest))) %>
 
       <div class="intro-buttons mt-3 mb-3 d-flex">
         <div id="browse-links" class="btn-group me-3">
           <%= link_to t('um_arclight.home.browse_all'), arclight_engine.collections_path %>
         </div>
-
-        <%#= render 'search_extra_controls' %>
 
       </div>
 
