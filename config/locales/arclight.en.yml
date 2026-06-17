@@ -1,4 +1,8 @@
 en:
+  arclight:
+    views:
+      home:
+        title: University of Michigan Finding Aids
   blacklight:
     search:
       fields:
