@@ -1,6 +1,10 @@
 /* ====================== */
 /* GLOBAL      */
 /* ====================== */
+:root {
+  --bs-breadcrumb-divider: "»";
+}
+
 html {
   scroll-padding-top: 2rem;
 }
