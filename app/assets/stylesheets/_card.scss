@@ -17,3 +17,125 @@
   object-fit: cover;
   object-position: center;
 }
+
+/* repository cards */
+$gray-light: #676767 !default;
+$facet-grey: #f5f5f5 !default;
+$primary-link-color: #004CCC;
+
+.blacklight-repositories-index {
+  .card-deck {
+    margin-bottom: 1rem;
+  }
+}
+
+.al-repository {
+  background-color: $facet-grey;
+  border-radius: 0.25rem;
+
+  .al-repository-information {
+    .al-repository-contact,
+    .al-repository-extra-collection-count {
+      font-weight: 400;
+    }
+  }
+
+  .collection-count-wrapper {
+    margin: 1rem 0 1rem 0;
+
+    .btn {
+      width: 100%;
+    }
+  }
+
+  .card-img {
+    overflow: hidden;
+    flex: 1;
+    align-self: center;
+    border-bottom-right-radius: 0;
+    border-bottom-left-radius: 0;
+    height: 100%;
+    object-fit: cover;
+
+    .img-wrapper {
+      height: 10rem;
+      align-self: center;
+      display: flex;
+      background-color: $gray-light;
+      border: 1px solid #dee2e6;
+    }
+  }
+
+  .card-footer {
+    line-height: 1.2;
+    .al-repository-street-address {
+      margin-bottom: 1rem;
+    }
+  }
+}
+
+.child-components article:nth-of-type(odd) {
+  .responsiveTruncatorToggle {
+    &::before {
+      background: linear-gradient(to left, #f7f7f7, rgba(255, 255, 255, 0.1));
+    }
+  }
+}
+
+@include media-breakpoint-up(lg) {
+  .card-horizontal {
+    flex-direction: row;
+    max-height: 14rem;
+
+    .card-img {
+      display: none;
+    }
+
+    .card-body {
+      flex: 2;
+
+      .card-text.expanded {
+        overflow-y: scroll;
+        max-height: 70%;
+        padding-right: 0.5rem;
+      }
+    }
+
+    .card-footer {
+      padding: 1.25rem;
+      background-color: rgba(0, 0, 0, 0.03);
+      border-left: 1px solid rgba(0, 0, 0, 0.125);
+      border-top: unset;
+    }
+  }
+}
+
+@include media-breakpoint-up(xl) {
+  .card-horizontal {
+    .card-img {
+      display: flex;
+      overflow: hidden;
+      flex: 1;
+      align-self: center;
+      border-bottom-right-radius: 0;
+      border-top-right-radius: 0;
+
+      .img-wrapper {
+        max-height: 14rem;
+        align-self: center;
+        display: flex;
+        background-color: $gray-light;
+        width: 100%;
+      }
+    }
+  }
+}
+
+.page-link {
+  color: $primary-link-color;
+}
+
+.page-item.active .page-link {
+  background-color: $primary-link-color;
+  border-color: $primary-link-color;
+}
