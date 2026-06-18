@@ -1,4 +1,6 @@
 # frozen_string_literal: true
+require_relative "../components/custom_constraints_component"
+
 
 # Blacklight controller that handles searches and document requests
 class CatalogController < ApplicationController
@@ -65,7 +67,7 @@ class CatalogController < ApplicationController
     config.index.display_type_field = "level_ssm"
     config.index.document_component = Arclight::SearchResultComponent
     config.index.group_component = Arclight::GroupComponent
-    config.index.constraints_component = Arclight::ConstraintsComponent
+    config.index.constraints_component = CustomConstraintsComponent
     config.index.document_presenter_class = Arclight::IndexPresenter
     config.index.search_bar_component = Arclight::SearchBarComponent
     # config.index.thumbnail_field = 'thumbnail_path_ss'

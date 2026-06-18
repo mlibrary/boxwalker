@@ -1,0 +1,9 @@
+<% if repository %>
+  <div class="al-repository-card">
+    <%= render repository %>
+  </div>
+<% end %>
+
+<div class="card p-2">
+  <%= render Blacklight::ConstraintsComponent.new(**@kwargs) %>
+</div>
