@@ -1,7 +1,5 @@
-<%# Copied from ArcLight core in order to customize locally %>
-<%# Last checked for updates:      %>
-<%# ArcLight v0.3.2. %>
-<%# https://github.com/projectblacklight/arclight/blob/master/app/views/shared/_header_navbar.html.erb #%>
+<!-- Used to be a partial in Arclight but no longer is, and now is just rendered via the
+     local layouts/blacklight/base.html -->
 
 <m-universal-header></m-universal-header>
 <m-website-header name="Finding Aids" variant="dark">
@@ -13,6 +11,5 @@
         params: search_state.params_for_search.except(:qt),
         autocomplete_path: search_action_path(action: :suggest))) unless homepage? %>
     </div>
-<!--    <a href="/">Log in</a>-->
   </div>
 </m-website-header>
