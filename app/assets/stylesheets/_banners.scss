@@ -1,12 +1,13 @@
 @use "bootstrap-context" as bs;
 
-/* ====================== */
-/* BANNERS & ALERTS       */
-/* ====================== */
+/* ======================================== */
+/* CONFIGURABLE HOMEPAGE ALERT BANNER       */
+/* Used by app/views/catalog/_home.html.erb */
+/* (only the warning variant is wired up)   */
+/* ======================================== */
 
 .banner-wrapper {
   min-height: 50px;
-  background-color: bs.tint-color(bs.$success, 93.5%);
   padding: 0;
   margin-bottom: 20px;
 
@@ -16,45 +17,37 @@
 
     &.banner-heading {
       align-items: center; /* vertical */
-      background: bs.$success;
-      color: white;
+      color: var(--color-neutral-500);
       font-size: 20px;
-      -webkit-clip-path: polygon(0 0, 100% 0, calc(100% - 20px) 100%, 0 100%);
-      clip-path: polygon(0 0, 100% 0, calc(100% - 20px) 100%, 0 100%);
       white-space: nowrap;
       padding: 0 60px 0 15px;
       line-height: 1.2em;
+      -webkit-clip-path: polygon(0 0, 100% 0, calc(100% - 20px) 100%, 0 100%);
+      clip-path: polygon(0 0, 100% 0, calc(100% - 20px) 100%, 0 100%);
 
-      @include bs.media-breakpoint-down(xl) {
-        padding: 15px;
-      }
+      @include bs.media-breakpoint-down(xl) { padding: 15px; }
+      @include bs.media-breakpoint-down(lg) { display: block; }
 
-      @include bs.media-breakpoint-down(lg) {
-        display: block;
-      }
-
-      /* IE support removed */
       .blacklight-icons svg {
-        fill: bs.tint-color(bs.$success, 70%);
+        fill: var(--color-neutral-500);
         height: 1.2rem;
         width: 1.2rem;
         margin-right: 0.6rem;
       }
 
-      & .banner-heading-text {
+      .banner-heading-text {
         text-transform: uppercase;
       }
     }
 
     &.banner-shadow {
-      background-color: bs.tint-color(bs.$success, 70%);
       width: 40px;
       min-width: 40px;
       max-width: 40px;
-      align-items: center; /* vertical */
+      align-items: center;
+      margin: 0 -20px;
       -webkit-clip-path: polygon(20px 0, 100% 0, calc(100% - 20px) 100%, 0 100%);
       clip-path: polygon(20px 0, 100% 0, calc(100% - 20px) 100%, 0 100%);
-      margin: 0 -20px;
     }
 
     &.banner-message {
@@ -63,153 +56,18 @@
       padding: 25px 10px 10px 30px;
       line-height: 1.4em;
 
-      & .banner-message-text {
-        font-weight: bold;
-        color: bs.$success;
-      }
-
-      & .banner-link {
-        font-size: 15px;
-        font-weight: normal;
-        color: bs.$gray-600;
-        margin-right: 0.6em;
-
-        & .fas {
-          font-size: 12px;
-          margin-right: 3px;
-        }
-      }
-    }
-  }
-
-  &.banner-warning {
-    background-color: var(--color-maize-200);
-
-    .banner-heading {
-      color: var(--color-neutral-500); // or var(--color-maize-500) if you prefer
-      background-color: var(--color-maize-400);
-
-      & .blacklight-icons svg {
-        fill: var(--color-neutral-500);
-      }
-    }
-
-    .banner-shadow {
-      background-color: var(--color-maize-300);
-    }
-
-    .banner-message {
       .banner-message-text {
         font-weight: 600;
         color: var(--color-neutral-500);
       }
     }
   }
-}
 
-.alert-success {
-  background-color: bs.tint-color(bs.$success, 80%);
-  color: bs.shade-color(bs.$success, 50%);
+  /* Only variant currently used in the app */
+  &.banner-warning {
+    background-color: var(--color-maize-200);
 
-  p,
-  a {
-    color: bs.shade-color(bs.$success, 50%);
+    .banner-heading  { background-color: var(--color-maize-400); }
+    .banner-shadow   { background-color: var(--color-maize-300); }
   }
-
-  a.btn {
-    border-color: bs.$success;
-    background-color: bs.$success;
-    color: bs.tint-color(bs.$success, 90%);
-  }
-
-  .btn-close:hover {
-    color: bs.shade-color(bs.$success, 50%);
-  }
-}
-
-.alert-warning {
-  background-color: bs.tint-color(bs.$warning, 80%);
-  color: bs.shade-color(bs.$warning, 50%);
-
-  p,
-  a {
-    color: bs.shade-color(bs.$warning, 50%);
-  }
-
-  a.btn {
-    border-color: bs.$warning;
-    background-color: bs.$warning;
-    color: bs.shade-color(bs.$warning, 90%);
-  }
-
-  .btn-close:hover {
-    color: bs.shade-color(bs.$warning, 50%);
-  }
-}
-
-.alert-danger {
-  background-color: bs.$danger;
-  color: white;
-
-  p,
-  a {
-    color: white;
-  }
-
-  a.btn {
-    border-color: bs.shade-color(bs.$danger, 50%);
-    background-color: bs.shade-color(bs.$danger, 50%);
-    color: bs.tint-color(bs.$danger, 90%);
-  }
-}
-
-.alert-info-dul {
-  background-color: bs.$primary;
-  color: white;
-
-  p,
-  a {
-    color: white;
-  }
-
-  a.btn {
-    border-color: bs.shade-color(bs.$primary, 50%);
-    background-color: bs.shade-color(bs.$primary, 50%);
-    color: bs.tint-color(bs.$primary, 80%);
-  }
-}
-
-/* make alerts look more like m-callout */
-.alert-info {
-  background-color: white;
-  color: var(--color-neutral-400);
-
-  border-top: solid 1px var(--color-neutral-100);
-  border-right: solid 1px var(--color-neutral-100);
-  border-bottom: solid 1px var(--color-neutral-100);
-
-  border-left: solid 1px var(--color-teal-400);
-  padding: var(--space-medium) var(--space-large);
-  border-radius: 4px;
-  border-left-width: 4px;
-
-  display: grid;
-  gap: 0.5rem;
-  grid-template-columns: auto 1fr auto;
-
-  p,
-  a {
-    color: var(--color-neutral-400);
-  }
-
-  &::before {
-    display: block;
-    content: "\f05a";
-    font-family: "Font Awesome 5 Free";
-    font-weight: 900;
-  }
-}
-
-.flash_messages > .alert:first-child {
-  margin-top: 0.5rem;
 }
