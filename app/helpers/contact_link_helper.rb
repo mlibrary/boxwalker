@@ -3,8 +3,9 @@
 # Helpers for building a link to Qualtrics
 module ContactLinkHelper
   def contact_link
-    return config.default_contact_link unless config.key?(:qualtrics_survey_link)
-    build_contact_link config.qualtrics_survey_link, repository_id
+    settings = Rails.configuration.settings
+    return settings.default_contact_link unless settings.key?(:qualtrics_survey_link)
+    build_contact_link settings.qualtrics_survey_link, repository_id
   end
 
   private
@@ -18,8 +19,8 @@ module ContactLinkHelper
   end
 
   def repository_id
-    if params[:f].present? && params[:f]["repository_sim"].present?
-      repository_config = Arclight::Repository.find_by(name: params[:f]["repository_sim"].first)
+    if params[:f].present? && params[:f]["repository"].present?
+      repository_config = Arclight::Repository.find_by(name: params[:f]["repository"].first)
       return repository_config.slug
     end
 
