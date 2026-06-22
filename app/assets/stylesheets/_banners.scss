@@ -1,5 +1,4 @@
-/* dandelion warning color not available in Bootstrap 5: workaround */
-$dandelion: #ffc107 !default;
+@use "bootstrap-context" as bs;
 
 /* ====================== */
 /* BANNERS & ALERTS       */
@@ -7,16 +6,17 @@ $dandelion: #ffc107 !default;
 
 .banner-wrapper {
   min-height: 50px;
-  background-color: tint-color($success, 93.5%);
+  background-color: bs.tint-color(bs.$success, 93.5%);
   padding: 0;
   margin-bottom: 20px;
+
   .banner-part {
     min-height: 50px;
     display: flex;
 
     &.banner-heading {
       align-items: center; /* vertical */
-      background: $success;
+      background: bs.$success;
       color: white;
       font-size: 20px;
       -webkit-clip-path: polygon(0 0, 100% 0, calc(100% - 20px) 100%, 0 100%);
@@ -25,17 +25,17 @@ $dandelion: #ffc107 !default;
       padding: 0 60px 0 15px;
       line-height: 1.2em;
 
-      @include media-breakpoint-down(xl) {
+      @include bs.media-breakpoint-down(xl) {
         padding: 15px;
       }
 
-      @include media-breakpoint-down(lg) {
+      @include bs.media-breakpoint-down(lg) {
         display: block;
       }
 
       /* IE support removed */
       .blacklight-icons svg {
-        fill: tint-color($success, 70%);
+        fill: bs.tint-color(bs.$success, 70%);
         height: 1.2rem;
         width: 1.2rem;
         margin-right: 0.6rem;
@@ -47,7 +47,7 @@ $dandelion: #ffc107 !default;
     }
 
     &.banner-shadow {
-      background-color: tint-color($success, 70%);
+      background-color: bs.tint-color(bs.$success, 70%);
       width: 40px;
       min-width: 40px;
       max-width: 40px;
@@ -65,13 +65,13 @@ $dandelion: #ffc107 !default;
 
       & .banner-message-text {
         font-weight: bold;
-        color: $success;
+        color: bs.$success;
       }
 
       & .banner-link {
         font-size: 15px;
         font-weight: normal;
-        color: $gray-600;
+        color: bs.$gray-600;
         margin-right: 0.6em;
 
         & .fas {
@@ -83,92 +83,99 @@ $dandelion: #ffc107 !default;
   }
 
   &.banner-warning {
-    background-color: tint-color($dandelion, 60%);
+    background-color: var(--color-maize-200);
+
     .banner-heading {
-      color: shade-color($dandelion, 60%);
-      background-color: $dandelion;
+      color: var(--color-neutral-500); // or var(--color-maize-500) if you prefer
+      background-color: var(--color-maize-400);
+
       & .blacklight-icons svg {
-        fill: shade-color($dandelion, 60%);
+        fill: var(--color-neutral-500);
       }
     }
+
     .banner-shadow {
-      background-color: tint-color($dandelion, 30%);
+      background-color: var(--color-maize-300);
     }
+
     .banner-message {
       .banner-message-text {
         font-weight: 600;
-        color: shade-color($dandelion, 60%);
+        color: var(--color-neutral-500);
       }
     }
   }
-
 }
 
 .alert-success {
-  background-color: tint-color($success, 80%);
-  color: shade-color($success, 50%);
+  background-color: bs.tint-color(bs.$success, 80%);
+  color: bs.shade-color(bs.$success, 50%);
 
-  p, a {
-    color: shade-color($success, 50%);
+  p,
+  a {
+    color: bs.shade-color(bs.$success, 50%);
   }
 
   a.btn {
-    border-color: $success;
-    background-color: $success;
-    color: tint-color($success, 90%);
+    border-color: bs.$success;
+    background-color: bs.$success;
+    color: bs.tint-color(bs.$success, 90%);
   }
 
   .btn-close:hover {
-    color: shade-color($success, 50%);
+    color: bs.shade-color(bs.$success, 50%);
   }
 }
 
 .alert-warning {
-  background-color: tint-color($warning, 80%);
-  color: shade-color($warning, 50%);
+  background-color: bs.tint-color(bs.$warning, 80%);
+  color: bs.shade-color(bs.$warning, 50%);
 
-  p, a {
-    color: shade-color($warning, 50%);
+  p,
+  a {
+    color: bs.shade-color(bs.$warning, 50%);
   }
 
   a.btn {
-    border-color: $warning;
-    background-color: $warning;
-    color: shade-color($warning, 90%);
+    border-color: bs.$warning;
+    background-color: bs.$warning;
+    color: bs.shade-color(bs.$warning, 90%);
   }
 
   .btn-close:hover {
-    color: shade-color($warning, 50%);
+    color: bs.shade-color(bs.$warning, 50%);
   }
 }
 
 .alert-danger {
-  background-color: $danger;
+  background-color: bs.$danger;
   color: white;
 
-  p, a {
+  p,
+  a {
     color: white;
   }
 
   a.btn {
-    border-color: shade-color($danger, 50%);
-    background-color: shade-color($danger, 50%);
-    color: tint-color($danger, 90%);
+    border-color: bs.shade-color(bs.$danger, 50%);
+    background-color: bs.shade-color(bs.$danger, 50%);
+    color: bs.tint-color(bs.$danger, 90%);
   }
 }
 
 .alert-info-dul {
-  background-color: $primary;
+  background-color: bs.$primary;
   color: white;
 
-  p, a {
+  p,
+  a {
     color: white;
   }
 
   a.btn {
-    border-color: shade-color($primary, 50%);
-    background-color: shade-color($primary, 50%);
-    color: tint-color($primary, 80%);
+    border-color: bs.shade-color(bs.$primary, 50%);
+    background-color: bs.shade-color(bs.$primary, 50%);
+    color: bs.tint-color(bs.$primary, 80%);
   }
 }
 
@@ -190,7 +197,8 @@ $dandelion: #ffc107 !default;
   gap: 0.5rem;
   grid-template-columns: auto 1fr auto;
 
-  p, a {
+  p,
+  a {
     color: var(--color-neutral-400);
   }
 
