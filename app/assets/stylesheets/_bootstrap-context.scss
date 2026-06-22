@@ -1,0 +1,5 @@
+// Loads Bootstrap's compile-time API (functions, variables, mixins)
+// so partials can `@use` this one file and get everything.
+@forward "bootstrap/scss/functions";
+@forward "bootstrap/scss/variables";
+@forward "bootstrap/scss/mixins";
