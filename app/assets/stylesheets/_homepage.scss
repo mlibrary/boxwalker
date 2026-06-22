@@ -64,6 +64,27 @@
         background-color: white !important;
       }
     }
+
+    .search-btn {
+      color: #000;
+      background-color: var(--color-maize-400);
+      border-color: var(--color-maize-400);
+
+      &:hover {
+        color: #000;
+        background-color: var(--color-maize-400);
+        border-color: var(--color-maize-400);
+      }
+      &:focus {
+        outline: 0;
+        box-shadow: 0 0 0 2px var(--color-maize-400),
+        0 0 0 3px var(--color-neutral-400);
+        border-radius: 2px !important;
+        color: #000;
+        background-color: var(--color-maize-400);
+        border-color: var(--color-maize-400);
+      }
+    }
   }
 }
 

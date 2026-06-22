@@ -7,12 +7,9 @@ en:
       about:
         heading: About This Site
         text_html: <p>Use this site to search and explore finding aids, also called collection guides. Finding aids describe collections of primary sources and other unique, original, or rare materials held by these repositories. Materials include manuscripts, correspondence, organizational records, photographs, audio visual recordings, ephemera, and born-digital materials.</p><p>The finding aid provides information about:</p><ul><li>The origin of the collection</li> <li>A brief biography or historical sketch of the individual or organization that created the collection</li><li>A statement of the intellectual and physical organization of the collections</li><li>A narrative "scope and content note" describing the intellectual content of the collection as a whole and of its major subdivisions</li><li>A detailed "contents list" providing a hierarchical listing of the collections from the series down to the file, or possibly the item, level</li></ul></div>
-      ask:
-        heading: Ask a Librarian
-      alert:
-        title: Some alert
-        message_html: <p>Warning warning!</p>
-
+#      alert:
+#        title: Some alert
+#        message_html: <p>Warning warning!</p>
 
     advanced_search:
       title: "Advanced Search"
