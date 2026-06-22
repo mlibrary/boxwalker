@@ -1,6 +1,6 @@
 # frozen_string_literal: true
 
-module UMArclightHelper
+module UmArclightHelper
   # Shorthand to distinguish the homepage among other index presenter driven pages
   def homepage?
     current_page?(root_path) && !has_search_parameters?
