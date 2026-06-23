@@ -67,3 +67,28 @@
     color: var(--color-teal-400);
   }
 }
+#sidebar {
+  z-index: 20;
+  background: white;
+  padding-top: 5px;
+  box-shadow: 1px 0 1px -1px rgba(0,0,0,0.06),2px 0 2px -2px rgba(0,0,0,0.06),4px 0 4px -4px rgba(0,0,0,0.06),8px 0 8px -8px rgba(0,0,0,0.06),16px 0 16px -16px rgba(0,0,0,0.06)
+}
+@media (max-width: 991.98px) {
+  #sidebar {
+    z-index:1200
+  }
+}
+
+#sidebar h2 {
+  font-weight: bold;
+  font-size: 20px;
+  text-transform: uppercase
+}
+
+#sidebar h2 .fas {
+  margin-right: 0.2rem
+}
+
+#sidebar h2.sr-only {
+  display: none
+}
