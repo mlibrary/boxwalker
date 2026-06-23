@@ -7,7 +7,6 @@
     background: #fff;
     border: solid 1px var(--color-neutral-100);
 
-    /* ??? */
     @include bs.media-breakpoint-down(sm) {
       min-height: 250px;
     }
@@ -99,7 +98,6 @@
   padding: 2em 3em;
   width: calc(100% - 12px);
 
-  /* ??? */
   @include bs.media-breakpoint-down(sm) {
     width: 100%;
   }
