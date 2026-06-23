@@ -47,3 +47,23 @@
     }
   }
 }
+
+#sortAndPerPage {
+  .btn {
+    padding: 0.25rem 0.5rem;
+    font-size: 14px;
+  }
+
+  .btn-outline-secondary {
+    background-color: #fff;
+    border: solid 1px var(--color-neutral-400);
+    color: var(--color-neutral-400);
+    padding: 0.5rem;
+  }
+
+  .btn-outline-secondary:not(:disabled):not(.disabled).active {
+    background-color: var(--color-teal-100);
+    border: solid 1px var(--color-teal-400);
+    color: var(--color-teal-400);
+  }
+}
