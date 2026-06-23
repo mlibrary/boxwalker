@@ -1,3 +1,6 @@
+@use "bootstrap-context" as bs;
+@use "colors";
+
 .card-title {
   margin-bottom: 0.75rem;
 }
@@ -19,9 +22,6 @@
 }
 
 /* repository cards */
-$gray-light: #676767 !default;
-$facet-grey: #f5f5f5 !default;
-$primary-link-color: #004CCC;
 
 .blacklight-repositories-index {
   .card-deck {
@@ -30,7 +30,7 @@ $primary-link-color: #004CCC;
 }
 
 .al-repository {
-  background-color: $facet-grey;
+  background-color: colors.$facet-grey;
   border-radius: 0.25rem;
 
   .al-repository-information {
@@ -61,7 +61,7 @@ $primary-link-color: #004CCC;
       height: 10rem;
       align-self: center;
       display: flex;
-      background-color: $gray-light;
+      background-color: colors.$gray-light;
       border: 1px solid #dee2e6;
     }
   }
@@ -82,7 +82,7 @@ $primary-link-color: #004CCC;
   }
 }
 
-@include media-breakpoint-up(lg) {
+@include bs.media-breakpoint-up(lg) {
   .card-horizontal {
     flex-direction: row;
     max-height: 14rem;
@@ -110,7 +110,7 @@ $primary-link-color: #004CCC;
   }
 }
 
-@include media-breakpoint-up(xl) {
+@include bs.media-breakpoint-up(xl) {
   .card-horizontal {
     .card-img {
       display: flex;
@@ -124,7 +124,7 @@ $primary-link-color: #004CCC;
         max-height: 14rem;
         align-self: center;
         display: flex;
-        background-color: $gray-light;
+        background-color: colors.$gray-light;
         width: 100%;
       }
     }
@@ -132,10 +132,10 @@ $primary-link-color: #004CCC;
 }
 
 .page-link {
-  color: $primary-link-color;
+  color: colors.$primary-link-color;
 }
 
 .page-item.active .page-link {
-  background-color: $primary-link-color;
-  border-color: $primary-link-color;
+  background-color: colors.$primary-link-color;
+  border-color: colors.$primary-link-color;
 }
