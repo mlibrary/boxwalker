@@ -1,0 +1,285 @@
+/* ====================== */
+/* GLOBAL      */
+/* ====================== */
+:root {
+  --bs-breadcrumb-divider: "»";
+}
+
+html {
+  scroll-padding-top: 2rem;
+}
+
+body {
+  background-color: #fff;
+  accent-color: var(--color-teal-400);
+}
+
+a {
+  color: var(--color-teal-400);
+  text-decoration: underline;
+
+  &:hover {
+    color: var(--color-teal-500);
+    text-decoration-thickness: 2px;
+  }
+}
+
+h1, h2, h3 {
+  line-height: var(--line-height-heading);
+}
+
+/* ====================== */
+/* BUTTONS     */
+/* ====================== */
+
+.btn:focus,
+.btn-group > .btn:focus {
+  outline: 0;
+  box-shadow: 0 0 0 2px var(--color-maize-400),
+    0 0 0 3px var(--color-neutral-400);
+  border-radius: 2px !important;
+}
+
+.btn {
+  outline: 0;
+  display: inline-block;
+  border: none;
+  font-weight: 700;
+  font-size: 1em;
+  font-family: var(--font-base-family);
+  border-radius: var(--radius-default);
+  text-decoration: none;
+}
+
+.btn-primary {
+  background-color: var(--color-teal-400);
+  border-color: var(--color-teal-400);
+  &:hover,
+  &:active,
+  &:focus {
+    border-color: var(--color-teal-400);
+    background-color: var(--color-teal-400);
+    outline: 0;
+    box-shadow: 0 0 0 2px var(--color-maize-400),
+      0 0 0 3px var(--color-neutral-400);
+    border-radius: 2px !important;
+  }
+}
+
+.btn-secondary {
+  color: var(--color-blue-400);
+  font-weight: bold;
+  background-color: var(--color-neutral-100);
+  border-color: var(--color-neutral-100);
+  &:hover {
+    color: var(--color-blue-400);
+    background-color: var(--color-neutral-100);
+    border-color: var(--color-neutral-100);
+  }
+  &:active {
+    color: var(--color-blue-400);
+    background-color: var(--color-neutral-100);
+    border-color: var(--color-neutral-100);
+  }
+  &:focus {
+    background-color: var(--color-neutral-100);
+    color: var(--color-blue-400);
+  }
+}
+
+.btn-secondary:not(:disabled):not(.disabled):active {
+  color: var(--color-blue-400);
+  background-color: var(--color-neutral-100);
+  border-color: var(--color-neutral-100);
+}
+
+.btn-success {
+  color: #fff;
+  font-weight: bold;
+  font-size: 1em;
+  background-color: var(--color-green-500);
+  border-color: var(--color-green-500);
+  &:focus {
+    outline: 0;
+    box-shadow: 0 0 0 2px var(--color-maize-400),
+      0 0 0 3px var(--color-neutral-400);
+    border-radius: 2px !important;
+  }
+}
+
+.btn-danger {
+  color: #fff;
+  background-color: var(--color-pink-500);
+  border-color: var(--color-pink-500);
+  &:focus {
+    outline: 0;
+    box-shadow: 0 0 0 2px var(--color-maize-400),
+      0 0 0 3px var(--color-neutral-400);
+    border-radius: 2px !important;
+  }
+}
+
+.btn-outline-request {
+  border: 1px solid var(--color-neutral-100);
+  color: var(--color-blue-400);
+}
+
+.btn-outline-request.squat {
+  min-width: 2.875rem;
+  min-height: 2.875rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: white;
+}
+
+.btn-outline-dark {
+  border: 1px solid #343a40;
+  color: #343a40;
+}
+
+.btn-outline-secondary {
+  border: 1px solid #6c757d;
+  color: #6c757d;
+}
+
+.btn-outline-ghost {
+  border: 1px solid #eee;
+  color: #eee;
+}
+
+.m-search-btn {
+  color: var(--color-neutral-500);
+  background-color: var(--color-maize-400);
+  border-color: var(--color-maize-400);
+  &:focus, &:hover, &:active {
+    outline: 0;
+    box-shadow: 0 0 0 2px #fff,
+      0 0 0 3px var(--color-neutral-400);
+    border-radius: 2px !important;
+    color: var(--color-neutral-500);
+    background-color: var(--color-maize-400);
+  }
+}
+
+.btn-link {
+  color: var(--color-teal-400);
+  background-color: transparent;
+  &:focus {
+    outline: 0;
+    box-shadow: 0 0 0 2px var(--color-maize-400),
+      0 0 0 3px var(--color-neutral-400);
+    border-radius: 2px !important;
+  }
+}
+
+.btn-outline-secondary:hover {
+  color: var(--color-neutral-500);
+  background-color: var(--color-neutral-100);
+}
+
+.btn-outline-primary:hover {
+  color: #fff;
+  background-color: transparent;
+  border: none;
+}
+
+.btn-outline-secondary:not(:disabled):not(.disabled).active:focus {
+  outline: 0;
+  box-shadow: 0 0 0 2px var(--color-maize-400),
+    0 0 0 3px var(--color-neutral-400);
+  border-radius: 2px !important;
+}
+
+.al-restricted-component-icon svg {
+  color: var(--color-orange-500);
+}
+
+/* ====================== */
+/* TYPOGRAPHY     */
+/* ====================== */
+
+.responsiveTruncate{
+  font-size: 1rem;
+}
+
+mark, .mark {
+  padding: 0;
+  background-color: var(--color-maize-200);
+}
+
+.al-document-highlight mark {
+   background-color: var(--color-maize-200);
+}
+
+/* =============++========= */
+/* Prose/Text Container    */
+/* ====================== */
+
+.prose-container {
+  padding: 4rem 0;
+
+  h1 {
+    max-width: 40ch;
+    font-size: 2.5rem;
+  }
+  h2 {
+    padding-top:1rem;
+  }
+}
+
+/* ======================== */
+/* Banners / Callouts      */
+/* ====================== */
+
+.umich-lib-callout {
+  margin: 1rem 0;
+  padding: 1rem;
+  border: solid 1px #E5E9ED;
+  border-radius: 4px;
+}
+
+.umich-lib-callout {
+  display: flex;
+  align-items: flex-start;
+}
+
+.callout--content > p {
+  font-weight: var(--semibold);
+  margin-bottom: .35rem;
+}
+
+.callout--content > a.callout--link {
+  color: var(--color-neutral-400);
+}
+
+.umich-lib-callout.callout--content {
+  display: flex;
+}
+
+.callout--content h2 {
+  font-size: 1.15rem;
+}
+
+.umich-lib-callout.success {
+  background-color: var(--color-green-100);
+  border-left: solid 4px var(--color-green-400);
+  &::before {
+    content: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' height='24' width='24' viewBox='0 0 640 512'%3E%3Cpath fill='%23198539' d='M608 0H160a32 32 0 0 0-32 32v96h160V64h192v320h128a32 32 0 0 0 32-32V32a32 32 0 0 0-32-32zM232 103a9 9 0 0 1-9 9h-30a9 9 0 0 1-9-9V73a9 9 0 0 1 9-9h30a9 9 0 0 1 9 9zm352 208a9 9 0 0 1-9 9h-30a9 9 0 0 1-9-9v-30a9 9 0 0 1 9-9h30a9 9 0 0 1 9 9zm0-104a9 9 0 0 1-9 9h-30a9 9 0 0 1-9-9v-30a9 9 0 0 1 9-9h30a9 9 0 0 1 9 9zm0-104a9 9 0 0 1-9 9h-30a9 9 0 0 1-9-9V73a9 9 0 0 1 9-9h30a9 9 0 0 1 9 9zm-168 57H32a32 32 0 0 0-32 32v288a32 32 0 0 0 32 32h384a32 32 0 0 0 32-32V192a32 32 0 0 0-32-32zM96 224a32 32 0 1 1-32 32 32 32 0 0 1 32-32zm288 224H64v-32l64-64 32 32 128-128 96 96z'%3E%3C/path%3E%3C/svg%3E%0A");    
+    margin-right: .75rem;
+    padding-top: .25rem; 
+  }
+}
+
+/* Fix position:relative missing from BS5 col-md-12, homepage only */
+.col-md-12.home {
+  position:relative;
+}
+
+/* Breadcrumbs */
+
+.al-search-breadcrumb {
+  font-size: 16px;
+  margin-bottom: 2rem;
+  padding-top: 1rem;
+}

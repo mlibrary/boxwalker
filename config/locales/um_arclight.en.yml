@@ -1,0 +1,86 @@
+en:
+  um_arclight:
+    insert_content: "INSERT CONTENT HERE"
+
+    home:
+      browse_all: "Browse All Collections"
+      about:
+        heading: About This Site
+        text_html: <p>Use this site to search and explore finding aids, also called collection guides. Finding aids describe collections of primary sources and other unique, original, or rare materials held by these repositories. Materials include manuscripts, correspondence, organizational records, photographs, audio visual recordings, ephemera, and born-digital materials.</p><p>The finding aid provides information about:</p><ul><li>The origin of the collection</li> <li>A brief biography or historical sketch of the individual or organization that created the collection</li><li>A statement of the intellectual and physical organization of the collections</li><li>A narrative "scope and content note" describing the intellectual content of the collection as a whole and of its major subdivisions</li><li>A detailed "contents list" providing a hierarchical listing of the collections from the series down to the file, or possibly the item, level</li></ul></div>
+#      alert:
+#        title: Some alert
+#        message_html: <p>Warning warning!</p>
+
+    advanced_search:
+      title: "Advanced Search"
+      within_collections_label: "Search in"
+      search_fields_label: "Search field"
+      available_online: "Includes Digital Content"
+      search_label: "Search for"
+      submit: "Search"
+      start_over: "Start Over"
+
+    digital_objects:
+      online_banner:
+        message_text: Some materials from this collection are available online.
+        dc_html: <span class='fas fa-external-link-alt'></span> View Digital Collection
+        filter_online_html: <span class='fas fa-filter'></span> Only view items with online access
+      ddr_embed_link: View Item Page / More Info / Download
+      request_this_record: Request This Record
+      electronic-record-master: Electronic Record (Master)
+      electronic-record-use-copy: Electronic Record (Use Copy)
+
+    tooltips:
+      online: "Includes Digital Content"
+      bookmarks:
+        present: "In Bookmarks"
+        absent: "Add to Bookmarks"
+      restricted: "Some restrictions apply"
+
+    views:
+      index:
+        number_of_components:
+          one: entry
+          other: entries
+      show:
+        access:
+          more: "More..."
+          more_restriction: "More about accessing and using these materials..."
+          help_links:
+            citations: "Citations, Permissions, & Copyright"
+            requesting: "How to Request"
+            reproductions: "Ordering Reproductions"
+            visitors: "Info for Visitors"
+        containers:
+          see_all: "Expand list"
+        field_group_note:
+          indexed_terms_field: "Click on terms below to find any related finding aids on this site."
+        sidebar:
+          collection_title: Collection
+          collection_info_icon_label: Advanced collection info
+          mobile_sidebar_btn: Navigate the Collection
+          request:
+            tooltip: Select items for reading room use or request copies.
+            current_containers: |
+              The item you are currently viewing is in:<br/><strong>%{containers}</strong>
+            multi_aleph: |
+              Since this collection guide represents multiple collections, first choose the
+              collection that includes the material you'd like to request, then click Request.
+            email: |
+              Email <strong>%{email}</strong> to request onsite use.<br/><br/>This collection does not have a record in
+              the library catalog.
+
+    contact:
+      title: "Contact Us"
+
+    ead_element_labels:
+      separatedmaterial: "Alternate Locations"
+      relatedmaterial: "Related Materials"
+      bibliography: "Bibliography"
+
+    errors:
+      redirected_to_collection: |
+        We’re not sure what section of the finding aid you were looking for;
+        you've been redirected to the collection main page. 
+        Please <strong><a href="%{contact_link}" referrerpolicy="unsafe-url">contact us</a></strong> if 
+        you cannot find what you're looking for.

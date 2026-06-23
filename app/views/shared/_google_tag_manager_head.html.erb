@@ -1,0 +1,42 @@
+<script>
+  // add the user_properties the app collects as data attributes on
+  // document.documentElement for later use in GTM
+  var user_properties = <%= ga_user_properties %>
+  if ( user_properties['page_type'] == 'Search Results Page' ) {
+    if ( user_properties['repository_id'] === undefined ) {
+      let repositorySet = new Set;
+      $("[data-repository-id]").each(function(idx, div) {
+        if ( div.dataset.repositoryId ) {
+          repositorySet.add(div.dataset.repositoryId);
+        }
+      })
+      if ( repositorySet.size > 0 ) {
+        user_properties['repository_id'] = ':' + Array.from(repositorySet).sort().join(':') + ':';
+      }
+    }
+    if ( user_properties['collection_id'] === undefined && location.search.indexOf('collection_sim') > -1 ) {
+      let collectionSet = new Set;
+      // collect the first link of available breadcrumbs
+      $("article[data-document-id] .breadcrumb-links").find("a:first-child").each(function(idx, link) {
+        let collectionId = (link.getAttribute('href').split('/')).pop();
+        collectionSet.add(collectionId);
+      })
+      if ( collectionSet.size == 1 ) {
+        // if there's only one collectionId, we are probably searching within a collection
+        user_properties['collection_id'] = ':' + Array.from(collectionSet).join(':') + ':';
+      }
+    }
+  }
+  Object.keys(user_properties).forEach((key) => {
+    // keys will be document.documentElement.dataset.gtm_collection_id
+    document.documentElement.setAttribute(`data-gtm_${key}`, user_properties[key]);
+  })
+</script>
+
+<!-- Google Tag Manager -->
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','<%= ga_tag_manager_id %>');</script>
+<!-- End Google Tag Manager -->

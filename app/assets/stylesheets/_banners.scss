@@ -1,0 +1,73 @@
+@use "bootstrap-context" as bs;
+
+/* ======================================== */
+/* CONFIGURABLE HOMEPAGE ALERT BANNER       */
+/* Used by app/views/catalog/_home.html.erb */
+/* (only the warning variant is wired up)   */
+/* ======================================== */
+
+.banner-wrapper {
+  min-height: 50px;
+  padding: 0;
+  margin-bottom: 20px;
+
+  .banner-part {
+    min-height: 50px;
+    display: flex;
+
+    &.banner-heading {
+      align-items: center; /* vertical */
+      color: var(--color-neutral-500);
+      font-size: 20px;
+      white-space: nowrap;
+      padding: 0 60px 0 15px;
+      line-height: 1.2em;
+      -webkit-clip-path: polygon(0 0, 100% 0, calc(100% - 20px) 100%, 0 100%);
+      clip-path: polygon(0 0, 100% 0, calc(100% - 20px) 100%, 0 100%);
+
+      @include bs.media-breakpoint-down(xl) { padding: 15px; }
+      @include bs.media-breakpoint-down(lg) { display: block; }
+
+      .blacklight-icons svg {
+        fill: var(--color-neutral-500);
+        height: 1.2rem;
+        width: 1.2rem;
+        margin-right: 0.6rem;
+      }
+
+      .banner-heading-text {
+        text-transform: uppercase;
+      }
+    }
+
+    &.banner-shadow {
+      width: 40px;
+      min-width: 40px;
+      max-width: 40px;
+      align-items: center;
+      margin: 0 -20px;
+      -webkit-clip-path: polygon(20px 0, 100% 0, calc(100% - 20px) 100%, 0 100%);
+      clip-path: polygon(20px 0, 100% 0, calc(100% - 20px) 100%, 0 100%);
+    }
+
+    &.banner-message {
+      right: 0;
+      top: 0;
+      padding: 25px 10px 10px 30px;
+      line-height: 1.4em;
+
+      .banner-message-text {
+        font-weight: 600;
+        color: var(--color-neutral-500);
+      }
+    }
+  }
+
+  /* Only variant currently used in the app */
+  &.banner-warning {
+    background-color: var(--color-maize-200);
+
+    .banner-heading  { background-color: var(--color-maize-400); }
+    .banner-shadow   { background-color: var(--color-maize-300); }
+  }
+}

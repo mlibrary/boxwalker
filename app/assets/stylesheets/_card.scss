@@ -1,0 +1,19 @@
+.card-title {
+  margin-bottom: 0.75rem;
+}
+
+.card-title > a {
+  font-size: 1.25rem;
+}
+
+.card-img-top {
+  max-height: 14rem;
+  overflow: hidden;
+}
+
+.card-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+}

@@ -1,53 +1,274 @@
-nlm:
-  name: 'National Library of Medicine. History of Medicine Division'
-  description: 'NLM’s History of Medicine Division collects, preserves, makes available, and interprets for diverse audiences one of the world’s richest collections of historical material related to human health and disease.'
-  contact_html: |
-    <div class="al-repository-contact-info"><a href="mailto:hmdref@nlm.nih.gov">hmdref@nlm.nih.gov</a></div>
-  location_html: |
-    <div class="al-repository-street-address-building">Building 38, Room 1E-21</div>
-    <div class="al-repository-street-address-address1">8600 Rockville Pike</div>
-    <div class="al-repository-street-address-city_state_zip_country">Bethesda, MD 20894, USA</div>
-  thumbnail_url: "https://upload.wikimedia.org/wikipedia/commons/thumb/8/8b/United_States_National_Library_of_Medicine_1999.jpg/500px-United_States_National_Library_of_Medicine_1999.jpg"
-  request_types:
-    google_form:
-      request_url: 'https://docs.google.com/a/stanford.edu/forms/d/e/1FAIpQLSeOamhY_IcFw4sPnz0ddwWWkrPaHbM5wp7JVbOLOL_mIusEyw/viewform'
-      request_mappings: "document_url=entry.1980510262&collection_name=entry.619150170&collection_creator=entry.14428541&eadid=entry.996397105&containers=entry.1125277048&title=entry.862815208"
-
-sul-spec:
-  name: 'Stanford University Libraries. Special Collections and University Archives'
-  visit_note: 'Special Collections and University Archives materials are stored offsite and must be paged 36 hours in advance.'
-  description: 'The Special Collections and University Archives Department of Stanford University Libraries is committed to acquiring, preserving, and providing access to primary source materials that support the research needs of the Stanford community and beyond. There are three distinct divisions in our department: Manuscripts, Rare Books and University Archives. We welcome all students, scholars and members of the general public to the Field Reading Room. Learn more about using and accessing our collections.'
-  contact_html: |
-    <div class="al-repository-contact-phone">(650) 725-1022</div>
-    <div class="al-repository-contact-info"><a href="mailto:specialcollections@stanford.edu">specialcollections@stanford.edu</a></div>
-  location_html: |
-    <div class="al-repository-street-address-building">Green Library</div>
-    <div class="al-repository-street-address-address1">557 Escondido Mall</div>
-    <div class="al-repository-street-address-city_state_zip_country">Stanford, CA 94305, USA</div>
-  thumbnail_url: 'https://upload.wikimedia.org/wikipedia/commons/thumb/2/2b/Stanford_University_Green_Library_Bing_Wing.jpg/500px-Stanford_University_Green_Library_Bing_Wing.jpg'
-  request_types:
-    aeon_web_ead:
-      request_url: 'https://sample.request.com'
-      request_mappings: 'Action=10&Form=31&Value=ead_url'
-
-umich-bhl:
-  name: 'University of Michigan. Bentley Historical Library'
+bhl:
+  name: 'University of Michigan Bentley Historical Library'
+  about_url: https://bentley.umich.edu/
   description: 'The Bentley Historical Library collects the materials for and promotes the study of the histories of two great, intertwined institutions, the State of Michigan and the University of Michigan. The Library is open without fee to the public, and we welcome researchers regardless of academic or professional affiliation.'
-  contact_html: |
-    <div class="al-repository-contact-info"><a href="mailto:bentley.ref@umich.edu">bentley.ref@umich.edu</a></div>
-  location_html: |
-    <div class="al-repository-street-address-address1">1150 Beal Ave</div>
-    <div class="al-repository-street-address-city_state_zip_country">Ann Arbor, MI 48109-2113, USA</div>
-  thumbnail_url: 'https://upload.wikimedia.org/wikipedia/commons/thumb/9/93/Bhlexterior.jpg/150px-Bhlexterior.jpg'
+  visit_note: ''
+  building: ''
+  address1: '1150 Beal Avenue'
+  address2: ''
+  city: 'Ann Arbor'
+  state: 'MI'
+  zip: '48109-2113'
+  country: 'USA'
+  phone: ''
+  contact_info: 'bentley.ref@umich.edu'
+  thumbnail_url: '/thumbnails/BHL-x400.jpg'
+  repo_about:
+    using_materials: 'Finding aids describe collections of primary sources and other unique, original, or rare materials. Some finding aids contain links to digitized versions of parts or all of a collection. Access to the original physical items, when available, requires requesting items for use in the reading room. Items may not be requested for use outside of the library.'
+    visitor_info: 'The Bentley is open to the general public for appointments and walk-in research; please see the Visiting page <a href="https://bentley.umich.edu/about/visiting/">for hours</a>.'
+    how_to_request: 'Please visit <a href="https://bentley.umich.edu/research/requesting-items-new2020/">Requesting Items</a>.'
+    how_to_order: 'Please visit <a href="https://bentley.umich.edu/research/duplication/">Duplication of Materials</a>.'
   request_types:
-    aeon_external_request_endpoint:
-      request_url: https://example.com/aeon/aeon.dll
+    aeon_hidden_form_request:
+      request_url: https://aeon.bentley.umich.edu/ead_request
       request_mappings:
         url_params:
           Action: 11
           Type: 200
         static:
           SystemId: ArcLight
-          ItemInfo1: manuscript
+#          ItemInfo1: manuscript
         accessor:
           ItemTitle: collection_name
+          idno: eadid
+          CallNumber: collection_unitid
+          SubLocation: physloc
+          ItemDate: collection_date
+          ItemAuthor: collection_creator
+        transform:
+          ReferenceNumber:
+            field: eadid
+            regex: 'umich-bhl-(.*)'
+  dlxs_iiif:
+    image:
+      - bhl
+    text:
+      - alumnae
+      - angell
+      - bhlcivilwar
+      - blydenburgh
+      - daas
+      - hudson
+      - mershon
+      - petoskey
+      - polar
+      - potter
+      - pray
+      - thomas
+      - walker
+  mivideo:
+    partner_id: "1758271"
+    uiconf_id: "51362482"
+scrc:
+  name: 'University of Michigan Special Collections Research Center'
+  about_url: https://www.lib.umich.edu/locations-and-hours/special-collections-research-center
+  description: 'In keeping with the University Library’s mission to collect, describe, preserve, and make available the record of human knowledge, the Special Collections Research Center acquires, cares for, interprets, and promotes the use of important collections of unique, rare, primary source, and other material in all formats and in a variety of subject areas.'
+  visit_note: ''
+  building: 'Harlan Hatcher Graduate Library (South)'
+  address1: '913 S. University Avenue'
+  address2: ''
+  city: 'Ann Arbor'
+  state: 'MI'
+  zip: '48109-1190'
+  country: 'USA'
+  phone: ''
+  contact_info: 'special.collections@umich.edu'
+  thumbnail_url: '/thumbnails/SCRC-x400.jpg'
+  repo_about:
+    using_materials: 'Finding aids describe collections of primary sources and other unique, original, or rare materials. Collections are non-circulating and must be used in the Special Collections Research Center reading room. Requests for collection material must be made at least 7 days in advance of a planned visit.'
+    visitor_info: 'For more information <a href="https://www.lib.umich.edu/locations-and-hours/special-collections-research-center">Special Collections Research Center -- Visit</a>.'
+    how_to_request: 'Please visit <a href="https://www.lib.umich.edu/locations-and-hours/special-collections-research-center/access-our-materials">Special Collections Research Center -- Access Our Materials</a>.'
+    how_to_order: 'Please visit <a href="https://www.lib.umich.edu/locations-and-hours/special-collections-research-center/access-our-materials">Special Collections Research Center -- Access Our Materials</a>.'
+  request_types:
+    aeon_web_ead:
+      request_url: 'https://aeon.lib.umich.edu/logon'
+      request_mappings: 'Action=10&Form=31&Value=parsed_ead_url'
+  request_id:
+    field: 'publicid_ssi'
+    pattern: '-\/\/us::MiU\/\/TEXT us::MiU::(.*)\/\/EN'
+  dlxs_iiif:
+    image:
+      - scl
+      - sclalgeria
+      - sclaudubon
+      - scldixie
+      - sclfranck
+      - sclharris
+      - sclib
+      - sclpapyric
+      - sclphilimg
+      - sclshenute
+  mivideo:
+    partner_id: "1038472"
+    uiconf_id: "51362542"
+clements:
+  name: 'University of Michigan William L. Clements Library'
+  about_url: https://clements.umich.edu/
+  description: 'The William L. Clements Library is a rare book and manuscript repository located on the University of Michigan’s central campus in Ann Arbor, Michigan.'
+  visit_note: ''
+  building: ''
+  address1: '909 South University Avenue'
+  address2: ''
+  city: 'Ann Arbor'
+  state: 'MI'
+  zip: '48109'
+  country: 'USA'
+  phone: ''
+  contact_info: 'clements-reference@umich.edu'
+  thumbnail_url: '/thumbnails/clements-x400.jpg'
+  repo_about:
+    using_materials: 'Finding aids describe collections of primary sources and other unique, original, or rare materials. Collections are non-circulating and must be used in the Clements Library reading room. Some finding aids contain links to digitized versions of parts or all of a collection, but in most cases viewing a collection in its entirety will require visiting the library.'
+    visitor_info: 'See <a href="https://clements.umich.edu/research/plan-your-visit/">Clements Library Plan Your Visit</a>.'
+    how_to_request: 'See <a href="https://clements.umich.edu/research/request-materials/">Clements Library Request Materials</a>.'
+    how_to_order: 'See <a href="https://clements.umich.edu/research/duplication-and-use/">Clements Library Duplication and Use</a>.'
+  request_types:
+    aeon_web_ead:
+      request_url: 'https://aeon.clements.umich.edu/logon'
+      request_mappings: 'Action=10&Form=31&Value=parsed_ead_url'
+  request_id:
+    field: 'publicid_ssi'
+    pattern: 'us//::miu-c//TXT us::miu-c::(.*.xml)\/\/EN'
+  dlxs_iiif:
+    image:
+      - pohrt
+      - wcl
+    text:
+      - adams
+      - africanamer
+      - campe
+      - chase
+      - child
+      - fortwayne
+      - fullerh
+      - gage
+      - germanaux
+      - gilman
+      - greatbritainindiandept
+      - holsteinfam
+      - howew
+      - irving
+      - jameshenry
+      - japanese
+      - kingfamily
+      - leylandt
+      - marshallfam
+      - mitchill
+      - rochester
+      - shelburne
+      - sterlingj
+      - stothert
+      - unitedsons
+      - utleyv
+      - wcl1tc
+clarke:
+  name: 'Central Michigan University Clarke Historical Library'
+  about_url: https://www.cmich.edu/research/clarke-historical-library/about
+  description: 'The Clarke Historical Library collects, preserves, and promotes collections including the history of Michigan and the Old Northwest Territory, the history of Central Michigan University, as well as other topics.'
+  visit_note: ''
+  building: ''
+  address1: '250 East Preston Street'
+  address2: ''
+  city: 'Mount Pleasant'
+  state: 'MI'
+  zip: '48859'
+  country: 'USA'
+  phone: ''
+  contact_info: 'clarke@cmich.edu'
+  thumbnail_url: 'https://www.cmich.edu/images/default-source/academic-affairs-division/cmu-libraries/about/support-the-libraries/20210723_support_universityseal_0086fdf1a7f-50e7-4d64-a7ca-f7979508b7a2.jpg'
+  repo_about:
+    using_materials: 'Finding aids describe collections of primary sources and other unique, original, or rare materials. Collections are non-circulating and must be used in the Clarke Library reading room. Some finding aids contain links to digitized versions of parts or all of a collection, but in most cases viewing a collection in its entirety will require visiting the library.'
+    visitor_info: 'Please visit <a href="https://www.cmich.edu/research/clarke-historical-library/services/reference-research-help">Clarke Research and Reference Help</a>.'
+    how_to_request: '<a href="mailto:clarke@cmich.edu?subject=Online Finding Aids Question">Contact the Clarke</a> for assistance with collections.'
+    how_to_order: 'Please visit <a href="https://www.cmich.edu/research/clarke-historical-library/about/policies#a3">Clarke Digital Reproduction Policies and Fees</a>.'
+vrc:
+  name: 'University of Michigan History of Art Visual Resources Collection'
+  about_url: https://lsa.umich.edu/histartvrc
+  description: "The VRC maintains nearly two million images of art. The collection's roots are more than 90 years old and developed as a teaching collection to support University of Michigan faculty and students. Through these online finding aids, we hope to help you connect with our vast resources of images of art, architecture, and artifacts."
+  visit_note: ''
+  building: '45 Tappan Hall'
+  address1: '855 South University Avenue'
+  address2: ''
+  city: 'Ann Arbor'
+  state: 'MI'
+  zip: '48109'
+  country: 'USA'
+  phone: ''
+  contact_info: 'vrum@umich.edu'
+  thumbnail_url: 'https://mapproxy.studentlife.umich.edu/images/tappan-hall/AXP2S1698.jpg'
+  repo_about:
+    using_materials: 'Finding aids describe collections of primary sources and other unique, original, or rare materials. Access to the original physical items, when available, requires requesting items for use in the reading room associated with a given collection. Items may not be requested for offsite use.'
+    visitor_info: 'See <a href="https://lsa.umich.edu/histartvrc/faculty-students.html">https://lsa.umich.edu/histartvrc/faculty-students.html</a>'
+archivemi:
+  name: 'Archives of Michigan'
+  about_url: https://www.michigan.gov/mhc/archives
+  description: 'The Archives of Michigan is responsible for preserving the records of Michigan government and other public institutions. The collections also include documents, maps, photographs and film from private individuals and organizations.'
+  visit_note: ''
+  building: ''
+  address1: '702 West Kalamazoo Street'
+  address2: ''
+  city: 'Lansing'
+  state: 'MI'
+  zip: '48915'
+  country: 'USA'
+  phone: ''
+  contact_info: 'Archives@Michigan.gov'
+  thumbnail_url: 'https://www.michigan.gov/mhc/-/media/Project/Websites/mhc/images/archives/archives_womanresearcher.jpg'
+  repo_about:
+    using_materials: 'Finding aids describe collections of primary sources and other unique, original, or rare materials. Access to the original physical items, when available, requires requesting items for use in the reading room associated with a given collection. Items may not be requested for offsite use.'
+    visitor_info: 'See <a href="https://www.michigan.gov/mhc/archives/plan-your-archives-visit">https://www.michigan.gov/mhc/archives/plan-your-archives-visit</a> for information on policies and parking'
+    how_to_order: 'See <a href="https://www.michigan.gov/mhc/archives/plan-your-archives-visit#Copies">https://www.michigan.gov/mhc/archives/plan-your-archives-visit#Copies</a> for policies and pricing'
+mlibraryead:
+  name: 'MLibrary Finding Aids'
+  about_url: http://lib.umich.edu/
+  description: "MLibrary's Finding Aids site provides access to finding aids or descriptive inventories for archival records and manuscript collections not held in the Special Collections Research Center."
+  visit_note: ''
+  building: ''
+  address1: '913 South University Avenue'
+  address2: ''
+  city: 'Ann Arbor'
+  state: 'MI'
+  zip: '48109'
+  country: 'USA'
+  phone: ''
+  contact_info: 'dlps-help@umich.edu'
+  thumbnail_url: 'https://www.lib.umich.edu/static/f7ffa2d7bc8b7d2c2e56eaf08f237c8b/53249/AerialsNov08(186)Stock-a.webp'
+  repo_about:
+    using_materials: 'Finding aids describe collections of primary sources and other unique, original, or rare materials. Access to the original physical items, when available, requires requesting items for use in the reading room associated with a given collection. Items may not be requested for offsite use.'
+    visitor_info: '<p>The Evangeline Marie Lehman Papers and Voice of America African Music Collection recordings are held at the Music Library.  Please contact them for access: <a href="https://www.lib.umich.edu/locations-and-hours/music-library">https://www.lib.umich.edu/locations-and-hours/music-library</a></p>
+                  <p>The Jon Cohen AIDS Research Collection is held in the Special Collections Research Center.  Please contact them for access: <a href="https://www.lib.umich.edu/locations-and-hours/special-collections-research-center">Special Collections Research Center -- Visit</a></p>'
+ghcc:
+  name: 'University of Michigan Genesee Historical Collections Center'
+  about_url: https://libguides.umflint.edu/ghcc
+  description: "The Genesee Historical Collections Center is the University of Michigan-Flint's institutional and community archive. It is located on the second floor of the Frances Willson Thompson Library on the UM-Flint campus. In addition to UM-Flint history, the archive focuses on the political, social, and civic life of Flint residents. Important collections include the UAW/599 Sitdown Strike collection, the Olive Beasley collection, and the Donald Reigle collection."
+  building: 'Frances Willson Thompson Library'
+  address1: '227 Frances Willson Thompson Library'
+  address2: ''
+  city: 'Flint'
+  state: 'MI'
+  zip: '48502'
+  country: 'USA'
+  phone: '810-762-3402'
+  contact_info: 'ghcc-archives@umich.edu'
+  thumbnail_url: '/thumbnails/1000002543.jpg'
+  repo_about:
+    using_materials: 'Materials do not circulate and must be accessed in the reading room at the Frances Willson Thompson Library on the University of Michigan Flint campus. The archive is open for public use from 10 am - 6 pm Monday-Friday. Although we prefer patrons to contact the archive before their visit to prepare requested materials, it is not necessary. All are welcome.'
+    visitor_info: 'For more information and to request material, please email <a href="mailto:ghcc-archives@umich.edu">ghcc-archives@umich.edu</a>.'
+    how_to_request: ''
+asialibrary:
+  name: 'University of Michigan Asia Library'
+  about_url: https://www.lib.umich.edu/locations-and-hours/asia-library
+  description: "The Asia Library is home to one of the largest East Asian language collections in North America. We provide collection access and research services to support the robust academic communities in Chinese, Japanese, and Korean studies at U-M and beyond. This site contains finding aids of Asia Library's unique archival collections that span a variety of topics in East Asian studies."
+  building: 'Harlan Hatcher Graduate Library (North)'
+  address1: '913 S. University Avenue'
+  address2: ''
+  city: 'Ann Arbor'
+  state: 'MI'
+  zip: '48109-1190'
+  country: 'USA'
+  phone: ''
+  contact_info: 'asialibrary@umich.edu'
+  thumbnail_url: 'https://www.lib.umich.edu/static/5b35df0d52e5aeb7ad9fa7adae1b4398/057ba/Hatcher-Asia-Lib-Sep2022-1185x790_edited.jpg'
+  repo_about:
+    using_materials: 'Finding aids describe collections of unique, original, or rare materials located at the Asia Library Special Collection room. These collections are non-circulating and must be used in the Asia Library reading room. Requests for collection material must be made at least 7 days in advance of a planned visit.'
+    visitor_info: 'For more information <a href="https://www.lib.umich.edu/locations-and-hours/asia-library">Asia Library -- Visit</a>.'
+    how_to_request: 'To request material, please email asialibrary@umich.edu for assistance at least 7 days in advance of a planned visit.'

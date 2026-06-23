@@ -1,0 +1,15 @@
+/*
+  Bootstrap's Sass source still relies on legacy @import-style shared scope
+  for some internals, so this context file intentionally uses @import.
+
+  Custom application files can still consume this with:
+    @use "bootstrap-context" as bs;
+  and then reference Bootstrap members as:
+    bs.$success
+    bs.tint-color(...)
+    @include bs.media-breakpoint-down(sm)
+*/
+
+@import "bootstrap/scss/functions";
+@import "bootstrap/scss/variables";
+@import "bootstrap/scss/mixins";
