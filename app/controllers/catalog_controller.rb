@@ -140,6 +140,13 @@ class CatalogController < ApplicationController
     # :index_range can be an array or range of prefixes that will be used to create the navigation
     #  (note: It is case sensitive when searching values)
 
+    config.add_facet_field 'has_online_content_ssim',
+                           label: 'Online content',
+                           limit: true,
+                           collapse: false,
+                           query: {
+                             online: { label: I18n.t('um_arclight.advanced_search.available_online'), fq: 'has_online_content_ssim:true' }
+                           }
     config.add_facet_field "repository", field: "repository_ssim", limit: 10
     config.add_facet_field "collection", field: "collection_ssim", limit: 10
     config.add_facet_field "creators", field: "creator_ssim", limit: 10

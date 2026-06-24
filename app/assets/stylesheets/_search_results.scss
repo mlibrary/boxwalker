@@ -139,6 +139,34 @@
   }
 }
 
+#facets .blacklight-has_online_content_ssim ul.facet-values li .facet-label {
+  background-image: url(/assets/blacklight/online-green-109f64f9841db865d4d3df9ec9322a08242ea6b545f55be578c71d2f54b152b4.svg);
+  background-repeat: no-repeat;
+  background-position-y: 5px;
+  background-size: 20px;
+  padding-left: 45px;
+}
+
+.facet-values .facet-label {
+  display: table-cell;
+  padding-right: 1em;
+  text-indent: -15px;
+  padding-left: 15px;
+  padding-bottom: 0.5rem;
+  overflow-wrap: break-word;
+  -webkit-hyphens: auto;
+  -o-hyphens: auto;
+  -ms-hyphens: auto;
+  hyphens: auto;
+}
+
+.facet-values .remove {
+  color: #6c757d;
+  font-weight: bold;
+  padding-left: 0.5rem;
+  text-decoration: none;
+}
+
 .blacklight-icons svg {
   height: 1rem;
   width: 1rem
