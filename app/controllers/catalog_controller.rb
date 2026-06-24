@@ -4,6 +4,8 @@ require_relative "../components/custom_constraints_component"
 # Blacklight controller that handles searches and document requests
 class CatalogController < ApplicationController
   include Blacklight::Catalog
+  include BlacklightRangeLimit::ControllerOverride
+
   include Arclight::Catalog
 
   configure_blacklight do |config|
