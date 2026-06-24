@@ -1,7 +1,6 @@
 # frozen_string_literal: true
+
 require_relative "../components/custom_constraints_component"
-
-
 # Blacklight controller that handles searches and document requests
 class CatalogController < ApplicationController
   include Blacklight::Catalog
