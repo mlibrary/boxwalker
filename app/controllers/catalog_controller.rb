@@ -1,7 +1,6 @@
 # frozen_string_literal: true
+
 require_relative "../components/custom_constraints_component"
-
-
 # Blacklight controller that handles searches and document requests
 class CatalogController < ApplicationController
   include Blacklight::Catalog
@@ -141,14 +140,22 @@ class CatalogController < ApplicationController
     # :index_range can be an array or range of prefixes that will be used to create the navigation
     #  (note: It is case sensitive when searching values)
 
+    config.add_facet_field 'has_online_content_ssim',
+                           label: 'Online content',
+                           limit: true,
+                           collapse: false,
+                           query: {
+                             online: { label: I18n.t('um_arclight.advanced_search.available_online'), fq: 'has_online_content_ssim:true' }
+                           }
+    config.add_facet_field "repository", field: "repository_ssim", limit: 10
     config.add_facet_field "collection", field: "collection_ssim", limit: 10
     config.add_facet_field "creators", field: "creator_ssim", limit: 10
     config.add_facet_field "date_range", field: "date_range_isim", range: true
-    config.add_facet_field "level", field: "level_ssim", limit: 10
+    # config.add_facet_field "level", field: "level_ssim", limit: 10
     config.add_facet_field "names", field: "names_ssim", limit: 10
-    config.add_facet_field "repository", field: "repository_ssim", limit: 10
     config.add_facet_field "places", field: "geogname_ssim", limit: 10
     config.add_facet_field "access_subjects", field: "access_subjects_ssim", limit: 10
+    config.add_facet_field "formats", field: "formats_ssim", limit: 10
 
     # Have BL send all facet field names to Solr, which has been the default
     # previously. Simply remove these lines if you'd rather use Solr request
