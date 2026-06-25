@@ -343,6 +343,13 @@ class CatalogController < ApplicationController
     config.add_indexed_terms_field "indexes", field: "indexes_html_tesm",
                                               helper_method: :render_html_tags
 
+    # From umich-arclight
+    config.add_indexed_terms_field 'formats_ssim', label: 'Formats', link_to_facet: true, separator_options: {
+      words_connector: '<br/>',
+      two_words_connector: '<br/>',
+      last_word_connector: '<br/>'
+    }
+
     # ==========================
     # COMPONENT SHOW PAGE FIELDS
     # ==========================
