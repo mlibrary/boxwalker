@@ -1,0 +1,10 @@
+<%# Overrides ArcLight Core partial. %>
+<%# Adds Bootstrap Tooltip to online icon See: %>
+<%# https://github.com/projectblacklight/arclight/blob/master/app/views/catalog/_online_content_label.html.erb %>
+<%# Last checked for updates: ArcLight v1.6.2. %>
+
+<% if document.online_content? %>
+  <span data-toggle="tooltip" title="<%= t('dul_arclight.tooltips.online') %>">
+    <%= blacklight_icon :online, classes: 'al-online-content-icon' %>
+  </span>
+<% end %>
