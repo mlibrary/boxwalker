@@ -23,8 +23,6 @@ extend TrajectPlus::Macros
 NAME_ELEMENTS = %w[corpname famname name persname].freeze
 
 SEARCHABLE_NOTES_FIELDS = %w[
-  accessrestrict
-  accruals
   altformavail
   appraisal
   arrangement
@@ -37,12 +35,9 @@ SEARCHABLE_NOTES_FIELDS = %w[
   originalsloc
   otherfindaid
   phystech
-  prefercite
-  processinfo
   relatedmaterial
   scopecontent
   separatedmaterial
-  userestrict
 ].freeze
 
 DID_SEARCHABLE_NOTES_FIELDS = %w[
@@ -50,6 +45,15 @@ DID_SEARCHABLE_NOTES_FIELDS = %w[
   materialspec
   physloc
   note
+].freeze
+
+# UM customization: separated out items in desgrp from SEARCHABLE_NOTES_FIELDS as they need a different XPath query.
+DESCGRP_FIELDS = %w[
+  accessrestrict
+  accruals
+  prefercite
+  processinfo
+  userestrict
 ].freeze
 
 settings do
@@ -251,6 +255,14 @@ SEARCHABLE_NOTES_FIELDS.map do |selector|
   end
   to_field "#{selector}_heading_ssm", extract_xpath("/ead/archdesc/#{selector}/head") unless selector == "prefercite"
   to_field "#{selector}_tesim", extract_xpath("/ead/archdesc/#{selector}/*[local-name()!='head']")
+end
+
+DESCGRP_FIELDS.map do |selector|
+  to_field "#{selector}_html_tesm", extract_xpath("/ead/archdesc/descgrp[@type != 'add']/#{selector}/*[local-name()!='head']", to_text: false) do |_record, accumulator|
+    accumulator.map!(&:to_html)
+  end
+  to_field "#{selector}_heading_ssm", extract_xpath("/ead/archdesc/descgrp[@type != 'add']/#{selector}/head") unless selector == "prefercite"
+  to_field "#{selector}_tesim", extract_xpath("/ead/archdesc/descgrp[@type != 'add']/#{selector}/*[local-name()!='head']")
 end
 
 DID_SEARCHABLE_NOTES_FIELDS.map do |selector|
