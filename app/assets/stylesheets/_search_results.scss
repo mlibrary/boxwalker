@@ -365,3 +365,7 @@ label.toggle-bookmark > span:nth-child(2) {
     margin-bottom: 0;
   }
 }
+
+.truncator button {
+  display: unset;
+}
