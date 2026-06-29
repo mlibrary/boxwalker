@@ -26,4 +26,7 @@ class SolrDocument
     fetch("collection_creator_ssm", [])[0]
   end
 
+  def repository_id
+    repository_config&.slug
+  end
 end
