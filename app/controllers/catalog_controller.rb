@@ -52,7 +52,8 @@ class CatalogController < ApplicationController
 
     config.header_component = Arclight::HeaderComponent
     config.add_results_document_tool(:online, component: Arclight::OnlineStatusIndicatorComponent)
-    config.add_results_document_tool(:arclight_bookmark_control, component: Arclight::BookmarkComponent)
+    # remove bookmark + form in search results
+    # config.add_results_document_tool(:arclight_bookmark_control, component: Arclight::BookmarkComponent)
 
     config.add_results_collection_tool(:group_toggle)
     config.add_results_collection_tool(:sort_widget)
