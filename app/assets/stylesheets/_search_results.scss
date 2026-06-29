@@ -154,11 +154,6 @@
   width: 1rem
 }
 
-/* bookmark toggle and checkbox */
-.toggle-bookmark {
-  display:none;
-}
-
 #context {
   @include bs.media-breakpoint-down(sm) {
     padding-top: 0 !important;
@@ -320,19 +315,7 @@
   }
 }
 
-/* icon alignment */
-.bookmark-toggle {
-  padding-left: 0.3rem;
-}
-
-.blacklight-icons {
-  position: relative;
-  top: -1px;
-}
-
-label.toggle-bookmark > span:nth-child(2) {
-  margin-left: 0.1rem;
-}
+/* online icon in list */
 
 .al-online-content-icon {
   position: relative;
@@ -340,9 +323,6 @@ label.toggle-bookmark > span:nth-child(2) {
   padding-left: 0.4rem;
   padding-right: 0.1rem;
   float: right;
-  svg {
-    fill: colors.$green;
-  }
 }
 
 .al-restricted-component-icon {
@@ -357,7 +337,6 @@ label.toggle-bookmark > span:nth-child(2) {
 }
 
 /* Collection or item listings */
-
 #documents {
   margin-left: 3rem;
 
