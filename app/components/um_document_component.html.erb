@@ -20,7 +20,7 @@
 </div>
 
 <%= render Arclight::MetadataSectionComponent.with_collection(component_metadata_partials,
-  metadata_attr: { layout: Arclight::UpperMetadataLayoutComponent},
+  metadata_attr: { layout: UmUpperMetadataLayoutComponent },
   presenter: presenter) unless document.collection? %>
 
 <%= embed %>
@@ -29,8 +29,8 @@
   <div id="metadata">
     <h2 class="sr-only visually-hidden"><%= t 'arclight.views.show.context' %></h2>
     <%= render Arclight::MetadataSectionComponent.with_collection(metadata_partials,
-      metadata_attr: { layout: Arclight::UpperMetadataLayoutComponent },
-      presenter: presenter, heading: true) %>
+      metadata_attr: { layout: UmUpperMetadataLayoutComponent },
+      presenter: presenter, heading: true, classes: "row") %>
   </div>
 <% elsif document.children? %>
   <div id="contents">
