@@ -1,0 +1,10 @@
+.al-show-actions-toolbar {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: flex-end;
+  position: relative;
+  margin-bottom: .5rem;
+  border-bottom: solid 1px var(--color-teal-300);
+  box-shadow: 0px 3px 3px -3px rgba(23, 130, 166, 0.58);
+  background-image: linear-gradient(to top, #f7f8f9, #f9fafb, #fbfbfc, #fdfdfd, #ffffff);
+}
