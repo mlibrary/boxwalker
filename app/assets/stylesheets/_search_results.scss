@@ -325,6 +325,10 @@
   float: right;
 }
 
+article.document .blacklight-icons.blacklight-icons-online svg {
+  fill: var(--color-green-500);
+}
+
 .al-restricted-component-icon {
   svg {
     color: colors.$color-maize-400;
