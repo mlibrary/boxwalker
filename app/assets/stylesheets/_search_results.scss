@@ -373,3 +373,8 @@ article.document .blacklight-icons.blacklight-icons-online svg {
 .al-document-abstract-or-scope.truncator button:hover svg {
   color: var(--color-neutral-400);
 }
+
+/* Increase abstract max-width from 45 to 60 */
+.documents-list article.document .al-document-abstract-or-scope {
+  max-width: 60em;
+}
