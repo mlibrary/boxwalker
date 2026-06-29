@@ -2,6 +2,7 @@
 
 require_relative "../components/um_constraints_component"
 require_relative "../components/um_search_result_component"
+require_relative "../components/um_document_component"
 
 # Blacklight controller that handles searches and document requests
 class CatalogController < ApplicationController
@@ -77,7 +78,7 @@ class CatalogController < ApplicationController
 
     # solr field configuration for document/show views
     # config.show.title_field = 'title_display'
-    config.show.document_component = Arclight::DocumentComponent
+    config.show.document_component = UmDocumentComponent
     config.show.sidebar_component = Arclight::SidebarComponent
     config.show.breadcrumb_component = Arclight::BreadcrumbsHierarchyComponent
     config.show.embed_component = Arclight::EmbedComponent
