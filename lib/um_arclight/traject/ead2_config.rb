@@ -287,6 +287,10 @@ to_field "sort_isi" do |_record, accumulator, _context|
   accumulator << 0
 end
 
+# UM customization: Add EAD authors field
+to_field "authors_creators_tesim", extract_xpath("/ead/eadheader/filedesc/titlestmt//author") # search plain text
+to_field "authors_creators_ssm", extract_xpath("/ead/eadheader/filedesc/titlestmt//author", to_text: false) # show render_html_tags
+
 # =============================
 # Each component child document
 # <c> <c01> <c12>
