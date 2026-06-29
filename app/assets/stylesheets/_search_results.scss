@@ -154,11 +154,6 @@
   width: 1rem
 }
 
-/* bookmark toggle and checkbox */
-.toggle-bookmark {
-  display:none;
-}
-
 #context {
   @include bs.media-breakpoint-down(sm) {
     padding-top: 0 !important;
@@ -320,19 +315,7 @@
   }
 }
 
-/* icon alignment */
-.bookmark-toggle {
-  padding-left: 0.3rem;
-}
-
-.blacklight-icons {
-  position: relative;
-  top: -1px;
-}
-
-label.toggle-bookmark > span:nth-child(2) {
-  margin-left: 0.1rem;
-}
+/* online icon in list */
 
 .al-online-content-icon {
   position: relative;
@@ -340,9 +323,10 @@ label.toggle-bookmark > span:nth-child(2) {
   padding-left: 0.4rem;
   padding-right: 0.1rem;
   float: right;
-  svg {
-    fill: colors.$green;
-  }
+}
+
+article.document .blacklight-icons.blacklight-icons-online svg {
+  fill: var(--color-green-500);
 }
 
 .al-restricted-component-icon {
@@ -357,11 +341,40 @@ label.toggle-bookmark > span:nth-child(2) {
 }
 
 /* Collection or item listings */
-
 #documents {
   margin-left: 3rem;
 
   h3 {
     margin-bottom: 0;
   }
+}
+
+.truncator button {
+  display: unset;
+}
+
+.al-document-abstract-or-scope.truncator button {
+  float: right;
+  margin-top: 1.5rem;
+  font-size: 16px;
+  color: var(--color-teal-400);
+}
+
+.al-document-abstract-or-scope.truncator button .icon,
+.al-document-abstract-or-scope.truncator button svg {
+  color: inherit;
+  fill: currentColor;
+}
+
+.al-document-abstract-or-scope.truncator button:hover,
+.al-document-abstract-or-scope.truncator button:hover .view-more,
+.al-document-abstract-or-scope.truncator button:hover .view-less,
+.al-document-abstract-or-scope.truncator button:hover .icon,
+.al-document-abstract-or-scope.truncator button:hover svg {
+  color: var(--color-neutral-400);
+}
+
+/* Increase abstract max-width from 45 to 60 */
+.documents-list article.document .al-document-abstract-or-scope {
+  max-width: 60em;
 }
