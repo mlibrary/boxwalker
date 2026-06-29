@@ -352,3 +352,24 @@ article.document .blacklight-icons.blacklight-icons-online svg {
 .truncator button {
   display: unset;
 }
+
+.al-document-abstract-or-scope.truncator button {
+  float: right;
+  margin-top: 1.5rem;
+  font-size: 16px;
+  color: var(--color-teal-400);
+}
+
+.al-document-abstract-or-scope.truncator button .icon,
+.al-document-abstract-or-scope.truncator button svg {
+  color: inherit;
+  fill: currentColor;
+}
+
+.al-document-abstract-or-scope.truncator button:hover,
+.al-document-abstract-or-scope.truncator button:hover .view-more,
+.al-document-abstract-or-scope.truncator button:hover .view-less,
+.al-document-abstract-or-scope.truncator button:hover .icon,
+.al-document-abstract-or-scope.truncator button:hover svg {
+  color: var(--color-neutral-400);
+}
