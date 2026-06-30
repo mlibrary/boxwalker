@@ -378,3 +378,14 @@ article.document .blacklight-icons.blacklight-icons-online svg {
 .documents-list article.document .al-document-abstract-or-scope {
   max-width: 60em;
 }
+
+.container-wrapper {
+  display: flex;
+  justify-content: flex-end;
+}
+
+@media (max-width: 768px) {
+  .container-wrapper {
+    justify-content: unset;
+  }
+}

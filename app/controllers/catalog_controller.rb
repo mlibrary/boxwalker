@@ -1,6 +1,7 @@
 # frozen_string_literal: true
 
 require_relative "../components/custom_constraints_component"
+require_relative "../components/um_search_result_component"
 # Blacklight controller that handles searches and document requests
 class CatalogController < ApplicationController
   include Blacklight::Catalog
@@ -67,7 +68,7 @@ class CatalogController < ApplicationController
     config.index.partials = %i[arclight_index_default]
     config.index.title_field = "normalized_title_ssm"
     config.index.display_type_field = "level_ssm"
-    config.index.document_component = Arclight::SearchResultComponent
+    config.index.document_component = UmSearchResultComponent
     config.index.group_component = Arclight::GroupComponent
     config.index.constraints_component = CustomConstraintsComponent
     config.index.document_presenter_class = Arclight::IndexPresenter
