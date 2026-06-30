@@ -1,5 +1,5 @@
 <header class="documentHeader row" data-document-id="<%= presenter.document.id %>">
-  <h3 class="index_title document-title-heading <%= presenter.document.containers.present? ? 'col-md-10' : 'col' %>" >
+  <h3 class="index_title document-title-heading <%= presenter.document.containers.present? ? 'col-md-10' : 'col' %>">
     <%= helpers.link_to_document presenter.document, counter: @counter %>
     <% presenter.document.extent.each do |extent| %>
       <%= tag.span extent, class: 'al-document-extent badge' unless compact? %>
