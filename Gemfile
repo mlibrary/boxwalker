@@ -43,7 +43,7 @@ gem "thruster", require: false
 gem "image_processing", "~> 1.2"
 
 # date range chart
-gem 'blacklight_range_limit', '>= 9.2'
+gem "blacklight_range_limit", ">= 9.2"
 
 group :development, :test do
   # See https://guides.rubyonrails.org/debugging_rails_applications.html#debugging-with-the-debug-gem

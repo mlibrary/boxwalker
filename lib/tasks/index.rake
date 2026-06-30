@@ -44,7 +44,7 @@ namespace :um_arclight do
     raise "Please specify your EAD document, ex. URL=<http[s]://domain/path/to/ead.xml>" unless ENV["URL"]
 
     ead = Nokogiri::XML(open(ENV.fetch("URL", nil)))
-    tmp = Tempfile.new(["#{Time.now.to_i}-", ".xml"], encoding: "utf-8")
+    tmp = Tempfile.new([ "#{Time.now.to_i}-", ".xml" ], encoding: "utf-8")
     begin
       tmp.write ead
       puts "Downloaded EAD to #{tmp.path}"

@@ -85,9 +85,9 @@ to_field "ref_ssi" do |record, accumulator, context|
                    end
                    record["id"] = hexdigest
                    hexdigest
-                 else
-                   record.attribute("id")&.value&.strip&.gsub(".", "-") # rubocop:disable Style/SafeNavigationChainLength
-                 end
+  else
+    record.attribute("id")&.value&.strip&.gsub(".", "-") # rubocop:disable Style/SafeNavigationChainLength
+  end
 end
 to_field "ref_ssm" do |_record, accumulator, context|
   accumulator.concat context.output_hash["ref_ssi"]
@@ -199,7 +199,7 @@ to_field "creator_sort" do |record, accumulator|
   accumulator << record.xpath("./did/origination").map(&:text).join(", ")
 end
 to_field "has_online_content_ssim", extract_xpath(".//dao") do |_record, accumulator|
-  accumulator.replace([accumulator.any?])
+  accumulator.replace([ accumulator.any? ])
 end
 to_field "child_component_count_isi" do |record, accumulator|
   accumulator << record.xpath("c|c01|c02|c03|c04|c05|c06|c07|c08|c09|c10|c11|c12").count
@@ -222,7 +222,7 @@ to_field "level_ssim" do |_record, accumulator, context|
 end
 
 to_field "sort_isi" do |_record, accumulator, _context|
-  accumulator.replace([settings[:counter].increment])
+  accumulator.replace([ settings[:counter].increment ])
 end
 
 # Get the <accessrestrict> from the closest ancestor that has one (includes top-level)
@@ -285,7 +285,7 @@ to_field "acqinfo_ssim", extract_xpath('./descgrp/acqinfo/*[local-name()!="head"
 to_field "language_ssim", extract_xpath("./did/langmaterial")
 to_field "containers_ssim" do |record, accumulator|
   record.xpath("./did/container").each do |node|
-    accumulator << [node.attribute("type"), node.text].join(" ").strip
+    accumulator << [ node.attribute("type"), node.text ].join(" ").strip
   end
 end
 
