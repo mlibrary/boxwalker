@@ -1,7 +1,7 @@
 # frozen_string_literal: true
 
-require 'arclight'
-require 'benchmark'
+require "arclight"
+require "benchmark"
 
 ##
 # Environment variables and information for indexing:
@@ -17,70 +17,68 @@ require 'benchmark'
 # (default: http://127.0.0.1:8983/solr/blacklight-core)
 #
 namespace :um_arclight do
-  desc 'Index an EAD document, use FILE=<path/to/ead.xml> and REPOSITORY_ID=<myid>'
+  desc "Index an EAD document, use FILE=<path/to/ead.xml> and REPOSITORY_ID=<myid>"
   # We need :environment to have access to the Blacklight confg
   task index: :environment do
-    raise 'Please specify your EAD document, ex. FILE=<path/to/ead.xml>' unless ENV['FILE']
+    raise "Please specify your EAD document, ex. FILE=<path/to/ead.xml>" unless ENV["FILE"]
 
     print "Loading #{ENV.fetch('FILE', nil)} into index...\n"
-    solr_url = ENV.fetch('SOLR_URL', Blacklight.default_index.connection.base_uri)
+    solr_url = ENV.fetch("SOLR_URL", Blacklight.default_index.connection.base_uri)
     elapsed_time = Benchmark.realtime do
-      `bundle exec traject -u #{solr_url} -i xml -c ./lib/um_arclight/traject/ead2_config.rb #{ENV.fetch('FILE', nil)}`
+      `bundle exec traject -u #{solr_url} -i xml -c ./lib/um_arclight/traject/ead2_config.rb #{ENV.fetch("FILE", nil)}`
     end
     print "Indexed #{ENV.fetch('FILE', nil)} (in #{elapsed_time.round(3)} secs).\n"
   end
 
-  desc 'Index a directory of EADs, use DIR=<path/to/directory> and REPOSITORY_ID=<myid>'
+  desc "Index a directory of EADs, use DIR=<path/to/directory> and REPOSITORY_ID=<myid>"
   task :index_dir do
-    raise 'Please specify your directory, ex. DIR=<path/to/directory>' unless ENV['DIR']
+    raise "Please specify your directory, ex. DIR=<path/to/directory>" unless ENV["DIR"]
 
-    p 'index_dir local command is being run'
-
-    Dir.glob(File.join(ENV.fetch('DIR', nil), '*.xml')).each do |file|
+    Dir.glob(File.join(ENV.fetch("DIR", nil), "*.xml")).each do |file|
       system("rake um_arclight:index FILE=#{file}")
     end
   end
 
-  desc 'Index an EAD document, use URL=<http[s]://domain/path/to/ead.xml> and REPOSITORY_ID=<myid>'
+  desc "Index an EAD document, use URL=<http[s]://domain/path/to/ead.xml> and REPOSITORY_ID=<myid>"
   task :index_url do
-    raise 'Please specify your EAD document, ex. URL=<http[s]://domain/path/to/ead.xml>' unless ENV['URL']
+    raise "Please specify your EAD document, ex. URL=<http[s]://domain/path/to/ead.xml>" unless ENV["URL"]
 
-    ead = Nokogiri::XML(open(ENV.fetch('URL', nil)))
-    tmp = Tempfile.new(["#{Time.now.to_i}-", '.xml'], encoding: 'utf-8')
+    ead = Nokogiri::XML(open(ENV.fetch("URL", nil)))
+    tmp = Tempfile.new(["#{Time.now.to_i}-", ".xml"], encoding: "utf-8")
     begin
       tmp.write ead
       puts "Downloaded EAD to #{tmp.path}"
-      ENV['FILE'] = tmp.path
-      Rake::Task['um_arclight:index'].invoke
-      Rake::Task['um_arclight:index'].reenable
+      ENV["FILE"] = tmp.path
+      Rake::Task["um_arclight:index"].invoke
+      Rake::Task["um_arclight:index"].reenable
       tmp.close
     ensure
       tmp.delete
     end
   end
 
-  desc 'Index EADs from a file of URLs, use BATCH=<path/to/urls.txt> and REPOSITORY_ID=<myid>'
+  desc "Index EADs from a file of URLs, use BATCH=<path/to/urls.txt> and REPOSITORY_ID=<myid>"
   task :index_url_batch do
-    raise 'Please specify your URLs file, ex. BATCH=<path/to/urls.txt>' unless ENV['BATCH']
+    raise "Please specify your URLs file, ex. BATCH=<path/to/urls.txt>" unless ENV["BATCH"]
 
-    File.open(ENV.fetch('BATCH', nil)).each_line do |l|
-      ENV['URL'] = l.chomp
-      next if ENV['URL'].empty?
+    File.open(ENV.fetch("BATCH", nil)).each_line do |l|
+      ENV["URL"] = l.chomp
+      next if ENV["URL"].empty?
 
-      unless ENV.fetch('URL', nil) =~ /\A#{URI::DEFAULT_PARSER.make_regexp(%w[http https])}\z/
+      unless ENV.fetch("URL", nil) =~ /\A#{URI::DEFAULT_PARSER.make_regexp(%w[http https])}\z/
         puts "Skipping invalid looking url #{ENV.fetch('URL', nil)}"
         next
       end
       puts "Indexing #{ENV.fetch('URL', nil)}"
-      Rake::Task['um_arclight:index_url'].invoke
-      Rake::Task['um_arclight:index_url'].reenable
+      Rake::Task["um_arclight:index_url"].invoke
+      Rake::Task["um_arclight:index_url"].reenable
     end
   end
 
-  desc 'Destroy all documents in the index'
+  desc "Destroy all documents in the index"
   task destroy_index_docs: :environment do
-    puts 'Deleting all documents from index...'
-    Blacklight.default_index.connection.delete_by_query('*:*')
+    puts "Deleting all documents from index..."
+    Blacklight.default_index.connection.delete_by_query("*:*")
     Blacklight.default_index.connection.commit
   end
 end
