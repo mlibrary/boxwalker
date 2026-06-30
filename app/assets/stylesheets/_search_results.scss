@@ -223,10 +223,19 @@ article.document .blacklight-icons.blacklight-icons-online svg {
   justify-content: flex-end;
 }
 
-@media (max-width: 768px) {
-  .container-wrapper {
-    justify-content: unset;
-  }
+.al-document-container.container-wrapper {
+  padding: 0.25rem;
+  font-weight: 700;
+  line-height: 1;
+  white-space: nowrap;
+  border-radius: 0.25rem;
+  transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+  font-size: 0.9rem;
+  background-color: var(--color-teal-100);
+  color: black !important;
+  align-self: flex-start;
+  display: flex;
+  justify-content: center;
 }
 
 /* Pagination */
