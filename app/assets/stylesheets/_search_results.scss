@@ -389,3 +389,14 @@ article.document .blacklight-icons.blacklight-icons-online svg {
     justify-content: unset;
   }
 }
+
+/* Pagination */
+
+.page-link {
+  color: colors.$primary-link-color;
+}
+
+.page-item.active .page-link {
+  background-color: colors.$primary-link-color;
+  border-color: colors.$primary-link-color;
+}

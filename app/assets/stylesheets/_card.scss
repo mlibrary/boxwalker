@@ -23,12 +23,6 @@
 
 /* repository cards */
 
-.blacklight-repositories-index {
-  .card-deck {
-    margin-bottom: 1rem;
-  }
-}
-
 .al-repository {
   background-color: colors.$facet-grey;
   border-radius: 0.25rem;
@@ -70,14 +64,6 @@
     line-height: 1.2;
     .al-repository-street-address {
       margin-bottom: 1rem;
-    }
-  }
-}
-
-.child-components article:nth-of-type(odd) {
-  .responsiveTruncatorToggle {
-    &::before {
-      background: linear-gradient(to left, #f7f7f7, rgba(255, 255, 255, 0.1));
     }
   }
 }
@@ -131,11 +117,3 @@
   }
 }
 
-.page-link {
-  color: colors.$primary-link-color;
-}
-
-.page-item.active .page-link {
-  background-color: colors.$primary-link-color;
-  border-color: colors.$primary-link-color;
-}
