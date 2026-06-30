@@ -25,5 +25,4 @@ class SolrDocument
   def collection_creator
     fetch("collection_creator_ssm", [])[0]
   end
-
 end
