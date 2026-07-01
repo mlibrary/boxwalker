@@ -1,0 +1,57 @@
+<%# Overrides ArcLight Core partial. %>
+<%# Last checked for updates: ArcLight v1.6.2. %>
+<%# https://github.com/projectblacklight/arclight/blob/master/app/views/catalog/_search_results.html.erb %>
+
+<% @page_title = t('blacklight.search.page_title.title', constraints: render_search_to_page_title(search_state), application_name: application_name) %>
+
+<% content_for(:head) do -%>
+  <%= render 'catalog/opensearch_response_metadata', response: @response %>
+  <%= rss_feed_link_tag %>
+  <%= atom_feed_link_tag %>
+  <%= json_api_link_tag %>
+<% end %>
+
+<% content_for(:skip_links) do -%>
+  <%= render Blacklight::SkipLinkItemComponent.new(text: t('blacklight.skip_links.first_result'), href: '#documents') %>
+<% end %>
+
+<% content_for(:container_header) do %>
+  <%= render 'search_results_header' %>
+  <%# moved breadcrumbs, repository results, and constraints down below %>
+<% end %>
+
+<div id="results-nav-and-constraints">
+
+  <div class="results-breadcrumb-wrapper">
+    <%= render 'shared/breadcrumbs' %>
+  </div>
+
+  <div class="mb-2 d-lg-none">
+    <a class="btn btn-secondary btn-block sidebar-nav-toggle" href="#" id="navigate-collection-toggle" data-turbolinks="false">
+      <i class="fas fa-filter"></i> Search Filters
+    </a>
+  </div>
+
+  <div class="constraints-wrapper">
+    <%= render blacklight_config.view_config(document_index_view_type).constraints_component.new(search_state: search_state) %>
+  </div>
+</div>
+
+<%= render blacklight_config.view_config(document_index_view_type).search_header_component.new %>
+
+<h2 class="visually-hidden"><%= t('blacklight.search.search_results') %></h2>
+
+<%- if @response.empty? %>
+  <%= render "zero_results" %>
+<%- elsif render_grouped_response? %>
+  <%= render 'group' %>
+<%- else %>
+  <%= render_document_index @response.documents %>
+<%- end %>
+
+<%= render 'results_pagination' %>
+
+<%= link_to t('blacklight.skip_links.back_to_top'),
+            '#skip-link',
+            class: 'element-invisible element-focusable rounded-bottom mt-2 py-2 px-3',
+            data: { turbolinks: 'false' } %>

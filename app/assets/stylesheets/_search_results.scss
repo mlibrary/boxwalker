@@ -1,0 +1,250 @@
+@use "bootstrap-context" as bs;
+@use "colors" as colors;
+
+.constraints-wrapper {
+  margin-top: 1.5rem;
+  margin-bottom: 1.5rem;
+
+  #appliedParams {
+    margin-bottom: 0 !important;
+    flex: 1 1 auto;
+    padding: 1rem 1rem 0.5rem 1rem;
+    background-color: colors.$facet-grey;
+
+    .btn {
+      padding: 0.25rem 0.5rem 0.125rem 0.5rem;
+      font-size: 14px;
+      margin-bottom: 0.5rem;
+    }
+
+    .btn-outline-secondary {
+      background-color: white;
+    }
+
+    .btn.remove:hover {
+      color: colors.$color-pink-200;
+    }
+
+    .catalog_startOverLink {
+      @include bs.media-breakpoint-down(sm) {
+        display: block;
+        width: max-content;
+      }
+    }
+
+    .constraint-value {
+      @include bs.media-breakpoint-down(lg) {
+        max-width: 20rem;
+      }
+    }
+
+    .constraints-label {
+      position: relative;
+      bottom: 3px;
+      margin-right: 1rem;
+      @include bs.media-breakpoint-down(sm);
+      margin-bottom: 0.5rem;
+    }
+  }
+}
+
+#sortAndPerPage {
+  .btn {
+    padding: 0.25rem 0.5rem;
+    font-size: 14px;
+  }
+
+  .btn-outline-secondary {
+    background-color: #fff;
+    border: solid 1px var(--color-neutral-400);
+    color: var(--color-neutral-400);
+    padding: 0.5rem;
+  }
+
+  .btn-outline-secondary:not(:disabled):not(.disabled).active {
+    background-color: var(--color-teal-100);
+    border: solid 1px var(--color-teal-400);
+    color: var(--color-teal-400);
+  }
+}
+#sidebar {
+  z-index: 20;
+  background: white;
+  padding-top: 5px;
+  box-shadow: 1px 0 1px -1px rgba(0,0,0,0.06),2px 0 2px -2px rgba(0,0,0,0.06),4px 0 4px -4px rgba(0,0,0,0.06),8px 0 8px -8px rgba(0,0,0,0.06),16px 0 16px -16px rgba(0,0,0,0.06)
+}
+@media (max-width: 991.98px) {
+  #sidebar {
+    z-index:1200
+  }
+}
+
+#sidebar h2 {
+  font-weight: bold;
+  font-size: 20px;
+  text-transform: uppercase
+}
+
+#sidebar h2 .fas {
+  margin-right: 0.2rem
+}
+
+#sidebar h2.sr-only {
+  display: none
+}
+
+/* Facets */
+
+#facets .facet-limit-active .card-header {
+  background: var(--color-green-500) !important;
+}
+
+#facets {
+  .facet-limit-active {
+    border-color: var(--color-green-500) !important;
+  }
+
+  .facet-limit-active .card-header {
+    background-color: var(--color-green-500) !important;
+  }
+
+  .facet-values li .selected {
+    color: var(--color-green-500) !important;
+  }
+
+  .facet-limit-active .collapse-toggle {
+    color: white;
+  }
+}
+
+.blacklight-has_online_content_ssim .card-header {
+  display: none;
+}
+/* online-icon hard-coded, green fill embedded via hex */
+#facets .blacklight-has_online_content_ssim ul.facet-values li .facet-label {
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' height='24' width='24' viewBox='0 0 640 512'%3E%3Cpath fill='%23198539' d='M608 0H160a32 32 0 0 0-32 32v96h160V64h192v320h128a32 32 0 0 0 32-32V32a32 32 0 0 0-32-32zM232 103a9 9 0 0 1-9 9h-30a9 9 0 0 1-9-9V73a9 9 0 0 1 9-9h30a9 9 0 0 1 9 9zm352 208a9 9 0 0 1-9 9h-30a9 9 0 0 1-9-9v-30a9 9 0 0 1 9-9h30a9 9 0 0 1 9 9zm0-104a9 9 0 0 1-9 9h-30a9 9 0 0 1-9-9v-30a9 9 0 0 1 9-9h30a9 9 0 0 1 9 9zm0-104a9 9 0 0 1-9 9h-30a9 9 0 0 1-9-9V73a9 9 0 0 1 9-9h30a9 9 0 0 1 9 9zm-168 57H32a32 32 0 0 0-32 32v288a32 32 0 0 0 32 32h384a32 32 0 0 0 32-32V192a32 32 0 0 0-32-32zM96 224a32 32 0 1 1-32 32 32 32 0 0 1 32-32zm288 224H64v-32l64-64 32 32 128-128 96 96z'/%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position-y: 5px;
+  background-size: 20px;
+  padding-left: 45px;
+}
+
+.facet-values .facet-label {
+  display: table-cell;
+  padding-right: 1em;
+  text-indent: -15px;
+  padding-left: 15px;
+  padding-bottom: 0.5rem;
+  overflow-wrap: break-word;
+  -webkit-hyphens: auto;
+  -o-hyphens: auto;
+  -ms-hyphens: auto;
+  hyphens: auto;
+}
+
+.facet-values .remove {
+  color: #6c757d;
+  font-weight: bold;
+  padding-left: 0.5rem;
+  text-decoration: none;
+}
+
+.blacklight-icons svg {
+  height: 1rem;
+  width: 1rem
+}
+
+/* online icon in list */
+
+.al-online-content-icon {
+  position: relative;
+  top: -1.5px;
+  padding-left: 0.4rem;
+  padding-right: 0.1rem;
+  float: right;
+}
+
+article.document .blacklight-icons.blacklight-icons-online svg {
+  fill: var(--color-green-500);
+}
+
+.al-restricted-component-icon {
+  svg {
+    color: colors.$color-maize-400;
+  }
+}
+
+.al-hierarchy-highlight > .documentHeader {
+  margin-right: -1.9rem;
+  background-color: unset;
+}
+
+/* Collection or item listings */
+#documents {
+  margin-left: 3rem;
+
+  h3 {
+    margin-bottom: 0;
+  }
+}
+
+.truncator button {
+  display: unset;
+}
+
+.al-document-abstract-or-scope.truncator button {
+  float: right;
+  margin-top: 1.5rem;
+  font-size: 16px;
+  color: var(--color-teal-400);
+}
+
+.al-document-abstract-or-scope.truncator button .icon,
+.al-document-abstract-or-scope.truncator button svg {
+  color: inherit;
+  fill: currentColor;
+}
+
+.al-document-abstract-or-scope.truncator button:hover,
+.al-document-abstract-or-scope.truncator button:hover .view-more,
+.al-document-abstract-or-scope.truncator button:hover .view-less,
+.al-document-abstract-or-scope.truncator button:hover .icon,
+.al-document-abstract-or-scope.truncator button:hover svg {
+  color: var(--color-neutral-400);
+}
+
+/* Increase abstract max-width from 45 to 60 */
+.documents-list article.document .al-document-abstract-or-scope {
+  max-width: 60em;
+}
+
+.container-wrapper {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.al-document-container.container-wrapper {
+  padding: 0.25rem;
+  font-weight: 700;
+  line-height: 1;
+  white-space: nowrap;
+  border-radius: 0.25rem;
+  transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+  font-size: 0.9rem;
+  background-color: var(--color-teal-100);
+  color: black !important;
+  align-self: flex-start;
+  display: flex;
+  justify-content: center;
+}
+
+/* Pagination */
+
+.page-link {
+  color: colors.$primary-link-color;
+}
+
+.page-item.active .page-link {
+  background-color: colors.$primary-link-color;
+  border-color: colors.$primary-link-color;
+}

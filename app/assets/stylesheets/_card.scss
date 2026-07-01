@@ -1,3 +1,6 @@
+@use "bootstrap-context" as bs;
+@use "colors";
+
 .card-title {
   margin-bottom: 0.75rem;
 }
@@ -17,3 +20,100 @@
   object-fit: cover;
   object-position: center;
 }
+
+/* repository cards */
+
+.al-repository {
+  background-color: colors.$facet-grey;
+  border-radius: 0.25rem;
+
+  .al-repository-information {
+    .al-repository-contact,
+    .al-repository-extra-collection-count {
+      font-weight: 400;
+    }
+  }
+
+  .collection-count-wrapper {
+    margin: 1rem 0 1rem 0;
+
+    .btn {
+      width: 100%;
+    }
+  }
+
+  .card-img {
+    overflow: hidden;
+    flex: 1;
+    align-self: center;
+    border-bottom-right-radius: 0;
+    border-bottom-left-radius: 0;
+    height: 100%;
+    object-fit: cover;
+
+    .img-wrapper {
+      height: 10rem;
+      align-self: center;
+      display: flex;
+      background-color: colors.$gray-light;
+      border: 1px solid #dee2e6;
+    }
+  }
+
+  .card-footer {
+    line-height: 1.2;
+    .al-repository-street-address {
+      margin-bottom: 1rem;
+    }
+  }
+}
+
+@include bs.media-breakpoint-up(lg) {
+  .card-horizontal {
+    flex-direction: row;
+    max-height: 14rem;
+
+    .card-img {
+      display: none;
+    }
+
+    .card-body {
+      flex: 2;
+
+      .card-text.expanded {
+        overflow-y: scroll;
+        max-height: 70%;
+        padding-right: 0.5rem;
+      }
+    }
+
+    .card-footer {
+      padding: 1.25rem;
+      background-color: rgba(0, 0, 0, 0.03);
+      border-left: 1px solid rgba(0, 0, 0, 0.125);
+      border-top: unset;
+    }
+  }
+}
+
+@include bs.media-breakpoint-up(xl) {
+  .card-horizontal {
+    .card-img {
+      display: flex;
+      overflow: hidden;
+      flex: 1;
+      align-self: center;
+      border-bottom-right-radius: 0;
+      border-top-right-radius: 0;
+
+      .img-wrapper {
+        max-height: 14rem;
+        align-self: center;
+        display: flex;
+        background-color: colors.$gray-light;
+        width: 100%;
+      }
+    }
+  }
+}
+

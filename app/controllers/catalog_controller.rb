@@ -1,8 +1,13 @@
 # frozen_string_literal: true
 
+require_relative "../components/um_constraints_component"
+require_relative "../components/um_search_result_component"
+
 # Blacklight controller that handles searches and document requests
 class CatalogController < ApplicationController
   include Blacklight::Catalog
+  include BlacklightRangeLimit::ControllerOverride
+
   include Arclight::Catalog
 
   configure_blacklight do |config|
@@ -49,7 +54,7 @@ class CatalogController < ApplicationController
 
     config.header_component = Arclight::HeaderComponent
     config.add_results_document_tool(:online, component: Arclight::OnlineStatusIndicatorComponent)
-    config.add_results_document_tool(:arclight_bookmark_control, component: Arclight::BookmarkComponent)
+    # UM customization: Removed bookmark icon and form in search results
 
     config.add_results_collection_tool(:group_toggle)
     config.add_results_collection_tool(:sort_widget)
@@ -63,9 +68,9 @@ class CatalogController < ApplicationController
     config.index.partials = %i[arclight_index_default]
     config.index.title_field = "normalized_title_ssm"
     config.index.display_type_field = "level_ssm"
-    config.index.document_component = Arclight::SearchResultComponent
+    config.index.document_component = UmSearchResultComponent
     config.index.group_component = Arclight::GroupComponent
-    config.index.constraints_component = Arclight::ConstraintsComponent
+    config.index.constraints_component = UmConstraintsComponent
     config.index.document_presenter_class = Arclight::IndexPresenter
     config.index.search_bar_component = Arclight::SearchBarComponent
     # config.index.thumbnail_field = 'thumbnail_path_ss'
@@ -139,14 +144,26 @@ class CatalogController < ApplicationController
     # :index_range can be an array or range of prefixes that will be used to create the navigation
     #  (note: It is case sensitive when searching values)
 
+    config.add_facet_field "has_online_content_ssim",
+                           label: "Online content",
+                           limit: true,
+                           collapse: false,
+                           query: {
+                             online: {
+                               label: I18n.t("um_arclight.advanced_search.available_online"),
+                               fq: "has_online_content_ssim:true"
+                             }
+                           }
+    config.add_facet_field "repository", field: "repository_ssim", limit: 10
     config.add_facet_field "collection", field: "collection_ssim", limit: 10
     config.add_facet_field "creators", field: "creator_ssim", limit: 10
     config.add_facet_field "date_range", field: "date_range_isim", range: true
-    config.add_facet_field "level", field: "level_ssim", limit: 10
+    # UM customization: Removed facet field for level
     config.add_facet_field "names", field: "names_ssim", limit: 10
-    config.add_facet_field "repository", field: "repository_ssim", limit: 10
     config.add_facet_field "places", field: "geogname_ssim", limit: 10
     config.add_facet_field "access_subjects", field: "access_subjects_ssim", limit: 10
+    # UM customization: Added formats
+    config.add_facet_field "formats", field: "formats_ssim", limit: 10
 
     # Have BL send all facet field names to Solr, which has been the default
     # previously. Simply remove these lines if you'd rather use Solr request
@@ -164,9 +181,7 @@ class CatalogController < ApplicationController
     config.add_index_field "abstract_or_scope", accessor: true, truncate: true, repository_context: true, helper_method: :render_html_tags, component: Arclight::IndexMetadataFieldComponent
     config.add_index_field "breadcrumbs", accessor: :itself, component: Arclight::SearchResultBreadcrumbsComponent, compact: { count: 2 }
 
-    config.add_facet_field "access", query: {
-      online: { label: "Online access", fq: "has_online_content_ssim:true" }
-    }
+    # UM customization: Removed Access facet
 
     # solr fields to be displayed in the show (single result) view
     #   The ordering of the field names is the order of the display
@@ -331,6 +346,13 @@ class CatalogController < ApplicationController
 
     config.add_indexed_terms_field "indexes", field: "indexes_html_tesm",
                                               helper_method: :render_html_tags
+
+    # UM customization: Add formats to indexed terms
+    config.add_indexed_terms_field "formats_ssim", label: "Formats", link_to_facet: true, separator_options: {
+      words_connector: "<br/>",
+      two_words_connector: "<br/>",
+      last_word_connector: "<br/>"
+    }
 
     # ==========================
     # COMPONENT SHOW PAGE FIELDS

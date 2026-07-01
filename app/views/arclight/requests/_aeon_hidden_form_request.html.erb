@@ -1,0 +1,23 @@
+<% document ||= @document %>
+<% aeon_external_request ||= Arclight::Requests::AeonHiddenFormRequest.new(
+  document, Arclight::ShowPresenter.new(document, self)) %>
+<%# content_for :head do %>
+<%#= javascript_include_tag 'aeonform' %>
+<%# end %>
+
+<%= form_tag aeon_external_request.url,
+             name: "EADRequest",
+             id: "EADRequestFormId",
+             method: :post,
+             target: '_blank',
+             class: 'al-request-form' do %>
+  <span id="aeon_fixed_fields">
+    <% aeon_external_request.form_mapping.each do |mapping| %>
+      <input type="hidden" name="<%= mapping[0]%>" value="<%= mapping[1] %>">
+    <% end %>
+    <input type="hidden" name="OriginatingUrl" value="<%= request.url %>">
+  </span>
+<% end %>
+<button type='submit' class='btn btn-primary btn-sm' onclick="SubmitAeonRequestForm()">Request</button>
+<button class='btn btn-secondary btn-sm' onclick="ClearAllCheckboxes()">Clear selected</button>
+<span id="selected-items-count" aria-live="polite" class="badge badge-request"></span>

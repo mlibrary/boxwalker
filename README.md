@@ -16,10 +16,10 @@ docker compose up
 ```shell
 # Inside the container
 docker compose exec app bash
-DIR=<your directory path> REPOSITORY=<repository id> rake arclight:index_dir
+DIR=<your directory path> REPOSITORY=<repository id> rake um_arclight:index_dir
 
 # Outside the container
-SOLR_URL=<domain>/solr/blacklight-collection DIR=./<location> REPOSITORY_ID=<repository shortname> rake arclight:index_dir
+SOLR_URL=http://localhost:8983/solr/blacklight-collection DIR=./<location> REPOSITORY_ID=<repository shortname> rake um_arclight:index_dir
 ```
 #### Hybrid development
 Use hybrid for quick rebuilds of Rails (outside a container) without repeatedly spinning up Solr/Zookeeper for each reset.
