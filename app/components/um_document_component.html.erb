@@ -16,8 +16,9 @@
   <% end %>
   <%#= render Arclight::BookmarkComponent.new document: document, action: bookmark_config %>
   <%= toggle_sidebar %>
-  <%= online_filter %>
 </div>
+
+<%= digital_materials_filter %>
 
 <%= render Arclight::MetadataSectionComponent.with_collection(component_metadata_partials,
   metadata_attr: { layout: UmUpperMetadataLayoutComponent },

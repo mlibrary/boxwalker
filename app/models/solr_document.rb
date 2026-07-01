@@ -29,4 +29,8 @@ class SolrDocument
   def repository_id
     repository_config&.slug
   end
+
+  def has_online_content?
+    fetch("has_online_content_ssim", [])[0]
+  end
 end
