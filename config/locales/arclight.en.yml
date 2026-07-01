@@ -3,6 +3,10 @@ en:
     views:
       home:
         title: University of Michigan Finding Aids
+      show:
+        sections:
+          component_indexed_terms_field: Subjects
+          indexed_terms_field: Subjects
   blacklight:
     search:
       fields:
