@@ -2,12 +2,8 @@
   <%= render 'arclight/requests', document: document %>
 </div>
 
-<div class='d-md-flex justify-content-between al-show'>
-  <div class='al-show-breadcrumb'>
-    <nav aria-label="breadcrumb">
-      <%= render breadcrumb_component.new(presenter: presenter) %>
-    </nav>
-  </div>
+<div class="al-repository-card">
+  <%= render document.repository_config %>
 </div>
 
 <div class="title-container">
