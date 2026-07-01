@@ -2,6 +2,9 @@ ENV["RAILS_ENV"] ||= "test"
 require_relative "../config/environment"
 require "rails/test_help"
 
+puts "Where am I? #{self.inspect}"
+puts $LOADED_FEATURES
+
 module ActiveSupport
   class TestCase
     # Run tests in parallel with specified workers
