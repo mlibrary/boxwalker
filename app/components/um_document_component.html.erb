@@ -14,20 +14,23 @@
   <%= toggle_sidebar %>
 </div>
 
-<%= digital_materials_filter %>
+<% if document.collection? %>
+  <%= digital_materials_filter %>
+<% end %>
 
 <%= render Arclight::MetadataSectionComponent.with_collection(component_metadata_partials,
   metadata_attr: { layout: UmUpperMetadataLayoutComponent },
-  presenter: presenter) unless document.collection? %>
+  presenter: presenter, classes: "") unless document.collection? %>
 
 <%= embed %>
 
 <% if document.collection? %>
   <div id="metadata">
     <h2 class="sr-only visually-hidden"><%= t 'arclight.views.show.context' %></h2>
+    <%= render UmAccessSnippetComponent.new(document: document) %>
     <%= render Arclight::MetadataSectionComponent.with_collection(metadata_partials,
       metadata_attr: { layout: UmUpperMetadataLayoutComponent },
-      presenter: presenter, heading: true, classes: "row") %>
+      presenter: presenter, heading: true, classes: "") %>
   </div>
 <% elsif document.children? %>
   <div id="contents">

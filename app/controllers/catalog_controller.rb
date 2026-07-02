@@ -304,9 +304,6 @@ class CatalogController < ApplicationController
 
     config.add_summary_field 'authors_creators_ssm', label: 'Authors', helper_method: :render_html_tags
 
-
-    config.add_summary_field "prefercite", field: "prefercite_html_tesm", helper_method: :render_html_tags
-
     # Collection Show Page - Background Section
     config.add_background_field "scopecontent", field: "scopecontent_html_tesm", helper_method: :render_html_tags
     config.add_background_field "bioghist", field: "bioghist_html_tesm", helper_method: :render_html_tags

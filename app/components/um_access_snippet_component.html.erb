@@ -1,0 +1,40 @@
+<div class="access-preview-snippet">
+  <h2 class='al-show-sub-heading'>
+    <%= t("arclight.views.show.sections.using_field") %>
+  </h2>
+  <p>
+    <%= link_to 'Info for Visitors', about_repository_path(@document.repository_config.slug), target: '_blank' %>
+  </p>
+  <p>
+    <% if helpers.how_to_request(@document.repository_config) %>
+      <%= link_to 'How to Request', about_repository_path(@document.repository_config.slug, anchor: 'requesting'), target: '_blank' %>
+    <% end %>
+  </p>
+  <p>
+    <% if helpers.how_to_order(@document.repository_config) %>
+      <%= link_to 'Ordering Reproductions', about_repository_path(@document.repository_config.slug, anchor: 'ordering'), target: '_blank' %>
+    <% end %>
+  </p>
+
+  <hr/>
+
+  <%# if pdf_available? %>
+<!--    <div class="mb-3 x-printable">-->
+      <%#= link_to url_for(action: 'pdf_download', id: @document.document_id), download: "#{@document.document_id}.pdf", class: 'btn btn-primary btn-compact' do %>
+<!--        <i class="far fa-file-pdf" aria-hidden="true"></i> <%#= t('arclight.views.show.download.pdf') %>-->
+      <%# end %>
+<!--    </div>-->
+  <%# end %>
+
+  <%#= render 'custom_metadata', document: @document, field_accessor: 'restrictions_field', truncation_length: 200, skip_headings: true %>
+
+  <p>
+    <a
+      class="smooth-scroll"
+      href="#<%=t("arclight.views.show.sections.access_field").parameterize %>"
+      data-turbolinks="false"
+    >
+      More ...
+    </a>
+  </p>
+</div>

@@ -7,6 +7,8 @@ en:
         sections:
           component_indexed_terms_field: Subjects
           indexed_terms_field: Subjects
+          access_field: Using These Materials
+          using_field: Using These Materials
   blacklight:
     search:
       fields:

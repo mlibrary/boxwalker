@@ -1,3 +1,6 @@
+@use "colors";
+@use "bootstrap-context" as bs;
+
 .al-show-actions-toolbar {
   display: flex;
   flex-flow: row wrap;
@@ -14,8 +17,6 @@
   }
 }
 
-
-
 .al-show-sub-heading {
   font-size: 1.5rem;
   text-transform: unset;
@@ -26,4 +27,34 @@
   margin-top: 1rem;
   margin-bottom: 0.25rem;
   text-transform: uppercase;
+}
+
+#summary .al-show-sub-heading {
+  border-top: 3px solid #747474;
+  padding-top: 1.5rem;
+}
+
+.access-preview-snippet .al-show-sub-heading {
+  padding-top: 1.5rem;
+}
+
+.access-preview-snippet {
+  float: right;
+  width: 33%;
+  margin-left: 2rem;
+  margin-bottom: 2rem;
+  margin-top: 3px;
+  background: colors.$facet-grey;
+  padding: 0 1rem 1rem 1rem;
+  border-left: 3px solid colors.$gray-light-more;
+
+  .al-show-sub-heading {
+    border-top: none;
+    margin-top: 0;
+  }
+
+  @include bs.media-breakpoint-down(lg) {
+    width: 100%;
+    border-left: none;
+  }
 }
