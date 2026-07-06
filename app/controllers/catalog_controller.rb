@@ -1,5 +1,6 @@
 # frozen_string_literal: true
 
+require_relative "../components/um_access_component"
 require_relative "../components/um_constraints_component"
 require_relative "../components/um_search_result_component"
 require_relative "../components/um_document_component"
@@ -82,7 +83,7 @@ class CatalogController < ApplicationController
     config.show.sidebar_component = Arclight::SidebarComponent
     config.show.breadcrumb_component = Arclight::BreadcrumbsHierarchyComponent
     config.show.embed_component = Arclight::EmbedComponent
-    config.show.access_component = Arclight::AccessComponent
+    config.show.access_component = UmAccessComponent
     config.show.online_status_component = Arclight::OnlineStatusIndicatorComponent
     config.show.expand_hierarchy_component = Arclight::ExpandHierarchyButtonComponent
     config.show.display_type_field = "level_ssm"
@@ -436,14 +437,13 @@ class CatalogController < ApplicationController
     config.add_component_terms_field "parent_terms", field: "parent_access_terms_tesm", helper_method: :render_html_tags
 
     # Collection and Component Show Page Access Tab - In Person Section
-    config.add_in_person_field "repository_location", values: ->(_, document, _) { document.repository_config }, component: Arclight::RepositoryLocationComponent
-    config.add_in_person_field "before_you_visit", values: ->(_, document, _) { document.repository_config&.visit_note }
+    # UM customization: Removed in-person fields
 
     # Collection and Component Show Page Access Tab - How to Cite Section
     config.add_cite_field "prefercite", field: "prefercite_html_tesm", helper_method: :render_html_tags
 
     # Collection and Component Show Page Access Tab - Contact Section
-    config.add_contact_field "repository_contact", values: ->(_, document, _) { document.repository_config&.contact }
+    # UM customization: Removed contact field
 
     # Group header values
     config.add_group_header_field "abstract_or_scope", accessor: true, truncate: true, helper_method: :render_html_tags

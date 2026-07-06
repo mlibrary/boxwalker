@@ -1,8 +1,12 @@
-class UmAccessSnippetComponent < Blacklight::Component
-  attr_accessor :document
+class UmAccessSnippetComponent < Arclight::DocumentComponent
 
-  def initialize(document:)
-    @document = document
-    super()
+  def access_header
+    render UmAccessHeaderComponent.new(document: document)
+  end
+
+  def restrictions_field
+    field_config = helpers.blacklight_config.terms_fields["restrictions"]
+    render Blacklight::MetadataFieldComponent.new(
+      field: Blacklight::FieldPresenter.new(helpers, document, field_config), show: true)
   end
 end

@@ -27,7 +27,7 @@
 <% if document.collection? %>
   <div id="metadata">
     <h2 class="sr-only visually-hidden"><%= t 'arclight.views.show.context' %></h2>
-    <%= render UmAccessSnippetComponent.new(document: document) %>
+    <%= render UmAccessSnippetComponent.new(presenter: presenter) %>
     <%= render Arclight::MetadataSectionComponent.with_collection(metadata_partials,
       metadata_attr: { layout: UmUpperMetadataLayoutComponent },
       presenter: presenter, heading: true, classes: "") %>

@@ -7,8 +7,11 @@ en:
         sections:
           component_indexed_terms_field: Subjects
           indexed_terms_field: Subjects
+          terms_field: Terms
+          cite_field: Preferred Citation
           access_field: Using These Materials
           using_field: Using These Materials
+
   blacklight:
     search:
       fields:

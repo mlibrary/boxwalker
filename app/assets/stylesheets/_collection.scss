@@ -22,7 +22,8 @@
   text-transform: unset;
 }
 
-.al-show-sub-heading+dl>dt {
+.al-show-sub-heading+dl>dt,
+#using-these-materials dt {
   font-size: 0.875rem;
   margin-top: 1rem;
   margin-bottom: 0.25rem;
