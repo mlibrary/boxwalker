@@ -33,4 +33,8 @@ class SolrDocument
   def has_online_content?
     fetch("has_online_content_ssim", [])[0]
   end
+
+  def document_id
+    fetch('ead_ssi', nil)&.strip
+  end
 end
