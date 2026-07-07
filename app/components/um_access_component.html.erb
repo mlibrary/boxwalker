@@ -7,7 +7,7 @@
 <% if access_content.present? %>
   <div id="<%= t('arclight.views.show.sections.access_field').parameterize %>">
     <h2 class="al-show-sub-heading"><%= t 'arclight.views.show.sections.access_field' %></h2>
-    <%= render UmAccessHeaderComponent.new(document: presenter.document) %>
+    <%= render UmMaterialsAccessComponent.new(document: presenter.document) %>
     <%= access_content %>
   </div>
 <% end %>

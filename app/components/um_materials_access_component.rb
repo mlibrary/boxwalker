@@ -1,4 +1,4 @@
-class UmAccessHeaderComponent < ViewComponent::Base
+class UmMaterialsAccessComponent < ViewComponent::Base
   def initialize(document:)
     @document = document
   end

@@ -1,7 +1,7 @@
 class UmAccessSnippetComponent < Arclight::DocumentComponent
 
-  def access_header
-    render UmAccessHeaderComponent.new(document: document)
+  def materials_access
+    render UmMaterialsAccessComponent.new(document: document)
   end
 
   def restrictions_field
