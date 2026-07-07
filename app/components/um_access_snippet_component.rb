@@ -1,5 +1,4 @@
 class UmAccessSnippetComponent < Arclight::DocumentComponent
-
   def materials_access
     render UmMaterialsAccessComponent.new(document: document)
   end
