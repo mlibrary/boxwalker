@@ -2,8 +2,8 @@
 
 require_relative "../components/um_access_component"
 require_relative "../components/um_constraints_component"
-require_relative "../components/um_search_result_component"
 require_relative "../components/um_document_component"
+require_relative "../components/um_search_result_component"
 
 # Blacklight controller that handles searches and document requests
 class CatalogController < ApplicationController
@@ -298,12 +298,12 @@ class CatalogController < ApplicationController
     config.add_summary_field "abstract", field: "abstract_html_tesm", helper_method: :render_html_tags
     config.add_summary_field "extent", field: "extent_ssm"
     config.add_summary_field "language", field: "language_ssim"
-    config.add_summary_field 'collection_unitid_ssm', label: 'Call Number', accessor: :collection_unitid,
+    config.add_summary_field "collection_unitid_ssm", label: "Call Number", accessor: :collection_unitid,
                              if: lambda { |_context, _field_config, document|
                                /^\s*bhl\s*$/i.match?(document.repository_id)
                              }
 
-    config.add_summary_field 'authors_creators_ssm', label: 'Authors', helper_method: :render_html_tags
+    config.add_summary_field "authors_creators_ssm", label: "Authors", helper_method: :render_html_tags
 
     # Collection Show Page - Background Section
     config.add_background_field "scopecontent", field: "scopecontent_html_tesm", helper_method: :render_html_tags

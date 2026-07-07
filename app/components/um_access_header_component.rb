@@ -1,5 +1,4 @@
 class UmAccessHeaderComponent < ViewComponent::Base
-
   def initialize(document:)
     @document = document
   end

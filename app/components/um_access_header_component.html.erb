@@ -1,14 +1,18 @@
 <p>
-  <%= link_to 'Info for Visitors', about_repository_path(repository.slug), target: '_blank' %>
+  <%= link_to "Info for Visitors", about_repository_path(repository.slug), target: "_blank" %>
 </p>
 <p>
   <% if helpers.how_to_request(repository) %>
-    <%= link_to 'How to Request', about_repository_path(repository.slug, anchor: 'requesting'), target: '_blank' %>
+    <%= link_to "How to Request", about_repository_path(repository.slug, anchor: "requesting"), target: "_blank" %>
   <% end %>
 </p>
 <p>
   <% if helpers.how_to_order(repository) %>
-    <%= link_to 'Ordering Reproductions', about_repository_path(repository.slug, anchor: 'ordering'), target: '_blank' %>
+    <%= link_to(
+      "Ordering Reproductions",
+      about_repository_path(repository.slug, anchor: "ordering"),
+      target: "_blank"
+    ) %>
   <% end %>
 </p>
 

@@ -11,7 +11,6 @@ en:
           cite_field: Preferred Citation
           access_field: Using These Materials
           using_field: Using These Materials
-
   blacklight:
     search:
       fields:
