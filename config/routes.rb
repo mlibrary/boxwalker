@@ -30,7 +30,7 @@ Rails.application.routes.draw do
 
   # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html
 
-  resources :repositories, only: %i[index], controller: "arclight/repositories" do
+  resources :repositories, only: %i[index show], controller: "arclight/repositories" do
     member do
       get :about
     end

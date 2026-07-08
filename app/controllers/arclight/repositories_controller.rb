@@ -8,9 +8,16 @@ module Arclight
       load_collection_counts
     end
 
+    def show
+      @repository = Arclight::Repository.find_by!(slug: params[:id])
+      redirect_to search_catalog_path(f: {level_ssim: "Collection", repository_ssim: @repository.name}) and return
+    end
+
     def about
       @repository = Arclight::Repository.find_by(slug: params[:id])
     end
+
+    private
 
     def load_collection_counts
       counts = fetch_collection_counts
