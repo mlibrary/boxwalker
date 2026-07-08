@@ -9,8 +9,9 @@ class UmSearchResultTitleComponent < Arclight::SearchResultTitleComponent
       return super
     end
 
+    # Keep explicit slot/document_component actions, but skip Blacklight fallback
     (@has_actions_slot && get_slot(:actions)) ||
       ([@document_component&.actions] if @document_component&.actions.present?) ||
-      [helpers.render_index_doc_actions(presenter.document, wrapping_class: nil)]
+      []
   end
 end
