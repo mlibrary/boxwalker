@@ -1,0 +1,15 @@
+<% if document.has_online_content? %>
+  <div class="umich-lib-callout success">
+    <div class="callout--content">
+      <h2>Digital Materials</h2>
+      <p>Some materials from this collection are available online</p>
+      <%= link_to helpers.search_action_path(f: {
+        has_online_content_ssim: ["online"],
+        repository: [document.repository],
+        collection: [document.collection_name]
+      }), class: "callout--link", data: { ga_label: 'filter to online access' } do %>
+        <span class="bi bi-funnel-fill"></span> Only view items with digital materials
+      <% end %>
+    </div>
+  </div>
+<% end %>

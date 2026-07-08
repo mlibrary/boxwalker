@@ -1,0 +1,61 @@
+@use "colors";
+@use "bootstrap-context" as bs;
+
+.al-show-actions-toolbar {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: flex-end;
+  position: relative;
+  margin-bottom: .5rem;
+  border-bottom: solid 1px var(--color-teal-300);
+  box-shadow: 0px 3px 3px -3px rgba(23, 130, 166, 0.58);
+  background-image: linear-gradient(to top, #f7f8f9, #f9fafb, #fbfbfc, #fdfdfd, #ffffff);
+
+  .al-request {
+    margin-right: 2rem;
+    margin-bottom: 1rem;
+  }
+}
+
+.al-show-sub-heading {
+  font-size: 1.5rem;
+  text-transform: unset;
+}
+
+.al-show-sub-heading+dl>dt,
+#using-these-materials dt {
+  font-size: 0.875rem;
+  margin-top: 1rem;
+  margin-bottom: 0.25rem;
+  text-transform: uppercase;
+}
+
+#summary .al-show-sub-heading {
+  border-top: 3px solid #747474;
+  padding-top: 1.5rem;
+}
+
+.access-preview-snippet .al-show-sub-heading {
+  padding-top: 1.5rem;
+}
+
+.access-preview-snippet {
+  float: right;
+  width: 33%;
+  margin-left: 2rem;
+  margin-bottom: 2rem;
+  margin-top: 3px;
+  background: colors.$facet-grey;
+  padding: 0 1rem 1rem 1rem;
+  border-left: 3px solid colors.$gray-light-more;
+
+  .al-show-sub-heading {
+    border-top: none;
+    margin-top: 0;
+  }
+
+  @include bs.media-breakpoint-down(lg) {
+    width: 100%;
+    border-left: none;
+  }
+}

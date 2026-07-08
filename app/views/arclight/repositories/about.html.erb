@@ -1,0 +1,20 @@
+<div class="prose prose-container">
+  <h1>Using Materials from <%= @repository.name %></h1>
+
+  <p><%= using_materials(@repository).html_safe %></p>
+
+  <% if visitor_info(@repository) %>
+    <h2>Info for Visitors</h2>
+    <p><%= visitor_info(@repository).html_safe %></p>
+  <% end %>
+
+  <% if how_to_request(@repository) %>
+    <h2 id="requesting">How to Request</h2>
+    <p><%= how_to_request(@repository).html_safe %></p>
+  <% end %>
+
+  <% if how_to_order(@repository) %>
+    <h2 id="ordering">Ordering Reproductions</h2>
+    <p><%= how_to_order(@repository).html_safe %></p>
+  <% end %>
+</div>
