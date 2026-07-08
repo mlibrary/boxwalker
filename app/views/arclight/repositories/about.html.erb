@@ -1,20 +1,20 @@
 <div class="prose prose-container">
   <h1>Using Materials from <%= @repository.name %></h1>
 
-  <p><%= using_materials(@repository) %></p>
+  <p><%= sanitize(using_materials(@repository), tags: %w[a], attributes: %w[href]) %></p>
 
   <% if visitor_info(@repository) %>
     <h2>Info for Visitors</h2>
-    <p><%= visitor_info(@repository) %></p>
+    <p><%= sanitize(visitor_info(@repository), tags: %w[a], attributes: %w[href]) %></p>
   <% end %>
 
   <% if how_to_request(@repository) %>
     <h2 id="requesting">How to Request</h2>
-    <p><%= how_to_request(@repository) %></p>
+    <p><%= sanitize(how_to_request(@repository), tags: %w[a], attributes: %w[href]) %></p>
   <% end %>
 
   <% if how_to_order(@repository) %>
     <h2 id="ordering">Ordering Reproductions</h2>
-    <p><%= how_to_order(@repository) %></p>
+    <p><%= sanitize(how_to_order(@repository), tags: %w[a], attributes: %w[href]) %></p>
   <% end %>
 </div>
