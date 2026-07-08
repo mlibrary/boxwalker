@@ -3,9 +3,7 @@ class UmAccessSnippetComponent < Arclight::DocumentComponent
     render UmMaterialsAccessComponent.new(document: document)
   end
 
-  def restrictions_field
-    field_config = helpers.blacklight_config.terms_fields["restrictions"]
-    render Blacklight::MetadataFieldComponent.new(
-      field: Blacklight::FieldPresenter.new(helpers, document, field_config), show: true)
+  def restrictions_value
+    @document.restrictions
   end
 end

@@ -33,4 +33,8 @@ class SolrDocument
   def has_online_content?
     fetch("has_online_content_ssim", [])[0]
   end
+
+  def restrictions
+    fetch("accessrestrict_html_tesm", [])[0]
+  end
 end

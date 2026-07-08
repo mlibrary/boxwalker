@@ -3,7 +3,10 @@
     <%= t("arclight.views.show.sections.using_field") %>
   </h2>
   <%= materials_access %>
-  <%= restrictions_field %>
+  <dl>
+    <dt><strong>Restrictions:</strong></dt>
+    <dd><%= helpers.truncate_html(html_string: restrictions_value, length: 200) %></dd>
+  </dl>
   <p>
     <a
       class="smooth-scroll"
