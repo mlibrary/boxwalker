@@ -1,24 +1,17 @@
+
 <header class="documentHeader row" data-document-id="<%= presenter.document.id %>">
-  <h3 class="index_title document-title-heading <%= presenter.document.containers.present? ? 'col-md-10' : 'col' %>">
+  <h3 class="index_title document-title-heading <%= title_col_class %>">
     <%= helpers.link_to_document presenter.document, counter: @counter %>
     <% presenter.document.extent.each do |extent| %>
       <%= tag.span extent, class: 'al-document-extent badge' unless compact? %>
     <% end %>
   </h3>
 
-    <%= tag.span class: 'al-document-container container-wrapper col-md-2' do %>
-      <%= presenter.document.containers.join(', ') %>
-    <% end if presenter.document.containers.present? %>
+  <%= tag.span class: 'al-document-container container-wrapper col-md-3' do %>
+    <%= presenter.document.containers.join(', ') %>
+  <% end if presenter.document.containers.present? %>
 
   <% actions.each do |action| %>
     <%= action %>
   <% end %>
-
-  <span class="al-online-status-wrapper" data-controller="tooltip">
-    <%= render Arclight::OnlineStatusIndicatorComponent.new(document: presenter.document) %>
-    <span class="al-online-status-tooltip" role="tooltip">
-      <%= t('um_arclight.tooltips.online') %>
-    </span>
-  </span>
-
 </header>
