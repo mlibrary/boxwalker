@@ -14,6 +14,11 @@
     <%= action %>
   <% end %>
 
-  <%= helpers.blacklight_icon :online, classes: 'al-online-content-icon' %>
+  <span class="al-online-status-wrapper" data-controller="tooltip">
+    <%= render Arclight::OnlineStatusIndicatorComponent.new(document: presenter.document) %>
+    <span class="al-online-status-tooltip" role="tooltip">
+      <%= t('um_arclight.tooltips.online') %>
+    </span>
+  </span>
 
 </header>
