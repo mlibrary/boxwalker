@@ -5,7 +5,7 @@
   <%= materials_access %>
   <dl>
     <dt><strong>Restrictions:</strong></dt>
-    <dd><%= helpers.truncate_html(html_string: restrictions_value, length: 200) %></dd>
+    <dd class="um-truncated"><%= sanitize(restrictions_value) %></dd>
   </dl>
   <p>
     <a
