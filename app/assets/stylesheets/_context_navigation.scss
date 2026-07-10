@@ -1,0 +1,160 @@
+@use "colors";
+@use "bootstrap-context" as bs;
+
+/* ===================================== */
+/* Styles for sidebar context navigation */
+/* ===================================== */
+.modal-backdrop {
+  /*z-index: 1999;*/
+}
+
+#sidebar {
+  background: #f6f6f6;
+  @include bs.media-breakpoint-down(md) {
+    height: 100%;
+    overflow-y: auto;
+    position: fixed;
+    top: 0;
+    left: 0;
+    margin-top: 0;
+    padding-top: 0;
+    padding-left: 1rem !important;
+    padding-right: 1rem !important;
+    width: 85%;
+    transform: translateX(-100%);
+    transition: transform 250ms ease-in-out;
+    z-index: 1050;
+    &.expanded, &.show {
+      transform: translateX(0) !important;
+    }
+    button.close {
+      font-size: 2rem;
+      margin: 0.5rem 0.75rem;
+    }
+
+  }
+}
+
+#context {
+  .tab-pane {
+    padding: 0;
+    border: 0;
+  }
+
+  li.al-collection-context {
+    .al-toggle-view-children {
+      /* DUL CUSTOMIZATION: */
+      /* undo Arclight core content style, we use background-image so we can resize the icons */
+      /* see https://github.com/projectblacklight/arclight/blob/master/app/assets/stylesheets/arclight/modules/layout.scss#L112-L121 */
+      &::after {
+        content: normal !important;
+      }
+      background-image: image-url('blacklight/plus.svg');
+      background-repeat: no-repeat;
+      background-size: 1.05rem;
+      background-position: center;
+      &:not(.collapsed) {
+        background-image: image-url('blacklight/minus.svg');
+      }
+    }
+
+    .al-toggle-view-children .blacklight-icons svg {
+      vertical-align: top;
+    }
+    .document-title-heading {
+      font-size: 1rem;
+    }
+    .documentHeader {
+      margin-bottom: 0.75rem;
+    }
+  }
+
+  #collection-context .al-hierarchy-level-1 .document-title-heading {
+    font-size: 0.85rem;
+  }
+
+  .al-hierarchy-highlight {
+    a.tree-nav-leaf {
+      font-weight: bold;
+    }
+    ul a.tree-nav-leaf {
+      font-weight: normal;
+    }
+  }
+
+  .context-navigator {
+    margin-top: 0.8rem;
+    .prev-siblings button { /* Expand & collapse */
+      width: 100%;
+      text-align: left;
+      text-transform: lowercase;
+      padding-left: 2.25rem;
+      color: #fff;
+      background-color: #1D7491;
+      border: none;
+      background-repeat: no-repeat;
+      background-size: 1rem auto;
+      background-position: 10px center;
+      background-image: asset-url("icons/expand-white.svg");
+      &.collapsed {
+        background-image: asset-url("icons/collapse-white.svg");
+      }
+    }
+  }
+}
+
+.load-warning {
+  font-size: 14px;
+  background: bs.$gray-200;
+  padding: 0.5rem;
+  border-radius: 5px;
+  animation: pulse 1.5s infinite ease-in-out;
+}
+
+/* ==================== */
+/* Loading Placeholders */
+/* ==================== */
+
+/* Only show the number of placeholder lines needed (up to 20) */
+@for $i from 1 to 20 {
+  /* The top-level collection navigator (usually list of series) */
+  .top-children-count-#{$i} #collection-context > .al-hierarchy-placeholder {
+    & > *:nth-of-type(n+#{$i + 1}) {
+      display: none;
+    }
+  }
+  /* All component navigators (below top level) */
+  .children-count-#{$i} > .al-hierarchy-placeholder {
+    & > *:nth-of-type(n+#{$i + 1}) {
+      display: none;
+    }
+  }
+}
+
+.al-hierarchy-placeholder {
+  p, .page-links {
+    animation: pulse 1.5s infinite ease-in-out;
+  }
+}
+
+@keyframes pulse {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.75; }
+}
+
+/* Placeholder area for child component nav in main content */
+.child-components {
+  .al-hierarchy-placeholder {
+    margin-top: 0;
+  }
+  .placeholder-row {
+    padding: 1.5rem 0 1rem 0;
+    margin: 0;
+    &:nth-of-type(odd) {
+      background: #f8f8f8;
+    }
+  }
+  #sortAndPerPage, #sortAndPerPageBottom {
+    padding-left: 0 !important;
+  }
+}
