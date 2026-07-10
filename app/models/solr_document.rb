@@ -39,7 +39,6 @@ class SolrDocument
   end
 
   def document_id
-    fetch('ead_ssi', nil)&.strip
+    fetch("ead_ssi", nil)&.strip
   end
-
 end
