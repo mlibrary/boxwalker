@@ -1,5 +1,6 @@
 bhl:
   name: 'University of Michigan Bentley Historical Library'
+  slug: 'bhl'
   about_url: https://bentley.umich.edu/
   description: 'The Bentley Historical Library collects the materials for and promotes the study of the histories of two great, intertwined institutions, the State of Michigan and the University of Michigan. The Library is open without fee to the public, and we welcome researchers regardless of academic or professional affiliation.'
   visit_note: ''
@@ -61,6 +62,7 @@ bhl:
     uiconf_id: "51362482"
 scrc:
   name: 'University of Michigan Special Collections Research Center'
+  slug: 'scrc'
   about_url: https://www.lib.umich.edu/locations-and-hours/special-collections-research-center
   description: 'In keeping with the University Library’s mission to collect, describe, preserve, and make available the record of human knowledge, the Special Collections Research Center acquires, cares for, interprets, and promotes the use of important collections of unique, rare, primary source, and other material in all formats and in a variety of subject areas.'
   visit_note: ''
@@ -103,6 +105,7 @@ scrc:
     uiconf_id: "51362542"
 clements:
   name: 'University of Michigan William L. Clements Library'
+  slug: 'clements'
   about_url: https://clements.umich.edu/
   description: 'The William L. Clements Library is a rare book and manuscript repository located on the University of Michigan’s central campus in Ann Arbor, Michigan.'
   visit_note: ''
@@ -162,6 +165,7 @@ clements:
       - wcl1tc
 clarke:
   name: 'Central Michigan University Clarke Historical Library'
+  slug: 'clarke'
   about_url: https://www.cmich.edu/research/clarke-historical-library/about
   description: 'The Clarke Historical Library collects, preserves, and promotes collections including the history of Michigan and the Old Northwest Territory, the history of Central Michigan University, as well as other topics.'
   visit_note: ''
@@ -182,6 +186,7 @@ clarke:
     how_to_order: 'Please visit <a href="https://www.cmich.edu/research/clarke-historical-library/about/policies#a3">Clarke Digital Reproduction Policies and Fees</a>.'
 vrc:
   name: 'University of Michigan History of Art Visual Resources Collection'
+  slug: 'vrc'
   about_url: https://lsa.umich.edu/histartvrc
   description: "The VRC maintains nearly two million images of art. The collection's roots are more than 90 years old and developed as a teaching collection to support University of Michigan faculty and students. Through these online finding aids, we hope to help you connect with our vast resources of images of art, architecture, and artifacts."
   visit_note: ''
@@ -200,6 +205,7 @@ vrc:
     visitor_info: 'See <a href="https://lsa.umich.edu/histartvrc/faculty-students.html">https://lsa.umich.edu/histartvrc/faculty-students.html</a>'
 archivemi:
   name: 'Archives of Michigan'
+  slug: 'archivemi'
   about_url: https://www.michigan.gov/mhc/archives
   description: 'The Archives of Michigan is responsible for preserving the records of Michigan government and other public institutions. The collections also include documents, maps, photographs and film from private individuals and organizations.'
   visit_note: ''
@@ -219,6 +225,7 @@ archivemi:
     how_to_order: 'See <a href="https://www.michigan.gov/mhc/archives/plan-your-archives-visit#Copies">https://www.michigan.gov/mhc/archives/plan-your-archives-visit#Copies</a> for policies and pricing'
 mlibraryead:
   name: 'MLibrary Finding Aids'
+  slug: 'mlibraryead'
   about_url: http://lib.umich.edu/
   description: "MLibrary's Finding Aids site provides access to finding aids or descriptive inventories for archival records and manuscript collections not held in the Special Collections Research Center."
   visit_note: ''
@@ -238,6 +245,7 @@ mlibraryead:
                   <p>The Jon Cohen AIDS Research Collection is held in the Special Collections Research Center.  Please contact them for access: <a href="https://www.lib.umich.edu/locations-and-hours/special-collections-research-center">Special Collections Research Center -- Visit</a></p>'
 ghcc:
   name: 'University of Michigan Genesee Historical Collections Center'
+  slug: 'ghcc'
   about_url: https://libguides.umflint.edu/ghcc
   description: "The Genesee Historical Collections Center is the University of Michigan-Flint's institutional and community archive. It is located on the second floor of the Frances Willson Thompson Library on the UM-Flint campus. In addition to UM-Flint history, the archive focuses on the political, social, and civic life of Flint residents. Important collections include the UAW/599 Sitdown Strike collection, the Olive Beasley collection, and the Donald Reigle collection."
   building: 'Frances Willson Thompson Library'
@@ -256,6 +264,7 @@ ghcc:
     how_to_request: ''
 asialibrary:
   name: 'University of Michigan Asia Library'
+  slug: 'asialibrary'
   about_url: https://www.lib.umich.edu/locations-and-hours/asia-library
   description: "The Asia Library is home to one of the largest East Asian language collections in North America. We provide collection access and research services to support the robust academic communities in Chinese, Japanese, and Korean studies at U-M and beyond. This site contains finding aids of Asia Library's unique archival collections that span a variety of topics in East Asian studies."
   building: 'Harlan Hatcher Graduate Library (North)'

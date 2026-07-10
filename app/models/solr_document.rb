@@ -37,4 +37,9 @@ class SolrDocument
   def restrictions
     fetch("accessrestrict_html_tesm", [])[0]
   end
+
+  def document_id
+    fetch('ead_ssi', nil)&.strip
+  end
+
 end
