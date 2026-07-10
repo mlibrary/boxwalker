@@ -8,6 +8,7 @@ class UmSearchResultTitleComponent < Arclight::SearchResultTitleComponent
       "col-md-8 col-sm-8 col-8"
     end
   end
+
   def actions
     return [] unless @actions
     if block_given?
