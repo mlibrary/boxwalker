@@ -7,9 +7,10 @@
     <% end %>
   </h3>
 
-  <%= tag.span class: 'al-document-container container-wrapper col-md-3' do %>
+  <%= tag.span class: "al-document-container container-wrapper col-md-3 col-sm-3 col-3" do %>
     <%= presenter.document.containers.join(', ') %>
   <% end if presenter.document.containers.present? %>
+
 
   <% actions.each do |action| %>
     <%= action %>
