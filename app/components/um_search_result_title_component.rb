@@ -20,8 +20,7 @@ class UmSearchResultTitleComponent < Arclight::SearchResultTitleComponent
     end
 
   (@has_actions_slot && get_slot(:actions)) ||
-    ([ @document_component&.actions] if @document_component&.actions.present?) ||
+    ([ @document_component&.actions ] if @document_component&.actions.present?) ||
     [ helpers.render_index_doc_actions(presenter.document, wrapping_class: "actions-wrapping-class col-md-1") ]
   end
 end
-
