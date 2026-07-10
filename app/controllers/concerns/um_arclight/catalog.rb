@@ -22,9 +22,6 @@ module UmArclight
       end
     end
 
-    # DUL CUSTOMIZATION: send the source EAD XML file that we already have on the filesystem
-    # Modeled after "raw", see:
-    # https://github.com/projectblacklight/blacklight/blob/master/app/controllers/concerns/blacklight/catalog.rb#L65-L71
     def ead_download
       xml_filename = download_utility.ead_file_path
 
