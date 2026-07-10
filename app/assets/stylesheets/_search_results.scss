@@ -42,7 +42,10 @@
       position: relative;
       bottom: 3px;
       margin-right: 1rem;
-      @include bs.media-breakpoint-down(sm);
+      @include bs.media-breakpoint-down(sm) {
+        display: block;
+        margin-bottom: 0.5rem;
+      }
       margin-bottom: 0.5rem;
     }
   }
