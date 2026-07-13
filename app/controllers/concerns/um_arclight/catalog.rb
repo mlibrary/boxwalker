@@ -24,7 +24,6 @@ module UmArclight
 
     def ead_download
       xml_filename = download_utility.ead_file_path
-
       unless xml_filename && File.exist?(xml_filename)
         render plain: "404 Not Found", status: :not_found
         return
@@ -39,7 +38,11 @@ module UmArclight
     end
 
     def html_download
-      _, @document = search_service.fetch(params[:id])
+      html_filename = download_utility.html_file_path
+      unless html_filename && File.exist?(html_filename)
+        render plain: "404 Not Found", status: :not_found
+        return
+      end
 
       headers["Content-Type"] = "text/html"
       headers["X-Accel-Buffering"] = "no" # Stop NGINX from buffering
@@ -48,7 +51,7 @@ module UmArclight
 
       # replace m-arclight-placeholder with current asset styles/scripts
       self.response_body = Enumerator.new do |output|
-        File.foreach(download_utility.html_file_path) do |line|
+        File.foreach(html_filename) do |line|
           if line.index('<style id="placeholder"></style>')
             output << helpers.stylesheet_link_tag("application", media: "all")
             output << helpers.javascript_include_tag("application")
@@ -61,8 +64,14 @@ module UmArclight
     end
 
     def pdf_download
+      pdf_filename = download_utility.pdf_file_path
+      unless pdf_filename && File.exist?(pdf_filename)
+        render plain: "404 Not Found", status: :not_found
+        return
+      end
+
       send_file(
-        download_utility.pdf_file_path,
+        pdf_filename,
         filename: "#{@document.id}.pdf",
         disposition: "attachment",
         type: "application/pdf"
