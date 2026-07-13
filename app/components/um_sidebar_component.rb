@@ -8,4 +8,10 @@ class UmSidebarComponent < Arclight::SidebarComponent
       partials: blacklight_config.show.metadata_partials
     )
   end
+
+  def collection_context
+    render UmCollectionContextComponent.new(
+      presenter: document_presenter(document),
+      download_component: Arclight::DocumentDownloadComponent)
+  end
 end

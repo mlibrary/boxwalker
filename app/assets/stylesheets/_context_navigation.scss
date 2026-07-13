@@ -35,6 +35,24 @@
   }
 }
 
+.nav-link {
+  padding: 0.25rem 0 0.25rem 0;
+  font-weight: 700;
+  color: #555555;
+  display: inline-block;
+  text-decoration: underline;
+}
+
+.nav-link:hover {
+  color: #1D7491;
+  text-decoration: underline;
+}
+
+.al-show-actions-box {
+  background-color: var(--color-blue-100);
+  border-bottom: 1px solid #cccccc;
+}
+
 #context {
   .tab-pane {
     padding: 0;

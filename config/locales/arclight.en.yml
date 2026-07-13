@@ -4,6 +4,7 @@ en:
       home:
         title: University of Michigan Finding Aids
       show:
+        has_content: Navigate The Collection
         sections:
           component_indexed_terms_field: Subjects
           indexed_terms_field: Subjects
