@@ -36,6 +36,19 @@ Rails.application.routes.draw do
     end
   end
 
+  def collection_slug_constraint
+    /[a-zA-Z0-9.-]+/
+  end
+
+  get "/catalog/:id/xml", action: "ead_download", controller: "catalog", as: "ead_download",
+      constraints: { id: collection_slug_constraint }
+
+  get "/catalog/:id/html", action: "html_download", controller: "catalog", as: "html_download",
+      constraints: { id: collection_slug_constraint }
+
+  get "/catalog/:id/pdf", action: "pdf_download", controller: "catalog", as: "pdf_download",
+      constraints: { id: collection_slug_constraint }
+
   # Reveal health status on /up that returns 200 if the app boots with no exceptions, otherwise 500.
   # Can be used by load balancers and uptime monitors to verify that the app is live.
   get "up" => "rails/health#show", as: :rails_health_check
