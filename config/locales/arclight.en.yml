@@ -1,11 +1,5 @@
 en:
   arclight:
-    collection_info_component:
-      more_info: "More info"
-      collection_id: "Call number"
-      total_components: "Total components"
-      online_items: "Online items"
-      last_indexed: "Last indexed"
     views:
       home:
         title: University of Michigan Finding Aids
