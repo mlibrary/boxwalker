@@ -10,7 +10,7 @@
   <%= content_tag :h1 do %>
     <%= document.normalized_title %>
   <% end %>
-  <%#= render Arclight::BookmarkComponent.new document: document, action: bookmark_config %>
+  <%# UM customization: Removed Arclight::BookmarkComponent %>
   <%= toggle_sidebar %>
 </div>
 
@@ -28,7 +28,7 @@
   <div id="metadata">
     <h2 class="sr-only visually-hidden"><%= t 'arclight.views.show.context' %></h2>
     <%= render UmAccessSnippetComponent.new(presenter: presenter) %>
-    <%= render Arclight::MetadataSectionComponent.with_collection(metadata_partials,
+    <%= render UmMetadataSectionComponent.with_collection(metadata_partials,
       metadata_attr: { layout: UmUpperMetadataLayoutComponent },
       presenter: presenter, heading: true, classes: "") %>
   </div>
