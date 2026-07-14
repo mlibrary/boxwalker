@@ -56,7 +56,7 @@ en:
         names: Names
 
         restrictions: Restrictions
-        terms: Use & Restrictions
+        terms: 'Use & Restrictions'
         parent_restrictions: Parent restrictions
         parent_terms: Parent terms of access
         repository_location: Location of this collection
