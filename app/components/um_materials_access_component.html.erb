@@ -23,7 +23,7 @@
     <%= link_to(
           url_for(action: 'pdf_download', id: @document.document_id),
           download: "#{@document.document_id}.pdf",
-          class: 'btn btn-primary btn-sm pdf-download-button'
+          class: button_class
         ) do %>
       <i class="bi bi-filetype-pdf" aria-hidden="true"></i> <%= t('arclight.views.show.download.pdf') %>
     <% end %>

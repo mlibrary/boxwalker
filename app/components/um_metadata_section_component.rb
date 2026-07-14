@@ -1,0 +1,2 @@
+class UmMetadataSectionComponent < Arclight::MetadataSectionComponent
+end
