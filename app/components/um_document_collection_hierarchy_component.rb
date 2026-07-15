@@ -1,0 +1,2 @@
+class UmDocumentCollectionHierarchyComponent < Arclight::DocumentCollectionHierarchyComponent
+end
