@@ -13,6 +13,10 @@ en:
           using_field: Using These Materials
         download:
           pdf: Download PDF Finding Aid
+          html: Download HTML Finding Aid
+    truncation:
+      view_less: show less
+      view_more: show more
   blacklight:
     search:
       fields:
