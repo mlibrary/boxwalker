@@ -33,6 +33,11 @@
   }
 }
 
+.collection-sidebar {
+  padding-right: 0;
+  border-right: 0;
+}
+
 .nav-link {
   padding: 0.25rem 0 0.25rem 0;
   font-weight: 700;
@@ -62,13 +67,6 @@
 
 .al-actions-box-container .bi-archive-fill {
   margin-right: 0.5rem;
-}
-
-#context {
-  .tab-pane {
-    padding: 0;
-    border: 0;
-  }
 }
 
 .al-toggle-view-children {
