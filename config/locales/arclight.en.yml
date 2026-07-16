@@ -12,6 +12,12 @@ en:
           cite_field: Preferred Citation
           access_field: Using These Materials
           using_field: Using These Materials
+        download:
+          pdf: Download PDF Finding Aid
+          html: Download HTML Finding Aid
+    truncation:
+      view_less: show less
+      view_more: show more
   blacklight:
     search:
       fields:
@@ -55,7 +61,7 @@ en:
         names: Names
 
         restrictions: Restrictions
-        terms: Terms of access
+        terms: 'Use & Restrictions'
         parent_restrictions: Parent restrictions
         parent_terms: Parent terms of access
         repository_location: Location of this collection
