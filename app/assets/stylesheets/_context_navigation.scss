@@ -6,6 +6,18 @@
 /* Styles for sidebar context navigation */
 /* ===================================== */
 
+/* sidebar set to fixed sticky position */
+#sidebar {
+  background: #f6f6f6;
+  position: sticky;
+  top: 0;
+}
+
+@media (max-width: 991.98px) {
+  #sidebar {
+    position: fixed;
+  }
+}
 #sidebar {
   background: #f6f6f6;
   @include bs.media-breakpoint-down(md) {
