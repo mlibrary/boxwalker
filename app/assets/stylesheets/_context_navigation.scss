@@ -8,7 +8,6 @@
 
 /* sidebar set to fixed sticky position */
 #sidebar {
-  background: #f6f6f6;
   position: sticky;
   top: 0;
 }
@@ -19,7 +18,7 @@
   }
 }
 #sidebar {
-  background: #f6f6f6;
+  background: var(--color-background-primary);
   @include bs.media-breakpoint-down(md) {
     height: 100%;
     overflow-y: auto;
@@ -53,19 +52,19 @@
 .nav-link {
   padding: 0.25rem 0 0.25rem 0;
   font-weight: 700;
-  color: #555555;
+  color: var(--color-neutral-300);
   display: inline-block;
   text-decoration: underline;
 }
 
 .nav-link:hover {
-  color: #1D7491;
+  color: var(--color-teal-400);
   text-decoration: underline;
 }
 
 .al-show-actions-box {
   background-color: var(--color-blue-100);
-  border-bottom: 1px solid $gray-light-more;
+  border-bottom: 1px solid var(--color-gray-light-more);
 }
 
 .al-collection-context-actions.gap-1 {
@@ -86,10 +85,10 @@
 }
 
 .al-toggle-view-children {
-  mask: unset;
-  box-sizing: border-box;   /* border counts inside the box -> stays square */
-  flex: 0 0 auto;           /* don't let flex squish it into an oval */
-  width: 20px;              /* even px, not fractional rem -> no half-pixel blur */
+  mask: unset;  /* remove default mask from bootstrap icon */
+  box-sizing: border-box;
+  flex: 0 0 auto;           /* keep flex from squishing into oval */
+  width: 20px;              /* even px, not fractional rem  */
   height: 20px;
   padding: 0;
   margin-top: 4px;
@@ -99,8 +98,8 @@
   justify-content: center;
   line-height: 1;
   opacity: 1;
-  background-color: #E9F2F5;
-  border: 1px solid #1D7491;
+  background-color: var(--color-teal-100);
+  border: 1px solid var(--color-teal-400);
   border-radius: 50%;
 }
 
@@ -125,8 +124,8 @@
 }
 
 .badge, .documents-list article.document .document-title-heading .al-document-extent {
-  color: #212b36;
-  background-color: #e5e9ed !important;
+  color: var(--color-neutral-400);
+  background-color: var(--color-neutral-100) !important;
   font-weight: 400;
   font-size: 0.875rem;
 }
