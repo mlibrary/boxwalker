@@ -1,0 +1,2 @@
+class UmCollectionSidebarComponent < Arclight::CollectionSidebarComponent
+end

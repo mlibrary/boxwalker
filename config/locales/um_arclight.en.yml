@@ -1,7 +1,6 @@
 en:
   um_arclight:
     insert_content: "INSERT CONTENT HERE"
-
     home:
       browse_all: "Browse All Collections"
       about:
@@ -84,3 +83,10 @@ en:
         you've been redirected to the collection main page. 
         Please <strong><a href="%{contact_link}" referrerpolicy="unsafe-url">contact us</a></strong> if 
         you cannot find what you're looking for.
+
+  um_collection_info_component:
+    more_info: "More info"
+    collection_id: "Call number"
+    total_components: "Total components"
+    online_items: "Items available online"
+    last_indexed: "Last indexed"
