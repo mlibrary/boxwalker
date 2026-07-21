@@ -266,7 +266,7 @@ DESCGRP_FIELDS.map do |selector|
   to_field "#{selector}_tesim", extract_xpath("/ead/archdesc/descgrp[@type != 'add']/#{selector}/*[local-name()!='head']")
 end
 
-# UM customization: relatedmaterial/separatedmaterial live in descgrp[@type='add']f
+# UM modified queries to match actual EADs, which have relatedmaterial/separatedmaterial in descgrp[@type='add']
 %w[relatedmaterial separatedmaterial].each do |selector|
   to_field "#{selector}_html_tesm", extract_xpath("/ead/archdesc/descgrp[@type='add']/#{selector}/*[local-name()!='head']", to_text: false) do |_record, accumulator|
     accumulator.map!(&:to_html)
