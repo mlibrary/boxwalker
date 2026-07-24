@@ -1,10 +1,11 @@
 @use "bootstrap-context" as bs;
+@use "colors" as colors;
 
 .homepage {
   /* Horizontal bar with Find Archival Materials and featured image */
   &.main-feature {
     min-height: 300px;
-    background: #fff;
+    background: colors.$color-background-primary;
     border: solid 1px var(--color-neutral-100);
 
     @include bs.media-breakpoint-down(sm) {
@@ -31,10 +32,10 @@
     }
 
     .feature-caption {
-      color: white;
+      color: colors.$color-background-primary;
       position: absolute;
-      bottom: 0px;
-      right: 0px;
+      bottom: 0;
+      right: 0;
       background-color: rgba(0, 0, 0, 0.65);
       padding: 10px 10px 10px 20px;
       @include bs.media-breakpoint-only(xl) {
@@ -43,7 +44,7 @@
 
       a {
         font-weight: bold;
-        color: white;
+        color: colors.$color-background-primary;
 
         &:hover {
           text-decoration: underline;
@@ -60,17 +61,17 @@
 
     input {
       &.search-q {
-        background-color: white !important;
+        background-color: colors.$color-background-primary !important;
       }
     }
 
     .search-btn {
-      color: #000;
+      color: colors.$text-primary;
       background-color: var(--color-maize-400);
       border-color: var(--color-maize-400);
 
       &:hover {
-        color: #000;
+        color: colors.$text-primary;
         background-color: var(--color-maize-400);
         border-color: var(--color-maize-400);
       }
@@ -79,7 +80,7 @@
         box-shadow: 0 0 0 2px var(--color-maize-400),
         0 0 0 3px var(--color-neutral-400);
         border-radius: 2px !important;
-        color: #000;
+        color: colors.$text-primary;
         background-color: var(--color-maize-400);
         border-color: var(--color-maize-400);
       }

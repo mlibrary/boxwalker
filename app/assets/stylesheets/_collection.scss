@@ -1,5 +1,5 @@
-@use "colors";
 @use "bootstrap-context" as bs;
+@use "colors" as colors;
 
 .al-show-actions-toolbar {
   display: flex;
@@ -9,7 +9,7 @@
   margin-bottom: .5rem;
   border-bottom: solid 1px var(--color-teal-300);
   box-shadow: 0px 3px 3px -3px rgba(23, 130, 166, 0.58);
-  background-image: linear-gradient(to top, #f7f8f9, #f9fafb, #fbfbfc, #fdfdfd, #ffffff);
+  background-image: linear-gradient(to top, #f7f8f9, #ffffff);
 
   .al-request {
     margin-right: 2rem;
@@ -31,7 +31,7 @@
 }
 
 #summary .al-show-sub-heading {
-  border-top: 3px solid #747474;
+  border-top: 3px solid var(--color-neutral-400);
   padding-top: 1.5rem;
 }
 
@@ -45,7 +45,7 @@
   margin-left: 2rem;
   margin-bottom: 2rem;
   margin-top: 3px;
-  background: colors.$facet-grey;
+  background: colors.$facet-gray;
   padding: 0 1rem 1rem 1rem;
   border-left: 3px solid colors.$gray-light-more;
 

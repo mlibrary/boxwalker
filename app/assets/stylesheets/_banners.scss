@@ -1,4 +1,5 @@
 @use "bootstrap-context" as bs;
+@use "colors" as colors;
 
 /* ======================================== */
 /* CONFIGURABLE HOMEPAGE ALERT BANNER       */
@@ -25,8 +26,12 @@
       -webkit-clip-path: polygon(0 0, 100% 0, calc(100% - 20px) 100%, 0 100%);
       clip-path: polygon(0 0, 100% 0, calc(100% - 20px) 100%, 0 100%);
 
-      @include bs.media-breakpoint-down(xl) { padding: 15px; }
-      @include bs.media-breakpoint-down(lg) { display: block; }
+      @include bs.media-breakpoint-down(xl) {
+        padding: 15px;
+      }
+      @include bs.media-breakpoint-down(lg) {
+        display: block;
+      }
 
       .blacklight-icons svg {
         fill: var(--color-neutral-500);
@@ -67,7 +72,12 @@
   &.banner-warning {
     background-color: var(--color-maize-200);
 
-    .banner-heading  { background-color: var(--color-maize-400); }
-    .banner-shadow   { background-color: var(--color-maize-300); }
+    .banner-heading {
+      background-color: var(--color-maize-400);
+    }
+
+    .banner-shadow {
+      background-color: var(--color-maize-300);
+    }
   }
 }
