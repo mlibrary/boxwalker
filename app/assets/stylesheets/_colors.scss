@@ -1,4 +1,8 @@
-$color-background-primary: #ffffff;
+//* SCSS Variables for colors, *//
+//* Usage "border: colors.facet-gray" *//
+//* Usage var(--color-blue-400) relies on root: e.g., colors in umich-lib.css *//
+
+/* umich-lib palette */
 $color-blue-100: #f7f8f9;
 $color-blue-200: #b2bec9;
 $color-blue-300: #4c6781;
@@ -40,9 +44,11 @@ $color-green-300: #57bc75;
 $color-green-400: #20a848;
 $color-green-500: #198539;
 
-$green: #198754;
-$primary-link-color: #004CCC;
+/* UM Arclight specific */
+$text-primary: var(--color-neutral-400);
 $gray-light: #676767;
 $gray-light-more: #cccccc;
-$facet-grey: #f5f5f5;
-$gray: #ced4da;
+$facet-gray: #f5f5f5;
+$main-gray: #ced4da;
+/* var used in Finding Aids: set to standard white */
+$color-background-primary: #ffff;

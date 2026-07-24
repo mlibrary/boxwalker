@@ -1,5 +1,5 @@
 @use "bootstrap-context" as bs;
-@import "colors";
+@use "colors" as colors;
 
 
 /* ===================================== */
@@ -18,7 +18,7 @@
   }
 }
 #sidebar {
-  background: var(--color-background-primary);
+  background: colors.$color-background-primary;
   @include bs.media-breakpoint-down(md) {
     height: 100%;
     overflow-y: auto;
@@ -64,7 +64,7 @@
 
 .al-show-actions-box {
   background-color: var(--color-blue-100);
-  border-bottom: 1px solid var(--color-gray-light-more);
+  border-bottom: 1px solid colors.$gray-light-more;
 }
 
 .al-collection-context-actions.gap-1 {
