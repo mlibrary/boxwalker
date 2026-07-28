@@ -14,7 +14,9 @@ module Boxwalker
     # Please, add to the `ignore` list any other `lib` subdirectories that do
     # not contain `.rb` files, or that should not be reloaded or eager loaded.
     # Common ones are `templates`, `generators`, or `middleware`, for example.
-    config.autoload_lib(ignore: %w[assets tasks])
+
+    # CI test evaluates Traject configuration files as plain Ruby, not through a Traject Indexer, so ignore them in autoload
+    config.autoload_lib(ignore: %w[assets tasks um_arclight/traject])
 
     # Configuration for the application, engines, and railties goes here.
     #
