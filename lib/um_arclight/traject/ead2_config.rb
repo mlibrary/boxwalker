@@ -265,7 +265,7 @@ DESCGRP_FIELDS.map do |selector|
   to_field "#{selector}_heading_ssm", extract_xpath("/ead/archdesc/descgrp[@type != 'add']/#{selector}/head") unless selector == "prefercite"
   to_field "#{selector}_tesim", extract_xpath("/ead/archdesc/descgrp[@type != 'add']/#{selector}/*[local-name()!='head']")
 
-# UM modified queries to match actual EADs, which have relatedmaterial/separatedmaterial with descgrp[@type='add']
+  # UM modified queries to match actual EADs, which have relatedmaterial/separatedmaterial with descgrp[@type='add']
   to_field "#{selector}_html_tesm", extract_xpath("/ead/archdesc/descgrp[@type='add']/#{selector}/*[local-name()!='head']", to_text: false) do |_record, accumulator|
     accumulator.map!(&:to_html)
   end
