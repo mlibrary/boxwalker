@@ -4,8 +4,8 @@
 .btn:focus,
 .btn-group > .btn:focus {
   outline: 0;
-  box-shadow: 0 0 0 2px var(--color-maize-400),
-  0 0 0 3px var(--color-neutral-400);
+  box-shadow: 0 0 0 2px colors.$color-maize-400,
+  0 0 0 3px colors.$color-neutral-400;
   border-radius: 2px !important;
 }
 
@@ -15,8 +15,7 @@
   border: none;
   font-weight: 700;
   font-size: 1em;
-  font-family: var(--font-base-family), sans-serif;
-  border-radius: var(--radius-default);
+  border-radius: 4px;
   text-decoration: none;
 }
 
