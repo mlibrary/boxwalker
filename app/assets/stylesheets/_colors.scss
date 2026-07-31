@@ -1,50 +1,47 @@
-//* SCSS Variables for colors, *//
-//* Usage "border: colors.facet-gray" *//
-//* Usage var(--color-blue-400) relies on root: e.g., colors in umich-lib.css *//
+//* mlibrary palette in SCSS drawing from default umich-lib.css, project-specific colors only *//
+//* Usage "border: colors.$facet-gray" *//
+$color-blue-100: var(--color-blue-100);
+$color-blue-200: var(--color-blue-200);
+$color-blue-300: var(--color-blue-300);
+$color-blue-400: var(--color-blue-400);
+$color-blue-500: var(--color-blue-500);
+$color-maize-100: var(--color-maize-100);
+$color-maize-200: var(--color-maize-200);
+$color-maize-300: var(--color-maize-300);
+$color-maize-400: var(--color-maize-400);
+$color-maize-500: var(--color-maize-500);
+$color-neutral-100: var(--color-neutral-100);
+$color-neutral-200: var(--color-neutral-200);
+$color-neutral-300: var(--color-neutral-300);
+$color-neutral-400: var(--color-neutral-400);
+$color-neutral-500: var(--color-neutral-500);
+$color-teal-100: var(--color-teal-100);
+$color-teal-200: var(--color-teal-200);
+$color-teal-300: var(--color-teal-300);
+$color-teal-400: var(--color-teal-400);
+$color-teal-500: var(--color-teal-500);
+$color-orange-100: var(--color-orange-100);
+$color-orange-200: var(--color-orange-200);
+$color-orange-300: var(--color-orange-300);
+$color-orange-400: var(--color-orange-400);
+$color-orange-500: var(--color-orange-500);
+$color-pink-100: var(--color-pink-100);
+$color-pink-200: var(--color-pink-200);
+$color-pink-300: var(--color-pink-300);
+$color-pink-400: var(--color-pink-400);
+$color-pink-500: var(--color-pink-500);
+$color-indigo-100: var(--color-indigo-100);
+$color-indigo-200: var(--color-indigo-200);
+$color-indigo-300: var(--color-indigo-300);
+$color-indigo-400: var(--color-indigo-400);
+$color-indigo-500: var(--color-indigo-500);
+$color-green-100: var(--color-green-100);
+$color-green-200: var(--color-green-200);
+$color-green-300: var(--color-green-300);
+$color-green-400: var(--color-green-400);
+$color-green-500: var(--color-green-500);
 
-/* umich-lib palette */
-$color-blue-100: #f7f8f9;
-$color-blue-200: #b2bec9;
-$color-blue-300: #4c6781;
-$color-blue-400: #00274c;
-$color-blue-500: #001324;
-$color-maize-100: #fff9e6;
-$color-maize-200: #ffea9b;
-$color-maize-300: #ffda50;
-$color-maize-400: #ffcb05;
-$color-maize-500: #eaba02;
-$color-neutral-100: #e5e9ed;
-$color-neutral-200: #8a96a1;
-$color-neutral-300: #637381;
-$color-neutral-400: #212b36;
-$color-neutral-500: #06080a;
-$color-teal-100: #e9f2f5;
-$color-teal-200: #a7cddb;
-$color-teal-300: #65a8bf;
-$color-teal-400: #1d7491;
-$color-teal-500: #106684;
-$color-orange-100: #fff1eb;
-$color-orange-200: #ffb899;
-$color-orange-300: #ff8a58;
-$color-orange-400: #f25f1f;
-$color-orange-500: #c74e1a;
-$color-pink-100: #fcebeb;
-$color-pink-200: #f29d9d;
-$color-pink-300: #ec6969;
-$color-pink-400: #d93838;
-$color-pink-500: #bf3232;
-$color-indigo-100: #eef1f9;
-$color-indigo-200: #aab9e3;
-$color-indigo-300: #7c93d4;
-$color-indigo-400: #506fc5;
-$color-indigo-500: #274391;
-$color-green-100: #eaf8ee;
-$color-green-200: #96dbaa;
-$color-green-300: #57bc75;
-$color-green-400: #20a848;
-$color-green-500: #198539;
-
-/* UM Arclight specific */
+/* UM Arclight add-ons */
 $text-primary: var(--color-neutral-400);
 $gray-light: #676767;
 $gray-light-more: #cccccc;
