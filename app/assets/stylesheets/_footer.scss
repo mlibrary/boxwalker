@@ -1,8 +1,8 @@
 @use "bootstrap-context" as bs;
-@use "colors" as colors;
+@use "variables" as var;
 
 .footer {
-  background: var(--color-blue-400);
+  background: var.$color-blue-400;
 }
 
 .footer ul {
@@ -12,7 +12,7 @@
 }
 
 .footer ul a {
-  padding: var(--space-x-small) 0;
+  padding: var.$space-x-small 0;
   text-decoration: none;
   text-decoration-thickness: 0;
   display: flex;
@@ -25,7 +25,7 @@
 }
 
 .footer a {
-  color: colors.$color-background-primary;
+  color: var.$color-background-primary;
 }
 
 .footer a > svg {
@@ -33,23 +33,23 @@
 }
 
 .footer__content {
-  color: var(--color-blue-100);
-  padding: var(--space-xxx-large) 0;
+  color: var.$color-blue-100;
+  padding: var.$space-xxx-large 0;
   display: grid;
   grid-template-columns: repeat(auto-fill, 350px);
-  gap: var(--space-xx-large);
+  gap: var.$space-xx-large;
 }
 
 .footer__content h2 {
-  color: var(--color-blue-200);
+  color: var.$color-blue-200;
   font-size: 0.875rem;
   font-weight: 800;
   letter-spacing: 1.25px;
   text-transform: uppercase;
-  margin-bottom: var(--space-medium);
+  margin-bottom: var.$space-medium;
 }
 .footer__policies {
-  border-left: solid 1px var(--color-blue-300);
+  border-left: solid 1px var.$color-blue-300;
   padding-left: 2em;
 }
 
@@ -61,13 +61,13 @@
 }
 
 .footer__disclaimer {
-  background: var(--color-blue-500);
-  color: var(--color-blue-200);
-  padding: var(--space-medium) 0;
+  background: var.$color-blue-500;
+  color: var.$color-blue-200;
+  padding: var.$space-medium 0;
 }
 
 .footer__disclaimer a {
-  color: var(--color-blue-200);
+  color: var.$color-blue-200;
 }
 
 .footer__disclaimer p {
@@ -79,6 +79,6 @@
     display: inline-block;
   }
   .footer__disclaimer p + p {
-    margin-left: var(--space-x-large);
+    margin-left: var.$space-x-large;
   }
 }

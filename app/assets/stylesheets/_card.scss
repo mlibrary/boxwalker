@@ -1,5 +1,5 @@
 @use "bootstrap-context" as bs;
-@use "colors" as colors;
+@use "variables" as var;
 
 .card-title {
   margin-bottom: 0.75rem;
@@ -24,13 +24,13 @@
 /* repository cards */
 
 .al-repository {
-  background-color: colors.$facet-gray;
+  background-color: var.$facet-gray;
   border-radius: 0.25rem;
 
   .al-repository-information {
     .al-repository-contact,
     .al-repository-extra-collection-count {
-      font-weight: 400;
+      font-weight: var.$regular;
     }
   }
 
@@ -55,8 +55,8 @@
       height: 10rem;
       align-self: center;
       display: flex;
-      background-color: colors.$gray-light;
-      border: 1px solid var(--color-neutral-100);
+      background-color: var.$gray-light;
+      border: 1px solid var.$color-neutral-100;
     }
   }
 
@@ -110,7 +110,7 @@
         max-height: 14rem;
         align-self: center;
         display: flex;
-        background-color: colors.$gray-light;
+        background-color: var.$gray-light;
         width: 100%;
       }
     }

@@ -1,11 +1,11 @@
 @use "bootstrap-context" as bs;
-@use "colors" as colors;
+@use "variables" as var;
 
 .btn:focus,
 .btn-group > .btn:focus {
   outline: 0;
-  box-shadow: 0 0 0 2px colors.$color-maize-400,
-  0 0 0 3px colors.$color-neutral-400;
+  box-shadow: 0 0 0 2px var.$color-maize-400,
+  0 0 0 3px var.$color-neutral-400;
   border-radius: 2px !important;
 }
 
@@ -13,83 +13,84 @@
   outline: 0;
   display: inline-block;
   border: none;
-  font-weight: 700;
+  font-weight: var.$bold;
   font-size: 1em;
-  border-radius: 4px;
+  font-family: var.$font-base-family, sans-serif;
+  border-radius: var.$radius-default;
   text-decoration: none;
 }
 
 .btn-primary {
-  background-color: var(--color-teal-400);
-  border-color: var(--color-teal-400);
+  background-color: var.$color-teal-400;
+  border-color: var.$color-teal-400;
   &:hover,
   &:active,
   &:focus {
-    border-color: var(--color-teal-400);
-    background-color: var(--color-teal-400);
+    border-color: var.$color-teal-400;
+    background-color: var.$color-teal-400;
     outline: 0;
-    box-shadow: 0 0 0 2px var(--color-maize-400),
-    0 0 0 3px var(--color-neutral-400);
+    box-shadow: 0 0 0 2px var.$color-maize-400,
+    0 0 0 3px var.$color-neutral-400;
     border-radius: 2px !important;
   }
 }
 
 .btn-secondary {
-  color: var(--color-blue-400);
+  color: var.$color-blue-400;
   font-weight: bold;
-  background-color: var(--color-neutral-100);
-  border-color: var(--color-neutral-100);
+  background-color: var.$color-neutral-100;
+  border-color: var.$color-neutral-100;
   &:hover {
-    color: var(--color-blue-400);
-    background-color: var(--color-neutral-100);
-    border-color: var(--color-neutral-100);
+    color: var.$color-blue-400;
+    background-color: var.$color-neutral-100;
+    border-color: var.$color-neutral-100;
   }
   &:active {
-    color: var(--color-blue-400);
-    background-color: var(--color-neutral-100);
-    border-color: var(--color-neutral-100);
+    color: var.$color-blue-400;
+    background-color: var.$color-neutral-100;
+    border-color: var.$color-neutral-100;
   }
   &:focus {
-    background-color: var(--color-neutral-100);
-    color: var(--color-blue-400);
+    background-color: var.$color-neutral-100;
+    color: var.$color-blue-400;
   }
 }
 
 .btn-secondary:not(:disabled):not(.disabled):active {
-  color: var(--color-blue-400);
-  background-color: var(--color-neutral-100);
-  border-color: var(--color-neutral-100);
+  color: var.$color-blue-400;
+  background-color: var.$color-neutral-100;
+  border-color: var.$color-neutral-100;
 }
 
 .btn-success {
-  color: colors.$color-background-primary;
+  color: var.$color-background-primary;
   font-weight: bold;
   font-size: 1em;
-  background-color: var(--color-green-500);
-  border-color: var(--color-green-500);
+  background-color: var.$color-green-500;
+  border-color: var.$color-green-500;
   &:focus {
     outline: 0;
-    box-shadow: 0 0 0 2px var(--color-maize-400),
-    0 0 0 3px var(--color-neutral-400);
+    box-shadow: 0 0 0 2px var.$color-maize-400,
+    0 0 0 3px var.$color-neutral-400;
     border-radius: 2px !important;
   }
 }
 
 .btn-danger {
-  color: colors.$color-background-primary;
-  background-color: var(--color-pink-500);
-  border-color: var(--color-pink-500);
+  color: var.$color-background-primary;
+  background-color: var.$color-pink-500;
+  border-color: var.$color-pink-500;
   &:focus {
     outline: 0;
-    box-shadow: 0 0 0 2px var(--color-maize-400),
-    0 0 0 3px var(--color-neutral-400);
+    box-shadow: 0 0 0 2px var.$color-maize-400,
+    0 0 0 3px var.$color-neutral-400;
     border-radius: 2px !important;
   }
 }
 
 .btn-outline-request {
-  border: 1px solid var(--color-neutral-100);
-  color: var(--color-blue-400);
+  border: 1px solid var.$color-neutral-100;
+  color: var.$color-blue-400;
 }
 
 .btn-outline-request.squat {
@@ -98,62 +99,62 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  background-color: white;
+  background-color: var.$color-background-primary;
 }
 
 .btn-outline-dark {
-  border: 1px solid var(--color-neutral-400);
-  color: var(--color-neutral-400);
+  border: 1px solid var.$color-neutral-400;
+  color: var.$color-neutral-400;
 }
 
 .btn-outline-secondary {
-  border: 1px solid var(--color-neutral-500);
-  color: var(--color-neutral-500);
+  border: 1px solid var.$color-neutral-500;
+  color: var.$color-neutral-500;
 }
 
 .btn-outline-ghost {
-  border: 1px solid var(--color-neutral-100);
-  color: colors.$facet-gray;
+  border: 1px solid var.$color-neutral-100;
+  color: var.$facet-gray;
 }
 
 .m-search-btn {
-  color: var(--color-neutral-500);
-  background-color: var(--color-maize-400);
-  border-color: var(--color-maize-400);
+  color: var.$color-neutral-500;
+  background-color: var.$color-maize-400;
+  border-color: var.$color-maize-400;
   &:focus, &:hover, &:active {
     outline: 0;
-    box-shadow: 0 0 0 2px colors.$color-background-primary, 0 0 0 3px var(--color-neutral-400);
+    box-shadow: 0 0 0 2px var.$color-background-primary, 0 0 0 3px var.$color-neutral-400;
     border-radius: 2px !important;
-    color: var(--color-neutral-500);
-    background-color: var(--color-maize-400);
+    color: var.$color-neutral-500;
+    background-color: var.$color-maize-400;
   }
 }
 
 .btn-link {
-  color: var(--color-teal-400);
+  color: var.$color-teal-400;
   background-color: transparent;
   &:focus {
     outline: 0;
-    box-shadow: 0 0 0 2px var(--color-maize-400),
-    0 0 0 3px var(--color-neutral-400);
+    box-shadow: 0 0 0 2px var.$color-maize-400,
+    0 0 0 3px var.$color-neutral-400;
     border-radius: 2px !important;
   }
 }
 
 .btn-outline-secondary:hover {
-  color: var(--color-neutral-500);
-  background-color: var(--color-neutral-100);
+  color: var.$color-neutral-500;
+  background-color: var.$color-neutral-100;
 }
 
 .btn-outline-primary:hover {
-  color: colors.$color-background-primary;
-  background-color: var(--color-neutral-100);
+  color: var.$color-background-primary;
+  background-color: var.$color-neutral-100;
   border: none;
 }
 
 .btn-outline-secondary:not(:disabled):not(.disabled).active:focus {
   outline: 0;
-  box-shadow: 0 0 0 2px var(--color-maize-400),
-  0 0 0 3px var(--color-neutral-400);
+  box-shadow: 0 0 0 2px var.$color-maize-400,
+  0 0 0 3px var.$color-neutral-400;
   border-radius: 2px !important;
 }

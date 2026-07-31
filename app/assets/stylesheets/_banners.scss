@@ -1,5 +1,5 @@
 @use "bootstrap-context" as bs;
-@use "colors" as colors;
+@use "variables" as var;
 
 /* ======================================== */
 /* CONFIGURABLE HOMEPAGE ALERT BANNER       */
@@ -18,7 +18,7 @@
 
     &.banner-heading {
       align-items: center; /* vertical */
-      color: colors.$color-neutral-500;
+      color: var.$color-neutral-500;
       font-size: 20px;
       white-space: nowrap;
       padding: 0 60px 0 15px;
@@ -34,7 +34,7 @@
       }
 
       .blacklight-icons svg {
-        fill: colors.$color-neutral-500;
+        fill: var.$color-neutral-500;
         height: 1.2rem;
         width: 1.2rem;
         margin-right: 0.6rem;
@@ -62,22 +62,22 @@
       line-height: 1.4em;
 
       .banner-message-text {
-        font-weight: 600;
-        color: colors.$color-neutral-500;
+        font-weight: var.$semibold;
+        color: var.$color-neutral-500;
       }
     }
   }
 
   /* Only variant currently used in the app */
   &.banner-warning {
-    background-color: colors.$color-maize-200;
+    background-color: var.$color-maize-200;
 
     .banner-heading {
-      background-color: colors.$color-maize-400;
+      background-color: var.$color-maize-400;
     }
 
     .banner-shadow {
-      background-color: colors.$color-maize-300;
+      background-color: var.$color-maize-300;
     }
   }
 }

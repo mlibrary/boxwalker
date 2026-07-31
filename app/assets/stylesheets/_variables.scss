@@ -1,0 +1,57 @@
+//* mlibrary palette in SCSS drawn from default umich-lib.css, project-specific colors only *//
+//* Usage "border: var.$facet-gray" *//
+$color-blue-100: var(--color-blue-100); 
+$color-blue-200: var(--color-blue-200); 
+$color-blue-300: var(--color-blue-300); 
+$color-blue-400: var(--color-blue-400); 
+$color-blue-500: var(--color-blue-500); 
+
+$color-maize-200: var(--color-maize-200); 
+$color-maize-300: var(--color-maize-300); 
+$color-maize-400: var(--color-maize-400); 
+
+$color-neutral-100: var(--color-neutral-100); 
+$color-neutral-300: var(--color-neutral-300); 
+$color-neutral-400: var(--color-neutral-400); 
+$color-neutral-500: var(--color-neutral-500); 
+
+$color-orange-500: var(--color-orange-500); 
+
+$color-teal-100: var(--color-teal-100); 
+$color-teal-300: var(--color-teal-300); 
+$color-teal-400: var(--color-teal-400); 
+$color-teal-500: var(--color-teal-500); 
+
+$color-pink-200: var(--color-pink-200); 
+$color-pink-500: var(--color-pink-500); 
+
+$color-green-100: var(--color-green-100); 
+$color-green-400: var(--color-green-400); 
+$color-green-500: var(--color-green-500); 
+
+/* UM Arclight add-on colors */
+$text-primary: var(--color-neutral-400);
+$gray-light: #676767;
+$gray-light-more: #cccccc;
+$facet-gray: #f5f5f5;
+$main-gray: #ced4da;
+
+/* var used in Finding Aids: set to standard white */
+$color-background-primary: #ffff; 
+
+/* typography */
+$font-base-family: var(--font-family, "Muli", sans-serif);
+$regular: var(--regular, 400);
+$semibold: var(--semibold, 600);
+$bold: var(--bold, 700);
+$line-height-heading: var(--line-height-heading, 1.25);
+
+/* space */
+$radius-default: var(--radius-default, 4px);
+$space-x-small: var(--space-x-small, 8px);
+$space-small: var(--space-small, 12px);
+$space-medium: var(--space-medium, 16px);
+$space-large: var(--space-large, 24px);
+$space-x-large: var(--space-x-large, 32px);
+$space-xx-large: var(--space-xx-large, 40px);
+$space-xxx-large: var( --space-xxx-large, 48px);
