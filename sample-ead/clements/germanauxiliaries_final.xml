@@ -1,0 +1,795 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE ead PUBLIC "+//ISBN 1-931666-00-8//DTD ead.dtd (Encoded Archival Description (EAD) Version 2002)//EN" "ead.dtd">
+
+<ead>
+   <eadheader audience="internal" langencoding="iso639-2b" repositoryencoding="iso15511" dateencoding="iso8601" relatedencoding="Dublin Core" scriptencoding="iso15924" countryencoding="iso3166-1">
+      <eadid countrycode="us" mainagencycode="MiU-C" publicid="us//::miu-c//TXT us::miu-c::germanauxiliaries_final.xml//EN" encodinganalog="Identifier">umich-wcl-M-54ger</eadid>
+      <filedesc>
+         <titlestmt>
+            <titleproper encodinganalog="Title">Finding Aid for German Auxiliaries Muster Rolls</titleproper>
+            <author encodinganalog="Creator">Collection processed and finding aid created by Philip Heslip, November 2009</author>
+         </titlestmt>
+         <publicationstmt>
+            <publisher encodinganalog="Publisher">William L. Clements Library, University of Michigan</publisher>
+            <date encodinganalog="Date" normal="2009">2010</date>
+         </publicationstmt>
+      </filedesc>
+      <profiledesc>
+         <creation>Encoded finding aid created by Meg Hixon, <date>October 2010</date>
+         </creation>
+         <langusage encodinganalog="Language">The finding aid is written in <language langcode="eng" encodinganalog="041">English</language>, <language langcode="fre" encodinganalog="041">French</language>, and <language langcode="ger" encodinganalog="041">German</language>
+         </langusage>
+         <descrules>Finding aid prepared using Describing Archives: A Content Standard (DACS)</descrules>
+      </profiledesc>
+      <revisiondesc>
+         <change>
+            <date>2010-10-25</date>
+            <item> Original encoding from Word 2007 file using Word macros and Xmetal.</item>
+         </change>
+      </revisiondesc>
+   </eadheader>
+   <frontmatter>
+      <titlepage>
+         <publisher>Manuscripts Division<lb/>William L. Clements Library<lb/>University of Michigan</publisher>
+         <titleproper>Finding aid for<lb/>German Auxiliaries Muster Rolls, 1776-1786</titleproper>
+         <author>Finding aid created by<lb/> Philip Heslip, November 2009</author>
+      </titlepage>
+   </frontmatter>
+   <archdesc level="collection" audience="external" type="inventory" relatedencoding="MARC21">
+      <did>
+         <origination>
+            <corpname encodinganalog="110">Great Britain. Army</corpname>
+         </origination>
+         <unittitle encodinganalog="245" type="main">German Auxiliaries muster rolls <unitdate type="inclusive" encodinganalog="245$f">1776-1786</unitdate>
+            <unitdate type="bulk" encodinganalog="245$g">1781-1783</unitdate>
+         </unittitle>
+         <unittitle type="sort">German Auxiliaries muster rolls</unittitle>
+         <physdesc>
+            <extent encodinganalog="300">0.25 linear feet</extent>
+         </physdesc>
+         <unitid type="identifier">wclmss000814</unitid>
+         <langmaterial>The material is in <language langcode="eng" encodinganalog="041">English</language>, <language langcode="fre" encodinganalog="041">French</language>, and <language langcode="ger" encodinganalog="041">German</language>
+         </langmaterial>
+         <abstract> This collection is comprised of seventy muster rolls and 15 additional letters and  documents of the German regiments employed by the British to fight in the American Revolutionary War.</abstract>
+         <repository>
+            <corpname encodinganalog="852">
+               <subarea>William L. Clements Library</subarea>, University of Michigan</corpname>
+            <extptr href="wcladd" show="embed" actuate="onload"/>
+         </repository>
+      </did>
+      <descgrp type="admin">
+         <altformavail>
+            <p>The collection has been microfilmed</p>
+         </altformavail>
+         <acqinfo encodinganalog="541">
+            <p> 1929, 1956. <num type="accession"> M-54, M-1042</num>.</p>
+         </acqinfo>
+         <processinfo>
+            <p>Cataloging funded by the National Endowment for the Humanities (NEH) and the "We the People" project.</p>
+         </processinfo>
+         <accessrestrict encodinganalog="506">
+            <p>The collection is open for research.</p>
+         </accessrestrict>
+         <userestrict encodinganalog="540">
+            <p> Copyright status is unknown</p>
+         </userestrict>
+         <prefercite encodinganalog="524">
+            <p> German Auxiliaries Muster Rolls, William L. Clements Library, The University of Michigan</p>
+         </prefercite>
+      </descgrp>
+      <bioghist encodinganalog="545">
+         <head>History</head>
+         <p>In 1776, the British formed a treaty with the duke of Brunswick and other minor German princes that allowed the hiring of German mercenaries to bolster the British Army in North America.  These German Auxiliaries muster rolls document the German regiments employed by the British to fight in the American Revolutionary War.  England would pay the German princes annual subsidies, as well as additional fees, for wounded and killed soldiers.  All together, approximately 30,000 men came to America from Germany and fought for the British in virtually every major campaign in the war.  </p>
+      </bioghist>
+      <arrangement encodinganalog="351">
+         <p>This collection is organized alphabetically by the home residence of each army and then by the name of the regiment. </p>
+      </arrangement>
+      <scopecontent encodinganalog="520">
+         <p>This collection is comprised of seventy muster rolls and 15 related letters and documents of the German regiments employed by the British to fight in the American Revolutionary War.  Most of the rolls are from 1781 and 1783 and include lists for soldiers captured at Yorktown.  The rolls contain details such as the rank and names of the Hessians, casualties, and remarks, such as "sick in the Barracks."  These rolls are certified by British commanding officers.</p>
+         <list>
+            <head>The rosters list the following regiments:</head>
+            <item>Anhalt Zerbst army under Riedesel, Regiment Prinz Friedrich, Grenadier Battalion von Mengen, Regiment von Riedesel, Regiment von Specht.</item>
+            <item>Hesse-Cassel. Grenadier Battalion vacant Graff; Grenadier Battalion von Loewenstein,Company von Biesenrodt, Company von Mondorff, Company von Wachs; Grenadier Regiment d'Angelelli, Leib Conmpany; Regiment von Bunau, Leib Company; Regiment Erb Prinz (4 folls for this list names of Hessians captured at Yorktown), Company von Cochenhausen, Company von Fuchs; Regiment von Lossberg, Jr., Company von Baurmeister, Company von Biesenrodt, Company von Romrod, Company von Wilmowsky, Leib Company.</item>
+            <item>Hesse-Hanau. Artillery detachment under Pausch.</item>
+            <item>Waldeck. Third Regiment, Company von Alberti, Company von Horn, Company von Penzel.</item>
+         </list>
+         <p>In addition to muster rolls is a copy of the treaty executed in 1776 between the Duke of Brunswick and George III for hiring German mercenaries.  Also enclosed is a barrack account for the first regiment of Anspach troops during the winter of 1777-1778; several receipts, including three accounts submitted to the Great Britain Army Victualing Office (1786); an account of payments to foreign troops in America; and a statement from a surgeon named Pralle of the Bath infantry, certifying that several men belonged to Major General de Rhetz' regiment (1781).  Documents are in English and German.</p>
+      </scopecontent>
+      <controlaccess>
+         <p>
+            <extptr href="accnote" show="embed" actuate="onload"/>
+         </p>
+         <controlaccess>
+            <head>Subjects:</head>
+            <geogname encodinganalog="651" source="lcsh">Anhalt (Germany)--History, Military.</geogname>
+            <corpname encodinganalog="610" source="lcnaf">Braunschweig (Duchy) Heer. Prinz Friedrich Regiment--History--18th century.</corpname>
+            <corpname encodinganalog="610" source="lcnaf">Great Britain. Army--Colonial forces.</corpname>
+            <corpname encodinganalog="610" source="lcnaf">Great Britain. Army--History--Sources.</corpname>
+            <corpname encodinganalog="610" source="lcnaf">Great Britain. Army--Mercenaries.</corpname>
+            <corpname encodinganalog="610" source="lcnaf">Great Britain. Army--Registers.</corpname>
+            <geogname encodinganalog="651" source="lcsh">Hanau-Munzenberg (Germany)--History, Military--18th century.</geogname>
+            <geogname encodinganalog="651" source="lcsh">Hesse-Kassel (Electorate)--History, Military--18th century.</geogname>
+            <subject encodinganalog="650" source="lcsh">Hessian mercenaries--Registers.</subject>
+            <subject encodinganalog="650" source="lcsh">Mercenary troops--Great Britain.</subject>
+            <persname encodinganalog="600" source="lcnaf">Pausch, Captain.</persname>
+            <persname encodinganalog="600" source="lcnaf">Riedesel, Friedrich Adolf, Freiherr von, 1738-1800.</persname>
+            <persname encodinganalog="600" source="lcnaf">Specht, Johann Friedrich, d. 1787.</persname>
+            <geogname encodinganalog="651" source="lcsh">United States--History--Revolution, 1775-1783--British forces.</geogname>
+            <geogname encodinganalog="651" source="lcsh">United States--History--Revolution, 1775-1783--Participation, German.</geogname>
+            <geogname encodinganalog="651" source="lcsh">United States--History--Revolution, 1775-1781--Prisoners and prisons--Registers.</geogname>
+            <geogname encodinganalog="651" source="lcsh">United States--History--Revolution, 1775-1781--Registers.</geogname>
+            <corpname encodinganalog="610" source="lcnaf">Waldeck (Fürstentum) Waldeckische Regiment, 3te.</corpname>
+            <geogname encodinganalog="651" source="lcsh">Yorktown (Va.)--History--Siege, 1781--Surrenders--British.</geogname>
+         </controlaccess>
+         <controlaccess>
+            <head>Genre Terms:</head>
+            <genreform encodinganalog="655" source="aat">Muster rolls.</genreform>
+         </controlaccess>
+      </controlaccess>
+      <dsc type="combined">
+         <c01 level="series">
+            <did>
+               <unittitle>German Auxiliaries Muster Rolls, 1776-1786 (bulk 1781-1783)</unittitle>
+            </did>
+            <c02 level="item">
+               <did>
+                  <container type="box" label="Box">1</container>
+                  <container type="folder" label="Folder">1</container>
+                  <unittitle>[Anhalt-Zerbst]. Erasmi Garitz and W[illiam] Porter DS, <unitdate type="inclusive">July 20, 1781</unitdate>
+                  </unittitle>
+               <dao href="https://quod.lib.umich.edu/g/germanaux/germanaux.0101.001/1" actuate="onrequest"><daodesc><p>[View Digital Surrogate]</p></daodesc></dao><abstract>1a. Muster roll of . . . Anhalt Zerbst Recrcuits sent over from Jevern in the year 1780 . . . Fort Brooklyn on Long Island... Signed by Erasmi Garitz and commissary W. Porter.</abstract></did>
+            </c02>
+            <c02 level="item">
+               <did>
+                  <unittitle>[Anhalt-Zerbst]. Erasmi Garitz and W[illiam] Porter DS, <unitdate type="inclusive">July 20, 1781</unitdate>
+                  </unittitle>
+               <dao href="https://quod.lib.umich.edu/g/germanaux/germanaux.0101.002/1" actuate="onrequest"><daodesc><p>[View Digital Surrogate]</p></daodesc></dao><abstract>1b. Erasmus Garitz to W. Porter, commissary.  Muster Roll of . . . Anhalt Zerbst Recruits sent over from Jevern in . . . 1780 as muster'd . . . at Fort Brooklyn on Long Island, July 20, 1781.  Signed by Erasmi Garitz and commissary W. Porter.</abstract></did>
+            </c02>
+            <c02 level="item">
+               <did>
+                  
+                  <container type="folder" label="Folder">2</container>
+                  <unittitle>[Brunswick]. [Friedrich Adolf, Freiherr von] Riedesel and W[illiam] Porter DS, <unitdate type="inclusive">July 20, 1781</unitdate>
+                  </unittitle>
+               <dao href="https://quod.lib.umich.edu/g/germanaux/germanaux.0102.001/1" actuate="onrequest"><daodesc><p>[View Digital Surrogate]</p></daodesc></dao><abstract>2a. Muster roll of the General Staff of the Brunswick Ausiliar[y] Troops in His Britannick Majesty's Service in North America, as mustered by . . . Wm. Porter at Brooklyn... Signed by Riedesel and commissary W. Porter.</abstract></did>
+            </c02>
+            <c02 level="item">
+               <did>
+                  <unittitle>[Brunswick]. Carl. de Geusau and W[illiam] Porter DS,  <unitdate type="inclusive">July 20, 1781</unitdate>
+                  </unittitle>
+               <dao href="https://quod.lib.umich.edu/g/germanaux/germanaux.0102.002/1" actuate="onrequest"><daodesc><p>[View Digital Surrogate]</p></daodesc></dao><abstract>2b. Muster roll of the present Officers and Men of a Detachment of light infantry regiment Brunswick troops including the Recruits sent over . . . in . . . 1780. Signed by Carl de Geusau and commissary W. Porter.</abstract></did>
+            </c02>
+            
+            <c02 level="item">
+               <did>
+                  <container type="folder" label="Folder">3</container><unittitle>[Brunswick]. Fr[iedrich] Cleve DS, <unitdate type="inclusive">June 26, 1783</unitdate></unittitle>
+               <note><p>2c. Located in Oversize Manuscripts (see below)</p></note></did>
+            </c02><c02 level="item">
+               <did>
+                  <unittitle>[Brunswick]. Ernst August de Bartling and W[illiam] Porter DS, <unitdate type="inclusive">July 20, 1781</unitdate>
+                  </unittitle>
+               <dao href="https://quod.lib.umich.edu/g/germanaux/germanaux.0103.002/1" actuate="onrequest"><daodesc><p>[View Digital Surrogate]</p></daodesc></dao><abstract>3a. Muster roll of the present Officers and Men…Fort Brooklyn on Long Island... Signed by Ernst August Bartling and commissary W. Porter.</abstract></did>
+            </c02>
+            <c02 level="item">
+               <did>
+                  
+                  <container type="folder" label="Folder">4</container>
+                  <unittitle>[Brunswick]. Carl de Schlagenteuffel DS,  <unitdate type="inclusive">June 20, 1781</unitdate>
+                  </unittitle>
+               <dao href="https://quod.lib.umich.edu/g/germanaux/germanaux.0104.001/1" actuate="onrequest"><daodesc><p>[View Digital Surrogate]</p></daodesc></dao><abstract>3b. List of the Names of the Recruits now in Canada, belonging to the Regiment of Brunswick Dragoons . . . for compleating of the different Squadrons of that Regiment. Signed by C. von Schlagenteuffel.</abstract></did>
+            </c02>
+            <c02 level="item">
+               <did>
+                  <unittitle>[Brunswick]. [Johann Lud.] de Unger and W[illiam] Porter DS, <unitdate type="inclusive">July 20, 1781</unitdate>
+                  </unittitle>
+               <dao href="https://quod.lib.umich.edu/g/germanaux/germanaux.0104.002/1" actuate="onrequest"><daodesc><p>[View Digital Surrogate]</p></daodesc></dao><abstract>4a. Muster roll of the present Non Commissioned Officer and Men of a Detachment of the Regiment Prince Fredéric Brunswicks Troops including the Recruits sent over . . . in . . . 1780.  Signed by de Unger and commissary W. Porter.</abstract></did>
+            </c02>
+            <c02 level="item">
+               <did>
+                  
+                  <container type="folder" label="Folder">5</container>
+                  <unittitle>[Brunswick]. [Charles] B[aron] de Wolzogen and W[illiam] Porter DS,  <unitdate type="inclusive">June 24, 1782</unitdate>
+                  </unittitle>
+               <dao href="https://quod.lib.umich.edu/g/germanaux/germanaux.0105.001/1" actuate="onrequest"><daodesc><p>[View Digital Surrogate]</p></daodesc></dao><abstract>4b. Rolle de la Montre du Detachement du Regiment de Prince Frederic des Trouppes de . . . le Duc regnant de Bronsvic . . . avec les changements . . . 25 Dec. 1781-24 June 1782. Signed by Capt. C. von Wolzogen and commissary W. Porter.</abstract></did>
+            </c02>
+            <c02 level="item">
+               <did>
+                  <unittitle>[Brunswick]. [Balthasar] Bogislaus de Lucke and W[illiam] Porter DS, <unitdate type="inclusive">July 20, 1781</unitdate>
+                  </unittitle>
+               <dao href="https://quod.lib.umich.edu/g/germanaux/germanaux.0105.002/1" actuate="onrequest"><daodesc><p>[View Digital Surrogate]</p></daodesc></dao><abstract>4c. Muster roll Of the present Officers and Men of a Detachment of Major General de Rhetz Regiment Brunswicks Troops, including the Recruits sent over . . . in . . . 1780. Signed by commissary W. Porter and Major de Lucke.</abstract></did>
+            </c02>
+            <c02 level="item">
+               <did>
+                  
+                  <container type="folder" label="Folder">6</container>
+                  <unittitle>[Brunswick]. [Julius] de Poellnitz and W[illiam] Porter DS, <unitdate type="inclusive">July 20, 1781</unitdate>
+                  </unittitle>
+               <dao href="https://quod.lib.umich.edu/g/germanaux/germanaux.0106.001/1" actuate="onrequest"><daodesc><p>[View Digital Surrogate]</p></daodesc></dao><abstract>5. Muster roll of the present Officers and Men of Majr: General de Riedesels Infantery Regiment of the Brunswick Troops... Signed by de Poellnitz and commissary W. Porter.</abstract></did>
+            </c02>
+            <c02 level="item">
+               <did>
+                  <unittitle>[Brunswick]. [Regiment von Friedrich Riedesel] Document, <unitdate type="inclusive">[between 1781 and 1783]</unitdate>
+                  </unittitle>
+               <dao href="https://quod.lib.umich.edu/g/germanaux/germanaux.0106.002/1" actuate="onrequest"><daodesc><p>[View Digital Surrogate]</p></daodesc></dao><abstract>6. State of pay of the regiment von Riedesel.</abstract></did>
+            </c02>
+            <c02 level="item">
+               <did>
+                  
+                  <container type="folder" label="Folder">7</container>
+                  <unittitle>[Brunswick]. [Regiment von Johann Friedrich von Specht] Document, <unitdate type="inclusive">May 13, 1776</unitdate>
+                  </unittitle>
+               <dao href="https://quod.lib.umich.edu/g/germanaux/germanaux.0107.001/1" actuate="onrequest"><daodesc><p>[View Digital Surrogate]</p></daodesc></dao><abstract>7a. Mondirungs Anschlag auf des Obristen Specht Regiment excl. der Augmentation Anno 1776.</abstract></did>
+            </c02>
+            <c02 level="item">
+               <did>
+                  <unittitle>[Brunswick]. A. Lützow and W[illiam] Porter DS, <unitdate type="inclusive">July 20,1781</unitdate>
+                  </unittitle>
+               <dao href="https://quod.lib.umich.edu/g/germanaux/germanaux.0107.002/1" actuate="onrequest"><daodesc><p>[View Digital Surrogate]</p></daodesc></dao><abstract>7b. Muster roll of the present Officers and Men of the Detachment of the Regiment Specht Brunswick troops including the Recruits sent over . . . in . . . 1780. Signed by commisary W. Porter and Capt. Lützow.</abstract></did>
+            </c02>
+            <c02 level="item">
+               <did>
+                  
+                  <container type="folder" label="Folder">8</container>
+                  <unittitle>[Hesse-Cassel].  Friedrich Platte, Johann Jacob Fritsch, Johann Henrich Brauns, Christn. Kleÿensteüber, and W[illiam] Porter DS, <unitdate type="inclusive">July 4, 1782</unitdate>
+                  </unittitle>
+               <dao href="https://quod.lib.umich.edu/g/germanaux/germanaux.0108.001/1" actuate="onrequest"><daodesc><p>[View Digital Surrogate]</p></daodesc></dao><abstract>8a. Bataillon des Grenadiers Vacant Graff de la Compagnie du Major Hessenmüller pour 182 Jours; du 25e. Decembre 1781: jusqu'au 24e. Juin 1782 inclusivement... Muster roll. Signed by Maj. Friedrich Platte, Capt. Johann Jacob Fritsch, Lt. Johann Henrich Brauns, Lt. Christn. Kleÿensteüber, and commissary William Porter.</abstract></did>
+            </c02>
+            <c02 level="item">
+               <did>
+                  <unittitle>[Hesse-Cassel]. Friedrich Platte, G[eorge] Hohenstein, G[eorge] Schenck, B[arthold] H[enri] Schimmelpfeng,  J[ean] G[eorge] Wagner, and W[illiam] Porter DS, <unitdate type="inclusive">July 4, 1782</unitdate>
+                  </unittitle>
+               <dao href="https://quod.lib.umich.edu/g/germanaux/germanaux.0108.002/1" actuate="onrequest"><daodesc><p>[View Digital Surrogate]</p></daodesc></dao><abstract>8b. Bataillon des Grenadiers Vacant Graff de la Compagnie du Capitaine Hohenstein Pour 182. Jours du 25me. Decembre 1781: jusqu'au 24me. Juin 1782 inclusivement... Muster roll, Dec. 25, 1781-June 24, 1782. Signed by Maj. Friedrich Platte; Capt. G. Hohenstein; Lt. G. Schenck, 2nd Lieut. B. H. Hohenstein, Ensign J. G. Wagner, and commissary William Porter.</abstract></did>
+            </c02>
+            <c02 level="item">
+               <did>
+                  
+                  <container type="folder" label="Folder">9</container>
+                  <unittitle>[Hesse-Cassel].  Frederich Platte,  Gregorius Saltzmann, Wilhelm Studenroth, Joseph Henrich Wiederhold, and W[illia]m Porter DS, <unitdate type="inclusive">July 4, 1782</unitdate>
+                  </unittitle>
+               <dao href="https://quod.lib.umich.edu/g/germanaux/germanaux.0109.001/1" actuate="onrequest"><daodesc><p>[View Digital Surrogate]</p></daodesc></dao><abstract>8c. Bataillon des Grenadiers Vacant Graff de la Compagnie du Capitaine Salzmann pour 182. Jours du 25me. Decembre 1781: jusqu'au 24me. Juin 1782 inclusivement... Muster roll, Dec. 25, 1781-June 24, 1782. Signed by Maj. Friedrich Platte, Capt. Gregorius Saltzmann, Lieut. Wilhelm Studenroth, 2nd Lieut. Joseph Henrich Wiederhold, and commissary William Porter.</abstract></did>
+            </c02>
+            <c02 level="item">
+               <did>
+                  <unittitle>[Hesse-Cassel]. Friedrich Platte, A[ndrea]s Oehlhans, R[einhard] Junek, J[ohannes] Koeber, and W[illiam] Porter DS, <unitdate type="inclusive">July 4, 1782</unitdate>
+                  </unittitle>
+               <dao href="https://quod.lib.umich.edu/g/germanaux/germanaux.0109.002/1" actuate="onrequest"><daodesc><p>[View Digital Surrogate]</p></daodesc></dao><abstract>8d. Bataillon des Grenadiers Vacant Graff. Compagnie du Capitaine Sandrock pour 182 Jours du 25e. Decembre 1781. Jusqu'au 24e. Juin 1782 inclusivement... Muster roll, Dec. 25, 1781-June 24, 1782. Signed by Maj. Friedrich Platte, Lieut. Andreas Oehlhans, 2nd Lieut. Reinhard Junek, 2nd Lieut. Johannes Koeber, and commissary William Porter.</abstract></did>
+            </c02>
+            <c02 level="item">
+               <did>
+                  
+                  <container type="folder" label="Folder">10</container>
+                  <unittitle>[Hesse-Cassel]. W[illia]m Loewenstein, [Hans Henrich George Wilhelm] de Biesenrodt, H[enrich] F. Zinik, W[ilhelm] L[udwig] de Romrod, Louis Friedric de Rieger, and W[illiam] Porter DS, <unitdate type="inclusive">July 4, 1782</unitdate>
+                  </unittitle>
+               <dao href="https://quod.lib.umich.edu/g/germanaux/germanaux.0110.001/1" actuate="onrequest"><daodesc><p>[View Digital Surrogate]</p></daodesc></dao><abstract>9a. Battaillon des Grenadiers du Colonel de Loewenstein, Compagnie du Capitaine de Biesenrodt, pour 182 jours du 25me. Decembre 1781. jusqu'au 24me. Juin 1782. inlusivement... Muster roll, Dec. 25, 1781-June 24, 1782. Signed by Col. William Loewenstein, Capt. Hans Henrich George Wilhelm de Biesenrodt, Liut. Henrich F. Zinik, 2nd Lieut. Ludwig Wilhelm de Romrod, 2nd Lieut. Louis Friedric de Rieger, and commissary William Porter.</abstract></did>
+            </c02>
+            <c02 level="item">
+               <did>
+                  <unittitle>[Hesse-Cassel]. W[illia]m Loewenstein, [Friedrich] Klingender, C[harle] Marquard, P[ier] C[hristiene] Firnhaber, H[enrich] E[rnst] Loreÿ, and commissary W[illia]m Porter DS, <unitdate type="inclusive">July 4, 1782</unitdate>
+                  </unittitle>
+               <dao href="https://quod.lib.umich.edu/g/germanaux/germanaux.0110.002/1" actuate="onrequest"><daodesc><p>[View Digital Surrogate]</p></daodesc></dao><abstract>9b. Bataillon des Grenadiers du Colonel de Loewenstein Compagnie du Capitaine Klingender. Pour 182. Jours de 25me. Decembr 1781 jusqu'au 24me. Juin 1782. inclusivement... Muster roll, Dec. 25, 1781-June 24, 1782. Signed by Col. William Loewenstein, Capt. Friedrich Klingender, Lieut. Charle Marquard, 2nd Lieut. Pier Christiene Firnhaber, 2nd Lieut. Henrich Ernst Loreÿ, and commissary William Porter.</abstract></did>
+            </c02>
+            <c02 level="item">
+               <did>
+                  
+                  <container type="folder" label="Folder">11</container>
+                  <unittitle>[Hesse-Cassel]. W[illia]m Loewenstein, [Rudolf] Mondorff,  [Otto Philip] de Münchhausen, [Christian] de Hobe, [Henrich] Hille, and W[illia]m Porter DS, <unitdate type="inclusive">July 4, 1782</unitdate>
+                  </unittitle>
+               <dao href="https://quod.lib.umich.edu/g/germanaux/germanaux.0111.001/1" actuate="onrequest"><daodesc><p>[View Digital Surrogate]</p></daodesc></dao><abstract>10. Battaillon des Grenadiers du Colonel de Loewenstein de la Compagnie du Capit. Mondorff. pour 182 jours, du 25me. Dec: 1781 jusqu'au 24me. Juin 1782./ inclusivement... Muster roll, Dec. 25, 1781-June 24, 1782. Signed by Col. William Loewenstein, Capt. Rudolf Mondorff,  Lieut. Otto Philip de Münchhausen, 2nd Lieut. Christian de Hobe, 2nd Lieut. Henrich Hille, and commissary William Porter.</abstract></did>
+            </c02>
+            <c02 level="item">
+               <did>
+                  <unittitle>[Hesse-Cassel]. W[illia]m Loewenstein, H[enrich] F[riedrich] Wachs, [Andre Louis] de Coudres, and W[illiam] Porter DS, <unitdate type="inclusive">July 4, 1782</unitdate>
+                  </unittitle>
+               <dao href="https://quod.lib.umich.edu/g/germanaux/germanaux.0111.002/1" actuate="onrequest"><daodesc><p>[View Digital Surrogate]</p></daodesc></dao><abstract>11. Battaillon des Grenadiers du Colonel de Loewenstein du Capitaine Wachs pour 182 jours du 25me. Decembr. 1781. jusqu'au le 24me. Juin 1782 inclusivement... Signed by Col. William Loewenstein, Capt. Henrich Friedrich Wachs, 2nd Lieut. Andre Louis de Coudres, and commissary William Porter.</abstract></did>
+            </c02>
+            <c02 level="item">
+               <did>
+                  
+                  <container type="folder" label="Folder">12</container>
+                  <unittitle>[Hesse-Cassel]. J. G. Endemann, J[ean] Christoph Mulhause, F. W. Bode, Jaques Klimenhagen, and George Henri Loderhose DS, <unitdate type="inclusive">[June-July 1782]</unitdate>
+                  </unittitle>
+               <dao href="https://quod.lib.umich.edu/g/germanaux/germanaux.0112.001/1" actuate="onrequest"><daodesc><p>[View Digital Surrogate]</p></daodesc></dao><abstract>12a. Regiment Hessois des Grenadiers du Lieutenant General Marquis D'Angelelli de la Compagne du Corps pour 182 jours du 25me. Decembre 1781. jusqu'au 24me. Juin 1782 inclusivement... Muster roll, Dec. 25, 1781-June 24, 1782. Signed by Lieut. Col. J. G. Endemann, Capt. Lieut. Jean Christoph Mulhause, Major F. W. Bode, ensign Jaques Klimenhagen, and ensign George Henri Loderhose.</abstract></did>
+            </c02>
+            <c02 level="item">
+               <did>
+                  <unittitle>[Hesse-Cassel].  J. G. Endemann, Jean Adam Bauer, F. W. Bode, Frederic August Göbell, and ensign C[ÿriaeus] L[ouis] Schultz DS, <unitdate type="inclusive">June 24, 1782</unitdate>
+                  </unittitle>
+               <dao href="https://quod.lib.umich.edu/g/germanaux/germanaux.0112.002/1" actuate="onrequest"><daodesc><p>[View Digital Surrogate]</p></daodesc></dao><abstract>12b. Regiment Hessois des Grenadiers du Lieutenant General Marquis D'Angelelli, de la Compagnie du Capitaine Bauer, pour 182 jours du 25me. Decemr. 1781. jusqu'au 24me. Juin 1782. inclusivement..... Muster roll, Dec. 25, 1781-June 24, 1782. Signed by Lieut. Col. J. G. Endemann, Capt. Jean Adam Bauer, Maj. F. W. Bode, 2nd Lieut. Frederic August Göbell, and ensign Cÿriaeus Louis Schultz.</abstract></did>
+            </c02>
+            <c02 level="item">
+               <did>
+                  
+                  <container type="folder" label="Folder">13</container>
+                  <unittitle>[Hesse-Cassel]. J. G. Endemann, Henrÿ Christofle Fenner, F. W. Bode, Guillaume Boecking, and Jean Pierre Gerlach DS, <unitdate type="inclusive">June 24, 1782</unitdate>
+                  </unittitle>
+               <dao href="https://quod.lib.umich.edu/g/germanaux/germanaux.0113.001/1" actuate="onrequest"><daodesc><p>[View Digital Surrogate]</p></daodesc></dao><abstract>12c. Regiment Hessois des Grenadiers du Lieutenant General Marquis D'Angelelli, de la Compagnie du Lieutenant Colonel Endemann, pour 182 jours du 25me. Decembre 1781. jusqu'au le 24me. Juin 1782. inclusivement... Muster roll, Dec. 25, 1781-June 24, 1782. Signed by Lieut. Col. J. G. Endemann, Capt. Lieut. Henrÿ Christofle Fenner, Maj. F. W. Bode, 2nd Lieut. Guillaume Boecking, and ensign Jean Pierre Gerlach.</abstract></did>
+            </c02>
+            <c02 level="item">
+               <did>
+                  <unittitle>[Hesse-Cassel]. J. G. Endemann, Philippe Henri Wiedekindl, F. W. Bode, and Philippe Pauli DS,  <unitdate type="inclusive">June 24, 1782</unitdate>
+                  </unittitle>
+               <dao href="https://quod.lib.umich.edu/g/germanaux/germanaux.0113.002/1" actuate="onrequest"><daodesc><p>[View Digital Surrogate]</p></daodesc></dao><abstract>12d. Regiment Hessois des Grenadiers du Lieutenant General Marquis D'Angelelli, de la Compagnie du Colonel Hatzfeld pour 182 jours du 25me. Decembre 1781. jusqu-au le 24me. Juin 1782. inclusivement... Muster roll, Dec. 25, 1781-June 24, 1782. Signed by Lieut. Col. J. G. Endemann, Capt. Lieut. Philippe Henri Wiedekindl, Maj. F. W. Bode, and 2nd Lieut. Philippe Pauli.</abstract></did>
+            </c02>
+            <c02 level="item">
+               <did>
+                  
+                  <container type="folder" label="Folder">14</container>
+                  <unittitle>[Hesse-Cassel]. J. R[einhold] Heilmann, P[hilip] Hillebrand, M[elchior] Martini, and Johannes Krupp DS, <unitdate type="inclusive">June 24, 1782</unitdate>
+                  </unittitle>
+               <dao href="https://quod.lib.umich.edu/g/germanaux/germanaux.0114.001/1" actuate="onrequest"><daodesc><p>[View Digital Surrogate]</p></daodesc></dao><abstract>12e. Regiment d'Infanterie du Colonel de Benning, de la Compagnie du Corps, pour 182 jours, du 25me. Decembre 1781 jusq-au 24me. Juin 1782. inclusivement... Muster roll, Dec. 25, 1781-June 24, 1782. Signed by Capt. Lieut. Joh: Reinhold Heilmann, Lieut. Col. Philip Hillebrand, Come Maj. Melchior Martini, and Lieut. Johannes Krupp.</abstract></did>
+            </c02>
+            <c02 level="item">
+               <did>
+                  <unittitle>[Hesse-Cassel]. P[hilip] Hillebrand, M[elchior] Martini, and [Johannes] Hoerker DS, <unitdate type="inclusive">June 24, 1782</unitdate>
+                  </unittitle>
+               <dao href="https://quod.lib.umich.edu/g/germanaux/germanaux.0114.002/1" actuate="onrequest"><daodesc><p>[View Digital Surrogate]</p></daodesc></dao><abstract>12f. Regiment d'Infanterie du Colonel de Benning, de la Compagnie du Lieutenant Colonel Hillebrand, pour 182 jours, du 25me. Decembre 1781, jusq au 24me. Juin 1782. inclusivement... Muster roll, Dec. 25, 1781-June 24, 1782. Signed by Lieut. Col. Philip Hillebrand, Come Maj. Melchior Martini, and Capt. Lieut. Johannes Hoerker.</abstract></did>
+            </c02>
+            <c02 level="item">
+               <did>
+                  
+                  <container type="folder" label="Folder">15</container>
+                  <unittitle>[Hesse-Cassel]. P[hilip] Hillenbrand, M[elchior] Martini, C[laudÿ] Stüer, and O[tto] R[oland] Scheuek DS, <unitdate type="inclusive">June 24, 1782</unitdate>
+                  </unittitle>
+               <dao href="https://quod.lib.umich.edu/g/germanaux/germanaux.0115.001/1" actuate="onrequest"><daodesc><p>[View Digital Surrogate]</p></daodesc></dao><abstract>12g. Regiment d'Infanterie du Colonel de Benning de la Compagnie ou Lieutenant Colonel Martini, pour 182 jours du 25me. Decembre 1781 jusq'au 24me. Juin 1782 inclusivement... Muster roll, Dec. 25, 1781-June 24, 1782. Signed by Lieut. Col. Philip Hillebrand, Come Maj. Melchior Martini, Capt. Lieut. Claudÿ Stüer, and 2nd Lieut. Otto Roland Scheuek.</abstract></did>
+            </c02>
+            <c02 level="item">
+               <did>
+                  <unittitle>[Hesse-Cassel]. P[hilip] Hillebrand, M[elchior] Martini, D[ietrich] Reinhard, F[rantz] A[dam] Kuhl, and B. E. Eckhard DS, <unitdate type="inclusive">June 24, 1782</unitdate>
+                  </unittitle>
+               <dao href="https://quod.lib.umich.edu/g/germanaux/germanaux.0115.002/1" actuate="onrequest"><daodesc><p>[View Digital Surrogate]</p></daodesc></dao><abstract>12h. Regiment d'Infantrie du Colonel de Benning de la Compagnie du Major de Prueschenck pour 182 jours du 25me. Decembre 1781 jusq'au 24me Juin 1782. inclusivement... Muster roll, Dec. 25, 1781-June 24, 1782. Signed by Lieut. Col. Philip Hillebrand, Come Maj. Melchior Martini, Capt. Lieut. Dietrich Reinhard, Lieut. Frantz Adam Kuhl, and 2nd Lieut. B. E. Eckhard.</abstract></did>
+            </c02>
+            <c02 level="item">
+               <did>
+                  
+                  <container type="folder" label="Folder">16</container>
+                  <unittitle>[Hesse-Cassel]. P[hilip] Hillebrand, M[elchior] Martini, J[eremias] Roepenak, J. Martini, and F[riedrich] Kroeschell DS, <unitdate type="inclusive">June 24, 1782</unitdate>
+                  </unittitle>
+               <dao href="https://quod.lib.umich.edu/g/germanaux/germanaux.0116.001/1" actuate="onrequest"><daodesc><p>[View Digital Surrogate]</p></daodesc></dao><abstract>12i. Regiment d'Infanterie du Colonel de Benning, de la Compagnie du Capitaine Sonneborn pour 182 jours du 25me. Decembre 1781, jusq'au 24me. Juin 1782. inclusivement... Muster roll, Dec. 25, 1781-June 24, 1782. Signed by Lieut. Col. Philip Hillebrand, Come Maj. Melchior Martini, Lieut. Jeremias Roepenak, 2nd Lieut. J. Martini [Martinus Martini?], and ensign Friedrich Kroeschell.</abstract></did>
+            </c02>
+            <c02 level="item">
+               <did>
+                  <unittitle>[Hesse-Cassel]. R[udolph] von Bünau,  [Wilhelm] H[enrich] Bauer, H. Hessenmüller, F. G[ottlieb] Greben, F. D. Selig, and commissary W[illiam] Porter DS, <unitdate type="inclusive">July 3, 1782</unitdate>
+                  </unittitle>
+               <dao href="https://quod.lib.umich.edu/g/germanaux/germanaux.0116.002/1" actuate="onrequest"><daodesc><p>[View Digital Surrogate]</p></daodesc></dao><abstract>13a. Regiment d'Infanterie du Colonell de Bünau, de la Compagnie du Corps 182 Jours du 25me. Decembre 1781 Jusq'ue au 24me. Juin 1782, inclusivement...  Muster roll, Dec. 25, 1781-June 24, 1782. Signed by Colonel Come Capitain Rudolph von Bünau, 2nd Lieut. Wilhelm Henrich Bauer, Maj. H. Hessenmüller, ensign F. Gottlieb Greben, ensign F. D. Selig, and commissary William Porter.</abstract></did>
+            </c02>
+            <c02 level="item">
+               <did>
+                  
+                  <container type="folder" label="Folder">17</container>
+                  <unittitle>[Hesse-Cassel]. R[udolph] von Bünau, H. Hessenmüller, P[hil.] F[erdinand] Wolff de Gudenberg, P[eter] Munch, and  W[illiam] Porter DS, <unitdate type="inclusive">July 3, 1782</unitdate>
+                  </unittitle>
+               <dao href="https://quod.lib.umich.edu/g/germanaux/germanaux.0117.001/1" actuate="onrequest"><daodesc><p>[View Digital Surrogate]</p></daodesc></dao><abstract>13b. Regiment d'Infanterie du Collonel de Bünau, de la Compagnie Vacant Major Boecking, pour 182 jours du 25me. Decembr 1781 jusqu'au 24me. Juin 1782. inclusivement... Muster roll, Dec. 25, 1781-June 24, 1782. Signed by Chef et Commandeur Rudolph von Bünau, Maj. H. Hessenmüller, 2nd Lieut. Phil. Ferdinand Wolff de Gudenberg, ensign Peter Munch, and commissary William Porter.</abstract></did>
+            </c02>
+            <c02 level="item">
+               <did>
+                  <unittitle>[Hesse-Cassel]. R[udolph] von Bünau, [Joh. Christian] Goebell, H. Hessenmüller, [George] Lyncker, [Joh. Peter] Quentell, and W[illiam] Porter DS, <unitdate type="inclusive">July 3, 1782</unitdate>
+                  </unittitle>
+               <dao href="https://quod.lib.umich.edu/g/germanaux/germanaux.0117.002/1" actuate="onrequest"><daodesc><p>[View Digital Surrogate]</p></daodesc></dao><abstract>13c. Regiment d'Infanterie du Colonel de Bünau de la Compagnie du Capitain Goebell pour 182 Jours du 25me. Decembre 1781 Jusq'au 24me. Juin 1782 inclusivement... Muster roll, Dec. 25, 1781-June 24, 1782. Signed by Chef et Commandeur Rudolph von Bünau, Capt. Joh. Christian Goebell, Maj. H. Hessenmüller, 2nd Lieut. George Lyncker, ensign Joh. Peter Quentell, and commissary William Porter.</abstract></did>
+            </c02>
+            <c02 level="item">
+               <did>
+                  
+                  <container type="folder" label="Folder">18</container>
+                  <unittitle>[Hesse-Cassel]. R[udolph] von Bünau, Philipp Christian Firnhaber, H. Hessenmüller, C[hristian] O[tto] Frohn, Carl Hillebrand, and W[illiam] Porter DS, <unitdate type="inclusive">July 3, 1782</unitdate>
+                  </unittitle>
+               <dao href="https://quod.lib.umich.edu/g/germanaux/germanaux.0118.001/1" actuate="onrequest"><daodesc><p>[View Digital Surrogate]</p></daodesc></dao><abstract>13d. Regiment Infanterie du Colonel de Bünau, de la Compagnie du Major Platte, pour 182. Jours, du 25me. Decembre 1781 jusq'au 24me. Juin 1782 inclusivement... Muster roll, Dec. 25, 1781-June 24, 1782. Signed by Chef et Commandeur Rudolph von Bünau, Capt. Lieut. Philipp Christian Firnhaber, Maj. H. Hessenmüller, 2nd Lieut. Christian Otto Frohn, 2nd Lieut. Carl Hillebrand, and commissary William Porter</abstract></did>
+            </c02>
+            <c02 level="item">
+               <did>
+                  <unittitle>[Hesse-Cassel]. R[udolph] von Bünau, Joh. Adam Scheffer, H. Hessenmüller, Christoph Feldner, R[einhard] F[ried.] Scheffer, F[ried.] W[ilhelm Küster], and W[illiam] Porter DS, <unitdate type="inclusive">July 3, 1782</unitdate>
+                  </unittitle>
+               <dao href="https://quod.lib.umich.edu/g/germanaux/germanaux.0118.002/1" actuate="onrequest"><daodesc><p>[View Digital Surrogate]</p></daodesc></dao><abstract>13e. Regiment d'Infanterie du Colonel de Bünau de la Compagnie du Colonel Scheffer pour 182 jours du 25me. Decembr 1781. jusq au 24me. Juin 1782 inclusivement... Muster roll, Dec. 25, 1781-June 24, 1782. Signed by Chef et Commandeur Rudolph von Bünau, Col. Joh. Adam Scheffer, Maj. H. Hessenmüller, Capt. Lieut. Christoph Feldner, 2nd Lieut. Reinhard Fried. Scheffer, ensign Fried. Wilhelm Küster, and commissary William Porter.</abstract></did>
+            </c02>
+            <c02 level="item">
+               <did>
+                  
+                  <unittitle>
+                     [Hesse-Cassel]. C[arl] P[hilipp] Heÿmell, Carl de Wurmb, P[hiliph] H. Murhard, Henri de Bardeleben, W[ilhelm] Freÿenhagen, and W[illiam] Porter DS, <unitdate type="inclusive">July 5, 1782</unitdate></unittitle>
+               <note><p>13f. Located in Oversize Manuscripts (see below)</p></note></did>
+            
+            </c02>
+            <c02 level="item">
+               <did>
+                  <unittitle>
+                     [Hesse-Cassel]. C[arl] P[hilipp] Heÿmell, Carl de Wurmb, J. F[riedrich] Venator, C[arl] E. Henckell, and W[illiam] Porter DS, <unitdate type="inclusive">July 5, 1782</unitdate></unittitle>
+               <note><p>13g. Located in Oversize Manuscripts (see below)</p></note></did>
+            </c02>
+            <c02 level="item">
+               <did>
+                  <unittitle>
+                     [Hesse-Cassel]. C[arl] P[hilipp] Heÿmell, Carl de Wurmb, Carl de Haussen, and W[illiam] Porter DS, <unitdate type="inclusive">July 5, 1782</unitdate></unittitle>
+               <note><p>13h. Located in Oversize Manuscripts (see below)</p></note></did>
+            </c02>
+            <c02 level="item">
+               <did>
+                  <unittitle>[Hesse-Cassel]. C[arl] P[hilipp] Heÿmell, Carl de Wurmb, F[ried.] [Wilh.] Geister, [Carl Fried.] de Nagell, F[ried. F.] Murhard, and W[illiam] Porter DS, 
+                     <unitdate type="inclusive">July 5, 1782</unitdate></unittitle>
+               <note><p>13i. Located in Oversize Manuscripts (see below)</p></note></did>
+            </c02>
+            <c02 level="item">
+               <did>
+                  
+                  <container type="folder" label="Folder">21</container>
+                  <unittitle>[Hesse-Cassel]. C[arl] P[hilipp] Heÿmell, Carl de Wurmb, E[rasmus] E[rnst] Hinte, K[ristoph Dietrich] von Donop, E[manuel] R[osenus] Hausmann, G. Lehrbach, and W[illiam] Porter DS, <unitdate type="inclusive">July 5, 1782</unitdate>
+                  </unittitle>
+               <dao href="https://quod.lib.umich.edu/g/germanaux/germanaux.0121.001/1" actuate="onrequest"><daodesc><p>[View Digital Surrogate]</p></daodesc></dao><abstract>13j. Regiment d'Infanterie de Donop de la Compagnie du Colonel Hinte pour 182 jours du 25me. Decembre 1781 jusqu'au 24me. Juin 1782 inclusivement... Muster roll, Dec. 25, 1781-June 24, 1782. Signed by Col. Carl Philipp Heÿmell, Maj. Carl de Wurmb, Col. Erasmus Ernst Hinte, Maj. Carl de Wurmb, Capt. Kristoph Dietrich von Donop, Lieut. Emanuel Rosenus Hausmann, ensign G. Lehrbach, and commissary William Porter.</abstract></did>
+            </c02>
+            <c02 level="item">
+               <did>
+                  <unittitle>[Hesse-Cassel]. J. Fr[ederic] de Cochenhausen, [Michael] Waldenberg, Reinh. Ungewitter, Louis DesCoudres, and W[illiam] Porter DS, <unitdate type="inclusive">[June-July 1782]</unitdate>
+                  </unittitle>
+               <dao href="https://quod.lib.umich.edu/g/germanaux/germanaux.0121.002/1" actuate="onrequest"><daodesc><p>[View Digital Surrogate]</p></daodesc></dao><abstract>14. Regiment Infanterie du Prince Hereditaire de Hesse de la Compagnie du Colonel de Cochenhausen pour 182 jours du 25me. Decembr. 1781. jusqu'au 24me. Juin 1782. inclusivement... Muster roll, Dec. 25, 1781-June 24, 1782. Signed by Col. J. Frederic de Cochenhausen, Maj. Waldenberg, 2nd Lieut. Reinh. Ungewitter, ensign Louis DesCoudres, and commissary William Porter.</abstract></did>
+            </c02>
+            <c02 level="item">
+               <did>
+                  
+                  <container type="folder" label="Folder">22</container>
+                  <unittitle>[Hesse-Cassel]. J. Fr[ederic] de Cochenhausen, [Mathew] de Fuchs, [Michael] Waldenberg, [Guillaume] v[on] Andersohn, [Valentin] Schoenewolff, J[ean] H[ermann] Gebhard, and W[illiam] Porter DS, <unitdate type="inclusive">[June-July 1782]</unitdate>
+                  </unittitle>
+               <dao href="https://quod.lib.umich.edu/g/germanaux/germanaux.0122.001/1" actuate="onrequest"><daodesc><p>[View Digital Surrogate]</p></daodesc></dao><abstract>15a. Regiment Infanterie du Prince Hereditaire de Hesse de la Compagnie du Lieut: Colonel de Fuchs Pour 182 Jours du 25me. Decembr. 1781 Jusqu au 24me. Juin 1782. Inclusivement... Muster roll, Dec. 25, 1781-June 24, 1782. Signed by Col. J. Frederic de Cochenhausen, Lieut. Col. Mathieu de Fuchs, Maj. Waldenberg, 2nd Lieut. Guillaume von Andersohn, ensign Valentin Schoenewolff, Capt. Lieut. Jean Hermann Gebhard, and commissary William Porter.</abstract></did>
+            </c02>
+            <c02 level="item">
+               <did>
+                  <unittitle>[Hesse Cassel]. J. Fr[erderic] de Cochenhausen, C[aspar] Kümmell, [Michael] Waldenberg, J. D[iet.] Pfaff, and W[illiam] Porter DS, <unitdate type="inclusive">[June-July 1782]</unitdate>
+                  </unittitle>
+               <dao href="https://quod.lib.umich.edu/g/germanaux/germanaux.0122.002/1" actuate="onrequest"><daodesc><p>[View Digital Surrogate]</p></daodesc></dao><abstract>15b. Regiment Infanterie du Prince Hereditaire de Hesse de la Compagnie du General Major de Hachenberg pour 182 Jours du 25me. Decembr 1781 jusqu'au 24me. Juin 1782 inclusivement... Muster roll, Dec. 25, 1781-June 24, 1782. Signed by Col. J. Frerderic de Cochenhausen, Capt. Caspar Kümmell, Maj. Waldenberg, 2nd Lieut. J. Diet. Pfaff, and commissary William Porter.</abstract></did>
+            </c02>
+            <c02 level="item">
+               <did>
+                  
+                  <container type="folder" label="Folder">23</container>
+                  <unittitle>[Hesse-Cassel]. J. Fr[ederic] de Cochenhausen, [Michael] Waldenberg, F[rederic] de Kendell, F[rederic] Wyneken, and W[illiam] Porter DS, <unitdate type="inclusive">[June-July 1782]</unitdate>
+                  </unittitle>
+               <dao href="https://quod.lib.umich.edu/g/germanaux/germanaux.0123.001/1" actuate="onrequest"><daodesc><p>[View Digital Surrogate]</p></daodesc></dao><abstract>15c. Regiment Infanterie du Prince Hereditaire de la Compagnie du Major Waldenberg, pour 182 jours de 25me. Dec. 1781 jusqu au 24me. uin 1782 inclusivement... Muster roll, Dec. 25, 1781-June 24, 1782. Signed by Col. J. Frederic de Cochenhausen, Maj. Michael Waldenberg, 2nd Lieut. Frederic de Kendell, ensign Frederic Wyneken, and commissary William Porter.</abstract></did>
+            </c02>
+            <c02 level="item">
+               <did>
+                  <unittitle>[Hesse-Cassel]. G[eorge] E. Lengecke DS, <unitdate type="inclusive">March 12, 1778</unitdate>
+                  </unittitle>
+               <dao href="https://quod.lib.umich.edu/g/germanaux/germanaux.0123.002/1" actuate="onrequest"><daodesc><p>[View Digital Surrogate]</p></daodesc></dao><abstract>15d. Return of Emendements made in the Quarters of Colonel de Lengeckes Batallion of Hessian Grenadiers. Signed by George E. von Lengecke.</abstract></did>
+            </c02>
+            <c02 level="item">
+               <did>
+                  <unittitle>[Hesse-Cassel]. C[hristian] V[on] Romrod, E[manuel] de Wilmowsky, J[ohann] L[udolph] Rodemann,  E[hrhard] de Drach, C[arl] de Ehrenstein, and W[illiam] Porter DS, 
+                     <unitdate type="inclusive">July 5, 1782</unitdate></unittitle>
+               <note><p>16. Located in Oversize Manuscripts (see below)</p></note></did>
+            </c02>
+            <c02 level="item">
+               <did>
+                  <unittitle>
+                     [Hesse-Cassel]. C[hristian] V[on] Romrod, H[ans] M[oritz] de Biesenrodt, E[manuel] de Wilmowsky, [Carl Henrich] de Toll, M[artin] L[udwig] Wiscker, and W[illiam] Porter DS, <unitdate type="inclusive">July 5, 1782</unitdate></unittitle>
+               <note><p>17. Located in Oversize Manuscripts (see below)</p></note></did>
+            </c02>
+            <c02 level="item">
+               <did>
+                  <unittitle>
+                     [Hesse-Cassel]. C[hristian] V[on] Romrod, E[manuel] de Wilmowsky, J[ohann] M[elchior] Rothe, C[arl Wilhelm] de Bultzingsloewen, C[arl] de Bode, and W[illiam] Porter DS, <unitdate type="inclusive">July 5, 1782</unitdate></unittitle>
+               <note><p>18. Located in Oversize Manuscripts (see below)</p></note></did>
+            </c02>
+            <c02 level="item">
+               <did>
+                  <unittitle>[Hesse-Cassel]. C[hristian] V[on] Romrod, E[manuel] de Wilmowsky, [Conrad] Schraidt, C[arl Heinrich Friedrich] Lange, and W[illiam] Porter DS,
+                     <unitdate type="inclusive">July 5, 1782</unitdate></unittitle>
+               <note><p>19. Located in Oversize Manuscripts (see below)</p></note></did>
+            </c02>
+            <c02 level="item">
+               <did>
+                  <unittitle>[Hesse-Cassel]. C[hristian] V[on] Romrod, E[manuel] de Wilmowsky, H[ieronimus] Berner, [Friedrich Wilhelm] Fey, and W[illiam] Porter DS, 
+                     <unitdate type="inclusive">July 5, 1782</unitdate></unittitle>
+               <note><p>20a. Located in Oversize Manuscripts (see below)</p></note></did>
+            </c02>
+            <c02 level="item">
+               <did>
+                  <unittitle>
+                     [Hesse-Cassel]. Charles de Kietzell, G. Langenschwartz, C[hristian] Münch,  Jean Paul, and G[eorge] Langenschwartz DS, <unitdate type="inclusive">June 24, 1782</unitdate></unittitle>
+               <note><p>20b. Located in Oversize Manuscripts (see below)</p></note></did>
+            </c02>
+            <c02 level="item">
+               <did>
+                  
+                  <container type="folder" label="Folder">27</container>
+                  <unittitle>[Hesse-Cassel]. Charles de Kietzell, G. Langenschwartz, Lewis de Schallern, Guillaume Justi, J[ohann] P[hilipp Henri] Petri, and Henri Zilcher DS, <unitdate type="inclusive">June 24, 1782</unitdate>
+                  </unittitle>
+               <dao href="https://quod.lib.umich.edu/g/germanaux/germanaux.0127.001/1" actuate="onrequest"><daodesc><p>[View Digital Surrogate]</p></daodesc></dao><abstract>20c. Regiment d'Infanterie du Colonel De Seitz de la Compagnie du Lieutenant Colonel De Schallern pour 182. Jours du 25me. Decbr. 1781. jus'qu au 24me. Juin 1782 inclusivement... Muster roll, Dec. 25, 1781-June 24, 1782. Signed by Col. Charles de Kietzell, Maj. G. Langenschwartz, Lieut. Col. Lewis de Schallern, Lieut. Guillaume Justi, ensign Johann Philipp Henri Petri, and ensign Henri Zilcher.</abstract></did>
+            </c02>
+            <c02 level="item">
+               <did>
+                  <unittitle>[Hesse-Cassel]. Charles de Kietzell, G. Langenschwartz, George Langenschwartz, C[arl] A[ugust] Vieth, Ludw[ig] Friedr[ich] v[on] Boineburg, and  G. Christian Itter DS,  <unitdate type="inclusive">June 24, 1782</unitdate>
+                  </unittitle>
+               <dao href="https://quod.lib.umich.edu/g/germanaux/germanaux.0127.002/1" actuate="onrequest"><daodesc><p>[View Digital Surrogate]</p></daodesc></dao><abstract>20d. Regiment d'Infanterie du Colonel de Seitz de la Compagnie du Major Langenschwartz pour 182 Jours du 25me December 1781 Jusqu'au 24me. Juin 1782 inclusivement... Muster roll, Dec. 25, 1781-June 24, 1782. Signed by Col. Charles de Kietzell, Maj. G. Langenschwartz, Capt. George Langenschwartz, 2nd Lieut. Carl August Vieth, 2nd Lieut. Ludwig Friederich von Boineburg, and ensign Christian Itter.</abstract></did>
+            </c02>
+            <c02 level="item">
+               <did>
+                  
+                  <container type="folder" label="Folder">28</container>
+                  <unittitle>[Hesse-Cassel]. Charles de Kietzell, G. Langenschwartz, J[ean] Neuman, J[acob] W[ilhelm] Bode, Jean Knies, and E[manuel] Muuss DS, <unitdate type="inclusive">June 24, 1782</unitdate>
+                  </unittitle>
+               <dao href="https://quod.lib.umich.edu/g/germanaux/germanaux.0128.001/1" actuate="onrequest"><daodesc><p>[View Digital Surrogate]</p></daodesc></dao><abstract>20e. Regiment d Infanterie du Colonel de Seitz de la Compagnie du Major Neuman, pour 182 Jours du 25me. Decembr. 1781 jusqu'au 24me. Juin 1782, inclusivement... Muster roll, Dec. 25, 1781-June 24, 1782. Signed by Col. Charles de Kietzell, Maj. G. Langenschwartz, Maj. Jean Neuman, Capt. Lieut. Jacob Wilhelm Bode, 2nd Lieut. Jean Knies, and ensign Emanuel Muuss.</abstract></did>
+            </c02>
+            <c02 level="item">
+               <did>
+                  <unittitle>[Hesse-Hanau]. G[eorg] Pausch and W[illiam] Porter DS, <unitdate type="inclusive">July 20, 1781</unitdate>
+                  </unittitle>
+               <dao href="https://quod.lib.umich.edu/g/germanaux/germanaux.0128.002/1" actuate="onrequest"><daodesc><p>[View Digital Surrogate]</p></daodesc></dao><abstract>21a. Muster Roll of the present Officers and Men, of a Detachement of His Serene Highness Prince of Hessen Hanau Artillery, as muster'd by His Britannick Majesty's Commissary Wm. Porter Esqr., at Brooklyn on Long Island July the 20. de. 1781.</abstract></did>
+            </c02>
+            <c02 level="item">
+               <did>
+                  
+                  <container type="folder" label="Folder">29</container>
+                  <unittitle>[Hesse-Hanau, Jäger Corps]. G[eorg] Pausch and W[illiam] Porter DS, <unitdate type="inclusive">July 20, 1781</unitdate>
+                  </unittitle>
+               <dao href="https://quod.lib.umich.edu/g/germanaux/germanaux.0129.001/1" actuate="onrequest"><daodesc><p>[View Digital Surrogate]</p></daodesc></dao><abstract>21b. Muster Roll. of His Serene Highness Prince of Hesse Hanau Yager Recruits, sent over from Hanau in the year 1780, as mustre'd by His Britanick Majesty's Commissary of Muster, Wm. Porter Esqr., at Fort Brooklyn on Long-Island July the 20. 1781.</abstract></did>
+            </c02>
+            <c02 level="item">
+               <did>
+                  <unittitle>[Waldeck. 3rd Regiment]. C[hristoffle] Alberti, G. de Haacke, and W[illiam] Porter DS, <unitdate type="inclusive">July 12, 1782</unitdate>
+                  </unittitle>
+               <dao href="https://quod.lib.umich.edu/g/germanaux/germanaux.0129.002/1" actuate="onrequest"><daodesc><p>[View Digital Surrogate]</p></daodesc></dao><abstract>22. Muster Roll of Captain Albertis Compy: of the 3d. Regiment of Waldeck, for 182 Days, from the 25th. Decbr 1781 to the 24th. June 1782... Signed by Captain Christoffle Alberti, Captain G. de Haacke, and commissary William Porter.</abstract></did>
+            </c02>
+            <c02 level="item">
+               <did>
+                  
+                  <container type="folder" label="Folder">30</container>
+                  <unittitle>[Waldeck. 3rd Regiment]. C[hristoffle] Alberti, Keppel, and Nolting 2 DS Fragments, <unitdate type="inclusive">August 24, 1778</unitdate>
+                  </unittitle>
+               <dao href="https://quod.lib.umich.edu/g/germanaux/germanaux.0130.001/1" actuate="onrequest"><daodesc><p>[View Digital Surrogate]</p></daodesc></dao><abstract>23. Two fragments of muster rolls.  Each concluded: Passe'en Revue la Susdite Compagnie du Troissieme Regiment de Waldeck, Savoir le Capitaine et Son Garçon, un Premier Lieutenant et Son garçon, un Enseigne et Son Garçon, trois Sergeants, un Fourier, un Capit: d'armes, un Chirurgien, Six Caporaux, deux Tambours, et quatre vingt dix et un Soldats ÿ compris le Solliciteur, le tout duement et complettement armé.  Both signed by Capt. C. Alberti, Lieut. Keppel, and ensign Nolting.</abstract></did>
+            </c02>
+            <c02 level="item">
+               <did>
+                  <unittitle>[Waldeck. 3rd Regiment]. Augustin Alberti, G. de Haacke, and W[illiam] Porter DS, <unitdate type="inclusive">July 12, 1782</unitdate>
+                  </unittitle>
+               <dao href="https://quod.lib.umich.edu/g/germanaux/germanaux.0130.002/1" actuate="onrequest"><daodesc><p>[View Digital Surrogate]</p></daodesc></dao><abstract>24. Muster Roll of Lieut. Colonel and Capt. De Horns Company of the 3d. Regiment of Waldeck for 182 Days, from the 25 of Decembr 1781 to the 24 of June 1782... Signed by Capt. Lieut. Augustin Alberti, Capt. G. de Haacke, and commissary William Porter.</abstract></did>
+            </c02>
+            <c02 level="item">
+               <did>
+                  
+                  <container type="folder" label="Folder">31</container>
+                  <unittitle>[Waldeck. 3rd Regiment]. C. De Horn, W[ilhelm] Keppel, C[arl] Hohmann, Lud[wig] Schmid[t], C[arl] Müller, and W[illiam] Porter DS, <unitdate type="inclusive">June 24, 1782</unitdate>
+                  </unittitle>
+               <dao href="https://quod.lib.umich.edu/g/germanaux/germanaux.0131.001/1" actuate="onrequest"><daodesc><p>[View Digital Surrogate]</p></daodesc></dao><abstract>25a. Major Penzels Compagnie [3rd Regiment of Waldeck]. Muster roll, Dec. 25, 1781 to June 24, 1782. Signed by 1st Lieut. Wilhelm Keppel, 2nd Lieut. Carl Hohmann, ensign Ludwig Schmidt, ensign Carl Müller, Lieut. Col. Albrecht De Horn, and commissary William Porter.</abstract></did>
+            </c02>
+            <c02 level="item">
+               <did>
+                  <unittitle>[Waldeck. 3rd Regiment]. A[lbrecht] De Horn, A[lexander] de Baumbach, F[riedr.] de Wilmowsky, and W[illiam] Porter DS, <unitdate type="inclusive">July 12, 1782</unitdate>
+                  </unittitle>
+               <dao href="https://quod.lib.umich.edu/g/germanaux/germanaux.0131.002/1" actuate="onrequest"><daodesc><p>[View Digital Surrogate]</p></daodesc></dao><abstract>25b. Muster Roll of the Vacant Company, of the 3d Regiment of Waldeck, for 182 Days from the 25th. Of Decbr 1781. to the 24th. June 1782...  Signed by Lieut. Col. Albrecht De Horn; Capt. Lieut. Alexander de Baumbach; Lieut. Friedr. de Wilmowsky, and commissary William Porter.</abstract></did>
+            </c02>
+            <c02 level="item">
+               <did>
+                  
+                  <container type="folder" label="Folder">32</container>
+                  <unittitle>[Brunswick]. Gebhard Partially Printed DS, <unitdate type="inclusive">March 9, 1779</unitdate>
+                  </unittitle>
+               <dao href="https://quod.lib.umich.edu/g/germanaux/germanaux.0132.001/1" actuate="onrequest"><daodesc><p>[View Digital Surrogate]</p></daodesc></dao><abstract>26. T. F. Gebhard, Lieutenant and Pay Master of the Grenadier Bataillon de Mengen, signed this partially printed document for the receipt of 871/2/2 subsistence money for a body of Brunswick troops, held prisoner in the Province of Massachusetts Bay.  Imprint beginning "RECEIVED of DAVID THOMAS, Esq; Deputy-Paymaster of His Majesty's Forces in <emph render="italic">North-America</emph>," Docket: "Expedition to Rhode Island."</abstract></did>
+            </c02>
+            <c02 level="item">
+               <did>
+                  <unittitle>[Brunswick and Great Britain]. William Faucit and J. B. von Feronce DS Copy, <unitdate type="inclusive">January 9, 1776</unitdate>
+                  </unittitle>
+               <dao href="https://quod.lib.umich.edu/g/germanaux/germanaux.0132.002/1" actuate="onrequest"><daodesc><p>[View Digital Surrogate]</p></daodesc></dao><abstract>27. <emph render="underline">Tractal</emph>. Zwischen Sr. Grossbrittanischen Majestat und dem regierenden Herzoge von Braunschweig Unterzeichnet Braunschweig d. 9 Januar 1776.  Handwritten copy of the treaty between Great Britain and the Duke of Brunswick, providing for the use of Brunswick troops against the Americans.</abstract></did>
+            </c02>
+            <c02 level="item">
+               <did>
+                  
+                  <container type="folder" label="Folder">33</container>
+                  <unittitle>[Anspach]. de Reitzenstein, Henry Model, and Anthony Morengill DS, <unitdate type="inclusive">March 16, 1778</unitdate>
+                  </unittitle>
+               <dao href="https://quod.lib.umich.edu/g/germanaux/germanaux.0133.001/1" actuate="onrequest"><daodesc><p>[View Digital Surrogate]</p></daodesc></dao><abstract>28. Account of Reparations in the Quarters of the first Regiment of the Anspachs Troops, during winter quarters from 1777 to 1778. Signed by Maj. de Reitzenstein and Quartermaster Maj. Henry Model. Docket: "Barrack Account of the first Regt. Of Anspach Troops."</abstract></did>
+            </c02>
+            <c02 level="item">
+               <did>
+                  <unittitle>[Anspach]. Christoph von Waldenfels Partially Printed DS, <unitdate type="inclusive">July 13, 1779</unitdate>
+                  </unittitle>
+               <dao href="https://quod.lib.umich.edu/g/germanaux/germanaux.0133.002/1" actuate="onrequest"><daodesc><p>[View Digital Surrogate]</p></daodesc></dao><abstract>29. Receipt on acount of subsistence for a Corps of Anspach Chasseurs.  Signed by Captain Christoph von Waldenfels.  Imprint beginning: "RECEIVED from THOMAS BARROW, Esq; Deputy of the Paymaster General of His Majesty's Forces."</abstract></did>
+            </c02>
+            <c02 level="item">
+               <did>
+                  
+                  <container type="folder" label="Folder">34</container>
+                  <unittitle>[Brunswick]. H. Cleve LS, <unitdate type="inclusive">August 1782</unitdate>
+                  </unittitle>
+               <dao href="https://quod.lib.umich.edu/g/germanaux/germanaux.0134.001/1" actuate="onrequest"><daodesc><p>[View Digital Surrogate]</p></daodesc></dao><abstract>30. Sending enclosed papers [not present] to an unidentified Lord, at the request of the Duke of Brunswick and Brunswick Minister of State Feronce Baron de Rotencreutz.  "Your Lordeship would be pleased, to give necessary Orders for their further Safety."</abstract></did>
+            </c02>
+            <c02 level="item">
+               <did>
+                  <unittitle>Victualling Office Commissioners. J[ohn] Slade, A[lexander] Chorley, and G[eorge] P[hilipps] Towry LS to Rich[ar]d Rigby, <unitdate type="inclusive">May 24, 1786</unitdate>
+                  </unittitle>
+               <dao href="https://quod.lib.umich.edu/g/germanaux/germanaux.0134.002/1" actuate="onrequest"><daodesc><p>[View Digital Surrogate]</p></daodesc></dao><abstract>31. Discussing accounts made out by the Victualling Office for foreign troops aboard British ships of war and transports.  Inability to distinguish troops of the Landgrave of Hesse from those of Hesse-Hanau, on account of not receiving such a distinction in the lists from the ships' pursors.</abstract></did>
+            </c02>
+            <c02 level="item">
+               <did>
+                  
+                  <container type="folder" label="Folder">35</container>
+                  <unittitle>Victualling Office Commissioners.  Geo[rge] Cherry, A[lexander] Chorley, G[eorge] P[hilipps] Towry, W[illia]m Lance, and W[illiam] Boscawen LS to [Richard] Rigby, <unitdate type="inclusive">December 13, 1786</unitdate>
+                  </unittitle>
+               <dao href="https://quod.lib.umich.edu/g/germanaux/germanaux.0135.001/1" actuate="onrequest"><daodesc><p>[View Digital Surrogate]</p></daodesc></dao><abstract>32. Respecting the settlement of accounts pertinent to shipboard stoppages during the late war, for the victualling of soldiers, women, and children in multiple regiments. Signed by George Cherry, Alexander Chorley, George Philipps Towry, William Lance, and William Boscawen.</abstract></did>
+            </c02>
+            <c02 level="item">
+               <did>
+                  <unittitle>Victualling Office Commissioners. Geo[rge] Cherry, J[ames] Kirke, and G[eorge] P[hilipps] Towry LS to [William Grenville, 1st Baron] Grenville and [Constantine Phipps, 2nd Baron] Mulgrave, <unitdate type="inclusive">November 8, 1786</unitdate>
+                  </unittitle>
+               <dao href="https://quod.lib.umich.edu/g/germanaux/germanaux.0135.002/1" actuate="onrequest"><daodesc><p>[View Digital Surrogate]</p></daodesc></dao><abstract>33. Letter to the Paymasters of the Forces respecting the settlement of accounts pertinent to shipboard stoppages during the late war, for the victualling of soldiers, women, and children in multiple regiments. Signed by George Cherry, James Kirke, and George Philipps Towry</abstract></did>
+            </c02>
+            <c02 level="item">
+               <did>
+                  <unittitle>W[illiam] Porter ALS to [William Petty, 1st Marquess of Lansdowne, 2nd Earl of] Shelburne, <unitdate type="inclusive">August 5, 1782</unitdate>, with 9 enclosures</unittitle>
+               <note><p>34. Located in Oversize Manuscripts (see below)</p></note></did>
+            </c02>
+            <c02 level="item">
+               <did>
+                  <container type="folder" label="Folder">36</container><unittitle>[Hesse-Cassel]. Th[oma]s Carleton DS, <unitdate type="inclusive">[1780]</unitdate>
+                  </unittitle>
+               <dao href="https://quod.lib.umich.edu/g/germanaux/germanaux.0136.011/1" actuate="onrequest"><daodesc><p>[View Digital Surrogate]</p></daodesc></dao><abstract>35. Distribution De l'Argent de Bagage &amp; Batt &amp; 200 Jours, Argent de Fourages pour les Regiment, d Kniphausen [Knyphausen] pour L'Anné 1780. Signed by Quartermaster General Thomas Carleton.</abstract></did>
+            </c02>
+            <c02 level="item">
+               <did>
+                  
+                  <container type="folder" label="Folder">37</container>
+                  <unittitle>[Hesse Cassel]. Tho[ma]s Gamble and Tho[ma]s Carleton DS, <unitdate type="inclusive">[1781]</unitdate>
+                  </unittitle>
+               <dao href="https://quod.lib.umich.edu/g/germanaux/germanaux.0137.001/1" actuate="onrequest"><daodesc><p>[View Digital Surrogate]</p></daodesc></dao><abstract>36. Distribution des 200 Jours Argent de Fourages Bagage Et Batt, pour les Regiment Hessois de Son Excellence Le Lieutenant General Kniphausen [Knyphausen] pour 1781. [With] Distribution des . . . Argent de Fourage Bagage Et Batt pour le Regiment Hessois de Son Excellence le Lieutenant General D'Lossberg, pour L'Anné 1781. [With] Distribution des 165 Jours Argent de Fourage pour le Regiment Hessois de Son Excellence le Lieutenant d'Kniphausen pour L'Anné 1781. Signed by Thomas Gamble and Quartermaster General Thomas Carleton.</abstract></did>
+            </c02>
+            <c02 level="item">
+               <did>
+                  <unittitle>Payments on Account of the Foreign Troops in General... Document, <unitdate type="inclusive">[after July 1783, regarding accounts June 1, 1776-July 28, 1783]</unitdate>
+                  </unittitle>
+               <dao href="https://quod.lib.umich.edu/g/germanaux/germanaux.0137.002/1" actuate="onrequest"><daodesc><p>[View Digital Surrogate]</p></daodesc></dao><abstract>The following Payments on Account of the Foreign Troops in General have been Extracted from the American Extraordinaries.  Includes accounts marked Quebec, Montreal, New York, Convention Army, and Rhode Island.</abstract></did>
+            </c02>
+            <c02 level="item">
+               <did>
+                  
+                  <container type="folder" label="Folder">38</container>
+                  <unittitle>[Friedrich Adolph, Freiherr von] Riedesel DS, <unitdate type="inclusive">September 13, 1779</unitdate>
+                  </unittitle>
+               <dao href="https://quod.lib.umich.edu/g/germanaux/germanaux.0138.001/1" actuate="onrequest"><daodesc><p>[View Digital Surrogate]</p></daodesc></dao><abstract>Voucher for Subsistence on Account to the Troops of His Serene Highness the Duke of Brunswick.</abstract></did>
+            </c02>
+            <c02 level="item">
+               <did>
+                  <unittitle>Pralle (surgeon) 2 DsS, <unitdate type="inclusive">July 20, 1781</unitdate>
+                  </unittitle>
+               <dao href="https://quod.lib.umich.edu/g/germanaux/germanaux.0138.002/1" actuate="onrequest"><daodesc><p>[View Digital Surrogate]</p></daodesc></dao><abstract>Two documents signed by surgeon Pralle, certifying lists of sick men in the Regiment of Maj. Gen. de Rhetz and a detachment of Regiment Prince Frederick, Brunswick Troops.</abstract></did>
+            </c02>
+            
+            <c02 level="item">
+               <did>
+                  <container type="drawer" label="Folder">: Oversize Manuscripts</container><unittitle>[Brunswick]. Fr[iedrich] Cleve DS, <unitdate type="inclusive">June 26, 1783</unitdate></unittitle>
+               <dao href="https://quod.lib.umich.edu/g/germanaux/germanaux.0103.001/1" actuate="onrequest"><daodesc><p>[View Digital Surrogate]</p></daodesc></dao><abstract>2c. Raport von dem Hochfürstlich Braunschweigischen Corps in American unter Commando des General Major v. Riedesel.  Signed by Cleve.</abstract></did>
+            </c02><c02 level="item">
+               <did>
+                  
+                  <unittitle>
+                     [Hesse-Cassel]. C[arl] P[hilipp] Heÿmell, Carl de Wurmb, P[hiliph] H. Murhard, Henri de Bardeleben, W[ilhelm] Freÿenhagen, and W[illiam] Porter DS, <unitdate type="inclusive">July 5, 1782</unitdate></unittitle>
+               <dao href="https://quod.lib.umich.edu/g/germanaux/germanaux.0119.001/1" actuate="onrequest"><daodesc><p>[View Digital Surrogate]</p></daodesc></dao><abstract>13f. Regiment d'Infanterie du Lieutenant General de Donop, de la Compagnie du Corps, pour 182 Jours, du 25me. Decembre 1781. jusqu'au 24me. Juin 1782 inclusivement... Muster roll, Dec. 25, 1781-June 24, 1782. Signed by Col. Carl Philipp Heÿmell, Maj. Carl de Wurmb, Capt. Philip H. Murhard, Lieut. Henri de Bardeleben, 2nd Lieut. Wilhelm Freÿenhagen, and commissary William Porter.</abstract></did>
+            </c02>
+            <c02 level="item">
+               <did>
+                  <unittitle>
+                     [Hesse-Cassel]. C[arl] P[hilipp] Heÿmell, Carl de Wurmb, J. F[riedrich] Venator, C[arl] E. Henckell, and W[illiam] Porter DS, <unitdate type="inclusive">July 5, 1782</unitdate></unittitle>
+               <dao href="https://quod.lib.umich.edu/g/germanaux/germanaux.0119.002/1" actuate="onrequest"><daodesc><p>[View Digital Surrogate]</p></daodesc></dao><abstract>13g. Regiment d'Infanterie de Donop de la Compagnie du Major Küzleben pour 182 jours du 25me. Decembre. 1781 jusque au 24me. Juin 1782 inclusivement... Muster roll, Dec. 25, 1781-June 24, 1782. Signed by Col. Carl Philipp Heÿmell, Maj. Carl de Wurmb, Capt. J. Friedrich Venator, ensign Carl E. Henckell, and commissary William Porter.</abstract></did>
+            </c02>
+            <c02 level="item">
+               <did>
+                  <unittitle>
+                     [Hesse-Cassel]. C[arl] P[hilipp] Heÿmell, Carl de Wurmb, Carl de Haussen, and W[illiam] Porter DS, <unitdate type="inclusive">July 5, 1782</unitdate></unittitle>
+               <dao href="https://quod.lib.umich.edu/g/germanaux/germanaux.0120.001/1" actuate="onrequest"><daodesc><p>[View Digital Surrogate]</p></daodesc></dao><abstract>13h. Regiment d'Infanterie de Donop de la Compagnie du Major de Wurmb pour 182 jours du 25me. Decembre 1781 jusqu'au 24me. Juin 1782/. inclusivement... Muster roll, Dec. 25, 1781-June 24, 1782. Signed by Col. Carl Philipp Heÿmell, Maj. Carl de Wurmb, ensign Carl de Haussen, and commissary William Porter.</abstract></did>
+            </c02>
+            <c02 level="item">
+               <did>
+                  <unittitle>[Hesse-Cassel]. C[arl] P[hilipp] Heÿmell, Carl de Wurmb, F[ried.] [Wilh.] Geister, [Carl Fried.] de Nagell, F[ried. F.] Murhard, and W[illiam] Porter DS, 
+                     <unitdate type="inclusive">July 5, 1782</unitdate></unittitle>
+               <dao href="https://quod.lib.umich.edu/g/germanaux/germanaux.0120.002/1" actuate="onrequest"><daodesc><p>[View Digital Surrogate]</p></daodesc></dao><abstract>13i. Regiment d'Infanterie de Donop de la Compagnie du Colonel Heymel pour 182 Jours du 25me. Decembre 1781 jusqu'au 24me. Juin 1782 inclusivement... Muster roll, Dec. 25, 1781-June 24, 1782. Signed by Col. Carl Philipp Heÿmell, Maj. Carl de Wurmb, Capt. Lieut. Fried. Wilh. Geister, Lieut. Carl Fried. de Nagell, ensign Fried. F. Murhard, and commissary William Porter.</abstract></did>
+            </c02>
+            <c02 level="item">
+               <did>
+                  <unittitle>[Hesse-Cassel]. C[hristian] V[on] Romrod, E[manuel] de Wilmowsky, J[ohann] L[udolph] Rodemann,  E[hrhard] de Drach, C[arl] de Ehrenstein, and W[illiam] Porter DS, 
+                     <unitdate type="inclusive">July 5, 1782</unitdate></unittitle>
+               <dao href="https://quod.lib.umich.edu/g/germanaux/germanaux.0124.001/1" actuate="onrequest"><daodesc><p>[View Digital Surrogate]</p></daodesc></dao><abstract>16. Regiment de Lossberg jun. de Hesse de la Compagnie du Major Bauermeister pour 182 jours du 25me. Decembre 1781. jusqu'au 24me. Juin 1782. inclusivement... Muster roll, Dec. 25, 1781-June 24, 1782. Signed by Christian von Romrod, Maj. Emanuel de Wilmowsky, Capt. Lieut. Johann Ludolph Rodemann, 2nd Lieut. Ehrhard de Drach, 2nd Lieut. Carl de Ehrenstein, and commissary William Porter.</abstract></did>
+            </c02>
+            <c02 level="item">
+               <did>
+                  <unittitle>
+                     [Hesse-Cassel]. C[hristian] V[on] Romrod, H[ans] M[oritz] de Biesenrodt, E[manuel] de Wilmowsky, [Carl Henrich] de Toll, M[artin] L[udwig] Wiscker, and W[illiam] Porter DS, <unitdate type="inclusive">July 5, 1782</unitdate></unittitle>
+               <dao href="https://quod.lib.umich.edu/g/germanaux/germanaux.0124.002/1" actuate="onrequest"><daodesc><p>[View Digital Surrogate]</p></daodesc></dao><abstract>17. Regiment de Lossberg jun. de Hesse de la Compagnie du Lieutenant Colonel de Biesenrodt pour 182 jours du 25me. Decembre 1781 jusq'au 24me. Juin 1782 inclusivement... Muster roll, Dec. 25, 1781-June 24, 1782. Signed by Col. Christian von Romrod, Lieut. Col. Hans Moritz de Biesenrodt, Maj. Emanuel de Wilmowsky, Capt. Lieut. Carl Henrich de Toll, 2nd Lieut. Martin Ludwig Wiscker, and commissary William Porter.</abstract></did>
+            </c02>
+            <c02 level="item">
+               <did>
+                  <unittitle>
+                     [Hesse-Cassel]. C[hristian] V[on] Romrod, E[manuel] de Wilmowsky, J[ohann] M[elchior] Rothe, C[arl Wilhelm] de Bultzingsloewen, C[arl] de Bode, and W[illiam] Porter DS, <unitdate type="inclusive">July 5, 1782</unitdate></unittitle>
+               <dao href="https://quod.lib.umich.edu/g/germanaux/germanaux.0125.001/1" actuate="onrequest"><daodesc><p>[View Digital Surrogate]</p></daodesc></dao><abstract>18. Regiment de Losberg jun. de Hesse de la Compagne du Corps, pour 182 jours 25me. Decembre 1781 jusq'au 24me. Juin 1782. inclusivement... Muster roll, Dec. 25, 1781-June 24, 1782. Signed by Col. Christian von Romrod, Maj. Emanuel de Wilmowsky, Capt. Lieut. Johann Melchior Rothe, 2nd Lieut. Carl Wilhelm de Bultzingsloewen, ensign Carl de Bode, and commissary William Porter.</abstract></did>
+            </c02>
+            <c02 level="item">
+               <did>
+                  <unittitle>[Hesse-Cassel]. C[hristian] V[on] Romrod, E[manuel] de Wilmowsky, [Conrad] Schraidt, C[arl Heinrich Friedrich] Lange, and W[illiam] Porter DS,
+                     <unitdate type="inclusive">July 5, 1782</unitdate></unittitle>
+               <dao href="https://quod.lib.umich.edu/g/germanaux/germanaux.0125.002/1" actuate="onrequest"><daodesc><p>[View Digital Surrogate]</p></daodesc></dao><abstract>19. Regiment de Losberg jun. de Hesse de la Compagnie du Colonel de Romrod pour 182 jours du 25me. Decembre 1781 jusqu]au 24me. Juin 1782 inclusivement... Muster roll, Dec. 25, 1781-June 24, 1782. Signed by Col. Christian von Romrod, Maj. Emanuel de Wilmowsky, Capt. Lieut. Conrad Schraidt, ensign Carl Heinrich Friedrich Lange, and commissary William Porter.</abstract></did>
+            </c02>
+            <c02 level="item">
+               <did>
+                  <unittitle>[Hesse-Cassel]. C[hristian] V[on] Romrod, E[manuel] de Wilmowsky, H[ieronimus] Berner, [Friedrich Wilhelm] Fey, and W[illiam] Porter DS, 
+                     <unitdate type="inclusive">July 5, 1782</unitdate></unittitle>
+               <dao href="https://quod.lib.umich.edu/g/germanaux/germanaux.0126.001/1" actuate="onrequest"><daodesc><p>[View Digital Surrogate]</p></daodesc></dao><abstract>20a. Regiment de Losberg jun. de Hesse, de la Compagnie du Major de Wilmowskÿ pour 182 jours du 25me. Decembre 1781 jusq'au 24me. juin 1782 inclusivement... Muster roll, Dec. 25, 1781-June 24, 1782. Signed by Col. Christian von Romrod, Maj. Emanuel de Wilmowsky, 2nd Lieut. Hieronimus Berner, ensign Friedrich Wilhelm Feÿ, and commissary William Porter.</abstract></did>
+            </c02>
+            <c02 level="item">
+               <did>
+                  <unittitle>
+                     [Hesse-Cassel]. Charles de Kietzell, G. Langenschwartz, C[hristian] Münch,  Jean Paul, and G[eorge] Langenschwartz DS, <unitdate type="inclusive">June 24, 1782</unitdate></unittitle>
+               <dao href="https://quod.lib.umich.edu/g/germanaux/germanaux.0126.002/1" actuate="onrequest"><daodesc><p>[View Digital Surrogate]</p></daodesc></dao><abstract>20b. Regiment d'Infanterie du Colonel de Seitz, Compagnie du Colonel de Kietzell pour 182 Jours du 25me. Decembr 1781 Jusqu au 24me. Juin 1782 inclusivement... Muster roll, Dec. 25, 1781-June 24, 1782. Signed by Col. Charles de Kietzell, Maj. G. Langenschwartz, Capt. Lieut. Christian Münch,  2nd Lieut. Jean Paul, and 2nd Lieut. George Langenschwartz.</abstract></did>
+            </c02>
+            <c02 level="item">
+               <did>
+                  <unittitle>W[illiam] Porter ALS to [William Petty, 1st Marquess of Lansdowne, 2nd Earl of] Shelburne, <unitdate type="inclusive">August 5, 1782</unitdate></unittitle>
+               <dao href="https://quod.lib.umich.edu/g/germanaux/germanaux.0136.001/1" actuate="onrequest"><daodesc><p>[View Digital Surrogate]</p></daodesc></dao><abstract>34. Enclosing a List of the General &amp; Staff Officers of the Hessian Troops, A State of the Foreign Regiments &amp; Detachments at New York, as Mustered to the 24th of June 1782, together with the names, and reasons of absence, of the Officers who did not appear at the Muster.  Inclosing [Hesse Cassel. Army]. General and staff officers, 26 July 1782; and Gt. Brit. Army in America. German regiments. State of Foreign Troops at New York … [24 June 1782], with list of officers not present, and 6 individual returns giving the state of the following regiments: Lowenstein, Platte, Donop, Losberg Jun., Bünau, and detachments of regiments in Canada.</abstract></did>
+            </c02>
+            
+         <c02 level="item">
+               <did>
+                  <unittitle>[William Porter] AD, <unitdate type="inclusive">[between July 13 and August 5, 1782]</unitdate></unittitle>
+               <dao href="https://quod.lib.umich.edu/g/germanaux/germanaux.0136.002/1" actuate="onrequest"><daodesc><p>[View Digital Surrogate]</p></daodesc></dao><abstract>34. Names and reasons of absence of the Officers of the Foreign Troops, who were not present at the Muster taken at New York to the 24 June 1782. Enclosed in W[illiam] Porter ALS to the Earl of Shelburne, August 5, 1782.</abstract></did>
+            </c02><c02 level="item">
+               <did>
+                  <unittitle>Fr[iedrich Wilhelm von] Losberg DS, <unitdate type="inclusive">July 26, 1782</unitdate></unittitle>
+               <dao href="https://quod.lib.umich.edu/g/germanaux/germanaux.0136.003/1" actuate="onrequest"><daodesc><p>[View Digital Surrogate]</p></daodesc></dao><abstract>34. General and Staff Officers of the Hessian Troops from the 25th. December 1781 to the 24th. June 1782.  Enclosed in W[illiam] Porter ALS to the Earl of Shelburne, August 5, 1782.</abstract></did>
+            </c02><c02 level="item">
+               <did>
+                  <unittitle>W[illiam] Porter ADS, <unitdate type="inclusive">[July] 1782</unitdate></unittitle>
+               <dao href="https://quod.lib.umich.edu/g/germanaux/germanaux.0136.004/1" actuate="onrequest"><daodesc><p>[View Digital Surrogate]</p></daodesc></dao><abstract>34. State of the Foreign Troops at New York, as Mustered for 182 days from the 25th of December 1781 to the 24 of June 1782... Enclosed in W[illiam] Porter ALS to the Earl of Shelburne, August 5, 1782.</abstract></did>
+            </c02><c02 level="item">
+               <did>
+                  <unittitle>W[illiam] Porter ADS, <unitdate type="inclusive">July 3, 1782</unitdate></unittitle>
+               <dao href="https://quod.lib.umich.edu/g/germanaux/germanaux.0136.005/1" actuate="onrequest"><daodesc><p>[View Digital Surrogate]</p></daodesc></dao><abstract>34. State of the Hessian Regiment Bunau for the Muster to the 24 June 1782. Enclosed in W[illiam] Porter ALS to the Earl of Shelburne, August 5, 1782.</abstract></did>
+            </c02><c02 level="item">
+               <did>
+                  <unittitle>W[illiam] Porter ADS, <unitdate type="inclusive">July 5, 1782</unitdate></unittitle>
+               <dao href="https://quod.lib.umich.edu/g/germanaux/germanaux.0136.006/1" actuate="onrequest"><daodesc><p>[View Digital Surrogate]</p></daodesc></dao><abstract>34. State of the Hessian Regiment Donop . . . For the Muster to the 24 June 1782. Enclosed in W[illiam] Porter ALS to the Earl of Shelburne, August 5, 1782.</abstract></did>
+            </c02><c02 level="item">
+               <did>
+                  <unittitle>W[illiam] Porter ADS, <unitdate type="inclusive">July 5, 1782</unitdate></unittitle>
+               <dao href="https://quod.lib.umich.edu/g/germanaux/germanaux.0136.007/1" actuate="onrequest"><daodesc><p>[View Digital Surrogate]</p></daodesc></dao><abstract>34. State of the Hessian Regiment Losberg Junior for the Muster to the 24 June 1782. Enclosed in W[illiam] Porter ALS to the Earl of Shelburne, August 5, 1782.</abstract></did>
+            </c02><c02 level="item">
+               <did>
+                  <unittitle>W[illiam] Porter ADS, <unitdate type="inclusive">July 4, 1782</unitdate></unittitle>
+               <dao href="https://quod.lib.umich.edu/g/germanaux/germanaux.0136.008/1" actuate="onrequest"><daodesc><p>[View Digital Surrogate]</p></daodesc></dao><abstract>34. State of the Battallion of Hessian Grenadiers Commanded by Colonel de Lowenstein for the Muster to the 24 June 1782. Enclosed in W[illiam] Porter ALS to the Earl of Shelburne, August 5, 1782.</abstract></did>
+            </c02><c02 level="item">
+               <did>
+                  <unittitle>W[illiam] Porter ADS, <unitdate type="inclusive">July 4, 1782</unitdate></unittitle>
+               <dao href="https://quod.lib.umich.edu/g/germanaux/germanaux.0136.009/1" actuate="onrequest"><daodesc><p>[View Digital Surrogate]</p></daodesc></dao><abstract>34. State of the Battallion of Hessian Grenadiers Commanded by Major Platte (late Graffs) to the 24 June 1782. Enclosed in W[illiam] Porter ALS to the Earl of Shelburne, August 5, 1782.</abstract></did>
+            </c02><c02 level="item">
+               <did>
+                  <unittitle>W[illiam] Porter ADS, <unitdate type="inclusive">July 12, 1782</unitdate></unittitle>
+               <dao href="https://quod.lib.umich.edu/g/germanaux/germanaux.0136.010/1" actuate="onrequest"><daodesc><p>[View Digital Surrogate]</p></daodesc></dao><abstract>34. State of the Detachments at New York of the Foreign Regiments in Canada for the Muster from 25 Decem. 1781 to the 24 June 1782... Enclosed in W[illiam] Porter ALS to the Earl of Shelburne, August 5, 1782.</abstract></did>
+            </c02></c01>
+      </dsc>
+      <descgrp type="add">
+         <relatedmaterial>
+            <list>
+               <head>Related collections held by the Clements Library include the following Revolutionary War collections that deal specifically with Hessian involvement:</head>
+               <item>
+                  <title href="http://quod.lib.umich.edu/c/clementsead/umich-wcl-M-2179.1cli;view=text" actuate="onrequest" render="italic" show="replace">Loftus Cliffe papers</title>
+               </item>
+               <item>
+                  <title render="italic" href="http://quod.lib.umich.edu/c/clementsead/umich-wcl-M-42cli" actuate="onrequest" show="replace">Henry Clinton papers</title>
+               </item>
+               <item>
+                  <title render="italic" href="http://quod.lib.umich.edu/c/clementsead/umich-wcl-M-1690gil;view=text" actuate="onrequest" show="replace">Benjamin Gilbert letterbook</title>
+               </item>
+               <item>
+                  <title render="italic" href="http://quod.lib.umich.edu/c/clementsead/umich-wcl-M-337gre" actuate="onrequest" show="replace">Nathanael Greene papers</title>
+               </item>
+               <item>
+                  <title href="http://quod.lib.umich.edu/c/clementsead/umich-wcl-M-147jun;view=text" actuate="onrequest" render="italic" show="replace">Freiherr von Jungkenn papers</title>
+               </item>
+               <item>
+                  <title render="italic" href="http://quod.lib.umich.edu/c/clementsead/umich-wcl-M-1066mac" actuate="onrequest" show="replace">Frederick Mackenzie papers</title>
+               </item>
+               <item>
+                  <title href="http://quod.lib.umich.edu/c/clementsead/umich-wcl-M-707jr;view=text" actuate="onrequest" render="italic" show="replace">J.R. (Hessian) Journal</title>
+               </item>
+            </list>
+         </relatedmaterial>
+         <bibliography>
+            <p>Auerbach, Inge.  <title render="italic" href="http://mirlyn.lib.umich.edu/Record/004610531" actuate="onrequest" show="replace">Die Hessen in Amerika 1776-1783.</title> Darmstadt: Hessische Historische Kommission Darmstadt, 1996.</p>
+            <p>Mackenzie, Frederick, and Allen French.  <title render="italic" href="http://mirlyn.lib.umich.edu/Record/004631445" actuate="onrequest" show="replace">A British fusilier in revolutionary Boston: being the diary of Lieutenant Frederick Mackenzie, adjutant of the Royal Welch fusiliers, January 5-April 30, 1775, with a letter describing his voyage to America.</title> Cambridge: Harvard University Press, 1926.</p>
+         </bibliography>
+      </descgrp>
+   </archdesc>
+</ead>

@@ -1,0 +1,3309 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ead>
+ <eadheader audience="internal" langencoding="iso639-2b" repositoryencoding="iso15511" dateencoding="iso8601" relatedencoding="Dublin Core" countryencoding="iso3166-1" scriptencoding="iso15924">
+ <eadid countrycode="us" mainagencycode="MiU" publicid="-//us::MiU//TEXT us::MiU::lha.xml//EN" encodinganalog="identifier">umich-scl-lha</eadid>
+ <filedesc>
+ <titlestmt>
+ <titleproper encodinganalog="title">Finding Aid for Lincoln Highway Association Records, <date era="ce" calendar="gregorian">1911-1941</date> </titleproper>
+ <author encodinganalog="creator">Collection processed and finding aid created by Cassandra A. Schmitt.</author>
+ </titlestmt>
+ <publicationstmt>
+ <publisher>University of Michigan Library (Special Collections Research Center)</publisher>
+ <date encodinganalog="date" era="ce" calendar="gregorian">2008</date>
+ </publicationstmt>
+ </filedesc>
+ <profiledesc>
+ <creation>Encoded finding aid created by Sally Vermaaten <date era="ce" calendar="gregorian">01252008</date> </creation>
+ <langusage>The finding aid is written in <language langcode="eng">English</language> </langusage>
+ </profiledesc>
+ <revisiondesc>
+ <change>
+ <date era="ce" calendar="gregorian">20080125</date>
+ <item>Original encoding from Word 2000 file using Word macros and Xmetal.</item>
+ </change>
+ </revisiondesc>
+ </eadheader>
+ <frontmatter>
+ <titlepage>
+ <publisher>University of Michigan Library (Special Collections Research Center)</publisher>
+ <publisher>University of Michigan Library (Special Collections Research Center)</publisher>
+ <publisher><lb/>University of Michigan</publisher>
+ <titleproper>Finding aid for<lb/>Lincoln Highway Association Records, 1911-1941</titleproper>
+ <author>Finding aid created by Cassandra A. Schmitt, Kathleen Dow, 2007</author>
+ <author>Encoded finding aid prepared by Sally Vermaaten, 2008</author>
+ </titlepage>
+ </frontmatter>
+ <archdesc level="collection" audience="external" type="inventory" relatedencoding="marc21">
+ <did>
+ <origination>
+ <corpname encodinganalog="110" source="lcnaf">Lincoln Highway Association </corpname>
+ </origination>
+ <unittitle encodinganalog="245">Lincoln Highway Association Records <unitdate type="inclusive" encodinganalog="245$f" era="ce" calendar="gregorian">1911-1941</unitdate> <unitdate type="bulk" encodinganalog="245$g" era="ce" calendar="gregorian">1912-1930</unitdate> </unittitle>
+ <physdesc>
+ <extent encodinganalog="300">6 linear ft. and 1 portfolio </extent>
+ </physdesc>
+ <unitid countrycode="us" repositorycode="MiU" type="call number" encodinganalog="099">THC-LHA</unitid>
+ <langmaterial>The material is in <language langcode="eng" encodinganalog="041">English</language> </langmaterial>
+ <abstract>Formed in 1913 by Carl G. Fisher, Frank A. Seiberling, and Henry B. Joy, the Lincoln Highway Association was made up of representatives from the automobile, tire, and cement industries. The Association aimed to plan, fund, construct, and promote the first transcontinental highway in North America. The route ran from New York to San Francisco, and covered approximately 3,400 miles. The Detroit headquarters of the Association closed in 1928. This collection contains: correspondence, particularly between members of the Association and government officials; meeting minutes; reports, bulletins, and newsletters published by the Association; motorist maps of the route; and annotated editions of <title render="italic" linktype="simple">The Complete Official Road Guide of the Lincoln Highway</title>. Photographs from the Lincoln Highway Association Records have been digitized and are accessible online at the <extref href="http://quod.lib.umich.edu/l/linchigh" show="new" linktype="simple">Lincoln Highway Digital Image Collection (http://quod.lib.umich.edu/l/linchigh).</extref> The Digital Image Collection contains over 3,000 images including views of construction underway, towns and cities, markers, bridges, cars, camp sites, scenic views, and snapshots of Association directors and field secretaries traveling the route. </abstract>
+ <repository><corpname>University of Michigan Library (Special Collections Research Center)</corpname>
+ </repository>
+ </did>
+ <descgrp type="admin">
+ <acqinfo encodinganalog="541">
+ <p>Donated by Gael Hoag and H.C. Ostermann in 1937.</p>
+ </acqinfo>
+ <accessrestrict>
+ <p>The collection is open for research.</p>
+ </accessrestrict>
+ <userestrict>
+ <p>Copyright has been transferred to the Regents of the University of Michigan. Contact the Special Collections Library for permission to publish.</p>
+ </userestrict>
+ <prefercite>
+ <p>Lincoln Highway Association Records, University of Michigan Library (Special Collections Research Center)</p>
+ </prefercite>
+ <processinfo>
+ <p>Processed by Cassandra A. Schmitt, Kathleen Dow, 2007.</p>
+ </processinfo>
+ <altformavail encodinganalog="530">
+ <p>The majority of the photographs from the original archive have been rehoused and digitized. They may be viewed at the <extref show="new" href="http://quod.lib.umich.edu/l/linchigh" linktype="simple">Lincoln Highway Digital Image Collection.</extref> </p>
+ </altformavail>
+ </descgrp>
+ <bioghist encodinganalog="545">
+ <p>The Lincoln Highway Association formed in July 1913 for the purposes of building the first transcontinental highway in North America. The idea was promoted by Carl G. Fisher beginning in September 1912 under the name "The Coast-to-Coast Rock Highway". Fisher was behind the creation and paving of the Indianapolis Motor Speedway and the organization of the first Indianapolis 500 in 1911. He founded the Prest-O-Lite Company, which made carbide headlights for automobiles. Fisher promoted his idea among other businessmen in the automobile industry. He felt that the highway would promote business as well as provide citizens with an enjoyable route throughout the towns and countryside.</p>
+ <p>Fisher's 1912 estimate for the gravel highway was ten million dollars. Funds would be used to purchase materials with the idea that labor and machinery would be provided by the municipalities the route passed through. Fisher's fundraising efforts were an immediate success. He gained support from the automobile industry as different companies pledged to support one percent of their revenues' to the highway. Donations by individuals in the amount of five dollars also began to arrive. Men such as Frank A. Seiberling of the Goodyear Tire Company and Henry B. Joy of the Packard Motor Car Company were influential in gaining more support from the automobile industry, despite the fact that Henry Ford and the Ford Motor Company refused to support the project.</p>
+ <p>Briefly located in Indianapolis, the headquarters of the Lincoln Highway Association settled in Detroit, Michigan. In July 1913 the Lincoln Highway Association was incorporated and the group of businessmen exclaimed their purpose, "To procure the establishment of a continuous improved highway from the Atlantic to the Pacific, open to lawful traffic of all description without toll charges: such highway to be known, in memory of Abraham Lincoln, as 'The Lincoln Highway.'" The proposed highway was named after Lincoln to honor the fallen president as well as to appeal to American citizens' sense of patriotism and thereby gain support and funding for the project. The new board of directors began planning the route of the highway, beginning in New York City and ending in San Francisco, California. The goal was to find the shortest route from coast to coast while passing through towns and scenic locations to provide an enjoyable drive.</p>
+ <p>Throughout its history, the Association was organized and administered by businessmen from the automobile industry. The group ran many public events to gain support for the highway and awarded donations with certificates, membership cards, and pins. A system of consuls was developed in order to help manage the situation and communication regarding the highway along the route. The board appointed one consul for each state who in turn named consuls for various counties and towns. The consul system also enabled more people to become involved in the operations of the Association.</p>
+ <p>When completed, the route ran through twelve states including: New York, New Jersey, Pennsylvania, Ohio, Illinois, Iowa, Nebraska, Wyoming, Utah, Nevada, and California and spanned approximately 3,400 miles. The route was strenuous and some areas were still treacherous to pass by automobile. The Lincoln Highway Association began constructing "seedling miles," or paved sections, along the route with the support of the cement and steel companies. The Association hoped this would create more support and demand for the Lincoln Highway as well as increase its use and value. The construction of "seedling miles" halted in 1919 when the Association felt the public was fully behind the construction of paved roadways.</p>
+ <p>The route underwent slight changes to make it more direct as well as easier to pass. Several sections of the route received considerably more attention than others including the "Ideal" Section in Indiana and what became known as the Seiberling Section through Utah and Nevada. The highway throughout Utah and Nevada was a concern as the sparse population, poor infrastructure, and inhospitable geography made travel difficult. </p>
+ <p>In July 1919, Henry C. Ostermann embarked on the first Army Transcontinental Motor Convoy across the Lincoln Highway accompanied by seventy-two vehicles and 297 men. The group included both military personal as well as civilians. The convoy was used as training, testing of military vehicles, and served as a test of the stability of the roads and bridges on the Lincoln Highway. The trip lasted sixty-two days and included numerous repairs on military vehicles as well as the rebuilding of bridges that did not support the heavy loads. The convoy was successful in convincing the military that paved roads were essential to the country's national defense. In turn, federal funding for paved highways exploded.</p>
+ <p>In 1922 the Association began construction on the "Ideal" Section between Schererville and Dyer, Indiana. This 1.3 mile stretch had concrete paving ten inches thick and allowed up to four lanes of traffic with its forty foot width. The section was illuminated for night driving. The "Ideal" Section was yet another tactic by the Lincoln Highway Association to gain support and use for improvement of their route. It was during this time that the Lincoln Highway began competing with other transcontinental routes for attention, money, and use.</p>
+ <p>By 1925 the Federal Highway System was well developed and numbered routes east-west as well as north-south covered the map. The prominence of the federal system lead to a decline for named highways, including the Lincoln Highway. Portions of the Lincoln Highway were marked with numbered federal routes at this time. </p>
+ <p>The Lincoln Highway Association officially disbanded at the end of 1927 after realizing their mission to begin an intercontinental network of highways succeeded. The organization continued to have informal meetings sporadically for several subsequent years. In 1928, the Boy Scouts of America erected 3,000 markers along the route of the Lincoln Highway. The cement markers were designed by the Association and intended to keep motorist on the route. The red, white, and blue makers carried the Lincoln Highway insignia and directional arrows pointed motorists to the continuation of the route.</p>
+ <p>The Interstate Highway Act of 1956 further eroded the use of the Lincoln Highway. Routes were redirected outside of towns to decrease traffic. Interstate 80 took over as the transcontinental highway across the middle of the country. Interstate 80 runs along the same basic route as the old Lincoln Highway in many locations, but is straighter, quicker, and ultimately shorter than the original Lincoln Highway. Many portions of the Lincoln Highway lay unused and in ruins today, other portions are still used as local routes through many states, and in some areas the old, abandoned highway can be seen running alongside the current Interstate 80. Only a fraction of the original 3,000 markers remain. </p>
+ <p>Sources:</p>
+ <p>Hokanson, Drake. <title render="italic" linktype="simple">The Lincoln Highway: Main Street Across America</title> . Iowa City, Iowa: University of Iowa Press. 1999.</p>
+ </bioghist>
+ <scopecontent encodinganalog="520">
+ <p>The Lincoln Highway Association Records date from 1911 to 1993 with the bulk of materials concentrated before 1930. The records are divided into five series: Official Business (1912-1941), Correspondence (1912-1929), Planning (1914-1940), Publicity (1911-1993), Publications (1915-1935), Jens Jensen Drawings (1922-1924) and Miscellaneous.</p>
+ <p>The Lincoln Highway Association archive was donated to the University of Michigan's Transportation Library in 1937. The archive was transferred to the Special Collections Library in 1992. </p>
+ <p>Communication was frequent between members of the Association as well as with officials from towns, counties, states, and the federal government. Correspondence and meeting minutes make up an important part of the collection. The Association published reports, bulletins, and newsletters to keep board members and the public aware of the Highway's progress. Maps of the driving route along with mileages were provided for motorists for navigation as were five editions of <title render="italic" linktype="simple">The Complete Official Road Guide of the Lincoln Highway</title> .</p>
+ <p>Photographs from the Lincoln Highway Association Records have been digitized and are accessible online at the <extref href="http://quod.lib.umich.edu/l/linchigh" show="new" linktype="simple">Lincoln Highway Digital Image Collection (http://quod.lib.umich.edu/l/linchigh).</extref> The Digital Image Collection contains over 3,000 images including views of construction underway, towns and cities, markers, bridges, cars, camp sites, scenic views, and snapshots of Association directors and field secretaries traveling the route. </p>
+ </scopecontent>
+ <controlaccess>
+ <p>
+ <extptr href="accnote" show="embed" actuate="onload" linktype="simple"/>
+ </p>
+ <controlaccess>
+ <head>Subjects:</head>
+ <persname source="lcnaf" encodinganalog="600">Bement, Austin. </persname>
+ <persname encodinganalog="700" source="lcnaf">Chapin, Roy D. (Roy Dikeman), 1880-1936.</persname>
+ <persname encodinganalog="700" source="lcnaf">Fisher, Carl G. (Carl Graham), 1874-1939.</persname>
+ <persname encodinganalog="700" source="lcnaf">Hoag, Gael.</persname>
+ <persname encodinganalog="700" source="lcnaf">Jensen, Jens, 1860-1951.</persname>
+ <persname encodinganalog="700" source="lcnaf">Joy, Henry B. (Henry Bourne), 1864-1936.</persname>
+ <persname encodinganalog="700" source="lcnaf">Ostermann, Henry C., d. 1920.</persname>
+ <persname encodinganalog="700" source="lcnaf">Pardington, Arthur.</persname>
+ <corpname source="lcnaf" encodinganalog="610">Lincoln Highway Association.</corpname>
+ <subject source="lcsh" encodinganalog="650">Associations, organizations, etc. -- 20th century -- Indiana -- Indianapolis.</subject>
+ <subject encodinganalog="650" source="lcsh">Associations, organizations, etc. -- 20th century -- Michigan -- Detroit.</subject>
+ <subject encodinganalog="650" source="lcsh">Automobile travel -- United States -- 20th century.</subject>
+ <subject encodinganalog="650" source="lcsh">Roads -- Esthetic considerations.</subject>
+ <subject encodinganalog="650" source="lcsh">Roads -- United States -- Design and construction -- 20th century.</subject>
+ <subject encodinganalog="650" source="lcsh">Roadside architecture -- United States.</subject>
+ <subject encodinganalog="650" source="lcsh">Scenic byways -- United States -- 20th century.</subject>
+ <subject encodinganalog="650" source="lcsh">Transportation, Automotive -- United States.</subject>
+ <geogname encodinganalog="651" source="lcnaf">United States -- Description and travel -- 1910-</geogname>
+ <geogname encodinganalog="651" source="lcnaf">Detroit (Mich.) -- History -- 20th century.</geogname>
+ <geogname encodinganalog="651" source="lcnaf">Lincoln Highway.</geogname>
+ <geogname encodinganalog="651" source="lcnaf">Lincoln Highway -- Guidebooks.</geogname>
+ </controlaccess>
+ <controlaccess>
+ <head>Genre Terms:</head>
+ <genreform source="aat" encodinganalog="655">Correspondence.</genreform>
+ <genreform encodinganalog="655" source="aat">Drawings.</genreform>
+ <genreform encodinganalog="655" source="aat">Logs (records).</genreform>
+ <genreform encodinganalog="655" source="aat">Minutes.</genreform>
+ <genreform encodinganalog="655" source="aat">Maps.</genreform>
+ <genreform encodinganalog="655" source="aat">Travel guidebooks.</genreform>
+ <genreform encodinganalog="655" source="aat">Photographs.</genreform>
+ </controlaccess>
+ </controlaccess>
+ <dsc type="combined">
+ <c01 level="series">
+ <did>
+ <unittitle>Official Business</unittitle>
+ </did>
+ <scopecontent>
+ <p>The Official Business series (1912-1941) contains records relating to operational functions of the Association and consists of several subseries including Meeting Minutes, Reports, Bulletins, and Legal Documents. </p>
+ <p>Meeting Minutes (1913-1926) contains the official meeting minutes and accompanying documents for the Board of Directors (1913-1925), Executive Committee (1923-1941), Organization Committee (1913-1915), and the Annual Meeting (1923-1926). Meeting minutes were concentrate heavily on the finances of the Lincoln Highway Association. Details of fundraising efforts and explanations of how money was spent on building costs, contractors, and so on, are present in the minutes. Meeting minutes were housed in black leather binders with "[name of the committee], Lincoln Highway Association" in gold printing. The binders are retained as artifacts and are located in Box 5.</p>
+ <p>The Reports subseries (1914-1923) includes official reports from the Lincoln Highway Association. These include Annual Reports, Technical Committee Meeting Reports, and a number of miscellaneous reports. The purpose of the majority of reports is to describe progress on the construction of the Lincoln Highway. Some reports are specifically focused for internal organization use while others were written for the Department of Agriculture or other government bodies.</p>
+ <p>Bulletins (1912-1926) include three main subcategories: "Bulletins from Secretary's Office," "Directors' Bulletins," and "To Directors, Officers, and Founders." The Association used these bulletins as a form of communication to provide their officials with up-to-date information regarding the activities of the organization. The changes in category stated above were different names of the same bulletin, which remained consistent in content and form. It appears that bulletins were issued on a weekly or semi-weekly basis. The typical bulletin was one to two pages in length and authored by the Secretary of the Association. </p>
+ <p>The Legal Documents suberies (1913-1927) is a mix of internal and external records containing several varieties of documents. Founding Documents/Internal resolutions contains records pertinent to the establishment of the organization including the prospectus and incorporation papers of the Lincoln Highway Association. Internal resolutions passed by various boards within the Association are also present. Contracts/Resolutions with States includes documents from Indiana and Utah with the Association regarding the construction of the Lincoln Highway. Legislative Documents contains copies of bills from both the Senate, House of Representatives, and state governments. Financial Statements/Reports is relatively small, consisting of scattered formal financial statements. A majority of this information is out of context. For more records dealing with financial information see the Meeting Minutes subseries and the Correspondence series. Hearings/Briefs before the Secretary of Agriculture contain the transcripts and published version of a report concerning the Lincoln Highway in Utah and Nevada given on May 14, 1923.</p>
+ </scopecontent>
+ <c02 level="file">
+ <did>
+ <unittitle>Meeting Minutes</unittitle>
+ </did>
+ <c03 level="file">
+ <did>
+ <unittitle>Board of Directors</unittitle>
+ </did>
+ <c04 level="file">
+ <did>
+ <container type="box" label="Box">1</container>
+ <unittitle>
+ <unitdate type="inclusive" era="ce" calendar="gregorian">July 1, 1913</unitdate>
+ </unittitle>
+ </did>
+ </c04>
+ <c04 level="file">
+ <did>
+ <container type="box" label="Box">1</container>
+ <unittitle>
+ <unitdate type="inclusive" era="ce" calendar="gregorian">July 1, 1913-September 29, 1913</unitdate>
+ </unittitle>
+ </did>
+ </c04>
+ <c04 level="file">
+ <did>
+ <container type="box" label="Box">1</container>
+ <unittitle>
+ <unitdate type="inclusive" era="ce" calendar="gregorian">October 27, 1913-October 6, 1914</unitdate>
+ </unittitle>
+ </did>
+ </c04>
+ <c04 level="file">
+ <did>
+ <container type="box" label="Box">1</container>
+ <unittitle>
+ <unitdate type="inclusive" era="ce" calendar="gregorian">November 10, 1914</unitdate>
+ </unittitle>
+ </did>
+ </c04>
+ <c04 level="file">
+ <did>
+ <container type="box" label="Box">1</container>
+ <unittitle>
+ <unitdate type="inclusive" era="ce" calendar="gregorian">December 1, 1915-November 9, 1916</unitdate>
+ </unittitle>
+ </did>
+ </c04>
+ <c04 level="file">
+ <did>
+ <container type="box" label="Box">1</container>
+ <unittitle>
+ <unitdate type="inclusive" era="ce" calendar="gregorian">January 26, 1918</unitdate>
+ </unittitle>
+ </did>
+ </c04>
+ <c04 level="file">
+ <did>
+ <container type="box" label="Box">1</container>
+ <unittitle>
+ <unitdate type="inclusive" era="ce" calendar="gregorian">December 30, 1918</unitdate>
+ </unittitle>
+ </did>
+ </c04>
+ <c04 level="file">
+ <did>
+ <container type="box" label="Box">1</container>
+ <unittitle>
+ <unitdate type="inclusive" era="ce" calendar="gregorian">December 30, 1919</unitdate>
+ </unittitle>
+ </did>
+ </c04>
+ <c04 level="file">
+ <did>
+ <container type="box" label="Box">1</container>
+ <unittitle>
+ <unitdate type="inclusive" era="ce" calendar="gregorian">April 17, 1920-December 4, 1920</unitdate>
+ </unittitle>
+ </did>
+ </c04>
+ <c04 level="file">
+ <did>
+ <container type="box" label="Box">1</container>
+ <unittitle>
+ <unitdate type="inclusive" era="ce" calendar="gregorian">December 28, 1920</unitdate>
+ </unittitle>
+ </did>
+ </c04>
+ <c04 level="file">
+ <did>
+ <container type="box" label="Box">1</container>
+ <unittitle>
+ <unitdate type="inclusive" era="ce" calendar="gregorian">May 27, 1921-December 28, 1921</unitdate>
+ </unittitle>
+ </did>
+ </c04>
+ <c04 level="file">
+ <did>
+ <container type="box" label="Box">1</container>
+ <unittitle>
+ <unitdate type="inclusive" era="ce" calendar="gregorian">December 28, 1921</unitdate>
+ </unittitle>
+ <physdesc>
+ <extent>2 folders</extent>
+ </physdesc>
+ </did>
+ </c04>
+ <c04 level="file">
+ <did>
+ <container type="box" label="Box">1</container>
+ <unittitle>
+ <unitdate type="inclusive" era="ce" calendar="gregorian">January 19, 1923</unitdate>
+ </unittitle>
+ </did>
+ </c04>
+ <c04 level="file">
+ <did>
+ <container type="box" label="Box">1</container>
+ <unittitle>Business Meeting, <unitdate type="inclusive" era="ce" calendar="gregorian">1925</unitdate> </unittitle>
+ </did>
+ </c04>
+ </c03>
+ <c03 level="file">
+ <did>
+ <unittitle>Executive Committee</unittitle>
+ </did>
+ <c04 level="file">
+ <did>
+ <container type="box" label="Box">1</container>
+ <unittitle>
+ <unitdate type="inclusive" era="ce" calendar="gregorian">August 14, 1923-December 7, 1923</unitdate>
+ </unittitle>
+ </did>
+ </c04>
+ <c04 level="file">
+ <did>
+ <container type="box" label="Box">1</container>
+ <unittitle>
+ <unitdate type="inclusive" era="ce" calendar="gregorian">January 17, 1924-December 1, 1923</unitdate>
+ </unittitle>
+ </did>
+ </c04>
+ <c04 level="file">
+ <did>
+ <container type="box" label="Box">1</container>
+ <unittitle>
+ <unitdate type="inclusive" era="ce" calendar="gregorian">May 22, 1924-January 19, 1925</unitdate>
+ </unittitle>
+ </did>
+ </c04>
+ <c04 level="file">
+ <did>
+ <container type="box" label="Box">1</container>
+ <unittitle>
+ <unitdate type="inclusive" era="ce" calendar="gregorian">January 21, 1925</unitdate>
+ </unittitle>
+ </did>
+ </c04>
+ <c04 level="file">
+ <did>
+ <container type="box" label="Box">1</container>
+ <unittitle>
+ <unitdate type="inclusive" era="ce" calendar="gregorian">January 21, 1925-April 21, 1926</unitdate>
+ </unittitle>
+ </did>
+ </c04>
+ <c04 level="file">
+ <did>
+ <container type="box" label="Box">1</container>
+ <unittitle>
+ <unitdate type="inclusive" era="ce" calendar="gregorian">April 21, 1926-October 30, 1926</unitdate>
+ </unittitle>
+ </did>
+ </c04>
+ <c04 level="file">
+ <did>
+ <container type="box" label="Box">1</container>
+ <unittitle>
+ <unitdate type="inclusive" era="ce" calendar="gregorian">September 27, 1927-October 31, 1927</unitdate>
+ </unittitle>
+ </did>
+ </c04>
+ <c04 level="file">
+ <did>
+ <container type="box" label="Box">1</container>
+ <unittitle>
+ <unitdate type="inclusive" era="ce" calendar="gregorian">October 31, 1927-March 3, 1928</unitdate>
+ </unittitle>
+ </did>
+ </c04>
+ <c04 level="file">
+ <did>
+ <container type="box" label="Box">1</container>
+ <unittitle>
+ <unitdate type="inclusive" era="ce" calendar="gregorian">July 22, 1929-December 16, 1936</unitdate>
+ </unittitle>
+ </did>
+ </c04>
+ <c04 level="file">
+ <did>
+ <container type="box" label="Box">1</container>
+ <unittitle>
+ <unitdate type="inclusive" era="ce" calendar="gregorian">April 15, 1937-October 1, 1941</unitdate>
+ </unittitle>
+ </did>
+ </c04>
+ </c03>
+ <c03 level="file">
+ <did>
+ <unittitle>Organization Committee</unittitle>
+ </did>
+ <c04 level="file">
+ <did>
+ <container type="box" label="Box">1</container>
+ <unittitle>
+ <unitdate type="inclusive" era="ce" calendar="gregorian">April 21, 1913-May 9, 1913</unitdate>
+ </unittitle>
+ </did>
+ </c04>
+ <c04 level="file">
+ <did>
+ <container type="box" label="Box">1</container>
+ <unittitle>
+ <unitdate type="inclusive" era="ce" calendar="gregorian">May 10, 1913-September 10, 1913</unitdate>
+ </unittitle>
+ </did>
+ </c04>
+ <c04 level="file">
+ <did>
+ <container type="box" label="Box">1</container>
+ <unittitle>
+ <unitdate type="inclusive" era="ce" calendar="gregorian">December 16, 1913</unitdate>
+ </unittitle>
+ </did>
+ </c04>
+ <c04 level="file">
+ <did>
+ <container type="box" label="Box">1</container>
+ <unittitle>
+ <unitdate type="inclusive" era="ce" calendar="gregorian">January 12, 1914-August 4, 1915</unitdate>
+ </unittitle>
+ </did>
+ </c04>
+ </c03>
+ <c03 level="file">
+ <did>
+ <unittitle>Annual Meeting</unittitle>
+ </did>
+ <c04 level="file">
+ <did>
+ <container type="box" label="Box">1</container>
+ <unittitle>Correspondence, <unitdate type="inclusive" era="ce" calendar="gregorian">1925</unitdate> </unittitle>
+ <physdesc>
+ <extent>2 folders</extent>
+ </physdesc>
+ </did>
+ </c04>
+ <c04 level="file">
+ <did>
+ <container type="box" label="Box">1</container>
+ <unittitle>Correspondence, <unitdate type="inclusive" era="ce" calendar="gregorian">1926</unitdate> </unittitle>
+ <physdesc>
+ <extent>2 folders</extent>
+ </physdesc>
+ </did>
+ </c04>
+ <c04 level="file">
+ <did>
+ <container type="box" label="Box">1</container>
+ <unittitle>Menus, <unitdate type="inclusive" era="ce" calendar="gregorian">1923-1926</unitdate> </unittitle>
+ </did>
+ </c04>
+ <c04 level="file">
+ <did>
+ <container type="box" label="Box">1</container>
+ <unittitle>Minutes, <unitdate type="inclusive" era="ce" calendar="gregorian">1926</unitdate> </unittitle>
+ </did>
+ </c04>
+ </c03>
+ </c02>
+ <c02 level="file">
+ <did>
+ <unittitle>Reports</unittitle>
+ </did>
+ <c03 level="file">
+ <did>
+ <unittitle>Annual Reports</unittitle>
+ </did>
+ <c04 level="file">
+ <did>
+ <container type="box" label="Box">1</container>
+ <unittitle>
+ <unitdate type="inclusive" era="ce" calendar="gregorian">1914</unitdate>
+ </unittitle>
+ </did>
+ </c04>
+ <c04 level="file">
+ <did>
+ <container type="box" label="Box">1</container>
+ <unittitle>
+ <unitdate type="inclusive" era="ce" calendar="gregorian">1915</unitdate>
+ </unittitle>
+ </did>
+ </c04>
+ <c04 level="file">
+ <did>
+ <container type="box" label="Box">1</container>
+ <unittitle>
+ <unitdate type="inclusive" era="ce" calendar="gregorian">1916</unitdate>
+ </unittitle>
+ </did>
+ </c04>
+ <c04 level="file">
+ <did>
+ <container type="box" label="Box">1</container>
+ <unittitle>
+ <unitdate type="inclusive" era="ce" calendar="gregorian">1917</unitdate>
+ </unittitle>
+ </did>
+ </c04>
+ <c04 level="file">
+ <did>
+ <container type="box" label="Box">1</container>
+ <unittitle>
+ <unitdate type="inclusive" era="ce" calendar="gregorian">1918</unitdate>
+ </unittitle>
+ <physdesc>
+ <extent>2 folders</extent>
+ </physdesc>
+ </did>
+ </c04>
+ <c04 level="file">
+ <did>
+ <container type="box" label="Box">1</container>
+ <unittitle>
+ <unitdate type="inclusive" era="ce" calendar="gregorian">1920</unitdate>
+ </unittitle>
+ <physdesc>
+ <extent>3 folders</extent>
+ </physdesc>
+ </did>
+ </c04>
+ <c04 level="file">
+ <did>
+ <container type="box" label="Box">1</container>
+ <unittitle>
+ <unitdate type="inclusive" era="ce" calendar="gregorian">1921</unitdate>
+ </unittitle>
+ <physdesc>
+ <extent>2 folders</extent>
+ </physdesc>
+ </did>
+ </c04>
+ <c04 level="file">
+ <did>
+ <container type="port">Port. 1</container>
+ <unittitle><unitdate type="inclusive" era="ce" calendar="gregorian">1921</unitdate> (Draft copy with illustrations in 2 volumes, "The Lincoln Highway, Eighth Year of Progress, Nineteen Twenty-One.")</unittitle>
+ </did>
+ </c04>
+ <c04 level="file">
+ <did>
+ <container type="box" label="Box">1</container>
+ <unittitle><unitdate type="inclusive" era="ce" calendar="gregorian">Undated</unitdate> draft</unittitle>
+ </did>
+ </c04>
+ </c03>
+ <c03 level="file">
+ <did>
+ <unittitle>Technical Committee Meeting Reports/Minutes</unittitle>
+ </did>
+ <c04 level="file">
+ <did>
+ <container type="box" label="Box">1</container>
+ <unittitle>Resolutions, <unitdate type="inclusive" era="ce" calendar="gregorian">1920</unitdate> List of Members</unittitle>
+ </did>
+ </c04>
+ <c04 level="file">
+ <did>
+ <container type="box" label="Box">1</container>
+ <unittitle>Meeting Minutes, <unitdate type="inclusive" era="ce" calendar="gregorian">1920</unitdate> "Ideal" Section</unittitle>
+ </did>
+ </c04>
+ <c04 level="file">
+ <did>
+ <container type="box" label="Box">1</container>
+ <unittitle>Meeting Minutes, <unitdate type="inclusive" era="ce" calendar="gregorian">1921-1922</unitdate> "Ideal" Section</unittitle>
+ </did>
+ </c04>
+ <c04 level="file">
+ <did>
+ <container type="box" label="Box">1</container>
+ <unittitle><unitdate type="inclusive" era="ce" calendar="gregorian">April 23, 1921-September 17, 1921</unitdate> "Ideal" Section</unittitle>
+ </did>
+ </c04>
+ <c04 level="file">
+ <did>
+ <container type="box" label="Box">1</container>
+ <unittitle><unitdate type="inclusive" era="ce" calendar="gregorian">November 1, 1921-July 15, 1922</unitdate> "Ideal" Section</unittitle>
+ </did>
+ </c04>
+ <c04 level="file">
+ <did>
+ <container type="box" label="Box">1</container>
+ <unittitle><unitdate type="inclusive" era="ce" calendar="gregorian">July 15, 1922</unitdate> "Ideal" Section</unittitle>
+ </did>
+ </c04>
+ <c04 level="file">
+ <did>
+ <container type="box" label="Box">1</container>
+ <unittitle><unitdate type="inclusive" era="ce" calendar="gregorian">November 3, 1922-May 1, 1923</unitdate> "Ideal" Section</unittitle>
+ </did>
+ </c04>
+ <c04 level="file">
+ <did>
+ <container type="box" label="Box">1</container>
+ <unittitle><unitdate type="inclusive" era="ce" calendar="gregorian">October 31, 1923-November 22, 1923</unitdate> "Ideal" Section</unittitle>
+ </did>
+ </c04>
+ </c03>
+ <c03 level="file">
+ <did>
+ <unittitle>Miscellaneous Reports</unittitle>
+ </did>
+ <c04 level="file">
+ <did>
+ <container type="box" label="Box">1</container>
+ <unittitle>
+ <unitdate type="inclusive" era="ce" calendar="gregorian">1916</unitdate>
+ </unittitle>
+ </did>
+ </c04>
+ <c04 level="file">
+ <did>
+ <container type="box" label="Box">1</container>
+ <unittitle>
+ <unitdate type="inclusive" era="ce" calendar="gregorian">1920</unitdate>
+ </unittitle>
+ </did>
+ </c04>
+ <c04 level="file">
+ <did>
+ <container type="box" label="Box">1</container>
+ <unittitle>
+ <unitdate type="inclusive" era="ce" calendar="gregorian">1921-1922</unitdate>
+ </unittitle>
+ </did>
+ </c04>
+ <c04 level="file">
+ <did>
+ <container type="box" label="Box">1</container>
+ <unittitle>
+ <unitdate type="inclusive" era="ce" calendar="gregorian">1922</unitdate>
+ </unittitle>
+ </did>
+ </c04>
+ <c04 level="file">
+ <did>
+ <container type="box" label="Box">1</container>
+ <unittitle>
+ <unitdate type="inclusive" era="ce" calendar="gregorian">Undated</unitdate>
+ </unittitle>
+ </did>
+ </c04>
+ <c04 level="file">
+ <did>
+ <container type="box" label="Box">1</container>
+ <unittitle>An "Ideal Section" on the Lincoln Highway, <unitdate type="inclusive" era="ce" calendar="gregorian">ca. 1919</unitdate> </unittitle>
+ </did>
+ </c04>
+ </c03>
+ </c02>
+ <c02 level="file">
+ <did>
+ <unittitle>Bulletins</unittitle>
+ </did>
+ <c03 level="file">
+ <did>
+ <unittitle>Bulletins from Secretary's Office</unittitle>
+ </did>
+ <c04 level="file">
+ <did>
+ <container type="box" label="Box">1</container>
+ <unittitle>
+ <unitdate type="inclusive" era="ce" calendar="gregorian">September 19, 1912-August 15, 1913</unitdate>
+ </unittitle>
+ </did>
+ </c04>
+ </c03>
+ <c03 level="file">
+ <did>
+ <unittitle>Directors' Bulletins</unittitle>
+ </did>
+ <c04 level="file">
+ <did>
+ <container type="box" label="Box">1</container>
+ <unittitle>
+ <unitdate type="inclusive" era="ce" calendar="gregorian">January 26, 1914-April 6, 1914</unitdate>
+ </unittitle>
+ </did>
+ </c04>
+ <c04 level="file">
+ <did>
+ <container type="box" label="Box">1</container>
+ <unittitle>
+ <unitdate type="inclusive" era="ce" calendar="gregorian">April 13, 1914-July 14, 1914</unitdate>
+ </unittitle>
+ </did>
+ </c04>
+ <c04 level="file">
+ <did>
+ <container type="box" label="Box">1</container>
+ <unittitle>
+ <unitdate type="inclusive" era="ce" calendar="gregorian">July 27, 1914-February 10, 1915</unitdate>
+ </unittitle>
+ </did>
+ </c04>
+ </c03>
+ <c03 level="file">
+ <did>
+ <unittitle>To Directors, Officers, and Founders</unittitle>
+ </did>
+ <c04 level="file">
+ <did>
+ <container type="box" label="Box">1</container>
+ <unittitle>
+ <unitdate type="inclusive" era="ce" calendar="gregorian">January 22, 1916-April 12, 1916</unitdate>
+ </unittitle>
+ </did>
+ </c04>
+ <c04 level="file">
+ <did>
+ <container type="box" label="Box">1</container>
+ <unittitle>
+ <unitdate type="inclusive" era="ce" calendar="gregorian">April 15, 1916-July 1, 1916</unitdate>
+ </unittitle>
+ </did>
+ </c04>
+ <c04 level="file">
+ <did>
+ <container type="box" label="Box">1</container>
+ <unittitle>
+ <unitdate type="inclusive" era="ce" calendar="gregorian">July 15, 1916-December 23, 1916</unitdate>
+ </unittitle>
+ </did>
+ </c04>
+ <c04 level="file">
+ <did>
+ <container type="box" label="Box">1</container>
+ <unittitle>
+ <unitdate type="inclusive" era="ce" calendar="gregorian">June 23, 1919-December 22, 1921</unitdate>
+ </unittitle>
+ </did>
+ </c04>
+ <c04 level="file">
+ <did>
+ <container type="box" label="Box">1</container>
+ <unittitle>
+ <unitdate type="inclusive" era="ce" calendar="gregorian">January 17, 1922-January 31, 1922</unitdate>
+ </unittitle>
+ </did>
+ </c04>
+ <c04 level="file">
+ <did>
+ <container type="box" label="Box">1</container>
+ <unittitle>
+ <unitdate type="inclusive" era="ce" calendar="gregorian">February 4, 1922-April 10, 1922</unitdate>
+ </unittitle>
+ </did>
+ </c04>
+ <c04 level="file">
+ <did>
+ <container type="box" label="Box">1</container>
+ <unittitle>
+ <unitdate type="inclusive" era="ce" calendar="gregorian">April 11, 1922-June 12, 1922</unitdate>
+ </unittitle>
+ </did>
+ </c04>
+ <c04 level="file">
+ <did>
+ <container type="box" label="Box">1</container>
+ <unittitle>
+ <unitdate type="inclusive" era="ce" calendar="gregorian">June 19, 1922-August 11, 1922</unitdate>
+ </unittitle>
+ </did>
+ </c04>
+ <c04 level="file">
+ <did>
+ <container type="box" label="Box">1</container>
+ <unittitle>
+ <unitdate type="inclusive" era="ce" calendar="gregorian">August 21, 1922-October 9, 1922</unitdate>
+ </unittitle>
+ </did>
+ </c04>
+ <c04 level="file">
+ <did>
+ <container type="box" label="Box">1</container>
+ <unittitle>
+ <unitdate type="inclusive" era="ce" calendar="gregorian">October 16, 1922-October 23, 1922</unitdate>
+ </unittitle>
+ </did>
+ </c04>
+ <c04 level="file">
+ <did>
+ <container type="box" label="Box">1</container>
+ <unittitle>
+ <unitdate type="inclusive" era="ce" calendar="gregorian">November 6, 1922-December 26, 1922</unitdate>
+ </unittitle>
+ </did>
+ </c04>
+ <c04 level="file">
+ <did>
+ <container type="box" label="Box">1</container>
+ <unittitle>
+ <unitdate type="inclusive" era="ce" calendar="gregorian">January 3, 1923-April 9, 1923</unitdate>
+ </unittitle>
+ </did>
+ </c04>
+ <c04 level="file">
+ <did>
+ <container type="box" label="Box">1</container>
+ <unittitle>
+ <unitdate type="inclusive" era="ce" calendar="gregorian">April 16, 1923-July 2, 1923</unitdate>
+ </unittitle>
+ </did>
+ </c04>
+ <c04 level="file">
+ <did>
+ <container type="box" label="Box">1</container>
+ <unittitle>
+ <unitdate type="inclusive" era="ce" calendar="gregorian">July 9, 1923-August 27, 1923</unitdate>
+ </unittitle>
+ </did>
+ </c04>
+ <c04 level="file">
+ <did>
+ <container type="box" label="Box">1</container>
+ <unittitle>
+ <unitdate type="inclusive" era="ce" calendar="gregorian">September 13, 1923-October 15, 1923</unitdate>
+ </unittitle>
+ </did>
+ </c04>
+ <c04 level="file">
+ <did>
+ <container type="box" label="Box">1</container>
+ <unittitle>
+ <unitdate type="inclusive" era="ce" calendar="gregorian">November 5, 1923-December 31, 1923</unitdate>
+ </unittitle>
+ </did>
+ </c04>
+ <c04 level="file">
+ <did>
+ <container type="box" label="Box">1</container>
+ <unittitle>
+ <unitdate type="inclusive" era="ce" calendar="gregorian">January 5, 1924-March 9, 1925</unitdate>
+ </unittitle>
+ </did>
+ </c04>
+ <c04 level="file">
+ <did>
+ <container type="box" label="Box">1</container>
+ <unittitle>
+ <unitdate type="inclusive" era="ce" calendar="gregorian">March 16, 1925-May 25, 1925</unitdate>
+ </unittitle>
+ </did>
+ </c04>
+ <c04 level="file">
+ <did>
+ <container type="box" label="Box">1</container>
+ <unittitle>
+ <unitdate type="inclusive" era="ce" calendar="gregorian">June 1, 1925-July 27, 1925</unitdate>
+ </unittitle>
+ </did>
+ </c04>
+ <c04 level="file">
+ <did>
+ <container type="box" label="Box">1</container>
+ <unittitle>
+ <unitdate type="inclusive" era="ce" calendar="gregorian">August 3, 1925-October 12, 1915</unitdate>
+ </unittitle>
+ </did>
+ </c04>
+ <c04 level="file">
+ <did>
+ <container type="box" label="Box">1</container>
+ <unittitle>
+ <unitdate type="inclusive" era="ce" calendar="gregorian">October 19, 1925-December 28, 1925</unitdate>
+ </unittitle>
+ </did>
+ </c04>
+ <c04 level="file">
+ <did>
+ <container type="box" label="Box">1</container>
+ <unittitle>
+ <unitdate type="inclusive" era="ce" calendar="gregorian">January 5, 1926-March 24, 1926</unitdate>
+ </unittitle>
+ </did>
+ </c04>
+ <c04 level="file">
+ <did>
+ <container type="box" label="Box">1</container>
+ <unittitle>
+ <unitdate type="inclusive" era="ce" calendar="gregorian">April 5, 1926-June 14, 1926</unitdate>
+ </unittitle>
+ </did>
+ </c04>
+ <c04 level="file">
+ <did>
+ <container type="box" label="Box">1</container>
+ <unittitle>
+ <unitdate type="inclusive" era="ce" calendar="gregorian">June 25, 1926-October 11, 1926</unitdate>
+ </unittitle>
+ </did>
+ </c04>
+ <c04 level="file">
+ <did>
+ <container type="box" label="Box">1</container>
+ <unittitle>
+ <unitdate type="inclusive" era="ce" calendar="gregorian">October 20, 1926-December 27, 1926</unitdate>
+ </unittitle>
+ </did>
+ </c04>
+ </c03>
+ </c02>
+ <c02 level="file">
+ <did>
+ <unittitle>Legal Documents</unittitle>
+ </did>
+ <c03 level="file">
+ <did>
+ <unittitle>Founding Documents/Internal Resolutions</unittitle>
+ </did>
+ <c04 level="file">
+ <did>
+ <container type="box" label="Box">1</container>
+ <unittitle>
+ <unitdate type="inclusive" era="ce" calendar="gregorian">May 1913-June 1913</unitdate>
+ </unittitle>
+ </did>
+ </c04>
+ <c04 level="file">
+ <did>
+ <container type="box" label="Box">1</container>
+ <unittitle>
+ <unitdate type="inclusive" era="ce" calendar="gregorian">August 10, 1913-September 14, 1914</unitdate>
+ <unitdate type="inclusive" era="ce" calendar="gregorian">undated</unitdate>
+ </unittitle>
+ </did>
+ </c04>
+ <c04 level="file">
+ <did>
+ <container type="box" label="Box">1</container>
+ <unittitle>August 2, <unitdate type="inclusive" era="ce" calendar="gregorian">1926 undated</unitdate> </unittitle>
+ </did>
+ </c04>
+ </c03>
+ <c03 level="file">
+ <did>
+ <unittitle>Contracts/Resolutions with States</unittitle>
+ </did>
+ <c04 level="file">
+ <did>
+ <unittitle>Indiana</unittitle>
+ </did>
+ <c05 level="file">
+ <did>
+ <container type="box" label="Box">1</container>
+ <unittitle>
+ <unitdate type="inclusive" era="ce" calendar="gregorian">April 22, 1921-April 26, 1921</unitdate>
+ <unitdate type="inclusive" era="ce" calendar="gregorian">undated</unitdate>
+ </unittitle>
+ </did>
+ </c05>
+ </c04>
+ <c04 level="item">
+ <did>
+ <unittitle>Utah</unittitle>
+ </did>
+ <c05 level="file">
+ <did>
+ <container type="box" label="Box">1</container>
+ <unittitle>
+ <unitdate type="inclusive" era="ce" calendar="gregorian">March 16, 1916-March 21, 1918</unitdate>
+ </unittitle>
+ </did>
+ </c05>
+ <c05 level="item">
+ <did>
+ <container type="box" label="Box">1</container>
+ <unittitle>
+ <unitdate type="inclusive" era="ce" calendar="gregorian">July 20, 1920-June 14, 1925</unitdate>
+ </unittitle>
+ </did>
+ </c05>
+ </c04>
+ </c03>
+ <c03 level="item">
+ <did>
+ <unittitle>Legislative Documents</unittitle>
+ </did>
+ <c04 level="file">
+ <did>
+ <container type="box" label="Box">1</container>
+ <unittitle>
+ <unitdate type="inclusive" era="ce" calendar="gregorian">1917-1924</unitdate>
+ <unitdate type="inclusive" era="ce" calendar="gregorian">undated</unitdate>
+ </unittitle>
+ </did>
+ </c04>
+ </c03>
+ <c03 level="file">
+ <did>
+ <unittitle>Financial Statements/Reports</unittitle>
+ </did>
+ <c04 level="file">
+ <did>
+ <container type="box" label="Box">1</container>
+ <unittitle>
+ <unitdate type="inclusive" era="ce" calendar="gregorian">May 7, 1913-September 15, 1914</unitdate>
+ </unittitle>
+ </did>
+ </c04>
+ <c04 level="file">
+ <did>
+ <container type="box" label="Box">1</container>
+ <unittitle>
+ <unitdate type="inclusive" era="ce" calendar="gregorian">May 5, 1916-November 10, 1927</unitdate>
+ </unittitle>
+ </did>
+ </c04>
+ </c03>
+ <c03 level="file">
+ <did>
+ <unittitle>Hearings/Briefs for Secretary of Agriculture</unittitle>
+ </did>
+ <c04 level="file">
+ <did>
+ <container type="box" label="Box">2</container>
+ <unittitle>Hearing Before the Secretary of Agriculture. Lincoln Highway in Utah and Nevada. Hart, Dice &amp; Carlson, Shorthand Reporters, Washington, D.C., <unitdate type="inclusive" era="ce" calendar="gregorian">May 14, 1923</unitdate> </unittitle>
+ </did>
+ </c04>
+ <c04 level="file">
+ <did>
+ <container type="box" label="Box">2</container>
+ <unittitle>Photocopy LH in Utah, Nevada, pp. i-49</unittitle>
+ </did>
+ </c04>
+ <c04 level="file">
+ <did>
+ <container type="box" label="Box">2</container>
+ <unittitle>Photocopy LH in Utah, Nevada, pp. 50-99</unittitle>
+ </did>
+ </c04>
+ <c04 level="file">
+ <did>
+ <container type="box" label="Box">2</container>
+ <unittitle>Photocopy LH in Utah, Nevada, pp. 100-143</unittitle>
+ </did>
+ </c04>
+ <c04 level="file">
+ <did>
+ <unittitle><title render="italic" linktype="simple">A Brief for the Lincoln Highway in Utah and Nevada Addressed to The Secretary of Agriculture, Washington D.C.</title> A Study of Western Road Strategy Designed to Aid in Determining the Road of Most Immediate Importance Connecting Salt Lake City, Utah, with California. Prepared by The National Headquarters, The Lincoln Highway Association, Detroit, Michigan, March 15, 1923.</unittitle>
+ </did>
+ <c05 level="file">
+ <did>
+ <container type="box" label="Box">5</container>
+ <unittitle>Paperback Copy</unittitle>
+ </did>
+ </c05>
+ <c05 level="item">
+ <did>
+ <container type="box" label="Box">5</container>
+ <unittitle>Roy D. Chapin's Copy</unittitle>
+ </did>
+ </c05>
+ <c05 level="item">
+ <did>
+ <container type="box" label="Box">5</container>
+ <unittitle>Boxed Leather Copy</unittitle>
+ </did>
+ </c05>
+ </c04>
+ </c03>
+ </c02>
+ <c02 level="item">
+ <did>
+ <container type="box" label="Box">2</container>
+ <unittitle>Medals</unittitle>
+ </did>
+ </c02>
+ <c02 level="file">
+ <did>
+ <container type="box" label="Box">2</container>
+ <unittitle>H.C. Ostermann Memorial</unittitle>
+ </did>
+ </c02>
+ </c01>
+ <c01 level="series">
+ <did>
+ <unittitle>Correspondence</unittitle>
+ </did>
+ <scopecontent>
+ <p>The Correspondence series (1912-1929) contains incoming and outgoing correspondence between members of the Lincoln Highway Association, interested individuals and organizations, and federal and state governments. Subseries include: Car Companies, Subscription/Contributions, Federal Government, State Government, Automobile Club of Southern California, and Miscellaneous. Three subseries cover correspondence regarding specific areas along the Lincoln Highway and include the "Ideal" Section, Seiberling Section, and Utah/Nevada. Within the each subseries, the correspondence is organized by correspondent and then chronologically. This series is not comprehensive and does not contain all the collections' correspondence. Some correspondence remains in other series in order to provide context for the themes and topics addressed within the correspondence. </p>
+ <p>The Car Companies subseries (1912-1917) includes correspondence between major automobile companies, their representatives, and board members of the Lincoln Highway Association. Key players include Henry Ford and the Ford Motor Company, Will J. Dobyns from the Fisher Automobile Company, Hudson Motor Car Company, Packard Motor Car Company, Union Carbine Company, the American Automobile Association, and Austin Bement, Carl G. Fisher, Henry B. Joy, and Arthur R. Pardington. The majority of correspondence relates to solicitation of funds, donations, subscriptions, discussions of the philosophy of the highway, and some early organizational business between the future board members.</p>
+ <p>The subseries Subscriptions/Contributions (1912-1919) provides records of money donated to the cause of building the Lincoln Highway. This is important financial information that is lacking from official organizational records. This series can help to show what individuals and businesses were interested in promoting the Lincoln Highway as well as answer other financial questions regarding donations to the Association. Individuals, representatives of industry, and board members of the Lincoln Highway Association author the letters throughout this subseries. There are also several examples of blank subscription forms.</p>
+ <p>The Federal Government (1912-1923) and State Government (1913-1923) subseries deal with exchanges between the Association and the respective governments. Topics for both governments include seeking support for the highway project, both legislatively and financially. Correspondence from the Federal government includes letters between the Department of Agriculture, Secretary of War H.L. Scott, Colonel Theodore Roosevelt, and President William Howard Taft. Letters are present from state governors and agencies in New York, New Jersey, Indiana, Illinois, Nebraska, Utah, and California.</p>
+ <p>The Automobile Club of Southern California (1915) has a small exchange of letters between Fred Baker, President of the club in 1915 and Henry B. Joy discussing the Lincoln Highway project. The Automobile Club of Southern California was one of the earliest auto clubs in the country. The organization was active in promoting the cause of the Lincoln Highway, other roads, and published maps and road guides for motorists.</p>
+ <p>The Miscellaneous subseries (1912-1925) contains correspondence between Association members including Austin Bement, Carl G. Fisher, Henry B. Joy, individual supporters, and steel and concrete companies. </p>
+ <p>The "Ideal" Section subseries (1920-1929) deals with the construction, problems, and issues surrounding the Lincoln Highway between Dyer and Schererville, Lake County, Indiana. Letters are arranged by correspondent and include Vice-President and Secretary of the LHA Austin Bement, Edsel Ford, the landscrape architect Jens Jensen, and the consulting engineer W. G. Thompson. </p>
+ <p>The Seiberling Section subseries (1916-1923) deals with portions of the route in Utah. Correspondence is arranged by association members: Austin Bement, Carl G. Fisher, Gael S. Hoag, Henry B. Joy, Henry C. Ostermann, Frank A. Seiberling, and miscellaneous authors. The section of the Highway is named after Frank A. Seiberling, who worked strenuously to solve the problems this section of the route presented.</p>
+ <p>The Utah/Nevada suberies (1912-1927) covers discussion of the Highway throughout Utah and Nevada, especially dealing with problems of routing. Correspondents include Austin Bement, Carl G. Fisher, Gael S. Hoag, Henry B. Joy, Henry C. Ostermann, Arthur R. Pardington, Frank A. Seiberling, Secretary of Agriculture Henry C. Wallace, and miscellaneous authors. </p>
+ </scopecontent>
+ <c02 level="file">
+ <did>
+ <unittitle>Car Companies</unittitle>
+ </did>
+ <c03 level="file">
+ <did>
+ <container type="box" label="Box">2</container>
+ <unittitle>
+ <unitdate type="inclusive" era="ce" calendar="gregorian">September 6, 1912-November 29, 1912</unitdate>
+ </unittitle>
+ </did>
+ </c03>
+ <c03 level="file">
+ <did>
+ <container type="box" label="Box">2</container>
+ <unittitle>
+ <unitdate type="inclusive" era="ce" calendar="gregorian">February 7, 1913-July 31, 1913</unitdate>
+ </unittitle>
+ </did>
+ </c03>
+ <c03 level="file">
+ <did>
+ <container type="box" label="Box">2</container>
+ <unittitle>
+ <unitdate type="inclusive" era="ce" calendar="gregorian">August 4, 1913-September 9, 1913</unitdate>
+ </unittitle>
+ </did>
+ </c03>
+ <c03 level="file">
+ <did>
+ <container type="box" label="Box">2</container>
+ <unittitle>
+ <unitdate type="inclusive" era="ce" calendar="gregorian">September 11, 1913-October 13, 1913</unitdate>
+ </unittitle>
+ </did>
+ </c03>
+ <c03 level="file">
+ <did>
+ <container type="box" label="Box">2</container>
+ <unittitle>
+ <unitdate type="inclusive" era="ce" calendar="gregorian">October 14, 1913-November 20, 1913</unitdate>
+ </unittitle>
+ </did>
+ </c03>
+ <c03 level="file">
+ <did>
+ <container type="box" label="Box">2</container>
+ <unittitle>
+ <unitdate type="inclusive" era="ce" calendar="gregorian">March 4, 1914-September 22, 1914</unitdate>
+ </unittitle>
+ </did>
+ </c03>
+ <c03 level="file">
+ <did>
+ <container type="box" label="Box">2</container>
+ <unittitle>
+ <unitdate type="inclusive" era="ce" calendar="gregorian">October 14, 1914-March 20, 1917</unitdate>
+ </unittitle>
+ </did>
+ </c03>
+ </c02>
+ <c02 level="file">
+ <did>
+ <unittitle>Subscriptions/Contributions</unittitle>
+ </did>
+ <c03 level="file">
+ <did>
+ <container type="box" label="Box">2</container>
+ <unittitle>Blank forms</unittitle>
+ </did>
+ </c03>
+ <c03 level="file">
+ <did>
+ <container type="box" label="Box">2</container>
+ <unittitle>
+ <unitdate type="inclusive" era="ce" calendar="gregorian">September 18, 1912-October 22, 1912</unitdate>
+ </unittitle>
+ </did>
+ </c03>
+ <c03 level="file">
+ <did>
+ <container type="box" label="Box">2</container>
+ <unittitle>
+ <unitdate type="inclusive" era="ce" calendar="gregorian">October 24, 1912-February 4, 1913</unitdate>
+ </unittitle>
+ </did>
+ </c03>
+ <c03 level="file">
+ <did>
+ <container type="box" label="Box">2</container>
+ <unittitle>
+ <unitdate type="inclusive" era="ce" calendar="gregorian">February 4, 1913-June 10, 1914</unitdate>
+ </unittitle>
+ </did>
+ </c03>
+ <c03 level="file">
+ <did>
+ <container type="box" label="Box">2</container>
+ <unittitle>
+ <unitdate type="inclusive" era="ce" calendar="gregorian">March 1919</unitdate>
+ <unitdate type="inclusive" era="ce" calendar="gregorian">undated</unitdate>
+ </unittitle>
+ </did>
+ </c03>
+ </c02>
+ <c02 level="file">
+ <did>
+ <unittitle>Federal Government</unittitle>
+ </did>
+ <c03 level="file">
+ <did>
+ <container type="box" label="Box">2</container>
+ <unittitle>
+ <unitdate type="inclusive" era="ce" calendar="gregorian">September 24, 1912-May 4, 1923</unitdate>
+ </unittitle>
+ </did>
+ </c03>
+ </c02>
+ <c02 level="file">
+ <did>
+ <unittitle>State Governments</unittitle>
+ </did>
+ <c03 level="file">
+ <did>
+ <container type="box" label="Box">2</container>
+ <unittitle>
+ <unitdate type="inclusive" era="ce" calendar="gregorian">September 13, 1913-July 20, 1923</unitdate>
+ </unittitle>
+ </did>
+ </c03>
+ </c02>
+ <c02 level="file">
+ <did>
+ <unittitle>Auto Club of California</unittitle>
+ </did>
+ <c03 level="file">
+ <did>
+ <container type="box" label="Box">2</container>
+ <unittitle>
+ <unitdate type="inclusive" era="ce" calendar="gregorian">May 4, 1915-August 6, 1915</unitdate>
+ </unittitle>
+ </did>
+ </c03>
+ </c02>
+ <c02 level="file">
+ <did>
+ <unittitle>Miscellaneous</unittitle>
+ </did>
+ <c03 level="file">
+ <did>
+ <container type="box" label="Box">2</container>
+ <unittitle>
+ <unitdate type="inclusive" era="ce" calendar="gregorian">October 10, 1912-November 25, 1913</unitdate>
+ </unittitle>
+ </did>
+ </c03>
+ <c03 level="file">
+ <did>
+ <container type="box" label="Box">2</container>
+ <unittitle>
+ <unitdate type="inclusive" era="ce" calendar="gregorian">December 19, 1913-November 25, 1925</unitdate>
+ </unittitle>
+ </did>
+ </c03>
+ </c02>
+ <c02 level="file">
+ <did>
+ <unittitle>"Ideal" Section-Indiana</unittitle>
+ </did>
+ <c03 level="file">
+ <did>
+ <unittitle>Bement, Austin</unittitle>
+ </did>
+ <c04 level="file">
+ <did>
+ <container type="box" label="Box">2</container>
+ <unittitle>
+ <unitdate type="inclusive" era="ce" calendar="gregorian">January 22, 1920-August 5, 1920</unitdate>
+ </unittitle>
+ </did>
+ </c04>
+ <c04 level="file">
+ <did>
+ <container type="box" label="Box">2</container>
+ <unittitle>
+ <unitdate type="inclusive" era="ce" calendar="gregorian">September 10, 1920-January 3, 1923</unitdate>
+ </unittitle>
+ </did>
+ </c04>
+ <c04 level="file">
+ <did>
+ <container type="box" label="Box">2</container>
+ <unittitle>
+ <unitdate type="inclusive" era="ce" calendar="gregorian">February 14, 1923-October 4, 1923</unitdate>
+ </unittitle>
+ </did>
+ </c04>
+ <c04 level="file">
+ <did>
+ <container type="box" label="Box">2</container>
+ <unittitle>
+ <unitdate type="inclusive" era="ce" calendar="gregorian">November 19, 1923-September 9, 1925</unitdate>
+ </unittitle>
+ </did>
+ </c04>
+ </c03>
+ <c03 level="file">
+ <did>
+ <unittitle>Ford, Edsel</unittitle>
+ </did>
+ <c04 level="file">
+ <did>
+ <container type="box" label="Box">2</container>
+ <unittitle>
+ <unitdate type="inclusive" era="ce" calendar="gregorian">March 11, 1924-September 3, 1925</unitdate>
+ </unittitle>
+ </did>
+ </c04>
+ </c03>
+ <c03 level="file">
+ <did>
+ <unittitle>Jensen, Jens</unittitle>
+ </did>
+ <c04 level="file">
+ <did>
+ <container type="box" label="Box">2</container>
+ <unittitle>
+ <unitdate type="inclusive" era="ce" calendar="gregorian">May 3, 1922-May 25, 1928</unitdate>
+ </unittitle>
+ </did>
+ </c04>
+ <c04 level="file">
+ <did>
+ <container type="box" label="Box">2</container>
+ <unittitle>
+ <unitdate type="inclusive" era="ce" calendar="gregorian">November 7, 1928-June 6, 1929</unitdate>
+ </unittitle>
+ </did>
+ </c04>
+ </c03>
+ <c03 level="file">
+ <did>
+ <container type="box" label="Box">2</container>
+ <unittitle>Thompson, W.G. <unitdate type="inclusive" era="ce" calendar="gregorian">May 11, 1923-September 14, 1923</unitdate> </unittitle>
+ </did>
+ </c03>
+ </c02>
+ <c02 level="file">
+ <did>
+ <unittitle>Seiberling Section-Utah/Nevada</unittitle>
+ </did>
+ <c03 level="file">
+ <did>
+ <unittitle>Bement, Austin</unittitle>
+ </did>
+ <c04 level="file">
+ <did>
+ <container type="box" label="Box">2</container>
+ <unittitle>
+ <unitdate type="inclusive" era="ce" calendar="gregorian">January 12, 1916-February 8, 1916</unitdate>
+ </unittitle>
+ </did>
+ </c04>
+ <c04 level="file">
+ <did>
+ <container type="box" label="Box">2</container>
+ <unittitle>
+ <unitdate type="inclusive" era="ce" calendar="gregorian">February 9, 1916-June 23, 1916</unitdate>
+ </unittitle>
+ </did>
+ </c04>
+ <c04 level="file">
+ <did>
+ <container type="box" label="Box">2</container>
+ <unittitle>
+ <unitdate type="inclusive" era="ce" calendar="gregorian">July 5, 1916-March 23, 1918</unitdate>
+ </unittitle>
+ </did>
+ </c04>
+ <c04 level="file">
+ <did>
+ <container type="box" label="Box">2</container>
+ <unittitle>
+ <unitdate type="inclusive" era="ce" calendar="gregorian">March 27, 1918-May 10, 1918</unitdate>
+ </unittitle>
+ </did>
+ </c04>
+ <c04 level="file">
+ <did>
+ <container type="box" label="Box">2</container>
+ <unittitle>
+ <unitdate type="inclusive" era="ce" calendar="gregorian">May 22, 1918-April 18, 1919</unitdate>
+ </unittitle>
+ </did>
+ </c04>
+ <c04 level="file">
+ <did>
+ <container type="box" label="Box">2</container>
+ <unittitle>
+ <unitdate type="inclusive" era="ce" calendar="gregorian">April 24, 1919-July 10, 1919</unitdate>
+ </unittitle>
+ </did>
+ </c04>
+ <c04 level="file">
+ <did>
+ <container type="box" label="Box">2</container>
+ <unittitle>
+ <unitdate type="inclusive" era="ce" calendar="gregorian">July 10, 1919-September 20, 1919</unitdate>
+ </unittitle>
+ </did>
+ </c04>
+ <c04 level="file">
+ <did>
+ <container type="box" label="Box">2</container>
+ <unittitle>
+ <unitdate type="inclusive" era="ce" calendar="gregorian">January 23, 1919-April 15, 1926</unitdate>
+ </unittitle>
+ </did>
+ </c04>
+ </c03>
+ <c03 level="file">
+ <did>
+ <unittitle>Fisher, Carl G.</unittitle>
+ </did>
+ <c04 level="file">
+ <did>
+ <container type="box" label="Box">2</container>
+ <unittitle>
+ <unitdate type="inclusive" era="ce" calendar="gregorian">February 8, 1916-January 12, 1918</unitdate>
+ </unittitle>
+ </did>
+ </c04>
+ </c03>
+ <c03 level="file">
+ <did>
+ <unittitle>Hoag, Gael S.</unittitle>
+ </did>
+ <c04 level="file">
+ <did>
+ <container type="box" label="Box">2</container>
+ <unittitle>
+ <unitdate type="inclusive" era="ce" calendar="gregorian">April 5, 1916-May 30, 1920</unitdate>
+ </unittitle>
+ </did>
+ </c04>
+ </c03>
+ <c03 level="file">
+ <did>
+ <unittitle>Joy, Henry B.</unittitle>
+ </did>
+ <c04 level="file">
+ <did>
+ <container type="box" label="Box">2</container>
+ <unittitle>
+ <unitdate type="inclusive" era="ce" calendar="gregorian">January 22, 1916-October 14, 1916</unitdate>
+ </unittitle>
+ </did>
+ </c04>
+ <c04 level="file">
+ <did>
+ <container type="box" label="Box">2</container>
+ <unittitle>
+ <unitdate type="inclusive" era="ce" calendar="gregorian">October 16, 1916-November 27, 1916</unitdate>
+ </unittitle>
+ </did>
+ </c04>
+ <c04 level="file">
+ <did>
+ <container type="box" label="Box">2</container>
+ <unittitle>
+ <unitdate type="inclusive" era="ce" calendar="gregorian">December 9, 1916-May 20, 1926</unitdate>
+ </unittitle>
+ </did>
+ </c04>
+ </c03>
+ <c03 level="file">
+ <did>
+ <unittitle>Ostermann, Henry C.</unittitle>
+ </did>
+ <c04 level="file">
+ <did>
+ <container type="box" label="Box">2</container>
+ <unittitle>
+ <unitdate type="inclusive" era="ce" calendar="gregorian">December 3, 1915-February 21, 1918</unitdate>
+ </unittitle>
+ </did>
+ </c04>
+ </c03>
+ <c03 level="file">
+ <did>
+ <unittitle>Seiberling, Frank A.</unittitle>
+ </did>
+ <c04 level="file">
+ <did>
+ <container type="box" label="Box">2</container>
+ <unittitle>
+ <unitdate type="inclusive" era="ce" calendar="gregorian">May 16, 1916-May 28, 1920</unitdate>
+ </unittitle>
+ </did>
+ </c04>
+ </c03>
+ <c03 level="file">
+ <did>
+ <unittitle>Miscellaneous</unittitle>
+ </did>
+ <c04 level="file">
+ <did>
+ <container type="box" label="Box">2</container>
+ <unittitle>March 19,1919-August 7, <unitdate type="inclusive" era="ce" calendar="gregorian">1923</unitdate> </unittitle>
+ </did>
+ </c04>
+ </c03>
+ </c02>
+ <c02 level="file">
+ <did>
+ <unittitle>Utah/Nevada</unittitle>
+ </did>
+ <c03 level="file">
+ <did>
+ <unittitle>Bement, Austin</unittitle>
+ </did>
+ <c04 level="file">
+ <did>
+ <container type="box" label="Box">2</container>
+ <unittitle>
+ <unitdate type="inclusive" era="ce" calendar="gregorian">December 4, 1915-May 24, 1917</unitdate>
+ </unittitle>
+ </did>
+ </c04>
+ <c04 level="file">
+ <did>
+ <container type="box" label="Box">2</container>
+ <unittitle>
+ <unitdate type="inclusive" era="ce" calendar="gregorian">July 2, 1917-October 7, 1918</unitdate>
+ </unittitle>
+ </did>
+ </c04>
+ <c04 level="file">
+ <did>
+ <container type="box" label="Box">2</container>
+ <unittitle>
+ <unitdate type="inclusive" era="ce" calendar="gregorian">June 18, 1919-October 22, 1919</unitdate>
+ </unittitle>
+ </did>
+ </c04>
+ <c04 level="file">
+ <did>
+ <container type="box" label="Box">2</container>
+ <unittitle>
+ <unitdate type="inclusive" era="ce" calendar="gregorian">October 23, 1919-February 12, 1923</unitdate>
+ </unittitle>
+ </did>
+ </c04>
+ <c04 level="file">
+ <did>
+ <container type="box" label="Box">2</container>
+ <unittitle>
+ <unitdate type="inclusive" era="ce" calendar="gregorian">February 12, 1923</unitdate>
+ </unittitle>
+ </did>
+ </c04>
+ <c04 level="file">
+ <did>
+ <container type="box" label="Box">2</container>
+ <unittitle>
+ <unitdate type="inclusive" era="ce" calendar="gregorian">March 28, 1923-June 2, 1924</unitdate>
+ </unittitle>
+ </did>
+ </c04>
+ <c04 level="file">
+ <did>
+ <container type="box" label="Box">2</container>
+ <unittitle>
+ <unitdate type="inclusive" era="ce" calendar="gregorian">June 23, 1924-August 19, 1926</unitdate>
+ </unittitle>
+ </did>
+ </c04>
+ <c04 level="file">
+ <did>
+ <container type="box" label="Box">2</container>
+ <unittitle>
+ <unitdate type="inclusive" era="ce" calendar="gregorian">August 26, 1926-September 19, 1927</unitdate>
+ </unittitle>
+ </did>
+ </c04>
+ </c03>
+ <c03 level="file">
+ <did>
+ <unittitle>Fisher, Carl G.</unittitle>
+ </did>
+ <c04 level="file">
+ <did>
+ <container type="box" label="Box">2</container>
+ <unittitle>
+ <unitdate type="inclusive" era="ce" calendar="gregorian">August 11, 1913-September 11, 1919</unitdate>
+ </unittitle>
+ </did>
+ </c04>
+ </c03>
+ <c03 level="file">
+ <did>
+ <unittitle>Hoag, Gael S.</unittitle>
+ </did>
+ <c04 level="file">
+ <did>
+ <container type="box" label="Box">2</container>
+ <unittitle>
+ <unitdate type="inclusive" era="ce" calendar="gregorian">August 15, 1912-January 12, 1916</unitdate>
+ </unittitle>
+ </did>
+ </c04>
+ <c04 level="file">
+ <did>
+ <container type="box" label="Box">2</container>
+ <unittitle>
+ <unitdate type="inclusive" era="ce" calendar="gregorian">January 25, 1916-March 6, 1916</unitdate>
+ </unittitle>
+ </did>
+ </c04>
+ <c04 level="file">
+ <did>
+ <container type="box" label="Box">2</container>
+ <unittitle>
+ <unitdate type="inclusive" era="ce" calendar="gregorian">May 1, 1916-April 23, 1920</unitdate>
+ </unittitle>
+ </did>
+ </c04>
+ <c04 level="file">
+ <did>
+ <container type="box" label="Box">2</container>
+ <unittitle>
+ <unitdate type="inclusive" era="ce" calendar="gregorian">February 12, 1922-April 24, 1923</unitdate>
+ </unittitle>
+ </did>
+ </c04>
+ <c04 level="file">
+ <did>
+ <container type="box" label="Box">2</container>
+ <unittitle>
+ <unitdate type="inclusive" era="ce" calendar="gregorian">September 15, 1925-October 26, 1927</unitdate>
+ </unittitle>
+ </did>
+ </c04>
+ </c03>
+ <c03 level="file">
+ <did>
+ <unittitle>Joy, Henry B.</unittitle>
+ </did>
+ <c04 level="file">
+ <did>
+ <container type="box" label="Box">2</container>
+ <unittitle>
+ <unitdate type="inclusive" era="ce" calendar="gregorian">May 26, 1914-July 16, 1920</unitdate>
+ </unittitle>
+ </did>
+ </c04>
+ <c04 level="file">
+ <did>
+ <container type="box" label="Box">2</container>
+ <unittitle>
+ <unitdate type="inclusive" era="ce" calendar="gregorian">July 20, 1920</unitdate>
+ </unittitle>
+ </did>
+ </c04>
+ <c04 level="file">
+ <did>
+ <container type="box" label="Box">2</container>
+ <unittitle>July 20, 1920-Februrary 10, <unitdate type="inclusive" era="ce" calendar="gregorian">1923</unitdate> </unittitle>
+ </did>
+ </c04>
+ <c04 level="file">
+ <did>
+ <container type="box" label="Box">2</container>
+ <unittitle>
+ <unitdate type="inclusive" era="ce" calendar="gregorian">December 21, 1923-November 19, 1924</unitdate>
+ </unittitle>
+ </did>
+ </c04>
+ <c04 level="file">
+ <did>
+ <container type="box" label="Box">2</container>
+ <unittitle>
+ <unitdate type="inclusive" era="ce" calendar="gregorian">May 4, 1926-October 13, 1927</unitdate>
+ </unittitle>
+ </did>
+ </c04>
+ </c03>
+ <c03 level="file">
+ <did>
+ <unittitle>Ostermann, Henry C.</unittitle>
+ </did>
+ <c04 level="file">
+ <did>
+ <container type="box" label="Box">2</container>
+ <unittitle>
+ <unitdate type="inclusive" era="ce" calendar="gregorian">February 23, 1915-October 7, 1919</unitdate>
+ </unittitle>
+ </did>
+ </c04>
+ </c03>
+ <c03 level="file">
+ <did>
+ <unittitle>Pardington, Arthur R.</unittitle>
+ </did>
+ <c04 level="file">
+ <did>
+ <container type="box" label="Box">2</container>
+ <unittitle>
+ <unitdate type="inclusive" era="ce" calendar="gregorian">August 22, 1913-March 27, 1915</unitdate>
+ </unittitle>
+ </did>
+ </c04>
+ </c03>
+ <c03 level="file">
+ <did>
+ <unittitle>Seiberling, Frank A.</unittitle>
+ </did>
+ <c04 level="file">
+ <did>
+ <container type="box" label="Box">2</container>
+ <unittitle>
+ <unitdate type="inclusive" era="ce" calendar="gregorian">October 5, 1918-February 10, 1921</unitdate>
+ </unittitle>
+ </did>
+ </c04>
+ </c03>
+ <c03 level="file">
+ <did>
+ <unittitle>Wallace, Henry C.</unittitle>
+ </did>
+ <c04 level="file">
+ <did>
+ <container type="box" label="Box">2</container>
+ <unittitle>
+ <unitdate type="inclusive" era="ce" calendar="gregorian">1922-June 6, 1923</unitdate>
+ </unittitle>
+ </did>
+ </c04>
+ <c04 level="file">
+ <did>
+ <container type="box" label="Box">2</container>
+ <unittitle>
+ <unitdate type="inclusive" era="ce" calendar="gregorian">June 7, 1923-June 18, 1923</unitdate>
+ </unittitle>
+ </did>
+ </c04>
+ <c04 level="file">
+ <did>
+ <container type="box" label="Box">2</container>
+ <unittitle>
+ <unitdate type="inclusive" era="ce" calendar="gregorian">June 28, 1923-December 21, 1923</unitdate>
+ </unittitle>
+ </did>
+ </c04>
+ </c03>
+ <c03 level="file">
+ <did>
+ <unittitle>Miscellaneous</unittitle>
+ </did>
+ <c04 level="file">
+ <did>
+ <container type="box" label="Box">2</container>
+ <unittitle>
+ <unitdate type="inclusive" era="ce" calendar="gregorian">September 13, 1913-February 7, 1920</unitdate>
+ </unittitle>
+ </did>
+ </c04>
+ <c04 level="file">
+ <did>
+ <container type="box" label="Box">2</container>
+ <unittitle>
+ <unitdate type="inclusive" era="ce" calendar="gregorian">February 21, 1920-January 4, 1922</unitdate>
+ </unittitle>
+ </did>
+ </c04>
+ <c04 level="file">
+ <did>
+ <container type="box" label="Box">2</container>
+ <unittitle>
+ <unitdate type="inclusive" era="ce" calendar="gregorian">March 13, 1923-August 27, 1924</unitdate>
+ </unittitle>
+ </did>
+ </c04>
+ <c04 level="file">
+ <did>
+ <container type="box" label="Box">2</container>
+ <unittitle>Letter book &amp; Blueprints, <unitdate type="inclusive" era="ce" calendar="gregorian">1920-1921</unitdate> </unittitle>
+ </did>
+ </c04>
+ </c03>
+ </c02>
+ </c01>
+ <c01 level="series">
+ <did>
+ <unittitle>Planning</unittitle>
+ </did>
+ <scopecontent>
+ <p>The Planning series (1914-1940) covers details relating to planning the route of the Lincoln Highway. The series is divided into the subseries Documents Relating to Utah, 1921-1924, Routing, and Markers. </p>
+ <p>Documents Relating to Utah, 1921-1924 is a collection of a variety of records. Originally housed in a grey binder the contents include correspondence, editorials, reports, and press releases regarding the Lincoln Highway in Utah. The first document is an index covering all of the documents in this section. The index was created when the binder was assembled, presumably by an Association member.</p>
+ <p>Routing (1914-1930) includes correspondence covering the route through Ohio, Wyoming, Utah, Nevada, and California. Penciled routes, proposed mileages, and road log books all shed light on the detailed routing process. Other information regarding the route including rail roads and campsites is also present.</p>
+ <p>Markers (1925-1940) includes correspondence, notes, and sketches regarding the construction and placement of markers along the entire route of the Lincoln Highway. In addition, an original "Log of 1928 Markers" lists the locations of all the markers along the Highway. The original 3,000 markers were placed by the Boy Scouts of America.</p>
+ </scopecontent>
+ <c02 level="file">
+ <did>
+ <unittitle>Documents Relating to Utah, <unitdate type="inclusive" era="ce" calendar="gregorian">1921-1924</unitdate> </unittitle>
+ </did>
+ <c03 level="file">
+ <did>
+ <container type="box" label="Box">5</container>
+ <unittitle>Binder, Small</unittitle>
+ </did>
+ </c03>
+ <c03 level="file">
+ <did>
+ <container type="box" label="Box">2</container>
+ <unittitle>
+ <unitdate type="inclusive" era="ce" calendar="gregorian">October 26, 1921-November 9, 1921</unitdate>
+ </unittitle>
+ </did>
+ </c03>
+ <c03 level="file">
+ <did>
+ <container type="box" label="Box">2</container>
+ <unittitle>
+ <unitdate type="inclusive" era="ce" calendar="gregorian">January 26, 1922-February 2, 1922</unitdate>
+ </unittitle>
+ </did>
+ </c03>
+ <c03 level="file">
+ <did>
+ <container type="box" label="Box">2</container>
+ <unittitle>
+ <unitdate type="inclusive" era="ce" calendar="gregorian">February 27, 1922-January 26, 1923</unitdate>
+ </unittitle>
+ </did>
+ </c03>
+ <c03 level="file">
+ <did>
+ <container type="box" label="Box">2</container>
+ <unittitle>September 16, <unitdate type="inclusive" era="ce" calendar="gregorian">1922-December 1922</unitdate> </unittitle>
+ </did>
+ </c03>
+ <c03 level="file">
+ <did>
+ <container type="box" label="Box">2</container>
+ <unittitle>
+ <unitdate type="inclusive" era="ce" calendar="gregorian">December 15, 1922-February 12, 1923</unitdate>
+ </unittitle>
+ </did>
+ </c03>
+ <c03 level="file">
+ <did>
+ <container type="box" label="Box">2</container>
+ <unittitle>
+ <unitdate type="inclusive" era="ce" calendar="gregorian">March 28, 1923-May 24, 1923</unitdate>
+ </unittitle>
+ </did>
+ </c03>
+ <c03 level="file">
+ <did>
+ <container type="box" label="Box">2</container>
+ <unittitle>
+ <unitdate type="inclusive" era="ce" calendar="gregorian">April 16, 1923-September 26, 1923</unitdate>
+ </unittitle>
+ </did>
+ </c03>
+ <c03 level="file">
+ <did>
+ <container type="box" label="Box">2</container>
+ <unittitle>
+ <unitdate type="inclusive" era="ce" calendar="gregorian">July 6, 1923-January 18, 1924</unitdate>
+ </unittitle>
+ </did>
+ </c03>
+ </c02>
+ <c02 level="file">
+ <did>
+ <unittitle>Routing</unittitle>
+ </did>
+ <c03 level="file">
+ <did>
+ <unittitle>Correspondence</unittitle>
+ </did>
+ <c04 level="file">
+ <did>
+ <unittitle>Ohio</unittitle>
+ </did>
+ <c05 level="file">
+ <did>
+ <container type="box" label="Box">3</container>
+ <unittitle>
+ <unitdate type="inclusive" era="ce" calendar="gregorian">January 22, 1914-January 31, 1916</unitdate>
+ </unittitle>
+ </did>
+ </c05>
+ <c05 level="item">
+ <did>
+ <container type="box" label="Box">3</container>
+ <unittitle>
+ <unitdate type="inclusive" era="ce" calendar="gregorian">February 11, 1916-June 13, 1921</unitdate>
+ </unittitle>
+ </did>
+ </c05>
+ <c05 level="item">
+ <did>
+ <container type="box" label="Box">3</container>
+ <unittitle>
+ <unitdate type="inclusive" era="ce" calendar="gregorian">June 14, 1921-June 25, 1921</unitdate>
+ </unittitle>
+ </did>
+ </c05>
+ <c05 level="item">
+ <did>
+ <container type="box" label="Box">3</container>
+ <unittitle>
+ <unitdate type="inclusive" era="ce" calendar="gregorian">June 25, 1921-March 14, 1930</unitdate>
+ </unittitle>
+ </did>
+ </c05>
+ </c04>
+ <c04 level="item">
+ <did>
+ <unittitle>Wyoming</unittitle>
+ </did>
+ <c05 level="file">
+ <did>
+ <container type="box" label="Box">3</container>
+ <unittitle>
+ <unitdate type="inclusive" era="ce" calendar="gregorian">May 7, 1914-December 21, 1918</unitdate>
+ </unittitle>
+ </did>
+ </c05>
+ </c04>
+ <c04 level="item">
+ <did>
+ <unittitle>Utah, Nevada, California</unittitle>
+ </did>
+ <c05 level="file">
+ <did>
+ <container type="box" label="Box">3</container>
+ <unittitle>
+ <unitdate type="inclusive" era="ce" calendar="gregorian">February 22, 1917-July 7, 1919</unitdate>
+ </unittitle>
+ </did>
+ </c05>
+ </c04>
+ </c03>
+ <c03 level="item">
+ <did>
+ <unittitle>Mileages</unittitle>
+ </did>
+ <c04 level="file">
+ <did>
+ <unittitle>Penciled Routes</unittitle>
+ </did>
+ <c05 level="file">
+ <did>
+ <container type="box" label="Box">3</container>
+ <unittitle>Utah, Nevada, California </unittitle>
+ <physdesc>
+ <extent>6 Folders</extent>
+ </physdesc>
+ </did>
+ </c05>
+ </c04>
+ <c04 level="item">
+ <did>
+ <unittitle>Proposed Mileages</unittitle>
+ </did>
+ <c05 level="file">
+ <did>
+ <container type="box" label="Box">3</container>
+ <unittitle>Utah, Nevada, California </unittitle>
+ <physdesc>
+ <extent>5 folders</extent>
+ </physdesc>
+ </did>
+ </c05>
+ </c04>
+ <c04 level="item">
+ <did>
+ <unittitle>Log Books</unittitle>
+ </did>
+ <c05 level="file">
+ <did>
+ <container type="box" label="Box">3</container>
+ <unittitle>
+ <unitdate type="inclusive" era="ce" calendar="gregorian">1921</unitdate>
+ <unitdate type="inclusive" era="ce" calendar="gregorian">1923</unitdate>
+ <unitdate type="inclusive" era="ce" calendar="gregorian">1926</unitdate>
+ </unittitle>
+ </did>
+ </c05>
+ <c05 level="item">
+ <did>
+ <container type="box" label="Box">3</container>
+ <unittitle>
+ <unitdate type="inclusive" era="ce" calendar="gregorian">1920 undated</unitdate>
+ </unittitle>
+ </did>
+ </c05>
+ <c05 level="item">
+ <did>
+ <container type="box" label="Box">3</container>
+ <unittitle>
+ <unitdate type="inclusive" era="ce" calendar="gregorian">1918</unitdate>
+ <unitdate type="inclusive" era="ce" calendar="gregorian">1930 undated</unitdate>
+ </unittitle>
+ </did>
+ </c05>
+ </c04>
+ </c03>
+ <c03 level="item">
+ <did>
+ <unittitle>Miscellaneous</unittitle>
+ </did>
+ <c04 level="file">
+ <did>
+ <container type="box" label="Box">3</container>
+ <unittitle>Blueprint of Routes, Wyoming, Utah, Nevada</unittitle>
+ </did>
+ </c04>
+ <c04 level="file">
+ <did>
+ <container type="box" label="Box">3</container>
+ <unittitle>Rail Road Crossing Information, <unitdate type="inclusive" era="ce" calendar="gregorian">1927</unitdate> </unittitle>
+ <physdesc>
+ <extent>2 folders</extent>
+ </physdesc>
+ </did>
+ </c04>
+ <c04 level="file">
+ <did>
+ <container type="box" label="Box">3</container>
+ <unittitle>Campsite and Filling Station, "Ideal" Section</unittitle>
+ </did>
+ </c04>
+ </c03>
+ </c02>
+ <c02 level="file">
+ <did>
+ <unittitle>Markers</unittitle>
+ </did>
+ <c03 level="file">
+ <did>
+ <unittitle>Notes &amp; Correspondence</unittitle>
+ </did>
+ <c04 level="file">
+ <did>
+ <container type="box" label="Box">3</container>
+ <unittitle>
+ <unitdate type="inclusive" era="ce" calendar="gregorian">June 1, 1925-February 8, 1934</unitdate>
+ </unittitle>
+ </did>
+ </c04>
+ </c03>
+ <c03 level="file">
+ <did>
+ <unittitle>Correspondence</unittitle>
+ </did>
+ <c04 level="file">
+ <did>
+ <container type="box" label="Box">3</container>
+ <unittitle>February 10, <unitdate type="inclusive" era="ce" calendar="gregorian">1934-January 1940</unitdate> </unittitle>
+ </did>
+ </c04>
+ </c03>
+ <c03 level="file">
+ <did>
+ <unittitle>Notes &amp; Sketches</unittitle>
+ </did>
+ <c04 level="file">
+ <did>
+ <container type="box" label="Box">3</container>
+ <unittitle>
+ <unitdate type="inclusive" era="ce" calendar="gregorian">undated</unitdate>
+ </unittitle>
+ </did>
+ </c04>
+ </c03>
+ <c03 level="file">
+ <did>
+ <container type="box" label="Box">3</container>
+ <unittitle>Log of <unitdate type="inclusive" era="ce" calendar="gregorian">1928</unitdate> Markers</unittitle>
+ </did>
+ </c03>
+ <c03 level="file">
+ <did>
+ <unittitle>Photocopy of <unitdate type="inclusive" era="ce" calendar="gregorian">1928</unitdate> Log</unittitle>
+ </did>
+ <c04 level="file">
+ <did>
+ <container type="box" label="Box">3</container>
+ <unittitle>Cover-Pennsylvania 10</unittitle>
+ </did>
+ </c04>
+ <c04 level="file">
+ <did>
+ <container type="box" label="Box">3</container>
+ <unittitle>Pennsylvania 11-West Virginia</unittitle>
+ </did>
+ </c04>
+ <c04 level="file">
+ <did>
+ <container type="box" label="Box">3</container>
+ <unittitle>Ohio-Ohio 19</unittitle>
+ </did>
+ </c04>
+ <c04 level="file">
+ <did>
+ <container type="box" label="Box">3</container>
+ <unittitle>Ohio 20-Illinois 4</unittitle>
+ </did>
+ </c04>
+ <c04 level="file">
+ <did>
+ <container type="box" label="Box">3</container>
+ <unittitle>Illinois 5-Iowa 4</unittitle>
+ </did>
+ </c04>
+ <c04 level="file">
+ <did>
+ <container type="box" label="Box">3</container>
+ <unittitle>Iowa 5-Iowa 25</unittitle>
+ </did>
+ </c04>
+ <c04 level="file">
+ <did>
+ <container type="box" label="Box">3</container>
+ <unittitle>Iowa 26-Nebraska 3</unittitle>
+ </did>
+ </c04>
+ <c04 level="file">
+ <did>
+ <container type="box" label="Box">3</container>
+ <unittitle>Nebraska 4-Nebraska 23</unittitle>
+ </did>
+ </c04>
+ <c04 level="file">
+ <did>
+ <container type="box" label="Box">3</container>
+ <unittitle>Nebraska 24-Wyoming 2</unittitle>
+ </did>
+ </c04>
+ <c04 level="file">
+ <did>
+ <container type="box" label="Box">3</container>
+ <unittitle>Wyoming 3-Utah 5</unittitle>
+ </did>
+ </c04>
+ <c04 level="file">
+ <did>
+ <container type="box" label="Box">3</container>
+ <unittitle>Nevada-California 10</unittitle>
+ </did>
+ </c04>
+ <c04 level="file">
+ <did>
+ <container type="box" label="Box">3</container>
+ <unittitle>California 11-California 22</unittitle>
+ </did>
+ </c04>
+ </c03>
+ </c02>
+ </c01>
+ <c01 level="series">
+ <did>
+ <unittitle>Publicity</unittitle>
+ </did>
+ <scopecontent>
+ <p>The Publicity series (1911-1993) includes materials devoted to promoting the construction and use of the Lincoln Highway as well as celebrating the Highway's achievements. The series is divided into subseries including Speeches and Essays, Published Articles, Newspaper Clippings, Editorials, Press Releases, and Press Sheets. </p>
+ <p>Speeches and Essays (1913-1924) covers a variety of topics relating to the Lincoln Highway. Board members of the Association authored the majority of essays in the collection. Typical speeches and essays focused on the extreme need for the Lincoln Highway as well as the benefits the Highway would provide.</p>
+ <p>Published Articles (1918-1992) contains original articles written about the Lincoln Highway. These include articles written by board members in promotion of the Lincoln Highway as well as scholars and enthusiasts celebrating the Lincoln Highway's achievements.</p>
+ <p>Newspaper Clippings (1911-1926) are original articles published about the Lincoln Highway. The majority of clippings come from local and regional newspapers. Clippings regarding California and Utah are the most plentiful in the collection.</p>
+ <p>The Editorials subseries (1916-1926) contains editorials about the Lincoln Highway. Two folders discuss the Highway in general as well as various places along the route. There is a sub section devoted specifically to the "Ideal" Section in Indiana (1915-1922). This section seems to have been artificially created at a later date. The editorials come from a variety of sources, but are all typed in the same format and style. Two folders cover correspondence regarding editorials.</p>
+ <p>The Press Releases and Press Sheets subseries (1917-1924) contain official statements and updates by the Association from Detroit, Michigan. The subsections "Ideal" Section and Utah contain releases specifically focused on the development of the Lincoln Highway in these areas.</p>
+ </scopecontent>
+ <c02 level="file">
+ <did>
+ <unittitle>Speeches and Essays</unittitle>
+ </did>
+ <c03 level="file">
+ <did>
+ <container type="box" label="Box">3</container>
+ <unittitle>
+ <unitdate type="inclusive" era="ce" calendar="gregorian">September 1913</unitdate>
+ <unitdate type="inclusive" era="ce" calendar="gregorian">undated</unitdate>
+ </unittitle>
+ </did>
+ </c03>
+ <c03 level="file">
+ <did>
+ <container type="box" label="Box">3</container>
+ <unittitle>
+ <unitdate type="inclusive" era="ce" calendar="gregorian">1915-1917</unitdate>
+ </unittitle>
+ </did>
+ </c03>
+ <c03 level="file">
+ <did>
+ <container type="box" label="Box">3</container>
+ <unittitle>April 4, 1917April 26, <unitdate type="inclusive" era="ce" calendar="gregorian">1917</unitdate> </unittitle>
+ </did>
+ </c03>
+ <c03 level="file">
+ <did>
+ <container type="box" label="Box">3</container>
+ <unittitle>
+ <unitdate type="inclusive" era="ce" calendar="gregorian">March 1923-March 5, 1924</unitdate>
+ </unittitle>
+ </did>
+ </c03>
+ <c03 level="file">
+ <did>
+ <container type="box" label="Box">3</container>
+ <unittitle>Undated, "Ideal" Section</unittitle>
+ </did>
+ </c03>
+ </c02>
+ <c02 level="file">
+ <did>
+ <unittitle>Published Articles</unittitle>
+ </did>
+ <c03 level="file">
+ <did>
+ <container type="box" label="Box">3</container>
+ <unittitle>
+ <unitdate type="inclusive" era="ce" calendar="gregorian">1918-1993</unitdate>
+ </unittitle>
+ </did>
+ </c03>
+ <c03 level="file">
+ <did>
+ <container type="box" label="Box">3</container>
+ <unittitle><title render="italic" linktype="simple">Iowan</title>, <unitdate type="inclusive" era="ce" calendar="gregorian">1983</unitdate></unittitle>
+ </did>
+ </c03>
+ <c03 level="file">
+ <did>
+ <container type="box" label="Box">3</container>
+ <unittitle><title render="italic" linktype="simple">Smithsonian</title>, <unitdate type="inclusive" era="ce" calendar="gregorian">1985</unitdate></unittitle>
+ </did>
+ </c03>
+ <c03 level="file">
+ <did>
+ <container type="box" label="Box">3</container>
+ <unittitle>Lincoln Highway Days, <unitdate type="inclusive" era="ce" calendar="gregorian">1992</unitdate> </unittitle>
+ </did>
+ </c03>
+ </c02>
+ <c02 level="file">
+ <did>
+ <unittitle>Newspaper Clippings</unittitle>
+ </did>
+ <c03 level="file">
+ <did>
+ <container type="box" label="Box">3</container>
+ <unittitle>
+ <unitdate type="inclusive" era="ce" calendar="gregorian">May 16, 1911-October 15, 1916</unitdate>
+ </unittitle>
+ </did>
+ </c03>
+ <c03 level="file">
+ <did>
+ <unittitle>California</unittitle>
+ </did>
+ <c04 level="file">
+ <did>
+ <container type="box" label="Box">3</container>
+ <unittitle>November 5, <unitdate type="inclusive" era="ce" calendar="gregorian">1916-December 1921</unitdate> </unittitle>
+ </did>
+ </c04>
+ </c03>
+ <c03 level="file">
+ <did>
+ <unittitle>Utah</unittitle>
+ </did>
+ <c04 level="file">
+ <did>
+ <container type="box" label="Box">3</container>
+ <unittitle>
+ <unitdate type="inclusive" era="ce" calendar="gregorian">August 31, 1915-October 22, 1916</unitdate>
+ </unittitle>
+ </did>
+ </c04>
+ <c04 level="file">
+ <did>
+ <container type="box" label="Box">3</container>
+ <unittitle>
+ <unitdate type="inclusive" era="ce" calendar="gregorian">June 17, 1923-December 1, 1926</unitdate>
+ <unitdate type="inclusive" era="ce" calendar="gregorian">undated</unitdate>
+ </unittitle>
+ </did>
+ </c04>
+ </c03>
+ </c02>
+ <c02 level="file">
+ <did>
+ <unittitle>Editorials</unittitle>
+ </did>
+ <c03 level="file">
+ <did>
+ <container type="box" label="Box">3</container>
+ <unittitle>November 21, <unitdate type="inclusive" era="ce" calendar="gregorian">1916-October 1926</unitdate> <unitdate type="inclusive" era="ce" calendar="gregorian">undated</unitdate> </unittitle>
+ </did>
+ </c03>
+ <c03 level="file">
+ <did>
+ <container type="box" label="Box">3</container>
+ <unittitle>
+ <unitdate type="inclusive" era="ce" calendar="gregorian">March 19, 1923-June 3, 1923</unitdate>
+ <unitdate type="inclusive" era="ce" calendar="gregorian">undated</unitdate>
+ </unittitle>
+ </did>
+ </c03>
+ <c03 level="file">
+ <did>
+ <unittitle>"Ideal" Section</unittitle>
+ </did>
+ <c04 level="file">
+ <did>
+ <container type="box" label="Box">3</container>
+ <unittitle>
+ <unitdate type="inclusive" era="ce" calendar="gregorian">July 8, 1915-August 14, 1922</unitdate>
+ </unittitle>
+ </did>
+ </c04>
+ <c04 level="file">
+ <did>
+ <container type="box" label="Box">3</container>
+ <unittitle>
+ <unitdate type="inclusive" era="ce" calendar="gregorian">August 14, 1922-August 27, 1922</unitdate>
+ </unittitle>
+ </did>
+ </c04>
+ <c04 level="file">
+ <did>
+ <container type="box" label="Box">3</container>
+ <unittitle>August 27, <unitdate type="inclusive" era="ce" calendar="gregorian">1922-October 1922</unitdate> </unittitle>
+ </did>
+ </c04>
+ <c04 level="file">
+ <did>
+ <container type="box" label="Box">3</container>
+ <unittitle>
+ <unitdate type="inclusive" era="ce" calendar="gregorian">October 1, 1922-October 15, 1922</unitdate>
+ </unittitle>
+ </did>
+ </c04>
+ </c03>
+ <c03 level="file">
+ <did>
+ <unittitle>Correspondence</unittitle>
+ </did>
+ <c04 level="file">
+ <did>
+ <container type="box" label="Box">3</container>
+ <unittitle>
+ <unitdate type="inclusive" era="ce" calendar="gregorian">November 16, 1916-January 3, 1917</unitdate>
+ </unittitle>
+ </did>
+ </c04>
+ <c04 level="file">
+ <did>
+ <container type="box" label="Box">3</container>
+ <unittitle>
+ <unitdate type="inclusive" era="ce" calendar="gregorian">June 7, 1923-December 7, 1926</unitdate>
+ </unittitle>
+ </did>
+ </c04>
+ </c03>
+ </c02>
+ <c02 level="file">
+ <did>
+ <unittitle>Press Releases</unittitle>
+ </did>
+ <c03 level="file">
+ <did>
+ <container type="box" label="Box">3</container>
+ <unittitle>April 18, <unitdate type="inclusive" era="ce" calendar="gregorian">1917 undated</unitdate> </unittitle>
+ </did>
+ </c03>
+ <c03 level="file">
+ <did>
+ <unittitle>"Ideal" Section</unittitle>
+ </did>
+ <c04 level="file">
+ <did>
+ <container type="box" label="Box">3</container>
+ <unittitle>
+ <unitdate type="inclusive" era="ce" calendar="gregorian">August 1921-October 4, 1922</unitdate>
+ </unittitle>
+ </did>
+ </c04>
+ <c04 level="file">
+ <did>
+ <container type="box" label="Box">3</container>
+ <unittitle>
+ <unitdate type="inclusive" era="ce" calendar="gregorian">December 11, 1922-June 1, 1923</unitdate>
+ </unittitle>
+ </did>
+ </c04>
+ <c04 level="file">
+ <did>
+ <container type="box" label="Box">3</container>
+ <unittitle>
+ <unitdate type="inclusive" era="ce" calendar="gregorian">June 15, 1923-January 28, 1924</unitdate>
+ </unittitle>
+ </did>
+ </c04>
+ <c04 level="file">
+ <did>
+ <container type="box" label="Box">3</container>
+ <unittitle>
+ <unitdate type="inclusive" era="ce" calendar="gregorian">Undated</unitdate>
+ </unittitle>
+ </did>
+ </c04>
+ </c03>
+ <c03 level="file">
+ <did>
+ <unittitle>Utah</unittitle>
+ </did>
+ <c04 level="file">
+ <did>
+ <container type="box" label="Box">3</container>
+ <unittitle>Binder, Large</unittitle>
+ </did>
+ </c04>
+ <c04 level="file">
+ <did>
+ <container type="box" label="Box">3</container>
+ <unittitle>
+ <unitdate type="inclusive" era="ce" calendar="gregorian">October 25, 1920</unitdate>
+ </unittitle>
+ </did>
+ </c04>
+ <c04 level="file">
+ <did>
+ <container type="box" label="Box">3</container>
+ <unittitle>
+ <unitdate type="inclusive" era="ce" calendar="gregorian">January 22, 1922</unitdate>
+ </unittitle>
+ </did>
+ </c04>
+ <c04 level="file">
+ <did>
+ <container type="box" label="Box">3</container>
+ <unittitle>
+ <unitdate type="inclusive" era="ce" calendar="gregorian">April 17, 1922-October 24, 1922</unitdate>
+ </unittitle>
+ </did>
+ </c04>
+ <c04 level="file">
+ <did>
+ <container type="box" label="Box">3</container>
+ <unittitle>
+ <unitdate type="inclusive" era="ce" calendar="gregorian">February 3, 1923</unitdate>
+ </unittitle>
+ </did>
+ </c04>
+ <c04 level="file">
+ <did>
+ <container type="box" label="Box">3</container>
+ <unittitle>
+ <unitdate type="inclusive" era="ce" calendar="gregorian">March 3, 1923-May 28, 1923</unitdate>
+ </unittitle>
+ </did>
+ </c04>
+ <c04 level="file">
+ <did>
+ <container type="box" label="Box">3</container>
+ <unittitle>
+ <unitdate type="inclusive" era="ce" calendar="gregorian">June 13, 1923-March 24, 1924</unitdate>
+ </unittitle>
+ </did>
+ </c04>
+ </c03>
+ </c02>
+ <c02 level="file">
+ <did>
+ <unittitle>Press Sheets</unittitle>
+ </did>
+ <c03 level="file">
+ <did>
+ <container type="port">Port. 1</container>
+ <unittitle>Scrapbook of "Lincoln Highway Press Sheets, starting with last issue September 1918" (Vol. V No. 38 to Vol. VI No. 3), with loose "Special" bulletins laid-in after last pasted-in press sheets</unittitle>
+ </did>
+ </c03>
+ </c02>
+ </c01>
+ <c01 level="series">
+ <did>
+ <unittitle>Publications</unittitle>
+ </did>
+ <scopecontent>
+ <p>The Publications series (1915-1935) covers materials published by the Association as well as materials about the Lincoln Highway. The main subseries are Newspapers, Road Guides, and Maps. </p>
+ <p>A scrapbook contains articles and incoming correspondence to Gael S. Hoag and Frank A. Seiberling regarding the book, <title render="italic" linktype="simple">The Lincoln Highway: The Story of a Crusade that Made Transportation History</title> , published by the Association in 1935. The majority of letters came from supporters requesting copies of the book and praising its success including: officials from the Department of Agriculture, Roads, Public Works and other governmental bodies, libraries and universities, industry, engineers, and auto clubs. Letters and clippings are not in chronological order and cover the period 1935-1939.</p>
+ <p>The Newspapers subseries (1915-1926) includes runs of <title render="italic" linktype="simple">The Lincoln Highway</title> (1915-1919) and the <title render="italic" linktype="simple">Lincoln Highway Forum</title> (1918-1926). </p>
+ <p>Road Guides contains printed local guides for portions of the route running through Colorado, Wyoming, Utah, Nevada, and California. The second, third, and fourth editions of <title render="italic" linktype="simple">The Complete Official Road Guide of the Lincoln Highway</title> are included. These volumes are particularly special as they were the personal copies of Association board members Henry C. Ostermann (2nd edition) and Gael S. Hoag (3rd and 4th editions). All three copies include hand written notes throughout the guides by their owners. </p>
+ <p>The Maps subseries (1905-1935) contains maps covering geography and roads on the national, regional, state, and local scale. National maps cover the national highway systems. Regional maps include national and state roads for more than one state. State maps include California, Colorado, Nevada, and Utah. Several maps depict the paved and dirt roads throughout several national parks. All maps are listed individually within their category and dates are provided when available. </p>
+ <p>Route maps along the Lincoln Highway provide mileages for specific sections of the highway and usually come in small strips. There is a complete route map set published by the Lincoln Highway Association detailed the drive from New York to San Francisco. Another important contribution to the route maps section includes maps published by the Automobile Club of Southern California. These route maps cover portions of the Lincoln Highway as well as other regional routes such as the Midland Trail and the Coast Route.</p>
+ </scopecontent>
+ <c02 level="file">
+ <did>
+ <container type="box" label="Box">5</container>
+ <unittitle>Correspondence Scrapbook, <unitdate type="inclusive" era="ce" calendar="gregorian">1935-1939</unitdate> </unittitle>
+ </did>
+ </c02>
+ <c02 level="file">
+ <did>
+ <unittitle>Newspapers</unittitle>
+ </did>
+ <c03 level="file">
+ <did>
+ <unittitle>
+ <title render="italic" linktype="simple">The Lincoln Highway</title>
+ </unittitle>
+ </did>
+ <c04 level="file">
+ <did>
+ <container type="box" label="Box">4</container>
+ <unittitle>
+ <unitdate type="inclusive" era="ce" calendar="gregorian">October 6, 1915-December 8, 1915</unitdate>
+ </unittitle>
+ </did>
+ </c04>
+ <c04 level="file">
+ <did>
+ <container type="box" label="Box">4</container>
+ <unittitle>December 15, 1915-Februrary 23, <unitdate type="inclusive" era="ce" calendar="gregorian">1916</unitdate> </unittitle>
+ </did>
+ </c04>
+ <c04 level="file">
+ <did>
+ <container type="box" label="Box">4</container>
+ <unittitle>
+ <unitdate type="inclusive" era="ce" calendar="gregorian">March 1, 1916-April 26, 1916</unitdate>
+ </unittitle>
+ </did>
+ </c04>
+ <c04 level="file">
+ <did>
+ <container type="box" label="Box">4</container>
+ <unittitle>
+ <unitdate type="inclusive" era="ce" calendar="gregorian">May 3, 1916-June 28, 1916</unitdate>
+ </unittitle>
+ </did>
+ </c04>
+ <c04 level="file">
+ <did>
+ <container type="box" label="Box">4</container>
+ <unittitle>
+ <unitdate type="inclusive" era="ce" calendar="gregorian">July 12, 1916-August 30, 1916</unitdate>
+ </unittitle>
+ </did>
+ </c04>
+ <c04 level="file">
+ <did>
+ <container type="box" label="Box">4</container>
+ <unittitle>
+ <unitdate type="inclusive" era="ce" calendar="gregorian">September 6, 1916-October 18, 1916</unitdate>
+ </unittitle>
+ </did>
+ </c04>
+ <c04 level="file">
+ <did>
+ <container type="box" label="Box">4</container>
+ <unittitle>
+ <unitdate type="inclusive" era="ce" calendar="gregorian">November 1, 1916-December 20, 1916</unitdate>
+ <unitdate type="inclusive" era="ce" calendar="gregorian">March 1917</unitdate>
+ <unitdate type="inclusive" era="ce" calendar="gregorian">March 1919</unitdate>
+ </unittitle>
+ </did>
+ </c04>
+ </c03>
+ <c03 level="file">
+ <did>
+ <unittitle>
+ <title render="italic" linktype="simple">Lincoln Highway Forum</title>
+ </unittitle>
+ </did>
+ <c04 level="file">
+ <did>
+ <container type="box" label="Box">4</container>
+ <unittitle>
+ <unitdate type="inclusive" era="ce" calendar="gregorian">May 1918-August 15, 1919</unitdate>
+ </unittitle>
+ </did>
+ </c04>
+ <c04 level="file">
+ <did>
+ <container type="box" label="Box">4</container>
+ <unittitle>September 1, 1919-Februrary 15, <unitdate type="inclusive" era="ce" calendar="gregorian">1920</unitdate> </unittitle>
+ </did>
+ </c04>
+ <c04 level="file">
+ <did>
+ <container type="box" label="Box">4</container>
+ <unittitle>
+ <unitdate type="inclusive" era="ce" calendar="gregorian">March 15, 1920-December 15, 1920</unitdate>
+ </unittitle>
+ </did>
+ </c04>
+ <c04 level="file">
+ <did>
+ <container type="box" label="Box">4</container>
+ <unittitle>
+ <unitdate type="inclusive" era="ce" calendar="gregorian">February 1921-October 1921</unitdate>
+ </unittitle>
+ </did>
+ </c04>
+ <c04 level="file">
+ <did>
+ <container type="box" label="Box">4</container>
+ <unittitle>
+ <unitdate type="inclusive" era="ce" calendar="gregorian">November 1921-December 1922</unitdate>
+ </unittitle>
+ </did>
+ </c04>
+ <c04 level="file">
+ <did>
+ <container type="box" label="Box">4</container>
+ <unittitle>
+ <unitdate type="inclusive" era="ce" calendar="gregorian">May 1923-November 1923</unitdate>
+ </unittitle>
+ </did>
+ </c04>
+ <c04 level="file">
+ <did>
+ <container type="box" label="Box">4</container>
+ <unittitle>
+ <unitdate type="inclusive" era="ce" calendar="gregorian">January 1924-March 1925</unitdate>
+ </unittitle>
+ </did>
+ </c04>
+ <c04 level="file">
+ <did>
+ <container type="box" label="Box">4</container>
+ <unittitle>
+ <unitdate type="inclusive" era="ce" calendar="gregorian">April 1925-February 1926</unitdate>
+ </unittitle>
+ </did>
+ </c04>
+ <c04 level="file">
+ <did>
+ <container type="box" label="Box">4</container>
+ <unittitle>
+ <unitdate type="inclusive" era="ce" calendar="gregorian">March 1926-December 1926</unitdate>
+ </unittitle>
+ </did>
+ </c04>
+ </c03>
+ </c02>
+ <c02 level="file">
+ <did>
+ <unittitle>Road Guides</unittitle>
+ </did>
+ <c03 level="file">
+ <did>
+ <unittitle>Printed Guides</unittitle>
+ </did>
+ <c04 level="file">
+ <did>
+ <container type="box" label="Box">4</container>
+ <unittitle>Colorado, Wyoming</unittitle>
+ </did>
+ </c04>
+ </c03>
+ <c03 level="file">
+ <did>
+ <unittitle>Printed Guides</unittitle>
+ </did>
+ <c04 level="file">
+ <did>
+ <container type="box" label="Box">4</container>
+ <unittitle>Utah, Nevada, California </unittitle>
+ <physdesc>
+ <extent>2 folders</extent>
+ </physdesc>
+ </did>
+ </c04>
+ </c03>
+ <c03 level="file">
+ <did>
+ <unittitle>Printed Mileages</unittitle>
+ </did>
+ <c04 level="file">
+ <did>
+ <container type="box" label="Box">4</container>
+ <unittitle>Utah, Nevada, California </unittitle>
+ <physdesc>
+ <extent>2 folders</extent>
+ </physdesc>
+ </did>
+ </c04>
+ </c03>
+ <c03 level="file">
+ <did>
+ <unittitle><title render="italic" linktype="simple">The Complete Official Road Guide of the Lincoln Highway.</title> The Lincoln Highway Association. National Headquarters, Detroit, Michigan.</unittitle>
+ </did>
+ <c04 level="file">
+ <did>
+ <container type="box" label="Box">5</container>
+ <unittitle>H.C. Ostermann's Second Edition, <unitdate type="inclusive" era="ce" calendar="gregorian">1916</unitdate> </unittitle>
+ </did>
+ </c04>
+ <c04 level="file">
+ <did>
+ <container type="box" label="Box">5</container>
+ <unittitle>Gael S. Hoag's Third Edition, <unitdate type="inclusive" era="ce" calendar="gregorian">1918</unitdate> </unittitle>
+ </did>
+ </c04>
+ <c04 level="file">
+ <did>
+ <container type="box" label="Box">5</container>
+ <unittitle>Gael S. Hoag's Fourth Edition, <unitdate type="inclusive" era="ce" calendar="gregorian">1921</unitdate> </unittitle>
+ </did>
+ </c04>
+ </c03>
+ </c02>
+ <c02 level="file">
+ <did>
+ <unittitle>Maps</unittitle>
+ </did>
+ <c03 level="file">
+ <did>
+ <unittitle>National Maps</unittitle>
+ </did>
+ <c04 level="file">
+ <did>
+ <container type="box" label="Box">4</container>
+ <unittitle>National Maps Envelope, <unitdate type="inclusive" era="ce" calendar="gregorian">1935</unitdate> </unittitle>
+ </did>
+ </c04>
+ <c04 level="file">
+ <did>
+ <container type="box" label="Box">4</container>
+ <unittitle><title render="italic" linktype="simple">Pikes Peak Ocean-To-Ocean Highway</title>, <unitdate type="inclusive" era="ce" calendar="gregorian">1915</unitdate></unittitle>
+ </did>
+ </c04>
+ <c04 level="file">
+ <did>
+ <unittitle>
+ <title render="italic" linktype="simple">United States System of Highways</title>
+ </unittitle>
+ </did>
+ <c05 level="file">
+ <did>
+ <container type="box" label="Box">4</container>
+ <unittitle><unitdate type="inclusive" era="ce" calendar="gregorian">November 11, 1926</unitdate> Corrected to <unitdate type="inclusive" era="ce" calendar="gregorian">July 15, 1930</unitdate> color</unittitle>
+ </did>
+ </c05>
+ <c05 level="item">
+ <did>
+ <container type="box" label="Box">4</container>
+ <unittitle><unitdate type="inclusive" era="ce" calendar="gregorian">November 11, 1926</unitdate> Corrected to <unitdate type="inclusive" era="ce" calendar="gregorian">July 1, 1935</unitdate> color</unittitle>
+ </did>
+ </c05>
+ </c04>
+ </c03>
+ <c03 level="item">
+ <did>
+ <unittitle>Regional Maps </unittitle>
+ <physdesc>
+ <extent>2 folders</extent>
+ </physdesc>
+ </did>
+ <c04 level="file">
+ <did>
+ <container type="box" label="Box">4</container>
+ <unittitle><title render="italic" linktype="simple">The Pasear, Inyo Good Road Club</title>, <unitdate type="inclusive" era="ce" calendar="gregorian">ca. 1915</unitdate></unittitle>
+ </did>
+ </c04>
+ <c04 level="file">
+ <did>
+ <container type="box" label="Box">4</container>
+ <unittitle><title render="italic" linktype="simple">Mountains to Coast Road Map</title>, Lincoln Highway Garage Company of Ely, Nevada, <unitdate type="inclusive" era="ce" calendar="gregorian">1918</unitdate></unittitle>
+ </did>
+ </c04>
+ <c04 level="file">
+ <did>
+ <container type="box" label="Box">4</container>
+ <unittitle><title render="italic" linktype="simple">Western Pacific Railroad, Feather River Route through California, Nevada, Utah</title>, Corrected to <unitdate type="inclusive" era="ce" calendar="gregorian">June 1, 1921</unitdate></unittitle>
+ </did>
+ </c04>
+ <c04 level="file">
+ <did>
+ <container type="box" label="Box">4</container>
+ <unittitle><title render="italic" linktype="simple">Utah Map Showing State Road System</title>, State Road Commission, <unitdate type="inclusive" era="ce" calendar="gregorian">1922</unitdate> together with:</unittitle>
+ </did>
+ </c04>
+ <c04 level="file">
+ <did>
+ <container type="box" label="Box">4</container>
+ <unittitle><title render="italic" linktype="simple">Road Map of the State of Nevada</title>, Department of Highways, undated, color</unittitle>
+ </did>
+ </c04>
+ <c04 level="file">
+ <did>
+ <container type="box" label="Box">4</container>
+ <unittitle><title render="italic" linktype="simple">Map of Strategic Routes Between Salt Lake City, Utah and California</title>, Lincoln Highway Association, undated, 2 copies in color, 1 copy in black and white</unittitle>
+ </did>
+ </c04>
+ <c04 level="file">
+ <did>
+ <container type="box" label="Box">4</container>
+ <unittitle><title render="italic" linktype="simple">Utah and Nevada Regional Lincoln Highway Map</title>, Proposed by Salt Lake, <unitdate type="inclusive" era="ce" calendar="gregorian">undated</unitdate> (2 copies)</unittitle>
+ </did>
+ </c04>
+ </c03>
+ <c03 level="file">
+ <did>
+ <unittitle>State Maps </unittitle>
+ <physdesc>
+ <extent>4 folders</extent>
+ </physdesc>
+ </did>
+ <c04 level="file">
+ <did>
+ <container type="box" label="Box">4</container>
+ <unittitle><title render="italic" linktype="simple">City Map of Los Angeles</title>, <unitdate type="inclusive" era="ce" calendar="gregorian">1905</unitdate></unittitle>
+ </did>
+ </c04>
+ <c04 level="file">
+ <did>
+ <container type="box" label="Box">4</container>
+ <unittitle><title render="italic" linktype="simple">Main Roads in Colorado</title>, State Highway Commission of Colorado, <unitdate type="inclusive" era="ce" calendar="gregorian">December 1911</unitdate></unittitle>
+ </did>
+ </c04>
+ <c04 level="file">
+ <did>
+ <container type="box" label="Box">4</container>
+ <unittitle><title render="italic" linktype="simple">Security Automobile Road Map of San Diego County</title>, <unitdate type="inclusive" era="ce" calendar="gregorian">1911</unitdate></unittitle>
+ </did>
+ </c04>
+ <c04 level="file">
+ <did>
+ <container type="box" label="Box">4</container>
+ <unittitle><title render="italic" linktype="simple">Security Automobile Road Map of Los Angeles and Adjacent Counties</title>, <unitdate type="inclusive" era="ce" calendar="gregorian">1912</unitdate></unittitle>
+ </did>
+ </c04>
+ <c04 level="file">
+ <did>
+ <container type="box" label="Box">4</container>
+ <unittitle><title render="italic" linktype="simple">Utah, Maps of State Roads</title>, State Road Commission, <unitdate type="inclusive" era="ce" calendar="gregorian">1915-1916</unitdate> color (annotated)</unittitle>
+ </did>
+ </c04>
+ <c04 level="file">
+ <did>
+ <container type="box" label="Box">4</container>
+ <unittitle><title render="italic" linktype="simple">Southeastern California, The Federal Aid Highway System Progress Map</title>, Department of Agriculture, Bureau of Public Roads, <unitdate type="inclusive" era="ce" calendar="gregorian">November 9, 1921</unitdate> Corrected to <unitdate type="inclusive" era="ce" calendar="gregorian">August 31, 1935</unitdate></unittitle>
+ </did>
+ </c04>
+ <c04 level="file">
+ <did>
+ <container type="box" label="Box">4</container>
+ <unittitle><title render="italic" linktype="simple">Southwestern California, The Federal Aid Highway System Progress Map</title>, Department of Agriculture, Bureau of Public Roads, <unitdate type="inclusive" era="ce" calendar="gregorian">November 9, 1921</unitdate> Corrected to <unitdate type="inclusive" era="ce" calendar="gregorian">August 31, 1935</unitdate></unittitle>
+ </did>
+ </c04>
+ <c04 level="file">
+ <did>
+ <container type="box" label="Box">4</container>
+ <unittitle><title render="italic" linktype="simple">Central California, The Federal Aid Highway System Progress Map</title>, Department of Agriculture, Bureau of Public Roads, <unitdate type="inclusive" era="ce" calendar="gregorian">November 9, 1921</unitdate> Corrected to <unitdate type="inclusive" era="ce" calendar="gregorian">September 1, 1936</unitdate></unittitle>
+ </did>
+ </c04>
+ <c04 level="file">
+ <did>
+ <container type="box" label="Box">4</container>
+ <unittitle><title render="italic" linktype="simple">Northern California, The Federal Aid Highway System Progress Map</title>, Department of Agriculture, Bureau of Public Roads, <unitdate type="inclusive" era="ce" calendar="gregorian">November 9, 1921</unitdate> Corrected to <unitdate type="inclusive" era="ce" calendar="gregorian">December 1, 1936</unitdate></unittitle>
+ </did>
+ </c04>
+ <c04 level="file">
+ <did>
+ <container type="box" label="Box">4</container>
+ <unittitle><title render="italic" linktype="simple">Utah Map Showing State Road System</title>, State Road Commission, <unitdate type="inclusive" era="ce" calendar="gregorian">1922</unitdate> (annotated)</unittitle>
+ </did>
+ </c04>
+ <c04 level="file">
+ <did>
+ <container type="box" label="Box">4</container>
+ <unittitle><title render="italic" linktype="simple">Utah, Types of Surfacing on Sate Road System</title>, <unitdate type="inclusive" era="ce" calendar="gregorian">November 1, 1922</unitdate></unittitle>
+ </did>
+ </c04>
+ <c04 level="file">
+ <did>
+ <container type="box" label="Box">4</container>
+ <unittitle><title render="italic" linktype="simple">Utah Map Showing State Road System</title>, State Road Commission, <unitdate type="inclusive" era="ce" calendar="gregorian">1923</unitdate> (2 copies)</unittitle>
+ </did>
+ </c04>
+ <c04 level="file">
+ <did>
+ <container type="box" label="Box">4</container>
+ <unittitle><title render="italic" linktype="simple">Map Showing Construction Progress</title>, State Highway System of Nevada, <unitdate type="inclusive" era="ce" calendar="gregorian">December 8, 1923</unitdate></unittitle>
+ </did>
+ </c04>
+ <c04 level="file">
+ <did>
+ <container type="box" label="Box">4</container>
+ <unittitle><title render="italic" linktype="simple">State Road Map of Utah</title>, State Road Commission, <unitdate type="inclusive" era="ce" calendar="gregorian">1926</unitdate> color (2 copies)</unittitle>
+ </did>
+ </c04>
+ <c04 level="file">
+ <did>
+ <container type="box" label="Box">4</container>
+ <unittitle><title render="italic" linktype="simple">Partial Nevada State Road Map</title>, undated, color</unittitle>
+ </did>
+ </c04>
+ <c04 level="file">
+ <did>
+ <container type="box" label="Box">4</container>
+ <unittitle><title render="italic" linktype="simple">Hotel Plaza, San Francisco</title>, undated, color</unittitle>
+ </did>
+ </c04>
+ </c03>
+ <c03 level="file">
+ <did>
+ <unittitle>National Park Maps</unittitle>
+ </did>
+ <c04 level="file">
+ <did>
+ <container type="box" label="Box">4</container>
+ <unittitle><title render="italic" linktype="simple">Eldorado National Forest, California, Mt. Diablo Meridian</title>, U.S. Department of Agriculture, Forest Service, <unitdate type="inclusive" era="ce" calendar="gregorian">1916</unitdate></unittitle>
+ </did>
+ </c04>
+ <c04 level="file">
+ <did>
+ <container type="box" label="Box">4</container>
+ <unittitle><title render="italic" linktype="simple">Automobile Guide Map Showing Roads in the Yosemite National Park, California</title>, Department of the Interior, National Park Service, <unitdate type="inclusive" era="ce" calendar="gregorian">March 1, 1916</unitdate></unittitle>
+ </did>
+ </c04>
+ <c04 level="file">
+ <did>
+ <container type="box" label="Box">4</container>
+ <unittitle><title render="italic" linktype="simple">Automobile Guide Map Showing Roads in the Glacier National Park, Montana</title>, Department of the Interior, National Park Service, <unitdate type="inclusive" era="ce" calendar="gregorian">1917</unitdate></unittitle>
+ </did>
+ </c04>
+ <c04 level="file">
+ <did>
+ <container type="box" label="Box">4</container>
+ <unittitle><title render="italic" linktype="simple">Automobile Guide Map Showing Roads in the Mount Rainier National Park, Washington</title>, Department of the Interior, National Park Service, <unitdate type="inclusive" era="ce" calendar="gregorian">1917</unitdate></unittitle>
+ </did>
+ </c04>
+ <c04 level="file">
+ <did>
+ <container type="box" label="Box">4</container>
+ <unittitle><title render="italic" linktype="simple">Map Showing All Routes into Yosemite National Park, California</title> State Automobile Association, undated, color</unittitle>
+ </did>
+ </c04>
+ </c03>
+ <c03 level="file">
+ <did>
+ <unittitle>Route Maps</unittitle>
+ </did>
+ <c04 level="file">
+ <did>
+ <unittitle>National Route Maps, Lincoln Highway Association </unittitle>
+ <physdesc>
+ <extent>3 folders</extent>
+ </physdesc>
+ </did>
+ <c05 level="file">
+ <did>
+ <container type="box" label="Box">4</container>
+ <unittitle><title render="italic" linktype="simple">General Map of Transcontinental Routes with Principal Connections</title>, American Automobile Association, <unitdate type="inclusive" era="ce" calendar="gregorian">1912-1913</unitdate> (annotated)</unittitle>
+ </did>
+ </c05>
+ <c05 level="item">
+ <did>
+ <container type="box" label="Box">4</container>
+ <unittitle><title render="italic" linktype="simple">Map of the Midland Trail Showing Every City, Town, Village, and Hamlet Throughout Its Entire Length</title>, Midland Trail Association, <unitdate type="inclusive" era="ce" calendar="gregorian">October 1915</unitdate> color</unittitle>
+ </did>
+ </c05>
+ <c05 level="item">
+ <did>
+ <container type="box" label="Box">4</container>
+ <unittitle><title render="italic" linktype="simple">The Lincoln Highway,</title> Lincoln Highway Association, <unitdate type="inclusive" era="ce" calendar="gregorian">1924</unitdate><unitdate type="inclusive" era="ce" calendar="gregorian">March 1, 1928</unitdate> color</unittitle>
+ </did>
+ </c05>
+ <c05 level="item">
+ <did>
+ <container type="box" label="Box">4</container>
+ <unittitle><title render="italic" linktype="simple">Lincoln Highway, New York to San Francisco</title>, 17 Maps, Lincoln Highway Association, <unitdate type="inclusive" era="ce" calendar="gregorian">undated</unitdate></unittitle>
+ </did>
+ </c05>
+ <c05 level="item">
+ <did>
+ <container type="box" label="Box">4</container>
+ <unittitle><title render="italic" linktype="simple">Lincoln Highway, New York to San Francisco</title>, 17 Maps, Lincoln Highway Association, <unitdate type="inclusive" era="ce" calendar="gregorian">undated</unitdate> (16 Maps present-annotated)</unittitle>
+ </did>
+ </c05>
+ </c04>
+ <c04 level="item">
+ <did>
+ <unittitle>Regional Route Maps </unittitle>
+ <physdesc>
+ <extent>2 folders</extent>
+ </physdesc>
+ </did>
+ <c05 level="file">
+ <did>
+ <container type="box" label="Box">4</container>
+ <unittitle><title render="italic" linktype="simple">Stockton to Sacramento</title>, Route and Map Bureau, California State Automobile Association, <unitdate type="inclusive" era="ce" calendar="gregorian">undated</unitdate></unittitle>
+ </did>
+ </c05>
+ <c05 level="item">
+ <did>
+ <container type="box" label="Box">4</container>
+ <unittitle><title render="italic" linktype="simple">Los Angeles to Witter and Santa Ana</title>, <unitdate type="inclusive" era="ce" calendar="gregorian">undated</unitdate></unittitle>
+ </did>
+ </c05>
+ <c05 level="item">
+ <did>
+ <container type="box" label="Box">4</container>
+ <unittitle><title render="italic" linktype="simple">Main Roads Between San Francisco-Lake Tahoe and Reno, Nevada</title>, <unitdate type="inclusive" era="ce" calendar="gregorian">undated</unitdate></unittitle>
+ </did>
+ </c05>
+ <c05 level="item">
+ <did>
+ <container type="box" label="Box">4</container>
+ <unittitle><title render="italic" linktype="simple">Portion of Great Salt Lake, Utah</title>, <unitdate type="inclusive" era="ce" calendar="gregorian">undated</unitdate></unittitle>
+ </did>
+ </c05>
+ <c05 level="item">
+ <did>
+ <container type="box" label="Box">4</container>
+ <unittitle><title render="italic" linktype="simple">Automobile Route East of the Sierras from Los Angeles to Lake Tahoe</title>, Touring Bureau, Route and Map Service, Automobile Club of Southern California, Part One and Two, <unitdate type="inclusive" era="ce" calendar="gregorian">1912</unitdate></unittitle>
+ </did>
+ </c05>
+ <c05 level="item">
+ <did>
+ <container type="box" label="Box">4</container>
+ <unittitle><title render="italic" linktype="simple">Sacramento to Silver Fork and Sacramento to Auburn</title>, Route and Map Bureau, California State Automobile Association, <unitdate type="inclusive" era="ce" calendar="gregorian">February 10, 1915</unitdate></unittitle>
+ </did>
+ </c05>
+ <c05 level="item">
+ <did>
+ <container type="box" label="Box">4</container>
+ <unittitle><title render="italic" linktype="simple">Automobile Roads from San Francisco to Sacramento via Sacramento Causeway</title>, Route and Map Bureau, California State Automobile Association, <unitdate type="inclusive" era="ce" calendar="gregorian">undated</unitdate></unittitle>
+ </did>
+ </c05>
+ <c05 level="item">
+ <did>
+ <container type="box" label="Box">4</container>
+ <unittitle><title render="italic" linktype="simple">San Francisco to Stockton, Route and Map Bureau</title>, California State Automobile Association, <unitdate type="inclusive" era="ce" calendar="gregorian">undated</unitdate></unittitle>
+ </did>
+ </c05>
+ <c05 level="item">
+ <did>
+ <container type="box" label="Box">4</container>
+ <unittitle><title render="italic" linktype="simple">Automobile Roads from San Francisco to Sacramento via Martinez, Cordelia &amp; Davis also via Sausalito, Black Point, Napa &amp; Cordelia</title>, California State Automobile Association, <unitdate type="inclusive" era="ce" calendar="gregorian">undated</unitdate> (annotated)</unittitle>
+ </did>
+ </c05>
+ <c05 level="item">
+ <did>
+ <container type="box" label="Box">4</container>
+ <unittitle><title render="italic" linktype="simple">Automobile Roads of San Francisco Contra Costa and Alameda Counties</title>, Touring Bureau, California State Automobile Association, <unitdate type="inclusive" era="ce" calendar="gregorian">undated</unitdate> (annotated)</unittitle>
+ </did>
+ </c05>
+ <c05 level="item">
+ <did>
+ <container type="box" label="Box">4</container>
+ <unittitle><title render="italic" linktype="simple">Omaha to Chicago and Philadelphia, Touring Bureau, Route and Map Service</title>, Automobile Club of Southern California, <unitdate type="inclusive" era="ce" calendar="gregorian">undated</unitdate></unittitle>
+ </did>
+ </c05>
+ <c05 level="item">
+ <did>
+ <container type="box" label="Box">4</container>
+ <unittitle><title render="italic" linktype="simple">Official Lincoln Highway Guide Thru Iowa</title>, Midland Map &amp; Engineering Company, <unitdate type="inclusive" era="ce" calendar="gregorian">1820</unitdate></unittitle>
+ </did>
+ </c05>
+ <c05 level="item">
+ <did>
+ <container type="box" label="Box">4</container>
+ <unittitle><title render="italic" linktype="simple">Ely to Salt Lake City</title>, Touring Bureau, Route and Map Service, Automobile Club of Southern California, <unitdate type="inclusive" era="ce" calendar="gregorian">1917</unitdate></unittitle>
+ </did>
+ </c05>
+ <c05 level="item">
+ <did>
+ <container type="box" label="Box">4</container>
+ <unittitle><title render="italic" linktype="simple">Stockton to Sacramento</title>, Route and Map Service, Automobile Club of Southern California, <unitdate type="inclusive" era="ce" calendar="gregorian">February 10, 1915</unitdate></unittitle>
+ </did>
+ </c05>
+ <c05 level="item">
+ <did>
+ <container type="box" label="Box">4</container>
+ <unittitle><title render="italic" linktype="simple">Silver Fork, California to Reno, Nevada and Truckee, California to Reno, Nevada</title>, Route and Map Service, Automobile Club of Southern California, <unitdate type="inclusive" era="ce" calendar="gregorian">February 10, 1915</unitdate></unittitle>
+ </did>
+ </c05>
+ <c05 level="item">
+ <did>
+ <container type="box" label="Box">4</container>
+ <unittitle><title render="italic" linktype="simple">Auburn to Truckee, Route and Map Service</title>, Automobile Club of Southern California, <unitdate type="inclusive" era="ce" calendar="gregorian">February 7, 1915</unitdate></unittitle>
+ </did>
+ </c05>
+ </c04>
+ <c04 level="item">
+ <did>
+ <unittitle>Automobile Club of Southern California</unittitle>
+ </did>
+ <c05 level="file">
+ <did>
+ <container type="box" label="Box">4</container>
+ <unittitle>Sacramento to Salt Lake City Case, <unitdate type="inclusive" era="ce" calendar="gregorian">undated</unitdate> </unittitle>
+ </did>
+ </c05>
+ <c05 level="item">
+ <did>
+ <container type="box" label="Box">4</container>
+ <unittitle><title render="italic" linktype="simple">Sacramento to Lake Tahoe &amp; Reno via Placerville</title>, <unitdate type="inclusive" era="ce" calendar="gregorian">undated</unitdate></unittitle>
+ </did>
+ </c05>
+ <c05 level="item">
+ <did>
+ <container type="box" label="Box">4</container>
+ <unittitle><title render="italic" linktype="simple">Reno to Ely</title>, <unitdate type="inclusive" era="ce" calendar="gregorian">1918</unitdate></unittitle>
+ </did>
+ </c05>
+ <c05 level="item">
+ <did>
+ <container type="box" label="Box">4</container>
+ <unittitle><title render="italic" linktype="simple">Ely to Salt Lake City</title>, <unitdate type="inclusive" era="ce" calendar="gregorian">1917 undated</unitdate></unittitle>
+ <physdesc>
+ <extent>2 folders</extent>
+ </physdesc>
+ </did>
+ </c05>
+ <c05 level="item">
+ <did>
+ <container type="box" label="Box">4</container>
+ <unittitle>Salt Lake City to New York Case, <unitdate type="inclusive" era="ce" calendar="gregorian">undated</unitdate> </unittitle>
+ </did>
+ </c05>
+ <c05 level="item">
+ <did>
+ <container type="box" label="Box">4</container>
+ <unittitle><title render="italic" linktype="simple">Salt Lake City to Omaha</title>, <unitdate type="inclusive" era="ce" calendar="gregorian">1919 undated</unitdate></unittitle>
+ <physdesc>
+ <extent>5 folders</extent>
+ </physdesc>
+ </did>
+ </c05>
+ <c05 level="item">
+ <did>
+ <container type="box" label="Box">4</container>
+ <unittitle><title render="italic" linktype="simple">Omaha to Chicago &amp; Philadelphia</title>, <unitdate type="inclusive" era="ce" calendar="gregorian">undated</unitdate></unittitle>
+ <physdesc>
+ <extent>3 folders</extent>
+ </physdesc>
+ </did>
+ </c05>
+ <c05 level="item">
+ <did>
+ <container type="box" label="Box">4</container>
+ <unittitle><title render="italic" linktype="simple">Philadelphia to New York</title>, <unitdate type="inclusive" era="ce" calendar="gregorian">undated</unitdate></unittitle>
+ </did>
+ </c05>
+ <c05 level="item">
+ <did>
+ <container type="box" label="Box">4</container>
+ <unittitle>Miscellaneous Maps Case, <unitdate type="inclusive" era="ce" calendar="gregorian">undated</unitdate> </unittitle>
+ </did>
+ </c05>
+ <c05 level="item">
+ <did>
+ <container type="box" label="Box">4</container>
+ <unittitle><title render="italic" linktype="simple">Los Angeles to Ely via the Midland Trail</title>, <unitdate type="inclusive" era="ce" calendar="gregorian">undated</unitdate></unittitle>
+ <physdesc>
+ <extent>3 folders</extent>
+ </physdesc>
+ </did>
+ </c05>
+ <c05 level="item">
+ <did>
+ <container type="box" label="Box">4</container>
+ <unittitle><title render="italic" linktype="simple">Sacramento &amp; Lake Tahoe via Truckee</title>, <unitdate type="inclusive" era="ce" calendar="gregorian">undated</unitdate></unittitle>
+ </did>
+ </c05>
+ <c05 level="item">
+ <did>
+ <container type="box" label="Box">4</container>
+ <unittitle><title render="italic" linktype="simple">Los Angeles to San Francisco via the Coast Route</title>, <unitdate type="inclusive" era="ce" calendar="gregorian">1917-1918</unitdate><unitdate type="inclusive" era="ce" calendar="gregorian">undated</unitdate></unittitle>
+ </did>
+ </c05>
+ <c05 level="item">
+ <did>
+ <container type="box" label="Box">4</container>
+ <unittitle>Miscellaneous Routes, <unitdate type="inclusive" era="ce" calendar="gregorian">1918 undated</unitdate> </unittitle>
+ <physdesc>
+ <extent>3 folders</extent>
+ </physdesc>
+ </did>
+ </c05>
+ </c04>
+ </c03>
+ </c02>
+ </c01>
+ <c01 level="series">
+ <did>
+ <unittitle>Miscellaneous</unittitle>
+ </did>
+ <scopecontent>
+ <p>The Miscellaneous series is comprised of scrapbooks, photographs, stationery, and correspondence between the Lincoln Highway Association and the University of Michigan. The series' correspondence deals with the transfer of records to the Transportation Library, Engineering Department, lending of photographs, and the transactions between the library and Walt Disney Productions regarding several reels of film about the Lincoln Highway. Photographs include shots of the highway previously published as well as original photos of several board members. Photographs from the collection have been digitized and are accessible online at the <extref href="http://quod.lib.umich.edu/cgi/i/image/image-idx?c=linchigh" show="new" linktype="simple">Lincoln Highway Digital Image Collection</extref>. The Lincoln Highway Digital Image Collection contains over 3,000 images including views of construction underway, towns and cities, markers, bridges, cars, camp sites, scenic views, and snapshots of Association directors and field secretaries traveling the route. </p>
+ </scopecontent>
+ <c02 level="file">
+ <did>
+ <unittitle>Photographs</unittitle>
+ </did>
+ <c03 level="file">
+ <did>
+ <container type="box" label="Box">4</container>
+ <unittitle>On the Road</unittitle>
+ </did>
+ </c03>
+ <c03 level="file">
+ <did>
+ <container type="box" label="Box">4</container>
+ <unittitle>Directors </unittitle>
+ <physdesc>
+ <extent>3 folders</extent>
+ </physdesc>
+ </did>
+ </c03>
+ </c02>
+ <c02 level="file">
+ <did>
+ <container type="box" label="Box">4</container>
+ <unittitle>Stationery</unittitle>
+ </did>
+ </c02>
+ <c02 level="file">
+ <did>
+ <unittitle>University of Michigan Correspondence</unittitle>
+ </did>
+ <c03 level="file">
+ <did>
+ <container type="box" label="Box">4</container>
+ <unittitle>
+ <unitdate type="inclusive" era="ce" calendar="gregorian">May 20, 1943-December 1, 1945</unitdate>
+ </unittitle>
+ </did>
+ </c03>
+ <c03 level="file">
+ <did>
+ <container type="box" label="Box">4</container>
+ <unittitle>
+ <unitdate type="inclusive" era="ce" calendar="gregorian">December 3, 1945-October 3, 1946</unitdate>
+ </unittitle>
+ </did>
+ </c03>
+ <c03 level="file">
+ <did>
+ <container type="box" label="Box">4</container>
+ <unittitle>
+ <unitdate type="inclusive" era="ce" calendar="gregorian">October 5, 1946-January 9, 1947</unitdate>
+ </unittitle>
+ </did>
+ </c03>
+ <c03 level="file">
+ <did>
+ <container type="box" label="Box">4</container>
+ <unittitle>
+ <unitdate type="inclusive" era="ce" calendar="gregorian">February 14, 1947-February 8, 1973</unitdate>
+ </unittitle>
+ </did>
+ </c03>
+ <c03 level="file">
+ <did>
+ <unittitle>Walt Disney Productions</unittitle>
+ </did>
+ <c04 level="file">
+ <did>
+ <container type="box" label="Box">4</container>
+ <unittitle>
+ <unitdate type="inclusive" era="ce" calendar="gregorian">October 9, 1957-October 30, 1957</unitdate>
+ </unittitle>
+ </did>
+ </c04>
+ <c04 level="file">
+ <did>
+ <container type="box" label="Box">4</container>
+ <unittitle>
+ <unitdate type="inclusive" era="ce" calendar="gregorian">October 30, 1957-December 13, 1957</unitdate>
+ </unittitle>
+ </did>
+ </c04>
+ <c04 level="file">
+ <did>
+ <container type="box" label="Box">4</container>
+ <unittitle>
+ <unitdate type="inclusive" era="ce" calendar="gregorian">December 20, 1957-May 6, 1958</unitdate>
+ </unittitle>
+ </did>
+ </c04>
+ </c03>
+ <c03 level="file">
+ <did>
+ <container type="box" label="Box">6</container>
+ <unittitle>Scrapbooks of clippings and mock-ups of publicity brochures (5 items)</unittitle>
+ </did>
+ </c03>
+ </c02>
+ </c01>
+ <c01 level="series">
+ <did>
+ <unittitle>Jens Jensen Drawings</unittitle>
+ </did>
+ <scopecontent>
+ <p>The Jens Jensen Drawings series (1922-1924) includes seven sketches by the landscape architect for a Campsite and Filling Station located in the Ideal Section, Lake County, Indiana, which was never built. The drawings are in color pencil on onion paper. Six of the sketches portray the general plan of the campsite from an aerial view. One sketch includes the designs for grease and wash racks, filling station and museum, stove and incinerator, and the camp fire. </p>
+ </scopecontent>
+ <c02 level="file">
+ <did>
+ <container type="port">Port. 1</container>
+ <unittitle>"A Preliminary Sketch for the Camp Site-Ideal Section-Lincoln Highway. Lake County-Indiana. June 1923" (26in x 36.5in; color)</unittitle>
+ </did>
+ </c02>
+ <c02 level="file">
+ <did>
+ <container type="port">Port. 1</container>
+ <unittitle>"A Preliminary Sketch for the Camp Grounds-Ideal Section-Lincoln Highway. Lake County-Indiana. December 1922" (26in x 36.5in; color)</unittitle>
+ </did>
+ </c02>
+ <c02 level="file">
+ <did>
+ <container type="port">Port. 1</container>
+ <unittitle>"A Preliminary Sketch for the Camp Site-Ideal Section-Lincoln Highway. Lake County-Indiana. July 1923" (21.5in x 38.5in; b&amp;w)</unittitle>
+ </did>
+ </c02>
+ <c02 level="file">
+ <did>
+ <container type="port">Port. 1</container>
+ <unittitle>"A Preliminary Sketch for the Camp Site-Ideal Section-Lincoln Highway. Lake County-Indiana. December 1923" (16.5in x 37in; color)</unittitle>
+ </did>
+ </c02>
+ <c02 level="file">
+ <did>
+ <container type="port">Port. 1</container>
+ <unittitle>"Campsite with Estimates, [July ] 1924" (16in x 39.5in; color)</unittitle>
+ </did>
+ </c02>
+ <c02 level="file">
+ <did>
+ <container type="port">Port. 1</container>
+ <unittitle>"Details for Camp Site-Ideal Section-Lincoln Highway. Lake County-Indiana. May 1924" (11.75in x 38.5in; color)</unittitle>
+ </did>
+ </c02>
+ <c02 level="file">
+ <did>
+ <container type="port">Port. 1</container>
+ <unittitle>"A Preliminary Sketch for the Camp Site-Ideal Section-Lincoln Highway. Lake County-Indiana. May 1924" (drawing: 25in x 35in; framed: 28.25in x 41.25in; color) (CANTILEVER WEST)</unittitle>
+ </did>
+ </c02>
+ </c01>
+ </dsc>
+ </archdesc>
+</ead>
