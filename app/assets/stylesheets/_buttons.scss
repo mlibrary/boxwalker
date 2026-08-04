@@ -37,7 +37,7 @@
 
 .btn-secondary {
   color: var.$color-blue-400;
-  font-weight: bold;
+  font-weight: var.$bold;
   background-color: var.$color-neutral-100;
   border-color: var.$color-neutral-100;
   &:hover {
@@ -64,7 +64,7 @@
 
 .btn-success {
   color: var.$color-background-primary;
-  font-weight: bold;
+  font-weight: var.$bold;
   font-size: 1em;
   background-color: var.$color-green-500;
   border-color: var.$color-green-500;
