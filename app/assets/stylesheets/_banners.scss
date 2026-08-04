@@ -1,4 +1,5 @@
 @use "bootstrap-context" as bs;
+@use "variables" as var;
 
 /* ======================================== */
 /* CONFIGURABLE HOMEPAGE ALERT BANNER       */
@@ -17,7 +18,7 @@
 
     &.banner-heading {
       align-items: center; /* vertical */
-      color: var(--color-neutral-500);
+      color: var.$color-neutral-500;
       font-size: 20px;
       white-space: nowrap;
       padding: 0 60px 0 15px;
@@ -25,11 +26,15 @@
       -webkit-clip-path: polygon(0 0, 100% 0, calc(100% - 20px) 100%, 0 100%);
       clip-path: polygon(0 0, 100% 0, calc(100% - 20px) 100%, 0 100%);
 
-      @include bs.media-breakpoint-down(xl) { padding: 15px; }
-      @include bs.media-breakpoint-down(lg) { display: block; }
+      @include bs.media-breakpoint-down(xl) {
+        padding: 15px;
+      }
+      @include bs.media-breakpoint-down(lg) {
+        display: block;
+      }
 
       .blacklight-icons svg {
-        fill: var(--color-neutral-500);
+        fill: var.$color-neutral-500;
         height: 1.2rem;
         width: 1.2rem;
         margin-right: 0.6rem;
@@ -57,17 +62,22 @@
       line-height: 1.4em;
 
       .banner-message-text {
-        font-weight: 600;
-        color: var(--color-neutral-500);
+        font-weight: var.$semibold;
+        color: var.$color-neutral-500;
       }
     }
   }
 
   /* Only variant currently used in the app */
   &.banner-warning {
-    background-color: var(--color-maize-200);
+    background-color: var.$color-maize-200;
 
-    .banner-heading  { background-color: var(--color-maize-400); }
-    .banner-shadow   { background-color: var(--color-maize-300); }
+    .banner-heading {
+      background-color: var.$color-maize-400;
+    }
+
+    .banner-shadow {
+      background-color: var.$color-maize-300;
+    }
   }
 }

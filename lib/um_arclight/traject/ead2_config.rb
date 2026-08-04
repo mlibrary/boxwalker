@@ -35,7 +35,9 @@ SEARCHABLE_NOTES_FIELDS = %w[
   originalsloc
   otherfindaid
   phystech
+  relatedmaterial
   scopecontent
+  separatedmaterial
 ].freeze
 
 DID_SEARCHABLE_NOTES_FIELDS = %w[
@@ -51,8 +53,6 @@ DESCGRP_FIELDS = %w[
   accruals
   prefercite
   processinfo
-  relatedmaterial
-  separatedmaterial
   userestrict
 ].freeze
 
