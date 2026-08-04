@@ -4,10 +4,9 @@
       presenter: presenter, classes: "") %>
 <% end %>
 
-<% if access_content.present? %>
-  <div id="<%= t('arclight.views.show.sections.access_field').parameterize %>">
-    <h2 class="al-show-sub-heading"><%= t 'arclight.views.show.sections.access_field' %></h2>
-    <%= render UmMaterialsAccessComponent.new(document: presenter.document) %>
-    <%= access_content %>
-  </div>
-<% end %>
+<%# This probably should continue to be wrapped in a conditional, but removed it for now. %>
+<div id="<%= t('arclight.views.show.sections.access_field').parameterize %>">
+  <h2 class="al-show-sub-heading"><%= t 'arclight.views.show.sections.access_field' %></h2>
+  <%= render UmMaterialsAccessComponent.new(document: presenter.document) %>
+  <%= access_content %>
+</div>
