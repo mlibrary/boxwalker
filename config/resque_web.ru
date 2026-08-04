@@ -11,6 +11,6 @@ require "resque"
 require "resque/server"
 
 Resque.redis = ENV.fetch("REDIS_URL", "redis://localhost:6379/0")
-Resque.redis.namespace = ENV.fetch("RESQUE_NAMESPACE", "resque:boxrunner")
+Resque.redis.namespace = ENV.fetch("RESQUE_NAMESPACE", "resque:boxwalker")
 
 run Resque::Server.new

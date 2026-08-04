@@ -51,7 +51,7 @@ services:
       context: .
     environment:
       - REDIS_URL=redis://redis:6379/0
-      - RESQUE_NAMESPACE=resque:boxrunner
+      - RESQUE_NAMESPACE=resque:boxwalker
     env_file:
       - .env
     ports:

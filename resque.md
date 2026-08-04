@@ -1,4 +1,4 @@
-# Resque on boxrunner — Recommendations
+# Resque on boxwalker — Recommendations
 
 ## Context
 
@@ -76,7 +76,7 @@ not your jobs.
 require "resque"
 
 Resque.redis = ENV.fetch("REDIS_URL", "redis://localhost:6379/0")
-Resque.redis.namespace = "resque:boxrunner"
+Resque.redis.namespace = "resque:boxwalker"
 ```
 
 Drive `REDIS_URL` from Rails credentials / env vars; never hardcode production hosts.
