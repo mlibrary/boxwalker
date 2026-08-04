@@ -4,7 +4,7 @@ require "rails_helper"
 require "traject"
 require "traject/nokogiri_reader"
 
-RSpec.describe "config/traject/ead2_config.rb" do
+RSpec.describe "lib/um_arclight/traject/ead2_config.rb" do
   subject(:result) { indexer.map_record(record) }
 
   let(:fixture_path) { Rails.root.join("spec/fixtures/bhl/umich-bhl-032.xml") }
@@ -21,7 +21,7 @@ RSpec.describe "config/traject/ead2_config.rb" do
         provide "repository", "bhl"
         provide "writer_class_name", "Traject::ArrayWriter"
       end
-      i.load_config_file(Rails.root.join("config/traject/ead2_config.rb"))
+      i.load_config_file(Rails.root.join("lib/um_arclight/traject/ead2_config.rb"))
     end
   end
 
