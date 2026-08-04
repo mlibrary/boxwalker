@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 require "active_support/core_ext/integer/time"
 
 Rails.application.configure do
@@ -17,6 +19,11 @@ Rails.application.configure do
 
   # Cache assets for far-future expiry since they are all digest stamped.
   config.public_file_server.headers = { "cache-control" => "public, max-age=#{1.year.to_i}" }
+
+  # CSS is already compiled and prefixed by cssbundling-rails (yarn build:css),
+  # so disable Sprockets' Sass compressor (added by sassc-rails). Re-running
+  # SassC over the bundled application.css breaks on Bootstrap's url(...) assets.
+  config.assets.css_compressor = nil
 
   # Enable serving of images, stylesheets, and JavaScripts from an asset server.
   # config.asset_host = "http://assets.example.com"
@@ -87,4 +94,24 @@ Rails.application.configure do
   #
   # Skip DNS rebinding protection for the default health check endpoint.
   # config.host_authorization = { exclude: ->(request) { request.path == "/up" } }
+
+  # -------------------------------------------------------------
+  # CUSTOM LOCAL HYBRID CONFIGURATIONS
+  # -------------------------------------------------------------
+
+  # 1. Force the global background queue adapter to Resque
+  config.active_job.queue_adapter = :resque
+
+  # 2. Force any custom or third-party jobs to also use Resque
+  ActiveJob::Base.queue_adapter = :resque
+
+  # 3. Highlight code paths in logs
+  config.active_job.verbose_enqueue_logs = true
+  config.action_dispatch.verbose_redirect_logs = true
+
+  # 4. Clear host filtering so your Mac browser can talk to the server cleanly
+  config.hosts.clear
+
+  # 5. Enable the built-in ingesting automation pipeline
+  config.x.arclight.enable_ingest_automation = true
 end
