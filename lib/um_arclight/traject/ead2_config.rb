@@ -254,16 +254,17 @@ SEARCHABLE_NOTES_FIELDS.map do |selector|
   to_field "#{selector}_html_tesm", extract_xpath("/ead/archdesc/#{selector}/*[local-name()!='head']", to_text: false) do |_record, accumulator|
     accumulator.map!(&:to_html)
   end
-  to_field "#{selector}_heading_ssm", extract_xpath("/ead/archdesc/#{selector}/head") unless selector == "prefercite"
+  to_field "#{selector}_heading_ssm", extract_xpath("/ead/archdesc/#{selector}/head")
   to_field "#{selector}_tesim", extract_xpath("/ead/archdesc/#{selector}/*[local-name()!='head']")
 end
 
 DESCGRP_FIELDS.map do |selector|
-  to_field "#{selector}_html_tesm", extract_xpath("/ead/archdesc/descgrp[@type != 'add']/#{selector}/*[local-name()!='head']", to_text: false) do |_record, accumulator|
+  # UM modified queries to remove filtering on legacy @type attributes "add" & "admininfo."
+  to_field "#{selector}_html_tesm", extract_xpath("/ead/archdesc/descgrp/#{selector}/*[local-name()!='head']", to_text: false) do |_record, accumulator|
     accumulator.map!(&:to_html)
   end
-  to_field "#{selector}_heading_ssm", extract_xpath("/ead/archdesc/descgrp[@type != 'add']/#{selector}/head") unless selector == "prefercite"
-  to_field "#{selector}_tesim", extract_xpath("/ead/archdesc/descgrp[@type != 'add']/#{selector}/*[local-name()!='head']")
+  to_field "#{selector}_heading_ssm", extract_xpath("/ead/archdesc/descgrp/#{selector}/head") unless selector == "prefercite"
+  to_field "#{selector}_tesim", extract_xpath("/ead/archdesc/descgrp/#{selector}/*[local-name()!='head']")
 end
 
 DID_SEARCHABLE_NOTES_FIELDS.map do |selector|

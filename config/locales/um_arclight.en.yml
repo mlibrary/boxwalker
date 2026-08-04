@@ -72,11 +72,6 @@ en:
     contact:
       title: "Contact Us"
 
-    ead_element_labels:
-      separatedmaterial: "Alternate Locations"
-      relatedmaterial: "Related Materials"
-      bibliography: "Bibliography"
-
     errors:
       redirected_to_collection: |
         We’re not sure what section of the finding aid you were looking for;
