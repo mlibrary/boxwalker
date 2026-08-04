@@ -153,10 +153,10 @@ RSpec.describe "lib/um_arclight/traject/ead2_config.rb" do
       expect(result["scopecontent_tesim"]).not_to be_empty
     end
 
-    # Note: this fixture nests <accessrestrict> inside <descgrp>, not directly under
-    # <archdesc>, so the XPath /ead/archdesc/accessrestrict does not find it.
-    it "maps accessrestrict_tesim as nil when nested inside <descgrp>" do
-      expect(result["accessrestrict_tesim"]).to be_nil
+    # Note: this fixture nests <accessrestrict> inside <descgrp>. The DESCGRP_FIELDS
+    # loop maps accessrestrict_tesim from the descgrp XPath, so it is populated.
+    it "maps accessrestrict_tesim from descgrp/accessrestrict" do
+      expect(result["accessrestrict_tesim"]).not_to be_empty
     end
 
     it "maps acqinfo_ssim from descgrp/acqinfo" do
