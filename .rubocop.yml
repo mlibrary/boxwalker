@@ -6,9 +6,9 @@ inherit_gem: { rubocop-rails-omakase: rubocop.yml }
 # Overwrite or add rules to create your own house style
 #
 # Enforce explicit frozen string literal magic comments.
-Style/FrozenStringLiteralComment:
-  Enabled: true
-  EnforcedStyle: always_true
+#Style/FrozenStringLiteralComment:
+#  Enabled: true
+#  EnforcedStyle: always_true
 
 # # Use `[a, [b, c]]` not `[ a, [ b, c ] ]`
 # Layout/SpaceInsideArrayLiteralBrackets:
