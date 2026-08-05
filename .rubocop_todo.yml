@@ -10,10 +10,12 @@
 # Configuration parameters: AllowedMethods, AllowedPatterns, CountRepeatedAttributes, Max.
 Metrics/AbcSize:
   Exclude:
+    - 'app/services/package/generator.rb'
     - 'lib/box/package/generator.rb'
 
 # Offense count: 4
 # Configuration parameters: CountComments, Max, CountAsOne, AllowedMethods, AllowedPatterns.
 Metrics/MethodLength:
   Exclude:
+    - 'app/services/package/generator.rb'
     - 'lib/box/package/generator.rb'
