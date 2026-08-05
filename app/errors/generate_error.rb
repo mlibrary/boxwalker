@@ -1,5 +1,5 @@
 # frozen_string_literal: true
 
-module Box
+module Boxrunner
   class GenerateError < Error; end
 end
