@@ -26,7 +26,7 @@ module FindingAid
 
           # Make an archive copy of source file available for downloads.
           ead_id = context.output_hash["id"]&.first
-          dest_dir = Rails.root.join("data", "xml", repo_id).to_s
+          dest_dir = File.join(ENV.fetch("FINDING_AID_DATA", Rails.root.join("data").to_s), "xml", repo_id)
           dest_path = File.join(dest_dir, "#{ead_id}.xml")
           FileUtils.mkdir_p(dest_dir)
           FileUtils.copy_file(src_path, dest_path, preserve: true, dereference: true, remove_destination: true)

@@ -23,9 +23,6 @@ RSpec.describe FindingAid::IngestRecord do
   let(:document) { instance_double('SolrDocument') }
 
   before do
-    allow(ENV).to receive(:[]).and_call_original
-    allow(ENV).to receive(:[]).with('FINDING_AID_DATA').and_return('/tmp')
-
     stub_const('Findingaid', Class.new do
       def self.find(_id); end
     end)

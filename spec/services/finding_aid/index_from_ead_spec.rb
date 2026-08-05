@@ -19,8 +19,8 @@ RSpec.describe FindingAid::IndexFromEad do
 
   context 'when source open succeed' do
     let(:src_path) { Rails.root.join('spec/fixtures/bhl/umich-bhl-032.xml') }
-    let(:dest_path) { Rails.root.join('data/xml/bhl/umich-bhl-032.xml').to_s }
-    let(:dest_dir) { Rails.root.join('data/xml/bhl').to_s  }
+    let(:dest_path) { File.join(ENV['FINDING_AID_DATA'], 'xml', 'bhl', 'umich-bhl-032.xml') }
+    let(:dest_dir) { File.join(ENV['FINDING_AID_DATA'], 'xml', 'bhl') }
     let(:indexer_context) { double("context", output_hash: { "id" => [ "umich-bhl-032" ] }) }
     let(:indexer) { instance_double(Traject::Indexer::NokogiriIndexer) }
 
