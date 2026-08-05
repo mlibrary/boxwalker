@@ -44,6 +44,11 @@ gem "image_processing", "~> 1.2"
 
 # date range chart
 gem "blacklight_range_limit", ">= 9.2"
+# job worker queue
+gem "resque", "~> 3.0"
+gem "redis"
+gem "resque-scheduler"
+gem "resque-web"
 
 group :development, :test do
   # See https://guides.rubyonrails.org/debugging_rails_applications.html#debugging-with-the-debug-gem
@@ -73,9 +78,11 @@ gem "arclight"
 
 group :development, :test do
   gem "solr_wrapper", ">= 0.3"
+  gem "rspec-rails", "~> 8.0"
 end
 gem "rsolr", ">= 1.0", "< 3"
 gem "bootstrap", "~> 5.3"
 gem "devise"
 gem "devise-guests", "~> 0.8"
 gem "blacklight-locale_picker"
+gem "benchmark"

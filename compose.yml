@@ -1,8 +1,12 @@
 ---
 services:
   app:
+    profiles:
+      - app
     depends_on:
       solr:
+        condition: service_healthy
+      redis:
         condition: service_healthy
     build:
       context: .
@@ -10,8 +14,49 @@ services:
       - '3000:3000'
     environment:
       - SOLR_URL=http://solr:8983/solr/blacklight-collection
+      - REDIS_URL=redis://redis:6379/0
     env_file:
       - .env
+  redis:
+    image: redis:7
+    healthcheck:
+      interval: 30s
+      timeout: 10s
+      start_period: 30s
+      retries: 5
+      test: ["CMD", "redis-cli", "ping"]
+    ports:
+      - '6379:6379'
+    volumes:
+      - redis-data:/data
+    command: redis-server --appendonly yes
+  resque:
+    depends_on:
+      redis:
+        condition: service_healthy
+    build:
+      context: .
+    environment:
+      - SOLR_URL=http://solr:8983/solr/blacklight-collection
+      - REDIS_URL=redis://redis:6379/0
+      - QUEUE=*
+    env_file:
+      - .env
+    command: bundle exec rake environment resque:work
+  resque-web:
+    depends_on:
+      redis:
+        condition: service_healthy
+    build:
+      context: .
+    environment:
+      - REDIS_URL=redis://redis:6379/0
+      - RESQUE_NAMESPACE=resque:boxwalker
+    env_file:
+      - .env
+    ports:
+      - '5678:5678'
+    command: bundle exec rackup -o 0.0.0.0 -p 5678 config/resque_web.ru
   solr:
     depends_on:
       zookeeper:
@@ -48,3 +93,4 @@ services:
       ZOO_SERVERS: server.1=0.0.0.0:2888:3888;2181
 volumes:
   solr-data:
+  redis-data:
