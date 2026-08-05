@@ -2,10 +2,12 @@
 
 # This file is copied to spec/ when you run 'rails generate rspec:install'
 require 'spec_helper'
+require 'fileutils'
 ENV['RAILS_ENV'] ||= 'test'
 require_relative '../config/environment'
 # Prevent database truncation if the environment is production
 abort("The Rails environment is running in production mode!") if Rails.env.production?
+ENV['FINDING_AID_DATA'] ||= Rails.root.join('tmp/spec/data').to_s
 # Uncomment the line below in case you have `--require rails_helper` in the `.rspec` file
 # that will avoid rails generators crashing because migrations haven't been run yet
 # return unless Rails.env.test?
@@ -37,6 +39,15 @@ rescue ActiveRecord::PendingMigrationError => e
   abort e.to_s.strip
 end
 RSpec.configure do |config|
+  config.before(:suite) do
+    FileUtils.rm_rf(ENV['FINDING_AID_DATA'])
+    FileUtils.mkdir_p(ENV['FINDING_AID_DATA'])
+  end
+
+  config.after(:suite) do
+    FileUtils.rm_rf(ENV['FINDING_AID_DATA'])
+  end
+
   # Remove this line if you're not using ActiveRecord or ActiveRecord fixtures
   config.fixture_paths = [
     Rails.root.join('spec/fixtures')
