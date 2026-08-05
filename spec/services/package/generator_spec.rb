@@ -46,6 +46,7 @@ RSpec.describe Package::Generator do
       end
       response
     end
+    allow(generator).to receive(:download_and_cache) # rubocop:disable RSpec/SubjectStub
   end
 
   it 'generate HTML for an identifier' do

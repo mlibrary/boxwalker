@@ -5,25 +5,22 @@ require "traject"
 require "traject/nokogiri_reader"
 
 RSpec.describe "um_arclight/traject/ead2_config.rb" do
-  subject(:result) { indexer.map_record(record) }
-
-  let(:fixture_path) { Rails.root.join("spec/fixtures/bhl/umich-bhl-032.xml") }
-
-  let(:record) do
-    File.open(fixture_path, "r:UTF-8:UTF-8") do |file|
+  before(:context) do
+    fixture_path = Rails.root.join("spec/fixtures/bhl/umich-bhl-032.xml")
+    record = File.open(fixture_path, "r:UTF-8:UTF-8") do |file|
       CompressedReader.new(file, {}).first
     end
-  end
-
-  let(:indexer) do
-    Traject::Indexer::NokogiriIndexer.new.tap do |i|
+    indexer = Traject::Indexer::NokogiriIndexer.new.tap do |i|
       i.settings do
         provide "repository", "bhl"
         provide "writer_class_name", "Traject::ArrayWriter"
       end
       i.load_config_file(Rails.root.join("lib/um_arclight/traject/ead2_config.rb"))
     end
+    @result = indexer.map_record(record)
   end
+
+  let(:result) { @result }
 
   describe "identification" do
     it "maps id from eadid" do
