@@ -59,7 +59,7 @@ module Package
       response = get("/catalog/#{@collection.id}")
       @doc = Nokogiri::HTML5(response.body)
 
-      puts "UM-Arclight generate package : #{collection.id} : fetch components (in #{elapsed_time.round(3)} secs)."
+      Rails.logger.info("UM-Arclight generate package : #{collection.id} : fetch components (in #{elapsed_time.round(3)} secs).")
       elapsed_time = Benchmark.realtime do
         @fragment = render_fragment(
           collection: collection,
@@ -69,7 +69,7 @@ module Package
         update_navigation_links
         update_package_html
       end
-      puts "UM-Arclight generate package : #{collection.id} : build HTML (in #{elapsed_time.round(3)} secs)."
+      Rails.logger.info("UM-Arclight generate package : #{collection.id} : build HTML (in #{elapsed_time.round(3)} secs).")
     end
 
     def generate_html
@@ -99,7 +99,7 @@ module Package
           # set the media
           doc.root["data-media"] = "print"
         end
-        puts "UM-Arclight generate package: #{collection.id} : update HTML for PDF (in #{elapsed_time.round(3)} secs)."
+        Rails.logger.info("UM-Arclight generate package: #{collection.id} : update HTML for PDF (in #{elapsed_time.round(3)} secs).")
       end
     end
 
@@ -115,7 +115,7 @@ module Package
       @collection = fetch_doc(identifier)
       local_html_filename = generate_local_html_filename
       if File.exist?(local_html_filename)
-        warn "-- using #{local_html_filename}"
+        Rails.logger.info("-- using #{local_html_filename}")
       else
         generate_html
       end
@@ -145,13 +145,13 @@ module Package
           stdout_and_stderr, process_status = Open3.capture2e(*cmd)
 
           if process_status.success?
-            puts stdout_and_stderr
+            Rails.logger.info(stdout_and_stderr)
           else
             raise Box::GenerateError, identifier, stdout_and_stderr.to_s
           end
         end
 
-        puts "UM-Arclight generate package: #{collection.id} : PDF render (in #{elapsed_time.round(3)} secs)."
+        Rails.logger.info("UM-Arclight generate package: #{collection.id} : PDF render (in #{elapsed_time.round(3)} secs).")
       end
     end
 
@@ -221,7 +221,7 @@ module Package
       response = index.search(params)
       start = 0
       while response.documents.present?
-        puts "UM-Arclight generate package : harvesting components : #{collection.id} : #{start} / #{response.total}"
+        Rails.logger.info("UM-Arclight generate package : harvesting components : #{collection.id} : #{start} / #{response.total}")
         response.documents.each do |doc|
           if doc.component_level.nil?
             # ignore the collection doc
@@ -512,7 +512,7 @@ module Package
       end
 
       identifiers.each do |identifier|
-        puts "UM-Arclight queue package: #{identifier}"
+        Rails.logger.info("UM-Arclight queue package: #{identifier}")
         ::PackageFindingAidJob.perform_later(identifier, kw.fetch(:format, "html"))
       end
     end
