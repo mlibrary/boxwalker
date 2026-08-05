@@ -5,8 +5,10 @@ updates:
   schedule:
     interval: weekly
   open-pull-requests-limit: 10
+  target-branch: dependabot-pull-requests
 - package-ecosystem: github-actions
   directory: "/"
   schedule:
     interval: weekly
   open-pull-requests-limit: 10
+  target-branch: dependabot-pull-requests
