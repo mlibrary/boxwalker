@@ -2,7 +2,7 @@
 
 require 'rails_helper'
 
-RSpec.describe Box::Package::Generator do
+RSpec.describe Package::Generator do
   subject(:generator) { described_class.new(identifier: identifier) }
 
   let(:identifier) { 'umich-test-9999' }

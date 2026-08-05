@@ -4,14 +4,14 @@ require "rails_helper"
 require "traject"
 require "traject/nokogiri_reader"
 
-RSpec.describe "lib/um_arclight/traject/ead2_config.rb" do
+RSpec.describe "um_arclight/traject/ead2_config.rb" do
   subject(:result) { indexer.map_record(record) }
 
   let(:fixture_path) { Rails.root.join("spec/fixtures/bhl/umich-bhl-032.xml") }
 
   let(:record) do
     File.open(fixture_path, "r:UTF-8:UTF-8") do |file|
-      Box::Traject::CompressedReader.new(file, {}).first
+      CompressedReader.new(file, {}).first
     end
   end
 

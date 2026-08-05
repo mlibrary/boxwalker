@@ -1,11 +1,11 @@
 # frozen_string_literal: true
 
-module Box
-  def self.finding_aid_data
-    Rails.root.join("data").to_s
-  end
-
-  module Traject
+# module UM_Arclight
+#   def self.finding_aid_data
+#     Rails.root.join("data").to_s
+#   end
+#
+#   module Traject
     # Provides a Traject Reader for XML Documents which removes the namespaces
     # and squishes/compresses/normalizes consecutive spaces or newline characters.
     # DUL CUSTOM modified version of:
@@ -26,5 +26,5 @@ module Box
         end
       end
     end
-  end
-end
+#   end
+# end
