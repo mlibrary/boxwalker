@@ -14,7 +14,7 @@ Deprecation.default_deprecation_behavior = :silence
 
 module Package
   # Generate HTML and PDF packages of finding aids
-  class Generator # rubocop:disable Metrics/ClassLength
+  class Generator
     COMPONENT_FIELDS = %w[
       id
       parent_ssi
@@ -121,7 +121,7 @@ module Package
       end
     end
 
-    def generate_pdf # rubocop:disable Metrics/MethodLength
+    def generate_pdf
       build_pdf_prereq
 
       local_html_filename = generate_local_html_filename
@@ -206,8 +206,6 @@ module Package
       response.documents.first
     end
 
-    # rubocop:disable Metrics/AbcSize
-    # rubocop:disable Metrics/MethodLength
     def fetch_components(id)
       params = {
         fl: "*",
@@ -272,8 +270,6 @@ module Package
 
       components
     end
-    # rubocop:enable Metrics/AbcSize
-    # rubocop:enable Metrics/MethodLength
 
     def render_fragment(variables)
       fragment_html = CatalogController.renderer.render(
@@ -292,7 +288,6 @@ module Package
       end
     end
 
-    # rubocop:disable Metrics/AbcSize
     def update_package_html
       last_style_el = doc.xpath('/html/head/link[@rel="stylesheet"]').last
       last_style_el.add_next_sibling(fragment.css("#utility-styles").first)
@@ -325,7 +320,6 @@ module Package
         tree_el << fragment.css("#toc").first
       end
     end
-    # rubocop:enable Metrics/AbcSize
 
     def update_package_html_pdf
       build_package_html_toc
@@ -362,8 +356,6 @@ module Package
       end
     end
 
-    # rubocop:disable Metrics/AbcSize
-    # rubocop:disable Metrics/MethodLength
     def update_package_styles_pdf
       # restore the stylesheet links for the PDF
       placeholder_el = doc.css("style#placeholder").first
@@ -491,12 +483,10 @@ module Package
 
       buffer.join("\n")
     end
-    # rubocop:enable Metrics/AbcSize
-    # rubocop:enable Metrics/MethodLength
 
     def update_package_scripts_pdf
       # remove the script tags
-      doc.xpath("/html/head/script").each do |script| # rubocop:disable Style/SymbolProc
+      doc.xpath("/html/head/script").each do |script|
         script.remove
       end
     end
