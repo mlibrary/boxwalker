@@ -8,6 +8,12 @@
                                                                                 blacklight_config: blacklight_config,
                                                                                 nest_path: params[:nest_path]) %>
     </ul>
+  <% elsif params[:contents].present? %>
+    <ul class="documents">
+      <%= render UmContentsDocumentCollectionHierarchyComponent.with_collection(
+        presenters, blacklight_config: blacklight_config, nest_path: params[:nest_path]
+      ) %>
+    </ul>
   <% else %>
     <table class="table table-striped">
       <%= render Arclight::DocumentCollectionContextComponent.with_collection(presenters,
