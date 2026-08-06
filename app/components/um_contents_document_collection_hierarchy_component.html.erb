@@ -1,0 +1,87 @@
+<div>
+  <div class="row">
+    <div class="col-auto">
+      <% if document.children? %>
+        <%= content_tag(
+          :button,
+          class: "btn btn-light contents-action",
+          aria: { label: t("arclight.hierarchy.view_all"), expanded: show_expanded? },
+          data: {
+            bs_toggle: "collapse", toggle: "collapse", bs_target: "#collapsible-contents-hierarchy-#{document.id}"
+          }
+        ) do %>
+          <i class="bi <%= show_expanded? ? 'bi-dash-circle' : 'bi-plus-circle' %>"></i>
+        <% end %>
+      <% else %>
+        <span class="contents-action button-placeholder"><i class="bi bi-circle"></i></span>
+      <% end %>
+
+      <% if document.collection_has_requestable_components? %>
+        <% if document.is_checkbox_requestable? %>
+          <%= render(
+            "aeon_request_checkbox",
+            document: document,
+            class: '',
+            label_class: 'btn btn-outline-secondary btn-outline-request p-2 mb-0'
+          ) %>
+        <% else %>
+          <span><i class="blended bi bi-circle"></i></span>
+        <% end %>
+      <% end %>
+    </div>
+    <div class="card contents-item-card col">
+      <hgroup data-document-id="<%= document.id %>" role="group" aria-roledescription="Heading group">
+        <h3 xclass="index_title document-title-heading">
+          <%# if (is_interesting_component?(document)) %>
+          <%#= link_to_document(document, document_show_link_field(document), { counter: counter }, { anchor: "contents" }) %>
+          <%# else %>
+          <span>
+            <%= presenter.label %>
+          </span>
+          <%# end %>
+          <% if document.children? %>
+          <span class="badge badge-pill badge-secondary al-number-of-children-badge">
+            <%= document.number_of_children %> <%= t(:'um_arclight.views.index.number_of_components', count: document.number_of_children) %>
+          </span>
+          <% end %>
+        </h3>
+        <%= content_tag('p', class: 'al-document-extent border border-light rounded', 'aria-roledescription' => 'subtitle') do %>
+          <%= document.extent %>
+        <% end unless document.extent.empty? %>
+      </hgroup>
+      <div xclass="documentContent">
+        <%= helpers.render_index_doc_actions document, wrapping_class: 'd-flex justify-content-end' %>
+      </div>
+      <div>
+        <%= content_tag('div', class: 'al-document-highlight') do %>
+          <%= document.highlights.join('[...]').html_safe %>
+        <% end if document.highlights %>
+      </div>
+      <div>
+        <%= content_tag('div', class: 'al-document-creator') do %>
+          <%= document.creator %>
+        <% end if document.creator %>
+      </div>
+      <div>
+        <%= abstract_or_scope %>
+      </div>
+    </div>
+  </div>
+  <% if document.number_of_children > 0 %>
+    <%= content_tag(
+      :div,
+      id: "collapsible-contents-hierarchy-#{document.id}",
+      class: "collapse al-collection-context-collapsible al-hierarchy-level-#{document.component_level} #{'show' if show_expanded?}"
+    ) do %>
+      <div class="nested-contents-container">
+        <%= helpers.turbo_frame_tag(
+              "al-hierarchy-#{document.id}-document",
+              loading: 'lazy',
+              src: helpers.hierarchy_solr_document_path(
+                id: document.id, key: '-document', contents: true
+              )
+            ) %>
+      </div>
+    <% end %>
+  <% end %>
+</div>

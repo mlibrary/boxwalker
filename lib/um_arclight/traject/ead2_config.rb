@@ -250,6 +250,12 @@ end
 to_field "indexes_html_tesm", extract_xpath("/ead/archdesc/index", to_text: false)
 to_field "indexes_tesim", extract_xpath("/ead/archdesc/index")
 
+to_field "container_types_ssim" do |record, accumulator|
+  record.xpath("./did/container[normalize-space(@type)]").each do |node|
+    accumulator << node["type"]
+  end
+end
+
 SEARCHABLE_NOTES_FIELDS.map do |selector|
   to_field "#{selector}_html_tesm", extract_xpath("/ead/archdesc/#{selector}/*[local-name()!='head']", to_text: false) do |_record, accumulator|
     accumulator.map!(&:to_html)
@@ -303,6 +309,21 @@ end
 # UM customization: Add EAD authors field
 to_field "authors_creators_tesim", extract_xpath("/ead/eadheader/filedesc/titlestmt//author") # search plain text
 to_field "authors_creators_ssm", extract_xpath("/ead/eadheader/filedesc/titlestmt//author", to_text: false) # show render_html_tags
+
+# Used for evaluating xpath components to find
+class NokogiriXpathExtensions
+  def is_component(node_set)
+    node_set.find_all do |node|
+      component_elements = (1..12).map { |i| "c#{'%02d' % i}" }
+      component_elements.push 'c'
+      component_elements.include? node.name
+    end
+  end
+end
+
+to_field 'child_component_count_isi' do |record, accumulator|
+  accumulator << record.xpath('/ead/archdesc/dsc/*[is_component(.)]', NokogiriXpathExtensions.new).count
+end
 
 # =============================
 # Each component child document
