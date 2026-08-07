@@ -35,12 +35,12 @@
   <div id="contents">
     <h2 class="al-show-sub-heading"><%= t 'arclight.views.show.contents' %></h2>
     <%= helpers.turbo_frame_tag(
-          "al-hierarchy-#{document.id}-document",
-          loading: 'lazy',
-          src: helpers.hierarchy_solr_document_path(
-            id: document.id, key: '-document', paginate: true, contents: true
-          )
-        ) %>
+      "al-hierarchy-#{document.id}-document",
+      loading: 'lazy',
+      src: helpers.hierarchy_solr_document_path(
+        id: document.id, key: '-document', paginate: true, contents: true
+      )
+    ) %>
   </div>
 <% end %>
 
