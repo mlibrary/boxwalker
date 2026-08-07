@@ -19,6 +19,6 @@ class UmContentsDocumentCollectionHierarchyComponent < Arclight::DocumentCollect
           field: field, key: "abstract_or_scope", truncate: true, helper_method: :render_html_tags
         )
       )
-    ) if document.abstract_or_scope
+    )
   end
 end
