@@ -1,0 +1,32 @@
+.contents-action {
+  min-width: 2.875rem;
+  min-height: 2.875rem;
+  i {
+    font-size: 2rem;
+  }
+}
+
+.nested-contents-container {
+  margin-left: 3rem;
+}
+
+.contents-item-card {
+  padding: 1rem;
+  margin-bottom: 1rem;
+}
+
+.blended {
+  color: var(--color-neutral-100);
+  opacity: 0.0;
+}
+
+.button-placeholder {
+  padding: 0.375rem;
+}
+
+
+#contents button[aria-expanded="true"] {
+  i::before {
+    content: "\F2E6" !important;
+  }
+}

@@ -41,4 +41,23 @@ class SolrDocument
   def document_id
     fetch("ead_ssi", nil)&.strip
   end
+
+  def collection_has_requestable_components?
+    repository_config.request_config_present_for_type?("aeon_hidden_form_request")
+  end
+
+  def container_types
+    fetch("container_types_ssim", [])
+  end
+
+  def is_checkbox_requestable?
+    config_present = repository_config.request_config_present_for_type?("aeon_hidden_form_request")
+    container_requestable = container_types.any? do |container_type|
+      %w[box folder reel map-case tube object volume bundle].any? do |type|
+        container_type.casecmp(type) == 0
+      end
+    end
+    config_present && !container_types.empty? && container_requestable
+  end
+
 end
