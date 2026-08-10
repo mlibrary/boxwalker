@@ -32,13 +32,7 @@
     <div class="card contents-item-card col">
       <hgroup data-document-id="<%= document.id %>" role="group" aria-roledescription="Heading group">
         <h3 xclass="index_title document-title-heading">
-          <%# if (is_interesting_component?(document)) %>
-          <%#= link_to_document(document, document_show_link_field(document), { counter: counter }, { anchor: "contents" }) %>
-          <%# else %>
-          <span>
-            <%= presenter.label %>
-          </span>
-          <%# end %>
+          <%= helpers.link_to_document document %>
           <% if document.children? %>
           <span class="badge badge-pill badge-secondary al-number-of-children-badge">
             <%= document.number_of_children %> <%= t(:'um_arclight.views.index.number_of_components', count: document.number_of_children) %>

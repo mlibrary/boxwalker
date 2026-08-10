@@ -96,7 +96,6 @@ class CatalogController < ApplicationController
       background_field
       related_field
       indexed_terms_field
-      access_field
     ]
 
     config.show.collection_access_items = %i[
