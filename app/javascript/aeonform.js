@@ -1,13 +1,6 @@
 // aeonform.js — Aeon request support for ArcLight
-(() => {
-    "use strict";
-
     const CHECKBOX_SELECTOR = 'input[type="checkbox"][name="Request"]';
     const FORM_ID = "EADRequestFormId";
-
-    //--------------------------------------------------------------------
-    // Per-collection state, persisted in sessionStorage
-    // (storage keys are unchanged, so existing sessions keep working)
 
     const state = {
         collectionId: null,
@@ -190,14 +183,3 @@
         harvestItemMetadata();
         restoreCheckboxes(event.target);
     });
-
-    //--------------------------------------------------------------------
-    // Back-compat shim for markup using onclick="return SubmitAeonRequestForm()"
-    // requestSubmit() (unlike submit()) fires the submit event, so it flows
-    // through the delegated handler above.
-
-    window.SubmitAeonRequestForm = () => {
-        document.getElementById(FORM_ID)?.requestSubmit();
-        return false;
-    };
-})();
