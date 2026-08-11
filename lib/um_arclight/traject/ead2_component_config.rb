@@ -299,6 +299,12 @@ DID_SEARCHABLE_NOTES_FIELDS.map do |selector|
   to_field "#{selector}_tesim", extract_xpath("./did/#{selector}")
 end
 
+to_field "container_types_ssim" do |record, accumulator|
+  record.xpath("./did/container[normalize-space(@type)]").each do |node|
+    accumulator << node["type"]
+  end
+end
+
 # =============================
 # Each component child document
 # <c> <c01> <c12>

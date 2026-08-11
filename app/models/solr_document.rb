@@ -59,4 +59,31 @@ class SolrDocument
     end
     config_present && !container_types.empty? && container_requestable
   end
+
+  def accessrestrict
+    fetch("accessrestrict_tesim", [])
+  end
+
+  # TODO: should the Aeon stuff live in a separate class?
+  def aeon_item_sub_title_value
+    subtitle = ActionController::Base.helpers.strip_tags(normalized_title)
+    subtitle += " (#{extent})" if extent
+    subtitle
+  end
+
+  def aeon_item_sub_title_visually_hidden
+    aeon_item_sub_title_value
+  end
+
+  def aeon_item_volume_value
+    containers.join(", ")
+  end
+
+  def aeon_item_citation_value
+    reference  # May need to fall back to the ID
+  end
+
+  def aeon_item_info_1_value
+    accessrestrict
+  end
 end

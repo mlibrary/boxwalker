@@ -1,0 +1,11 @@
+<div class="checkbox request-checkbox">
+  <label class="btn btn-outline-secondary btn-outline-request contents-action">
+    <input type="checkbox" name="Request" value="<%= document.id %>">
+    <input type="hidden" name="Request" value="<%= document.id %>">
+    <input type="hidden" name="ItemSubTitle_<%= document.id %>" value="<%= document.aeon_item_sub_title_value %>">
+    <input type="hidden" name="ItemVolume_<%= document.id %>" value="<%= document.aeon_item_volume_value %>">
+    <input type="hidden" name="ItemCitation_<%= document.id %>" value="<%= document.aeon_item_citation_value %>">
+    <input type="hidden" name="ItemInfo1" value="<%= document.aeon_item_info_1_value %>">
+    <span class="visually-hidden">Request "<%= document.aeon_item_sub_title_visually_hidden %>"</span>
+  </label>
+</div>

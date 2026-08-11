@@ -1,3 +1,5 @@
+use "variables" as var;
+
 .contents-action {
   min-width: 2.875rem;
   min-height: 2.875rem;
@@ -29,4 +31,9 @@
   i::before {
     content: "\F2E6" !important;
   }
+}
+
+.btn-outline-request {
+  border: 1px solid var(--color-neutral-100);
+  color: var(--color-blue-400);
 }
