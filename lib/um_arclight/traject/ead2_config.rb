@@ -315,14 +315,14 @@ class NokogiriXpathExtensions
   def is_component(node_set)
     node_set.find_all do |node|
       component_elements = (1..12).map { |i| "c#{'%02d' % i}" }
-      component_elements.push 'c'
+      component_elements.push "c"
       component_elements.include? node.name
     end
   end
 end
 
-to_field 'child_component_count_isi' do |record, accumulator|
-  accumulator << record.xpath('/ead/archdesc/dsc/*[is_component(.)]', NokogiriXpathExtensions.new).count
+to_field "child_component_count_isi" do |record, accumulator|
+  accumulator << record.xpath("/ead/archdesc/dsc/*[is_component(.)]", NokogiriXpathExtensions.new).count
 end
 
 # =============================

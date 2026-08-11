@@ -59,5 +59,4 @@ class SolrDocument
     end
     config_present && !container_types.empty? && container_requestable
   end
-
 end
