@@ -1,4 +1,4 @@
-use "variables" as var;
+@use "variables" as var;
 
 .contents-action {
   min-width: 2.875rem;
@@ -18,7 +18,7 @@ use "variables" as var;
 }
 
 .blended {
-  color: var(--color-neutral-100);
+  color: var.$color-neutral-100;
   opacity: 0.0;
 }
 
@@ -34,6 +34,6 @@ use "variables" as var;
 }
 
 .btn-outline-request {
-  border: 1px solid var(--color-neutral-100);
-  color: var(--color-blue-400);
+  border: 1px solid var.$color-neutral-100;
+  color: var.$color-blue-400;
 }

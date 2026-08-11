@@ -161,6 +161,19 @@
         submitAeonRequest(form);
     });
 
+    document.addEventListener("click", (event) => {
+        const trigger = event.target.closest("[data-aeon-submit]");
+        if (!trigger) return;
+        event.preventDefault();
+        document.getElementById(FORM_ID)?.requestSubmit();
+    });
+
+
+    document.addEventListener("click", (event) => {
+        if (!event.target.closest("[data-aeon-clear]")) return;
+        clearAll();
+    });
+
     //--------------------------------------------------------------------
     // Turbo lifecycle
 

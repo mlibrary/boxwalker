@@ -18,6 +18,6 @@
     <input type="hidden" name="OriginatingUrl" value="<%= request.url %>">
   </span>
 <% end %>
-<button type='submit' class='btn btn-primary btn-sm' onclick="SubmitAeonRequestForm()">Request</button>
-<button class='btn btn-secondary btn-sm' onclick="ClearAllCheckboxes()">Clear selected</button>
+<button type='submit' class='btn btn-primary btn-sm' data-aeon-submit>Request</button>
+<button class='btn btn-secondary btn-sm' data-aeon-clear>Clear selected</button>
 <span id="selected-items-count" aria-live="polite" class="badge badge-request"></span>
