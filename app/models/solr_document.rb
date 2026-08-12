@@ -14,6 +14,10 @@ class SolrDocument
   # Recommendation: Use field names from Dublin Core
   use_extension(Blacklight::Document::DublinCore)
 
+  def component?
+    parent_ids.present?
+  end
+
   def physloc
     fetch("collection_physloc_tesim", [])[0]
   end
@@ -31,15 +35,36 @@ class SolrDocument
   end
 
   def has_online_content?
-    fetch("has_online_content_ssim", [])[0]
+    online_content?
   end
 
   def restrictions
     fetch("accessrestrict_html_tesm", [])[0]
   end
 
+  def accessrestrict
+    fetch("accessrestrict_tesim", [])
+  end
+
+
+  def userestrict
+    fetch('userestrict_tesim', [])
+  end
+
+  def phystech
+    fetch('phystech_tesim', [])
+  end
+
+  def restricted_component?
+    component? && (accessrestrict.present? || userestrict.present? || phystech.present?)
+  end
+
   def document_id
     fetch("ead_ssi", nil)&.strip
+  end
+
+  def is_linkable?
+    online_content? || number_of_children > 0 || restricted_component?
   end
 
   def collection_has_requestable_components?
@@ -58,10 +83,6 @@ class SolrDocument
       end
     end
     config_present && !container_types.empty? && container_requestable
-  end
-
-  def accessrestrict
-    fetch("accessrestrict_tesim", [])
   end
 
   # TODO: should the Aeon stuff live in a separate class?
