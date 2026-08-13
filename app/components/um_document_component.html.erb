@@ -32,6 +32,9 @@
       metadata_attr: { layout: UmUpperMetadataLayoutComponent },
       presenter: presenter, heading: true, classes: "") %>
   </div>
+<% end %>
+
+<% if document.children? %>
   <div id="contents">
     <h2 class="al-show-sub-heading"><%= t 'arclight.views.show.contents' %></h2>
     <%= helpers.turbo_frame_tag(
@@ -40,15 +43,6 @@
       src: helpers.hierarchy_solr_document_path(
         id: document.id, key: '-document', paginate: true, contents: true
       )
-    ) %>
-  </div>
-<% elsif document.children? %>
-  <div id="contents">
-    <h2 class="al-show-sub-heading"><%= t 'arclight.views.show.contents' %></h2>
-    <%= helpers.turbo_frame_tag(
-        "al-hierarchy-#{document.id}-document",
-        loading: 'lazy',
-        src: helpers.hierarchy_solr_document_path(id: document.id, key: '-document', paginate: true, per_page: 50)
     ) %>
   </div>
 <% end %>
