@@ -39,14 +39,17 @@
                 </span>
               <% end %>
             </h3>
-            <%= content_tag('p', class: 'al-document-extent border border-light rounded', 'aria-roledescription' => 'subtitle') do %>
-              <%= document.extent %>
+            <%= content_tag("p", "aria-roledescription" => "subtitle") do %>
+              <% document.extent.each do |extent_chunk| %>
+                <span class="al-document-extent badge"><%= extent_chunk %></span>
+              <% end %>
             <% end unless document.extent.empty? %>
           </hgroup>
         </div>
-      </div>
-      <div xclass="documentContent">
-        <%= helpers.render_index_doc_actions document, wrapping_class: 'd-flex justify-content-end' %>
+        <%= tag.span class: "al-document-container container-wrapper col-auto" do %>
+          <%= presenter.document.containers.join(', ') %>
+        <% end if presenter.document.containers.present? %>
+        <%= helpers.render_index_doc_actions document, wrapping_class: "col-auto" %>
       </div>
       <div>
         <%= content_tag('div', class: 'al-document-highlight') do %>
