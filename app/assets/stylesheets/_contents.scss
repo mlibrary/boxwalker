@@ -3,6 +3,7 @@
 .contents-action {
   min-width: 2.875rem;
   min-height: 2.875rem;
+
   i {
     font-size: 2rem;
   }
@@ -45,4 +46,9 @@
   background-color: #f5f5f5;
   border-top: 1px dotted #cccccc;
   padding: 1rem;
+}
+
+.contents-action {
+  min-width: 2rem;
+  min-height: 2rem;
 }
