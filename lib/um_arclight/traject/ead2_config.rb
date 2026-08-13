@@ -238,9 +238,9 @@ to_field "dimensions_tesim", extract_xpath("/ead/archdesc/did/physdesc/dimension
 
 to_field "genreform_ssim", extract_xpath("/ead/archdesc/controlaccess/genreform")
 
-to_field 'date_range_isim',
-         extract_xpath('/ead/archdesc/did/unitdate/@normal|' \
-                         '/ead/archdesc/did/unittitle[not(@type) or @type != "sort"]/unitdate/@normal',
+to_field "date_range_isim",
+         extract_xpath("/ead/archdesc/did/unitdate/@normal|" \
+                         "/ead/archdesc/did/unittitle[not(@type) or @type != 'sort']/unitdate/@normal",
                        to_text: false) do |_record, accumulator|
   values = accumulator.map(&:to_s)
   accumulator.replace([])            # nothing raw may ever reach an int field
@@ -251,11 +251,11 @@ to_field 'date_range_isim',
 end
 
 # Fallback for finding aids with no @normal: scrape "1797-1805" out of the display text
-to_field 'date_range_isim',
-         extract_xpath('/ead/archdesc/did/unittitle[not(@type) or @type != "sort"]/unitdate') do |_record, accumulator, context|
+to_field "date_range_isim",
+         extract_xpath("/ead/archdesc/did/unittitle[not(@type) or @type != 'sort']/unitdate") do |_record, accumulator, context|
   values = accumulator.map(&:to_s)
   accumulator.replace([])
-  next if context.output_hash['date_range_isim'].present?
+  next if context.output_hash["date_range_isim"].present?
   clean_range = values.map { |v| v.gsub(/([^()]*)\(.*\)/, '\1').tr('^0-9\\-/ ', '').strip }
                       .select { |date| date.match?(%r{\A\d{4}[-/]\d{4}\z}) }
                       .map { |date| date.tr('-', '/') }

@@ -248,9 +248,9 @@ to_field "digital_objects_ssm", extract_xpath("./dao|./did/dao", to_text: false)
   end
 end
 
-to_field 'date_range_isim',
-         extract_xpath('./did/unitdate/@normal|' \
-                         './did/unittitle[not(@type) or @type != "sort"]/unitdate/@normal',
+to_field "date_range_isim",
+         extract_xpath("./did/unitdate/@normal|" \
+                         "./did/unittitle[not(@type) or @type != 'sort']/unitdate/@normal",
                        to_text: false) do |_record, accumulator|
   values = accumulator.map(&:to_s)
   accumulator.replace([])
@@ -260,11 +260,11 @@ to_field 'date_range_isim',
   accumulator.replace(range.years.map(&:to_i))
 end
 
-to_field 'date_range_isim',
-         extract_xpath('./did/unittitle[not(@type) or @type != "sort"]/unitdate') do |_record, accumulator, context|
+to_field "date_range_isim",
+         extract_xpath("./did/unittitle[not(@type) or @type != 'sort']/unitdate") do |_record, accumulator, context|
   values = accumulator.map(&:to_s)
   accumulator.replace([])
-  next if context.output_hash['date_range_isim'].present?
+  next if context.output_hash["date_range_isim"].present?
   clean_range = values.map { |v| v.gsub(/([^()]*)\(.*\)/, '\1').tr('^0-9\\-/ ', '').strip }
                       .select { |date| date.match?(%r{\A\d{4}[-/]\d{4}\z}) }
                       .map { |date| date.tr('-', '/') }
