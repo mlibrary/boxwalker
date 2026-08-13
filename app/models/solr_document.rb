@@ -48,11 +48,11 @@ class SolrDocument
 
 
   def userestrict
-    fetch('userestrict_tesim', [])
+    fetch("userestrict_tesim", [])
   end
 
   def phystech
-    fetch('phystech_tesim', [])
+    fetch("phystech_tesim", [])
   end
 
   def restricted_component?
