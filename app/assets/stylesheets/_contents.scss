@@ -26,7 +26,6 @@
   padding: 0.375rem;
 }
 
-
 #contents button[aria-expanded="true"] {
   i::before {
     content: "\F2E6" !important;
@@ -40,4 +39,10 @@
 
 .button-placeholder {
   padding: 0.875rem;
+}
+
+#about-this-level {
+  background-color: #f5f5f5;
+  border-top: 1px dotted #cccccc;
+  padding: 1rem;
 }
