@@ -5,12 +5,12 @@
         <%= content_tag(
           :button,
           class: "btn btn-light contents-action",
-          aria: { label: t("arclight.hierarchy.view_all"), expanded: show_expanded? },
+          aria: { label: t("arclight.hierarchy.view_all"), expanded: false },
           data: {
             bs_toggle: "collapse", toggle: "collapse", bs_target: "#collapsible-contents-hierarchy-#{document.id}"
           }
         ) do %>
-          <i class="bi <%= show_expanded? ? 'bi-dash-circle' : 'bi-plus-circle' %>"></i>
+          <i class="bi bi-plus-circle"></i>
         <% end %>
       <% else %>
         <span class="contents-action button-placeholder blended"><i class="bi bi-circle"></i></span>
@@ -27,7 +27,7 @@
         <% end %>
         <div class="col">
           <hgroup data-document-id="<%= document.id %>" role="group" aria-roledescription="Heading group">
-            <h3 xclass="index_title document-title-heading">
+            <h3 class="index_title document-title-heading">
               <% if helpers.is_interesting_component?(document) %>
                 <%= helpers.link_to_document document %>
               <% else %>
@@ -52,11 +52,6 @@
         <%= helpers.render_index_doc_actions document, wrapping_class: "col-auto" %>
       </div>
       <div>
-        <%= content_tag('div', class: 'al-document-highlight') do %>
-          <%= document.highlights.join('[...]').html_safe %>
-        <% end if document.highlights %>
-      </div>
-      <div>
         <%= content_tag('div', class: 'al-document-creator') do %>
           <%= document.creator %>
         <% end if document.creator %>
@@ -71,16 +66,16 @@
     <%= content_tag(
       :div,
       id: "collapsible-contents-hierarchy-#{document.id}",
-      class: "collapse al-collection-context-collapsible al-hierarchy-level-#{document.component_level} #{'show' if show_expanded?}"
+      class: "collapse al-collection-context-collapsible al-hierarchy-level-#{document.component_level}"
     ) do %>
       <div class="nested-contents-container">
         <%= helpers.turbo_frame_tag(
-              "al-hierarchy-#{document.id}-document",
-              loading: 'lazy',
-              src: helpers.hierarchy_solr_document_path(
-                id: document.id, key: '-document', contents: true
-              )
-            ) %>
+          "al-hierarchy-#{document.id}-document",
+          loading: 'lazy',
+          src: helpers.hierarchy_solr_document_path(
+            id: document.id, key: '-document', contents: true
+          )
+        ) %>
       </div>
     <% end %>
   <% end %>

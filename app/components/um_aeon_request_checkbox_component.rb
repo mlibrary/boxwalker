@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 class UmAeonRequestCheckboxComponent < ViewComponent::Base
   def initialize(document:)
     @document = document

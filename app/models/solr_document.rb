@@ -46,7 +46,6 @@ class SolrDocument
     fetch("accessrestrict_tesim", [])
   end
 
-
   def userestrict
     fetch("userestrict_tesim", [])
   end
