@@ -1,11 +1,36 @@
-// aeonform.js — Aeon request support for ArcLight
+/**
+ * aeonform.js
+ *
+ * Manages a cart-like selection of archival items (checkboxes) for an Aeon
+ * request form, persisting selections across (Turbo) navigation.
+ *
+ * ── STABILITY CONTRACT ──────────────────────────────────────────────────────
+ * This feature depends on two things staying stable. Changing either without
+ * updating this file will silently break selection persistence and/or grouping:
+ *
+ *   1. sessionStorage
+ *      Selections and harvested item metadata are stored in sessionStorage,
+ *      keyed per collection (see `storageKeys`). If storage is unavailable,
+ *      cleared, or the key format changes, previously selected items will not
+ *      be restored. State is intentionally session-scoped: it does NOT survive
+ *      a new browser session, and that is by design.
+ *
+ *   2. Identifier parsing (the "_aspace_" marker)
+ *      Every item identifier (checkbox `value`) is assumed to have the form
+ *      "<collectionId>_aspace_<...>". `collectionIdFromIdentifier` derives the
+ *      collection ID from the substring before "_aspace_", which in turn
+ *      namespaces the storage keys.
+ * ────────────────────────────────────────────────────────────────────────────
+ */
+
 const CHECKBOX_SELECTOR = 'input[type="checkbox"][name="Request"]';
 const FORM_ID = "EADRequestFormId";
+const FALLBACK_BUCKET = "null-collection";
 
 const state = {
     collectionId: null,
-    selected: new Set(), // identifiers the user has checked
-    items: new Map(),    // identifier -> { hiddenFieldName: value, ... }
+    selected: new Set(),
+    items: new Map(),
 };
 
 const storageKeys = () => ({
@@ -13,16 +38,56 @@ const storageKeys = () => ({
     items: `${state.collectionId}_collectionItems`,
 });
 
-const currentCollectionId = () =>
-    document.getElementById("eadid")?.dataset.eadId ?? "null-collection";
+function collectionIdFromIdentifier(identifier) {
+    const idx = identifier?.indexOf("_aspace_") ?? -1;
+    return idx > 0 ? identifier.slice(0, idx) : null;
+}
+
+function currentCollectionId() {
+    const el = document.getElementById("eadid") ?? document.querySelector("[data-ead-id]");
+    if (el?.dataset.eadId) return el.dataset.eadId;
+
+    const checkbox = document.querySelector(CHECKBOX_SELECTOR);
+    const fromCheckbox = checkbox && collectionIdFromIdentifier(checkbox.value);
+    if (fromCheckbox) return fromCheckbox;
+
+    const doc = document.querySelector("[data-document-id]");
+    const fromDoc = doc && collectionIdFromIdentifier(doc.dataset.documentId);
+    if (fromDoc) return fromDoc;
+
+    if (checkbox) {
+        console.warn(
+            "aeonform: Request checkboxes present but no collection could be resolved; " +
+            "using shared fallback bucket."
+        );
+    }
+    return FALLBACK_BUCKET;
+}
+
+function assertSingleCollection() {
+    const ids = new Set(
+        [...document.querySelectorAll(CHECKBOX_SELECTOR)]
+            .map((cb) => collectionIdFromIdentifier(cb.value))
+            .filter(Boolean)
+    );
+    if (ids.size > 1) {
+        console.warn("aeonform: page mixes collections:", [...ids]);
+    }
+}
+
+function readJSON(key, fallback) {
+    try {
+        return JSON.parse(sessionStorage.getItem(key)) ?? fallback;
+    } catch {
+        return fallback;
+    }
+}
 
 function loadState() {
     state.collectionId = currentCollectionId();
     const keys = storageKeys();
-    state.selected = new Set(JSON.parse(sessionStorage.getItem(keys.selected)) ?? []);
-    state.items = new Map(
-        Object.entries(JSON.parse(sessionStorage.getItem(keys.items)) ?? {})
-    );
+    state.selected = new Set(readJSON(keys.selected, []));
+    state.items = new Map(Object.entries(readJSON(keys.items, {})));
 }
 
 function saveState() {
@@ -31,9 +96,13 @@ function saveState() {
     sessionStorage.setItem(keys.items, JSON.stringify(Object.fromEntries(state.items)));
 }
 
-//--------------------------------------------------------------------
-// Metadata harvesting: capture each checkbox's sibling hidden inputs
-// so items remain requestable after their page of results is gone
+function ensureCurrentCollection() {
+    if (state.collectionId !== currentCollectionId()) {
+        loadState();
+        restoreCheckboxes();
+        updateCount();
+    }
+}
 
 function harvestItemMetadata() {
     let dirty = false;
@@ -42,9 +111,10 @@ function harvestItemMetadata() {
         const identifier = checkbox.value;
         if (state.items.has(identifier)) return;
 
+        const suffix = `_${identifier}`;
         const metadata = {};
         checkbox.closest("label")?.querySelectorAll("input").forEach((input) => {
-            if (input.name && input.name.includes(identifier)) {
+            if (input.name && input.name.endsWith(suffix)) {
                 metadata[input.name] = input.value;
             }
         });
@@ -55,9 +125,6 @@ function harvestItemMetadata() {
 
     if (dirty) saveState();
 }
-
-//--------------------------------------------------------------------
-// UI
 
 function updateCount() {
     const span = document.getElementById("selected-items-count");
@@ -70,12 +137,12 @@ function updateCount() {
         `<span class="visually-hidden"> ${count === 1 ? "item" : "items"}</span>`;
 }
 
+// Two-way restoration: every checkbox is set to reflect the authoritative
+// selection state — checked if selected, unchecked otherwise. This prevents
+// stale `checked` markup (server-rendered or bfcache-restored) from lingering.
 function restoreCheckboxes(root = document) {
-    state.selected.forEach((identifier) => {
-        const checkbox = root.querySelector(
-            `${CHECKBOX_SELECTOR}[value="${CSS.escape(identifier)}"]`
-        );
-        if (checkbox) checkbox.checked = true;
+    root.querySelectorAll(CHECKBOX_SELECTOR).forEach((checkbox) => {
+        checkbox.checked = state.selected.has(checkbox.value);
     });
 }
 
@@ -87,9 +154,6 @@ function clearAll() {
     updateCount();
 }
 
-//--------------------------------------------------------------------
-// Aeon submission
-
 function hiddenInput(name, value) {
     const input = document.createElement("input");
     input.type = "hidden";
@@ -99,6 +163,8 @@ function hiddenInput(name, value) {
 }
 
 function submitAeonRequest(sourceForm) {
+    ensureCurrentCollection();
+
     if (state.selected.size === 0) {
         alert(
             "Please select one or more items to request.\n" +
@@ -107,13 +173,16 @@ function submitAeonRequest(sourceForm) {
         return;
     }
 
-    // remove any forms left over from a previous submission
     document.querySelectorAll(".aeon-submitted-form").forEach((f) => f.remove());
 
     const form = sourceForm.cloneNode(true);
     form.id = `${FORM_ID}-${Date.now()}`;
     form.classList.add("aeon-submitted-form");
     form.hidden = true;
+    form.querySelectorAll("[id]").forEach((el) => el.removeAttribute("id"));
+
+    // Avoids duplicate/stale request values).
+    form.querySelectorAll('input[name="Request"]').forEach((el) => el.remove());
 
     state.selected.forEach((identifier) => {
         form.append(hiddenInput("Request", identifier));
@@ -123,18 +192,16 @@ function submitAeonRequest(sourceForm) {
     });
 
     document.body.append(form);
-    form.submit(); // programmatic submit() does NOT re-fire the submit event
+    form.submit();
     clearAll();
 }
-
-//--------------------------------------------------------------------
-// Event delegation — bound once, survives Turbo Drive/Frame/Stream updates
 
 document.addEventListener("change", (event) => {
     const checkbox = event.target.closest?.(CHECKBOX_SELECTOR);
     if (!checkbox) return;
 
-    harvestItemMetadata(); // covers checkboxes that arrived after page load
+    ensureCurrentCollection();
+    harvestItemMetadata();
 
     if (checkbox.checked) {
         state.selected.add(checkbox.value);
@@ -155,31 +222,48 @@ document.addEventListener("submit", (event) => {
 });
 
 document.addEventListener("click", (event) => {
-    const trigger = event.target.closest("[data-aeon-submit]");
-    if (!trigger) return;
-    event.preventDefault();
-    document.getElementById(FORM_ID)?.requestSubmit();
+    if (event.target.closest("[data-aeon-submit]")) {
+        event.preventDefault();
+        document.getElementById(FORM_ID)?.requestSubmit();
+        return;
+    }
+    if (event.target.closest("[data-aeon-clear]")) {
+        event.preventDefault();
+        clearAll();
+    }
 });
 
-
-document.addEventListener("click", (event) => {
-    if (!event.target.closest("[data-aeon-clear]")) return;
-    clearAll();
-});
-
-//--------------------------------------------------------------------
-// Turbo lifecycle
-
-document.addEventListener("turbo:load", () => {
-    loadState();            // re-keys state when the user switches collections
+function initialize() {
+    loadState();
+    assertSingleCollection();
     harvestItemMetadata();
+    restoreCheckboxes();
+    updateCount();
+}
+
+document.addEventListener("turbo:load", initialize);
+
+if (document.readyState !== "loading") {
+    initialize();
+} else {
+    document.addEventListener("DOMContentLoaded", initialize);
+}
+
+document.addEventListener("turbo:render", () => {
+    ensureCurrentCollection();
     restoreCheckboxes();
     updateCount();
 });
 
-// ArcLight loads contents/pagination inside turbo-frames;
-// this replaces the old jQuery 'navigation.contains.elements' event
+document.addEventListener("turbo:before-cache", () => {
+    const span = document.getElementById("selected-items-count");
+    if (span) span.innerHTML = "";
+    document.querySelectorAll(CHECKBOX_SELECTOR).forEach((cb) => { cb.checked = false; });
+});
+
 document.addEventListener("turbo:frame-load", (event) => {
+    ensureCurrentCollection();
     harvestItemMetadata();
     restoreCheckboxes(event.target);
+    updateCount();
 });
