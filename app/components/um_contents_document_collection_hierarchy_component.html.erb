@@ -5,12 +5,14 @@
         <%= content_tag(
           :button,
           class: "btn btn-light contents-action",
-          aria: { label: t("arclight.hierarchy.view_all"), expanded: false },
+          aria: { label: t("arclight.hierarchy.view_all"), expanded: start_expanded? },
           data: {
-            bs_toggle: "collapse", toggle: "collapse", bs_target: "#collapsible-contents-hierarchy-#{document.id}"
+            bs_toggle: "collapse",
+            toggle: "collapse",
+            bs_target: "#collapsible-contents-hierarchy-#{document.id}"
           }
         ) do %>
-          <i class="bi bi-plus-circle"></i>
+          <i class="bi <%= start_expanded? ? 'bi-dash-circle' : 'bi-plus-circle' %>"></i>
         <% end %>
       <% else %>
         <span class="contents-action button-placeholder blended"><i class="bi bi-circle"></i></span>
@@ -59,7 +61,7 @@
     <%= content_tag(
       :div,
       id: "collapsible-contents-hierarchy-#{document.id}",
-      class: "collapse"
+      class: "collapse #{'show' if start_expanded?}"
     ) do %>
       <div class="nested-contents-container">
         <%= helpers.turbo_frame_tag(

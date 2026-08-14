@@ -16,4 +16,8 @@ class UmContentsDocumentCollectionHierarchyComponent < Arclight::DocumentCollect
       )
     )
   end
+
+  def start_expanded?
+    document.number_of_children == 1
+  end
 end
