@@ -48,7 +48,10 @@ gem "blacklight_range_limit", ">= 9.2"
 gem "resque", "~> 3.0"
 gem "redis"
 gem "resque-scheduler"
-gem "resque-web"
+# NOTE: The Resque dashboard is served by Resque::Server (bundled with the
+# `resque` gem) via config/resque_web.ru. The separate `resque-web` gem is
+# intentionally NOT used: it depends on sass-rails/sprockets, which conflicts
+# with this app's Propshaft asset pipeline and breaks `assets:precompile`.
 
 group :development, :test do
   # See https://guides.rubyonrails.org/debugging_rails_applications.html#debugging-with-the-debug-gem

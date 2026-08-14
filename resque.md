@@ -34,7 +34,9 @@ gem "resque", "~> 2.6"
 gem "redis"
 # Optional but recommended:
 gem "resque-scheduler"   # cron-style + delayed jobs
-gem "resque-web"         # the dashboard (extracted from core in Resque 2.x)
+# Dashboard: use Resque::Server (bundled with the `resque` gem) via a rackup
+# file. Do NOT add the `resque-web` gem here: it pulls in sass-rails/sprockets
+# and conflicts with a Propshaft asset pipeline.
 ```
 
 ```bash
