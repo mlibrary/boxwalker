@@ -88,3 +88,27 @@
 .al-show-actions-box svg.bi {
   color: var.$color-blue-500;
 }
+
+.collection-name-wrapper {
+  margin-top: 1rem;
+  position: relative;
+}
+
+.collection-name-wrapper a {
+  text-decoration: none;
+  font-weight: 700;
+  line-height: 1.25;
+  font-size: 1.35rem;
+}
+
+.al-collection-content-icon {
+  font-size: 1.5rem;
+}
+
+span.breadcrumb-text {
+  font-size: 1rem;
+}
+
+.breadcrumb-item + .breadcrumb-item::before {
+  content: "\00BB";
+}
