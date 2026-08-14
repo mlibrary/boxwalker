@@ -18,23 +18,21 @@
     </div>
     <div class="card contents-item-card col">
       <div class="row">
-        <% if document.collection_has_requestable_components? %>
-          <% if document.is_checkbox_requestable? %>
-            <div class="col-auto">
-              <%= render UmAeonRequestCheckboxComponent.new(document: document) %>
-            </div>
-          <% end %>
+        <% if document.collection_has_requestable_components? and document.is_checkbox_requestable? %>
+          <div class="col-auto">
+            <%= render UmAeonRequestCheckboxComponent.new(document: document) %>
+          </div>
         <% end %>
         <div class="col">
           <hgroup data-document-id="<%= document.id %>" role="group" aria-roledescription="Heading group">
-            <h3 class="index_title document-title-heading">
+            <h3 class="document-title-heading">
               <% if helpers.is_interesting_component?(document) %>
                 <%= helpers.link_to_document document %>
               <% else %>
                 <%= presenter.label %>
               <% end %>
               <% if document.children? %>
-                <span class="badge badge-pill badge-secondary al-number-of-children-badge">
+                <span class="badge badge-pill badge-secondary">
                   <%= document.number_of_children %> <%= t(:'um_arclight.views.index.number_of_components', count: document.number_of_children) %>
                 </span>
               <% end %>
@@ -47,26 +45,21 @@
           </hgroup>
         </div>
         <%= tag.span class: "al-document-container container-wrapper col-auto" do %>
-          <%= presenter.document.containers.join(', ') %>
+          <%= presenter.document.containers.join(", ") %>
         <% end if presenter.document.containers.present? %>
         <%= helpers.render_index_doc_actions document, wrapping_class: "col-auto" %>
       </div>
-      <div>
-        <%= content_tag('div', class: 'al-document-creator') do %>
-          <%= document.creator %>
-        <% end if document.creator %>
-      </div>
-      <div>
-        <%= abstract_or_scope %>
-      </div>
+      <%= content_tag('div', class: 'al-document-creator') do %>
+        <%= document.creator %>
+      <% end if document.creator %>
+      <div><%= abstract_or_scope %></div>
     </div>
-
   </div>
-  <% if document.number_of_children > 0 %>
+  <% if document.children? %>
     <%= content_tag(
       :div,
       id: "collapsible-contents-hierarchy-#{document.id}",
-      class: "collapse al-collection-context-collapsible al-hierarchy-level-#{document.component_level}"
+      class: "collapse"
     ) do %>
       <div class="nested-contents-container">
         <%= helpers.turbo_frame_tag(
