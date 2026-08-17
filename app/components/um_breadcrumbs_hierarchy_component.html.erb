@@ -1,0 +1,20 @@
+<nav aria-label="breadcrumb" class="al-show-breadcrumb">
+  <ol class="breadcrumb">
+    <li class="breadcrumb-item breadcrumb-item-2">
+      <span class="collection-name-wrapper">
+        <span aria-hidden="true"><%= blacklight_icon :collection, classes: 'al-collection-content-icon' %></span>
+        <%= link_to collection.label, solr_document_path(collection.id) %>
+      </span>
+      <ol class="breadcrumb">
+        <% parents_under_collection.each do |parent| %>
+          <li class="breadcrumb-item breadcrumb-item-3">
+            <span class="breadcrumb-text"><%= link_to parent.label, solr_document_path(parent.id) %></span>
+          </li>
+        <% end %>
+        <li class="breadcrumb-item breadcrumb-item-4">
+          <span class="breadcrumb-text"><%= @presenter.heading %></span>
+        </li>
+      </ol>
+    </li>
+  </ol>
+</nav>

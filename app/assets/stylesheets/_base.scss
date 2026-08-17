@@ -131,3 +131,11 @@ mark, .mark {
   margin-bottom: 2rem;
   padding-top: 1rem;
 }
+
+/* Navbars */
+
+.sticky-toolbar-top {
+  position: sticky !important;
+  top: 0;
+  z-index: 2;
+}

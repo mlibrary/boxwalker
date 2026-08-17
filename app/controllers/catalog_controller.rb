@@ -83,7 +83,7 @@ class CatalogController < ApplicationController
     # config.show.title_field = 'title_display'
     config.show.document_component = UmDocumentComponent
     config.show.sidebar_component = UmSidebarComponent
-    config.show.breadcrumb_component = Arclight::BreadcrumbsHierarchyComponent
+    config.show.breadcrumb_component = UmBreadcrumbsHierarchyComponent
     config.show.embed_component = Arclight::EmbedComponent
     config.show.access_component = UmAccessComponent
     config.show.online_status_component = Arclight::OnlineStatusIndicatorComponent
@@ -96,7 +96,6 @@ class CatalogController < ApplicationController
       background_field
       related_field
       indexed_terms_field
-      access_field
     ]
 
     config.show.collection_access_items = %i[
