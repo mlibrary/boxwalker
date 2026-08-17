@@ -1,5 +1,9 @@
 @use "variables" as var;
 
+#contents .documents li {
+  background-color: unset !important;
+}
+
 .contents-action {
   min-width: 2rem;
   min-height: 2rem;

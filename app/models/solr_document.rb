@@ -87,7 +87,7 @@ class SolrDocument
   # TODO: should the Aeon stuff live in a separate class?
   def aeon_item_sub_title_value
     subtitle = ActionController::Base.helpers.strip_tags(normalized_title)
-    subtitle += " (#{extent})" if extent
+    subtitle += " (#{extent.join(", ")})" if extent
     subtitle
   end
 
