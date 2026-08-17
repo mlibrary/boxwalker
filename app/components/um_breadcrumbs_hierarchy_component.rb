@@ -5,4 +5,3 @@ class UmBreadcrumbsHierarchyComponent < Arclight::BreadcrumbsHierarchyComponent
       document.present? && !document.collection?
     end
 end
-
