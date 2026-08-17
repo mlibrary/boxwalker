@@ -1,27 +1,4 @@
-/**
- * aeonform.js
- *
- * Manages a cart-like selection of archival items (checkboxes) for an Aeon
- * request form, persisting selections across (Turbo) navigation.
- *
- * ── STABILITY CONTRACT ──────────────────────────────────────────────────────
- * This feature depends on two things staying stable. Changing either without
- * updating this file will silently break selection persistence and/or grouping:
- *
- *   1. sessionStorage
- *      Selections and harvested item metadata are stored in sessionStorage,
- *      keyed per collection (see `storageKeys`). If storage is unavailable,
- *      cleared, or the key format changes, previously selected items will not
- *      be restored. State is intentionally session-scoped: it does NOT survive
- *      a new browser session, and that is by design.
- *
- *   2. Identifier parsing (the "_aspace_" marker)
- *      Every item identifier (checkbox `value`) is assumed to have the form
- *      "<collectionId>_aspace_<...>". `collectionIdFromIdentifier` derives the
- *      collection ID from the substring before "_aspace_", which in turn
- *      namespaces the storage keys.
- * ────────────────────────────────────────────────────────────────────────────
- */
+/* aeonform.js */
 
 const CHECKBOX_SELECTOR = 'input[type="checkbox"][name="Request"]';
 const FORM_ID = "EADRequestFormId";
@@ -44,8 +21,8 @@ function collectionIdFromIdentifier(identifier) {
 }
 
 function currentCollectionId() {
-    const el = document.getElementById("eadid") ?? document.querySelector("[data-ead-id]");
-    if (el?.dataset.eadId) return el.dataset.eadId;
+    const idno = document.querySelector(`#${FORM_ID} input[name="idno"]`)?.value;
+    if (idno) return idno;
 
     const checkbox = document.querySelector(CHECKBOX_SELECTOR);
     const fromCheckbox = checkbox && collectionIdFromIdentifier(checkbox.value);
@@ -90,10 +67,19 @@ function loadState() {
     state.items = new Map(Object.entries(readJSON(keys.items, {})));
 }
 
+let warnedPersistenceFailure = false;
 function saveState() {
     const keys = storageKeys();
-    sessionStorage.setItem(keys.selected, JSON.stringify([...state.selected]));
-    sessionStorage.setItem(keys.items, JSON.stringify(Object.fromEntries(state.items)));
+    try {
+        sessionStorage.setItem(keys.selected, JSON.stringify([...state.selected]));
+        sessionStorage.setItem(keys.items, JSON.stringify(Object.fromEntries(state.items)));
+    } catch {
+        // Continue with in-memory state when session storage is unavailable.
+        if (!warnedPersistenceFailure) {
+            warnedPersistenceFailure = true;
+            console.warn("aeonform: sessionStorage write failed; selections won't persist across navigation.");
+        }
+    }
 }
 
 function ensureCurrentCollection() {
@@ -136,9 +122,6 @@ function updateCount() {
         : ""
 }
 
-// Two-way restoration: every checkbox is set to reflect the authoritative
-// selection state — checked if selected, unchecked otherwise. This prevents
-// stale `checked` markup (server-rendered or bfcache-restored) from lingering.
 function restoreCheckboxes(root = document) {
     root.querySelectorAll(CHECKBOX_SELECTOR).forEach((checkbox) => {
         checkbox.checked = state.selected.has(checkbox.value);
