@@ -2,6 +2,7 @@
 
 class UmBreadcrumbsHierarchyComponent < Arclight::BreadcrumbsHierarchyComponent
     def render?
-      collection.present?
+      document.present? && !document.collection?
     end
-  end
+end
+

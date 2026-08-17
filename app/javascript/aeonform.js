@@ -131,10 +131,9 @@ function updateCount() {
     if (!span) return;
 
     const count = state.selected.size;
-    span.innerHTML = count === 0
-        ? ""
-        : `<span class="visually-hidden">Request </span>${count}` +
-        `<span class="visually-hidden"> ${count === 1 ? "item" : "items"}</span>`;
+    span.innerHTML = count > 0
+        ? `<span>${count}</span>` + `<span class="visually-hidden">Request ${count} ${count === 1 ? "item" : "items"}</span>`
+        : ""
 }
 
 // Two-way restoration: every checkbox is set to reflect the authoritative
