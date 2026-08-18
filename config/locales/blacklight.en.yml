@@ -1,3 +1,8 @@
 en:
   blacklight:
-    application_name: 'Arclight'
+    application_name: 'University of Michigan Finding Aids'
+    search:
+      page_title:
+        title: '%{constraints} - %{application_name}'
+        prefix: 'Results for'
+        joiner: " / "
