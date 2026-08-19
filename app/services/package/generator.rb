@@ -371,7 +371,7 @@ module Package
       # TODO: another hack to hide the AssetNotFound error
       begin
         placeholder_el.add_next_sibling CatalogController.helpers.stylesheet_link_tag("print")
-      rescue Sprockets::Rails::Helper::AssetNotFound
+      rescue Propshaft::MissingAssetError
         # print.css is optional in test and some packaging environments
       end
 
