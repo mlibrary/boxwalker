@@ -53,7 +53,7 @@ module Package
       components = []
       elapsed_time = Benchmark.realtime do
         @collection = fetch_doc(identifier)
-        components = fetch_components(@collection.eadid)
+        components = fetch_components(@collection.id)
       end
 
       response = get("/catalog/#{@collection.id}")
@@ -147,7 +147,7 @@ module Package
           if process_status.success?
             Rails.logger.info(stdout_and_stderr)
           else
-            raise Box::GenerateError, identifier, stdout_and_stderr.to_s
+            raise Boxrunner::GenerateError, identifier, stdout_and_stderr.to_s
           end
         end
 
@@ -209,7 +209,10 @@ module Package
     def fetch_components(id)
       params = {
         fl: "*",
-        q: [ "ead_ssi:#{id}" ],
+        # Components are indexed as Solr block-join child documents rooted at
+        # the collection's id (they carry no ead_ssi of their own), so harvest
+        # the whole nested block via the _root_ field.
+        q: [ "_root_:#{id}" ],
         sort: "sort_ii asc, title_sort asc",
         start: 0,
         rows: 1000
@@ -223,14 +226,15 @@ module Package
       while response.documents.present?
         Rails.logger.info("UM-Arclight generate package : harvesting components : #{collection.id} : #{start} / #{response.total}")
         response.documents.each do |doc|
-          if doc.component_level.nil?
-            # ignore the collection doc
-            next
-          end
+          # ignore the collection/root doc itself (level 0) and anything without
+          # a component level.
+          next if doc.id == id || doc.component_level.nil?
 
           tmp[doc.component_level] = [] if tmp[doc.component_level].nil?
           tmp[doc.component_level] << doc
-          tmp_map[doc.reference] = doc
+          # Key by document id so parent lookups via #parent_ids (which are
+          # document ids) resolve correctly below.
+          tmp_map[doc.id] = doc
         end
         start += 1000
         params[:start] = start
@@ -246,11 +250,18 @@ module Package
         tmp[component_level].each do |doc|
           # find the parent_doc because nothing is easy
           parent_doc = nil
-          doc.parent_ids_keyed.reverse.each do |parent_id|
+          doc.parent_ids.reverse.each do |parent_id|
             if tmp_map[parent_id]
               parent_doc = tmp_map[parent_id]
               break
             end
+          end
+
+          # No harvested ancestor (e.g. an orphaned component); fall back to
+          # treating it as a top-level entry so it still appears in the package.
+          if parent_doc.nil?
+            (tmp[1] ||= []) << doc
+            next
           end
 
           component_mapper[parent_doc.reference] = [] if component_mapper[parent_doc.reference].nil?
@@ -259,7 +270,7 @@ module Package
       end
 
       # now flatten this into components?
-      queue = [ tmp[1] ].flatten
+      queue = Array(tmp[1]).flatten.compact
       until queue.empty?
         doc = queue.shift
         components << doc
@@ -313,8 +324,8 @@ module Package
       if (contents_el = doc.css("div.al-contents").first)
         contents_el.replace(fragment.css("div.al-contents-ish").first)
       end
-      doc.css(".card-img").first.remove
-      doc.css("#navigate-collection-toggle").first.remove
+      doc.css(".card-img").first&.remove
+      doc.css("#navigate-collection-toggle").first&.remove
       if (tree_el = doc.css("#context-tree-nav .tab-pane.active").first)
         tree_el.inner_html = ""
         tree_el << fragment.css("#toc").first
@@ -323,8 +334,10 @@ module Package
 
     def update_package_html_pdf
       build_package_html_toc
-      doc.css("m-website-header").first.replace(fragment.css("header").first)
-      doc.css("footer").first.remove
+      if (header_el = doc.css("m-website-header").first) && (new_header = fragment.css("header").first)
+        header_el.replace(new_header)
+      end
+      doc.css("footer").first&.remove
       doc.css("div.x-printable").remove
       doc.css("body a[href]").each do |link|
         if link["href"].start_with?("/")
@@ -341,7 +354,10 @@ module Package
 
     def build_package_html_toc
       # rearrange the various contents links
-      doc.css(".access-preview-snippet").first.inner_html = '<div id="toc"><ul class="list-unbulleted"></ul></ul>'
+      snippet_el = doc.css(".access-preview-snippet").first
+      return unless snippet_el
+
+      snippet_el.inner_html = '<div id="toc"><ul class="list-unbulleted"></ul></ul>'
       current_ul = doc.css("#toc ul").first
       contents_li = nil
       doc.css("#about-collection-nav li.nav-item").each do |li|
@@ -368,7 +384,9 @@ module Package
       placeholder_el.add_next_sibling '<link href="https://fonts.googleapis.com/css2?family=Mulish:ital,wght@0,400;0,500;0,600;0,700;0,800;1,400;1,500;1,600;1,700;1,800&display=swap" rel="stylesheet">'
       placeholder_el.add_next_sibling '<link href="https://fonts.googleapis.com/css?family=Crimson+Text|Muli:400,600,700" rel="stylesheet">'
       placeholder_el.add_next_sibling '<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">'
-      # TODO: another hack to hide the AssetNotFound error
+      # print.css is optional: the app uses Propshaft (not Sprockets), which raises
+      # Propshaft::MissingAssetError when the asset is absent. Swallow it so packaging
+      # still works in test and environments that don't ship a print stylesheet.
       begin
         placeholder_el.add_next_sibling CatalogController.helpers.stylesheet_link_tag("print")
       rescue Propshaft::MissingAssetError
@@ -396,12 +414,16 @@ module Package
         placeholder_el.add_next_sibling "<link rel='stylesheet' href='./assets/#{filename}'>"
       end
 
-      # ARC-114 Chinese characters were missing (Hack to include font as fallback font)
+      # ARC-114 Chinese characters were missing (Hack to include font as fallback font).
+      # The font is baked into the image under public/fonts (outside the FINDING_AID_DATA
+      # volume) and referenced by absolute path so PDF generation never depends on the
+      # data volume being seeded. wkhtmltopdf reads it via --enable-local-file-access.
+      unifont_path = Rails.root.join("public", "fonts", "UnifontExMono.woff")
       placeholder_el.add_next_sibling <<~STYLE
         <style>
           @font-face {
             font-family: 'UnifontExMono';
-            src: url('../../../fonts/UnifontExMono.woff') format('woff');
+            src: url('file://#{unifont_path}') format('woff');
           }
         </style>
       STYLE

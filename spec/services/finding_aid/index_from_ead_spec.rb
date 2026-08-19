@@ -26,6 +26,7 @@ RSpec.describe FindingAid::IndexFromEad do
 
     before do
       allow(Traject::Indexer::NokogiriIndexer).to receive(:new).and_return(indexer)
+      allow(indexer).to receive(:load_config_file)
       allow(indexer).to receive(:process_record).and_return(indexer_context)
       allow(indexer).to receive(:complete)
       allow(FileUtils).to receive(:mkdir_p).with(dest_dir).and_return(true)

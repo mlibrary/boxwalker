@@ -18,6 +18,14 @@ module FindingAid
             "repository" => repo_id
           )
 
+          # Load the Arclight EAD2 mapping rules (same config used by the
+          # `arclight:index` rake task) so the record gets an `id` and all
+          # Solr fields. Without this the indexer has no rules and Solr rejects
+          # the document for a missing mandatory uniqueKey `id` field.
+          indexer.load_config_file(
+            Rails.root.join("lib", "um_arclight", "traject", "ead2_config.rb").to_s
+          )
+
           # Process one source record through traject and writer.
           context = indexer.process_record(doc)
 

@@ -17,6 +17,14 @@ WORKDIR /rails
 # Install base packages
 RUN apt-get update -qq && \
     apt-get install --no-install-recommends -y curl libjemalloc2 libvips sqlite3 && \
+    # wkhtmltopdf is no longer packaged in Debian bookworm; install the official
+    # static build (.deb) so the PDF packager can shell out to it. Installing a
+    # local .deb via apt lets it resolve the font/X11 dependencies automatically.
+    arch="$(dpkg --print-architecture)" && \
+    curl -fsSL -o /tmp/wkhtmltox.deb \
+      "https://github.com/wkhtmltopdf/packaging/releases/download/0.12.6.1-3/wkhtmltox_0.12.6.1-3.bookworm_${arch}.deb" && \
+    apt-get install --no-install-recommends -y /tmp/wkhtmltox.deb && \
+    rm -f /tmp/wkhtmltox.deb && \
     ln -s /usr/lib/$(uname -m)-linux-gnu/libjemalloc.so.2 /usr/local/lib/libjemalloc.so && \
     rm -rf /var/lib/apt/lists /var/cache/apt/archives
 
