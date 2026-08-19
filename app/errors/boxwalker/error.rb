@@ -1,5 +1,5 @@
 # frozen_string_literal: true
 
-module Boxrunner
+module Boxwalker
   class Error < StandardError; end
 end

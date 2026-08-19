@@ -6,7 +6,7 @@ module FindingAid
 
     def self.call(identifier, format)
       unless FORMATS.include?(format)
-        raise ::Boxrunner::GenerateError, identifier, "Unsupported format requested: #{format}"
+        raise ::Boxwalker::GenerateError, identifier, "Unsupported format requested: #{format}"
       end
 
       convert(identifier, format)
@@ -16,7 +16,7 @@ module FindingAid
       artifact = ::Package::Generator.new identifier: identifier
       format == "html" ? artifact.generate_html : artifact.generate_pdf
     rescue => error
-      raise ::Boxrunner::GenerateError, identifier, error.to_s
+      raise ::Boxwalker::GenerateError, identifier, error.to_s
     end
 
     private_class_method :convert

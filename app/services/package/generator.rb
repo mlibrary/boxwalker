@@ -147,7 +147,7 @@ module Package
           if process_status.success?
             Rails.logger.info(stdout_and_stderr)
           else
-            raise Boxrunner::GenerateError, identifier, stdout_and_stderr.to_s
+            raise Boxwalker::GenerateError, identifier, stdout_and_stderr.to_s
           end
         end
 

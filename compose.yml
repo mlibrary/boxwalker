@@ -11,7 +11,7 @@ services:
     build:
       context: .
     ports:
-      - '3000:80'
+      - '3000:3000'
     environment:
       - SOLR_URL=http://solr:8983/solr/blacklight-collection
       - REDIS_URL=redis://redis:6379/0

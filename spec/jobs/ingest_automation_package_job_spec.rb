@@ -35,7 +35,7 @@ RSpec.describe IngestAutomationPackageJob, type: :job do
   end
 
   it 'enqueues a failure event when packaging fails' do
-    allow(FindingAid::PackageArtifact).to receive(:call).and_raise(Boxrunner::GenerateError, 'boom')
+    allow(FindingAid::PackageArtifact).to receive(:call).and_raise(Boxwalker::GenerateError, 'boom')
     expect { described_class.perform_now(identifier, format) }.not_to raise_error
     expect(IngestAutomationJob).to have_received(:perform_later)
       .with('html.failure', ead_id: identifier, err_msg: 'boom')
