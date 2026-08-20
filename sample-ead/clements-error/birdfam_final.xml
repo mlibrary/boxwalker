@@ -1,0 +1,148 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE ead PUBLIC "+//ISBN 1-931666-00-8//DTD ead.dtd (Encoded Archival Description (EAD) Version 2002)//EN" "ead.dtd">
+
+<ead>
+   <eadheader audience="internal" langencoding="iso639-2b" repositoryencoding="iso15511" dateencoding="iso8601" relatedencoding="Dublin Core" scriptencoding="iso15924" countryencoding="iso3166-1">
+      <eadid countrycode="us" mainagencycode="MiU-C" publicid="us//::miu-c//TXT us::miu-c::birdfam_final.xml//EN" encodinganalog="Identifier">umich-wcl-M-2711bir</eadid>
+      <filedesc>
+         <titlestmt>
+            <titleproper encodinganalog="Title">Finding Aid for Bird Family Papers</titleproper>
+            <author encodinganalog="Creator">Collection processed and finding aid created by Clements Staff and Meg Hixon, November 2011</author>
+         </titlestmt>
+         <publicationstmt>
+            <publisher encodinganalog="Publisher">William L. Clements Library, University of Michigan</publisher>
+            <date encodinganalog="Date" normal="2009">2014</date>
+         </publicationstmt>
+      </filedesc>
+      <profiledesc>
+         <creation>Encoded finding aid created by Cheney J. Schopieray, <date>June 20, 2014</date>
+         </creation>
+         <langusage encodinganalog="Language">The finding aid is written in  <language langcode="eng" scriptcode="Latn">English</language>
+         </langusage>
+         <descrules>Finding aid prepared using Describing Archives: A Content Standard (DACS)</descrules>
+      </profiledesc>
+      <revisiondesc>
+         <change>
+            <date>2014-06-20</date>
+            <item> Original encoding from Word 2010 file using Word macros and Xmetal.</item>
+         </change>
+      </revisiondesc>
+   </eadheader>
+   <frontmatter>
+      <titlepage>
+         <publisher>Manuscripts Division<lb/>William L. Clements Library<lb/>University of Michigan</publisher>
+         <titleproper>Finding aid for<lb/>Bird Family Papers, 1821-1947</titleproper>
+         <author>Finding aid created by<lb/> Clements Staff and Meg Hixon, November 2011</author>
+      </titlepage>
+   </frontmatter>
+   <archdesc level="collection" audience="external" type="inventory" relatedencoding="MARC21">
+      <did>
+         <origination>
+            <famname source="lcnaf" encodinganalog="100">Bird family</famname>
+         </origination>
+         <unittitle encodinganalog="245" type="main">Bird family papers <unitdate type="inclusive" encodinganalog="245$f">1821-1947</unitdate>
+            <unitdate type="bulk" encodinganalog="245$g">1879-1941</unitdate>
+         </unittitle>
+         <unittitle type="sort">Bird family papers</unittitle>
+         <physdesc>
+            <extent encodinganalog="300">2.25 linear feet</extent>
+         </physdesc>
+         <unitid type="identifier">wclmss000194</unitid>
+         <langmaterial>The material is in <language langcode="eng" encodinganalog="041">English</language>
+         </langmaterial>
+         <abstract> The Bird family papers are made up of correspondence, documents, ephemera, and other materials related to members of the Bird family of East Smithfield, Pennsylvania.</abstract>
+         <repository>
+            <corpname encodinganalog="852">
+               <subarea>William L. Clements Library</subarea>, University of Michigan</corpname>
+            <extptr href="wcladd" show="embed" actuate="onload"/>
+         </repository>
+      </did>
+      <descgrp type="admin">
+         <acqinfo encodinganalog="541">
+            <p> 1991. <num type="accession"> M-2711</num>.</p>
+         </acqinfo>
+         <processinfo>
+            <p>Cataloging funded by the National Historical Publications and Records Commission (NHPRC). This collection has been processed according to minimal processing procedures and may be revised, expanded, or updated in the future.</p>
+         </processinfo>
+         <accessrestrict encodinganalog="506">
+            <p>The collection is open for research.</p>
+         </accessrestrict>
+         <userestrict encodinganalog="540">
+            <p> Copyright status is unknown</p>
+         </userestrict>
+         <prefercite encodinganalog="524">
+            <p> Bird Family Papers, William L. Clements Library, The University of Michigan</p>
+         </prefercite>
+      </descgrp>
+      <bioghist encodinganalog="545">
+         <head>Biography</head>
+         <p>Hannah Minor (1802-1902) of Colerain, Massachusetts, and Halifax, Vermont, taught school briefly before marrying Samuel Niles in 1827.  The couple moved to Smithfield, Pennsylvania, in 1837 with their children, some of whom were adopted.  The couple moved to Burlingame, Kansas, in 1869, where they lived for the remainder of their lives.  Their daughter Nancy was born in 1828 and taught school in Halifax, Vermont, before marrying Lark Bird of Smithfield, Pennsylvania.  A deeply religious woman, she embraced multiple social causes during her life, serving as secretary for the Soldiers Aid Society of East Smithfield, Pennsylvania, from 1862-1864, and actively participating in the Women's Christian Temperance Union throughout her life.  She died in 1914.</p>
+         <p>George Niles Bird, son of Lark and Nancy Niles Bird, was born in 1860 and married Frances Rowe in 1883; he worked as a farmer and later kept a general store in Smithfield.  Helen, their daughter, was born in 1892 and attended West Chester Normal School for one academic year during 1912 and 1913.  Their son Richard married Carrie M. Ballantine on October 12, 1910.  Richard and Carrie's son, George Owen, was born in 1915 and received a degree in architecture from Pennsylvania State University in 1939.  He joined the United States Army in July 1941, and served as a technical sergeant at Ellington Field, Texas.  He was discharged in December 1945.</p>
+      </bioghist>
+      <arrangement encodinganalog="351">
+         <p>The collection is currently in a temporary arrangement.</p>
+      </arrangement>
+      <scopecontent encodinganalog="520">
+         <p>The Bird family papers are made up of correspondence, documents, ephemera, and other materials related to members of the Bird family of East Smithfield, Pennsylvania.  A number of letters written between George Niles Bird and Frances Rowe depict their lengthy, occasionally difficult, courtship in the late 19th century.  Letters from other friends and family members are interspersed, including a letter from Hope Rowe recounting the funeral of President James A. Garfield (October 9, 1881).</p>
+         <p>Nancy N. Bird's correspondence consists primarily of incoming personal letters.  Nancy's cousins wrote many of the letters, with the family's religiosity influencing much of their writing. The Bird family papers include many of Nancy N. Bird's speeches, including a series of talks delivered to fellow members of the Women's Christian Temperance Union (WCTU) between 1886 and 1912.  She discussed temperance, religion, and topics of local interest, including the history of Smithfield, Pennsylvania.  Nancy N. Bird's printed materials consist primarily of ephemera, programs, and newspaper clippings, largely related to her work with the WCTU and to the Bradford Baptist Association.  Also present are three items written by Nancy: a short book entitled <title render="italic">A History of the Sunday Schools in East Smithfield, PA. Since 1822</title>, and two copies of <title render="italic">The History of the Baptist Church of East Smithfield, PA</title>.  Other materials related to Nancy include journal pages, a photograph, and Sunday School papers.</p>
+         <p>Helen Bird's letters, written to her mother, chronicle her year at the West Chester Normal School, 1912-1913, and include frequent complaints about the atmosphere, the people, and the food.  </p>
+         <p>Materials relating to George Bird consist primarily of incoming correspondence from friends and from his cousin Geraldine ("Jerry").  Jerry, who financially supported George during his time at Pennsylvania State University, also offered advice and updates on her academic life at Cornell University, while George's friend Eugene Edgar Doll discussed his experiences at the University of Chicago and his patronage of the arts.  The collection also includes reports from George Bird's early studies and from his time at Pennsylvania State.</p>
+         <p>Personal letters from other members of the Niles and Bird families include early letters from Hannah Niles to her husband Samuel, and letters addressed to George N. Bird, his wife Frances, and their daughter-in-law Carrie.  Two printed letters from "Robert and Bernie" in Impur, India, describe the country and their educational and missionary work; on January 7, 1921, they mentioned Gandhi's non-cooperation movement.</p>
+         <p>The collection contains diaries and journals, account books, and albums. The diaries include an 1844 unsigned journal, Hannah Minor Niles' 1866 diary, Nancy Niles Bird's 1851 diary, and Carrie M. Bird's 1921 diary. An account books tracks John Bird's expenses between 1846 and 1858, and a record book kept by Nancy Niles Bird includes the meeting minutes from the Soldiers Aid Society during the Civil War and household accounts. George Bird's autograph album covers the years 1879-1881 and  Nancy Niles Bird's scrapbook, kept between 1850 and 1925, contains newspaper articles about her mother Hannah, members of the Bird family, and acquaintances from Pennsylvania and Kansas.</p>
+         <p>Other miscellaneous items include a printed map, a document related to the military chapel at Ellington Field, Texas, genealogical items, and manuscript poems. </p>
+      </scopecontent>
+      <controlaccess>
+         <p>
+            <extptr href="accnote" show="embed" actuate="onload"/>
+         </p>
+         <controlaccess>
+            <head>Subjects:</head>
+            <subject encodinganalog="650" source="lcsh">Baptists--Pennsylvania--History.</subject>
+            <geogname encodinganalog="651" source="lcsh">Binghamton (N.Y.)</geogname>
+            <subject encodinganalog="650" source="lcsh">Christian women--Religious life.</subject>
+            <corpname encodinganalog="610" source="lcnaf">Cornell College.</corpname>
+            <subject encodinganalog="650" source="lcsh">Courtship--United States.</subject>
+            <subject encodinganalog="650" source="lcsh">Drinking of alcoholic beverages.</subject>
+            <subject encodinganalog="650" source="lcsh">Family life.</subject>
+            <corpname encodinganalog="610" source="lcnaf">Hiram College.</corpname>
+            <subject encodinganalog="650" source="lcsh">Missionaries--India.</subject>
+            <corpname encodinganalog="610" source="lcnaf">Pennsylvania State University.</corpname>
+            <subject encodinganalog="650" source="lcsh">Postsecondary education.</subject>
+            <geogname encodinganalog="651" source="lcsh">Smithfield (Pa.)</geogname>
+            <subject encodinganalog="650" source="lcsh">Sunday schools--United States.</subject>
+            <subject encodinganalog="650" source="lcsh">Temperance.</subject>
+            <corpname encodinganalog="610" source="lcnaf">University of Chicago.</corpname>
+            <geogname encodinganalog="651" source="lcsh">West Chester (Pa.)</geogname>
+            <corpname encodinganalog="610" source="lcnaf">Woman's Christian Temperance Union.</corpname>
+            <subject encodinganalog="650" source="lcsh">Women--Education--United States.</subject>
+         </controlaccess>
+         <controlaccess>
+            <head>Contributors: </head>
+            <persname encodinganalog="700" source="lcnaf">Bird, Carrie M.</persname>
+            <persname encodinganalog="700" source="lcnaf">Bird, Helen L.</persname>
+            <persname encodinganalog="700" source="lcnaf">Bird, Nancy Niles.</persname>
+            <persname encodinganalog="700" source="lcnaf">Bird, George N.</persname>
+         </controlaccess>
+         <controlaccess>
+            <head>Genre Terms:</head>
+            <genreform encodinganalog="655" source="aat">Account books.</genreform>
+            <genreform encodinganalog="655" source="aat">Autograph albums.</genreform>
+            <genreform encodinganalog="655" source="aat">Clippings (information artifacts)</genreform>
+            <genreform encodinganalog="655" source="aat">Diaries.</genreform>
+            <genreform encodinganalog="655" source="aat">Ephemera.</genreform>
+            <genreform encodinganalog="655" source="aat">Letters (correspondence)</genreform>
+            <genreform encodinganalog="655" source="aat">Scrapbooks.</genreform>
+            <genreform encodinganalog="655" source="aat">Speeches.</genreform>
+         </controlaccess>
+      </controlaccess>
+      <dsc type="combined">
+         <c01 level="series">
+            <did>
+               
+               <unittitle>Bird family papers, <unitdate type="inclusive">1821-1947</unitdate>
+               </unittitle>
+            <dao actuate="onrequest" show="new" href="dao-wcl-m-2711bir"><daodesc><note><p> [View selected images of illustrated manuscripts]</p></note></daodesc></dao></did>
+         <c02 level="file"><did><container label="Box" type="box">1</container></did></c02><c02 level="file"><did><container label="Box" type="box">2</container></did></c02><c02 level="file"><did><container label="Box" type="box">3</container></did></c02><c02 level="file"><did><container label="Box" type="box">4</container></did></c02><c02 level="file"><did><container label="Box" type="box">5</container></did></c02><c02 level="file"><did><container label="Box" type="box">6</container></did></c02></c01>
+      </dsc>
+   </archdesc>
+</ead>

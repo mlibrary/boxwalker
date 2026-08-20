@@ -1,7 +1,14 @@
 #!/bin/bash -e
 
-# If running the rails server then create or migrate existing database
-if [ "${@: -2:1}" == "./bin/rails" ] && [ "${@: -1:1}" == "server" ]; then
+# Prepare the database for the long-running services that depend on it:
+#   * the Rails web server (renders catalog pages), and
+#   * the Resque worker -- Package::Generator renders /catalog/:id in-process while
+#     building HTML/PDF, and in development the migration_error=:page_load middleware
+#     runs a pending-migration check on that request. The worker container has its own
+#     (image-baked, non-volume) SQLite DB, so it must be prepared here too or packaging
+#     jobs fail with a 500 on the internal render.
+if { [ "${@: -2:1}" == "./bin/rails" ] && [ "${@: -1:1}" == "server" ]; } || \
+   [[ "${*}" == *resque:work* ]]; then
   ./bin/rails db:prepare
 fi
 

@@ -1,0 +1,886 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE ead PUBLIC "+//ISBN 1-931666-00-8//DTD ead.dtd (Encoded Archival Description (EAD) Version 2002)//EN" "ead.dtd">
+
+<ead>
+   <eadheader audience="internal" langencoding="iso639-2b" repositoryencoding="iso15511" dateencoding="iso8601" relatedencoding="Dublin Core" scriptencoding="iso15924" countryencoding="iso3166-1">
+      <eadid countrycode="us" mainagencycode="MiU-C" publicid="us//::miu-c//TXT us::miu-c::tinder_mainEAD.xml//EN" encodinganalog="Identifier">umich-wcl-G-tind-0001</eadid>
+      <filedesc>
+         <titlestmt>
+            <titleproper encodinganalog="Title">Finding Aid for  David V. Tinder Collection of Michigan Photography</titleproper>
+            <author encodinganalog="Creator">Collection processed and finding aid created by  Joel Hickey, Leslie High, Francine Keyes, Clayton Lewis, William Lewis, Jorge Lopez-McKnight, Megan Marion, Lori Mott, Eve Neiger, Marjorie O'Brien, May Oyler, Diana Sykes, James Thiry, Jayne Ptolemy, Michael Wesenberg, Louie Miller, Claire Milldrum, Morgan Fenton, 2009-2019</author>
+         </titlestmt>
+         <publicationstmt>
+            <publisher encodinganalog="Publisher">William L. Clements Library, University of Michigan</publisher>
+            <date encodinganalog="Date" normal="2009">2014</date>
+         </publicationstmt>
+      </filedesc>
+      <profiledesc>
+         <creation>Encoded finding aid created by  Francine Keyes, Clayton Lewis, Cheney J. Schopieray,  <date>May 2014</date>
+         </creation>
+         <langusage encodinganalog="Language">The finding aid is written in  <language langcode="eng" scriptcode="Latn">English</language>
+         </langusage>
+         <descrules>Finding aid prepared using Describing Archives: A Content Standard (DACS)</descrules>
+      </profiledesc>
+      <revisiondesc>
+         <change>
+            <date>2014-05-21</date>
+            <item> Original encoding from Word 2010 file using Word macros and Xmetal.</item>
+         </change>
+      </revisiondesc>
+   </eadheader>
+   <frontmatter>
+      <titlepage>
+         <publisher>Graphics Division<lb/>William L. Clements Library<lb/>University of Michigan</publisher>
+         <titleproper>Finding aid for<lb/>David V. Tinder Collection of Michigan Photography, circa 1845-1980</titleproper>
+         <author>Finding aid created by<lb/>Joel Hickey, Leslie High, Clayton Lewis, William Lewis, Jorge Lopez-McKnight, Megan Marion, Lori Mott, Eve Neiger, Marjorie O'Brien, May Oyler, Diana Sykes, James Thiry, Jayne Ptolemy, Michael Wesenberg, 2009-2014</author>
+      </titlepage>
+   </frontmatter>
+   <archdesc level="collection" audience="external" type="inventory" relatedencoding="MARC21">
+      <did>
+         <origination>
+            <persname source="lcnaf" encodinganalog="100">Tinder, David V.</persname>
+         </origination>
+         <unittitle encodinganalog="245" type="main">David V. Tinder Collection of Michigan Photography <unitdate type="inclusive" encodinganalog="245$f">circa 1845-1980</unitdate>
+         </unittitle>
+         <unittitle type="sort">Tinder, David V., Collection of Michigan Photography</unittitle>
+         <physdesc>
+            <extent encodinganalog="300">Approximately 113,000 photographs and 96 volumes</extent>
+         </physdesc>
+         <unitid type="identifier">wclgrfx000189</unitid>
+         <langmaterial>The material is in <language langcode="eng" encodinganalog="041">English</language>
+         </langmaterial>
+         <abstract> The David V. Tinder Collection of Michigan Photography consists of over 100,000 images in a variety of formats including daguerreotypes, ambrotypes, tintypes, cartes de visite, cabinet photographs, real photo postcards, stereographs, and mounted and unmounted paper prints.  The collection is primarily made up of vernacular photographs of everyday life in Michigan taken by both professional and amateur photographers from the 1840s into the mid-twentieth century. In addition to supporting local history research, the collection has resources for the study of specific events and subjects. Included are images related to lumbering, mining, suburbanization; the industrialization of cities; travel and transportation; the impact of the automobile; the rise of middle-class leisure society; fashion and dress; ethnicity and race; the role of fraternal organizations in society; and the participation of photographers in business, domestic, and social life.  The collection is only partially open for research.</abstract>
+         <repository>
+            <corpname encodinganalog="852">
+               <subarea>William L. Clements Library</subarea>, University of Michigan</corpname>
+            <extptr href="wcladd" show="embed" actuate="onload"/>
+         </repository>
+      </did>
+      <descgrp type="admin">
+         <acqinfo encodinganalog="541">
+            <p> Clements Library Associate Board Member David B. Walters purchased the David V. Tinder Collection of Michigan Photography in 2006. The collection is being held on deposit and donated incrementally to the Clements library in honor of Harold L. Walters, University of Michigan class of 1947, Engineering, and Marilyn S. Walters, University of Michigan class of 1950, LSA. Additional materials have been donated by Elaine Cato, Larry Filipczak, Donald Harrison, Andrew and Jill Kerkhoff, Cynthia Kerkhoff, David and Laurel Kovacs, Daisy Lovain, Peter and Cynthia Motzenbecker, Keith and Angela Steffke, David E. and Joanne Tinder, and David V. Tinder.</p>
+            <p>
+               <num type="accession">  F-830, F-831, F-832, F-847, F-860, F-890, F-891, F-892, F-893, F-897, F-903, F-921, F-923, F-924, F-928, F-938, F-979, F-980, F-987, F-995, F-996, F-997, F-998, F-999, F-1000, F-1004, F-1005, F-1018, F-1033, F-1035, F-1045.</num>
+            </p>
+         </acqinfo>
+         <processinfo>
+            <p>Cataloging funded in part by the Michigan Photographic Historical Society. This collection has been processed according to minimal processing procedures and may be revised, expanded, or updated in the future.</p>
+         </processinfo>
+         <accessrestrict encodinganalog="506">
+            <p>The collection is only partially open for research.</p>
+         </accessrestrict>
+         <userestrict encodinganalog="540">
+            <p> Copyright status is unknown</p>
+         </userestrict>
+         <prefercite encodinganalog="524">
+            <p> David V. Tinder Collection of Michigan Photography, William L. Clements Library, University of Michigan. The majority portion donated by David B. Walters in honor of Harold L. Walters, UM class of 1947 and Marilyn S. Walters, UM class of 1950.</p>
+         </prefercite>
+      </descgrp>
+      <bioghist encodinganalog="545">
+         <head>Biography</head>
+         <p>David V. Tinder was born in Lima, Ohio, in 1926, and moved to Flint, Michigan, as a child. He served in the United States Navy as an electronic technician's mate until he was honorably discharged in July of 1946. Dave Tinder attended Flint Junior College for one year before transferring to the University of Michigan, which awarded him a Bachelor of Science degree in Physics in 1949. </p>
+         <p>Tinder spent the majority of his career as a project engineer and engineering manager to new product development in the Detroit area. He worked for manufacturers and automotive suppliers including Dura Corporation, McCord Corporation, and United Technologies.  Tinder developed many successful products and has been issued sixteen United States patents plus a number in foreign countries. Dave Tinder retired from United Technologies, Automotive Products Division in 1990.</p>
+         <p>Tinder began collecting antiques in the late 1950s, starting with leaded glass lamps, art glass and ceramics, Art Nouveau pewter, and Japanese bronzes. Inspired by William C. Darrah's 1964 book <title render="italic">A History of Stereographs in America and Their Collection</title>, he amassed a large group of international photographic stereo views. By the early 1970s he began trading his international collection for Michigan stereo views and other early photographic formats related to Michigan. Eventually this would include examples of virtually every popular photographic format used by both professional and amateur photographers in the first century of photography.</p>
+         <p>Tinder became increasingly interested in the lives and careers of the photographers represented in his collection and began creating <title render="italic">The Directory of Early Michigan Photographers</title>. The combination of his collection and research has led to his recognition as the leading authority on the subject of early Michigan photography. </p>
+      </bioghist>
+      <arrangement encodinganalog="351">
+         <p>The David V. Tinder Collection of Michigan Photography is organized primarily by photographic format, and sorted either by geographic location, photographer, or subject content. Because of the size and variety of the collection, separate finding aids describe each photographic format or subsection of the collection.</p>
+         <list>
+            <head>The collection is arranged in the following series:</head>
+            <item>Series I. Cased Images: Cased daguerreotypes, ambrotypes, and tintypes. Primarily portraiture with some special subjects. Date range from 1840s-1860s. Approx. 95 items.</item>
+            <item>Series II. Cartes de Visite/card photographs: Alphabetized by photographer with special interest subjects sorted separately. Comprised mostly of studio portraiture. Includes small cdv sized tintypes. Date range from 1860-1900. Approx. 13,000 items. </item>
+            <item>Series III. Stereographs: Sorted by county, place name, photographer and/or publisher, with some a few special sets are grouped separately. Comprised mostly of outdoor views. Date range from 1859-1920. Approximately 6500 items. NOT PRESENTLY OPEN FOR RESEARCH.</item>
+            <item>Series IV. Cabinet Photos: Alphabetized by photographer with special interest subjects sorted separately. Comprised mostly of studio portraiture. Date range from 1868-1900. Approx. 19,000 cards.</item>
+            <item>Series V. County File: Alphabetized by county, including all 83 Michigan counties. Includes both card mounted photographs, unmounted paper prints, photomechanical prints, and large tintypes. Includes views of places, events, activities, group and individual portraits. Date range 1860s-1950s. 6599 items.</item>
+            <item>Series VI. Over-Sized File: Sorted by subject. Includes large card mounted photos and unmounted paper prints. Includes views of places, events, local scenes, group portraits, Cirkut Camera panoramas. Also includes examples of fine art photography by contemporary Michigan photographers known personally to the collector, David V. Tinder. Date range 1860s-1980s. (454 items) </item>
+            <item>Series VII. Photographers File: Alphabetized by photographer. Housed in ring binders, approximately 24 binders representing over 800 photographers. Includes both original and reproduction photo portraits of photographers, views of gallery storefronts and interiors, images of photographers in the field, and advertising samples. Approx. 1,800 items. NOT PRESENTLY OPEN FOR RESEARCH.</item>
+            <item>Series VIII. Real photo postcards: Alphabetized by Michigan County, place name, and subject. All 83 Michigan counties are represented. Date range 1906-1950s. Approx. 50,000 postcards. NOT PRESENTLY OPEN FOR RESEARCH.</item>
+            <item>Series IX. Photo albums and photographically illustrated books: In chronological order. Includes both professional and amateur photographic albums, carte de visite albums, travel collections, school albums, published books, souvenir viewbooks, and pamphlets with photographic plate illustrations. Date range 1860s-1970s. 96 items. NOT PRESENTLY OPEN FOR RESEARCH.</item>
+            <item>Series X. Framed photographs: Photographic prints in vintage decorative frames or printing frames used for exposing contact prints. NOT PRESENTLY OPEN FOR RESEARCH.</item>
+            <item>Series XI. Small formats: Small mounted prints, unmounted snapshots, tintypes, miniature souvenir portfolios. NOT PRESENTLY OPEN FOR RESEARCH.</item>
+            <item>Series XII. Detroit Publishing Company: Process related examples of mass produced lithographic prints and postcard production and advertising. NOT PRESENTLY OPEN FOR RESEARCH.</item>
+            <item>Series XIII. Henry Stephens Lumber Company: Archive material including documents, photographs, and printed advertising examples. NOT PRESENTLY OPEN FOR RESEARCH.</item>
+            <item>Series XIV. Black River lumbering photographs: Mounted albumen prints circa 1880s of lumbering operations in Alcona County, Michigan. 16 items.</item>
+            <item>Series XV. C.C. Buskirk Railroad Photographs: Railroad locomotives, lumber camps, transport of logs via truck and rail in various Michigan counties all photographed by C.C Buskirk of Big Rapids. Date range 1885-1939. 7 items.</item>
+            <item>Series XVI. Owen Fawcett theatrical photos: Photographs of the British born actor, Owen Fawcett (1838-1904) and his family. 41 items.</item>
+            <item>Series XVII. Objects and realia: Small objects and realia related to Michigan photography. NOT PRESENTLY OPEN FOR RESEARCH.</item>
+            <item>Series XVIII. Glass slides and negatives: NOT PRESENTLY OPEN FOR RESEARCH</item>
+         </list>
+      </arrangement>
+      <scopecontent encodinganalog="520">
+         <p>The subject contents of groupings by photographic format within the Tinder collection vary, depending in part upon how each format was historically used, and the date range of that format's popularity. For example, cartes de visite and cased images are most often formal portraits, while stereographs are likely to be outdoor views. Cabinet photographs are frequently portraits, but with less formality than the cartes de visite and cased images. The postcards and the mounted prints contain very diverse subjects. The photographers' file contains many important and rare images of photographers, their galleries, promotional images, and the activities of photographers in the field. See individual series finding aids for additional detail.</p>
+         <p>Included throughout are images by both professional and amateur photographers, although those by professionals are extant in far greater numbers. </p>
+      </scopecontent>
+      <controlaccess>
+         <p>
+            <extptr href="accnote" show="embed" actuate="onload"/>
+         </p>
+         <controlaccess>
+            <head>Subjects:</head>
+            <subject encodinganalog="650" source="local">David V. Tinder Collection of Michigan Photography.</subject>
+            <subject encodinganalog="650" source="local">Photographs shelf.</subject>
+         </controlaccess>
+         <controlaccess>
+            <head>Subjects - Visual Materials:</head>
+            <subject encodinganalog="650" source="lcgtm">Agriculture--Michigan.</subject>
+            <subject encodinganalog="650" source="lcgtm">Agricultural laborers--Michigan.</subject>
+            <subject encodinganalog="650" source="lcgtm">Agricultural machinery &amp; implements--Michigan.</subject>
+            <subject encodinganalog="650" source="lcgtm">Athletes--Michigan.</subject>
+            <subject encodinganalog="650" source="lcsh">Automobile factories.</subject>
+            <subject encodinganalog="650" source="lcsh">Automobile industry workers.</subject>
+            <subject encodinganalog="650" source="lcsh">Automobiles--Design and construction.</subject>
+            <subject encodinganalog="650" source="lcsh">Bicycles.</subject>
+            <subject encodinganalog="650" source="lcsh">Boats and boating.</subject>
+            <subject encodinganalog="650" source="lcsh">Business.</subject>
+            <subject encodinganalog="650" source="lcgtm">Camping--Michigan.</subject>
+            <subject encodinganalog="650" source="lcgtm">Cities &amp; towns--Michigan.</subject>
+            <subject encodinganalog="650" source="lcgtm">Copper miners--Michigan.</subject>
+            <subject encodinganalog="650" source="lcsh">Copper mines and mining.</subject>
+            <subject encodinganalog="650" source="lcsh">Copper smelting.</subject>
+            <subject encodinganalog="650" source="lcgtm">Crimes--Michigan.</subject>
+            <subject encodinganalog="650" source="lcgtm">Cycling--Michigan.</subject>
+            <subject encodinganalog="650" source="lcgtm">Disasters--Michigan.</subject>
+            <subject encodinganalog="650" source="lcgtm">Domestic life--Michigan.</subject>
+            <subject encodinganalog="650" source="lcgtm">Dwellings--Michigan.</subject>
+            <subject encodinganalog="650" source="lcgtm">Education--Michigan.</subject>
+            <subject encodinganalog="650" source="lcgtm">Electric railroads--Michigan.</subject>
+            <subject encodinganalog="650" source="lcgtm">Farms--Michigan.</subject>
+            <subject encodinganalog="650" source="lcgtm">Fraternal lodges--Michigan.</subject>
+            <subject encodinganalog="650" source="lcgtm">Fraternal organizations--Michigan.</subject>
+            <subject encodinganalog="650" source="lcsh">Industries.</subject>
+            <subject encodinganalog="650" source="lcgtm">Iron miners--Michigan.</subject>
+            <subject encodinganalog="650" source="lcsh">Iron mines and mining.</subject>
+            <subject encodinganalog="650" source="lcgtm">Labor--Michigan.</subject>
+            <subject encodinganalog="650" source="lcgtm">Leisure--Michigan.</subject>
+            <subject encodinganalog="650" source="lcgtm">Loggers--Michigan.</subject>
+            <subject encodinganalog="650" source="lcgtm">Logging--Michigan.</subject>
+            <subject encodinganalog="650" source="lcgtm">Lumber camps--Michigan.</subject>
+            <subject encodinganalog="650" source="lcsh">Lumbermen.</subject>
+            <subject encodinganalog="650" source="lcsh">Lumbering.</subject>
+            <subject encodinganalog="650" source="lcsh">Logging railroads.</subject>
+            <geogname encodinganalog="651" source="lcsh">Michigan.</geogname>
+            <subject encodinganalog="650" source="lcsh">Mineral industries.</subject>
+            <subject encodinganalog="650" source="lcgtm">Mining--Michigan.</subject>
+            <subject encodinganalog="650" source="lcsh">Mining machinery.</subject>
+            <subject encodinganalog="650" source="lcgtm">Occupations--Michigan.</subject>
+            <subject encodinganalog="650" source="lcgtm">Photographers--Michigan.</subject>
+            <subject encodinganalog="650" source="lcgtm">Railroad stations--Michigan.</subject>
+            <subject encodinganalog="650" source="lcgtm">Railroads--Michigan.</subject>
+            <subject encodinganalog="650" source="lcsh">Railroads--Design and construction.</subject>
+            <subject encodinganalog="650" source="lcsh">Roads--Design and construction.</subject>
+            <subject encodinganalog="650" source="lcgtm">Schools--Michigan.</subject>
+            <subject encodinganalog="650" source="lcgtm">Steamboats--Michigan.</subject>
+            <subject encodinganalog="650" source="lcgtm">Storefronts--Michigan.</subject>
+            <subject encodinganalog="650" source="lcgtm">Stores &amp; shops--Michigan.</subject>
+            <subject encodinganalog="650" source="lcsh">Women--Societies and clubs.</subject>
+         </controlaccess>
+         <controlaccess>
+            <head>Genre Terms:</head>
+            <genreform encodinganalog="655" source="gmgpc">Albumen prints.</genreform>
+            <genreform encodinganalog="655" source="gmgpc">Ambrotypes.</genreform>
+            <genreform encodinganalog="655" source="gmgpc">Cartes de visite.</genreform>
+            <genreform encodinganalog="655" source="gmgpc">Cabinet photographs.</genreform>
+            <genreform encodinganalog="655" source="gmgpc">Card photographs.</genreform>
+            <genreform encodinganalog="655" source="gmgpc">Cyanotypes.</genreform>
+            <genreform encodinganalog="655" source="gmgpc">Daguerreotypes.</genreform>
+            <genreform encodinganalog="655" source="gmgpc">Ephemera.</genreform>
+            <genreform encodinganalog="655" source="gmgpc">Gelatin silver prints.</genreform>
+            <genreform encodinganalog="655" source="gmgpc">Glass negatives.</genreform>
+            <genreform encodinganalog="655" source="gmgpc">Lantern slides.</genreform>
+            <genreform encodinganalog="655" source="gmgpc">Panoramic photographs.</genreform>
+            <genreform encodinganalog="655" source="gmgpc">Photograph albums.</genreform>
+            <genreform encodinganalog="655" source="gmgpc">Photographic postcards.</genreform>
+            <genreform encodinganalog="655" source="gmgpc">Photographic prints.</genreform>
+            <genreform encodinganalog="655" source="gmgpc">Photomechanical prints.</genreform>
+            <genreform encodinganalog="655" source="gmgpc">Portrait photographs.</genreform>
+            <genreform encodinganalog="655" source="gmgpc">Snapshots.</genreform>
+            <genreform encodinganalog="655" source="gmgpc">Stereographs.</genreform>
+            <genreform encodinganalog="655" source="gmgpc">Tintypes.</genreform>
+         </controlaccess>
+      </controlaccess>
+      <dsc type="combined">
+         <c01 level="series">
+            <did>
+               <unittitle>David V. Tinder Collection of Michigan Photography</unittitle></did>
+         </c01><c01 level="series">
+            <did>
+               <unittitle><title actuate="onrequest" href="umich-wcl-G-tind-0323" show="replace">I. Cased Images.</title></unittitle>
+            </did>
+         </c01>
+         <c01 level="series">
+            <did>
+               <unittitle><title actuate="onrequest" show="replace" href="umich-wcl-G-tind-0320">II. Cartes de Visite/card photographs.</title></unittitle>
+            </did>
+         </c01>
+         <c01 level="series">
+            <did>
+               <unittitle>III. Stereographs NOT PRESENTLY OPEN FOR RESEARCH.</unittitle>
+            </did>
+         </c01>
+         <c01 level="series">
+            <did>
+               <unittitle>
+                  <title actuate="onrequest" show="replace" href="umich-wcl-G-tind-0180">IV. Cabinet Photographs</title>
+               </unittitle>
+            </did>
+         </c01>
+         <c01 level="series">
+            <did>
+               <unittitle>V. County File </unittitle>
+            </did>
+            <c02 level="file">
+               <did>
+                  <unittitle>
+                     <title href="umich-wcl-G-tind-0002" actuate="onrequest" show="replace">Alcona County</title>
+                  </unittitle>
+               </did>
+            </c02>
+            <c02 level="file">
+               <did>
+                  <unittitle>
+                     <title href="umich-wcl-G-tind-0003" actuate="onrequest" show="replace">Alger County</title>
+                  </unittitle>
+               </did>
+            </c02>
+            <c02 level="file">
+               <did>
+                  <unittitle>
+                     <title href="umich-wcl-G-tind-0004" actuate="onrequest" show="replace">Allegan County</title>
+                  </unittitle>
+               </did>
+            </c02>
+            <c02 level="file">
+               <did>
+                  <unittitle>
+                     <title actuate="onrequest" href="umich-wcl-G-tind-0005" show="replace">Alpena County</title>
+                  </unittitle>
+               </did>
+            </c02>
+            <c02 level="file">
+               <did>
+                  <unittitle>
+                     <title actuate="onrequest" href="umich-wcl-G-tind-0006" show="replace">Antrim County</title>
+                  </unittitle>
+               </did>
+            </c02>
+            <c02 level="file">
+               <did>
+                  <unittitle>
+                     <title actuate="onrequest" href="umich-wcl-G-tind-0007" show="replace">Arenac County</title>
+                  </unittitle>
+               </did>
+            </c02>
+            <c02 level="file">
+               <did>
+                  <unittitle>
+                     <title actuate="onrequest" href="umich-wcl-G-tind-0008" show="replace">Baraga County</title>
+                  </unittitle>
+               </did>
+            </c02>
+            <c02 level="file">
+               <did>
+                  <unittitle>
+                     <title actuate="onrequest" href="umich-wcl-G-tind-0009" show="replace">Barry County</title>
+                  </unittitle>
+               </did>
+            </c02>
+            <c02 level="file">
+               <did>
+                  <unittitle>
+                     <title actuate="onrequest" href="umich-wcl-G-tind-0010" show="replace">Bay County</title>
+                  </unittitle>
+               </did>
+            </c02>
+            <c02 level="file">
+               <did>
+                  <unittitle>
+                     <title actuate="onrequest" href="umich-wcl-G-tind-0011" show="replace">Benzie County</title>
+                  </unittitle>
+               </did>
+            </c02>
+            <c02 level="file">
+               <did>
+                  <unittitle>
+                     <title actuate="onrequest" href="umich-wcl-G-tind-0012" show="replace">Berrien County</title>
+                  </unittitle>
+               </did>
+            </c02>
+            <c02 level="file">
+               <did>
+                  <unittitle>
+                     <title actuate="onrequest" href="umich-wcl-G-tind-0013" show="replace">Branch County</title>
+                  </unittitle>
+               </did>
+            </c02>
+            <c02 level="file">
+               <did>
+                  <unittitle>
+                     <title actuate="onrequest" href="umich-wcl-G-tind-0014" show="replace">Calhoun County</title>
+                  </unittitle>
+               </did>
+            </c02>
+            <c02 level="file">
+               <did>
+                  <unittitle>
+                     <title actuate="onrequest" href="umich-wcl-G-tind-0015" show="replace">Cass County</title>
+                  </unittitle>
+               </did>
+            </c02>
+            <c02 level="file">
+               <did>
+                  <unittitle>
+                     <title actuate="onrequest" href="umich-wcl-G-tind-0016" show="replace">Charlevoix County</title>
+                  </unittitle>
+               </did>
+            </c02>
+            <c02 level="file">
+               <did>
+                  <unittitle>
+                     <title actuate="onrequest" href="umich-wcl-G-tind-0017" show="replace">Cheboygan County</title>
+                  </unittitle>
+               </did>
+            </c02>
+            <c02 level="file">
+               <did>
+                  <unittitle>
+                     <title actuate="onrequest" href="umich-wcl-G-tind-0018" show="replace">Chippewa County</title>
+                  </unittitle>
+               </did>
+            </c02>
+            <c02 level="file">
+               <did>
+                  <unittitle>
+                     <title actuate="onrequest" href="umich-wcl-G-tind-0019" show="replace">Clare County</title>
+                  </unittitle>
+               </did>
+            </c02>
+            <c02 level="file">
+               <did>
+                  <unittitle>
+                     <title actuate="onrequest" href="umich-wcl-G-tind-0020" show="replace">Clinton County</title>
+                  </unittitle>
+               </did>
+            </c02>
+            <c02 level="file">
+               <did>
+                  <unittitle>
+                     <title actuate="onrequest" href="umich-wcl-G-tind-0021" show="replace">Crawford County</title>
+                  </unittitle>
+               </did>
+            </c02>
+            <c02 level="file">
+               <did>
+                  <unittitle>
+                     <title actuate="onrequest" href="umich-wcl-G-tind-0022" show="replace">Delta County</title>
+                  </unittitle>
+               </did>
+            </c02>
+            <c02 level="file">
+               <did>
+                  <unittitle>
+                     <title actuate="onrequest" href="umich-wcl-G-tind-0023" show="replace">Dickinson County</title>
+                  </unittitle>
+               </did>
+            </c02>
+            <c02 level="file">
+               <did>
+                  <unittitle>
+                     <title actuate="onrequest" href="umich-wcl-G-tind-0024" show="replace">Eaton County</title>
+                  </unittitle>
+               </did>
+            </c02>
+            <c02 level="file">
+               <did>
+                  <unittitle>
+                     <title actuate="onrequest" href="umich-wcl-G-tind-0025" show="replace">Emmet County</title>
+                  </unittitle>
+               </did>
+            </c02>
+            <c02 level="file">
+               <did>
+                  <unittitle>
+                     <title actuate="onrequest" href="umich-wcl-G-tind-0026" show="replace">Genesee County</title>
+                  </unittitle>
+               </did>
+            </c02>
+            <c02 level="file">
+               <did>
+                  <unittitle>
+                     <title actuate="onrequest" href="umich-wcl-G-tind-0027" show="replace">Gladwin County</title>
+                  </unittitle>
+               </did>
+            </c02>
+            <c02 level="file">
+               <did>
+                  <unittitle>
+                     <title actuate="onrequest" href="umich-wcl-G-tind-0028" show="replace">Gogebic County</title>
+                  </unittitle>
+               </did>
+            </c02>
+            <c02 level="file">
+               <did>
+                  <unittitle>
+                     <title actuate="onrequest" href="umich-wcl-G-tind-0029" show="replace">Grand Traverse County</title>
+                  </unittitle>
+               </did>
+            </c02>
+            <c02 level="file">
+               <did>
+                  <unittitle>
+                     <title actuate="onrequest" href="umich-wcl-G-tind-0030" show="replace">Gratiot County</title>
+                  </unittitle>
+               </did>
+            </c02>
+            <c02 level="file">
+               <did>
+                  <unittitle>
+                     <title actuate="onrequest" href="umich-wcl-G-tind-0031" show="replace">Hillsdale County</title>
+                  </unittitle>
+               </did>
+            </c02>
+            <c02 level="file">
+               <did>
+                  <unittitle>
+                     <title actuate="onrequest" href="umich-wcl-G-tind-0032" show="replace">Houghton County</title>
+                  </unittitle>
+               </did>
+            </c02>
+            <c02 level="file">
+               <did>
+                  <unittitle>
+                     <title actuate="onrequest" href="umich-wcl-G-tind-0033" show="replace">Huron County</title>
+                  </unittitle>
+               </did>
+            </c02>
+            <c02 level="file">
+               <did>
+                  <unittitle>
+                     <title actuate="onrequest" href="umich-wcl-G-tind-0034" show="replace">Ingham County</title>
+                  </unittitle>
+               </did>
+            </c02>
+            <c02 level="file">
+               <did>
+                  <unittitle>
+                     <title actuate="onrequest" href="umich-wcl-G-tind-0035" show="replace">Ionia County</title>
+                  </unittitle>
+               </did>
+            </c02>
+            <c02 level="file">
+               <did>
+                  <unittitle>
+                     <title actuate="onrequest" href="umich-wcl-G-tind-0036" show="replace">Iosco County</title>
+                  </unittitle>
+               </did>
+            </c02>
+            <c02 level="file">
+               <did>
+                  <unittitle>
+                     <title actuate="onrequest" href="umich-wcl-G-tind-0037" show="replace">Iron County</title>
+                  </unittitle>
+               </did>
+            </c02>
+            <c02 level="file">
+               <did>
+                  <unittitle>
+                     <title actuate="onrequest" href="umich-wcl-G-tind-0038" show="replace">Isabella County</title>
+                  </unittitle>
+               </did>
+            </c02>
+            <c02 level="file">
+               <did>
+                  <unittitle>
+                     <title actuate="onrequest" href="umich-wcl-G-tind-0039" show="replace">Jackson County</title>
+                  </unittitle>
+               </did>
+            </c02>
+            <c02 level="file">
+               <did>
+                  <unittitle>
+                     <title actuate="onrequest" href="umich-wcl-G-tind-0040" show="replace">Kalamazoo County</title>
+                  </unittitle>
+               </did>
+            </c02>
+            <c02 level="file">
+               <did>
+                  <unittitle>
+                     <title actuate="onrequest" href="umich-wcl-G-tind-0041" show="shownone">Kalkaska County</title>
+                  </unittitle>
+               </did>
+            </c02>
+            <c02 level="file">
+               <did>
+                  <unittitle>
+                     <title actuate="onrequest" href="umich-wcl-G-tind-0042" show="replace">Kent County</title>
+                  </unittitle>
+               </did>
+            </c02>
+            <c02 level="file">
+               <did>
+                  <unittitle>
+                     <title actuate="onrequest" href="umich-wcl-G-tind-0043" show="replace">Keweenaw County</title>
+                  </unittitle>
+               </did>
+            </c02>
+            <c02 level="file">
+               <did>
+                  <unittitle>
+                     <title actuate="onrequest" href="umich-wcl-G-tind-0044" show="replace">Lake County</title>
+                  </unittitle>
+               </did>
+            </c02>
+            <c02 level="file">
+               <did>
+                  <unittitle>
+                     <title actuate="onrequest" href="umich-wcl-G-tind-0045" show="replace">Lapeer County</title>
+                  </unittitle>
+               </did>
+            </c02>
+            <c02 level="file">
+               <did>
+                  <unittitle>
+                     <title actuate="onrequest" href="umich-wcl-G-tind-0046" show="replace">Leelanau County</title>
+                  </unittitle>
+               </did>
+            </c02>
+            <c02 level="file">
+               <did>
+                  <unittitle>
+                     <title actuate="onrequest" href="umich-wcl-G-tind-0047" show="replace">Lenawee County</title>
+                  </unittitle>
+               </did>
+            </c02>
+            <c02 level="file">
+               <did>
+                  <unittitle>
+                     <title actuate="onrequest" href="umich-wcl-G-tind-0048" show="replace">Livingston County</title>
+                  </unittitle>
+               </did>
+            </c02>
+            <c02 level="file">
+               <did>
+                  <unittitle>
+                     <title actuate="onrequest" href="umich-wcl-G-tind-0049" show="replace">Luce County</title>
+                  </unittitle>
+               </did>
+            </c02>
+            <c02 level="file">
+               <did>
+                  <unittitle>
+                     <title actuate="onrequest" href="umich-wcl-G-tind-0050" show="replace">Mackinac County</title>
+                  </unittitle>
+               </did>
+            </c02>
+            <c02 level="file">
+               <did>
+                  <unittitle>
+                     <title actuate="onrequest" href="umich-wcl-G-tind-0051" show="replace">Macomb County</title>
+                  </unittitle>
+               </did>
+            </c02>
+            <c02 level="file">
+               <did>
+                  <unittitle>
+                     <title actuate="onrequest" href="umich-wcl-G-tind-0052" show="replace">Manistee County</title>
+                  </unittitle>
+               </did>
+            </c02>
+            <c02 level="file">
+               <did>
+                  <unittitle>
+                     <title actuate="onrequest" href="umich-wcl-G-tind-0053" show="replace">Marquette County</title>
+                  </unittitle>
+               </did>
+            </c02>
+            <c02 level="file">
+               <did>
+                  <unittitle>
+                     <title actuate="onrequest" href="umich-wcl-G-tind-0054" show="replace">Mason County</title>
+                  </unittitle>
+               </did>
+            </c02>
+            <c02 level="file">
+               <did>
+                  <unittitle>
+                     <title actuate="onrequest" href="umich-wcl-G-tind-0055" show="replace">Mecosta County</title>
+                  </unittitle>
+               </did>
+            </c02>
+            <c02 level="file">
+               <did>
+                  <unittitle>
+                     <title actuate="onrequest" href="umich-wcl-G-tind-0056" show="replace">Menominee County</title>
+                  </unittitle>
+               </did>
+            </c02>
+            <c02 level="file">
+               <did>
+                  <unittitle>
+                     <title actuate="onrequest" href="umich-wcl-G-tind-0057" show="replace">Midland County</title>
+                  </unittitle>
+               </did>
+            </c02>
+            <c02 level="file">
+               <did>
+                  <unittitle>
+                     <title actuate="onrequest" href="umich-wcl-G-tind-0058" show="replace">Missaukee County</title>
+                  </unittitle>
+               </did>
+            </c02>
+            <c02 level="file">
+               <did>
+                  <unittitle>
+                     <title actuate="onrequest" href="umich-wcl-G-tind-0059" show="replace">Monroe County</title>
+                  </unittitle>
+               </did>
+            </c02>
+            <c02 level="file">
+               <did>
+                  <unittitle>
+                     <title actuate="onrequest" href="umich-wcl-G-tind-0060" show="replace">Montcalm County</title>
+                  </unittitle>
+               </did>
+            </c02>
+            <c02 level="file">
+               <did>
+                  <unittitle>
+                     <title actuate="onrequest" href="umich-wcl-G-tind-0061" show="replace">Montmorency County</title>
+                  </unittitle>
+               </did>
+            </c02>
+            <c02 level="file">
+               <did>
+                  <unittitle>
+                     <title actuate="onrequest" href="umich-wcl-G-tind-0062" show="replace">Muskegon County</title>
+                  </unittitle>
+               </did>
+            </c02>
+            <c02 level="file">
+               <did>
+                  <unittitle>
+                     <title actuate="onrequest" href="umich-wcl-G-tind-0063" show="replace">Newaygo County</title>
+                  </unittitle>
+               </did>
+            </c02>
+            <c02 level="file">
+               <did>
+                  <unittitle>
+                     <title actuate="onrequest" href="umich-wcl-G-tind-0064" show="replace">Oakland County</title>
+                  </unittitle>
+               </did>
+            </c02>
+            <c02 level="file">
+               <did>
+                  <unittitle>
+                     <title actuate="onrequest" href="umich-wcl-G-tind-0065" show="replace">Oceana County</title>
+                  </unittitle>
+               </did>
+            </c02>
+            <c02 level="file">
+               <did>
+                  <unittitle>
+                     <title actuate="onrequest" href="umich-wcl-G-tind-0066" show="replace">Ogemaw County</title>
+                  </unittitle>
+               </did>
+            </c02>
+            <c02 level="file">
+               <did>
+                  <unittitle>
+                     <title actuate="onrequest" href="umich-wcl-G-tind-0067" show="replace">Ontonagon County</title>
+                  </unittitle>
+               </did>
+            </c02>
+            <c02 level="file">
+               <did>
+                  <unittitle>
+                     <title actuate="onrequest" href="umich-wcl-G-tind-0068" show="replace">Osceola County</title>
+                  </unittitle>
+               </did>
+            </c02>
+            <c02 level="file">
+               <did>
+                  <unittitle>
+                     <title actuate="onrequest" href="umich-wcl-G-tind-0069" show="replace">Oscoda County</title>
+                  </unittitle>
+               </did>
+            </c02>
+            <c02 level="file">
+               <did>
+                  <unittitle>
+                     <title actuate="onrequest" href="umich-wcl-G-tind-0070" show="replace">Otsego County</title>
+                  </unittitle>
+               </did>
+            </c02>
+            <c02 level="file">
+               <did>
+                  <unittitle>
+                     <title actuate="onrequest" href="umich-wcl-G-tind-0071" show="replace">Ottawa County</title>
+                  </unittitle>
+               </did>
+            </c02>
+            <c02 level="file">
+               <did>
+                  <unittitle>
+                     <title actuate="onrequest" href="umich-wcl-G-tind-0072" show="replace">Presque Isle County</title>
+                  </unittitle>
+               </did>
+            </c02>
+            <c02 level="file">
+               <did>
+                  <unittitle>
+                     <title actuate="onrequest" href="umich-wcl-G-tind-0073" show="replace">Roscommon County</title>
+                  </unittitle>
+               </did>
+            </c02>
+            <c02 level="file">
+               <did>
+                  <unittitle>
+                     <title actuate="onrequest" href="umich-wcl-G-tind-0074" show="replace">Saginaw County</title>
+                  </unittitle>
+               </did>
+            </c02>
+            <c02 level="file">
+               <did>
+                  <unittitle>
+                     <title actuate="onrequest" href="umich-wcl-G-tind-0075" show="replace">St. Clair County</title>
+                  </unittitle>
+               </did>
+            </c02>
+            <c02 level="file">
+               <did>
+                  <unittitle>
+                     <title actuate="onrequest" href="umich-wcl-G-tind-0076" show="replace">St. Joseph County</title>
+                  </unittitle>
+               </did>
+            </c02>
+            <c02 level="file">
+               <did>
+                  <unittitle>
+                     <title actuate="onrequest" href="umich-wcl-G-tind-0077" show="replace">Sanilac County</title>
+                  </unittitle>
+               </did>
+            </c02>
+            <c02 level="file">
+               <did>
+                  <unittitle>
+                     <title actuate="onrequest" href="umich-wcl-G-tind-0078" show="replace">Schoolcraft County</title>
+                  </unittitle>
+               </did>
+            </c02>
+            <c02 level="file">
+               <did>
+                  <unittitle>
+                     <title actuate="onrequest" href="umich-wcl-G-tind-0079" show="replace">Shiawassee County</title>
+                  </unittitle>
+               </did>
+            </c02>
+            <c02 level="file">
+               <did>
+                  <unittitle>
+                     <title actuate="onrequest" href="umich-wcl-G-tind-0080" show="replace">Tuscola County</title>
+                  </unittitle>
+               </did>
+            </c02>
+            <c02 level="file">
+               <did>
+                  <unittitle>
+                     <title actuate="onrequest" href="umich-wcl-G-tind-0081" show="replace">Van Buren County</title>
+                  </unittitle>
+               </did>
+            </c02>
+            <c02 level="file">
+               <did>
+                  <unittitle>
+                     <title actuate="onrequest" href="umich-wcl-G-tind-0082" show="replace">Washtenaw County</title>
+                  </unittitle>
+               </did>
+            </c02>
+            <c02 level="file">
+               <did>
+                  <unittitle>
+                     <title actuate="onrequest" href="umich-wcl-G-tind-0083" show="replace">Wayne County</title>
+                  </unittitle>
+               </did>
+            </c02>
+            <c02 level="file">
+               <did>
+                  <unittitle>
+                     <title actuate="onrequest" href="umich-wcl-G-tind-0084" show="replace">Wexford County</title>
+                  </unittitle>
+               </did>
+            </c02>
+         </c01>
+         <c01 level="series">
+            <did>
+               <unittitle>VI. Over-Sized File. NOT PRESENTLY OPEN FOR RESEARCH.</unittitle>
+            </did>
+         </c01>
+         <c01 level="series">
+            <did>
+               <unittitle>VII. Photographers File. NOT PRESENTLY OPEN FOR RESEARCH.</unittitle>
+            </did>
+         </c01>
+         <c01 level="series">
+            <did>
+               <unittitle>VIII. Real photo postcards. NOT PRESENTLY OPEN FOR RESEARCH.</unittitle>
+            </did>
+         </c01>
+         <c01 level="series">
+            <did>
+               <unittitle>IX. Photo albums and photographically illustrated books. NOT PRESENTLY OPEN FOR RESEARCH.</unittitle>
+            </did>
+         </c01>
+         <c01 level="series">
+            <did>
+               <unittitle>X. Framed photographs. NOT PRESENTLY OPEN FOR RESEARCH.</unittitle>
+            </did>
+         </c01>
+         <c01 level="series">
+            <did>
+               <unittitle>XI. Small formats. NOT PRESENTLY OPEN FOR RESEARCH.</unittitle>
+            </did>
+         </c01>
+         <c01 level="series">
+            <did>
+               <unittitle>XII. Detroit Publishing Company. NOT PRESENTLY OPEN FOR RESEARCH.</unittitle>
+            </did>
+         </c01>
+         <c01 level="series">
+            <did>
+               <unittitle>XIII. Henry Stephens Lumber Company. NOT PRESENTLY OPEN FOR RESEARCH.</unittitle>
+            </did>
+         </c01>
+         <c01 level="series">
+            <did>
+               <unittitle><title actuate="onrequest" show="replace" href="umich-wcl-G-tind-0322">XIV. Black River lumbering photographs.</title></unittitle>
+            </did>
+         </c01>
+         <c01 level="series">
+            <did>
+               <unittitle>XV. C.C. Buskirk Railroad Pictures. NOT PRESENTLY OPEN FOR RESEARCH.</unittitle>
+            </did>
+         </c01>
+         <c01 level="series">
+            <did>
+               <unittitle><title actuate="onrequest" show="replace" href="umich-wcl-G-tind-0321">XVI. Owen Fawcett theatrical photos.</title></unittitle>
+            </did>
+         </c01>
+         <c01 level="series">
+            <did>
+               <unittitle>XVII. Objects and realia. NOT PRESENTLY OPEN FOR RESEARCH.</unittitle>
+            </did>
+         </c01>
+         <c01 level="series">
+            <did>
+               <unittitle>XVIII. Glass slides and negatives. NOT PRESENTLY OPEN FOR RESEARCH.</unittitle>
+            </did>
+         </c01>
+      </dsc>
+      <descgrp type="add">
+         <bibliography>
+            <p>Tinder, David V. <title render="italic" href="http://clements.umich.edu/files/tinder_directory.pdf" actuate="onrequest" show="replace">Directory of Early Michigan Photographers</title>. This reference work contains biographical information about virtually every known commercial and significant amateur photographer in the state of Michigan from the first known appearances in the 1840s into the early twentieth century.</p>
+            <p/>
+         </bibliography>
+      </descgrp>
+   </archdesc>
+</ead>

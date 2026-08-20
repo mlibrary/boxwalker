@@ -44,6 +44,14 @@ gem "image_processing", "~> 1.2"
 
 # date range chart
 gem "blacklight_range_limit", ">= 9.2"
+# job worker queue
+gem "resque", "~> 3.0"
+gem "redis"
+gem "resque-scheduler"
+# NOTE: The Resque dashboard is served by Resque::Server (bundled with the
+# `resque` gem) via config/resque_web.ru. The separate `resque-web` gem is
+# intentionally NOT used: it depends on sass-rails/sprockets, which conflicts
+# with this app's Propshaft asset pipeline and breaks `assets:precompile`.
 
 group :development, :test do
   # See https://guides.rubyonrails.org/debugging_rails_applications.html#debugging-with-the-debug-gem
@@ -53,7 +61,7 @@ group :development, :test do
   gem "bundler-audit", require: false
 
   # Static analysis for security vulnerabilities [https://brakemanscanner.org/]
-  gem "brakeman", "~> 8.0.5", require: false
+  gem "brakeman", "~> 8.0.6", require: false
 
   # Omakase Ruby styling [https://github.com/rails/rubocop-rails-omakase/]
   gem "rubocop-rails-omakase", require: false
@@ -73,9 +81,11 @@ gem "arclight"
 
 group :development, :test do
   gem "solr_wrapper", ">= 0.3"
+  gem "rspec-rails", "~> 8.0"
 end
 gem "rsolr", ">= 1.0", "< 3"
 gem "bootstrap", "~> 5.3"
 gem "devise"
 gem "devise-guests", "~> 0.8"
 gem "blacklight-locale_picker"
+gem "benchmark"

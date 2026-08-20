@@ -1,0 +1,37 @@
+<style id="utility-styles">
+  .al-contents-ish article {
+    margin-bottom: 1rem;
+  }
+</style>
+
+<header>
+  <h1><%= Array(@collection['normalized_title_ssm']).first %></h1>
+</header>
+
+<nav id="about-collection-nav">
+  <ul class="list-unstyled">
+    <li class="nav-item"><a href="#overview">Overview</a></li>
+    <li class="nav-item"><a href="#contents">Contents</a></li>
+  </ul>
+</nav>
+
+<dl id="ead_author_block">
+  <dt>Finding Aid Author</dt>
+  <dd><%= Array(@collection['ead_author_ssm']).first %></dd>
+</dl>
+
+<div class="al-contents-ish">
+  <% @components.each do |component| %>
+    <article id="<%= component.id %>">
+      <h3><%= Array(component['normalized_title_ssm']).first || component.id %></h3>
+    </article>
+  <% end %>
+</div>
+
+<div id="toc">
+  <ul class="list-unbulleted">
+    <% @components.each do |component| %>
+      <li><a href="#<%= component.id %>"><%= Array(component['normalized_title_ssm']).first || component.id %></a></li>
+    <% end %>
+  </ul>
+</div>

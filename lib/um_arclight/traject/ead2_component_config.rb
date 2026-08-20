@@ -130,6 +130,10 @@ to_field "component_level_isim" do |_record, accumulator|
   accumulator << (settings[:depth] || 1)
 end
 
+to_field "parent_ssi" do |_record, accumulator, _context|
+  accumulator.concat settings[:parent].output_hash["ref_ssi"] || settings[:parent].output_hash["id"]
+end
+
 to_field "parent_ids_ssim" do |_record, accumulator, _context|
   accumulator.concat(settings[:parent].output_hash["parent_ids_ssim"] || [])
   accumulator.concat settings[:parent].output_hash["id"]
@@ -265,9 +269,9 @@ to_field "date_range_isim",
   values = accumulator.map(&:to_s)
   accumulator.replace([])
   next if context.output_hash["date_range_isim"].present?
-  clean_range = values.map { |v| v.gsub(/([^()]*)\(.*\)/, '\1').tr('^0-9\\-/ ', '').strip }
+  clean_range = values.map { |v| v.gsub(/([^()]*)\(.*\)/, '\1').tr('^0-9\\-/ ', "").strip }
                       .select { |date| date.match?(%r{\A\d{4}[-/]\d{4}\z}) }
-                      .map { |date| date.tr('-', '/') }
+                      .map { |date| date.tr("-", "/") }
   next if clean_range.empty?
   range = Arclight::YearRange.new
   range << range.parse_ranges(clean_range)
