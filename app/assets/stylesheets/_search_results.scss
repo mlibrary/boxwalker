@@ -157,26 +157,53 @@
   width: 1rem
 }
 
-/* online icon in list */
+/* online and restricted icons to the right in results list */
+.actions-wrapping-class {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 0.25rem;
+  flex-wrap: nowrap;
+
+  // Bootstrap's grid gutters eat the little width col-1 gives you
+  padding-left: 0;
+  padding-right: 0;
+
+  // Let the column grow past 8.33% when it needs to
+  flex: 0 0 auto;
+  width: auto;
+  max-width: none;
+}
 
 .al-online-content-icon {
-  position: relative;
-  top: -1.5px;
-  padding-left: 0.4rem;
-  padding-right: 0.1rem;
-  float: right;
+  flex: 0 0 auto;
+  display: inline-flex;
+  align-items: center;
 }
 
-article.document .blacklight-icons.blacklight-icons-online {
-  svg {
-    color: var.$color-green-500;
-  }
+article.document .blacklight-icons-online svg {
+  fill: var.$color-green-500;
+  display: block;
+  width: 1em;
+  height: 1em;
 }
 
+$bi-exclamation-triangle-fill: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3E%3Cpath d='M8.982 1.566a1.13 1.13 0 0 0-1.96 0L.165 13.233c-.457.778.091 1.767.98 1.767h13.713c.889 0 1.438-.99.98-1.767zM8 5c.535 0 .954.462.9.995l-.35 3.507a.552.552 0 0 1-1.1 0L7.1 5.995A.905.905 0 0 1 8 5m.002 6a1 1 0 1 1 0 2 1 1 0 0 1 0-2'/%3E%3C/svg%3E");
 .al-restricted-component-icon {
-  svg {
-    color: var.$color-orange-500;
-  }
+  flex: 0 0 auto;
+  display: inline-block;
+  width: 1em;
+  height: 1em;
+  color: var.$color-orange-500;
+  background-color: currentColor;
+  mask-image: $bi-exclamation-triangle-fill;
+  mask-repeat: no-repeat;
+  mask-position: center;
+  mask-size: contain;
+  -webkit-mask-image: $bi-exclamation-triangle-fill;
+  -webkit-mask-repeat: no-repeat;
+  -webkit-mask-position: center;
+  -webkit-mask-size: contain;
 }
 
 .al-hierarchy-highlight > .documentHeader {
@@ -184,7 +211,7 @@ article.document .blacklight-icons.blacklight-icons-online {
   background-color: unset;
 }
 
-  /* Collection or item listings */
+/* Collection or item listings */
 #documents {
   margin-left: 3rem;
 
@@ -206,7 +233,7 @@ article.document .blacklight-icons.blacklight-icons-online {
   font-size: 0.875rem;
 }
 
-  /* Increase abstract max-width from 45 to 60 */
+/* Increase abstract max-width from 45 to 60 */
 .al-grouped-results .al-document-abstract-or-scope, .al-document-abstract-or-scope, .documents-list article.document .al-document-abstract-or-scope {
   max-width: 60em;
   font-size: 1rem;
@@ -257,7 +284,7 @@ article.document .blacklight-icons.blacklight-icons-online {
   justify-content: center;
 }
 
-  /* Pagination */
+/* Pagination */
 
 .page-link {
   color: var.$color-teal-400;

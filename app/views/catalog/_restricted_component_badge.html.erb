@@ -1,0 +1,8 @@
+<% if document.restricted_component? %>
+  <%= content_tag :span, "",
+                  class: "bi-exclamation-triangle-fill al-restricted-component-icon",
+                  role: "img",
+                  aria: { label: "Restricted" } %>
+<% end %>
+
+
