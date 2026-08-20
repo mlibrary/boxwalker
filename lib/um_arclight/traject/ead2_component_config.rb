@@ -265,9 +265,9 @@ to_field "date_range_isim",
   values = accumulator.map(&:to_s)
   accumulator.replace([])
   next if context.output_hash["date_range_isim"].present?
-  clean_range = values.map { |v| v.gsub(/([^()]*)\(.*\)/, '\1').tr('^0-9\\-/ ', '').strip }
+  clean_range = values.map { |v| v.gsub(/([^()]*)\(.*\)/, '\1').tr('^0-9\\-/ ', "").strip }
                       .select { |date| date.match?(%r{\A\d{4}[-/]\d{4}\z}) }
-                      .map { |date| date.tr('-', '/') }
+                      .map { |date| date.tr("-", "/") }
   next if clean_range.empty?
   range = Arclight::YearRange.new
   range << range.parse_ranges(clean_range)
