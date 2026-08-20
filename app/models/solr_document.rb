@@ -30,6 +30,10 @@ class SolrDocument
     fetch("collection_creator_ssm", [])[0]
   end
 
+  def repository
+    first("repository_ssm") || first("repository_ssim") || collection&.first("repository_ssm")
+  end
+
   def repository_id
     repository_config&.slug
   end

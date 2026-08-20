@@ -158,6 +158,9 @@ to_field "unitid_ssm", extract_xpath("./did/unitid")
 to_field "repository_ssim" do |_record, accumulator, _context|
   accumulator << settings[:root].clipboard[:repository]
 end
+to_field "repository_ssm" do |_record, accumulator, _context|
+  accumulator << settings[:root].clipboard[:repository]
+end
 
 to_field "collection_ssim" do |_record, accumulator, _context|
   accumulator.concat settings[:root].output_hash["normalized_title_ssm"]
