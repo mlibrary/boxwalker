@@ -107,7 +107,7 @@ GEM
       msgpack (~> 1.5)
     bootstrap (5.3.8)
       popper_js (>= 2.11.8, < 3)
-    brakeman (8.0.5)
+    brakeman (8.0.6)
       racc
     builder (3.3.0)
     bundler-audit (0.9.3)
@@ -523,7 +523,7 @@ DEPENDENCIES
   blacklight_range_limit (>= 9.2)
   bootsnap
   bootstrap (~> 5.3)
-  brakeman (~> 8.0.5)
+  brakeman (~> 8.0.6)
   bundler-audit
   capybara
   cssbundling-rails
@@ -577,7 +577,7 @@ CHECKSUMS
   blacklight_range_limit (9.2.0) sha256=1cd556fce61a9e0a6e02fb110fca102376cbeaafbe4ce3a3d072e16c2b19a3b1
   bootsnap (1.25.0) sha256=41059e7d0f9cb4023a33465d095f64b913fc9d1b808d6524c307da945fbcffcf
   bootstrap (5.3.8) sha256=1c23b06df24ec28a0058ad90a0da93e260d2c0a5c453d7087f6bad428464742f
-  brakeman (8.0.5) sha256=03735f9690d3fd4b32d66aacbf0a6d15a84266bdd06b32c05c8ecc8f6021d2be
+  brakeman (8.0.6) sha256=759cc69341115e6c2dcd47b6fd8649a0b9bd540e3585ac8a0a94e31c66fee386
   builder (3.3.0) sha256=497918d2f9dca528fdca4b88d84e4ef4387256d984b8154e9d5d3fe5a9c8835f
   bundler (4.0.13) sha256=19f08be7f27022cf0b89f27da0b044ae075e8270a9ef44ad248a932614e1ca3b
   bundler-audit (0.9.3) sha256=81c8766c71e47d0d28a0f98c7eed028539f21a6ea3cd8f685eb6f42333c9b4e9
