@@ -40,3 +40,12 @@ docker compose up
 # Recompiles Rails and connects it to Solr container
 SOLR_URL=http://localhost:8983/solr/blacklight-collection bin/dev
 ```
+### Troubleshooting
+If you encounter this indexing error post-Boxrunner merge
+```
+. . . .rake aborted!
+Bundler::GemRequireError: There was an error while trying to load the gem 'ruby-vips'. (Bundler::GemRequireError)
+Gem Load Error is: Could not open library 'vips.42': dlopen(vips.42, 0x0005): tried: 'vips.42' (no such file), '/System/Volumes/Preboot/Cryptexes/OSvips.42' (no such file), '/usr/lib/vips.42' (no such file, not in dyld cache), 'vips.42' (no such file), '/usr/local/lib/vips.42' (no such file), '/usr/lib/vips.42' (no such file, not in dyld cache).
+```
+I solved it by installing `vips` using `brew install vips`.    
+Then run `bundle install`
