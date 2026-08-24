@@ -102,8 +102,4 @@ class SolrDocument
   def aeon_item_citation_value
     reference  # May need to fall back to the ID
   end
-
-  def aeon_item_info_1_value
-    accessrestrict
-  end
 end

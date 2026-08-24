@@ -28,7 +28,6 @@ bhl:
           Type: 200
         static:
           SystemId: ArcLight
-#          ItemInfo1: manuscript
         accessor:
           ItemTitle: collection_name
           idno: eadid
