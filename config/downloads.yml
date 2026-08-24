@@ -1,3 +1,5 @@
 default:
+  pdf:
+    template: '/catalog/%{eadid}/pdf'
   ead:
     template: '/catalog/%{eadid}/xml'

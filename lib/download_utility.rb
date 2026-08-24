@@ -10,11 +10,11 @@ class DownloadUtility
   end
 
   def finding_aid_data
-    ENV.fetch("FINDING_AID_DATA", "sample-ead")
+    ENV.fetch("FINDING_AID_DATA", "data")
   end
 
   def ead_file_path
-    File.join(finding_aid_data, repo_slug, "#{ead_slug}.xml")
+    File.join(finding_aid_data, "ead2002", repo_slug, "#{ead_slug}.xml")
   end
 
   def html_available?
