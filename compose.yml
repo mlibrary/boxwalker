@@ -18,6 +18,7 @@ services:
       - FINDING_AID_DATA=/rails/data
     env_file:
       - .env
+    command: ["./bin/rails", "server", "-b", "0.0.0.0"]
     volumes:
       - finding-aid-data:/rails/data
   redis:

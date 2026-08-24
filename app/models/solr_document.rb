@@ -67,7 +67,7 @@ class SolrDocument
   end
 
   def collection_has_requestable_components?
-    repository_config.request_config_present_for_type?("aeon_hidden_form_request")
+    repository_config&.request_config_present_for_type?("aeon_hidden_form_request") || false
   end
 
   def container_types
@@ -75,7 +75,7 @@ class SolrDocument
   end
 
   def is_checkbox_requestable?
-    config_present = repository_config.request_config_present_for_type?("aeon_hidden_form_request")
+    config_present = repository_config&.request_config_present_for_type?("aeon_hidden_form_request")
     container_requestable = container_types.any? do |container_type|
       %w[box folder reel map-case tube object volume bundle].any? do |type|
         container_type.casecmp(type) == 0
