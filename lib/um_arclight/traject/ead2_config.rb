@@ -68,11 +68,14 @@ settings do
 end
 
 each_record do |_record, context|
-  next unless settings["repository"]
-
-  context.clipboard[:repository] = Arclight::Repository.find_by(
-    slug: settings["repository"]
-  ).name
+  slug = settings["repository"]
+  raise "REPOSITORY_ID is not set; cannot index repository fields" if slug.blank?
+  repository = Arclight::Repository.find_by(slug: slug)
+  if repository.nil?
+    raise "No repository found for slug #{slug.inspect} — check REPOSITORY_ID " \
+            "against the slugs defined in config/repositories.yml"
+  end
+  context.clipboard[:repository] = repository.name
 end
 
 # ==================
