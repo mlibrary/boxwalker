@@ -32,6 +32,13 @@ settings do
   provide "component_identifier_format", "%<root_id>s_%<ref_id>s"
 end
 
+each_record do |_record, context|
+  next unless settings["repository"]
+  context.clipboard[:repository] = Arclight::Repository.find_by(
+    slug: settings["repository"]
+  ).name
+end
+
 NAME_ELEMENTS = %w[corpname famname name persname].freeze
 
 SEARCHABLE_NOTES_FIELDS = %w[
@@ -156,6 +163,9 @@ end
 
 to_field "unitid_ssm", extract_xpath("./did/unitid")
 to_field "repository_ssim" do |_record, accumulator, _context|
+  accumulator << settings[:root].clipboard[:repository]
+end
+to_field "repository_ssm" do |_record, accumulator, _context|
   accumulator << settings[:root].clipboard[:repository]
 end
 
