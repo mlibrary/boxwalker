@@ -11,10 +11,6 @@
 ARG RUBY_VERSION=3.4.9
 FROM docker.io/library/ruby:$RUBY_VERSION-slim AS base
 
-RUN apt-get update -qq && \
-    apt-get install --no-install-recommends -y procps && \
-    rm -rf /var/lib/apt/lists/*
-
 # Rails app lives here
 WORKDIR /rails
 
