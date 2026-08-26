@@ -118,6 +118,10 @@ class CatalogController < ApplicationController
     ]
 
     ##
+    # Configuration for index actions
+    config.add_results_document_tool(:restricted_component_badge, partial: "catalog/restricted_component_badge")
+
+    ##
     # Compact index view
     config.view.compact!
 
