@@ -46,7 +46,6 @@ class CatalogController < ApplicationController
     ## Default parameters to send on single-document requests to Solr.
     ## These settings are the Blacklight defaults (see SearchHelper#solr_doc_params) or
     ## parameters included in the Blacklight-jetty document requestHandler.
-    #
     config.default_document_solr_params = {
      qt: "document",
      fl: "*,collection:[subquery]",
@@ -117,11 +116,9 @@ class CatalogController < ApplicationController
       contact_field
     ]
 
-    ##
     # Configuration for index actions
     config.add_results_document_tool(:restricted_component_badge, partial: "catalog/restricted_component_badge")
 
-    ##
     # Compact index view
     config.view.compact!
 
