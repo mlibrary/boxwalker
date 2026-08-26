@@ -19,7 +19,8 @@ services:
     env_file:
       - .env
     volumes:
-      - finding-aid-data:/rails/data
+      - .:/rails
+      - ./data:/rails/data
   redis:
     image: redis:7
     healthcheck:
@@ -35,6 +36,8 @@ services:
     command: redis-server --appendonly yes
   resque:
     depends_on:
+      solr:
+        condition: service_healthy
       redis:
         condition: service_healthy
     build:
@@ -48,7 +51,8 @@ services:
       - .env
     command: bundle exec rake environment resque:work
     volumes:
-      - finding-aid-data:/rails/data
+      - .:/rails
+      - ./data:/rails/data
   resque-web:
     depends_on:
       redis:
@@ -101,8 +105,8 @@ services:
       ZOO_MY_ID: 1
       ZOO_SERVERS: server.1=0.0.0.0:2888:3888;2181
 volumes:
+  data:
   solr-data:
   redis-data:
   zk-data:
   zk-datalog:
-  finding-aid-data:
