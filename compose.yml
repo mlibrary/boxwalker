@@ -20,7 +20,6 @@ services:
       - .env
     volumes:
       - .:/rails
-      - ./data:/rails/data
   redis:
     image: redis:7
     healthcheck:
@@ -50,10 +49,9 @@ services:
       - FINDING_AID_DATA=/rails/data
     env_file:
       - .env
-    command: bundle exec rake environment resque:work
     volumes:
       - .:/rails
-      - ./data:/rails/data
+    command: bundle exec rake environment resque:work
   resque-web:
     depends_on:
       redis:
@@ -68,6 +66,8 @@ services:
       - .env
     ports:
       - '5678:5678'
+    volumes:
+      - .:/rails
     command: bundle exec rackup -o 0.0.0.0 -p 5678 config/resque_web.ru
   solr:
     depends_on:

@@ -60,10 +60,6 @@ bin/rails --task
 rsync -av --progress sample-ead/ data/ead/
 FINDING_AID_DATA=./data bin/rails arclight:ingest_everything 
 ```
-##### Browser Resque Web
-```shell
-# Open http://localhost:5678 in your browser
-```
 
 ### Troubleshooting
 If you encounter this indexing error post-Boxrunner merge
