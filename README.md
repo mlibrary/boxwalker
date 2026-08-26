@@ -47,6 +47,9 @@ bundle install
 # Development Rails server using Solr container
 SOLR_URL=http://localhost:8983/solr/blacklight-collection bin/dev
 ```
+##### Browser Resque Web
+Open http://localhost:5678 in your browser
+
 ##### Command shell
 ```shell
 # List all available tasks
