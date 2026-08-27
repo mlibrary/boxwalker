@@ -67,12 +67,21 @@ settings do
   provide "logger", Logger.new($stderr)
 end
 
-each_record do |_record, context|
-  next unless settings["repository"]
+class TrajectEADIndexError < RuntimeError; end
 
-  context.clipboard[:repository] = Arclight::Repository.find_by(
-    slug: settings["repository"]
-  ).name
+each_record do |_record, context|
+  slug = settings["repository"]
+  if slug.blank?
+    raise TrajectEADIndexError,
+          "REPOSITORY_ID is not set; cannot index repository fields"
+  end
+  repository = Arclight::Repository.find_by(slug: slug)
+  if repository.nil?
+    raise TrajectEADIndexError,
+          "No repository found for slug #{slug.inspect} — check REPOSITORY_ID " \
+            "against the slugs defined in config/repositories.yml"
+  end
+  context.clipboard[:repository] = repository.name
 end
 
 # ==================
