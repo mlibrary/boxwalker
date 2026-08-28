@@ -10,18 +10,20 @@
   border-bottom: solid 1px var.$color-teal-300;
   box-shadow: 0 3px 3px -3px rgba(23, 130, 166, 0.58);
   background-image: linear-gradient(
-    to top, var.$gray-cool, var.$gray-white, var.$near-white, var.$color-background-primary
+          to top, var.$gray-cool, var.$gray-white, var.$near-white, var.$color-background-primary
   );
   padding-top: 1rem;
   padding-bottom: 0.5rem;
+  gap: 1rem;
 
   .al-request {
-    margin-right: 2rem;
-    margin-bottom: 0.5rem;
-  }
+    display: flex;
+    align-items: center;
+    gap: 1rem;
 
-  .btn-primary {
-    margin-right: 0.5rem;
+    .request-checkbox {
+      margin-bottom: 0;   // cancel Bootstrap's .checkbox bottom margin
+    }
   }
 }
 
