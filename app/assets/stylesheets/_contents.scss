@@ -63,14 +63,14 @@
 }
 
 .restrictions-preview {
+  position: relative;
   background-color: var(--color-maize-200);
-  padding: 1rem;
-  border-top: 1px solid var(--color-teal-200);
+  padding: 1.5rem 1rem 1rem;
+  margin-top: 2rem;      // space that holds the border + gap
   margin-bottom: 2rem;
-  padding-top: 1.5rem;
-  margin-top: 1rem;
 }
 
+<<<<<<< HEAD
 .col .al-document-container {
   margin-top: 0.3rem;
 }
@@ -78,3 +78,14 @@
 h3.document-title-heading {
   margin-top: 0.3rem;
 }
+=======
+.restrictions-preview::before {
+  content: "";
+  position: absolute;
+  top: -1rem;            // how far the line sits above the box
+  left: 0;
+  right: 0;
+  border-top: 1px dotted #cccccc;
+}
+
+>>>>>>> a530e4f (Add vertical space and horizontal bar above restrictions box)
