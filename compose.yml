@@ -15,11 +15,11 @@ services:
     environment:
       - SOLR_URL=http://solr:8983/solr/blacklight-collection
       - REDIS_URL=redis://redis:6379/0
-      - FINDING_AID_DATA=/rails/data
+      - FINDING_AID_DATA=/opt/app-data
     env_file:
       - .env
     volumes:
-      - .:/rails
+      - ./data:/opt/app-data
   redis:
     image: redis:7
     healthcheck:
@@ -46,11 +46,11 @@ services:
       - SOLR_URL=http://solr:8983/solr/blacklight-collection
       - REDIS_URL=redis://redis:6379/0
       - QUEUE=*
-      - FINDING_AID_DATA=/rails/data
+      - FINDING_AID_DATA=/opt/app-data
     env_file:
       - .env
     volumes:
-      - .:/rails
+      - ./data:/opt/app-data
     command: bundle exec rake environment resque:work
   resque-web:
     depends_on:
@@ -66,8 +66,6 @@ services:
       - .env
     ports:
       - '5678:5678'
-    volumes:
-      - .:/rails
     command: bundle exec rackup -o 0.0.0.0 -p 5678 config/resque_web.ru
   solr:
     depends_on:
