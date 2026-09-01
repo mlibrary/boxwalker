@@ -433,7 +433,7 @@ class CatalogController < ApplicationController
     config.add_terms_field "terms", field: "userestrict_html_tesm", helper_method: :render_html_tags
 
     # Component Show Page Access Tab - Terms and Condition Section
-    config.add_component_terms_field "restrictions", field: "accessrestrict_html_tesm", helper_method: :render_html_tags
+    # config.add_component_terms_field "restrictions", field: "accessrestrict_html_tesm", helper_method: :render_html_tags
     config.add_component_terms_field "terms", field: "userestrict_html_tesm", helper_method: :render_html_tags
     config.add_component_terms_field "parent_restrictions", field: "parent_access_restrict_tesm", helper_method: :render_html_tags
     config.add_component_terms_field "parent_terms", field: "parent_access_terms_tesm", helper_method: :render_html_tags
