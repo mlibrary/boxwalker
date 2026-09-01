@@ -20,16 +20,6 @@ services:
       - .env
     volumes:
       - ./data:/opt/app-data
-      # These directories are mounted into the volume so files can be changed during development without
-      # rebuilding. Changes to other files or directories will require a full re-build.
-      - ./app:/rails/app
-      - ./config:/rails/config
-      - ./db:/rails/db
-      - ./lib:/rails/lib
-      - ./public:/rails/public
-      - ./spec:/rails/spec
-      - ./storage:/rails/storage
-      - ./test:/rails/test
   redis:
     image: redis:7
     healthcheck:
@@ -61,16 +51,6 @@ services:
       - .env
     volumes:
       - ./data:/opt/app-data
-      # These directories are mounted into the volume so files can be changed during development without
-      # rebuilding. Changes to other files or directories will require a full re-build.
-      - ./app:/rails/app
-      - ./config:/rails/config
-      - ./db:/rails/db
-      - ./lib:/rails/lib
-      - ./public:/rails/public
-      - ./spec:/rails/spec
-      - ./storage:/rails/storage
-      - ./test:/rails/test
     command: bundle exec rake environment resque:work
   resque-web:
     depends_on:
