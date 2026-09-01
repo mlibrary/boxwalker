@@ -1,0 +1,23 @@
+<div class="restrictions-preview">
+  <dl>
+    <dt class="blacklight-restrictions">
+      <strong><%= t("blacklight.search.fields.restrictions") %>:</strong>
+    </dt>
+
+
+    <% restrictions.each do |restriction| %>
+      <dd class="blacklight-restrictions">
+        <%= helpers.render_html_tags(value: restriction) %>
+      </dd>
+    <% end %>
+  </dl>
+
+  <p>
+    <%= link_to(
+          t("arclight.views.show.sections.access_field"),
+          "##{t('arclight.views.show.sections.access_field').parameterize}",
+          class: "smooth-scroll",
+          data: { turbolinks: false }
+        ) %>
+  </p>
+</div>
