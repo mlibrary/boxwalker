@@ -47,12 +47,12 @@ class CatalogController < ApplicationController
     ## These settings are the Blacklight defaults (see SearchHelper#solr_doc_params) or
     ## parameters included in the Blacklight-jetty document requestHandler.
     config.default_document_solr_params = {
-     qt: "document",
-     fl: "*,collection:[subquery]",
-     'collection.q': "{!terms f=id v=$row._root_}",
-     'collection.defType': "lucene",
-     'collection.fl': "*",
-     'collection.rows': 1
+      qt: "document",
+      fl: "*,collection:[subquery]",
+      'collection.q': "{!terms f=id v=$row._root_}",
+      'collection.defType': "lucene",
+      'collection.fl': "*",
+      'collection.rows': 1
     }
 
     config.header_component = Arclight::HeaderComponent
@@ -361,7 +361,7 @@ class CatalogController < ApplicationController
     }
 
     config.add_indexed_terms_field "indexes", field: "indexes_html_tesm",
-                                              helper_method: :render_html_tags
+                                   helper_method: :render_html_tags
 
     # ==========================
     # COMPONENT SHOW PAGE FIELDS
@@ -422,7 +422,7 @@ class CatalogController < ApplicationController
     }
 
     config.add_component_indexed_terms_field "indexes", field: "indexes_html_tesm",
-                                              helper_method: :render_html_tags
+                                             helper_method: :render_html_tags
 
     # =================
     # ACCESS TAB FIELDS
@@ -433,7 +433,7 @@ class CatalogController < ApplicationController
     config.add_terms_field "terms", field: "userestrict_html_tesm", helper_method: :render_html_tags
 
     # Component Show Page Access Tab - Terms and Condition Section
-    config.add_component_terms_field "restrictions", field: "accessrestrict_html_tesm", helper_method: :render_html_tags
+    # Removed config.add_component_terms_field "restrictions" to avoid duplicating content in components restrictions_preview and using_these_materials
     config.add_component_terms_field "terms", field: "userestrict_html_tesm", helper_method: :render_html_tags
     config.add_component_terms_field "parent_restrictions", field: "parent_access_restrict_tesm", helper_method: :render_html_tags
     config.add_component_terms_field "parent_terms", field: "parent_access_terms_tesm", helper_method: :render_html_tags

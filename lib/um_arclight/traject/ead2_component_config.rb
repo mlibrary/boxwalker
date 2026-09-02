@@ -235,14 +235,14 @@ end
 # Get the <accessrestrict> from the closest ancestor that has one (includes top-level)
 to_field "parent_access_restrict_tesm" do |record, accumulator|
   accumulator.concat Array
-                       .wrap(record.xpath('(./ancestor::*/accessrestrict)[last()]/*[local-name()!="head"]')
+                       .wrap(record.xpath('(./ancestor::*/accessrestrict | ./ancestor::*/descgrp/accessrestrict)[last()]/*[local-name()!="head"]')
                                    .map(&:text))
 end
 
 # Get the <userestrict> from self OR the closest ancestor that has one (includes top-level)
-to_field "parent_access_terms_tesm" do |record, accumulator|
+to_field "parent_access_restrict_tesm" do |record, accumulator|
   accumulator.concat Array
-                       .wrap(record.xpath('(./ancestor-or-self::*/userestrict)[last()]/*[local-name()!="head"]')
+                       .wrap(record.xpath('(./ancestor-or-self::*/userestrict | ./ancestor-or-self::*/descgrp/userestrict)[last()]/*[local-name()!="head"]')
                                    .map(&:text))
 end
 

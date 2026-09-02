@@ -9,6 +9,7 @@ en:
           component_indexed_terms_field: Subjects
           indexed_terms_field: Subjects
           terms_field: Terms
+          component_terms_field: Terms
           cite_field: Preferred Citation
           access_field: Using These Materials
           using_field: Using These Materials
@@ -62,7 +63,9 @@ en:
 
         restrictions: Restrictions
         terms: 'Use & Restrictions'
-        parent_restrictions: Parent restrictions
+        show:
+          parent_restrictions: Restrictions
+          parent_terms: 'Use & Restrictions'
         parent_terms: Parent terms of access
         repository_location: Location of this collection
         before_you_visit: Before you visit

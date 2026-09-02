@@ -1,0 +1,24 @@
+<div class="restrictions-preview">
+  <dl>
+    <dt class="blacklight-restrictions">
+      <i class="bi bi-exclamation-triangle-fill"></i>
+      <strong><%= t("blacklight.search.fields.restrictions") %>:</strong>
+    </dt>
+
+
+    <% restrictions.each do |restriction| %>
+      <dd class="blacklight-restrictions">
+        <%= helpers.render_html_tags(value: restriction) %>
+      </dd>
+    <% end %>
+  </dl>
+
+  <p>
+    <%= link_to(
+          "More about accessing and using these materials...",
+          "##{t('arclight.views.show.sections.access_field').parameterize}",
+          class: "smooth-scroll",
+          data: { turbolinks: false }
+        ) %>
+  </p>
+</div>

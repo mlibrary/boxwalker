@@ -4,6 +4,6 @@ class UmAccessSnippetComponent < Arclight::DocumentComponent
   end
 
   def restrictions_value
-    @document.restrictions
+    @document.restrictions.first
   end
 end

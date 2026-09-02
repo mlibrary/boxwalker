@@ -23,7 +23,7 @@
 <%= render Arclight::MetadataSectionComponent.with_collection(component_metadata_partials,
   metadata_attr: { layout: UmUpperMetadataLayoutComponent },
   presenter: presenter, classes: "") unless document.collection? %>
-
+<%= render UmRestrictionsPreviewComponent.new(document: document) %>
 <%= embed %>
 
 <% if document.collection? %>
