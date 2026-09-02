@@ -433,7 +433,7 @@ class CatalogController < ApplicationController
     config.add_terms_field "terms", field: "userestrict_html_tesm", helper_method: :render_html_tags
 
     # Component Show Page Access Tab - Terms and Condition Section
-    # removed config.add_component_terms_field "restrictions" to avoid duplicating [Access to this material is restricted to the reading room of the Bentley Historical Library.] in components restrictions_preview and using_these_materials
+    # Removed config.add_component_terms_field "restrictions" to avoid duplicating content in components restrictions_preview and using_these_materials
     config.add_component_terms_field "terms", field: "userestrict_html_tesm", helper_method: :render_html_tags
     config.add_component_terms_field "parent_restrictions", field: "parent_access_restrict_tesm", helper_method: :render_html_tags
     config.add_component_terms_field "parent_terms", field: "parent_access_terms_tesm", helper_method: :render_html_tags
