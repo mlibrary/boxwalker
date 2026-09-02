@@ -10,6 +10,6 @@ class UmRestrictionsPreviewComponent < ViewComponent::Base
   end
 
   def restrictions
-    @document.fetch("accessrestrict_html_tesm", [])
+    @document.restrictions
   end
 end

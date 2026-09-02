@@ -43,7 +43,7 @@ class SolrDocument
   end
 
   def restrictions
-    fetch("accessrestrict_html_tesm", [])[0]
+    fetch("accessrestrict_html_tesm", [])
   end
 
   def accessrestrict
