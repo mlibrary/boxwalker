@@ -5,7 +5,9 @@
     <input type="hidden" name="ItemSubTitle_<%= document.id %>" value="<%= document.aeon_item_sub_title_value %>">
     <input type="hidden" name="ItemVolume_<%= document.id %>" value="<%= document.aeon_item_volume_value %>">
     <input type="hidden" name="ItemCitation_<%= document.id %>" value="<%= document.aeon_item_citation_value %>">
-    <span class="request-checkbox-label" aria-hidden="true"><%= label %></span>
+    <% if label.present? %>
+      <span class="request-checkbox-label" aria-hidden="true"><%= label %></span>
+    <% end %>
     <span class="visually-hidden">Request "<%= document.aeon_item_sub_title_visually_hidden %>"</span>
   </label>
 </div>

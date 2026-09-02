@@ -1,6 +1,10 @@
 @use "bootstrap-context" as bs;
 @use "variables" as var;
 
+span.request-checkbox-label {
+  margin-left: 0.5rem;
+}
+
 .al-show-actions-toolbar {
   display: flex;
   flex-flow: row wrap;
