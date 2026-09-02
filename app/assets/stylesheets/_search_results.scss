@@ -294,3 +294,17 @@ $bi-exclamation-triangle-fill: url("data:image/svg+xml,%3Csvg xmlns='http://www.
   background-color: var.$color-background-primary;
   border-color: var.$color-background-primary;
 }
+
+.search-query-form {
+  display: flex;
+  gap: 0.5rem;
+  // add margins for narrow viewports
+  margin-top: 0.5rem;
+  margin-bottom: 0.5rem;
+  .input-group {
+    width: unset;
+  }
+  select[name="search_field"] {
+    width: auto;
+  }
+}
