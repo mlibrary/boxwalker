@@ -13,11 +13,16 @@
              class: 'al-request-form' do %>
   <span id="aeon_fixed_fields">
     <% aeon_external_request.form_mapping.each do |mapping| %>
-      <input type="hidden" name="<%= mapping[0]%>" value="<%= mapping[1] %>">
+      <input type="hidden" name="<%= mapping[0] %>" value="<%= mapping[1] %>">
     <% end %>
     <input type="hidden" name="OriginatingUrl" value="<%= request.url %>">
   </span>
+
+  <% if document.is_checkbox_requestable? && !document.children? %>
+    <%= render UmAeonRequestCheckboxComponent.new(document: document, label: "Select item") %>
+  <% end %>
 <% end %>
-<button type='submit' class='btn btn-primary btn-sm' data-aeon-submit>Request</button>
-<button class='btn btn-secondary btn-sm' data-aeon-clear>Clear selected</button>
+
+<button type="submit" class="btn btn-primary btn-sm" data-aeon-submit>Request</button>
+<button type="button" class="btn btn-secondary btn-sm" data-aeon-clear>Clear selected</button>
 <span id="selected-items-count" aria-live="polite" class="badge badge-request"></span>
