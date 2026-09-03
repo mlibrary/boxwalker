@@ -139,20 +139,3 @@ mark, .mark {
   top: 0;
   z-index: 2;
 }
-
-/* Pagination */
-
-.page-link {
-  color: var.$color-blue-400 !important;
-}
-
-.page-link:hover {
-  color: var.$color-blue-400 !important;
-}
-
-.page-item.active .page-link {
-  background-color: var.$color-blue-400 !important;
-  border-color: var.$color-blue-400 !important;
-  color: var.$color-background-primary !important;
-}
-
