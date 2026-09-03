@@ -65,6 +65,7 @@
 
 .al-digital-object {
   margin-bottom: 1rem;
+  margin-top: 2rem;
 }
 
 .card .al-online-content-icon .blacklight-icons svg {
@@ -94,4 +95,8 @@ h3.document-title-heading {
   left: 0;
   right: 0;
   border-top: 1px dotted var.$color-neutral-100;
+}
+
+.header.svelte-jc3hd4.svelte-jc3hd4 {
+  border-top: 2px solid gray;
 }
