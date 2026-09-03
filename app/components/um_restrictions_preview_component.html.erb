@@ -1,6 +1,7 @@
 <div class="restrictions-preview">
   <dl>
     <dt class="blacklight-restrictions">
+      <i class="bi bi-exclamation-triangle-fill"></i>
       <strong><%= t("blacklight.search.fields.restrictions") %>:</strong>
     </dt>
 
@@ -14,7 +15,7 @@
 
   <p>
     <%= link_to(
-          t("arclight.views.show.sections.access_field"),
+          "More about accessing and using these materials...",
           "##{t('arclight.views.show.sections.access_field').parameterize}",
           class: "smooth-scroll",
           data: { turbolinks: false }
