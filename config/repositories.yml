@@ -237,7 +237,7 @@ mlibraryead:
   country: 'USA'
   phone: ''
   contact_info: 'dlps-help@umich.edu'
-  thumbnail_url: 'https://www.lib.umich.edu/static/f7ffa2d7bc8b7d2c2e56eaf08f237c8b/53249/AerialsNov08(186)Stock-a.webp'
+  thumbnail_url: '/thumbnails/AerialsNov08(186)Stock-a_rfNEc.webp'
   repo_about:
     using_materials: 'Finding aids describe collections of primary sources and other unique, original, or rare materials. Access to the original physical items, when available, requires requesting items for use in the reading room associated with a given collection. Items may not be requested for offsite use.'
     visitor_info: '<p>The Evangeline Marie Lehman Papers and Voice of America African Music Collection recordings are held at the Music Library.  Please contact them for access: <a href="https://www.lib.umich.edu/locations-and-hours/music-library">https://www.lib.umich.edu/locations-and-hours/music-library</a></p>
@@ -275,7 +275,7 @@ asialibrary:
   country: 'USA'
   phone: ''
   contact_info: 'asialibrary@umich.edu'
-  thumbnail_url: 'https://www.lib.umich.edu/static/5b35df0d52e5aeb7ad9fa7adae1b4398/057ba/Hatcher-Asia-Lib-Sep2022-1185x790_edited.jpg'
+  thumbnail_url: '/thumbnails/Hatcher-Asia-Lib-Sep2022-1185x790_edited_ZmbBeS.webp'
   repo_about:
     using_materials: 'Finding aids describe collections of unique, original, or rare materials located at the Asia Library Special Collection room. These collections are non-circulating and must be used in the Asia Library reading room. Requests for collection material must be made at least 7 days in advance of a planned visit.'
     visitor_info: 'For more information <a href="https://www.lib.umich.edu/locations-and-hours/asia-library">Asia Library -- Visit</a>.'
