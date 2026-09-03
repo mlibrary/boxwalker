@@ -289,10 +289,12 @@ $bi-exclamation-triangle-fill: url("data:image/svg+xml,%3Csvg xmlns='http://www.
 .page-item:not(.active)  {
   .page-link {
     color: var.$color-blue-400;
+    text-decoration: underline;
   }
   .page-link:hover {
     background-color: var.$gray-hover !important;
     color: var.$color-blue-400 !important;
+    text-decoration: none;
   }
 }
 
