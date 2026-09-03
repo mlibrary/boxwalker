@@ -58,8 +58,25 @@
   padding: 1rem;
 }
 
+#using-these-materials, #embed.mb-2 {
+  border-top: 1px dotted var.$color-neutral-100;
+  padding-top: 1rem;
+}
+
+.al-digital-object {
+  margin-bottom: 1rem;
+}
+
 .card .al-online-content-icon .blacklight-icons svg {
   margin-top: -0.2rem;
+}
+
+.col .al-document-container {
+  margin-top: 0.3rem;
+}
+
+h3.document-title-heading {
+  margin-top: 0.3rem;
 }
 
 .al-digital-object a::after {
