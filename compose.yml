@@ -8,6 +8,8 @@ services:
         condition: service_healthy
       redis:
         condition: service_healthy
+      postgres:
+        condition: service_healthy
     build:
       context: .
     ports:
@@ -33,11 +35,29 @@ services:
     volumes:
       - redis-data:/data
     command: redis-server --appendonly yes
+  postgres:
+    healthcheck:
+      interval: 30s
+      timeout: 10s
+      start_period: 30s
+      retries: 5
+      test: [ "CMD", "pg_isready -h localhost -d boxwalker -p 5432 -U myuser" ]
+    image: 'postgres:latest'
+    environment:
+      - 'POSTGRES_DB=boxwalker'
+      - 'POSTGRES_USER=myuser'
+      - 'POSTGRES_PASSWORD=secret'
+    ports:
+      - '127.0.0.1:5432:5432'
+    volumes:
+      - postgres-data:/var/lib/postgresql
   resque:
     depends_on:
       solr:
         condition: service_healthy
       redis:
+        condition: service_healthy
+      postgres:
         condition: service_healthy
     build:
       context: .
@@ -47,6 +67,9 @@ services:
       - REDIS_URL=redis://redis:6379/0
       - QUEUE=*
       - FINDING_AID_DATA=/opt/app-data
+#      - DB_NAME=boxwalker
+#      - DB_USER=myuser
+#      - DB_PASSWORD=secret
     env_file:
       - .env
     volumes:
@@ -106,6 +129,7 @@ services:
       ZOO_SERVERS: server.1=0.0.0.0:2888:3888;2181
 volumes:
   data:
+  postgres-data:
   solr-data:
   redis-data:
   zk-data:
