@@ -54,6 +54,9 @@ gem "resque-scheduler"
 # intentionally NOT used: it depends on sass-rails/sprockets, which conflicts
 # with this app's Propshaft asset pipeline and breaks `assets:precompile`.
 
+# database
+gem "pg"
+
 group :development, :test do
   # See https://guides.rubyonrails.org/debugging_rails_applications.html#debugging-with-the-debug-gem
   gem "debug", platforms: %i[ mri windows ], require: "debug/prelude"

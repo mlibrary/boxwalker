@@ -105,6 +105,18 @@ jobs:
     #    ports:
     #      - 6379:6379
     #    options: --health-cmd "redis-cli ping" --health-interval 10s --health-timeout 5s --health-retries 5
+    services:
+      postgres:
+        image: postgres
+        env:
+          POSTGRES_DB: boxwalker
+          POSTGRES_USER: myuser
+          POSTGRES_PASSWORD: secret
+        options: >-
+          --health-cmd pg_isready
+          --health-interval 10s
+          --health-timeout 5s
+          --health-retries 5
     steps:
       - name: Install packages
         run: sudo apt-get update && sudo apt-get install --no-install-recommends -y libvips node-gyp
@@ -133,6 +145,18 @@ jobs:
     #    ports:
     #      - 6379:6379
     #    options: --health-cmd "redis-cli ping" --health-interval 10s --health-timeout 5s --health-retries 5
+    services:
+      postgres:
+        image: postgres
+        env:
+          POSTGRES_DB: boxwalker
+          POSTGRES_USER: myuser
+          POSTGRES_PASSWORD: secret
+        options: >-
+          --health-cmd pg_isready
+          --health-interval 10s
+          --health-timeout 5s
+          --health-retries 5
     steps:
       - name: Install packages
         run: sudo apt-get update && sudo apt-get install --no-install-recommends -y libvips node-gyp
