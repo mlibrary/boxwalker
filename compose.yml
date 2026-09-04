@@ -18,6 +18,7 @@ services:
       - SOLR_URL=http://solr:8983/solr/blacklight-collection
       - REDIS_URL=redis://redis:6379/0
       - FINDING_AID_DATA=/opt/app-data
+      - DB_HOST=postgres
     env_file:
       - .env
     volumes:
@@ -41,7 +42,7 @@ services:
       timeout: 10s
       start_period: 30s
       retries: 5
-      test: [ "CMD", "pg_isready -h localhost -d boxwalker -p 5432 -U myuser" ]
+      test: [ "CMD-SHELL", "pg_isready -h localhost -d boxwalker -p 5432 -U myuser" ]
     image: 'postgres:latest'
     environment:
       - 'POSTGRES_DB=boxwalker'
@@ -67,6 +68,7 @@ services:
       - REDIS_URL=redis://redis:6379/0
       - QUEUE=*
       - FINDING_AID_DATA=/opt/app-data
+      - DB_HOST=postgres
 #      - DB_NAME=boxwalker
 #      - DB_USER=myuser
 #      - DB_PASSWORD=secret
@@ -82,7 +84,6 @@ services:
     build:
       context: .
     environment:
-      - RAILS_ENV=development
       - REDIS_URL=redis://redis:6379/0
       - RESQUE_NAMESPACE=resque:boxwalker
     env_file:
