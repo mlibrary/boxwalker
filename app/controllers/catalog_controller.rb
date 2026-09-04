@@ -83,7 +83,7 @@ class CatalogController < ApplicationController
     config.show.document_component = UmDocumentComponent
     config.show.sidebar_component = UmSidebarComponent
     config.show.breadcrumb_component = UmBreadcrumbsHierarchyComponent
-    config.show.embed_component = Arclight::EmbedComponent
+    config.show.embed_component = UmEmbedComponent
     config.show.access_component = UmAccessComponent
     config.show.online_status_component = Arclight::OnlineStatusIndicatorComponent
     config.show.expand_hierarchy_component = Arclight::ExpandHierarchyButtonComponent
