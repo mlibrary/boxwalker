@@ -2,7 +2,9 @@
 <%# Last checked for updates: ArcLight v1.6.2. %>
 <%# https://github.com/projectblacklight/arclight/blob/master/app/views/catalog/_search_results.html.erb %>
 
-<% @page_title = t('blacklight.search.page_title.title', constraints: render_search_to_page_title(search_state), application_name: application_name) %>
+<% @page_title = t('blacklight.search.page_title.title',
+                   constraints: render_search_as_breadcrumbs_to_page_title(search_state),
+                   application_name: application_name) %>
 
 <% content_for(:head) do -%>
   <%= render 'catalog/opensearch_response_metadata', response: @response %>

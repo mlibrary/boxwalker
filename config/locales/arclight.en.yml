@@ -16,6 +16,8 @@ en:
         download:
           pdf: Download PDF Finding Aid
           html: Download HTML Finding Aid
+      repositories:
+        title: Repositories - University of Michigan Finding Aids
     truncation:
       view_less: show less
       view_more: show more
