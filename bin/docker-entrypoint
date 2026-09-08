@@ -1,15 +1,9 @@
 #!/bin/bash -e
 
-# Prepare the database for the long-running services that depend on it:
-#   * the Rails web server (renders catalog pages), and
-#   * the Resque worker -- Package::Generator renders /catalog/:id in-process while
-#     building HTML/PDF, and in development the migration_error=:page_load middleware
-#     runs a pending-migration check on that request. The worker container has its own
-#     (image-baked, non-volume) SQLite DB, so it must be prepared here too or packaging
-#     jobs fail with a 500 on the internal render.
-if { [ "${@: -2:1}" == "./bin/rails" ] && [ "${@: -1:1}" == "server" ]; } || \
-   [[ "${*}" == *resque:work* ]]; then
-  ./bin/rails db:prepare
-fi
+# NOTE: database preparation is intentionally NOT done here. A dedicated,
+# run-once "migrate" service (see compose.yml) owns `db:prepare` so exactly one
+# process touches the schema, avoiding concurrent schema-load races between the
+# web server and the Resque worker. This also mirrors the Kubernetes model where
+# migrations run as a one-shot Job rather than on every pod/container start.
 
 exec "${@}"

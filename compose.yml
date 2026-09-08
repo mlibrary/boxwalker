@@ -4,6 +4,8 @@ services:
     profiles:
       - app
     depends_on:
+      migrate:
+        condition: service_completed_successfully
       solr:
         condition: service_healthy
       redis:
@@ -21,8 +23,25 @@ services:
       - DB_HOST=postgres
     env_file:
       - .env
+    command: ./bin/rails server -b 0.0.0.0 -p 3000
     volumes:
       - ./data:/opt/app-data
+  migrate:
+    build:
+      context: .
+    depends_on:
+      postgres:
+        condition: service_healthy
+    environment:
+      - RAILS_ENV=development
+      - SOLR_URL=http://solr:8983/solr/blacklight-collection
+      - REDIS_URL=redis://redis:6379/0
+      - FINDING_AID_DATA=/opt/app-data
+      - DB_HOST=postgres
+    env_file:
+      - .env
+    command: ./bin/rails db:prepare
+    restart: "no"
   redis:
     image: redis:7
     healthcheck:
@@ -54,6 +73,8 @@ services:
       - postgres-data:/var/lib/postgresql
   resque:
     depends_on:
+      migrate:
+        condition: service_completed_successfully
       solr:
         condition: service_healthy
       redis:
@@ -84,6 +105,7 @@ services:
     build:
       context: .
     environment:
+      - RAILS_ENV=development
       - REDIS_URL=redis://redis:6379/0
       - RESQUE_NAMESPACE=resque:boxwalker
     env_file:
