@@ -33,10 +33,6 @@ services:
       postgres:
         condition: service_healthy
     environment:
-      - RAILS_ENV=development
-      - SOLR_URL=http://solr:8983/solr/blacklight-collection
-      - REDIS_URL=redis://redis:6379/0
-      - FINDING_AID_DATA=/opt/app-data
       - DB_HOST=postgres
     env_file:
       - .env
@@ -84,7 +80,6 @@ services:
     build:
       context: .
     environment:
-      - RAILS_ENV=development
       - SOLR_URL=http://solr:8983/solr/blacklight-collection
       - REDIS_URL=redis://redis:6379/0
       - QUEUE=*
