@@ -6,6 +6,20 @@ default: &default
   host: <%= ENV.fetch("DB_HOST", "127.0.0.1") %>
   username: <%= ENV.fetch("DB_USERNAME", "myuser") %>
   password: <%= ENV.fetch("DB_PASSWORD", "secret") %>
+  # Skip GSSAPI/Kerberos negotiation on connect. libpq defaults to
+  # gssencmode=prefer, which hangs ~34s in hybrid dev when the host has an
+  # expired Kerberos ticket (e.g. UMich ADSROOT). Postgres in Docker doesn't
+  # use GSSAPI, so disabling it is correct in every environment.
+  gssencmode: <%= ENV.fetch("DB_GSSENCMODE", "disable") %>
+  # Detect dead/half-open sockets quickly instead of blocking on the OS TCP
+  # timeout (~34s). This matters in hybrid dev (host Ruby -> Postgres in Docker
+  # Desktop), whose network proxy silently drops idle connections. The keepalive
+  # probes also keep pooled connections warm so they never go stale.
+  connect_timeout: <%= ENV.fetch("DB_CONNECT_TIMEOUT", 5) %>
+  keepalives: 1
+  keepalives_idle: 10
+  keepalives_interval: 5
+  keepalives_count: 3
 
 development:
   <<: *default
