@@ -15,15 +15,18 @@ docker compose --profile app up
 # Create the blacklight-collection
 /bin/bash ./solr/dev-init.sh 
 ```
-#### Indexing a directory
+#### Start ingest pipeline
 ```shell
+# Add your data under /data/ead/{repo_slug}
+mkdir -p ./data/ead
+cp -r ./sample-ead/scrc ./data/ead/
+
 # Inside the container
 docker compose exec app bash
-DIR=<your directory path> REPOSITORY=<repository id> rake um_arclight:index_dir
+rake arclight:ingest_everything
 
-# Outside the container
-SOLR_URL=http://localhost:8983/solr/blacklight-collection DIR=./<location> REPOSITORY_ID=<repository shortname> rake um_arclight:index_dir
 ```
+
 ### Docker Hybrid development
 Use hybrid for quick rebuilds of Rails (outside a container) without repeatedly spinning up Solr/Zookeeper for each reset.
 ##### Services shell
@@ -31,42 +34,41 @@ Use hybrid for quick rebuilds of Rails (outside a container) without repeatedly 
 ```shell
 # Build resque-web and resque images  
 docker compose build
-# Start zookeeper, solr, redis, resque and resque-web containers
-docker compose up 
+# Start zookeeper, solr, postgres, redis, resque and resque-web containers
+docker compose up
 ```
 ##### Rails shell
 
 ```shell
 # Create the blacklight-collection
-/bin/bash ./solr/dev-init.sh 
+/bin/bash ./solr/dev-init.sh
 # Bundle install the gems outside of the container
 bundle install
-# Migrate the database and prepare it for GUI finding aid indexing
-# NOTE: This command is run via bin/docker-entrypoint when resque is brought up
+# You may also need to install vips: https://formulae.brew.sh/formula/vips.
+
+# NOTE: The migration and database preparation command here is run by the migrate service
+# (see Notes - Database and Migration).
 # bin/rails db:prepare 
 # Development Rails server using Solr container
 SOLR_URL=http://localhost:8983/solr/blacklight-collection bin/dev
 ```
-##### Browser Resque Web
-Open http://localhost:5678 in your browser
 
 ##### Command shell
 ```shell
-# List all available tasks
-bin/rails --task
-```
-```shell
-# Index sample-ead
+# Rake task to start ingest pipeline
 rsync -av --progress sample-ead/ data/ead/
-FINDING_AID_DATA=./data bin/rails arclight:ingest_everything 
+SOLR_URL=http://localhost:8983/solr/blacklight-collection \
+  FINDING_AID_DATA=./data bin/rails \
+  arclight:ingest_everything
 ```
 
-### Troubleshooting
-If you encounter this indexing error post-Boxrunner merge
-```
-. . . .rake aborted!
-Bundler::GemRequireError: There was an error while trying to load the gem 'ruby-vips'. (Bundler::GemRequireError)
-Gem Load Error is: Could not open library 'vips.42': dlopen(vips.42, 0x0005): tried: 'vips.42' (no such file), '/System/Volumes/Preboot/Cryptexes/OSvips.42' (no such file), '/usr/lib/vips.42' (no such file, not in dyld cache), 'vips.42' (no such file), '/usr/local/lib/vips.42' (no such file), '/usr/lib/vips.42' (no such file, not in dyld cache).
-```
-I solved it by installing `vips` using `brew install vips`.    
-Then run `bundle install`
+##### Browser Resque Web
+Open http://localhost:5678 in your browser
+
+## Notes
+
+### Database and Migration
+
+The application is now setup to use a single PostgreSQL database (shared by the `app` and `resque` services)
+in both all-Docker and hybrid usages. We use a service called migrate to run `db:prepare`
+before both `app` and `resque` run, which helps us avoid race conditions during schema set up.
