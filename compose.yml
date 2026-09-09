@@ -85,9 +85,6 @@ services:
       - QUEUE=*
       - FINDING_AID_DATA=/opt/app-data
       - DB_HOST=postgres
-#      - DB_NAME=boxwalker
-#      - DB_USER=myuser
-#      - DB_PASSWORD=secret
     env_file:
       - .env
     volumes:

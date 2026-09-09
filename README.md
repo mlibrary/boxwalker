@@ -17,7 +17,7 @@ docker compose --profile app up
 ```
 #### Start ingest pipeline
 ```shell
-# Add your data under /data/ead/{repo_slug}
+# Add your data under ./data/ead/{repo_slug}
 mkdir -p ./data/ead
 cp -r ./sample-ead/scrc ./data/ead/
 
