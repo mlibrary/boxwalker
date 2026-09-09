@@ -1,40 +1,48 @@
-# SQLite. Versions 3.8.0 and up are supported.
-#   gem install sqlite3
-#
-#   Ensure the SQLite 3 gem is defined in your Gemfile
-#   gem "sqlite3"
-#
+---
 default: &default
-  adapter: sqlite3
-  max_connections: <%= ENV.fetch("RAILS_MAX_THREADS") { 5 } %>
-  timeout: 5000
+  adapter: postgresql
+  encoding: unicode
+  pool: 5
+  host: <%= ENV.fetch("DB_HOST", "127.0.0.1") %>
+  username: <%= ENV.fetch("DB_USERNAME", "myuser") %>
+  password: <%= ENV.fetch("DB_PASSWORD", "secret") %>
+  # Skip GSSAPI/Kerberos negotiation on connect. libpq defaults to
+  # gssencmode=prefer, which hangs ~34s in hybrid dev when the host has an
+  # expired Kerberos ticket (e.g. UMich ADSROOT). Postgres in Docker doesn't
+  # use GSSAPI, so disabling it is correct in every environment.
+  gssencmode: <%= ENV.fetch("DB_GSSENCMODE", "disable") %>
+  # Detect dead/half-open sockets quickly instead of blocking on the OS TCP
+  # timeout (~34s). This matters in hybrid dev (host Ruby -> Postgres in Docker
+  # Desktop), whose network proxy silently drops idle connections. The keepalive
+  # probes also keep pooled connections warm so they never go stale.
+  connect_timeout: <%= ENV.fetch("DB_CONNECT_TIMEOUT", 5) %>
+  keepalives: 1
+  keepalives_idle: 10
+  keepalives_interval: 5
+  keepalives_count: 3
 
 development:
   <<: *default
-  database: storage/development.sqlite3
+  database: <%= ENV.fetch("DB_NAME", "boxwalker") %>
 
-# Warning: The database defined as "test" will be erased and
-# re-generated from your development database when you run "rake".
-# Do not set this db to the same as development or production.
 test:
   <<: *default
-  database: storage/test.sqlite3
+  database: <%= ENV.fetch("DB_NAME", "boxwalker") %>
 
-# Store production database in the storage/ directory, which by default
-# is mounted as a persistent Docker volume in config/deploy.yml.
 production:
   primary:
     <<: *default
-    database: storage/production.sqlite3
+    database: <%= ENV.fetch("DB_NAME", "boxwalker") %>
   cache:
     <<: *default
-    database: storage/production_cache.sqlite3
+    database: <%= ENV.fetch("CACHE_DB_NAME", "boxwalker_cache") %>
     migrations_paths: db/cache_migrate
   queue:
     <<: *default
-    database: storage/production_queue.sqlite3
+    database: <%= ENV.fetch("QUEUE_DB_NAME", "boxwalker_queue") %>
     migrations_paths: db/queue_migrate
   cable:
     <<: *default
-    database: storage/production_cable.sqlite3
+    database: <%= ENV.fetch("CABLE_DB_NAME", "boxwalker_cable") %>
     migrations_paths: db/cable_migrate
+

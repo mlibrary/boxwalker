@@ -4,9 +4,13 @@ services:
     profiles:
       - app
     depends_on:
+      migrate:
+        condition: service_completed_successfully
       solr:
         condition: service_healthy
       redis:
+        condition: service_healthy
+      postgres:
         condition: service_healthy
     build:
       context: .
@@ -16,10 +20,24 @@ services:
       - SOLR_URL=http://solr:8983/solr/blacklight-collection
       - REDIS_URL=redis://redis:6379/0
       - FINDING_AID_DATA=/opt/app-data
+      - DB_HOST=postgres
     env_file:
       - .env
+    command: ./bin/rails server -b 0.0.0.0 -p 3000
     volumes:
       - ./data:/opt/app-data
+  migrate:
+    build:
+      context: .
+    depends_on:
+      postgres:
+        condition: service_healthy
+    environment:
+      - DB_HOST=postgres
+    env_file:
+      - .env
+    command: ./bin/rails db:prepare
+    restart: "no"
   redis:
     image: redis:7
     healthcheck:
@@ -33,20 +51,40 @@ services:
     volumes:
       - redis-data:/data
     command: redis-server --appendonly yes
+  postgres:
+    healthcheck:
+      interval: 30s
+      timeout: 10s
+      start_period: 30s
+      retries: 5
+      test: [ "CMD-SHELL", "pg_isready -h localhost -d boxwalker -p 5432 -U myuser" ]
+    image: 'postgres:latest'
+    environment:
+      - 'POSTGRES_DB=boxwalker'
+      - 'POSTGRES_USER=myuser'
+      - 'POSTGRES_PASSWORD=secret'
+    ports:
+      - '127.0.0.1:5432:5432'
+    volumes:
+      - postgres-data:/var/lib/postgresql
   resque:
     depends_on:
+      migrate:
+        condition: service_completed_successfully
       solr:
         condition: service_healthy
       redis:
         condition: service_healthy
+      postgres:
+        condition: service_healthy
     build:
       context: .
     environment:
-      - RAILS_ENV=development
       - SOLR_URL=http://solr:8983/solr/blacklight-collection
       - REDIS_URL=redis://redis:6379/0
       - QUEUE=*
       - FINDING_AID_DATA=/opt/app-data
+      - DB_HOST=postgres
     env_file:
       - .env
     volumes:
@@ -106,6 +144,7 @@ services:
       ZOO_SERVERS: server.1=0.0.0.0:2888:3888;2181
 volumes:
   data:
+  postgres-data:
   solr-data:
   redis-data:
   zk-data:
