@@ -70,8 +70,18 @@ jobs:
 
   spec:
     runs-on: ubuntu-latest
-
-    # services:
+    services:
+      postgres:
+        image: postgres
+        env:
+          POSTGRES_DB: boxwalker
+          POSTGRES_USER: myuser
+          POSTGRES_PASSWORD: secret
+        options: >-
+          --health-cmd pg_isready
+          --health-interval 10s
+          --health-timeout 5s
+          --health-retries 5
     #  redis:
     #    image: valkey/valkey:8
     #    ports:
@@ -92,6 +102,7 @@ jobs:
       - name: Run specs
         env:
           RAILS_ENV: test
+          DB_HOST: postgres
           # RAILS_MASTER_KEY: ${{ secrets.RAILS_MASTER_KEY }}
           # REDIS_URL: redis://localhost:6379/0
         run: bin/rspec
