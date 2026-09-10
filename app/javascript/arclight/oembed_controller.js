@@ -5,8 +5,9 @@ const UICONF_ID = '56928822'
 const PLAYER_HOST = 'https://cdnapisec.kaltura.com'
 const ENTRY_ID_PATTERN = /^\d_[a-z0-9]{8}$/i
 
-// Kaltura-backed hosts (kaltura.com and MediaSpace instances)
-const KALTURA_HOST_SUFFIXES = ['.kaltura.com', '.mivideo.it.umich.edu']
+// Kaltura-backed hosts (kaltura.com and MediaSpace instances).
+// Matches the host itself and any subdomain.
+const KALTURA_HOSTS = ['kaltura.com', 'mivideo.it.umich.edu']
 
 export default class OembedController extends Controller {
      static values = {
@@ -35,17 +36,19 @@ export default class OembedController extends Controller {
                return null
           }
 
-          const isKalturaHost = url.hostname === 'kaltura.com'
-              || KALTURA_HOST_SUFFIXES.some((suffix) => url.hostname.endsWith(suffix))
+          const isKalturaHost = KALTURA_HOSTS.some(
+              (host) => url.hostname === host || url.hostname.endsWith(`.${host}`)
+          )
           if (!isKalturaHost) return null
 
           const queryEntryId = url.searchParams.get('entry_id')
-          if (queryEntryId && ENTRY_ID_PATTERN.test(queryEntryId)) {
-               return queryEntryId
-          }
+          if (queryEntryId && ENTRY_ID_PATTERN.test(queryEntryId)) return queryEntryId
 
+          // MediaSpace share links put the entry ID in the path, e.g.
+          // https://mivideo.it.umich.edu/media/Some+Title/1_abc12345
           return url.pathname
-              .match(/(?:^|\/)(\d_[a-z0-9]{8})(?:\/|$)/i)?.[1] || null
+              .split('/')
+              .find((segment) => ENTRY_ID_PATTERN.test(segment)) ?? null
      }
 
      loadKalturaEmbed(entryId) {
