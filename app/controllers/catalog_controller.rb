@@ -461,7 +461,5 @@ class CatalogController < ApplicationController
 
     # Advanced search
     config.advanced_search.enabled = true
-    # config.json_solr_path = 'select'
-
   end
 end
