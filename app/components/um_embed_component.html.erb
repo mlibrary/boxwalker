@@ -1,0 +1,36 @@
+<div class="al-digital-objects">
+  <% @document.digital_objects.each do |dao| %>
+    <% embed_url = helpers.quod_embed_url(dao.href) %>
+    <% if embed_url %>
+      <div class="al-digital-object mb-4">
+        <h2>
+          Online content
+          <span class="al-online-content-icon" aria-hidden="true"
+                data-bs-toggle="tooltip" title="Includes Digital Content">
+            <%= helpers.blacklight_icon(:online) %>
+          </span>
+        </h2>
+        <iframe src="<%= embed_url %>"
+                height="600"
+                width="100%"
+                allowfullscreen
+                loading="lazy"
+                class="ddr-embed-iframe ddr-image-service"
+                style="border: 0;"
+                title="<%= dao.label.presence || 'Embedded image viewer' %>"></iframe>
+        <div class="ddr-link-under">
+          <%= link_to dao.href, target: "_blank", rel: "noopener" do %>
+            <span>View Item Page / More Info / Download</span>
+            <strong class="bi bi-box-arrow-up-right" aria-hidden="true"></strong>
+            <span class="visually-hidden">(opens in new tab)</span>
+          <% end %>
+        </div>
+      </div>
+    <% else %>
+      <div class="al-digital-object mb-2">
+        <%= link_to (dao.label.presence || dao.href), dao.href,
+                    target: "_blank", rel: "noopener" %>
+      </div>
+    <% end %>
+  <% end %>
+</div>
