@@ -1,7 +1,8 @@
 <%# build the dt/dd list internals for any field, if present %>
 <% metadata_list = capture do %>
-  <% blacklight_config.component_fields.each do |field, config| %>
+  <% blacklight_config.component_fields.each do |key, config| %>
     <% next if config.ignore_interesting %>
+    <% field = config.field %>
     <% next unless component.fetch(field, nil).present? %>
     <% values = component.fetch(field, []) %>
     <% next unless values.present? %>
