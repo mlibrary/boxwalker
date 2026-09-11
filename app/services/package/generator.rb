@@ -403,38 +403,23 @@ module Package
         current_ul << li
         contents_li = li if li.css("a").first["href"].index("#contents")
       end
-      frame_el = doc.css("#collection-context turbo-frame").first
-      response = get(frame_el["src"])
-      frame_doc = Nokogiri::HTML5(response.body)
+      if (frame_el = doc.css("#collection-context turbo-frame").first)
+        response = get(frame_el["src"])
+        frame_doc = Nokogiri::HTML5(response.body)
 
-      if (contents_ul = frame_doc.css("ul.documents").first)
-        contents_ul.css("al-toggle-view-children").each do |el|
-          el.remove
+        if (contents_ul = frame_doc.css("ul.documents").first)
+          contents_ul.css("al-toggle-view-children").each do |el|
+            el.remove
+          end
+          contents_ul.css(".collapse").each do |el|
+            el.remove
+          end
+          contents_ul.css(".al-online-content-icon").each do |el|
+            el.remove
+          end
+          contents_ul["class"] = "list-unbulleted"
+          contents_li << contents_ul
         end
-        contents_ul.css(".collapse").each do |el|
-          el.remove
-        end
-        contents_ul.css(".al-online-content-icon").each do |el|
-          el.remove
-        end
-        contents_ul["class"] = "list-unbulleted"
-        contents_li << contents_ul
-      end
-
-      return
-
-      snippet_el.inner_html = '<div id="toc"><ul class="list-unbulleted"></ul></ul>'
-      current_ul = doc.css("#toc ul").first
-      contents_li = nil
-      doc.css("#about-collection-nav li.nav-item").each do |li|
-        current_ul << li
-        contents_li = li if li.css("a").first["href"] == "#contents"
-      end
-      return unless contents_li
-
-      if (contents_ul = doc.css("#sidebar #toc > ul").first)
-        contents_ul["class"] = "list-unbulleted"
-        contents_li << contents_ul
       end
     end
 
