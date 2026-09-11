@@ -107,7 +107,11 @@ module Package
       build_pdf_html
       local_html_filename = generate_local_html_filename # "#{collection.document_id}.local.html"
       File.open(local_html_filename, "w") do |f|
-        f.puts doc.serialize
+        local_html = doc.serialize
+        if RUBY_PLATFORM.match?(/darwin/i)
+          local_html.gsub!(finding_aid_data_path, "/opt/app-data")
+        end
+        f.puts local_html
       end
     end
 
@@ -142,6 +146,22 @@ module Package
             local_html_filename,
             output_filename
           ]
+
+          # Check if the host OS is macOS (Darwin)
+          if RUBY_PLATFORM.match?(/darwin/i)
+            cmd.unshift(
+              "docker",
+              "compose",
+              "run",
+              "-e", "FINDING_AID_DIR=/opt/app-data",
+              "--rm",
+              "--no-deps",
+              "app"
+            )
+            cmd[-2].gsub!(finding_aid_data_path, "/opt/app-data")
+            cmd[-1].gsub!(finding_aid_data_path, "/opt/app-data")
+          end
+
           stdout_and_stderr, process_status = Open3.capture2e(*cmd)
 
           if process_status.success?
@@ -433,6 +453,9 @@ module Package
       # volume) and referenced by absolute path so PDF generation never depends on the
       # data volume being seeded. wkhtmltopdf reads it via --enable-local-file-access.
       unifont_path = Rails.root.join("public", "fonts", "UnifontExMono.woff")
+      if RUBY_PLATFORM.match?(/darwin/i)
+        unifont_path = unifont_path.to_s.gsub(Rails.root.to_s, "/rails")
+      end
       placeholder_el.add_next_sibling <<~STYLE
         <style>
           @font-face {
