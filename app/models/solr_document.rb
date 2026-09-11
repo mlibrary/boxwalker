@@ -70,6 +70,15 @@ class SolrDocument
     online_content? || number_of_children > 0 || restricted_component?
   end
 
+  # This count includes all descendant components' DAOs
+  def total_digital_object_count
+    first("total_digital_object_count_isim") || 0
+  end
+
+  def has_digital_objects?
+    total_digital_object_count.positive?
+  end
+
   def collection_has_requestable_components?
     repository_config.request_config_present_for_type?("aeon_hidden_form_request")
   end
