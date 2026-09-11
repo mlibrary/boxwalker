@@ -193,6 +193,7 @@ module Package
     def finding_aid_data_path
       ENV.fetch("FINDING_AID_DATA", Rails.root.join("data").to_s)
     end
+
     # TODO: this is a hack to get the repository_id from the collection.
     def collection_repository_id
       return collection.repository_id if collection.respond_to?(:repository_id)
@@ -313,7 +314,7 @@ module Package
     end
 
     def update_navigation_links
-      doc.css("#about-collection-nav a").each do |link|
+      doc.css(".al-sidebar-navigation-context a").each do |link|
         href = link["href"]
         link["href"] = "#" + href.split("#").last
       end
@@ -354,13 +355,14 @@ module Package
 
       doc.css("html").first["class"] = ""
 
-      doc.css("#summary dl").first << fragment.css("dl#ead_author_block dt,dl#ead_author_block dd")
+      ## doc.css("#summary dl").first << fragment.css("dl#ead_author_block dt,dl#ead_author_block dd")
       if (contents_el = doc.css("div#contents > turbo-frame").first)
         contents_el.replace(fragment.css("div.al-contents-ish").first)
       end
       doc.css(".card-img").first&.remove
+      doc.css(".title-container button").first&.remove
       doc.css("#navigate-collection-toggle").first&.remove
-      if (tree_el = doc.css("#context-tree-nav .tab-pane.active").first)
+      if (tree_el = doc.css("#toc").first)
         tree_el.inner_html = ""
         tree_el << fragment.css("#toc").first
       end
@@ -371,6 +373,7 @@ module Package
       if (header_el = doc.css("m-website-header").first) && (new_header = fragment.css("header").first)
         header_el.replace(new_header)
       end
+      doc.css(".al-show-actions-toolbar")&.first.remove
       doc.css("footer").first&.remove
       doc.css("div.x-printable").remove
       doc.css("body a[href]").each do |link|
@@ -382,6 +385,8 @@ module Package
           link["href"] = CGI.unescape(link["href"])
         end
       end
+      doc.css("aside")&.first.unlink
+      # doc.css("#collection-context")&.first.unlink
       # ARC-114 Chinese characters were missing (Hack to include font as fallback font)
       doc.css("body").first << '<div style="font-family: UnifontExMono; visibility: hidden; font-size: 1px;">x</div>'
     end
@@ -390,6 +395,33 @@ module Package
       # rearrange the various contents links
       snippet_el = doc.css(".access-preview-snippet").first
       return unless snippet_el
+
+      snippet_el.inner_html = '<div id="toc"><ul class="list-unbulleted"></ul></ul>'
+      current_ul = doc.css("#toc ul").first
+      contents_li = nil
+      doc.css("aside nav.al-sidebar-navigation-context li").each do |li|
+        current_ul << li
+        contents_li = li if li.css("a").first["href"].index("#contents")
+      end
+      frame_el = doc.css("#collection-context turbo-frame").first
+      response = get(frame_el["src"])
+      frame_doc = Nokogiri::HTML5(response.body)
+
+      if (contents_ul = frame_doc.css("ul.documents").first)
+        contents_ul.css("al-toggle-view-children").each do |el|
+          el.remove
+        end
+        contents_ul.css(".collapse").each do |el|
+          el.remove
+        end
+        contents_ul.css(".al-online-content-icon").each do |el|
+          el.remove
+        end
+        contents_ul["class"] = "list-unbulleted"
+        contents_li << contents_ul
+      end
+
+      return
 
       snippet_el.inner_html = '<div id="toc"><ul class="list-unbulleted"></ul></ul>'
       current_ul = doc.css("#toc ul").first
@@ -411,6 +443,9 @@ module Package
       placeholder_el = doc.css("style#placeholder").first
 
       doc.css('link[rel="stylesheet"][href^="https://"]').each do |link|
+        if link["href"].index("umich-lib")
+          next
+        end
         link.unlink
       end
 
@@ -423,7 +458,7 @@ module Package
       # still works in test and environments that don't ship a print stylesheet.
       begin
         placeholder_el.add_next_sibling CatalogController.helpers.stylesheet_link_tag("print")
-      rescue Propshaft::MissingAssetError
+      rescue Propshaft::MissingAssetError => e
         # print.css is optional in test and some packaging environments
       end
 
