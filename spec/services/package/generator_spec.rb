@@ -116,8 +116,10 @@ def mock_get(url) # rubocop:disable Metrics/MethodLength
           </div>
           <div id="background">
           </div>
-          <div class="al-contents">
-            <p>This will be replaced.</p>
+          <div id="contents">
+            <turbo-frame>
+              <p>This will be replaced.</p>
+            </turbo-frame>
           </div>
         </main>
         <footer>
