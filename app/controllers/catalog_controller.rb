@@ -13,6 +13,7 @@ class CatalogController < ApplicationController
   include Arclight::Catalog
 
   include UmArclight::Catalog
+  prepend_before_action :default_to_grouped_results, only: :index
 
   configure_blacklight do |config|
     ## Class for sending and receiving requests from a search index
@@ -449,5 +450,11 @@ class CatalogController < ApplicationController
 
     # Group header values
     config.add_group_header_field "abstract_or_scope", accessor: true, truncate: true, helper_method: :render_html_tags
+  end
+
+  private
+
+  def default_to_grouped_results
+    params[:group] = "true" if params[:group].blank?
   end
 end
