@@ -26,4 +26,24 @@ namespace :arclight do
 
     puts "All collections queued for Ingest."
   end
+
+  desc "Ingest a single finding aid in the data ead directory via background jobs"
+  task :ingest, [ :repo_id, :file_name ] => :environment do |t, args|
+    data_path = ENV.fetch("FINDING_AID_DATA")
+
+    repo_id = args[:repo_id]
+    file_name = args[:file_name]
+
+    unless repo_config.keys.include?(repo_id)
+      raise ArgumentError.new("\"#{repo_id}\" is not a valid repo id.")
+    end
+
+    file_path = File.join(data_path, "ead", repo_id, file_name)
+    unless File.exist?(file_path)
+      raise ArgumentError.new("\"#{file_name}\" is not in the ead directory for repository #{repo_id}.")
+    end
+
+    puts "Queuing #{file_path} for Ingest..."
+    IngestAutomationJob.perform_later("ingest.file", repo_id: repo_id, file_path: file_path)
+  end
 end
