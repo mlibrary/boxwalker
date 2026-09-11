@@ -1,8 +1,15 @@
-<style id="utility-styles">
+<html>
+  <head>
+    <%= render "arclight/fragments/utility_styles" %>
+  </head>
+  <body>
+
+
+<%# <style id="utility-styles">
   .al-contents-ish article {
     margin-bottom: 1rem;
   }
-</style>
+</style> %>
 
 <header>
   <h1><%= Array(@collection['normalized_title_ssm']).first %></h1>
@@ -20,6 +27,7 @@
   <dd><%= Array(@collection['ead_author_ssm']).first %></dd>
 </dl>
 
+<%if false%>
 <div class="al-contents-ish">
   <% @components.each do |component| %>
     <article id="<%= component.id %>">
@@ -27,6 +35,12 @@
     </article>
   <% end %>
 </div>
+<%end%>
+
+  <div class="al-contents-ish child-components">
+    <%= render "arclight/fragments/components" %>
+  </div>
+
 
 <div id="toc">
   <ul class="list-unbulleted">
@@ -35,3 +49,6 @@
     <% end %>
   </ul>
 </div>
+
+</body>
+</html>

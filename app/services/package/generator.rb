@@ -317,11 +317,25 @@ module Package
         el.unlink
       end
 
+      doc.xpath('/html/head/script[starts-with(@type, "importmap")]').each do |el|
+        el.unlink
+      end
+
+      doc.xpath('/html/head/link[@rel="modulepreload"]').each do |el|
+        el.unlink
+      end
+
+      doc.xpath('/html/head/script[@type="module"]').each do |el|
+        el.unlink
+      end
+
       doc.css('meta[name="csrf-param"]').first&.unlink
       doc.css('meta[name="csrf-token"]').first&.unlink
 
+      doc.css("html").first["class"] = ""
+
       doc.css("#summary dl").first << fragment.css("dl#ead_author_block dt,dl#ead_author_block dd")
-      if (contents_el = doc.css("div.al-contents").first)
+      if (contents_el = doc.css("div#contents > turbo-frame").first)
         contents_el.replace(fragment.css("div.al-contents-ish").first)
       end
       doc.css(".card-img").first&.remove
