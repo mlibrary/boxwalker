@@ -53,6 +53,7 @@ module UmArclight
       self.response_body = Enumerator.new do |output|
         File.foreach(html_filename) do |line|
           if line.index('<style id="placeholder"></style>')
+            output << helpers.stylesheet_link_tag("bootstrap", media: "all")
             output << helpers.stylesheet_link_tag("application", media: "all")
             output << helpers.javascript_include_tag("application")
             output << helpers.csrf_meta_tags

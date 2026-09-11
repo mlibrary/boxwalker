@@ -1,0 +1,38 @@
+<% @components.each do |component| %>
+  <article data-component-level="<%= component.component_level %>">
+    <div class="component-wrapper">
+      <%= content_tag "h3", class: 'tree-title', id: component.id do -%>
+        <% if component.collection_has_requestable_components? %>
+          <% if component.is_checkbox_requestable? %>
+            <div class="checkbox request-checkbox">
+              <label class="btn btn-outline-secondary btn-outline-request squat p-2 mb-0">
+                <input type="checkbox" name="Request" value="<%= component.id %>">
+                <input type="hidden" name="Request" value="<%= component.id %>">
+                <input type="hidden" name="ItemSubTitle_<%= component.id %>" value="<%= component.aeon_item_sub_title_value %>">
+                <input type="hidden" name="ItemVolume_<%= component.id %>" value="<%= component.aeon_item_volume_value %>">
+                <input type="hidden" name="ItemCitation_<%= component.id %>" value="<%= component.aeon_item_citation_value %>">
+                <input type="hidden" name="ItemInfo1" value="<%= component.aeon_item_info_1_value %>">
+                <span class="sr-only">Request "<%= component.aeon_item_sub_title_sr_only %>"</span>
+              </label>
+            </div>
+          <% else %>
+            <%# <span style="padding: 0.375rem 1rem;"><i class="text-blended fas fa-circle"></i></span> %>
+          <% end %>
+        <% end %>
+        <div class="component-title">
+          <span class="title">
+            <%= component.normalized_title %>
+            <% if component.level.present? %> (<%= component.level %>)<% end %>
+          </span>
+          <% if component.containers.present? %>
+            <span class="box">
+              <%= component.containers.join(', ') %>
+            </span>
+          <% end %>
+        </div>
+      <% end -%>
+
+      <%= render 'arclight/fragments/component_details', { component: component } %>
+    </div>
+  </article>
+<% end %>

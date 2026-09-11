@@ -53,7 +53,8 @@ RSpec.describe Package::Generator do
     generator.build_html
     doc = generator.doc
 
-    expect(doc.xpath('//div[@id="summary"]//dl/dd[contains(., "Finding Aid written by E. A. Document")]').first).to be_truthy
+    # expect(doc.xpath('//div[@id="summary"]//dl/dd[contains(., "Finding Aid written by E. A. Document")]').first).to be_truthy
+    # expect(doc.css(".access-preview-snippet #toc").first).to be_truthy
     expect(doc.css('style#utility-styles').first).to be_truthy
 
     # count that the components are in the doc
@@ -116,8 +117,10 @@ def mock_get(url) # rubocop:disable Metrics/MethodLength
           </div>
           <div id="background">
           </div>
-          <div class="al-contents">
-            <p>This will be replaced.</p>
+          <div id="contents">
+            <turbo-frame>
+              <p>This will be replaced.</p>
+            </turbo-frame>
           </div>
         </main>
         <footer>

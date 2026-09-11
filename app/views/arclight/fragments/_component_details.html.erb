@@ -1,0 +1,31 @@
+<%# build the dt/dd list internals for any field, if present %>
+<% metadata_list = capture do %>
+  <% blacklight_config.component_fields.each do |key, config| %>
+    <% next if config.ignore_interesting %>
+    <% field = config.field %>
+    <% next unless component.fetch(field, nil).present? %>
+    <% values = component.fetch(field, []) %>
+    <% next unless values.present? %>
+    <dt data-field="<%= field %>"><%= config.label %></dt>
+    <% values.each do |value| %>
+      <dd><%= render_html_tags(value: [value]) %></dd>
+    <% end %>
+  <% end %>
+<% end %>
+<%# render blockquote contents if there is metadata or digital objects %>
+<% if metadata_list.present? or component.total_digital_object_count > 0 && component.digital_objects.present? %>
+<blockquote>
+  <% if metadata_list.present? %>
+    <dl class="al-metadata">
+      <%= metadata_list %>
+    </dl>
+  <% end %>
+  <% if component.total_digital_object_count > 0 && component.digital_objects.present? %>
+    <% component.digital_objects.each do |dao| %>
+      <p>
+        <a href="<%= dao.href %>">View: <%= render_html_tags(value: [dao.label]) %></a>
+      </p>
+    <% end %>
+  <% end %>
+</blockquote>
+<% end %>
