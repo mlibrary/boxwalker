@@ -3,6 +3,7 @@
 require_relative "../components/um_access_component"
 require_relative "../components/um_constraints_component"
 require_relative "../components/um_document_component"
+require_relative "../components/um_search_bar_component"
 require_relative "../components/um_search_result_component"
 
 # Blacklight controller that handles searches and document requests
@@ -75,7 +76,7 @@ class CatalogController < ApplicationController
     config.index.group_component = Arclight::GroupComponent
     config.index.constraints_component = UmConstraintsComponent
     config.index.document_presenter_class = Arclight::IndexPresenter
-    config.index.search_bar_component = Arclight::SearchBarComponent
+    config.index.search_bar_component = UmSearchBarComponent
     # config.index.thumbnail_field = 'thumbnail_path_ss'
 
     # solr field configuration for document/show views
