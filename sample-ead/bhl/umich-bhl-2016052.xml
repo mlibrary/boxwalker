@@ -1,0 +1,1492 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE ead PUBLIC "+//ISBN 1-931666-00-8//DTD ead.dtd (Encoded Archival Description (EAD) Version 2002)//EN" "ead.dtd">
+<ead>
+  <eadheader countryencoding="iso3166-1" dateencoding="iso8601" langencoding="iso639-2b" repositoryencoding="iso15511">
+    <eadid>umich-bhl-2016052</eadid>
+    <filedesc>
+      <titlestmt>
+        <titleproper>Finding aid for the African American Civilian Conservation Corps (U.S.) photograph collection</titleproper>
+        <author>Finding aid created by Lilly Carrel, August 2016. Updated by Elizabeth Hannigan, August 2019.</author>
+      </titlestmt>
+      <publicationstmt>
+        <publisher>Bentley Historical Library</publisher>
+        <p>
+          <date>2016-08-15</date>
+        </p>
+      </publicationstmt>
+    </filedesc>
+    <profiledesc>
+      <creation>
+        This finding aid was produced using ArchivesSpace on
+        <date>2022-12-06 13:47:51 -0500</date>
+        .
+      </creation>
+      <langusage>
+        The finding aid is written in
+        <language langcode="eng" scriptcode="Latn">English</language>
+      </langusage>
+      <descrules>Finding aid prepared using Describing Archives: A Content Standard (DACS)</descrules>
+    </profiledesc>
+    <revisiondesc>
+      <change>
+        <date>2016-11-21</date>
+        <item>Updated Conditions Governing Use Note</item>
+      </change>
+      <change>
+        <date>2018-11-19</date>
+        <item>Added Dr. Nelson name and bio</item>
+      </change>
+      <change>
+        <date>2019-09-30</date>
+        <item>Updated the Lyons series according to donor-supplied information</item>
+      </change>
+      <change>
+        <date>2021-03-10</date>
+        <item>added agent for James D. Richardson</item>
+      </change>
+      <change>
+        <date>2021-04-28</date>
+        <item>changed Lyons series title</item>
+      </change>
+    </revisiondesc>
+  </eadheader>
+  <frontmatter>
+    <titlepage>
+      <publisher>
+        Bentley Historical Library
+        <lb/>
+        University of Michigan
+      </publisher>
+      <titleproper>Finding aid for the African American Civilian Conservation Corps (U.S.) photograph collection</titleproper>
+      <author>Finding aid created by Lilly Carrel, August 2016. Updated by Elizabeth Hannigan, August 2019.</author>
+    </titlepage>
+  </frontmatter>
+  <archdesc level="recordgrp">
+    <did>
+      <repository>
+        <corpname>Bentley Historical Library</corpname>
+        <extptr actuate="onload" href="bhladd" show="embed"/>
+      </repository>
+      <unittitle>African American Civilian Conservation Corps (U.S.) photograph collection</unittitle>
+      <unitid type="call number">2016052 Aa 2. </unitid>
+      <physdesc>
+        <extent>0.4 linear feet (including 60 photographs and 48 negatives, in 2 boxes)</extent>
+      </physdesc>
+      <physdesc>
+        <extent>367 MB (online)</extent>
+      </physdesc>
+      <unitdate normal="1933/1939" type="inclusive">1933-1939</unitdate>
+      <abstract id="aspace_992cc34f73225f57a069b83d0e48042f">The Civilian Conservation Corps (CCC), signed into law by President Franklin D. Roosevelt in 1933, was a federal unemployment relief program designed to put single young men to work during the Great Depression. The CCC employed over 2.5 million men between 1933 and 1942, including 250,000 African Americans, who served in segregated companies. This collection is comprised of 60 photographs, 48 photographic negatives, and digitized images of CCC African American enrollees assigned to work in Michigan companies, including Company 670, Camp Bitely, Company 2695, Camp Free Soil, and and Camp Wahalla.</abstract>
+      <langmaterial id="aspace_aa8d7dbd2fc43cb4eb160af9f57db6f1">
+        The material is in
+        <language langcode="eng">English</language>
+      </langmaterial>
+    </did>
+    <descgrp type="admin">
+      <accessrestrict>
+        <p>Restricted access in part. Use of original photographs is restricted due to fragility. Photographs are digitized and available in the Bentley Image Bank here: http://quod.lib.umich.edu/b/bhl?med=1;size=50;sort=bhl_itno;type=boolean;view=reslist;rgn1=ic_all;select1=all;q1=African+American+Civilian+Conservation.</p>
+      </accessrestrict>
+      <acqinfo>
+        <p>
+          Purchased from Rowman and Littlefield (donor no.
+          <num type="donor">1771</num>
+          ) in February 2016.
+        </p>
+        <p>
+          30 additional photographs and 48 negative images of the African American Civilian Conservation Camps were donated by Ray Lyons Jr. (donor no.
+          <num type="donor">11858</num>
+          ) in May 2018.
+        </p>
+      </acqinfo>
+      <userestrict>
+        <p>These images may be protected by copyright law. Contact the Bentley Historical Library for permission to reproduce, display or transmit any image. Patrons are responsible for determining the appropriate use or reuse of materials.</p>
+      </userestrict>
+      <prefercite>
+        <p>[item], folder, box, African American Civilian Conservation Corps (U.S.) photograph collection, Bentley Historical Library, University of Michigan.</p>
+        <p>[item], [URL], African American Civilian Conservation Corps (U.S.) photograph collection, Bentley Historical Library, University of Michigan. </p>
+      </prefercite>
+    </descgrp>
+    <bioghist>
+      <p>On March 31, 1933, President Franklin Delano Roosevelt signed into law the Emergency Conservation Work Act (ECW), establishing the Civilian Conservation Corps (CCC). Officially named the CCC in 1937, this New Deal program was intended to provide federal unemployment relief for single men, ages 18 to 25, whose families were on the nation's relief roles. Enrollees lived in quasi-military camps, operated by the United States Army (at the time under the Department of War), in state and national parks and forests. Men worked on conservation projects such as combating soil erosion and forest fires, planting trees, building park recreation areas, constructing roads, and stringing telephone and electric wires. The CCC also aided during natural disasters such as hurricanes, floods, and droughts. Conservation projects were overseen by the Forest Service (Department of Agriculture) and the National Park Service (Department of the Interior). The Department of Labor was responsible for the recruitment of men. Enrollees earned a salary of $30 a month, $25 of which was sent home to men's families to aid the economic recovery during the Great Depression.</p>
+      <p> Robert Fechner was the first director of the CCC, serving until his death in 1939. James McEntee was appointed director in 1940 and served until the CCC ceased operation in 1942. The CCC camps were organized into "company units," denoted numerically, comprised of 200 enrollees. "Camps" were temporary units of 50 men living in barracks, and "sections" were work detail units of 25 men. At first the CCC had a small number of integrated camps, but by 1935 African American enrollees were segregated from white enrollees. Known as "colored" camps, these companies were assigned the designation of "-C." A total of 250,000 African Americans served in 150 all black CCC companies.</p>
+      <p> In addition to putting the Junior enrollees (i.e., unemployed single young men, primarily from urban areas), as they were called, to work, the CCC also administered camps for veterans and Native Americans without limitations on age or marital status. Also, to quell resentment between local people and the Juniors, the CCC employed Local Experienced Men (LEMs). LEMs lived in close proximity to CCC camps and offered forestry expertise and training to the Juniors.</p>
+      <p> In total, the CCC employed over 2.5 million men in 4,500 camps across the United States. Enrollees planted over 3 billion trees, addressed 21 million acres of land for plant disease and pest control, spent over 6 million days fighting fires,and laid 89,000 miles of telephone lines. In Michigan, part of the CCC's North Central Region, a total of 485 million trees were planted (the most in the nation), 504 bridges and 222 buildings were constructed, nearly 7,000 miles of truck trails/minor roads were laid, and 140,000 days were spent fighting forest fires.</p>
+      <p> Sources: Merrill, Perry H. "Roosevelt's Army: A History of the Civilian Conservation Corps 1933-1942." Montpelier, Vermont: Perry H. Merrill, 1981.</p>
+      <p>Speakman, Joseph M. "Into the Woods: The First Year of the Civilian Conservation Corps." Prologue 38 (2006). Accessed August 4, 2016. http://www.archives.gov/publications/prologue/2006/fall/ccc.html.</p>
+    </bioghist>
+    <scopecontent>
+      <p>The collection is comprised of images of the Civilian Conservation Corps African American enrollees from 1933 to 1939. Materials were received by the Bentley in 2016 and in 2018.</p>
+      <p>The 2016 acquisition includes portrait-style photographs of predominantly unidentified men, assigned to work in Michigan company/camps including Company 670, Camp Bitely, project F-22 and Company 2695, Camp Free Soil, most likely, project F-7.</p>
+      <p> The title of each photograph was taken from the photograph's inscription, when applicable. All photographs titled "unidentified" had no identifying information, but may have been labeled with a date. After the photographs were digitized and became available online, some of the people depicted on the photographs have been identified by the public. </p>
+      <p>In 2018, Ray Lyons Jr. donated additional materials that were collected by his father, Ray Lyons Sr., a former member of the CCC. Mr. Lyons Jr. donated additional 30 photographs, 48 negative images, and a small number of clippings to the collection. The images depict African American members of the CCC at a number of locations, including Camp Bitely, Camp Free Soil, and Camp Walhalla. The pictures also document CCC projects such as the building of a Fire Lookout Tower, the clearing of fields and woods, and the construction of a stump fence. </p>
+    </scopecontent>
+    <controlaccess>
+      <p>
+        <extptr actuate="onload" href="accnote" show="embed"/>
+      </p>
+      <subject source="lctgm">Agricultural laborers -- Michigan.</subject>
+      <subject source="lcsh">African American agricultural laborers -- Michigan.</subject>
+      <subject authfilenumber="http://id.loc.gov/authorities/subjects/sh85001951" source="lcsh">African Americans -- Employment.</subject>
+      <subject authfilenumber="http://id.loc.gov/authorities/subjects/sh2009114058" source="lcsh">African Americans -- Portraits.</subject>
+      <subject source="lctgm">Camps -- Michigan.</subject>
+      <subject source="lctgm">Portrait photographs -- 1930-1940.</subject>
+      <genreform source="aat">Digital file formats.</genreform>
+      <genreform source="gmgpc">Negatives.</genreform>
+      <genreform source="gmgpc">Photographs.</genreform>
+      <corpname authfilenumber="http://id.loc.gov/authorities/names/n79099497" source="lcnaf">Civilian Conservation Corps (U.S.)</corpname>
+      <corpname source="lcnaf">Civilian Conservation Corps (U.S.). Company 670 (Bitely, Mich.)</corpname>
+      <corpname source="lcnaf">Civilian Conservation Corps (U.S.). Company 2695 (Free Soil, Mich.)</corpname>
+      <corpname rules="dacs">Civilian Conservation Corps (U.S.). Camp Wahalla (Wahalla, Mich.)</corpname>
+      <persname rules="dacs">Nelson, Lorenzo N.</persname>
+      <persname source="local">Richardson, James D.</persname>
+    </controlaccess>
+    <dsc type="combined">
+      <c01 id="aspace_1ebc68478bd64d9d1ea4febf8a2fd51a" level="series">
+        <did>
+          <unittitle>Civilian Conservation Corps (U.S.) photographs</unittitle>
+          <unitdate normal="1933/1939" type="inclusive">1933-1939</unitdate>
+        </did>
+        <scopecontent>
+          <p>The Civilian Conservation Corps (U.S.) photographs series contains 30 photographs and digitized images of African American men working in Civilian Conservation Corps camps in Michigan.</p>
+        </scopecontent>
+        <c02 id="aspace_732cb730146ab768c0f164078ef998ba" level="item">
+          <did>
+            <unittitle>Army Trucks, Camp Bitely</unittitle>
+            <unitid>[BL019899]</unitid>
+            <unitdate normal="1935/1935" type="inclusive">1935</unitdate>
+            <container label="Box" type="box">1</container>
+            <dao actuate="onrequest" href="http://quod.lib.umich.edu/b/bhl/x-bl019899/bl019899" show="new" title="Army Trucks, Camp Bitely, 1935">
+              <daodesc>
+                <p>[view item]</p>
+              </daodesc>
+            </dao>
+          </did>
+          <odd>
+            <p>(Three U.S.C.C.C. transport trucks are parked in a line nearby barracks and trees)</p>
+          </odd>
+        </c02>
+        <c02 id="aspace_a65ffa617beed2ddb8bfe4d1ceb47253" level="item">
+          <did>
+            <unittitle>James D. Richardson</unittitle>
+            <unitid>[BL019890]</unitid>
+            <unitdate normal="1936/1936" type="inclusive">1936</unitdate>
+            <container label="Box" type="box">1</container>
+            <dao actuate="onrequest" href="http://quod.lib.umich.edu/b/bhl/x-bl019890/bl019890" show="new" title="James D. Richardson, 1936">
+              <daodesc>
+                <p>[view item]</p>
+              </daodesc>
+            </dao>
+          </did>
+          <odd>
+            <p>(Dressed in a heavy coat and hat, a man reaches for a doorknob to a barrack)</p>
+          </odd>
+        </c02>
+        <c02 id="aspace_04f150e9f3154d5c9462e759b3dd1056" level="item">
+          <did>
+            <unittitle>James D. Richardson, Camp Free Soil</unittitle>
+            <unitid>[BL019891]</unitid>
+            <unitdate normal="1936/1936" type="inclusive">1936</unitdate>
+            <container label="Box" type="box">1</container>
+            <dao actuate="onrequest" href="http://quod.lib.umich.edu/b/bhl/x-bl019891/bl019891" show="new" title="James D. Richardson, Camp Free Soil, 1936">
+              <daodesc>
+                <p>[view item]</p>
+              </daodesc>
+            </dao>
+          </did>
+          <odd>
+            <p>(Two men stand in heavy coats near a building)</p>
+          </odd>
+        </c02>
+        <c02 id="aspace_ecba8751b1055fe45c5c9b086e9442b1" level="item">
+          <did>
+            <unittitle>Bob, 670th</unittitle>
+            <unitid>[BL019888]</unitid>
+            <unitdate normal="1939/1939" type="inclusive">1939</unitdate>
+            <container label="Box" type="box">1</container>
+            <dao actuate="onrequest" href="http://quod.lib.umich.edu/b/bhl/x-bl019888/bl019888" show="new" title="Bob, 670th, 1939">
+              <daodesc>
+                <p>[view item]</p>
+              </daodesc>
+            </dao>
+          </did>
+          <odd>
+            <p>(A man leans in the entryway to a building, dressed in work attire, gloves, and holding a shovel)</p>
+          </odd>
+        </c02>
+        <c02 id="aspace_28a897d431806f1c452d182ed7c23a6a" level="item">
+          <did>
+            <unittitle>Cooks of Free Soil Camp</unittitle>
+            <unitid>[BL019906]</unitid>
+            <unitdate normal="1935/1935" type="inclusive">1935</unitdate>
+            <container label="Box" type="box">1</container>
+            <dao actuate="onrequest" href="http://quod.lib.umich.edu/b/bhl/x-bl019906/bl019906" show="new" title="Cooks of Free Soil Camp, 1935">
+              <daodesc>
+                <p>[view item]</p>
+              </daodesc>
+            </dao>
+          </did>
+          <odd>
+            <p>(Nine men stand and sit around a bench among tents, all but one dressed in chef whites and hats)</p>
+          </odd>
+        </c02>
+        <c02 id="aspace_59011da1979388dd127d362fdd79244e" level="item">
+          <did>
+            <unittitle>Free Soil Camp, No. 3695</unittitle>
+            <unitid>[BL019907]</unitid>
+            <unitdate normal="1935/1935" type="inclusive">1935</unitdate>
+            <container label="Box" type="box">1</container>
+            <dao actuate="onrequest" href="http://quod.lib.umich.edu/b/bhl/x-bl019907/bl019907" show="new" title="Free Soil Camp, No. 3695, 1935">
+              <daodesc>
+                <p>[view item]</p>
+              </daodesc>
+            </dao>
+          </did>
+          <odd>
+            <p>(A view of tents and barracks of Free Soil Camp, two figures are seen to the right near a tent)</p>
+          </odd>
+        </c02>
+        <c02 id="aspace_64f59e32709a8ad5c6c30de8ea8f2bd4" level="item">
+          <did>
+            <unittitle>Garfield (?), 670</unittitle>
+            <unitid>[BL019889]</unitid>
+            <unitdate normal="1935/1935" type="inclusive">1935</unitdate>
+            <container label="Box" type="box">1</container>
+            <dao actuate="onrequest" href="http://quod.lib.umich.edu/b/bhl/x-bl019889/bl019889" show="new" title="Garfield (?), 670, 1935">
+              <daodesc>
+                <p>[view item]</p>
+              </daodesc>
+            </dao>
+          </did>
+          <odd>
+            <p>(Three men pose together in front of a tree, two in a casual attire, one shirtless)</p>
+          </odd>
+        </c02>
+        <c02 id="aspace_c05dd035274e0ed289f61e8849359528" level="item">
+          <did>
+            <unittitle>Jimmy Smith, 670th Camp Bitely F-22, Bitely Michigan</unittitle>
+            <unitid>[BL019882]</unitid>
+            <unitdate type="inclusive">undated</unitdate>
+            <container label="Box" type="box">1</container>
+            <dao actuate="onrequest" href="http://quod.lib.umich.edu/b/bhl/x-bl019882/bl019882" show="new" title="Jimmy Smith, 670th Camp Bitely F-22, Bitely Michigan, undated">
+              <daodesc>
+                <p>[view item]</p>
+              </daodesc>
+            </dao>
+          </did>
+          <odd>
+            <p>(Portrait of young man in CCC outfit)</p>
+          </odd>
+        </c02>
+        <c02 id="aspace_e1d46355696add12b67f9b93c365ebfe" level="item">
+          <did>
+            <unittitle>Jimmy [Smith] and Nelson, 670th Camp Bitely, F-22, Bitely Michigan</unittitle>
+            <unitid>[BL019894]</unitid>
+            <unitdate normal="1933/1933" type="inclusive">1933</unitdate>
+            <container label="Box" type="box">1</container>
+            <dao actuate="onrequest" href="http://quod.lib.umich.edu/b/bhl/x-bl019894/bl019894" show="new" title="Jimmy [Smith] and Nelson, 670th Camp Bitely, F-22, Bitely Michigan, 1933">
+              <daodesc>
+                <p>[view item]</p>
+              </daodesc>
+            </dao>
+          </did>
+          <odd>
+            <p>(Two young men in CCC work attire sit together)</p>
+          </odd>
+        </c02>
+        <c02 id="aspace_fe05c2292bb9e0f11c91be5ad6fe5328" level="item">
+          <did>
+            <unittitle>Lorenzo Raymond Sylvanus Nelson</unittitle>
+            <unitid>[BL019886]</unitid>
+            <unitdate normal="1937/1937" type="inclusive">1937</unitdate>
+            <container label="Box" type="box">1</container>
+            <dao actuate="onrequest" href="http://quod.lib.umich.edu/b/bhl/x-bl019886/bl019886" show="new" title="Lorenzo Raymond Sylvanus Nelson, 1937">
+              <daodesc>
+                <p>[view item]</p>
+              </daodesc>
+            </dao>
+          </did>
+          <bioghist>
+            <p>Lorenzo R. Nelson, 1st Lieutenant, Medical Corps, U.S. Army. Dr. Nelson is in his military uniform. He stands at attention with a background of barracks. </p>
+            <p>Lorenzo Raymond Sylvanus Nelson was born on August 1, 1902 in Greenville, Texas to Martha Louise Key Nelson and Pierce Shaddock Nelson. He was the grandson of Lorenzo Dow Key, MD, a 1878 graduate of Meharry Medical College in Nashville, Tenn. (Mrs.) America Davenport Gray Key. Dr. Lorenzo Nelson's mother was a graduate of Chicago Conservatory of Music in Voice and Piano. </p>
+            <p>Dr. Nelson received his Bachelor's degree from Lane College in Jackson, Tenn. and his degree as Doctor of Medicine from Meharry Medical College in 1929. He completed his Internship at Kansas City General Hospital no. 2. On July 6, 1930, in Wichita, Kansas, Dr. Nelson married Blanche Juanita Crawford, RN. She received her nursing degree from the Meharry Medical College School of Nursing in 1929 and was the Nelson Gold Medal for highest academic attainment recipient during her studies.</p>
+            <p> Dr. Nelson served a distinguished military career following his induction as a First Lieutenant in Medical Corps at Fort Sheridan, Ill. He served from 1935 to 1941 as a Medical Officer, Civilian Conservation Corps (CCC), VI Corps Area. Dr. Nelson was responsible for six CCC camps, including Axum (Cadillac), Baldwin, Freesoil, Houghton Lake, Irons, Wolf Lake, and Wakjerville. He participated in the Tenth Annual Medical Military Inactive Training Unit, Mayo Foundation October 2-10, 1938 and was trained by Charles Huggins, a Nobel Laureate, Professor Emeritus of Urology at University of Chicago.</p>
+            <p>Dr. Nelson was called to active duty in the U.S. Army on March 4, 1941 at Fort Devens, Mass. and served as Regimental Surgeon, 366th Infantry Regiment. He was promoted to Major, Medical Corps while serving in Italy in 1944. Dr. Nelson terminated his Active Duty status in February 1946.</p>
+            <p> He was Chief of Staff at Reed City Hospital, Reed City, Mich. in 1946-1964, served as a Medical Advisor to the Draft Board from 1946-1972, and as Lake County Medical Examiner. He was also President of Tri-County Medical Society (Lake-Osceola-Mecosta County), Michigan State Medical Society, American Medical Association, and on the Board of the Area-wide Comprehensive Planning Unit in Grand Rapids, Mich. Dr. Nelson was a recipient of an honorary humanitarian award from the Michigan Department of Public Health. </p>
+            <p>Dr. Nelson practiced for sixty-five years. On April 27, 1979 Governor of Michigan William Milliken gave him a Centennial Award in "recognition of your outstanding contribution to public health in Michigan over the years."</p>
+            <p>Dr. Nelson was honored by having an elementary school in Webber Township, Lake County named the Lorenzo Raymond Nelson Elementary School. </p>
+            <p>Dr. Lorenzo Raymond Sylvanus Nelson passed away in 1994.</p>
+          </bioghist>
+        </c02>
+        <c02 id="aspace_e0f1108943e47d6871036aa4f3b25bc3" level="item">
+          <did>
+            <unittitle>Shermont Laurence and unidentified</unittitle>
+            <unitid>[BL019901]</unitid>
+            <unitdate normal="1935/1935" type="inclusive">1935</unitdate>
+            <container label="Box" type="box">1</container>
+            <dao actuate="onrequest" href="http://quod.lib.umich.edu/b/bhl/x-bl019901/bl019901" show="new" title="Shermont Laurence and unidentified, 1935">
+              <daodesc>
+                <p>[view item]</p>
+              </daodesc>
+            </dao>
+          </did>
+          <odd>
+            <p>(Two men stand together in a field, both dressed for work, in the background stand rows of tents and trees)</p>
+          </odd>
+        </c02>
+        <c02 id="aspace_29fd5da6f693884c4621715e49f59946" level="item">
+          <did>
+            <unittitle>William Childs, Bitely Camp 670</unittitle>
+            <unitid>[BL019885]</unitid>
+            <unitdate normal="1935/1935" type="inclusive">1935</unitdate>
+            <container label="Box" type="box">1</container>
+            <dao actuate="onrequest" href="http://quod.lib.umich.edu/b/bhl/x-bl019885/bl019885" show="new" title="William Childs, Bitely Camp 670, 1935">
+              <daodesc>
+                <p>[view item]</p>
+              </daodesc>
+            </dao>
+          </did>
+          <odd>
+            <p>(A man in casual attire stands in a grassy field, one hand in pocket, the other holding a cigarette)</p>
+          </odd>
+        </c02>
+        <c02 id="aspace_9490d28ee1005f600ef253c2968acb6a" level="item">
+          <did>
+            <unittitle>Unidentified, 670th Camp Bitely F-22, Bitely Michigan</unittitle>
+            <unitid>[BL019883]</unitid>
+            <unitdate normal="1935/1935" type="inclusive">1935</unitdate>
+            <container label="Box" type="box">1</container>
+            <dao actuate="onrequest" href="http://quod.lib.umich.edu/b/bhl/x-bl019883/bl019883" show="new" title="Unidentified, 670th Camp Bitely F-22, Bitely Michigan, 1935">
+              <daodesc>
+                <p>[view item]</p>
+              </daodesc>
+            </dao>
+          </did>
+          <odd>
+            <p>(Portrait of young man in CCC outfit)</p>
+          </odd>
+        </c02>
+        <c02 id="aspace_c6a53989ea634b7fbfee4eefcb0a22cd" level="item">
+          <did>
+            <unittitle>Unidentified, Camp Bitely</unittitle>
+            <unitid>[BL019895]</unitid>
+            <unitdate normal="1935/1935" type="inclusive">1935</unitdate>
+            <container label="Box" type="box">1</container>
+            <dao actuate="onrequest" href="http://quod.lib.umich.edu/b/bhl/x-bl019895/bl019895" show="new" title="Unidentified, Camp Bitely, 1935">
+              <daodesc>
+                <p>[view item]</p>
+              </daodesc>
+            </dao>
+          </did>
+          <odd>
+            <p>(A young man seated in CCC attire looks to his left and smiles)</p>
+          </odd>
+        </c02>
+        <c02 id="aspace_79f04b0e1cd8010c304abbc17d732ba5" level="item">
+          <did>
+            <unittitle>Unidentified</unittitle>
+            <unitid>[BL019892]</unitid>
+            <unitdate normal="1935/1935" type="inclusive">1935</unitdate>
+            <container label="Box" type="box">1</container>
+            <dao actuate="onrequest" href="http://quod.lib.umich.edu/b/bhl/x-bl019892/bl019892" show="new" title="Unidentified, 1935">
+              <daodesc>
+                <p>[view item]</p>
+              </daodesc>
+            </dao>
+          </did>
+          <odd>
+            <p>(Young man smiles in a wide-brimmed hat)</p>
+          </odd>
+        </c02>
+        <c02 id="aspace_9c4448551dbddecd5ab61d1ad0b57cb8" level="item">
+          <did>
+            <unittitle>Unidentified (duplicate photograph)</unittitle>
+            <unitid>[BL019893]</unitid>
+            <unitdate normal="1935/1935" type="inclusive">1935</unitdate>
+            <container label="Box" type="box">1</container>
+            <dao actuate="onrequest" href="http://quod.lib.umich.edu/b/bhl/x-bl019893/bl019893" show="new" title="Unidentified (duplicate photograph), 1935">
+              <daodesc>
+                <p>[view item]</p>
+              </daodesc>
+            </dao>
+          </did>
+          <odd>
+            <p>(Young man smiles in a wide-brimmed hat)</p>
+          </odd>
+        </c02>
+        <c02 id="aspace_5dba93c1d0ccb95ffba975a2c980745d" level="item">
+          <did>
+            <unittitle>Unidentified</unittitle>
+            <unitid>[BL019897]</unitid>
+            <unitdate normal="1935/1935" type="inclusive">1935</unitdate>
+            <container label="Box" type="box">1</container>
+            <dao actuate="onrequest" href="http://quod.lib.umich.edu/b/bhl/x-bl019897/bl019897" show="new" title="Unidentified, 1935">
+              <daodesc>
+                <p>[view item]</p>
+              </daodesc>
+            </dao>
+          </did>
+          <odd>
+            <p>(A distant figure follows a trail through the snow towards a line of tents)</p>
+          </odd>
+        </c02>
+        <c02 id="aspace_df7ce3c94bdad477fd0f657c8d710934" level="item">
+          <did>
+            <unittitle>Unidentified</unittitle>
+            <unitid>[BL019898]</unitid>
+            <unitdate normal="1935/1935" type="inclusive">1935</unitdate>
+            <container label="Box" type="box">1</container>
+            <dao actuate="onrequest" href="http://quod.lib.umich.edu/b/bhl/x-bl019898/bl019898" show="new" title="Unidentified, 1935">
+              <daodesc>
+                <p>[view item]</p>
+              </daodesc>
+            </dao>
+          </did>
+          <odd>
+            <p>(With thumbs in his work pants pockets, a man stands at the rear end of a car, tents can be seen in the background with a figure seated at a bench)</p>
+          </odd>
+        </c02>
+        <c02 id="aspace_51d70a3352dc28dcd2e56da8b404cee9" level="item">
+          <did>
+            <unittitle>Unidentified</unittitle>
+            <unitid>[BL019887]</unitid>
+            <unitdate normal="1935/1935" type="inclusive">1935</unitdate>
+            <container label="Box" type="box">1</container>
+            <dao actuate="onrequest" href="http://quod.lib.umich.edu/b/bhl/x-bl019887/bl019887" show="new" title="Unidentified, 1935">
+              <daodesc>
+                <p>[view item]</p>
+              </daodesc>
+            </dao>
+          </did>
+          <odd>
+            <p>(A man stands near the doorway of a building, hands clasped behind his back)</p>
+          </odd>
+        </c02>
+        <c02 id="aspace_c393172fad31feeaf6a7e944aba42dce" level="item">
+          <did>
+            <unittitle>Unidentified, Winter</unittitle>
+            <unitid>[BL019884]</unitid>
+            <unitdate normal="1936/1936" type="inclusive">1936</unitdate>
+            <container label="Box" type="box">1</container>
+            <dao actuate="onrequest" href="http://quod.lib.umich.edu/b/bhl/x-bl019884/bl019884" show="new" title="Unidentified, Winter, 1936">
+              <daodesc>
+                <p>[view item]</p>
+              </daodesc>
+            </dao>
+          </did>
+          <odd>
+            <p>(Two men stand at the base of a flag pole near CCC camp buildings, one saluting)</p>
+          </odd>
+        </c02>
+        <c02 id="aspace_eb5c262b0da540f1892a785e6c7dab4c" level="item">
+          <did>
+            <unittitle>Unidentified</unittitle>
+            <unitid>[BL019909]</unitid>
+            <unitdate normal="1936/1936" type="inclusive">1936</unitdate>
+            <container label="Box" type="box">1</container>
+            <dao actuate="onrequest" href="http://quod.lib.umich.edu/b/bhl/x-bl019909/bl019909" show="new" title="Unidentified, 1936">
+              <daodesc>
+                <p>[view item]</p>
+              </daodesc>
+            </dao>
+          </did>
+          <odd>
+            <p>(A man in formal attire stands at attention with a background of cabins)</p>
+          </odd>
+        </c02>
+        <c02 id="aspace_47caab28845aa0e14750322817029175" level="item">
+          <did>
+            <unittitle>Unidentified</unittitle>
+            <unitid>[BL019902]</unitid>
+            <unitdate normal="1936/1936" type="inclusive">1936</unitdate>
+            <container label="Box" type="box">1</container>
+            <dao actuate="onrequest" href="http://quod.lib.umich.edu/b/bhl/x-bl019902/bl019902" show="new" title="Unidentified, 1936">
+              <daodesc>
+                <p>[view item]</p>
+              </daodesc>
+            </dao>
+          </did>
+          <odd>
+            <p>(Distantly a man walks through a camp, several tents line either side of the walkway)</p>
+          </odd>
+        </c02>
+        <c02 id="aspace_268942afdc77561153848adaff75c1d1" level="item">
+          <did>
+            <unittitle>Unidentified</unittitle>
+            <unitid>[BL019900]</unitid>
+            <unitdate normal="1936/1936" type="inclusive">1936</unitdate>
+            <container label="Box" type="box">1</container>
+            <dao actuate="onrequest" href="http://quod.lib.umich.edu/b/bhl/x-bl019900/bl019900" show="new" title="Unidentified, 1936">
+              <daodesc>
+                <p>[view item]</p>
+              </daodesc>
+            </dao>
+          </did>
+          <odd>
+            <p>(A man in a sweater leans against the hood of a car with one hand in this pocket, more cars can be seen parked in the background)</p>
+          </odd>
+        </c02>
+        <c02 id="aspace_8ddd979a956ce5980aa1465f9fcb83f2" level="item">
+          <did>
+            <unittitle>Unidentified</unittitle>
+            <unitid>[BL019904]</unitid>
+            <unitdate normal="1936/1936" type="inclusive">1936</unitdate>
+            <container label="Box" type="box">1</container>
+            <dao actuate="onrequest" href="http://quod.lib.umich.edu/b/bhl/x-bl019904/bl019904" show="new" title="Unidentified, 1936">
+              <daodesc>
+                <p>[view item]</p>
+              </daodesc>
+            </dao>
+          </did>
+          <odd>
+            <p>(A man dressed in casual clothing stands at the bottom of stairs leading to a brick building, his hands clasped in front of him)</p>
+          </odd>
+        </c02>
+        <c02 id="aspace_6eb6e7f9a8f97dd75958cb2dcd00a0b8" level="item">
+          <did>
+            <unittitle>Unidentified (duplicate photograph)</unittitle>
+            <unitid>[BL019911]</unitid>
+            <unitdate normal="1936/1936" type="inclusive">1936</unitdate>
+            <container label="Box" type="box">1</container>
+            <dao actuate="onrequest" href="http://quod.lib.umich.edu/b/bhl/x-bl019911/bl019911" show="new" title="Unidentified (duplicate photograph), 1936">
+              <daodesc>
+                <p>[view item]</p>
+              </daodesc>
+            </dao>
+          </did>
+          <odd>
+            <p>(A man dressed in casual clothing stands at the bottom of stairs leading to a brick building, his hands clasped in front of him)</p>
+          </odd>
+        </c02>
+        <c02 id="aspace_1185fc471d0cf5e9ce25f3bdf9bfd37f" level="item">
+          <did>
+            <unittitle>Unidentified</unittitle>
+            <unitid>[BL019910]</unitid>
+            <unitdate normal="1936/1936" type="inclusive">1936</unitdate>
+            <container label="Box" type="box">1</container>
+            <dao actuate="onrequest" href="http://quod.lib.umich.edu/b/bhl/x-bl019910/bl019910" show="new" title="Unidentified, 1936">
+              <daodesc>
+                <p>[view item]</p>
+              </daodesc>
+            </dao>
+          </did>
+          <odd>
+            <p>(Seated near a medic cross propped against a doorway, a man dressed in casual wear smiles for his photograph)</p>
+          </odd>
+        </c02>
+        <c02 id="aspace_fed24563ceff079bdfcb828ee88b739d" level="item">
+          <did>
+            <unittitle>Unidentified</unittitle>
+            <unitid>[BL019896]</unitid>
+            <unitdate normal="1936/1936" type="inclusive">1936</unitdate>
+            <container label="Box" type="box">1</container>
+            <dao actuate="onrequest" href="http://quod.lib.umich.edu/b/bhl/x-bl019896/bl019896" show="new" title="Unidentified, 1936">
+              <daodesc>
+                <p>[view item]</p>
+              </daodesc>
+            </dao>
+          </did>
+          <odd>
+            <p>(A man stands in work attire in a doorway to a barrack, arms held behind his back)</p>
+          </odd>
+        </c02>
+        <c02 id="aspace_2ccecd946fd50ccfd95b3d5e8b6830da" level="item">
+          <did>
+            <unittitle>Unidentified</unittitle>
+            <unitid>[BL019903]</unitid>
+            <unitdate type="inclusive">undated</unitdate>
+            <container label="Box" type="box">1</container>
+            <dao actuate="onrequest" href="http://quod.lib.umich.edu/b/bhl/x-bl019903/bl019903" show="new" title="Unidentified, undated">
+              <daodesc>
+                <p>[view item]</p>
+              </daodesc>
+            </dao>
+          </did>
+          <odd>
+            <p>(A car is parked near a memorial cannon with a figure draped over it, a flagpole and sign for a casino are positioned nearby)</p>
+          </odd>
+        </c02>
+        <c02 id="aspace_e9e6431850a037b2d59adb71b2b79dfe" level="item">
+          <did>
+            <unittitle>Unidentified</unittitle>
+            <unitid>[BL019905]</unitid>
+            <unitdate type="inclusive">undated</unitdate>
+            <container label="Box" type="box">1</container>
+            <dao actuate="onrequest" href="http://quod.lib.umich.edu/b/bhl/x-bl019905/bl019905" show="new" title="Unidentified, undated">
+              <daodesc>
+                <p>[view item]</p>
+              </daodesc>
+            </dao>
+          </did>
+          <odd>
+            <p>(A man in work clothes poses with a large transport truck)</p>
+          </odd>
+        </c02>
+        <c02 id="aspace_e0498c9af3ad2d4046c9c9a520271525" level="item">
+          <did>
+            <unittitle>Unidentified</unittitle>
+            <unitid>[BL019908]</unitid>
+            <unitdate type="inclusive">undated</unitdate>
+            <container label="Box" type="box">1</container>
+            <dao actuate="onrequest" href="http://quod.lib.umich.edu/b/bhl/x-bl019908/bl019908" show="new" title="Unidentified, undated">
+              <daodesc>
+                <p>[view item]</p>
+              </daodesc>
+            </dao>
+          </did>
+          <odd>
+            <p>(Three men and a dog pose on the back a car, two others are seen in the background near a tent)</p>
+          </odd>
+        </c02>
+      </c01>
+      <c01 id="aspace_1c6ddeb631adc5613da1a14d513f90d1" level="series">
+        <did>
+          <unittitle>Ray Lyons Sr.'s collection of images</unittitle>
+          <unitdate calendar="gregorian" era="ce" normal="1935/1936" type="inclusive">1935-1936</unitdate>
+        </did>
+        <scopecontent>
+          <p>The Ray Lyons Sr. images series contains 30 positive photographs, 48 negative images, and clippings. The majority of the images depict work projects at CCC camps including Camp Bitely, Camp Free Soil, and Camp Wahalla. A small number of images also feature other aspects of the CCC camps including the barracks at Camp Bitely. </p>
+          <p>The majority of the images in this series were not labeled with names, dates or other identifying information. The negative images were numbered 1-48 to make them easier to identify. Some of the negative images may be copies of the positive photographs. </p>
+        </scopecontent>
+        <bioghist>
+          <p>Mr. Ray Lyons Sr., who was white, worked with the African American crews in Michigan in 1935-1938. He passed away in 1998.</p>
+        </bioghist>
+        <c02 id="aspace_2d455a1043e3055a70c8cc12575a2c42" level="file">
+          <did>
+            <unittitle>Photographs</unittitle>
+          </did>
+          <c03 id="aspace_2369475d80dae2851279b00c9e51c945" level="item">
+            <did>
+              <unittitle>Stump Fence - Camp Bitely</unittitle>
+              <unitdate calendar="gregorian" era="ce" type="inclusive">undated</unitdate>
+              <container label="Box" type="box">2</container>
+            </did>
+            <odd>
+              <p>(Stump Fence on Lilly road near Camp Bitely.)</p>
+            </odd>
+          </c03>
+          <c03 id="aspace_bcd64480e1457e77872bcdc8222f31b4" level="item">
+            <did>
+              <unittitle>Room with bunk and chair</unittitle>
+              <unitdate calendar="gregorian" era="ce" normal="1936/1936" type="inclusive">1936</unitdate>
+              <container label="Box" type="box">2</container>
+            </did>
+            <odd>
+              <p>(Interior of [Ray Lyons Sr.'s] room in the barracks from 1936 engulfed in bright sunlight.)</p>
+            </odd>
+          </c03>
+          <c03 id="aspace_97e6fe0425da2faba148a5fe130d01e8" level="item">
+            <did>
+              <unittitle>Mr. Bonner</unittitle>
+              <unitdate calendar="gregorian" era="ce" normal="1936/1936" type="inclusive">1936</unitdate>
+              <container label="Box" type="box">2</container>
+            </did>
+            <odd>
+              <p>(A man in a shirt and tie sits at a desk.)</p>
+            </odd>
+          </c03>
+          <c03 id="aspace_83e8d110caf6d5a6066d2e25b53a633c" level="item">
+            <did>
+              <unittitle>Atlas, alias Stanley</unittitle>
+              <unitdate calendar="gregorian" era="ce" type="inclusive">undated</unitdate>
+              <container label="Box" type="box">2</container>
+            </did>
+            <odd>
+              <p>(A man in a CCC uniform with a water canteen stands between two trees.)</p>
+            </odd>
+          </c03>
+          <c03 id="aspace_388f1718533016db520760e2399da41d" level="item">
+            <did>
+              <unittitle>Stanley - note grazing of deer on cedars to shoulder height</unittitle>
+              <unitdate calendar="gregorian" era="ce" type="inclusive">undated</unitdate>
+              <container label="Box" type="box">2</container>
+            </did>
+            <odd>
+              <p>(A man, "Stanley", poses near trees in the winter time.)</p>
+            </odd>
+          </c03>
+          <c03 id="aspace_18019c41beb4f63a51f05213f73a1840" level="item">
+            <did>
+              <unittitle>Daniels</unittitle>
+              <unitdate calendar="gregorian" era="ce" type="inclusive">undated</unitdate>
+              <container label="Box" type="box">2</container>
+            </did>
+            <odd>
+              <p>(A group of men in CCC uniforms stand in a field with a fence in the background.)</p>
+            </odd>
+          </c03>
+          <c03 id="aspace_2846aa8ed556c47f63023a9f4f408880" level="item">
+            <did>
+              <unittitle>Unidentified</unittitle>
+              <unitdate calendar="gregorian" era="ce" type="inclusive">undated</unitdate>
+              <container label="Box" type="box">2</container>
+            </did>
+            <odd>
+              <p>(Men in suit supervise a group of men in work attire with a larger group of men in work attire gathered in the background.)</p>
+            </odd>
+          </c03>
+          <c03 id="aspace_cfcf3b9b244ccd6332de1a250d0dedbc" level="item">
+            <did>
+              <unittitle>Unidentified</unittitle>
+              <unitdate calendar="gregorian" era="ce" type="inclusive">undated</unitdate>
+              <container label="Box" type="box">2</container>
+            </did>
+            <odd>
+              <p>(A large field with men bent over working in the distance.)</p>
+            </odd>
+          </c03>
+          <c03 id="aspace_3d3179813675e00e7623b217a30160fb" level="item">
+            <did>
+              <unittitle>Unidentified</unittitle>
+              <unitdate calendar="gregorian" era="ce" type="inclusive">undated</unitdate>
+              <container label="Box" type="box">2</container>
+            </did>
+            <odd>
+              <p>(Eleven men hold shovels in a wooded area.)</p>
+            </odd>
+          </c03>
+          <c03 id="aspace_f7bb940e17651e9ddbc61789dcbd2954" level="item">
+            <did>
+              <unittitle>Unidentified</unittitle>
+              <unitdate calendar="gregorian" era="ce" type="inclusive">undated</unitdate>
+              <container label="Box" type="box">2</container>
+            </did>
+            <odd>
+              <p>(Two men in CCC uniforms kneel near a tree while another man stands over them.)</p>
+            </odd>
+          </c03>
+          <c03 id="aspace_d2ee65a90a0444d238bf5af0463ac218" level="item">
+            <did>
+              <unittitle>Unidentified</unittitle>
+              <unitdate calendar="gregorian" era="ce" type="inclusive">undated</unitdate>
+              <container label="Box" type="box">2</container>
+            </did>
+            <odd>
+              <p>(Eight men in CCC uniforms clear brush.)</p>
+            </odd>
+          </c03>
+          <c03 id="aspace_960375b1d201c0deff46632f7efb98c8" level="item">
+            <did>
+              <unittitle>Unidentified</unittitle>
+              <unitdate calendar="gregorian" era="ce" type="inclusive">undated</unitdate>
+              <container label="Box" type="box">2</container>
+            </did>
+            <odd>
+              <p>(A man uses a saw to cut down a tree branch.)</p>
+            </odd>
+          </c03>
+          <c03 id="aspace_8027b769ca06f4048bc2c9532f2ce260" level="item">
+            <did>
+              <unittitle>Unidentified</unittitle>
+              <unitdate calendar="gregorian" era="ce" type="inclusive">undated</unitdate>
+              <container label="Box" type="box">2</container>
+            </did>
+            <odd>
+              <p>(Eleven men pose with shovels in a wooded area.)</p>
+            </odd>
+          </c03>
+          <c03 id="aspace_f711dfa755fa87dc0d2cfabd69eb98e7" level="item">
+            <did>
+              <unittitle>Unidentified</unittitle>
+              <unitdate calendar="gregorian" era="ce" type="inclusive">undated</unitdate>
+              <container label="Box" type="box">2</container>
+            </did>
+            <odd>
+              <p>(Two men stand in front of a truck.)</p>
+            </odd>
+          </c03>
+          <c03 id="aspace_acbfc4c64a56f6604b2532d8d961a5dc" level="item">
+            <did>
+              <unittitle>Unidentified</unittitle>
+              <unitdate calendar="gregorian" era="ce" type="inclusive">undated</unitdate>
+              <container label="Box" type="box">2</container>
+            </did>
+            <odd>
+              <p>(A group of men in CCC uniforms pose with axes.)</p>
+            </odd>
+          </c03>
+          <c03 id="aspace_d3233462d1b481d704363444b68940f9" level="item">
+            <did>
+              <unittitle>Unidentified</unittitle>
+              <unitdate calendar="gregorian" era="ce" type="inclusive">undated</unitdate>
+              <container label="Box" type="box">2</container>
+            </did>
+            <odd>
+              <p>(Thirteen men in work uniforms pose in front of a log with a building in the background.)</p>
+            </odd>
+          </c03>
+          <c03 id="aspace_105d8ed0e4cddb6627467fc25273108d" level="item">
+            <did>
+              <unittitle>Unidentified</unittitle>
+              <unitdate calendar="gregorian" era="ce" type="inclusive">undated</unitdate>
+              <container label="Box" type="box">2</container>
+            </did>
+            <odd>
+              <p>(Four men stand in front of a tent with two more men look out from inside the tent.)</p>
+            </odd>
+          </c03>
+          <c03 id="aspace_b68b8ba5cc5610c9b39c6c06a32c8531" level="item">
+            <did>
+              <unittitle>Unidentified</unittitle>
+              <unitdate calendar="gregorian" era="ce" type="inclusive">undated</unitdate>
+              <container label="Box" type="box">2</container>
+            </did>
+            <odd>
+              <p>(A man wearing a suit and hat poses in front of a building.)</p>
+            </odd>
+          </c03>
+          <c03 id="aspace_d56883c229a5f8f3025ead084b51f410" level="item">
+            <did>
+              <unittitle>Unidentified</unittitle>
+              <unitdate calendar="gregorian" era="ce" type="inclusive">undated</unitdate>
+              <container label="Box" type="box">2</container>
+            </did>
+            <odd>
+              <p>(Men in CCC work uniforms stand near a long a fence with a truck in the background.)</p>
+            </odd>
+          </c03>
+          <c03 id="aspace_84a2671d5a6be8a307054ef7c36eb691" level="item">
+            <did>
+              <unittitle>Unidentified</unittitle>
+              <unitdate calendar="gregorian" era="ce" type="inclusive">undated</unitdate>
+              <container label="Box" type="box">2</container>
+            </did>
+            <odd>
+              <p>(Twelve men in CCC uniforms pose in front of a log.)</p>
+            </odd>
+          </c03>
+          <c03 id="aspace_2e097d7a037a142ecc8c5c677d229726" level="item">
+            <did>
+              <unittitle>Unidentified</unittitle>
+              <unitdate calendar="gregorian" era="ce" type="inclusive">undated</unitdate>
+              <container label="Box" type="box">2</container>
+            </did>
+            <odd>
+              <p>(Men in CCC uniform work in the woods.)</p>
+            </odd>
+          </c03>
+          <c03 id="aspace_7fb4d244af3b98171aca1e4c58b5145a" level="item">
+            <did>
+              <unittitle>Unidentified</unittitle>
+              <unitdate calendar="gregorian" era="ce" type="inclusive">undated</unitdate>
+              <container label="Box" type="box">2</container>
+            </did>
+            <odd>
+              <p>(Men pose next to trucks.)</p>
+            </odd>
+          </c03>
+          <c03 id="aspace_fd4624990181912e69564faf200189fa" level="item">
+            <did>
+              <unittitle>Unidentified</unittitle>
+              <unitdate calendar="gregorian" era="ce" type="inclusive">undated</unitdate>
+              <container label="Box" type="box">2</container>
+            </did>
+            <odd>
+              <p>(Man wearing CCC uniforms holding tools stand in the woods with other workers in the background.)</p>
+            </odd>
+          </c03>
+          <c03 id="aspace_9f5226275a471ab119cb916b25e0f071" level="item">
+            <did>
+              <unittitle>Unidentified</unittitle>
+              <unitdate calendar="gregorian" era="ce" type="inclusive">undated</unitdate>
+              <container label="Box" type="box">2</container>
+            </did>
+            <odd>
+              <p>(Large group photo of men wearing CCC uniforms.)</p>
+            </odd>
+          </c03>
+          <c03 id="aspace_6084188c1e69652b5d69e90e98edab43" level="item">
+            <did>
+              <unittitle>Unidentified</unittitle>
+              <unitdate calendar="gregorian" era="ce" type="inclusive">undated</unitdate>
+              <container label="Box" type="box">2</container>
+            </did>
+            <odd>
+              <p>(Men stand in a field holding tools.)</p>
+            </odd>
+          </c03>
+          <c03 id="aspace_4c3c7af2798d588063b9be9b68a6f0e0" level="item">
+            <did>
+              <unittitle>Unidentified</unittitle>
+              <unitdate calendar="gregorian" era="ce" type="inclusive">undated</unitdate>
+              <container label="Box" type="box">2</container>
+            </did>
+            <odd>
+              <p>(Image of camp buildings in winter.)</p>
+            </odd>
+          </c03>
+          <c03 id="aspace_43f7c9c3e136a8573d905f94d1ea1e8e" level="item">
+            <did>
+              <unittitle>Unidentified</unittitle>
+              <unitdate calendar="gregorian" era="ce" type="inclusive">undated</unitdate>
+              <container label="Box" type="box">2</container>
+            </did>
+            <odd>
+              <p>(Seven men in CCC uniforms pose with a cut tree trunk.)</p>
+            </odd>
+          </c03>
+          <c03 id="aspace_62c6617e3961f0d87cb0c0d13bc4f981" level="item">
+            <did>
+              <unittitle>Unidentified</unittitle>
+              <unitdate calendar="gregorian" era="ce" type="inclusive">undated</unitdate>
+              <container label="Box" type="box">2</container>
+            </did>
+            <odd>
+              <p>(Two men work with logs in a shed.)</p>
+            </odd>
+          </c03>
+          <c03 id="aspace_1cda3bb07cc1a2bef7c20bbf52c5c655" level="item">
+            <did>
+              <unittitle>Unidentified</unittitle>
+              <unitdate calendar="gregorian" era="ce" type="inclusive">undated</unitdate>
+              <container label="Box" type="box">2</container>
+            </did>
+            <odd>
+              <p>(Three men pose with axes near cut trees.)</p>
+            </odd>
+          </c03>
+          <c03 id="aspace_9fc4950501f37d63a876b0d7c8638343" level="item">
+            <did>
+              <unittitle>Unidentified</unittitle>
+              <unitdate calendar="gregorian" era="ce" type="inclusive">undated</unitdate>
+              <container label="Box" type="box">2</container>
+            </did>
+            <odd>
+              <p>(A man rides farm equipment in a field.)</p>
+            </odd>
+          </c03>
+          <c03 id="aspace_a9be93309d95b486f0e4ac2f03243b43" level="item">
+            <did>
+              <unittitle>Unidentified</unittitle>
+              <unitdate calendar="gregorian" era="ce" type="inclusive">undated</unitdate>
+              <container label="Box" type="box">2</container>
+            </did>
+            <odd>
+              <p>(A truck drives along a series of tree stumps.)</p>
+            </odd>
+          </c03>
+        </c02>
+        <c02 id="aspace_20cdf95e30aa5844fb2719fb264bc490" level="file">
+          <did>
+            <unittitle>Negative Photographs</unittitle>
+          </did>
+          <c03 id="aspace_5255c41f1c4d2c3da3e9262207d60287" level="item">
+            <did>
+              <unittitle>#1: Fire Lookout Tower</unittitle>
+              <unitdate calendar="gregorian" era="ce" type="inclusive">undated</unitdate>
+              <container label="Box" type="box">2</container>
+            </did>
+            <odd>
+              <p>(Unidentified individual in a fire lookout tower.)</p>
+            </odd>
+          </c03>
+          <c03 id="aspace_50bb53d021c79dec4e64fc55e9d252ef" level="item">
+            <did>
+              <unittitle>#2: Sign for the National Forest</unittitle>
+              <unitdate calendar="gregorian" era="ce" type="inclusive">undated</unitdate>
+              <container label="Box" type="box">2</container>
+            </did>
+            <odd>
+              <p>(Only shot showing a sign for the National Forest taken by Ray Lyons.)</p>
+            </odd>
+          </c03>
+          <c03 id="aspace_fa6f413d36afc87ab870d8d693aa1c50" level="item">
+            <did>
+              <unittitle>#3: Barracks - Camp Bitely</unittitle>
+              <unitdate calendar="gregorian" era="ce" normal="1936/1936" type="inclusive">1936</unitdate>
+              <container label="Box" type="box">2</container>
+            </did>
+            <odd>
+              <p>(Interior of Ray Lyons quarters in the Camp Biteley barracks.)</p>
+            </odd>
+          </c03>
+          <c03 id="aspace_3fd6030e29cfff77a9e8f15b2dd63cea" level="item">
+            <did>
+              <unittitle>#4: Ray Lyons Sr.</unittitle>
+              <unitdate calendar="gregorian" era="ce" type="inclusive">undated</unitdate>
+              <container label="Box" type="box">2</container>
+            </did>
+            <odd>
+              <p>(Lyons in his CCC uniform standing in front of trees.)</p>
+            </odd>
+          </c03>
+          <c03 id="aspace_704ead3721039a5ee21b8157af1cb9db" level="item">
+            <did>
+              <unittitle>#5: Ray Lyons Sr.</unittitle>
+              <unitdate calendar="gregorian" era="ce" type="inclusive">undated</unitdate>
+              <container label="Box" type="box">2</container>
+            </did>
+            <odd>
+              <p>(Lyons standing in front of a building.)</p>
+            </odd>
+          </c03>
+          <c03 id="aspace_e95c61a6577f26a8238d43598a329346" level="item">
+            <did>
+              <unittitle>#6: Fire Lookout Tower</unittitle>
+              <unitdate calendar="gregorian" era="ce" type="inclusive">undated</unitdate>
+              <container label="Box" type="box">2</container>
+            </did>
+            <odd>
+              <p>(Fire Lookout Tower under construction with man and truck underneath.)</p>
+            </odd>
+          </c03>
+          <c03 id="aspace_8ce2484fd7723216a84daaf88f253c1f" level="item">
+            <did>
+              <unittitle>#7: Fire Lookout Tower</unittitle>
+              <unitdate calendar="gregorian" era="ce" type="inclusive">undated</unitdate>
+              <container label="Box" type="box">2</container>
+            </did>
+            <odd>
+              <p>(Fire Lookout Tower under construction with men standing in the half completed tower.)</p>
+            </odd>
+          </c03>
+          <c03 id="aspace_84fcd2c98c59f17eaaaa64b58722b1be" level="item">
+            <did>
+              <unittitle>#8: Fire Lookout Tower</unittitle>
+              <unitdate calendar="gregorian" era="ce" type="inclusive">undated</unitdate>
+              <container label="Box" type="box">2</container>
+            </did>
+            <odd>
+              <p>(Mostly completed Fire Lookout Tower.)</p>
+            </odd>
+          </c03>
+          <c03 id="aspace_ef7de54cf51d9aa402dab38cf452efc1" level="item">
+            <did>
+              <unittitle>#9: Fire Lookout Tower</unittitle>
+              <unitdate calendar="gregorian" era="ce" type="inclusive">undated</unitdate>
+              <container label="Box" type="box">2</container>
+            </did>
+            <odd>
+              <p>(Completed Fire Lookout Tower.)</p>
+            </odd>
+          </c03>
+          <c03 id="aspace_adb85e72c25aa18a4bee5dbbd448b5a5" level="file">
+            <did>
+              <unittitle>Camp Bitely</unittitle>
+            </did>
+            <c04 id="aspace_29ca53477658234fa2a277de191dcfad" level="item">
+              <did>
+                <unittitle>#10: Stump Fence</unittitle>
+                <unitdate calendar="gregorian" era="ce" normal="1936/1936" type="inclusive">1936</unitdate>
+                <container label="Box" type="box">2</container>
+              </did>
+              <odd>
+                <p>(Stump Fence at Camp Bitely from 1936.)</p>
+              </odd>
+            </c04>
+            <c04 id="aspace_e0a8548a9f6b58734f11dd13af29cf7a" level="item">
+              <did>
+                <unittitle>#11: Unidentified</unittitle>
+                <unitdate calendar="gregorian" era="ce" normal="1935/1935" type="inclusive">1935</unitdate>
+                <container label="Box" type="box">2</container>
+              </did>
+              <odd>
+                <p>(A man in a suit stands in the middle of a field.)</p>
+              </odd>
+            </c04>
+            <c04 id="aspace_91f9b73c522dac14b8a755640007ff91" level="item">
+              <did>
+                <unittitle>#12: Unidentified</unittitle>
+                <unitdate calendar="gregorian" era="ce" normal="1935/1935" type="inclusive">1935</unitdate>
+                <container label="Box" type="box">2</container>
+              </did>
+              <odd>
+                <p>(Two men in a field with one of the men sitting on a tractor.)</p>
+              </odd>
+            </c04>
+          </c03>
+          <c03 id="aspace_bc45aeea20512c56501afc9882b2b531" level="file">
+            <did>
+              <unittitle>Camp Free Soil</unittitle>
+            </did>
+            <c04 id="aspace_c39a8b9aedd91486163600660b7ab993" level="item">
+              <did>
+                <unittitle>#13: Unidentified</unittitle>
+                <unitdate calendar="gregorian" era="ce" type="inclusive">undated</unitdate>
+                <container label="Box" type="box">2</container>
+              </did>
+              <odd>
+                <p>(A man uses a saw to cut a tree branch.)</p>
+              </odd>
+            </c04>
+            <c04 id="aspace_920273b57cffce59a81b1c84c75dd83a" level="item">
+              <did>
+                <unittitle>#14: Unidentified</unittitle>
+                <unitdate calendar="gregorian" era="ce" type="inclusive">undated</unitdate>
+                <container label="Box" type="box">2</container>
+              </did>
+              <odd>
+                <p>(A group of men pose for a picture in an open air building.)</p>
+              </odd>
+            </c04>
+            <c04 id="aspace_58a1d20f5163b61febbf2ede4a1b3bdf" level="item">
+              <did>
+                <unittitle>#15: Unidentified</unittitle>
+                <unitdate calendar="gregorian" era="ce" type="inclusive">undated</unitdate>
+                <container label="Box" type="box">2</container>
+              </did>
+              <odd>
+                <p>(Six men work with tools in a field.)</p>
+              </odd>
+            </c04>
+            <c04 id="aspace_c2713dba8e37f7f5cf3763c4c56d5992" level="item">
+              <did>
+                <unittitle>#16: Unidentified</unittitle>
+                <unitdate calendar="gregorian" era="ce" type="inclusive">undated</unitdate>
+                <container label="Box" type="box">2</container>
+              </did>
+              <odd>
+                <p>(Two men stand with a truck that is unloading dirt.)</p>
+              </odd>
+            </c04>
+            <c04 id="aspace_d62824a000f77da96fbe413e85e3c44d" level="item">
+              <did>
+                <unittitle>#17: Unidentified</unittitle>
+                <unitdate calendar="gregorian" era="ce" type="inclusive">undated</unitdate>
+                <container label="Box" type="box">2</container>
+              </did>
+              <odd>
+                <p>(A truck drives along a row of tree stumps.)</p>
+              </odd>
+            </c04>
+            <c04 id="aspace_64880a6b0dfe01559d3540345f38ddee" level="item">
+              <did>
+                <unittitle>#18: Unidentified</unittitle>
+                <unitdate calendar="gregorian" era="ce" type="inclusive">undated</unitdate>
+                <container label="Box" type="box">2</container>
+              </did>
+              <odd>
+                <p>(A truck sits in a field.)</p>
+              </odd>
+            </c04>
+          </c03>
+          <c03 id="aspace_a1c60556e5b4d20cf9f62baf5092199c" level="file">
+            <did>
+              <unittitle>Reforestation</unittitle>
+            </did>
+            <c04 id="aspace_80925ca6aeca8b0cd3f41e0b74144bce" level="item">
+              <did>
+                <unittitle>#19: Unidentified</unittitle>
+                <unitdate calendar="gregorian" era="ce" type="inclusive">undated</unitdate>
+                <container label="Box" type="box">2</container>
+              </did>
+              <odd>
+                <p>(Thirteen men in CCC uniforms pose outside for a group picture.)</p>
+              </odd>
+            </c04>
+            <c04 id="aspace_379ac51ddbf943e7b5c5b5a5972e391e" level="item">
+              <did>
+                <unittitle>#20: Unidentified</unittitle>
+                <unitdate calendar="gregorian" era="ce" type="inclusive">undated</unitdate>
+                <container label="Box" type="box">2</container>
+              </did>
+              <odd>
+                <p>(Image of a wooded area.)</p>
+              </odd>
+            </c04>
+            <c04 id="aspace_2b6e2c91c8bf7054cf7e261c10240893" level="item">
+              <did>
+                <unittitle>#21: Unidentified</unittitle>
+                <unitdate calendar="gregorian" era="ce" type="inclusive">undated</unitdate>
+                <container label="Box" type="box">2</container>
+              </did>
+              <odd>
+                <p>(Image of men standing in the woods.)</p>
+              </odd>
+            </c04>
+            <c04 id="aspace_c637f0b46995d9b472c3bf7d2f8c396a" level="item">
+              <did>
+                <unittitle>#22: Unidentified</unittitle>
+                <unitdate calendar="gregorian" era="ce" type="inclusive">undated</unitdate>
+                <container label="Box" type="box">2</container>
+              </did>
+              <odd>
+                <p>(Men in CCC uniforms work in a field.)</p>
+              </odd>
+            </c04>
+            <c04 id="aspace_dca511759de392aaf932a09d6caf5578" level="item">
+              <did>
+                <unittitle>#23: Unidentified</unittitle>
+                <unitdate calendar="gregorian" era="ce" type="inclusive">undated</unitdate>
+                <container label="Box" type="box">2</container>
+              </did>
+              <odd>
+                <p>(Twelve men in CCC uniform pose for a picture in front of a log.)</p>
+              </odd>
+            </c04>
+            <c04 id="aspace_fe08505a1f62bec86302e3ba0cdaa8c8" level="item">
+              <did>
+                <unittitle>#24: Unidentified</unittitle>
+                <unitdate calendar="gregorian" era="ce" type="inclusive">undated</unitdate>
+                <container label="Box" type="box">2</container>
+              </did>
+              <odd>
+                <p>(A group of men in CCC uniform work in the woods.)</p>
+              </odd>
+            </c04>
+            <c04 id="aspace_579d69526d305a698e61b361112e3226" level="item">
+              <did>
+                <unittitle>#25: Unidentified</unittitle>
+                <unitdate calendar="gregorian" era="ce" type="inclusive">undated</unitdate>
+                <container label="Box" type="box">2</container>
+              </did>
+              <odd>
+                <p>(A group of men holding shovels work in the woods.)</p>
+              </odd>
+            </c04>
+            <c04 id="aspace_b196751f79c8a1dad4b9142e77ff01cb" level="item">
+              <did>
+                <unittitle>#26: Unidentified</unittitle>
+                <unitdate calendar="gregorian" era="ce" type="inclusive">undated</unitdate>
+                <container label="Box" type="box">2</container>
+              </did>
+              <odd>
+                <p>(A different angle of men in CCC uniforms working in the woods.)</p>
+              </odd>
+            </c04>
+            <c04 id="aspace_f8c1d9fae36a692fb779d085291676c0" level="item">
+              <did>
+                <unittitle>#27: Unidentified</unittitle>
+                <unitdate calendar="gregorian" era="ce" type="inclusive">undated</unitdate>
+                <container label="Box" type="box">2</container>
+              </did>
+              <odd>
+                <p>(A group of men in CCC uniform work in the woods.)</p>
+              </odd>
+            </c04>
+            <c04 id="aspace_a19b013854fb1bb40c2bccce9222bc19" level="item">
+              <did>
+                <unittitle>#28: Unidentified</unittitle>
+                <unitdate calendar="gregorian" era="ce" type="inclusive">undated</unitdate>
+                <container label="Box" type="box">2</container>
+              </did>
+              <odd>
+                <p>(A group of men pose near a tent.)</p>
+              </odd>
+            </c04>
+          </c03>
+          <c03 id="aspace_09c784717b5ed795f769bc057a8ec52d" level="file">
+            <did>
+              <unittitle>Camp Walhalla, Manistee</unittitle>
+            </did>
+            <c04 id="aspace_a429d7335d0dab686b55086210f6d4af" level="item">
+              <did>
+                <unittitle>#29: Unidentified</unittitle>
+                <unitdate calendar="gregorian" era="ce" type="inclusive">undated</unitdate>
+                <container label="Box" type="box">2</container>
+              </did>
+              <odd>
+                <p>(A large group of men work in a field.)</p>
+              </odd>
+            </c04>
+            <c04 id="aspace_07972aacf6177cf15a5d3d4404b1f336" level="item">
+              <did>
+                <unittitle>#30: Unidentified</unittitle>
+                <unitdate calendar="gregorian" era="ce" type="inclusive">undated</unitdate>
+                <container label="Box" type="box">2</container>
+              </did>
+              <odd>
+                <p>(A large group photo of men in CCC uniforms.)</p>
+              </odd>
+            </c04>
+            <c04 id="aspace_9a5160d098a08a82edc44b01c5440389" level="item">
+              <did>
+                <unittitle>#31: Unidentified</unittitle>
+                <unitdate calendar="gregorian" era="ce" type="inclusive">undated</unitdate>
+                <container label="Box" type="box">2</container>
+              </did>
+              <odd>
+                <p>(Four men stand near a tree trunk, two of them holding a saw.)</p>
+              </odd>
+            </c04>
+            <c04 id="aspace_838eac44ba0097dc3cfe682708a435dc" level="item">
+              <did>
+                <unittitle>#32: Unidentified</unittitle>
+                <unitdate calendar="gregorian" era="ce" type="inclusive">undated</unitdate>
+                <container label="Box" type="box">2</container>
+              </did>
+              <odd>
+                <p>(Negative copy of positive photograph "Atlas, alias Stantley".)</p>
+              </odd>
+            </c04>
+            <c04 id="aspace_eed2ae5943d7f639df62695ecc01283d" level="item">
+              <did>
+                <unittitle>#33: Unidentified</unittitle>
+                <unitdate calendar="gregorian" era="ce" type="inclusive">undated</unitdate>
+                <container label="Box" type="box">2</container>
+              </did>
+              <odd>
+                <p>(A CCC field with trees and a pole in the center.)</p>
+              </odd>
+            </c04>
+            <c04 id="aspace_730d59da8909d66e00fc4fddc3578458" level="item">
+              <did>
+                <unittitle>#34: Unidentified</unittitle>
+                <unitdate calendar="gregorian" era="ce" type="inclusive">undated</unitdate>
+                <container label="Box" type="box">2</container>
+              </did>
+              <odd>
+                <p>(Three men in CCC uniforms pose with axes.)</p>
+              </odd>
+            </c04>
+            <c04 id="aspace_bc008647f5267aa249c97c4e4e7aedce" level="item">
+              <did>
+                <unittitle>#35: Unidentified</unittitle>
+                <unitdate calendar="gregorian" era="ce" type="inclusive">undated</unitdate>
+                <container label="Box" type="box">2</container>
+              </did>
+              <odd>
+                <p>(Two men work with logs while standing in a shed.)</p>
+              </odd>
+            </c04>
+            <c04 id="aspace_7f6670b1f2bfa88126e7122532477160" level="item">
+              <did>
+                <unittitle>#36: Unidentified</unittitle>
+                <unitdate calendar="gregorian" era="ce" type="inclusive">undated</unitdate>
+                <container label="Box" type="box">2</container>
+              </did>
+              <odd>
+                <p>(Three men pose in front of tree trunk.)</p>
+              </odd>
+            </c04>
+            <c04 id="aspace_bae884355565756d75d9ef2ef1ae38a6" level="item">
+              <did>
+                <unittitle>#37: Unidentified</unittitle>
+                <unitdate calendar="gregorian" era="ce" type="inclusive">undated</unitdate>
+                <container label="Box" type="box">2</container>
+              </did>
+              <odd>
+                <p>(A large group of men in CCC uniforms pose with axes in front of a tree trunk.)</p>
+              </odd>
+            </c04>
+            <c04 id="aspace_46db09c3b2f958e281f5d577bd30fb75" level="file">
+              <did>
+                <unittitle>Planting Field Meet</unittitle>
+              </did>
+              <c05 id="aspace_a1559950cd3fbee8f533c0d351533e88" level="item">
+                <did>
+                  <unittitle>#38: Unidentified</unittitle>
+                  <unitdate calendar="gregorian" era="ce" type="inclusive">undated</unitdate>
+                  <container label="Box" type="box">2</container>
+                </did>
+                <odd>
+                  <p>(A large field with men working in the distance.)</p>
+                </odd>
+              </c05>
+              <c05 id="aspace_fbb539f9ce9ec669d5da53f1fa7345e1" level="item">
+                <did>
+                  <unittitle>#39: Unidentified</unittitle>
+                  <unitdate calendar="gregorian" era="ce" type="inclusive">undated</unitdate>
+                  <container label="Box" type="box">2</container>
+                </did>
+                <odd>
+                  <p>(Men work in a field against a fence. A truck is in the background.)</p>
+                </odd>
+              </c05>
+              <c05 id="aspace_badfdd36fe218a851f78ab4956d0223d" level="item">
+                <did>
+                  <unittitle>#40: Unidentified</unittitle>
+                  <unitdate calendar="gregorian" era="ce" type="inclusive">undated</unitdate>
+                  <container label="Box" type="box">2</container>
+                </did>
+                <odd>
+                  <p>(Additonal images of men planting in a field.)</p>
+                </odd>
+              </c05>
+              <c05 id="aspace_072cab91fb7d8653e8c6c7f3458ce6e4" level="item">
+                <did>
+                  <unittitle>#41: Unidentified</unittitle>
+                  <unitdate calendar="gregorian" era="ce" type="inclusive">undated</unitdate>
+                  <container label="Box" type="box">2</container>
+                </did>
+                <odd>
+                  <p>(Another view of planting.)</p>
+                </odd>
+              </c05>
+              <c05 id="aspace_0702da2e1c18fc42e6e30d9f6e527ed3" level="item">
+                <did>
+                  <unittitle>#42: Unidentified</unittitle>
+                  <unitdate calendar="gregorian" era="ce" type="inclusive">undated</unitdate>
+                  <container label="Box" type="box">2</container>
+                </did>
+                <odd>
+                  <p>(A group of men stand in a field holding shovels and other tools.)</p>
+                </odd>
+              </c05>
+              <c05 id="aspace_7253dfd75aabf25002076125188b19e2" level="item">
+                <did>
+                  <unittitle>#43: Unidentified</unittitle>
+                  <unitdate calendar="gregorian" era="ce" type="inclusive">undated</unitdate>
+                  <container label="Box" type="box">2</container>
+                </did>
+                <odd>
+                  <p>(Men in uniform work in a field as men in suits oversee them.)</p>
+                </odd>
+              </c05>
+              <c05 id="aspace_7d9616c817f21141df19bdba1c6edc0f" level="item">
+                <did>
+                  <unittitle>#44: Unidentified</unittitle>
+                  <unitdate calendar="gregorian" era="ce" type="inclusive">undated</unitdate>
+                  <container label="Box" type="box">2</container>
+                </did>
+                <odd>
+                  <p>(CCC workers pose with shovels and buckets.)</p>
+                </odd>
+              </c05>
+              <c05 id="aspace_048d001c2f966cda7de6763b63412c57" level="item">
+                <did>
+                  <unittitle>#45: Unidentified</unittitle>
+                  <unitdate calendar="gregorian" era="ce" type="inclusive">undated</unitdate>
+                  <container label="Box" type="box">2</container>
+                </did>
+                <odd>
+                  <p>(Additional image of CCC workers in a field.)</p>
+                </odd>
+              </c05>
+              <c05 id="aspace_d60886a4ff0cfddaf2f08f6c73399fe3" level="item">
+                <did>
+                  <unittitle>#46: Unidentified</unittitle>
+                  <unitdate calendar="gregorian" era="ce" type="inclusive">undated</unitdate>
+                  <container label="Box" type="box">2</container>
+                </did>
+                <odd>
+                  <p>(CCC workers pose for a photo with a cut log.)</p>
+                </odd>
+              </c05>
+              <c05 id="aspace_31b76cddcb49b7bce236e17e5719cc3f" level="item">
+                <did>
+                  <unittitle>#47: Unidentified</unittitle>
+                  <unitdate calendar="gregorian" era="ce" type="inclusive">undated</unitdate>
+                  <container label="Box" type="box">2</container>
+                </did>
+                <odd>
+                  <p>(A large group photo of CCC workers.)</p>
+                </odd>
+              </c05>
+              <c05 id="aspace_904aa4ebefdae705dd802cd7349f384c" level="item">
+                <did>
+                  <unittitle>#48: Unidentified</unittitle>
+                  <unitdate calendar="gregorian" era="ce" type="inclusive">undated</unitdate>
+                  <container label="Box" type="box">2</container>
+                </did>
+                <odd>
+                  <p>(A large group of men work with shovels in a field.)</p>
+                </odd>
+              </c05>
+            </c04>
+          </c03>
+        </c02>
+        <c02 id="aspace_d64a04cbd0ffd9bdc42292f2365a8dcc" level="file">
+          <did>
+            <unittitle>Clippings</unittitle>
+            <container label="Box" type="box">2</container>
+          </did>
+        </c02>
+      </c01>
+    </dsc>
+    <descgrp type="add">
+      <relatedmaterial>
+        <p>The National Archives and Records Administration (NARA) holds the Records of the Civilian Conservation Corps, Record Group 35.</p>
+      </relatedmaterial>
+    </descgrp>
+  </archdesc>
+</ead>
