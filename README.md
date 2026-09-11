@@ -24,6 +24,8 @@ cp -r ./sample-ead/scrc ./data/ead/
 # Inside the container
 docker compose exec app bash
 rake arclight:ingest_everything
+# Or ingest a single file
+rake arclight:ingest[repo_id,file_name]
 
 ```
 
@@ -60,6 +62,10 @@ rsync -av --progress sample-ead/ data/ead/
 SOLR_URL=http://localhost:8983/solr/blacklight-collection \
   FINDING_AID_DATA=./data bin/rails \
   arclight:ingest_everything
+# Or ingest a single file
+SOLR_URL=http://localhost:8983/solr/blacklight-collection \
+  FINDING_AID_DATA=./data bin/rails \
+  arclight:ingest[repo_id,file_name] # Escape the brackets if using zsh
 ```
 
 ##### Browser Resque Web
