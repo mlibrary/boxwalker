@@ -27,8 +27,8 @@ namespace :arclight do
     puts "All collections queued for Ingest."
   end
 
-  desc "Ingest a single finding aid in the data ead directory via background jobs"
-  task :ingest, [ :repo_id, :file_name ] => :environment do |t, args|
+  desc "Ingest a single finding aid file in the data ead directory via background jobs"
+  task :ingest_file, [ :repo_id, :file_name ] => :environment do |t, args|
     data_path = ENV.fetch("FINDING_AID_DATA")
 
     repo_id = args[:repo_id]
