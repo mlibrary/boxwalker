@@ -3,6 +3,7 @@
 require_relative "../components/um_access_component"
 require_relative "../components/um_constraints_component"
 require_relative "../components/um_document_component"
+require_relative "../components/um_search_bar_component"
 require_relative "../components/um_search_result_component"
 
 # Blacklight controller that handles searches and document requests
@@ -75,7 +76,7 @@ class CatalogController < ApplicationController
     config.index.group_component = Arclight::GroupComponent
     config.index.constraints_component = UmConstraintsComponent
     config.index.document_presenter_class = Arclight::IndexPresenter
-    config.index.search_bar_component = Arclight::SearchBarComponent
+    config.index.search_bar_component = UmSearchBarComponent
     # config.index.thumbnail_field = 'thumbnail_path_ss'
 
     # solr field configuration for document/show views
@@ -209,6 +210,7 @@ class CatalogController < ApplicationController
     # since we aren't specifying it otherwise.
     config.add_search_field "all_fields", label: "All Fields" do |field|
       field.include_in_simple_select = true
+      field.clause_params = { edismax: {} }
     end
 
     config.add_search_field "within_collection" do |field|
@@ -216,12 +218,14 @@ class CatalogController < ApplicationController
       field.solr_parameters = {
         fq: "-level_ssim:Collection"
       }
+      field.include_in_advanced_search = false
     end
 
     # Field-based searches. We have registered handlers in the Solr configuration
     # so we have Blacklight use the `qt` parameter to invoke them
     config.add_search_field "keyword", label: "Keyword" do |field|
-      field.qt = "search" # default
+      field.qt = "search"
+      field.clause_params = { edismax: {} }
     end
     config.add_search_field "name", label: "Name" do |field|
       field.qt = "search"
@@ -229,6 +233,7 @@ class CatalogController < ApplicationController
         qf:  "${qf_name}",
         pf:  "${pf_name}"
       }
+      field.clause_params = { edismax: field.solr_parameters.dup }
     end
     config.add_search_field "place", label: "Place" do |field|
       field.qt = "search"
@@ -236,6 +241,7 @@ class CatalogController < ApplicationController
         qf:  "${qf_place}",
         pf:  "${pf_place}"
       }
+      field.clause_params = { edismax: field.solr_parameters.dup }
     end
     config.add_search_field "subject", label: "Subject" do |field|
       field.qt = "search"
@@ -243,6 +249,7 @@ class CatalogController < ApplicationController
         qf:  "${qf_subject}",
         pf:  "${pf_subject}"
       }
+      field.clause_params = { edismax: field.solr_parameters.dup }
     end
     config.add_search_field "title", label: "Title" do |field|
       field.qt = "search"
@@ -250,6 +257,7 @@ class CatalogController < ApplicationController
         qf:  "${qf_title}",
         pf:  "${pf_title}"
       }
+      field.clause_params = { edismax: field.solr_parameters.dup }
     end
     config.add_search_field "container", label: "Container" do |field|
       field.qt = "search"
@@ -257,6 +265,7 @@ class CatalogController < ApplicationController
         qf:  "${qf_container}",
         pf:  "${pf_container}"
       }
+      field.clause_params = { edismax: field.solr_parameters.dup }
     end
     config.add_search_field "identifier", label: "Identifier" do |field|
       field.qt = "search"
@@ -264,6 +273,7 @@ class CatalogController < ApplicationController
         qf:  "${qf_identifier}",
         pf:  "${pf_identifier}"
       }
+      field.clause_params = { edismax: field.solr_parameters.dup }
     end
 
     # These are the parameters passed through in search_state.params_for_search
@@ -449,5 +459,8 @@ class CatalogController < ApplicationController
 
     # Group header values
     config.add_group_header_field "abstract_or_scope", accessor: true, truncate: true, helper_method: :render_html_tags
+
+    # Advanced search
+    config.advanced_search.enabled = true
   end
 end
