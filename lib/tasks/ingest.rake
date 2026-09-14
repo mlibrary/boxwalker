@@ -6,6 +6,13 @@ require "arclight/repository"
 # Read the repository configuration
 repo_config = YAML.safe_load(File.read("./config/repositories.yml"))
 
+def ensure_file_name(file_name)
+  name = file_name.to_s.strip
+  if name.blank? || name == "." || name == ".." || name.include?("/") || name.include?("\\")
+    raise ArgumentError, "\"#{file_name}\" is not a valid file name."
+  end
+end
+
 namespace :arclight do
   # FIXME: SHAMELESS copy of dul_arclight:reindex_everything for now
   desc "Reingest all finding aids in the data directory via background jobs"
@@ -25,5 +32,27 @@ namespace :arclight do
     end
 
     puts "All collections queued for Ingest."
+  end
+
+  desc "Ingest a single finding aid file in the data ead directory via background jobs"
+  task :ingest_file, [ :repo_id, :file_name ] => :environment do |t, args|
+    data_path = ENV.fetch("FINDING_AID_DATA")
+
+    repo_id = args[:repo_id]
+    file_name = args[:file_name]
+
+    unless repo_config.keys.include?(repo_id)
+      raise ArgumentError.new("\"#{repo_id}\" is not a valid repo id.")
+    end
+
+    ensure_file_name(file_name)
+
+    file_path = File.join(data_path, "ead", repo_id, file_name)
+    unless File.exist?(file_path)
+      raise ArgumentError.new("\"#{file_name}\" is not in the ead directory for repository #{repo_id}.")
+    end
+
+    puts "Queuing #{file_path} for Ingest..."
+    IngestAutomationJob.perform_later("ingest.file", repo_id: repo_id, file_path: file_path)
   end
 end
