@@ -373,7 +373,7 @@ module Package
       if (header_el = doc.css("m-website-header").first) && (new_header = fragment.css("header").first)
         header_el.replace(new_header)
       end
-      doc.css(".al-show-actions-toolbar")&.first.remove
+      doc.css(".al-show-actions-toolbar")&.first&.remove
       doc.css("footer").first&.remove
       doc.css("div.x-printable").remove
       doc.css("body a[href]").each do |link|
@@ -408,7 +408,7 @@ module Package
         frame_doc = Nokogiri::HTML5(response.body)
 
         if (contents_ul = frame_doc.css("ul.documents").first)
-          contents_ul.css("al-toggle-view-children").each do |el|
+          contents_ul.css(".al-toggle-view-children").each do |el|
             el.remove
           end
           contents_ul.css(".collapse").each do |el|
@@ -417,6 +417,11 @@ module Package
           contents_ul.css(".al-online-content-icon").each do |el|
             el.remove
           end
+          contents_ul.css("a").each do |link|
+            href = link["href"]
+            link["href"] = "#" + href.split("/").last
+          end
+
           contents_ul["class"] = "list-unbulleted"
           contents_li << contents_ul
         end
