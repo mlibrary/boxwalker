@@ -5,14 +5,16 @@
         <% if component.collection_has_requestable_components? %>
           <% if component.is_checkbox_requestable? %>
             <div class="checkbox request-checkbox">
-              <label class="btn btn-outline-secondary btn-outline-request squat p-2 mb-0">
+              <label class="btn btn-outline-secondary btn-outline-request contents-action">
                 <input type="checkbox" name="Request" value="<%= component.id %>">
                 <input type="hidden" name="Request" value="<%= component.id %>">
                 <input type="hidden" name="ItemSubTitle_<%= component.id %>" value="<%= component.aeon_item_sub_title_value %>">
                 <input type="hidden" name="ItemVolume_<%= component.id %>" value="<%= component.aeon_item_volume_value %>">
                 <input type="hidden" name="ItemCitation_<%= component.id %>" value="<%= component.aeon_item_citation_value %>">
-                <input type="hidden" name="ItemInfo1" value="<%= component.aeon_item_info_1_value %>">
-                <span class="sr-only">Request "<%= component.aeon_item_sub_title_sr_only %>"</span>
+                <% if component.aeon_item_sub_title_value.present? %>
+                  <span class="request-checkbox-label" aria-hidden="true"><%= component.aeon_item_sub_title_value %></span>
+                <% end %>
+                <span class="visually-hidden">Request "<%= component.aeon_item_sub_title_visually_hidden %>"</span>
               </label>
             </div>
           <% else %>
