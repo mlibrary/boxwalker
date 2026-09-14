@@ -22,20 +22,6 @@
   </ul>
 </nav>
 
-<dl id="ead_author_block">
-  <dt>Finding Aid Author</dt>
-  <dd><%= Array(@collection['ead_author_ssm']).first %></dd>
-</dl>
-
-<%if false%>
-<div class="al-contents-ish">
-  <% @components.each do |component| %>
-    <article id="<%= component.id %>">
-      <h3><%= Array(component['normalized_title_ssm']).first || component.id %></h3>
-    </article>
-  <% end %>
-</div>
-<%end%>
 
   <div class="al-contents-ish child-components">
     <%= render "arclight/fragments/components" %>

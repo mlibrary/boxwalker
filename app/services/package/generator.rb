@@ -105,7 +105,7 @@ module Package
 
     def generate_pdf_html
       build_pdf_html
-      local_html_filename = generate_local_html_filename # "#{collection.document_id}.local.html"
+      local_html_filename = generate_local_html_filename
       File.open(local_html_filename, "w") do |f|
         local_html = doc.serialize
         if RUBY_PLATFORM.match?(/darwin/i)
@@ -153,7 +153,7 @@ module Package
               "docker",
               "compose",
               "run",
-              "-e", "FINDING_AID_DIR=/opt/app-data",
+              "-e", "FINDING_AID_DATA=/opt/app-data",
               "--rm",
               "--no-deps",
               "app"
@@ -218,7 +218,7 @@ module Package
 
     def fetch_doc(id)
       params = {
-        fl: "*", # COMPONENT_FIELDS.join(','),
+        fl: "*",
         q: [ "id:#{id}" ],
         start: 0,
         rows: 1
@@ -329,11 +329,9 @@ module Package
       asset_links.first.add_previous_sibling '<style id="placeholder"></style>'
 
       asset_links.each do |el|
-        # @chunks << el
         el.unlink
       end
 
-      # @chunks << doc.xpath('/html/head/script[starts-with(@src, "/assets")]')
       doc.xpath('/html/head/script[starts-with(@src, "/assets")]').each do |el|
         el.unlink
       end
@@ -355,7 +353,6 @@ module Package
 
       doc.css("html").first["class"] = ""
 
-      ## doc.css("#summary dl").first << fragment.css("dl#ead_author_block dt,dl#ead_author_block dd")
       if (contents_el = doc.css("div#contents > turbo-frame").first)
         contents_el.replace(fragment.css("div.al-contents-ish").first)
       end
@@ -386,7 +383,6 @@ module Package
         end
       end
       doc.css("aside")&.first.unlink
-      # doc.css("#collection-context")&.first.unlink
       # ARC-114 Chinese characters were missing (Hack to include font as fallback font)
       doc.css("body").first << '<div style="font-family: UnifontExMono; visibility: hidden; font-size: 1px;">x</div>'
     end
@@ -455,7 +451,6 @@ module Package
       # cache the assets locally
       doc.xpath("/html/head/link").each do |link|
         next unless link["rel"] == "stylesheet"
-        # next unless link['href'].start_with?('/assets/', 'https://')
         filename = if link["href"].start_with?("/assets/")
           link["href"].split(/[\?#]/).first.gsub("/assets", "")
         else
