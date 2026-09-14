@@ -6,6 +6,13 @@ require "arclight/repository"
 # Read the repository configuration
 repo_config = YAML.safe_load(File.read("./config/repositories.yml"))
 
+def ensure_file_name(file_name)
+  name = file_name.to_s.strip
+  if name.blank? || name == "." || name == ".." || name.include?("/") || name.include?("\\")
+    raise ArgumentError, "\"#{file_name}\" is not a valid file name."
+  end
+end
+
 namespace :arclight do
   # FIXME: SHAMELESS copy of dul_arclight:reindex_everything for now
   desc "Reingest all finding aids in the data directory via background jobs"
@@ -37,6 +44,8 @@ namespace :arclight do
     unless repo_config.keys.include?(repo_id)
       raise ArgumentError.new("\"#{repo_id}\" is not a valid repo id.")
     end
+
+    ensure_file_name(file_name)
 
     file_path = File.join(data_path, "ead", repo_id, file_name)
     unless File.exist?(file_path)
