@@ -55,7 +55,7 @@ module UmArclight
           if line.index('<style id="placeholder"></style>')
             output << helpers.stylesheet_link_tag("bootstrap", media: "all")
             output << helpers.stylesheet_link_tag("application", media: "all")
-            output << helpers.javascript_include_tag("application")
+            output << helpers.javascript_importmap_tags
             output << helpers.csrf_meta_tags
             next
           end
