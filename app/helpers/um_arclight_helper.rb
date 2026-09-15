@@ -3,7 +3,7 @@
 module UmArclightHelper
   # Shorthand to distinguish the homepage among other index presenter driven pages
   def homepage?
-    current_page?(root_path) && !has_search_parameters?
+    current_page?(root_path) && request.query_parameters.empty?
   end
 
   def formatted_last_indexed(timestamp)

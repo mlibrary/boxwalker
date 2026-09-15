@@ -2,9 +2,9 @@
   <meta name="blacklight-search-storage" content="<%= blacklight_config.track_search_session.storage %>">
 <% end %>
 
-<%# Overriding base template so we use our own check for a query, since has_search_parameters always returns true %>
-<%# with our Blacklight config. %>
-<% if has_no_query %>
+<%# Only a request without query parameters displays the homepage.
+    Submitted empty searches display all search results. %>
+<% if homepage? %>
   <%# if there are no input/search related params, display the "home" partial -%>
   <%= render 'home' %>
   <%= render 'shared/sitelinks_search_box' %>
