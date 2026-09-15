@@ -213,6 +213,12 @@ to_field "digital_objects_ssm", extract_xpath("/ead/archdesc/did/dao|/ead/archde
   end
 end
 
+# UM CUSTOMIZATION: count all DAOs from the top-level down
+to_field "total_digital_object_count_isim" do |record, accumulator|
+  accumulator << record.xpath(".//dao").count
+end
+
+
 # This accumulates direct text from a physdesc, ignoring child elements handled elsewhere
 to_field "physdesc_tesim", extract_xpath("/ead/archdesc/did/physdesc", to_text: false) do |_record, accumulator|
   accumulator.map! do |element|

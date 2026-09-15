@@ -1,0 +1,143 @@
+html,
+body {
+  font-family: "Mulish", Calibri, Candara, Arial, sans-serif;
+  font-size: 16px;
+}
+
+#sidebar,
+.skip-link,
+.element-invisible,
+.sr-only,
+.visually-hidden {
+  display: none;
+}
+
+h1 {
+  font-family: "Crimson Text",serif;
+  font-size: 48px;
+}
+
+header {
+  background: #00274C;
+  color: #F7F8F9;
+  position: static;
+  display: block;
+}
+
+header>div.website-header-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 1rem;
+  font-size: 1.5rem;
+}
+
+header>div.website-header-container a {
+  color: white;
+  text-decoration: none;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  line-height: 1.1;
+}
+
+header>div.repository a {
+  color: #06080A;
+  text-decoration: none;
+}
+
+.card {
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  min-width: 0;
+  word-wrap: break-word;
+  background-color: #fff;
+  background-clip: border-box;
+}
+
+.card-horizontal {
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+}
+
+.card-body {
+  padding: 1.25rem;
+}
+
+.card-footer {
+  padding: 1.25rem;
+  background-color: rgba(0, 0, 0, 0.03);
+  border-left: 1px solid rgba(0, 0, 0, 0.125);
+  border-top: unset;
+  line-height: 1.2;
+}
+
+.checkbox.request-checkbox {
+  display: none;
+}
+
+.component-wrapper h3 {
+  display: table !important;
+  width: 100%;
+}
+
+.component-title {
+  display: table !important;
+  width: 100%;
+
+  span.title {
+    display: table-cell;
+    width: 70%;
+  }
+
+  span.box {
+    display: table-cell;
+    text-align: right;
+  }
+} 
+
+.d-flex {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-box-pack: start;
+  -ms-flex-pack: start;
+  justify-content: flex-start;
+}
+
+.flex-grow-1 {
+  flex-grow: 1;
+}
+
+.collection-banner {
+  i.fas {
+    display: none;
+  }
+}
+
+#sidebar {
+  display: none;
+}
+
+.modal {
+  display: none;
+}
