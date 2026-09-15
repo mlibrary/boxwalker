@@ -213,14 +213,9 @@ to_field "digital_objects_ssm", extract_xpath("/ead/archdesc/did/dao|/ead/archde
   end
 end
 
-to_field "has_online_content_ssim", extract_xpath('.//dao[not(starts-with(@role,"electronic-record"))]') do |_record, accumulator|
-  accumulator.replace([ accumulator.any? ])
-end
-
-# UM CUSTOMIZATION: count all DAOs from the top-level down; omit the electronic-record-*
-# ones.
+# UM CUSTOMIZATION: count all DAOs from the top-level down
 to_field "total_digital_object_count_isim" do |record, accumulator|
-  accumulator << record.xpath('.//dao[not(starts-with(@role,"electronic-record"))]').count
+  accumulator << record.xpath(".//dao").count
 end
 
 

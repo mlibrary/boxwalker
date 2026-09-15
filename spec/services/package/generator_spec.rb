@@ -53,8 +53,6 @@ RSpec.describe Package::Generator do
     generator.build_html
     doc = generator.doc
 
-    # expect(doc.xpath('//div[@id="summary"]//dl/dd[contains(., "Finding Aid written by E. A. Document")]').first).to be_truthy
-    # expect(doc.css(".access-preview-snippet #toc").first).to be_truthy
     expect(doc.css('style#utility-styles').first).to be_truthy
 
     # count that the components are in the doc
@@ -91,18 +89,18 @@ def mock_get(url) # rubocop:disable Metrics/MethodLength
         <m-universal-header></m-universal-header>
         <m-website-header name="Finding Aids"></m-website-header>
         <aside>
-        <nav class="al-sidebar-navigation-context sidebar-section" aria-labelledby="collection-nav">
-          <ul class="nav">
-            <li class="nav-item">
-              <a href="/catalog/umich-test-9999#about">About</a>
-            </li>
-            <li class="nav-item">
-              <a href="/catalog/umich-test-9999#restrictions">Restrictions</a>
-            </li>
-            <li class="nav-item">
-              <a href="/catalog/umich-test-9999#contents">Contents</a>
-            </li>
-          </ul>
+          <nav class="al-sidebar-navigation-context sidebar-section" aria-labelledby="collection-nav">
+            <ul class="nav">
+              <li class="nav-item">
+                <a href="/catalog/umich-test-9999#about">About</a>
+              </li>
+              <li class="nav-item">
+                <a href="/catalog/umich-test-9999#restrictions">Restrictions</a>
+              </li>
+              <li class="nav-item">
+                <a href="/catalog/umich-test-9999#contents">Contents</a>
+              </li>
+            </ul>
           </nav>
           <div id="collection-context" class="sidebar-section">
             <h2>
@@ -149,77 +147,77 @@ def mock_get(url) # rubocop:disable Metrics/MethodLength
     <<-HTML
     <html>
       <body>
-          <main
-            id="main-container"
-            class="viewport-container"
-            role="main"
-            aria-label="Main content"
-          >
-            <div class="row">
-                <section class="col-md-12">
-                  <p>umich-test-9999</p>
-                  <turbo-frame id="al-hierarchy-umich-test-9999">
-                      <ul class="documents">
-                        <li
-                            id="umich-test-9999_aspace_9a4ecf9b68de30c050428e9d80ecba76-hierarchy-item"
+        <main
+          id="main-container"
+          class="viewport-container"
+          role="main"
+          aria-label="Main content"
+        >
+          <div class="row">
+              <section class="col-md-12">
+                <p>umich-test-9999</p>
+                <turbo-frame id="al-hierarchy-umich-test-9999">
+                    <ul class="documents">
+                      <li
+                          id="umich-test-9999_aspace_9a4ecf9b68de30c050428e9d80ecba76-hierarchy-item"
+                          data-document-id="umich-test-9999_aspace_9a4ecf9b68de30c050428e9d80ecba76"
+                          itemscope="itemscope"
+                          itemtype="http://schema.org/Thing"
+                          class="blacklight-series document al-collection-context"
+                      >
+                          <div
+                            class="documentHeader"
                             data-document-id="umich-test-9999_aspace_9a4ecf9b68de30c050428e9d80ecba76"
-                            itemscope="itemscope"
-                            itemtype="http://schema.org/Thing"
-                            class="blacklight-series document al-collection-context"
-                        >
-                            <div
-                              class="documentHeader"
-                              data-document-id="umich-test-9999_aspace_9a4ecf9b68de30c050428e9d80ecba76"
+                          >
+                            <a
+                                class="al-toggle-view-children collapsed"
+                                aria-label="View"
+                                data-bs-toggle="collapse"
+                                data-toggle="collapse"
+                                href="#collapsible-hierarchy-umich-test-9999_aspace_9a4ecf9b68de30c050428e9d80ecba76"
                             >
-                              <a
-                                  class="al-toggle-view-children collapsed"
-                                  aria-label="View"
-                                  data-bs-toggle="collapse"
-                                  data-toggle="collapse"
-                                  href="#collapsible-hierarchy-umich-test-9999_aspace_9a4ecf9b68de30c050428e9d80ecba76"
-                              >
-                                  <span
-                                    class="al-toggle-icon"
-                                    aria-hidden="true"
-                                  ></span>
-                              </a>
-                              <div
-                                  class="index_title document-title-heading"
-                                  data-turbo="false"
-                              >
-                                  <a
-                                    data-context-href="/catalog/umich-test-9999_aspace_9a4ecf9b68de30c050428e9d80ecba76/track?document_id=umich-test-9999_aspace_9a4ecf9b68de30c050428e9d80ecba76"
-                                    data-context-method="post"
-                                    data-turbo-prefetch="false"
-                                    href="/catalog/umich-test-9999_aspace_9a4ecf9b68de30c050428e9d80ecba76"
-                                    >Pre-Congressional Career, 1938-1985</a
-                                  >
-                                  <span
-                                    class="badge badge-pill bg-secondary badge-secondary al-number-of-children-badge"
-                                    >9
-                                    <span class="sr-only visually-hidden"
-                                        >components</span
-                                    ></span
-                                  >
-                              </div>
+                                <span
+                                  class="al-toggle-icon"
+                                  aria-hidden="true"
+                                ></span>
+                            </a>
+                            <div
+                                class="index_title document-title-heading"
+                                data-turbo="false"
+                            >
+                                <a
+                                  data-context-href="/catalog/umich-test-9999_aspace_9a4ecf9b68de30c050428e9d80ecba76/track?document_id=umich-test-9999_aspace_9a4ecf9b68de30c050428e9d80ecba76"
+                                  data-context-method="post"
+                                  data-turbo-prefetch="false"
+                                  href="/catalog/umich-test-9999_aspace_9a4ecf9b68de30c050428e9d80ecba76"
+                                  >Pre-Congressional Career, 1938-1985</a
+                                >
+                                <span
+                                  class="badge badge-pill bg-secondary badge-secondary al-number-of-children-badge"
+                                  >9
+                                  <span class="sr-only visually-hidden"
+                                      >components</span
+                                  ></span
+                                >
                             </div>
+                          </div>
 
-                            <div
-                              id="collapsible-hierarchy-umich-test-9999_aspace_9a4ecf9b68de30c050428e9d80ecba76"
-                              class="collapse al-collection-context-collapsible al-hierarchy-level-1"
-                            >
-                              <turbo-frame
-                                  loading="lazy"
-                                  id="al-hierarchy-umich-test-9999_aspace_9a4ecf9b68de30c050428e9d80ecba76-sidebar"
-                                  src="/catalog/umich-test-9999_aspace_9a4ecf9b68de30c050428e9d80ecba76/hierarchy?hierarchy=true&amp;key=-sidebar"
-                              ></turbo-frame>
-                            </div>
-                        </li>
-                      </ul>
-                  </turbo-frame>
-                </section>
-            </div>
-          </main>
+                          <div
+                            id="collapsible-hierarchy-umich-test-9999_aspace_9a4ecf9b68de30c050428e9d80ecba76"
+                            class="collapse al-collection-context-collapsible al-hierarchy-level-1"
+                          >
+                            <turbo-frame
+                                loading="lazy"
+                                id="al-hierarchy-umich-test-9999_aspace_9a4ecf9b68de30c050428e9d80ecba76-sidebar"
+                                src="/catalog/umich-test-9999_aspace_9a4ecf9b68de30c050428e9d80ecba76/hierarchy?hierarchy=true&amp;key=-sidebar"
+                            ></turbo-frame>
+                          </div>
+                      </li>
+                    </ul>
+                </turbo-frame>
+              </section>
+          </div>
+        </main>
       </body>
     </html>
     HTML

@@ -13,7 +13,7 @@
   <% end %>
 <% end %>
 <%# render blockquote contents if there is metadata or digital objects %>
-<% if metadata_list.present? or component.total_digital_object_count > 0 && component.digital_objects.present? %>
+<% if metadata_list.present? || component.total_digital_object_count > 0 && component.digital_objects.present? %>
 <blockquote>
   <% if metadata_list.present? %>
     <dl class="al-metadata">
