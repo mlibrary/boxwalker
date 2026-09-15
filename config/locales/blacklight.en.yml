@@ -1,8 +1,8 @@
 en:
   blacklight:
-    application_name: 'University of Michigan Finding Aids'
+    application_name: "University of Michigan Finding Aids"
     search:
       page_title:
-        title: '%{constraints} - %{application_name}'
-        prefix: 'Results for'
+        title: "%{constraints} - %{application_name}"
+        prefix: "Results for"
         joiner: " / "

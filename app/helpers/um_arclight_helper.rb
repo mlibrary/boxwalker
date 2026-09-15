@@ -66,7 +66,7 @@ module UmArclightHelper
     end
 
     title = []
-    title += [ constraints.join(t('blacklight.search.page_title.joiner')) ] unless constraints.empty?
+    title += [ constraints.join(t("blacklight.search.page_title.joiner")) ] unless constraints.empty?
     unless suffixes.empty?
       title << "-" unless title.empty?
       title << suffixes.join(" - ")
