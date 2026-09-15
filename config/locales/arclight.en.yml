@@ -2,7 +2,7 @@ en:
   arclight:
     views:
       home:
-        title: University of Michigan Finding Aids
+        title: "Home - %{application_name}"
       show:
         has_content: Navigate The Collection
         sections:
@@ -17,7 +17,7 @@ en:
           pdf: Download PDF Finding Aid
           html: Download HTML Finding Aid
       repositories:
-        title: Repositories - University of Michigan Finding Aids
+        title: "Repositories - %{application_name}"
     truncation:
       view_less: show less
       view_more: show more
