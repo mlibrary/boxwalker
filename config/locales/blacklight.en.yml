@@ -6,3 +6,4 @@ en:
         title: "%{constraints} - %{application_name}"
         prefix: "Results for"
         joiner: " / "
+        separator: " - "

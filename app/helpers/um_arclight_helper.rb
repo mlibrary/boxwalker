@@ -21,7 +21,7 @@ module UmArclightHelper
     search_state = if search_state_or_params.is_a? Blacklight::SearchState
       search_state_or_params
     else
-      controller.search_state_class.new(params, blacklight_config, self)
+      controller.search_state_class.new(search_state_or_params, blacklight_config, self)
     end
 
     constraints = []
@@ -68,8 +68,8 @@ module UmArclightHelper
     title = []
     title += [ constraints.join(t("blacklight.search.page_title.joiner")) ] unless constraints.empty?
     unless suffixes.empty?
-      title << "-" unless title.empty?
-      title << suffixes.join(" - ")
+      title << t("blacklight.search.page_title.separator") unless title.empty?
+      title << suffixes.join(t("blacklight.search.page_title.separator"))
     end
     title.unshift prefix if add_prefix
     title.join(" ")
