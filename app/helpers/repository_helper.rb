@@ -12,14 +12,14 @@ module RepositoryHelper
   end
 
   def visitor_info(repository)
-    repository.repo_about&.fetch("visitor_info")
+    repository.repo_about&.fetch("visitor_info", nil)
   end
 
   def how_to_request(repository)
-    repository.repo_about&.fetch("how_to_request")
+    repository.repo_about&.fetch("how_to_request", nil)
   end
 
   def how_to_order(repository)
-    repository.repo_about&.fetch("how_to_order")
+    repository.repo_about&.fetch("how_to_order", nil)
   end
 end
