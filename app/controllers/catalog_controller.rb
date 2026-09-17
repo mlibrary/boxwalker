@@ -14,6 +14,7 @@ class CatalogController < ApplicationController
   include Arclight::Catalog
 
   include UmArclight::Catalog
+  prepend_before_action :default_to_grouped_results, only: :index
 
   configure_blacklight do |config|
     ## Class for sending and receiving requests from a search index
@@ -462,5 +463,11 @@ class CatalogController < ApplicationController
 
     # Advanced search
     config.advanced_search.enabled = true
+  end
+
+  private
+
+  def default_to_grouped_results
+    params[:group] = "true" if params[:group].blank?
   end
 end
