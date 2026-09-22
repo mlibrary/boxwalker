@@ -159,6 +159,20 @@ RSpec.describe "um_arclight/traject/ead2_config.rb" do
     it "maps acqinfo_ssim from descgrp/acqinfo" do
       expect(result["acqinfo_ssim"]).not_to be_empty
     end
+
+    # This fixture nests <relatedmaterial> inside <descgrp type="add">, not directly
+    # under <archdesc>; the SEARCHABLE_NOTES_FIELDS loop must read both locations.
+    it "maps relatedmaterial_html_tesm from descgrp/relatedmaterial" do
+      expect(result["relatedmaterial_html_tesm"].join).to include "Researchers may wish to consult"
+    end
+
+    it "maps relatedmaterial_tesim from descgrp/relatedmaterial" do
+      expect(result["relatedmaterial_tesim"].join).to include "Researchers may wish to consult"
+    end
+
+    it "maps relatedmaterial_heading_ssm from descgrp/relatedmaterial/head" do
+      expect(result["relatedmaterial_heading_ssm"]).to eq [ "Related Material" ]
+    end
   end
 
   describe "counters" do
