@@ -284,11 +284,14 @@ to_field "indexes_html_tesm", extract_xpath("/ead/archdesc/index", to_text: fals
 to_field "indexes_tesim", extract_xpath("/ead/archdesc/index")
 
 SEARCHABLE_NOTES_FIELDS.map do |selector|
-  to_field "#{selector}_html_tesm", extract_xpath("/ead/archdesc/#{selector}/*[local-name()!='head']", to_text: false) do |_record, accumulator|
+  # UM customization: notes may sit directly under archdesc or be nested in a descgrp
+  # (e.g. BHL puts relatedmaterial in descgrp[@type="add"]), so read both locations.
+  notes_xpath = "/ead/archdesc/#{selector}/*[local-name()!='head'] | /ead/archdesc/descgrp/#{selector}/*[local-name()!='head']"
+  to_field "#{selector}_html_tesm", extract_xpath(notes_xpath, to_text: false) do |_record, accumulator|
     accumulator.map!(&:to_html)
   end
-  to_field "#{selector}_heading_ssm", extract_xpath("/ead/archdesc/#{selector}/head")
-  to_field "#{selector}_tesim", extract_xpath("/ead/archdesc/#{selector}/*[local-name()!='head']")
+  to_field "#{selector}_heading_ssm", extract_xpath("/ead/archdesc/#{selector}/head | /ead/archdesc/descgrp/#{selector}/head")
+  to_field "#{selector}_tesim", extract_xpath(notes_xpath)
 end
 
 DESCGRP_FIELDS.map do |selector|
