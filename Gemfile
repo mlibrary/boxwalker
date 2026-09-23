@@ -46,7 +46,7 @@ gem "ruby-vips", "~> 2.0"
 # date range chart
 gem "blacklight_range_limit", ">= 9.2"
 # job worker queue
-gem "resque", "~> 3.0"
+gem "resque", "~> 3.1"
 gem "redis"
 gem "resque-scheduler"
 # NOTE: The Resque dashboard is served by Resque::Server (bundled with the
