@@ -26,7 +26,7 @@
             <date>2010-10-21</date>
             <item> Original encoding from Word 2007 file using Word macros and Xmetal.</item>
          </change>
-      </revisiondesc>
+      <change><date>2025-06-26</date><item>Added oversize item.</item></change></revisiondesc>
    </eadheader>
    <frontmatter>
       <titlepage>
@@ -376,7 +376,7 @@
 <c02 level="item"><did><unittitle><emph render="bold">William Darlington Manuscript, "Historical introduction to Bartram &amp; Marshall", Undated</emph></unittitle><dao href="https://quod.lib.umich.edu/m/marshallfam/marshallfam.0003.048/1" actuate="onrequest"><daodesc><p>[View Digital Surrogate]</p></daodesc></dao></did></c02>
 <c02 level="item"><did><unittitle><emph render="bold">John Milleson Account and Memorandum Book, November 3, 1846 - April 3, 1848</emph></unittitle><dao href="https://quod.lib.umich.edu/m/marshallfam/marshallfam.0004.001/1" actuate="onrequest"><daodesc><p>[View Digital Surrogate]</p></daodesc></dao></did></c02>
 <c02 level="item"><did><unittitle><emph render="bold">Arbustrum Americanum, Uncut Sheets, [1785]</emph></unittitle><dao href="https://quod.lib.umich.edu/m/marshallfam/marshallfam.0004.002/1" actuate="onrequest"><daodesc><p>[View Digital Surrogate]</p></daodesc></dao></did></c02>
-<c02 level="item">
+<c02 level="item"><did><container label="Folder" type="drawer">: Oversize Manuscripts</container><unittitle><emph render="bolddoublequote"><title render="italic">Butomus Umbellatus. Flowering Rush, or Water Gladiole</title> and <title render="italic">Solanum Dulcamara. Woody Nightshade</title></emph> </unittitle></did></c02><c02 level="item">
                <did>
                   <unittitle>Other published works</unittitle>
                   <physdesc>

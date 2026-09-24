@@ -24,7 +24,7 @@
             <date>2007-01-28</date>
             <item> Original encoding from Word 2000 file using Word macros and Xmetal.</item>
          </change>
-      </revisiondesc>
+      <change><date>2025-7-8</date><item>Addition of oversize materials</item></change></revisiondesc>
    </eadheader>
    <frontmatter>
       <titlepage>
@@ -478,7 +478,7 @@
                   </unittitle>
                </did>
             </c02>
-            <c02 level="file">
+            <c02 level="file"><did><container label="Folder" type="drawer">2: Oversize Manuscripts</container><unittitle>Diploma, University of Glasglow, <unitdate type="inclusive">March 21, 1775</unitdate></unittitle></did></c02><c02 level="file">
                <did>
                   <container type="box" label="Box">40</container>
                   <container type="folder" label="Folder">3</container>
@@ -984,7 +984,7 @@
                   </unittitle>
                </did>
             </c02>
-         </c01>
+         <c02 level="file"><did><container label="Folder" type="drawer">1: Oversize Manuscripts</container><unittitle>Miscellaneous land documents, <unitdate type="inclusive">July 30, 1749-May 11 1805</unitdate></unittitle><abstract>Contains Hardenbergh Patent. Maps related to this material are located in the Map Division</abstract></did></c02></c01>
          <c01 level="series">
             <did>
                <unittitle>Law--Cases [see index for complete list of litigants]</unittitle>

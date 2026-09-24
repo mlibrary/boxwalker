@@ -1,0 +1,320 @@
+<?xml version="1.0" ?><!DOCTYPE ead PUBLIC " +//ISBN 1-931666-00-8//DTD ead.dtd (Encoded Archival Description (EAD) Version 2002)//EN" " ead.dtd">
+<ead>
+    <eadheader countryencoding="iso3166-1" dateencoding="iso8601" langencoding="iso639-2b" repositoryencoding="iso15511">
+        <eadid publicid="-//us::MiU//TEXT us::MiU::AL004.xml//EN" countrycode="US" mainagencycode="US-MiU">umich-asialibrary-AL004</eadid>
+        <filedesc>
+            <titlestmt>
+                <titleproper>Chia-Shun Yih 易家訓 Papers</titleproper>
+                <author>Collection processed by Hao Zhang, May 2025, with essential support from Amy Crist, Liangyu Fu, and Hilary Severyn. Finding aids drafted by Haihui Zhang, niece of Professor Yih, and revised, edited, and expanded by Hao Zhang.</author>
+            </titlestmt>
+            <publicationstmt>
+                <publisher>University of Michigan Library (Asia Library)</publisher>
+                <address><addressline>University of Michigan, Asia Library</addressline><addressline>Harlan Hatcher Graduate Library</addressline><addressline>913 S. University Avenue</addressline><addressline>Ann Arbor, MI 48109-1190</addressline><addressline>URL: https://www.lib.umich.edu/locations-and-hours/asia-library </addressline></address>
+            </publicationstmt>
+        </filedesc>
+        <profiledesc>
+            <langusage>The finding aid is written in <language langcode="eng">English</language></langusage>
+        </profiledesc>
+    </eadheader>
+    <archdesc level="collection">
+        <did>
+            <origination label="creator"><persname source="lcnaf">Chia-Shun Yih 易家訓</persname></origination>
+            <unittitle>Chia-Shun Yih 易家訓 Papers</unittitle>
+            <physdesc><extent>1 manuscript box, 0.5 linear ft</extent></physdesc>
+            <unitdate datechar="creation" normal="1933/1980" type="inclusive">1933–1980s</unitdate>
+            <abstract encodinganalog="520" label="Abstract">The Chia-Shun Yih 易家訓 Papers, 1933–1980s, comprise a collection of 18 folders, primarily consisting of private correspondence from friends and family of Chia-Shun Yih 易家訓, the Stephen P. Timoshenko Distinguished University Professor Emeritus at the University of Michigan. Also includes a letter from the People’s Republic of China (PRC) Liaison Office to Professor Yih, 1973 group photographs of the distinguished Chinese American scientists delegation, and correspondence from the Tung Tie Pao 董鐵寶 family.  </abstract>
+            <langmaterial>Traditional and Simplified Chinese, with a few letters in English. </langmaterial>
+            <repository><corpname>University of Michigan Library (Asia Library)</corpname></repository>
+        </did>
+        <descgrp type="admin">
+            <acqinfo encodinganalog="541"><p>Gift of the Yih Family, 2025; donation facilitated by Haihui Zhang</p></acqinfo>
+            <processinfo><p>All letters and photographs have been removed from their original folders and rehoused in archival folders while preserving the original order of the collection.</p></processinfo>
+            <accessrestrict>
+                <p>The collection is open for research.</p>
+            </accessrestrict>
+            <userestrict>
+                <p>Copyright has not been transferred to the Regents of the University of Michigan. Permission to publish must be obtained from the copyright holder(s).</p>
+            </userestrict>
+            <prefercite>
+                <p>The Chia-Shun Yih 易家訓 Papers, 1933–1980s, Asia Library, University of Michigan Library</p>
+            </prefercite>
+        </descgrp>
+        <bioghist><bioghist><head>Biographical Information of Professor Chia-Shun Yih</head>
+            <p>Professor Chia-Shun Yih (1918–1997) was a renowned fluid dynamicist and a distinguished faculty member at the University of Michigan. He held the title of Stephen P. Timoshenko Distinguished University Professor Emeritus in the Department of Mechanical Engineering and Applied Mechanics. In 1974, he was named the Henry Russel Lecturer, the highest honor the University of Michigan can bestow upon a senior faculty member.</p>
+            <p>Born in Guiyang, Guizhou Province, China, Yih studied mathematics and the theory and design of bridges at National Central University, graduating in 1942. In 1945, he was selected among 42 Chinese students to pursue further studies in the United States, earning his Ph.D. in fluid mechanics from the University of Iowa in 1948.
+                Yih’s academic career included positions at several North American and European institutions before he joined the University of Michigan in 1956. He was promoted to full professor in 1958 and named Timoshenko Distinguished University Professor in 1967.</p>
+            <p>Throughout his prolific career, Professor Yih published over 100 scientific papers and two influential books: Dynamics of Nonhomogeneous Fluids (1960), later revised as Stratified Flows (1980), and Fluid Mechanics: A Concise Introduction to the Theory (1969). His prominent work significantly advanced the understanding of fluid mechanics.
+                Professor Yih passed away on April 25, 1997, due to heart failure while en route to a conference in Taiwan. His legacy continues to influence the field of fluid dynamics and the many students and colleagues he mentored throughout his career.</p></bioghist>
+            <bioghist><head>The Tung Family </head>
+                <p>Tung Tie Pao 董鐵寶 (1916–1968) was a renowned Chinese mechanician and computational mathematician, regarded as one of the pioneers in computer development and fracture mechanics research in China (中國計算機研製和斷裂力學研究的先驅之一). He was hailed as the “Father of Chinese Computers.” Born in Wujin County, Jiangsu Province, Tung went to the United States to study in 1945. In January 1946, he began his graduate studies in civil engineering at Purdue University. From 1947 to 1950, he pursued his Ph.D. in mechanics at the University of Illinois, and subsequently, he remained as an assistant professor and then an associate professor. </p>
+                <p>In 1956, he returned to China with his family and joined the Solid Mechanics Teaching and Research Section in the Department of Mathematical Mechanics at Peking University (北京大學數學力學系固體力學教研室). In 1958, he transferred to the Computational Mathematics Teaching and Research Section (數學力學系計算數學教研室) and was awarded the Moisseiff Award by the American Society of Civil Engineers. During the Cultural Revolution, Tung was subjected to harsh criticism and physical abuse. He tragically took his own life on the campus of Peking University on October 18, 1968.</p>
+                    <p>Mei Chen An 梅鎮安 (1918–2014), wife of Tung Tie Pao, was a prominent plant biologist in China. Born in Hangzhou, Zhejiang Province, she graduated from the Department of Physics at Zhejiang University in 1942. From 1942 to 1945, she was a graduate student at the Tsinghua Research Institute of the Southwest Associated University (西南聯大清華研究院). Between 1945 and 1947, she served as a teaching assistant in the Department of Biology at Peking University. From 1947 to 1956, she studied abroad at R. Emerson’s laboratory at the University of Illinois. After completing her studies in 1956, she returned to China and joined the Department of Biology at Peking University, where she served as an associate professor and then as a professor from 1956 to 1988.</p></bioghist>
+            <bioghist><head>The Tung Family and Prof. Yih</head>
+                <p>Professor Yih Chia-Shun and Professor Tung Tie Pao became close friends before their studies in the United States. In 1972, Professor Yih visited China as a member of a delegation of Chinese scientists from the United States and was received by Premier Zhou Enlai. During this visit, Professor Yih inquired about Tung and his family and was deeply saddened to learn of Tung’s tragic death during the Cultural Revolution. He requested that Premier Zhou allow Tung’s three children, Joyce, Michael, and Keith Tung (董昭、董邁和董愷), who were born in the United States, to return to the United States. After returning to the U.S., Professor Yih immediately raised the matter with George H. W. Bush, who was soon to assume the role of Director of the Liaison Office in China. Mei Chen An entrusted Professor Yih to be the guardian of her three children. After many years of effort, the children were finally able to move to the United States after 1980.</p>
+                <p>The collection preserves this episode by featuring photocopies of birth certificates of Joyce, Michael, and Keith Tung, along with a few photos of the Tung Family and a letter from Mei Chen An to Chia-Shun Yih in 1973.</p></bioghist>
+        </bioghist>
+        <arrangement encodinganalog="351"><p>The arrangement follows the original grouping upon which it was received while modifying it into four series by topic, and one single item that does not fit into any of the topics.</p>
+          <list>
+              <item>Single Item: Letter from the PRC Liaison Office in the U.S.</item>
+              <item>I. Letters from Friends</item>
+              <item>II. Delegation Photos</item>
+              <item>III. Letter from Prof. Yih’s Parents</item>
+              <item>IV. Tung Family</item></list></arrangement>
+        <scopecontent>
+            <p>The Chia-Shun Yih 易家訓 Papers, 1933–1980s, consist of correspondence from friends, family members, and the People’s Republic of China (PRC) Liaison Office to Chia-Shun Yih. The collection also includes letters, photographs, and birth certificates from the Tung Tie Pao family, who were close friends of Professor Yih. In addition, the collection features two group photographs, taken in 1973,  of the delegation of distinguished Chinese American scientists, including Professor Yih, together with Guo Moruo 郭沫若 and Zhou Enlai 周恩來.</p><p>The collection is unique in that it contains private correspondence from Yih’s parents and his scholar friends who lived in the PRC. Several of these friends had earned their degrees in North America before returning to China in the 1940s and 1950s. These letters, spanning from 1949 to 1979, reflect the feelings and lived experiences that Professor Yih’s friends and family shared with him during a tumultuous period in Chinese history.</p>
+        </scopecontent>
+        <controlaccess>
+            <head>Subjects:</head>
+            <subject source="lcsh">Yih, Chia-shun, 1918-1997</subject>
+            <subject source="lcsh">Chinese Americans -- Michigan</subject>
+        </controlaccess>
+    
+        
+        <dsc type="combined">
+            <c01 level="series">
+                <did>
+                    <unittitle>Single Item</unittitle>
+                </did>
+                <scopecontent><p>The letter was from the Liaison Office of the People’s Republic of China in the United States of America, regarding an issue Prof. Yih reported earlier. For a detailed description, please refer to the folder-level description in the finding aids.</p></scopecontent>
+                <c02 level="file">
+                    <did>
+                        <container label="Box" type="box">1</container>
+                        <container label="Folder" type="folder">1</container>
+                        <unittitle>A Letter from the PRC Liaison Office in the U.S.</unittitle>
+                        <unitdate type="inclusive" era="ce" calendar="gregorian">January 16, 1973 - August 29, 1975</unitdate>
+                        <note>
+                            <p>2 pages with an envelope
+                                The letter is dated 1/16/1975. It is a response letter regarding a letter dated 8/29/1973 by 毛澤東思想紅旗戰鬥隊 that Prof. Yih received and sent to Office of the Peoples' Republic of China in the United States of America (a copy).</p>
+                        </note>
+                    </did>
+                </c02>
+            </c01>
+            <c01 level="series">
+                <did>
+                    <unittitle>Series I: Letters from Friends</unittitle>
+                </did>
+                <scopecontent><p>This series includes letters from Professor Yih’s scholar friends written between 1949 and the 1980s. Among these letters are vivid descriptions of life in the early days of Guizhou’s liberation, as well as reflections from those who had returned from studying in the United States in the early 1950s. Decades later, after Professor Yih visited China as a member of a scholarly delegation in 1972 and reunited with these old friends, they continued to correspond, sharing poems and personal updates.</p></scopecontent>
+                <c02 level="file">
+                    <did>
+                        <container label="Box" type="box">1</container>
+                        <container label="Folder" type="folder">2</container>
+                        <unittitle>Letters from Peiyong Ding (丁培墉)</unittitle>
+                        <unitdate type="inclusive" era="ce" calendar="gregorian">ca. 1949-1980s</unitdate>
+                        <note>
+                            <p>7 letters in 15 pages; handwritten</p>
+                        </note>
+                    </did>
+                </c02>
+                
+                <c02 level="file">
+                    <did>
+                        <container label="Box" type="box">1</container>
+                        <container label="Folder" type="folder">3</container>
+                        <unittitle>Letters from Zhenglin Huang (黄正琳)</unittitle>
+                        <unitdate type="inclusive" era="ce" calendar="gregorian">1933-1979</unitdate>
+                        <note>
+                            <p>10 letters in 23 pages; handwritten </p>
+                        </note>
+                    </did>
+                </c02>
+                <c02 level="file">
+                    <did>
+                        <container label="Box" type="box">1</container>
+                        <container label="Folder" type="folder">4</container>
+                        <unittitle>Letters from Mingzhong Chen (陳明忠) </unittitle>
+                        <unitdate type="inclusive" era="ce" calendar="gregorian">ca. 1949-1980s</unitdate>
+                        <note>
+                            <p>2 letters in 2 pages; handwritten; about potential studying abroad opportunities, and expresses his concerns on living in the foreign country</p>
+                        </note>
+                    </did>
+                </c02>
+                <c02 level="file">
+                    <did>
+                        <container label="Box" type="box">1</container>
+                        <container label="Folder" type="folder">5</container>
+                        <unittitle>Letters from Ying Ding (丁穎) </unittitle>
+                        <unitdate type="inclusive" era="ce" calendar="gregorian">1978-1979</unitdate>
+                        <note>
+                            <p>4 letters in 6 pages; handwritten; letters about the health conditions and treatments of a mutual friend who fell ill as well as the author's own updates on the happenings in life</p>
+                        </note>
+                    </did>
+                </c02>
+                <c02 level="file">
+                    <did>
+                        <container label="Box" type="box">1</container>
+                        <container label="Folder" type="folder">6</container>
+                        <unittitle>Letters from Various People</unittitle>
+                        <unitdate type="inclusive" era="ce" calendar="gregorian">ca. 1949-1980s</unitdate>
+                        <note>
+                            <p>5 letters in 6 pages; handwritten; some names are not recognizable</p>
+                        </note>
+                    </did>
+                </c02>   </c01>
+            <c01 level="series">
+                <did>
+                    <unittitle>Series II: Delegation Photos</unittitle>
+                </did>
+                <scopecontent><p>This series includes two group photographs of the 1973 delegation of outstanding Chinese American scientists, in which Prof. Yih participated. Guo Moruo, President of the Chinese Academy of Sciences, and Premier Zhou Enlai were present in the photographs.</p></scopecontent>
+                <c02 level="file">
+                    <did>
+                        <container label="Box" type="box">1</container>
+                        <container label="Folder" type="folder">7</container>
+                        <unittitle>Delegation Group Photo #1</unittitle>
+                        <unitdate type="inclusive" era="ce" calendar="gregorian">1973</unitdate>
+                        <note>
+                            <p>In 1973, Premier Zhou Enlai 周恩來 received the delegation of outstanding Chinese American scientists. Prof. Yih is the 14th person from left in the second row. Black and white photo</p>
+                        </note>
+                    </did>
+                </c02>
+                
+                <c02 level="file">
+                    <did>
+                        <container label="Box" type="box">1</container>
+                        <container label="Folder" type="folder">8</container>
+                        <unittitle>Delegation Group Photo #2</unittitle>
+                        <unitdate type="inclusive" era="ce" calendar="gregorian">1973</unitdate>
+                        <note>
+                            <p>In 1973, Guo Moruo 郭沫若, President of the Chinese Academy of Sciences, received the delegation of outstanding Chinese American scientists. Prof. Yih is the 11th person from the left in the second row. </p>
+                        </note>
+                    </did>
+                </c02>  </c01>
+            <c01 level="series">
+                <did>
+                    <unittitle>Series III: Letters from Prof. Yih's Parents</unittitle>
+                </did>
+                <scopecontent><p>This series contains letters from Professor Yih’s parents, written between the late 1940s and early 1950s. In her letters, Professor Yih’s mother inquired about the death of his daughter and shared updates about life at home. His father, Yi Zhicheng* 易智澄, wrote extensively about various topics, including his work at Guiyang Middle School in Guizhou and the China Silk Company in Shanghai, Chia-Shun’s marriage, family matters, the soaring prices in Shanghai, and political changes in China. In particular, Yi Zhicheng described life in Guiyang after liberation, the ideological transformation, and his views on the Communist Party and the Nationalist Party, among other topics.</p>
+                    <p>* The spelling of the last name differs because we used the Pinyin romanization for Yih’s father’s name, while the Wade-Giles system was used for Yih’s name.
+                </p></scopecontent>
+                <c02 level="file">
+                    <did>
+                        <container label="Box" type="box">1</container>
+                        <container label="Folder" type="folder">9</container>
+                        <unittitle>Letter from Prof. Yih's Mother </unittitle>
+                        <unitdate type="inclusive" era="ce" calendar="gregorian">ca. early 1950s</unitdate>
+                        <note>
+                            <p>2 pages, written by brush; Yih's mother learned from her daughter (Professor Yih's sister) that Professor Yih's daughter had died unexpectedly (from another source, the family had experienced a car accident). His mother was very concerned and wanted to know more details. 
+                            </p><p>
+                                Yih's mother then described the situation of Yih's oldest son (Note: Professor Yih's eldest son stayed in China and lived with Yih's parents. Unfortunately, due to strained relations between China and the United States, the son was unable to meet his father until 1972, when Professor Yih visited China as a member of a U.S. delegation. The letter also stated that Professor Yih should not rush to return to China. If plans to return, Yih's father can help him contact the government first to avoid any (political) trouble.</p>
+                        </note>
+                    </did>
+                </c02>
+                
+                <c02 level="file">
+                    <did>
+                        <container label="Box" type="box">1</container>
+                        <container label="Folder" type="folder">10</container>
+                        <unittitle>Letter from Prof. Yih's Father 1</unittitle>
+                        <unitdate type="inclusive" era="ce" calendar="gregorian">July 7, 1946</unitdate>
+                        <note>
+                            <p>6 pages. Written with a brush and dated as 7/7/ (19)46. Mr. Zhicheng Yi 易智澄 detailed his work at the Middle School of Guiyang in Guizhou and the Chinese Silk Company in Shanghai, including his title and income. The letter also talked about Prof. Yih's family members, mom, sisters, brother, wife, and son, etc. </p>
+                        </note>
+                    </did>
+                </c02>
+                <c02 level="file">
+                    <did>
+                        <container label="Box" type="box">1</container>
+                        <container label="Folder" type="folder">11</container>
+                        <unittitle>Letter from Prof. Yih's Father 2</unittitle>
+                        <unitdate type="inclusive" era="ce" calendar="gregorian">January 25, 1949</unitdate>
+                        <note>
+                            <p>1 page. Written with a pen and dated as 1/25/1949. Mr. Zhicheng Yi 易智澄 expressed his attitude on Prof. Yih's marriage. Mr. Yi mentioned his impression on two parties (國民黨 and 共產黨), and expressed his expectation for democracy and freedom in China's future; large tear across the page, handle with care</p>
+                        </note>
+                    </did>
+                </c02>
+                <c02 level="file">
+                    <did>
+                        <container label="Box" type="box">1</container>
+                        <container label="Folder" type="folder">12</container>
+                        <unittitle>Letter from Prof. Yih's Father 3</unittitle>
+                        <unitdate type="inclusive" era="ce" calendar="gregorian">December 17, 1949</unitdate>
+                        <note>
+                            <p>1 page is a foldable airmail letter, written with a pen. The postmark date is December 17, 1949 (Republic of China 38). Mr. Yi briefly introduced the situation of the Chinese People's Liberation Army entering and liberating Guiyang City.</p>
+                        </note>
+                    </did>
+                </c02>
+                <c02 level="file">
+                    <did>
+                        <container label="Box" type="box">1</container>
+                        <container label="Folder" type="folder">13</container>
+                        <unittitle>Letter from Prof. Yih's Father 4</unittitle>
+                        <unitdate type="inclusive" era="ce" calendar="gregorian"> ca. May 31, 1950</unitdate>
+                        <note>
+                            <p>6 pages. Written by both Prof. Yih's father and mother. Dated May 31, (1950?). Mr. Yi describes the situation in Guiyang after liberation, such as the relatively difficult economic situation and rampant banditry in the countryside. It also talks about the ideological transformation required to enter a socialist society. He also hopes that his son (Professor Yih) raises funds for domestic education from the United States and Canada. The couple also describe the family in detail.</p>
+                        </note>
+                    </did>
+                </c02>
+                <c02 level="file">
+                    <did>
+                        <container label="Box" type="box">1</container>
+                        <container label="Folder" type="folder">14</container>
+                        <unittitle>Letter from Prof. Yih's Father 5</unittitle>
+                        <unitdate type="inclusive" era="ce" calendar="gregorian">ca. May 3, 1947-1949</unitdate>
+                        <note>
+                            <p>1 page. Dated May 3. (according to the content it supposes between 1947 to 1949). Mr. Yi talked about his work and life in Shanghai. He also talked about the soaring prices in Shanghai, the situation of exchanging US dollar bills on the black market, etc. </p>
+                        </note>
+                    </did>
+                </c02>
+                <c02 level="file">
+                    <did>
+                        <container label="Box" type="box">1</container>
+                        <container label="Folder" type="folder">15</container>
+                        <unittitle>Letter from Prof. Yih's Father 6</unittitle>
+                        <unitdate type="inclusive" era="ce" calendar="gregorian">May 2, 1952</unitdate>
+                        <note>
+                            <p>1 page. Dated May 2, 1952. This letter appears to be written by Mr. Zhicheng Yi 易智澄 to Jiaxiang Yi 易家詳, Professor Yih’s younger brother. In the letter, Mr. Yi asked his youngest son to write to Professor Yih asking for some academic books and journals from the U.S. as references for his teaching.</p>
+                            <p>Unlike in previous letters, Mr. Yi expressed expectations for Professor Yih's return to China, reflecting his uncertain attitude toward his son's future plans around 1949, when the People's Republic of China was established.</p>
+                        </note>
+                    </did>
+                </c02>   </c01>
+            <c01 level="series">
+                <did>
+                    <unittitle>Series IV: Tung Family</unittitle>
+                </did>
+                <scopecontent><p>This series includes photocopies of birth certificates of Joyce, Michael, and Keith Tung, along with a few photos and photo negatives of the Tung Family, and a letter from Mei Chen An to Chia-Shun Yih in 1973.</p></scopecontent>
+                <c02 level="file">
+                    <did>
+                        <container label="Box" type="box">1</container>
+                        <container label="Folder" type="folder">16</container>
+                        <unittitle>Photos of the Tung Family</unittitle>
+                        <unitdate type="inclusive" era="ce" calendar="gregorian">undated </unitdate>
+                        <note>
+                            <p>Three black and white photos (two pictures of three children, and one family picture), two photo negatives (one for the family picture, one for the three children); Tung Tie Pao 董鐵寶, Mei Chen An 梅鎮安, guardian of Joyce Tung, Michael Tung, and Keith Tung 董昭、董邁和董愷</p>
+                        </note>
+                    </did>
+                </c02>
+                
+                <c02 level="file">
+                    <did>
+                        <container label="Box" type="box">1</container>
+                        <container label="Folder" type="folder">17</container>
+                        <unittitle>Letter from Mei Chen An (Mrs. Tung)</unittitle>
+                        <unitdate type="inclusive" era="ce" calendar="gregorian">ca. September 11, 1973</unitdate>
+                        <note>
+                            <p>An envelope with one page letter from Mei Chen An (梅鎮安 Mrs. Tung ) to Chia-Shun Yih
+                                The letter is dated Sep.11. According to the first sentence "…one year passed since we met ...". This letter is supposed to be written in 1973. In the letter Mei entrusted Professor Yih to be the guardian of the three children. Mei also expressed concern and asked Yih not write letters to her directly.
+                            </p>
+                        </note>
+                    </did>
+                </c02>
+                <c02 level="file">
+                    <did>
+                        <container label="Box" type="box">1</container>
+                        <container label="Folder" type="folder">18</container>
+                        <unittitle>Birth Certificates of the Tung Children</unittitle>
+                        <unitdate type="inclusive" era="ce" calendar="gregorian">December 17, 1973</unitdate>
+                        <note>
+                            <p>An envelope with copies of three birth certificates of Tung and Mei's children, Joyce Tung, Michael Tung, Keith Tung 董昭、董邁和董愷. The envelope was dated Dec. 17, 1973, and sent by Dennis R. Bing, County Cleark Court House, Urbana, Illinois 61801. </p>
+                        </note>
+                    </did>
+                </c02>   </c01>
+        </dsc>
+        
+
+        
+        <descgrp type="add"><bibliography><p>Content adapted from collection material, notes drafted by Haihui Zhang, and the following references.</p>
+            <p><title>“CHIA-SHUN YIH 1918-1997,”</title> National Academy of Engineering, accessed May 2025, https://www.nae.edu/188129/CHIASHUN-YIH-19181997</p>           
+            <p><title>“Chia-Shun Yih papers, 1930-1997,”</title> U-M Bentley Historical Library, accessed May 2025, https://findingaids.lib.umich.edu/catalog/umich-bhl-97121</p>
+            <p><title>“Chia-Shun Yih,”</title> Physics History Network, American Institute of Physics (AIP), accessed May 2025, https://history.aip.org/phn/11611032.html</p>
+</bibliography></descgrp>
+</archdesc>
+</ead>

@@ -26,7 +26,7 @@
             <date>2010-10-25</date>
             <item> Original encoding from Word 2007 file using Word macros and Xmetal.</item>
          </change>
-      </revisiondesc>
+      <change><date>2025-07-28</date><item>Replaced broken href links</item></change></revisiondesc>
    </eadheader>
    <frontmatter>
       <titlepage>
@@ -129,7 +129,7 @@
       <dsc type="combined">
          <c01 level="series">
             <did>
-               <unittitle>German Auxiliaries Muster Rolls, 1776-1786 (bulk 1781-1783)</unittitle>
+               <unittitle>German Auxiliaries Muster Rolls, <unitdate type="inclusive">1776-1786</unitdate> <unitdate type="bulk">1781-1783</unitdate></unittitle>
             </did>
             <c02 level="item">
                <did>
@@ -764,25 +764,25 @@
             <list>
                <head>Related collections held by the Clements Library include the following Revolutionary War collections that deal specifically with Hessian involvement:</head>
                <item>
-                  <title href="http://quod.lib.umich.edu/c/clementsead/umich-wcl-M-2179.1cli;view=text" actuate="onrequest" render="italic" show="replace">Loftus Cliffe papers</title>
+                  <title href="https://findingaids.lib.umich.edu/catalog/umich-wcl-M-2179.1cli" actuate="onrequest" render="italic" show="replace">Loftus Cliffe papers</title>
                </item>
                <item>
-                  <title render="italic" href="http://quod.lib.umich.edu/c/clementsead/umich-wcl-M-42cli" actuate="onrequest" show="replace">Henry Clinton papers</title>
+                  <title render="italic" href="http://quod.lib.umich.edu/c/clementsmss/umich-wcl-M-42cli" actuate="onrequest" show="replace">Henry Clinton papers</title>
                </item>
                <item>
-                  <title render="italic" href="http://quod.lib.umich.edu/c/clementsead/umich-wcl-M-1690gil;view=text" actuate="onrequest" show="replace">Benjamin Gilbert letterbook</title>
+                  <title render="italic" href="https://findingaids.lib.umich.edu/catalog/umich-wcl-M-1690gil" actuate="onrequest" show="replace">Benjamin Gilbert letterbook</title>
                </item>
                <item>
-                  <title render="italic" href="http://quod.lib.umich.edu/c/clementsead/umich-wcl-M-337gre" actuate="onrequest" show="replace">Nathanael Greene papers</title>
+                  <title render="italic" href="http://quod.lib.umich.edu/c/clementsmss/umich-wcl-M-337gre" actuate="onrequest" show="replace">Nathanael Greene papers</title>
                </item>
                <item>
-                  <title href="http://quod.lib.umich.edu/c/clementsead/umich-wcl-M-147jun;view=text" actuate="onrequest" render="italic" show="replace">Freiherr von Jungkenn papers</title>
+                  <title href="http://quod.lib.umich.edu/cgi/f/findaid/findaid-idx?c=clementsmss;idno=umich-wcl-M-147jun" actuate="onrequest" render="italic" show="replace">Freiherr von Jungkenn papers</title>
                </item>
                <item>
-                  <title render="italic" href="http://quod.lib.umich.edu/c/clementsead/umich-wcl-M-1066mac" actuate="onrequest" show="replace">Frederick Mackenzie papers</title>
+                  <title render="italic" href="http://quod.lib.umich.edu/c/clementsmss/umich-wcl-M-1066mac" actuate="onrequest" show="replace">Frederick Mackenzie papers</title>
                </item>
                <item>
-                  <title href="http://quod.lib.umich.edu/c/clementsead/umich-wcl-M-707jr;view=text" actuate="onrequest" render="italic" show="replace">J.R. (Hessian) Journal</title>
+                  <title href="https://findingaids.lib.umich.edu/catalog/umich-wcl-M-707jr" actuate="onrequest" render="italic" show="replace">J.R. (Hessian) Journal</title>
                </item>
             </list>
          </relatedmaterial>
