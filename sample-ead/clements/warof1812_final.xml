@@ -57,7 +57,7 @@
          </change><change>
             <date>2021-08-25</date>
             <item>Addition of James Monroe ALS, November 17, 1826 (M-2553).</item>
-         </change></revisiondesc>
+         </change><change><date>2023-02-22</date><item>Addition of M-7064 (10/1/1813) and M-4647.1 (10/5/1813).</item></change><change><date>2023-08-10</date><item>Addition of new acquisitions from folder printing.</item></change><change><date>2023-10-12</date><item>Removed reference to Rufus King, as only a photocopy is in the collection.</item></change><change><date>2025-06-16</date><item>Addition of M-3334, M-8210.1, M-8393.1.</item></change><change><date>2025-07-09</date><item>Addition of oversize materials</item></change><change><date>2026-08-21</date><item>Fixed typo.</item></change></revisiondesc>
    </eadheader>
    <frontmatter>
       <titlepage>
@@ -209,7 +209,7 @@
             <persname encodinganalog="700" source="lcnaf">Hull, William, 1753-1825.</persname>
             <persname encodinganalog="700" source="lcnaf">Izard, George, 1777-1828.</persname>
             <persname encodinganalog="700" source="lcnaf">Jackson, Andrew, 1767-1845.</persname>
-            <persname encodinganalog="700" source="lcnaf">King, Rufus, 1755-1827.</persname>
+            
             <persname encodinganalog="700" source="lcnaf">Larned, Simon, 1753-1817.</persname>
             <persname encodinganalog="700" source="lcnaf">Loring, Joseph, 1767-1838.</persname>
             <persname encodinganalog="700" source="lcnaf">Macomb, Alexander, 1782-1841.</persname>
@@ -606,6 +606,19 @@
                <did>
                   <unittitle>
                      <unitdate type="inclusive">
+                        <emph render="bold">1812 February 4</emph>
+                     </unitdate>
+                     <emph render="bold">. David Coffin ALS to Rob[er]t Boyd; Newburyport, [Massachusetts].</emph>
+                  </unittitle>
+                  <physdesc>
+                     <extent>2 pages</extent>
+                  </physdesc>
+                  <abstract>Referring to a November agreement with Henry Poor for Poor to take the Schooner <emph render="italic">Anson</emph> to Eastport to retrieve a load of wood then split the customary freights evenly with Coffin. Copy of the agreement with Poor is included. Poor had been seized in Portland for carrying English goods and for having sailed on the English side, both actions had been forbidden by Coffin prior to the voyage. “For his base villany [sic.] in proceeding contrary to promise he deserves the pillory – if he has any property of any am’t that you can obtain, I wish you to get it from him towards indemnifying me.”</abstract>
+               </did>
+            </c02><c02 level="item">
+               <did>
+                  <unittitle>
+                     <unitdate type="inclusive">
                         <emph render="bold">1812 February 26</emph>
                      </unitdate>
                      <emph render="bold">. Jonathan Russell ALS to Joel Barlow; London, [England].</emph>
@@ -749,15 +762,28 @@
                      <unitdate type="inclusive">
                         <emph render="bold">1812 August 16 - 1812 September 1</emph>
                      </unitdate>
-                     <emph render="bold">. Northwest Army DS copy, signed.</emph>
+                     <emph render="bold">. Northwest Army DS copy, signed; Michigan Territory.</emph>
                   </unittitle>
                   <physdesc>
                      <extent>8 pages</extent>
                   </physdesc>
-                  <abstract>[Michigan] Territory. 8 pages. Protest against Britain’s retention of private property taken at the surrender of Detroit, with list of property in question. Includes protests by James Taylor and James Findley.</abstract>
+                  <abstract> Protest against Britain’s retention of private property taken at the surrender of Detroit, with list of property in question. Includes protests by James Taylor and James Findley.</abstract>
                </did>
             </c02>
             <c02 level="item">
+               <did>
+                  <unittitle>
+                     <unitdate type="inclusive">
+                        <emph render="bold">[after 1812 August 22]</emph>
+                     </unitdate>
+                     <emph render="bold">. D. Parker AMS; s.l.</emph>
+                  </unittitle>
+                  <physdesc>
+                     <extent>1 page</extent>
+                  </physdesc>
+                  <abstract>“Extract of a letter from the Secretary of War to General Harrison.” “The governors of Kentucky, Tennessee, Ohio, Illinois &amp; Indiana will be directed to furnish volunteers &amp; militia.” “Whatever was done by the subsequent acting governor of Indiana under the authority or with the approbation of general Harrison relative to militia or volunteers would properly come within the authority above given to the general.”</abstract>
+               </did>
+            </c02><c02 level="item">
                <did>
                   <unittitle>
                      <unitdate type="inclusive">
@@ -1098,6 +1124,19 @@ See also John Widney ALS to Samuel Williams, May 13, 1813.
                <did>
                   <unittitle>
                      <unitdate type="inclusive">
+                        <emph render="bold">1812 October 5 and 1812 October 29</emph>
+                     </unitdate>
+                     <emph render="bold">. "List of the names of absentees and residing in the bounds of the 2d company 33d regment..."; s.l.</emph>
+                  </unittitle>
+                  <physdesc>
+                     <extent>1 page</extent>
+                  </physdesc>
+                  <abstract>Names followed by reasons not present, including illness, being tardy or out of town, being underage, or simply not attending. Notes men who lacked guns or flintlocks.</abstract>
+               </did>
+            </c02><c02 level="item">
+               <did>
+                  <unittitle>
+                     <unitdate type="inclusive">
                         <emph render="bold">1812 October 11</emph>
                      </unitdate>
                      <emph render="bold">. Thomas Bodley CyS.</emph>
@@ -1319,6 +1358,19 @@ See also John Widney ALS to Samuel Williams, May 13, 1813.
                </did>
             </c02>
             <c02 level="item">
+               <did>
+                  <unittitle>
+                     <unitdate type="inclusive">
+                        <emph render="bold">1812 December 21</emph>
+                     </unitdate>
+                     <emph render="bold">. Benjamin Be[ ] Partially Printed DS to Joseph Henderson; Philadelphia, [Pennsylvania].</emph>
+                  </unittitle>
+                  <physdesc>
+                     <extent>1 page</extent>
+                  </physdesc>
+                  <abstract>Receipt for Army uniform received from Lieutenant Joseph Henderson. Lists articles of clothing, including "one Cockade &amp; Eagle."</abstract>
+               </did>
+            </c02><c02 level="item">
                <did>
                   <unittitle>
                      <unitdate type="inclusive">
@@ -1826,7 +1878,7 @@ See also John Widney ALS to Samuel Williams, May 13, 1813.
                      <unitdate type="inclusive">
                         <emph render="bold">1813 June 4</emph>
                      </unitdate>
-                     <emph render="bold">. E. L. Shittock ALS to General Woolsey; Sackett’s Harbor, [New York].</emph>
+                     <emph render="bold">. E. L. Whittock ALS to General Woolsey; Sackett’s Harbor, [New York].</emph>
                   </unittitle>
                   <physdesc>
                      <extent>2 pages</extent>
@@ -2341,6 +2393,19 @@ See also John Widney ALS to Samuel Williams, May 13, 1813.
                <did>
                   <unittitle>
                      <unitdate type="inclusive">
+                        <emph render="bold">1813 October 1</emph>
+                     </unitdate>
+                     <emph render="bold">. C[harles] S. Clarkson ALS to Samuel C. Vance; Detroit, [Michigan]. </emph>
+                  </unittitle>
+                  <physdesc>
+                     <extent>4 pages</extent>
+                  </physdesc>
+                  <abstract>Delivering news of American recapture of Fort Malden, Sandwich, Upper Canada, and Fort Detroit, "without loss of a man or the fireing of a gun. Genl Procter wisely abandoned these posts and has sought refuge in the wilds with his brethren (the savages)." William Henry Harrison's intelligence indicates General Henry Procter was fortifying on the River Thames, but "his Indian force is very much diminished, many of them are anxious to take shelter under the American Ensign of Liberty." Brief details regarding conditions at Fort Malden and Fort Detroit and the public's good reception of the army at Sandwich. Speculation on whether they will go to Michilimackinac. Displeasure with his commandant.</abstract>
+               </did>
+            </c02><c02 level="item">
+               <did>
+                  <unittitle>
+                     <unitdate type="inclusive">
                         <emph render="bold">1813 October 5</emph>
                      </unitdate>
                      <emph render="bold">. William Duane ALS to Callender Irvine; Philadelphia, [Pennsylvania].</emph>
@@ -2832,7 +2897,7 @@ See also John Widney ALS to Samuel Williams, May 13, 1813.
                   <abstract>Plan to attack Prescot and Kingston, encloses an order regarding a change of command, and congratulates Smith on his promotion. "You are to understand that all the movement in and from this quarter have been directed by the Secretary of War, at the very time I had nearly completed my arrangements to Storm Prescot and attack Kingston."</abstract>
                </did>
             </c02>
-            <c02>
+            <c02 level="item">
                <did>
                   <unittitle>
                      <unitdate>
@@ -3220,6 +3285,19 @@ Includes Kebiasse's mark, witnessed by John Roby.</abstract>
                <did>
                   <unittitle>
                      <unitdate type="inclusive">
+                        <emph render="bold">1814 July 114</emph>
+                     </unitdate>
+                     <emph render="bold">. Partial AMs Cy; Ship <emph render="italic">Nassau</emph>.</emph>
+                  </unittitle>
+                  <physdesc>
+                     <extent>7 pages</extent>
+                  </physdesc>
+                  <abstract>Manuscript copy of "an Oration delivered on board of the Nassau Prison Ship July the 4th 1814 by an American Prisoner." Patriotic Fourth of July speech to fellow American prisoners, with reflections on the American Revolution, George Washington, and military conflict. Comments on the early years of the republic, flourishing commerce, the disruptions that led to the War of 1812, and how enemies forgot the patriotism and commitment Americans displayed during the Revolution. "... there is a Plant, grows in that Country, very little of which grows any where else; the infusion of which stimulates the true-born, Sons of America to deeds of Valor, the very sound of its name has something so fascinating in it that it holds superiority with it wherever it grows - It's a sacred Plant my friends. Its name is Liberty." Discussion of prisoners and rewards for allegiance versus traitors and the shame they bring on their forebears.</abstract>
+               </did>
+            </c02><c02 level="item">
+               <did>
+                  <unittitle>
+                     <unitdate type="inclusive">
                         <emph render="bold">1814 July 16</emph>
                      </unitdate>
                      <emph render="bold">. Richard W. Lawrence AL to John L. Lawrence; Lisbon, Portugal.</emph>
@@ -3245,6 +3323,19 @@ Includes Kebiasse's mark, witnessed by John Roby.</abstract>
                </did>
             </c02>
             <c02 level="item">
+               <did>
+                  <unittitle>
+                     <unitdate type="inclusive">
+                        <emph render="bold">1814 July 22</emph>
+                     </unitdate>
+                     <emph render="bold">. Jacob Fowller &amp; Co. DS to Robert Moses; Franklinton, [Ohio].</emph>
+                  </unittitle>
+                  <physdesc>
+                     <extent>1 page</extent>
+                  </physdesc>
+                  <abstract>Request to pay the bearer $56 for five heads of beef cattle "for the use of Mr. Robert Anderson commissary for the troops."</abstract>
+               </did>
+            </c02><c02 level="item">
                <did>
                   <unittitle>
                      <unitdate type="inclusive">
@@ -3371,6 +3462,19 @@ Includes Kebiasse's mark, witnessed by John Roby.</abstract>
                </did>
             </c02>
             <c02 level="item">
+               <did>
+                  <unittitle>
+                     <unitdate type="inclusive">
+                        <emph render="bold">1814 September 2</emph>
+                     </unitdate>
+                     <emph render="bold">. Schenck [I.?] Learning ALS to Capt. C. Humphreys; Sandy Hook, [New Jersey].</emph>
+                  </unittitle>
+                  <physdesc>
+                     <extent>1 page</extent>
+                  </physdesc>
+                  <abstract>Difficulties getting soldiers to pay debts owed to officers. Requests Humphreys, or the "Commanding Officer of his Comp[an]y," to stop the men's pay until settled. References a list of acknowledged debts [not included]. "We cannot refrain from acknowledging that we feel Ourselves extreamely mortified in being drove to the necessity of attempting to impose on you a task so ardious and unpleasant but flatter ourselves with a hope that we shall in some measure merrit your forgiveness when we assure you that our Weak Ideas Cannot devise any other plan at present of securing Our dues from the Soldiers."</abstract>
+               </did>
+            </c02><c02 level="item">
                <did>
                   <unittitle>
                      <unitdate type="inclusive">
@@ -3574,6 +3678,19 @@ Also includes a one-page "Draft of proposed fortifications at Pea Patch," descri
                <did>
                   <unittitle>
                      <unitdate type="inclusive">
+                        <emph render="bold">1814 October 5</emph>
+                     </unitdate>
+                     <emph render="bold">. Jno. Landidge ALS to Dabney Alinor; [Greensburg], Green County, [Kentucky].</emph>
+                  </unittitle>
+                  <physdesc>
+                     <extent>3 pages</extent>
+                  </physdesc>
+                  <abstract>Notes regarding unpaid taxes, a resultant land sale, and expectations that they will have legal redress. Disappointed in the English burning of Washington, D.C., and the failure of Americans to protect the city. "I am very sorry to learn by our public prints that my native state-the Land of my nativity has so far disgraced herself and our Nation so as to suffer about 7000 troops to possess themselves of the metropolis almost without a struggle and retire with the trophies with impunity. What will the subjects of monarchy say to this evidence of the patriotism of Republiks?"</abstract>
+               </did>
+            </c02><c02 level="item">
+               <did>
+                  <unittitle>
+                     <unitdate type="inclusive">
                         <emph render="bold">1814 October 6</emph>
                      </unitdate>
                      <emph render="bold">. New York State Militia 20th Regiment AD; Sackett’s Harbor, [New York]. </emph>
@@ -3600,7 +3717,7 @@ Also includes a one-page "Draft of proposed fortifications at Pea Patch," descri
             </c02>
             <c02 level="item">
                <did>
-                  <unittitle>
+                  <container label="Folder" type="drawer">5: Oversize Manuscripts</container><unittitle>
                      <unitdate type="inclusive">
                         <emph render="bold">1814 October 14</emph>
                      </unitdate>
@@ -3613,7 +3730,7 @@ Also includes a one-page "Draft of proposed fortifications at Pea Patch," descri
                </did>
             </c02><c02 level="item">
                <did>
-                  <unittitle>
+                  <container label="Box" type="box">4</container><unittitle>
                      <unitdate type="inclusive">
                         <emph render="bold">1814 October 18</emph>
                      </unitdate>
@@ -3697,7 +3814,7 @@ Also includes a one-page "Draft of proposed fortifications at Pea Patch," descri
             </c02>
             <c02 level="item">
                <did>
-                  <unittitle>
+                  <container label="Folder" type="drawer">6: Oversize Manuscripts</container><unittitle>
                      <unitdate type="inclusive">
                         <emph render="bold">1814 November 4</emph>
                      </unitdate>
@@ -3713,7 +3830,7 @@ Also includes a one-page "Draft of proposed fortifications at Pea Patch," descri
                </did>
             </c02><c02 level="item">
                <did>
-                  <unittitle>
+                  <container label="Box" type="box">4</container><unittitle>
                      <unitdate type="inclusive">
                         <emph render="bold">1814 November 8</emph>
                      </unitdate>
@@ -4097,6 +4214,19 @@ Also includes a one-page "Draft of proposed fortifications at Pea Patch," descri
                <did>
                   <unittitle>
                      <unitdate type="inclusive">
+                        <emph render="bold">1815 March 4</emph>
+                     </unitdate>
+                     <emph render="bold">. M. T. ALS to Mrs. Elizabeth Magee; [post Salem, New York].</emph>
+                  </unittitle>
+                  <physdesc>
+                     <extent>4 pages</extent>
+                  </physdesc>
+                  <abstract>Letter celebrating the end of the War of 1812 and a treaty of peace, possibly written by a woman. Notes that the treaty had already been violated eight days prior, but still seems optimistic about the future. “I can at times scarcely realize the change from War to peace &amp; when I reflect on so many great men of Our native Country who have fought the Battles of Europe &amp; found a Grave in America I cannot help saying the God of Battle has been on our side.” Discusses “panic respecting Banking business” and other financial concerns. Responds to news from home, including news of the good health of Mr. McLeod, Mr. Gorman’s new son and loss of his daughter, and the death of Mr. LeRoy. </abstract>
+               </did>
+            </c02><c02 level="item">
+               <did>
+                  <unittitle>
+                     <unitdate type="inclusive">
                         <emph render="bold">1815 March 8</emph>
                      </unitdate>
                      <emph render="bold">. Thomas Nicholls ADS; New Orleans, Louisiana.</emph>
@@ -4219,6 +4349,19 @@ Also includes a one-page "Draft of proposed fortifications at Pea Patch," descri
                </did>
             </c02>
             <c02 level="item">
+               <did>
+                  <unittitle>
+                     <unitdate type="inclusive">
+                        <emph render="bold">1815 July 31</emph>
+                     </unitdate>
+                     <emph render="bold">. George P. R. [i.e. George Augustus Frederick, Prince Regent] DCy to [James Madison]; Palace of Carlton House, [Westminster].</emph>
+                  </unittitle>
+                  <physdesc>
+                     <extent>2 pages</extent>
+                  </physdesc>
+                  <abstract>Appointment of Charles Bagot (1781-1843) as His Majesty's Envoy Extraordinary and Minister Plenipotentiary. "To the United States of America Sendeth Greeting! Our Good Friends! Having nothing more at Heart than to cultivate and improve the Friendship and good Understanding now so happily restored between the Two States..." [NB: Ambassador Charles Bagot and U.S. Secretary of State Richard Rush developed the Rush-Bagot Treaty to demilitarize the U.S. border with Canada in 1817, ratified by the U.S. Senate 1818.]</abstract>
+               </did>
+            </c02><c02 level="item">
                <did>
                   <unittitle>
                      <unitdate type="inclusive">
@@ -4543,6 +4686,19 @@ Also includes a one-page "Draft of proposed fortifications at Pea Patch," descri
                <did>
                   <unittitle>
                      <unitdate type="inclusive">
+                        <emph render="bold">1838 August 22</emph>
+                     </unitdate>
+                     <emph render="bold">. James M. Slade ADS; Bristol, [Connecticut?]. </emph>
+                  </unittitle>
+                  <physdesc>
+                     <extent>1 page</extent>
+                  </physdesc>
+                  <abstract>“Recd. of the Town of Bristol Four Stands of U.S. arms and one bayonet not in order.” “Said arms being in part for those delivered the town under the Act of 1812.” Slade is writing on behalf of the Quarter Master General.</abstract>
+               </did>
+            </c02><c02 level="item">
+               <did>
+                  <unittitle>
+                     <unitdate type="inclusive">
                         <emph render="bold">1840 July 23</emph>
                      </unitdate>
                      <emph render="bold">. Theodore ALS to Mary W. Cady; Suffield.</emph>
@@ -4597,7 +4753,46 @@ Also includes a one-page "Draft of proposed fortifications at Pea Patch," descri
             </c02>
             <c02 level="item">
                <did>
-                  <unittitle>
+                  <container label="Folder" type="drawer">1: Oversize Manuscripts</container><unittitle>
+                     <unitdate type="inclusive">
+                        <emph render="bold">1854 December 1</emph>
+                     </unitdate>
+                     <emph render="bold">. Franklin Pierce DS to Ephraim Martin</emph>
+                  </unittitle>
+                  <physdesc>
+                     <extent>1 page</extent>
+                  </physdesc>
+                  <abstract>Deed of land for service in War of 1812.</abstract>
+               </did>
+            </c02><c02 level="item">
+               <did>
+                  <container label="Folder" type="drawer">2: Oversize Manuscripts</container><unittitle>
+                     <unitdate type="inclusive">
+                        <emph render="bold">1854 December 1</emph>
+                     </unitdate>
+                     <emph render="bold">. Franklin Pierce DS to Robert Givens</emph>
+                  </unittitle>
+                  <physdesc>
+                     <extent>1 page</extent>
+                  </physdesc>
+                  <abstract>Deed of land for service in War of 1812.</abstract>
+               </did>
+            </c02><c02 level="item">
+               <did>
+                  <container label="Folder" type="drawer">3: Oversize Manuscripts</container><unittitle>
+                     <unitdate type="inclusive">
+                        <emph render="bold">1855 March 1</emph>
+                     </unitdate>
+                     <emph render="bold">. Franklin Pierce DS to Rachel Bennet</emph>
+                  </unittitle>
+                  <physdesc>
+                     <extent>1 page</extent>
+                  </physdesc>
+                  <abstract>Deed of land for service in War of 1812 service of husband.</abstract>
+               </did>
+            </c02><c02 level="item">
+               <did>
+                  <container label="Box" type="box">5</container><unittitle>
                      <unitdate type="inclusive">
                         <emph render="bold">1858 June 26</emph>
                      </unitdate>
@@ -4611,7 +4806,7 @@ Also includes a one-page "Draft of proposed fortifications at Pea Patch," descri
             </c02>
             <c02 level="item">
                <did>
-                  <unittitle>
+                  <container label="Folder" type="drawer">4: Oversize Manuscripts</container><unittitle>
                      <unitdate type="inclusive">
                         <emph render="bold">1858 December 16</emph>
                      </unitdate>
@@ -4626,9 +4821,9 @@ Also includes a one-page "Draft of proposed fortifications at Pea Patch," descri
                   </note>
                </did>
             </c02>
-            <c02>
+            <c02 level="item">
                <did>
-                  <unittitle>
+                  <container label="Box" type="box">5</container><unittitle>
                      <unitdate>
                         <emph render="bold">1859 December 10</emph>
                      </unitdate>

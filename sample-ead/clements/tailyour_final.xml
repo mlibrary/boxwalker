@@ -2866,9 +2866,9 @@
                   <c04 level="file">
                      <did>
                         
-                        <container type="volume" label="Volume">1</container><unittitle>Tailyour, John Letterbook, <unitdate type="inclusive">1781-1785</unitdate>
+                        <container type="volume" label="Volumes">1-2</container><unittitle>Tailyour, John Letterbook, <unitdate type="inclusive">1781-1785</unitdate>
                         </unittitle>
-                     </did>
+                     <note><p>Vol. 1</p></note></did>
                      <c05 level="file">
                         <did>
                            <unittitle>
@@ -2922,10 +2922,10 @@
                   </c04>
                   <c04 level="file">
                      <did>
-                        <container type="volume" label="Volume">2</container>
+                        
                         <unittitle>Tailyour, John Letterbook, <unitdate type="inclusive">1788-1789</unitdate>
                         </unittitle>
-                     </did>
+                     <note><p>Vol. 2</p></note></did>
                      <c05 level="file">
                         <did>
                            <unittitle>
@@ -2952,7 +2952,7 @@
                         <container type="volume" label="Volume">3</container>
                         <unittitle>Tailyour, John Letterbook, <unitdate type="inclusive">1790-1792</unitdate>
                         </unittitle>
-                     </did>
+                     <note><p>Vol. 3</p></note></did>
                      <c05 level="file">
                         <did>
                            <unittitle>
@@ -2986,10 +2986,10 @@
                   </c04>
                   <c04 level="file">
                      <did>
-                        <container type="volume" label="Volume">4</container>
+                        <container type="volume" label="Volumes">4-8</container>
                         <unittitle>Tailyour, John Letterbook, <unitdate type="inclusive">1804-1810</unitdate>
                         </unittitle>
-                     </did>
+                     <note><p>Vol. 4</p></note></did>
                      <c05 level="file">
                         <did>
                            <unittitle>
@@ -3135,45 +3135,45 @@
                   </did>
                   <c04 level="file">
                      <did>
-                        <container label="Volume" type="volume">5</container><unittitle>John Tailyour Account Journal, <unitdate type="inclusive">1789</unitdate>
+                        <container type="volume" label="Volumes">4-8</container><unittitle>John Tailyour Account Journal, <unitdate type="inclusive">1789</unitdate>
                         </unittitle>
-                     </did>
+                     <note><p>Vol. 5</p></note></did>
                   </c04>
                   <c04 level="file">
                      <did>
-                        <container label="Volume" type="volume">6</container><unittitle>John Tailyour Account Journal, <unitdate type="inclusive">1790</unitdate>
+                        <unittitle>John Tailyour Account Journal, <unitdate type="inclusive">1790</unitdate>
                         </unittitle>
-                     </did>
+                     <note><p>Vol. 6</p></note></did>
                   </c04>
                   <c04 level="file">
                      <did>
-                        <container label="Volume" type="volume">7</container><unittitle>John Tailyour Account Journal, <unitdate type="inclusive">1798-1805</unitdate>
+                        <unittitle>John Tailyour Account Journal, <unitdate type="inclusive">1798-1805</unitdate>
                         , part 1</unittitle>
-                        <physdesc>
+                        <note><p>Vol. 7</p></note><physdesc>
                            
                         </physdesc>
                      </did>
                   </c04>
                   <c04 level="file">
                      <did>
-                        <container label="Volume" type="volume">8</container><unittitle>John Tailyour Account Journal, <unitdate type="inclusive">1798-1805</unitdate>
+                        <unittitle>John Tailyour Account Journal, <unitdate type="inclusive">1798-1805</unitdate>
                         , part 2</unittitle>
-                        <physdesc>
+                        <note><p>Vol. 8</p></note><physdesc>
                            
                         </physdesc>
                      </did>
                   </c04><c04 level="file">
                      <did>
-                        <container type="volume" label="Volume">9</container>
+                        <container type="volume" label="Volumes">9-10</container>
                         <unittitle>John Tailyour Account Journal, Kirktonhill, <unitdate type="inclusive">1805-1813</unitdate>
                         </unittitle>
-                     </did>
+                     <note><p>Vol. 9</p></note></did>
                   </c04>
                   <c04 level="file">
                      <did>
-                        <container type="volume" label="Volume">10</container><unittitle>John Tailyour Account Journal, <unitdate type="inclusive">1806-1816</unitdate>
+                        <unittitle>John Tailyour Account Journal, <unitdate type="inclusive">1806-1816</unitdate>
                         </unittitle>
-                     </did>
+                     <note><p>Vol. 10</p></note></did>
                   </c04>
                </c03>
             </c02>
@@ -3786,35 +3786,35 @@
                   </did>
                   <c04 level="file">
                      <did>
-                        <container type="volume" label="Volume">11</container>
+                        <container type="volume" label="Volumes">11-14</container>
                         <unittitle>Accounts and Legal Forms, <unitdate type="inclusive">1820-1821</unitdate>
                         </unittitle>
-                     </did>
+                     <note><p>Vol. 11</p></note></did>
                   </c04>
                   <c04 level="file">
                      <did>
-                        <container type="volume" label="Volume">12</container><unittitle>Account Journal: Rent Book, <unitdate type="inclusive">1833-1836</unitdate>
+                        <unittitle>Account Journal: Rent Book, <unitdate type="inclusive">1833-1836</unitdate>
                         </unittitle>
-                     </did>
+                     <note><p>Vol. 12</p></note></did>
                   </c04>
                   <c04 level="file">
                      <did>
-                        <container type="volume" label="Volume">13</container><unittitle>Simon Taylor Account Journal, <unitdate type="inclusive">1812</unitdate>
+                        <unittitle>Simon Taylor Account Journal, <unitdate type="inclusive">1812</unitdate>
                         </unittitle>
-                     </did>
+                     <note><p>Vol. 13</p></note></did>
                   </c04>
                   <c04 level="file">
                      <did>
-                        <container type="volume" label="Volume">14</container><unittitle>Robert Taylor, Account Journal, <unitdate type="inclusive">1812</unitdate>
+                        <unittitle>Robert Taylor, Account Journal, <unitdate type="inclusive">1812</unitdate>
                         </unittitle>
-                     </did>
+                     <note><p>Vol. 14</p></note></did>
                   </c04>
                   <c04 level="file">
                      <did>
                         <container type="volume" label="Volume">15</container>
                         <unittitle>Robert Taylor, Account Journal, <unitdate type="inclusive">1821</unitdate>
                         </unittitle>
-                     </did>
+                     <note><p>Vol. 15</p></note></did>
                   </c04>
                   
                   <c04 level="file">
@@ -3844,9 +3844,9 @@
                   </c04>
                <c04 level="file">
                      <did>
-                        <container label="Volume" type="volume">16</container><unittitle>Robert Taylor, Account Journal with misc. papers, <unitdate type="inclusive">1834-1849</unitdate>
+                        <container label="Volumes" type="volume">16-17</container><unittitle>Robert Taylor, Account Journal with misc. papers, <unitdate type="inclusive">1834-1849</unitdate>
                         </unittitle>
-                     </did>
+                     <note><p>Vol. 16</p></note></did>
                   </c04></c03>
             </c02>
             <c02 level="subseries">
@@ -3897,7 +3897,7 @@
          </c01>
          <c01 level="series">
             <did>
-               <unittitle>Tailyour Family (bulk post-1815)</unittitle>
+               <unittitle>Tailyour Family <unitdate type="bulk">post-1815</unitdate></unittitle>
             </did>
             <c02 level="subseries">
                <did>
@@ -4051,7 +4051,7 @@
                   </did>
                </c03>
             </c02>
-            <c02 level="subseries"><did><unittitle>Letterbooks</unittitle></did><scopecontent><p>The five letterbooks contain correspondence predominantly written from Great Britain and mostly detail financial and businesss affairs.</p></scopecontent><c03 level="item"><did><container label="Volume" type="volume">17</container><unittitle>Tailyour Letterbook, <unitdate>1796-1802</unitdate></unittitle></did></c03><c03 level="item"><did><container label="Volume" type="volume">18</container><unittitle>Alexander Renny Tailyour Letterbook, <unitdate>1815-1822</unitdate></unittitle></did></c03><c03 level="item"><did><container label="Volume" type="volume">19</container><unittitle>Alexander Renny Tailyour Letterbook, <unitdate>1823-1833</unitdate></unittitle></did></c03><c03 level="item"><did><container label="Volume" type="volume">20</container><unittitle>Alexander Renny Tailyour Letterbook, <unitdate>1833-1849</unitdate></unittitle></did></c03><c03 level="item"><did><container label="Volume" type="volume">21</container><unittitle>Thomas Renny Tailyour Letterbook, <unitdate>1854-1858</unitdate></unittitle></did></c03></c02><c02 level="subseries"><did><unittitle>Account Books</unittitle></did><scopecontent><p>The Tailyour Family Account Books consist of four volumes, primarily concerning the finances of Alexander Renny Tailyour in England and Scotland.</p></scopecontent><c03 level="item"><did><container label="Volume" type="volume">22</container><unittitle>Alexander Renny Tailyour Account "Journal," <unitdate>1796-1816</unitdate></unittitle></did></c03><c03 level="item"><did><container label="Volume" type="volume">23</container><unittitle>Alexander Renny Tailyour Account "Ledger," <unitdate>1797-1816</unitdate></unittitle></did></c03><c03 level="item"><did><container label="Volume" type="volume">24</container><unittitle>Alexander Renny Tailyour Account "Ledger," <unitdate>1816-1848</unitdate></unittitle></did></c03><c03 level="item"><did><container label="Volume" type="volume">25</container><unittitle>Tailyour Rent Book, <unitdate>1825-1848</unitdate></unittitle></did></c03></c02><c02 level="subseries">
+            <c02 level="subseries"><did><unittitle>Letterbooks</unittitle></did><scopecontent><p>The five letterbooks contain correspondence predominantly written from Great Britain and mostly detail financial and businesss affairs.</p></scopecontent><c03 level="item"><did><container label="Volumes" type="volume">16-17</container><unittitle>Tailyour Letterbook, <unitdate>1796-1802</unitdate></unittitle><note><p>Vol. 17</p></note></did></c03><c03 level="item"><did><container label="Volume" type="volume">18</container><unittitle>Alexander Renny Tailyour Letterbook, <unitdate>1815-1822</unitdate></unittitle><note><p>Vol. 18</p></note></did></c03><c03 level="item"><did><container label="Volumes" type="volume">19-20</container><unittitle>Alexander Renny Tailyour Letterbook, <unitdate>1823-1833</unitdate></unittitle><note><p>Vol. 19</p></note></did></c03><c03 level="item"><did><unittitle>Alexander Renny Tailyour Letterbook, <unitdate>1833-1849</unitdate></unittitle><note><p>Vol. 20</p></note></did></c03><c03 level="item"><did><container label="Volumes" type="volume">21-22</container><unittitle>Thomas Renny Tailyour Letterbook, <unitdate>1854-1858</unitdate></unittitle><note><p>Vol. 21</p></note></did></c03></c02><c02 level="subseries"><did><unittitle>Account Books</unittitle></did><scopecontent><p>The Tailyour Family Account Books consist of four volumes, primarily concerning the finances of Alexander Renny Tailyour in England and Scotland.</p></scopecontent><c03 level="item"><did><container label="Volumes" type="volume">21-22</container><unittitle>Alexander Renny Tailyour Account "Journal," <unitdate>1796-1816</unitdate></unittitle><note><p>Vol. 22</p></note></did></c03><c03 level="item"><did><container label="Volume" type="volume">23</container><unittitle>Alexander Renny Tailyour Account "Ledger," <unitdate>1797-1816</unitdate></unittitle><note><p>Vol. 23</p></note></did></c03><c03 level="item"><did><container label="Volumes" type="volume">24-25</container><unittitle>Alexander Renny Tailyour Account "Ledger," <unitdate>1816-1848</unitdate></unittitle><note><p>Vol. 24</p></note></did></c03><c03 level="item"><did><unittitle>Tailyour Rent Book, <unitdate>1825-1848</unitdate></unittitle><note><p>Vol. 25</p></note></did></c03></c02><c02 level="subseries">
                <did>
                   <unittitle>Military</unittitle>
                </did>
@@ -4060,7 +4060,7 @@
                </scopecontent>
                <c03 level="file">
                   <did>
-                     <unittitle>Military Commissions, <unitdate type="inclusive">11 July 1864-29 January 1925</unitdate>
+                     <container label="Box" type="box">25</container><unittitle>Military Commissions, <unitdate type="inclusive">11 July 1864-29 January 1925</unitdate>
                      </unittitle>
                      <physdesc>
                         <extent>6 items</extent>
@@ -4130,7 +4130,7 @@
                </c03>
                <c03 level="file">
                   <did>
-                     <container label="Box" type="box">25</container><unittitle>Tailyour, Mrs. H. WWI Journal, <unitdate type="inclusive">1915-1916</unitdate>
+                     <unittitle>Tailyour, Mrs. H. WWI Journal, <unitdate type="inclusive">1915-1916</unitdate>
                      </unittitle>
                      <physdesc>
                         <extent>1 item</extent>

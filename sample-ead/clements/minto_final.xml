@@ -2405,15 +2405,13 @@
                </c03>
                <c03 level="item">
                   <did>
-                     <unittitle>13. <unitdate>3 February 1786</unitdate>: Diploma from the University of Aberdeen for the degree of LL.D. for Walter Minto. </unittitle>
-                     <note>
-                        <p>Housed in Oversize Manuscripts. </p>
-                     </note>
+                     <container label="Folder" type="drawer">1: Oversize Manuscripts</container><unittitle>13. <unitdate>3 February 1786</unitdate>: Diploma from the University of Aberdeen for the degree of LL.D. for Walter Minto. </unittitle>
+                     
                   </did>
                </c03>
                <c03 level="item">
                   <did>
-                     <unittitle>14. <unitdate>20 May 1786</unitdate>: Certificate of Walter Minto's membership in the Orange Society, Edinburgh, signed by Selkirk Steuart, president, and James Wright, secretary. </unittitle>
+                     <container label="Box" type="box">3</container><container label="Folder" type="folder">4</container><unittitle>14. <unitdate>20 May 1786</unitdate>: Certificate of Walter Minto's membership in the Orange Society, Edinburgh, signed by Selkirk Steuart, president, and James Wright, secretary. </unittitle>
                   </did>
                </c03>
                <c03 level="item">
@@ -4437,10 +4435,8 @@
             <p>
                <title href="http://mirlyn.lib.umich.edu/F/?func=direct&amp;doc_number=004644861&amp;local_base=AA_PUB" show="replace" actuate="onrequest">Certificate of Walter Minto's honorary membership in the St. Andrew's Society of New York.</title>
             </p>
-            <p>
-               <emph render="bold">Materials housed in Small Oversize:</emph>
-            </p>
-            <p>Walter Minto's diploma from the University of Aberdeen</p>
+            
+            
          </separatedmaterial>
          <relatedmaterial>
             <p>Princeton University Library:   The Department of Rare Books and Special Collections at the Princeton University Library has letters of Minto in its miscellaneous manuscripts collection about the business of the College of New Jersey between 1787 and 1796, when Minto was a professor there, as well as two volumes of notes from his course on mathematics.</p>
