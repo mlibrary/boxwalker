@@ -15,8 +15,7 @@ RSpec.describe FindingAid::DeleteFromIndex do
 
   it 'deletes documents matching the ead id and commits' do
     expect { described_class.call(eadid) }.not_to raise_error
-    expect(connection).to have_received(:delete_by_query).with("ead_ssi:#{eadid}")
-    expect(connection).to have_received(:delete_by_query).with("parent_ssim:#{eadid}")
+    expect(connection).to have_received(:delete_by_query).with("_root_:#{eadid}")
     expect(connection).to have_received(:delete_by_query).with("id:#{eadid}")
     expect(connection).to have_received(:commit)
   end
