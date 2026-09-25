@@ -80,11 +80,11 @@ RSpec.describe "Catalog redirects", type: :request do
       "renamed.root" => "current.root"
     }.freeze)
 
-    get "/catalog/former-root_aspace_123"
+    get "/catalog/former-root_ASPACE.123"
 
     expect(response).to have_http_status(:moved_permanently)
     expect(response.location).to eq(
-      "http://www.example.com/catalog/current.root_aspace_123"
+      "http://www.example.com/catalog/current.root_aspace.123"
     )
   end
 end

@@ -38,7 +38,7 @@ RSpec.describe "um_arclight/traject/ead2_config.rb" do
         "<eadid>Umich-BHL-032.1</eadid>"
       ).sub(
         'id="aspace_4741cf8cff30c4c9418385776b6c5c75"',
-        'id="ASPACE_4741CF8CFF30C4C9418385776B6C5C75"'
+        'id="ASPACE.4741CF8CFF30C4C9418385776B6C5C75"'
       )
       record = CompressedReader.new(StringIO.new(source), {}).first
       indexer = Traject::Indexer::NokogiriIndexer.new.tap do |i|
@@ -54,7 +54,7 @@ RSpec.describe "um_arclight/traject/ead2_config.rb" do
       expect(mixed_case_result["id"]).to eq [ "umich-bhl-032.1" ]
       expect(mixed_case_result["ead_ssi"]).to eq [ "Umich-BHL-032.1" ]
       expect(mixed_case_result["components"].first["id"]).to eq(
-        [ "umich-bhl-032.1_aspace_4741cf8cff30c4c9418385776b6c5c75" ]
+        [ "umich-bhl-032.1_aspace.4741cf8cff30c4c9418385776b6c5c75" ]
       )
     end
 

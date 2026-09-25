@@ -80,8 +80,8 @@ RSpec.describe FindingAid::RedirectResolver do
     end
 
     it "looks up the root case-insensitively" do
-      expect(resolver.resolve("FORMER-ROOT_ASPACE_123"))
-        .to eq("current.root_aspace_123")
+      expect(resolver.resolve("FORMER-ROOT_ASPACE.123"))
+        .to eq("current.root_aspace.123")
     end
 
     it "leaves a component with a current root unchanged" do
