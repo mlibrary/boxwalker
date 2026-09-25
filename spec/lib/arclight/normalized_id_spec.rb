@@ -3,7 +3,7 @@
 require "rails_helper"
 
 RSpec.describe Arclight::NormalizedId do
-  it "preserves dots and case" do
+  it "preserves dots and canonicalizes case" do
     normalized_id = described_class.new(
       "  Umich-WCL-F-103.1dub  ",
       unitid: "unused",
@@ -11,7 +11,7 @@ RSpec.describe Arclight::NormalizedId do
       repository: "unused"
     )
 
-    expect(normalized_id.to_s).to eq("Umich-WCL-F-103.1dub")
+    expect(normalized_id.to_s).to eq("umich-wcl-f-103.1dub")
   end
 
   it "rejects a blank id" do

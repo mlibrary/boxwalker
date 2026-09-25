@@ -9,7 +9,7 @@ module Arclight
     def to_s
       raise Arclight::Exceptions::IDNotFound if id.blank?
 
-      id.strip
+      id.strip.downcase
     end
 
     private
