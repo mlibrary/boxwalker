@@ -6,7 +6,6 @@ require "traject/nokogiri_reader"
 require "traject_plus"
 require "traject_plus/macros"
 require "arclight/level_label"
-require "arclight/normalized_id"
 require "arclight/normalized_date"
 require "arclight/normalized_title"
 require "active_model/conversion" ## Needed for Arclight::Repository
@@ -15,6 +14,7 @@ require "arclight/digital_object"
 require "arclight/year_range"
 require "arclight/repository"
 require "arclight/traject/nokogiri_namespaceless_reader"
+require_relative "../normalized_id"
 
 # rubocop:disable Style/MixinUsage
 extend TrajectPlus::Macros
@@ -58,7 +58,7 @@ DESCGRP_FIELDS = %w[
 
 settings do
   provide "component_traject_config", File.join(__dir__, "ead2_component_config.rb")
-  provide "id_normalizer", "Arclight::NormalizedId"
+  provide "id_normalizer", "UmArclight::NormalizedId"
   provide "date_normalizer", "Arclight::NormalizedDate"
   provide "title_normalizer", "Arclight::NormalizedTitle"
   provide "reader_class_name", "Arclight::Traject::NokogiriNamespacelessReader"
@@ -102,10 +102,14 @@ to_field "title_filing_ssi", extract_xpath('/ead/eadheader/filedesc/titlestmt/ti
 to_field "title_ssm", extract_xpath("/ead/archdesc/did/unittitle")
 to_field "title_tesim", extract_xpath("/ead/archdesc/did/unittitle")
 to_field "ead_ssi", extract_xpath("/ead/eadheader/eadid")
+to_field "publicid_ssi", extract_xpath("/ead/eadheader/eadid/@publicid")
 
 to_field "unitdate_ssm", extract_xpath("/ead/archdesc/did/unitdate")
 to_field "unitdate_bulk_ssim", extract_xpath('/ead/archdesc/did/unitdate[@type="bulk"]')
 to_field "unitdate_inclusive_ssm", extract_xpath('/ead/archdesc/did/unitdate[@type="inclusive"]')
+to_field "collection_date_inclusive_ssm",
+         extract_xpath('/ead/archdesc/did/unitdate[@type="inclusive"]|' \
+                       '/ead/archdesc/did/unittitle/unitdate[@type="inclusive"]')
 to_field "unitdate_other_ssim", extract_xpath("/ead/archdesc/did/unitdate[not(@type)]")
 
 # All top-level docs treated as 'collection' for routing / display purposes
@@ -124,6 +128,7 @@ end
 
 to_field "unitid_ssm", extract_xpath("/ead/archdesc/did/unitid")
 to_field "unitid_tesim", extract_xpath("/ead/archdesc/did/unitid")
+to_field "collection_unitid_ssm", extract_xpath("/ead/archdesc/did/unitid")
 
 to_field "normalized_date_ssm" do |_record, accumulator, context|
   accumulator << settings["date_normalizer"].constantize.new(
@@ -147,6 +152,10 @@ to_field "collection_ssim" do |_record, accumulator, context|
   accumulator.concat context.output_hash.fetch("normalized_title_ssm", [])
 end
 
+to_field "collection_ssm" do |_record, accumulator, context|
+  accumulator.concat context.output_hash.fetch("normalized_title_ssm", [])
+end
+
 to_field "repository_ssm" do |_record, accumulator, context|
   accumulator << context.clipboard[:repository]
 end
@@ -160,6 +169,7 @@ to_field "geogname_ssim", extract_xpath("/ead/archdesc/controlaccess/geogname")
 
 to_field "creator_ssm", extract_xpath("/ead/archdesc/did/origination")
 to_field "creator_ssim", extract_xpath("/ead/archdesc/did/origination")
+to_field "collection_creator_ssm", extract_xpath("/ead/archdesc/did/origination")
 to_field "creator_sort" do |record, accumulator|
   accumulator << record.xpath("/ead/archdesc/did/origination").map { |c| c.text.strip }.join(", ")
 end
@@ -304,6 +314,8 @@ DID_SEARCHABLE_NOTES_FIELDS.map do |selector|
   to_field "#{selector}_html_tesm", extract_xpath("/ead/archdesc/did/#{selector}", to_text: false)
   to_field "#{selector}_tesim", extract_xpath("/ead/archdesc/did/#{selector}")
 end
+
+to_field "collection_physloc_tesim", extract_xpath("/ead/archdesc/did/physloc")
 
 NAME_ELEMENTS.map do |selector|
   to_field "names_coll_ssim", extract_xpath("/ead/archdesc/controlaccess/#{selector}")

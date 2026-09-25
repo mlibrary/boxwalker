@@ -19,15 +19,27 @@ class SolrDocument
   end
 
   def physloc
-    fetch("collection_physloc_tesim", [])[0]
+    first("collection_physloc_tesim") || collection&.first("physloc_tesim")
   end
 
   def collection_date
-    fetch("collection_date_inclusive_ssm", [])[0]
+    first("collection_date_inclusive_ssm") || collection&.first("unitdate_inclusive_ssm")
   end
 
   def collection_creator
-    fetch("collection_creator_ssm", [])[0]
+    first("collection_creator_ssm") || super
+  end
+
+  def collection_name
+    first("collection_ssm") || super
+  end
+
+  def collection_unitid
+    first("collection_unitid_ssm") || super
+  end
+
+  def request_field(field)
+    first(field)
   end
 
   def repository
@@ -62,8 +74,8 @@ class SolrDocument
     component? && (accessrestrict.present? || userestrict.present? || phystech.present?)
   end
 
-  def document_id
-    fetch("ead_ssi", nil)&.strip
+  def finding_aid_id
+    root&.strip
   end
 
   def is_linkable?
