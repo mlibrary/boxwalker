@@ -10,8 +10,6 @@ module FindingAid
 
     def resolve(id)
       current_id = id.downcase
-      return unless redirect_map.key?(current_id)
-
       path = []
       position_by_id = {}
 
@@ -23,10 +21,14 @@ module FindingAid
 
         position_by_id[current_id] = path.length
         path << current_id
-        current_id = redirect_map.fetch(current_id)
+        current_id = redirect_map.fetch(current_id).downcase
       end
 
       current_id
+    end
+
+    def redirect?(id)
+      resolve(id) != id
     end
 
     private

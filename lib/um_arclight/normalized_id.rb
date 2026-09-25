@@ -1,6 +1,9 @@
 # frozen_string_literal: true
 
-module Arclight
+require "active_support/core_ext/object/blank"
+require "arclight/exceptions"
+
+module UmArclight
   class NormalizedId
     def initialize(id, **_kwargs)
       @id = id

@@ -15,6 +15,15 @@ RSpec.describe "Catalog redirects", type: :request do
     expect(response.location).to eq("http://www.example.com/catalog/current.id")
   end
 
+  it "preserves query parameters" do
+    stub_const("REDIRECT_MAP", { "former.id" => "current.id" }.freeze)
+
+    get "/catalog/former.id", params: { search_id: "123" }
+
+    expect(response).to have_http_status(:moved_permanently)
+    expect(response.location).to eq("http://www.example.com/catalog/current.id?search_id=123")
+  end
+
   it "redirects an intermediate id directly to the final current id" do
     stub_const("REDIRECT_MAP", {
       "former.id" => "renamed.id",
@@ -34,5 +43,34 @@ RSpec.describe "Catalog redirects", type: :request do
 
     expect(response).to have_http_status(:moved_permanently)
     expect(response.location).to eq("http://www.example.com/catalog/current.id")
+  end
+
+  it "redirects a mixed-case current id to its lowercase canonical id" do
+    stub_const("REDIRECT_MAP", {}.freeze)
+
+    get "/catalog/Current.ID"
+
+    expect(response).to have_http_status(:moved_permanently)
+    expect(response.location).to eq("http://www.example.com/catalog/current.id")
+  end
+
+  it "canonicalizes ids on download routes" do
+    stub_const("REDIRECT_MAP", { "former.id" => "current.id" }.freeze)
+
+    get "/catalog/FORMER.ID/xml"
+
+    expect(response).to have_http_status(:moved_permanently)
+    expect(response.location).to eq("http://www.example.com/catalog/current.id/xml")
+  end
+
+  it "canonicalizes ids on hierarchy routes" do
+    stub_const("REDIRECT_MAP", { "former.id" => "current.id" }.freeze)
+
+    get "/catalog/FORMER.ID/hierarchy", params: { hierarchy: "true" }
+
+    expect(response).to have_http_status(:moved_permanently)
+    expect(response.location).to eq(
+      "http://www.example.com/catalog/current.id/hierarchy?hierarchy=true"
+    )
   end
 end

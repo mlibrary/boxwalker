@@ -14,8 +14,8 @@ RSpec.describe FindingAid::RedirectResolver do
       expect(resolver.resolve("c")).to eq("d")
     end
 
-    it "does not redirect the current id" do
-      expect(resolver.resolve("d")).to be_nil
+    it "returns the current id unchanged" do
+      expect(resolver.resolve("d")).to eq("d")
     end
   end
 
@@ -31,12 +31,33 @@ RSpec.describe FindingAid::RedirectResolver do
     end
   end
 
+  context "when the id has not been renamed" do
+    let(:redirect_map) { {} }
+
+    it "canonicalizes its case" do
+      expect(resolver.resolve("Current.ID")).to eq("current.id")
+    end
+
+    it "only redirects noncanonical ids" do
+      expect(resolver).to be_redirect("Current.ID")
+      expect(resolver).not_to be_redirect("current.id")
+    end
+  end
+
   context "when the map contains a cycle" do
     let(:redirect_map) { { "a" => "b", "b" => "c", "c" => "a" } }
 
     it "raises an error containing the cycle" do
       expect { resolver.resolve("a") }
         .to raise_error(described_class::CycleError, "Redirect cycle detected: a -> b -> c -> a")
+    end
+  end
+
+  context "when a target is not lowercase" do
+    let(:redirect_map) { { "former.id" => "Current.ID" } }
+
+    it "returns a canonical lowercase target" do
+      expect(resolver.resolve("former.id")).to eq("current.id")
     end
   end
 end

@@ -53,9 +53,6 @@ bundle install
 # bin/rails db:prepare 
 # Development Rails server using Solr container
 SOLR_URL=http://localhost:8983/solr/blacklight-collection bin/dev
-
-# NOTE: If you are debugging you may wish to limit Puma to a single thread.
-RAILS_MAX_THREADS=1 SOLR_URL=http://localhost:8983/solr/blacklight-collection bin/dev
 ```
 
 ##### Command shell

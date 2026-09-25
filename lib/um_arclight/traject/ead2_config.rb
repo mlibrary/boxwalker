@@ -6,7 +6,6 @@ require "traject/nokogiri_reader"
 require "traject_plus"
 require "traject_plus/macros"
 require "arclight/level_label"
-require "arclight/normalized_id"
 require "arclight/normalized_date"
 require "arclight/normalized_title"
 require "active_model/conversion" ## Needed for Arclight::Repository
@@ -15,6 +14,7 @@ require "arclight/digital_object"
 require "arclight/year_range"
 require "arclight/repository"
 require "arclight/traject/nokogiri_namespaceless_reader"
+require_relative "../normalized_id"
 
 # rubocop:disable Style/MixinUsage
 extend TrajectPlus::Macros
@@ -58,7 +58,7 @@ DESCGRP_FIELDS = %w[
 
 settings do
   provide "component_traject_config", File.join(__dir__, "ead2_component_config.rb")
-  provide "id_normalizer", "Arclight::NormalizedId"
+  provide "id_normalizer", "UmArclight::NormalizedId"
   provide "date_normalizer", "Arclight::NormalizedDate"
   provide "title_normalizer", "Arclight::NormalizedTitle"
   provide "reader_class_name", "Arclight::Traject::NokogiriNamespacelessReader"

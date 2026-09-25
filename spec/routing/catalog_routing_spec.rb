@@ -21,4 +21,12 @@ RSpec.describe "catalog routing", type: :routing do
       id: "current.finding-aid"
     )
   end
+
+  it "routes an unmapped mixed-case id to the redirect action" do
+    expect(get: "/catalog/Current.Finding-Aid").to route_to(
+      controller: "catalog",
+      action: "permanent_id_redirect",
+      id: "Current.Finding-Aid"
+    )
+  end
 end

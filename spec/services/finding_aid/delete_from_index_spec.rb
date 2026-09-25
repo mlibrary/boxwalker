@@ -20,7 +20,7 @@ RSpec.describe FindingAid::DeleteFromIndex do
   end
 
   it 'escapes the Solr document id' do
-    described_class.call("eadid:slug")
+    described_class.call(" EADID:Slug ")
 
     expect(connection).to have_received(:delete_by_query).with("_root_:eadid\\:slug")
   end

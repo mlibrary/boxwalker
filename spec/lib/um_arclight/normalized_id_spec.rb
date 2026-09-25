@@ -2,7 +2,7 @@
 
 require "rails_helper"
 
-RSpec.describe Arclight::NormalizedId do
+RSpec.describe UmArclight::NormalizedId do
   it "preserves dots and canonicalizes case" do
     normalized_id = described_class.new(
       "  Umich-WCL-F-103.1dub  ",
