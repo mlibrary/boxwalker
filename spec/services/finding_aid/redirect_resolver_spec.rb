@@ -54,10 +54,10 @@ RSpec.describe FindingAid::RedirectResolver do
   end
 
   context "when a target is not lowercase" do
-    let(:redirect_map) { { "former.id" => "Current.ID" } }
+    let(:redirect_map) { { "former.id" => " Current.ID " } }
 
-    it "returns a canonical lowercase target" do
-      expect(resolver.resolve("former.id")).to eq("current.id")
+    it "returns a stripped, lowercase canonical target" do
+      expect(resolver.resolve(" Former.ID ")).to eq("current.id")
     end
   end
 end

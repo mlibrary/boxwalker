@@ -9,7 +9,7 @@ module FindingAid
     end
 
     def resolve(id)
-      current_id = id.downcase
+      current_id = normalize(id)
       path = []
       position_by_id = {}
 
@@ -21,7 +21,7 @@ module FindingAid
 
         position_by_id[current_id] = path.length
         path << current_id
-        current_id = redirect_map.fetch(current_id).downcase
+        current_id = normalize(redirect_map.fetch(current_id))
       end
 
       current_id
@@ -34,5 +34,9 @@ module FindingAid
     private
 
     attr_reader :redirect_map
+
+    def normalize(id)
+      UmArclight::NormalizedId.new(id).to_s
+    end
   end
 end
