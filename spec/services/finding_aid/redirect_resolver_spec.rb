@@ -60,4 +60,47 @@ RSpec.describe FindingAid::RedirectResolver do
       expect(resolver.resolve(" Former.ID ")).to eq("current.id")
     end
   end
+
+  context "when the id belongs to a component" do
+    let(:redirect_map) do
+      {
+        "former-root" => "renamed.root",
+        "renamed.root" => "current.root"
+      }
+    end
+
+    it "replaces the former root and preserves the component suffix" do
+      expect(resolver.resolve("former-root_aspace_123"))
+        .to eq("current.root_aspace_123")
+    end
+
+    it "resolves an intermediate root directly to the current root" do
+      expect(resolver.resolve("renamed.root_aspace_123"))
+        .to eq("current.root_aspace_123")
+    end
+
+    it "looks up the root case-insensitively" do
+      expect(resolver.resolve("FORMER-ROOT_ASPACE_123"))
+        .to eq("current.root_aspace_123")
+    end
+
+    it "leaves a component with a current root unchanged" do
+      expect(resolver.resolve("current.root_aspace_123"))
+        .to eq("current.root_aspace_123")
+    end
+  end
+
+  context "when redirect roots share a prefix" do
+    let(:redirect_map) do
+      {
+        "former" => "wrong.root",
+        "former_root" => "current.root"
+      }
+    end
+
+    it "uses the longest matching root" do
+      expect(resolver.resolve("former_root_aspace_123"))
+        .to eq("current.root_aspace_123")
+    end
+  end
 end

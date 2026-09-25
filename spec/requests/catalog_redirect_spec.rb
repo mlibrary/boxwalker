@@ -73,4 +73,18 @@ RSpec.describe "Catalog redirects", type: :request do
       "http://www.example.com/catalog/current.id/hierarchy?hierarchy=true"
     )
   end
+
+  it "permanently redirects a component when its finding aid id changed" do
+    stub_const("REDIRECT_MAP", {
+      "former-root" => "renamed.root",
+      "renamed.root" => "current.root"
+    }.freeze)
+
+    get "/catalog/former-root_aspace_123"
+
+    expect(response).to have_http_status(:moved_permanently)
+    expect(response.location).to eq(
+      "http://www.example.com/catalog/current.root_aspace_123"
+    )
+  end
 end
