@@ -9,6 +9,7 @@ module UmArclight
 
     included do
       if respond_to?(:before_action)
+        before_action :redirect_noncanonical_id, only: [ :ead_download, :html_download, :pdf_download, :hierarchy ]
         before_action :setup_download_utility, only: [ :ead_download, :html_download, :pdf_download ]
       end
 
@@ -79,6 +80,14 @@ module UmArclight
       )
     end
 
+    def permanent_id_redirect
+      target_id = redirect_resolver.resolve(params[:id])
+
+      redirect_to solr_document_path(**request.query_parameters.symbolize_keys, id: target_id),
+                  status: :moved_permanently,
+                  allow_other_host: false
+    end
+
     def pdf_available?
       setup_download_utility
       download_utility.pdf_available?
@@ -96,6 +105,19 @@ module UmArclight
     end
 
     private
+
+    def redirect_noncanonical_id
+      target_id = redirect_resolver.resolve(params[:id])
+      return if target_id == params[:id]
+
+      redirect_to url_for(request.path_parameters.merge(request.query_parameters).merge(id: target_id, only_path: true)),
+                  status: :moved_permanently,
+                  allow_other_host: false
+    end
+
+    def redirect_resolver
+      @redirect_resolver ||= FindingAid::RedirectResolver.new(redirect_map: REDIRECT_MAP)
+    end
 
     def setup_download_utility
       @document = search_service.fetch(params[:id])

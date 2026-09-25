@@ -62,8 +62,8 @@ class SolrDocument
     component? && (accessrestrict.present? || userestrict.present? || phystech.present?)
   end
 
-  def document_id
-    fetch("ead_ssi", nil)&.strip
+  def finding_aid_id
+    root&.strip
   end
 
   def is_linkable?
