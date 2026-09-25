@@ -9,11 +9,11 @@ module FindingAid
     end
 
     def resolve(id)
-      return unless redirect_map.key?(id)
+      current_id = id.downcase
+      return unless redirect_map.key?(current_id)
 
       path = []
       position_by_id = {}
-      current_id = id
 
       while redirect_map.key?(current_id)
         if position_by_id.key?(current_id)

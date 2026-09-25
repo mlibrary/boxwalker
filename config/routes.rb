@@ -23,7 +23,7 @@ Rails.application.routes.draw do
 
   constraints(id: dynamic_constraint) do
     get "/catalog/:id", to: "catalog#permanent_id_redirect", constraints: lambda { |request|
-      REDIRECT_MAP.key?(request.path_parameters[:id])
+      REDIRECT_MAP.key?(request.path_parameters[:id].downcase)
     }
   end
 

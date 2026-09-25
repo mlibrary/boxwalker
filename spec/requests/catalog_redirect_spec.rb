@@ -26,4 +26,13 @@ RSpec.describe "Catalog redirects", type: :request do
     expect(response).to have_http_status(:moved_permanently)
     expect(response.location).to eq("http://www.example.com/catalog/current.id")
   end
+
+  it "matches former ids case-insensitively" do
+    stub_const("REDIRECT_MAP", { "former.id" => "current.id" }.freeze)
+
+    get "/catalog/FORMER.ID"
+
+    expect(response).to have_http_status(:moved_permanently)
+    expect(response.location).to eq("http://www.example.com/catalog/current.id")
+  end
 end
