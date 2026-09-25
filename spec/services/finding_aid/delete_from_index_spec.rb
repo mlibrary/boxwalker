@@ -3,7 +3,7 @@
 require 'rails_helper'
 
 RSpec.describe FindingAid::DeleteFromIndex do
-  let(:document_id) { 'eadid.slug' }
+  let(:finding_aid_id) { 'eadid.slug' }
   let(:connection) { instance_double(RSolr::Client) }
   let(:index) { instance_double(Blacklight::Solr::Repository, connection: connection) }
 
@@ -14,7 +14,7 @@ RSpec.describe FindingAid::DeleteFromIndex do
   end
 
   it 'deletes the Solr document block and commits' do
-    expect { described_class.call(document_id) }.not_to raise_error
+    expect { described_class.call(finding_aid_id) }.not_to raise_error
     expect(connection).to have_received(:delete_by_query).with("_root_:eadid.slug")
     expect(connection).to have_received(:commit)
   end

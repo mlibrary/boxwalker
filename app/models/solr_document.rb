@@ -62,7 +62,7 @@ class SolrDocument
     component? && (accessrestrict.present? || userestrict.present? || phystech.present?)
   end
 
-  def document_id
+  def finding_aid_id
     root&.strip
   end
 
