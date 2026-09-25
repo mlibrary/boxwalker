@@ -1,4 +1,10 @@
+require_relative "redirect_map"
+
 Rails.application.routes.draw do
+  def dynamic_constraint
+    /[^\/]+/
+  end
+
   concern :range_searchable, BlacklightRangeLimit::Routes::RangeSearchable.new
   mount Blacklight::Engine => "/"
   mount Arclight::Engine => "/"
@@ -15,8 +21,15 @@ Rails.application.routes.draw do
   concern :exportable, Blacklight::Routes::Exportable.new
   concern :hierarchy, Arclight::Routes::Hierarchy.new
 
-  resources :solr_documents, only: [ :show ], path: "/catalog", controller: "catalog" do
-  concerns :hierarchy
+  constraints(id: dynamic_constraint) do
+    get "/catalog/:id", to: "catalog#permanent_id_redirect", constraints: lambda { |request|
+      REDIRECT_MAP.key?(request.path_parameters[:id])
+    }
+  end
+
+  resources :solr_documents, only: [ :show ], path: "/catalog", controller: "catalog",
+                             constraints: { id: dynamic_constraint } do
+    concerns :hierarchy
     concerns :exportable
   end
 

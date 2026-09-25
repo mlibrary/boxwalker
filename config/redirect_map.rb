@@ -1145,4 +1145,4 @@ REDIRECT_MAP = {
   "umich-scl-culephemeracocoaandchocolate" => "umich-scl-ams0305",
   "umich-scl-faulkner" => "umich-scl-ams0308",
   "umich-scl-asis" => "umich-scl-ams0325"
-}
+}.freeze

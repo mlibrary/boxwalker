@@ -79,6 +79,13 @@ module UmArclight
       )
     end
 
+    def permanent_id_redirect
+      target_id = redirect_resolver.resolve(params[:id])
+      raise ActionController::RoutingError, "Not Found" unless target_id
+
+      redirect_to solr_document_path(id: target_id), status: :moved_permanently, allow_other_host: false
+    end
+
     def pdf_available?
       setup_download_utility
       download_utility.pdf_available?
@@ -96,6 +103,10 @@ module UmArclight
     end
 
     private
+
+    def redirect_resolver
+      @redirect_resolver ||= FindingAid::RedirectResolver.new(redirect_map: REDIRECT_MAP)
+    end
 
     def setup_download_utility
       @document = search_service.fetch(params[:id])
