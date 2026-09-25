@@ -23,4 +23,29 @@ RSpec.describe SolrDocument do
       expect(document.finding_aid_id).to eq("umich-wcl-f-103.1dub")
     end
   end
+
+  describe "request metadata" do
+    subject(:document) do
+      described_class.new(
+        "collection_ssm" => [ "Test collection" ],
+        "collection_unitid_ssm" => [ "TEST 1" ],
+        "collection_physloc_tesim" => [ "Offsite" ],
+        "collection_date_inclusive_ssm" => [ "1900-1950" ],
+        "collection_creator_ssm" => [ "Test creator" ],
+        "publicid_ssi" => "-//example//TEXT sample.xml//EN"
+      )
+    end
+
+    it "reads denormalized collection fields from standalone component documents" do
+      expect(document.collection_name).to eq("Test collection")
+      expect(document.collection_unitid).to eq("TEST 1")
+      expect(document.physloc).to eq("Offsite")
+      expect(document.collection_date).to eq("1900-1950")
+      expect(document.collection_creator).to eq("Test creator")
+    end
+
+    it "reads a configured Aeon request field" do
+      expect(document.request_field("publicid_ssi")).to eq("-//example//TEXT sample.xml//EN")
+    end
+  end
 end

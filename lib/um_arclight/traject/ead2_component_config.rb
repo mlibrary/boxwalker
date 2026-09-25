@@ -64,6 +64,12 @@ DID_SEARCHABLE_NOTES_FIELDS = %w[
   note
 ].freeze
 
+RESTRICTION_FIELDS = %w[
+  accessrestrict
+  userestrict
+  phystech
+].freeze
+
 # ==================
 # Component elements
 #
@@ -162,8 +168,36 @@ to_field "repository_ssm" do |_record, accumulator, _context|
   accumulator << settings[:root].clipboard[:repository]
 end
 
+to_field "ead_ssi" do |_record, accumulator, _context|
+  accumulator.concat settings[:root].output_hash.fetch("ead_ssi", [])
+end
+
+to_field "publicid_ssi" do |_record, accumulator, _context|
+  accumulator.concat settings[:root].output_hash.fetch("publicid_ssi", [])
+end
+
 to_field "collection_ssim" do |_record, accumulator, _context|
   accumulator.concat settings[:root].output_hash["normalized_title_ssm"]
+end
+
+to_field "collection_ssm" do |_record, accumulator, _context|
+  accumulator.concat settings[:root].output_hash["normalized_title_ssm"]
+end
+
+to_field "collection_unitid_ssm" do |_record, accumulator, _context|
+  accumulator.concat settings[:root].output_hash.fetch("collection_unitid_ssm", [])
+end
+
+to_field "collection_physloc_tesim" do |_record, accumulator, _context|
+  accumulator.concat settings[:root].output_hash.fetch("collection_physloc_tesim", [])
+end
+
+to_field "collection_date_inclusive_ssm" do |_record, accumulator, _context|
+  accumulator.concat settings[:root].output_hash.fetch("collection_date_inclusive_ssm", [])
+end
+
+to_field "collection_creator_ssm" do |_record, accumulator, _context|
+  accumulator.concat settings[:root].output_hash.fetch("collection_creator_ssm", [])
 end
 
 # This accumulates direct text from a physdesc, ignoring child elements handled elsewhere
@@ -239,10 +273,10 @@ to_field "parent_access_restrict_tesm" do |record, accumulator|
                                    .map(&:text))
 end
 
-# Get the <userestrict> from self OR the closest ancestor that has one (includes top-level)
-to_field "parent_access_restrict_tesm" do |record, accumulator|
+# Get the <userestrict> from the closest ancestor that has one (includes top-level)
+to_field "parent_access_terms_tesm" do |record, accumulator|
   accumulator.concat Array
-                       .wrap(record.xpath('(./ancestor-or-self::*/userestrict | ./ancestor-or-self::*/descgrp/userestrict)[last()]/*[local-name()!="head"]')
+                       .wrap(record.xpath('(./ancestor::*/userestrict | ./ancestor::*/descgrp/userestrict)[last()]/*[local-name()!="head"]')
                                    .map(&:text))
 end
 
@@ -318,6 +352,21 @@ SEARCHABLE_NOTES_FIELDS.map do |selector|
   to_field "#{selector}_heading_ssm", extract_xpath("./#{selector}/head")
   to_field "#{selector}_tesim", extract_xpath("./#{selector}/*[local-name()!='head']")
 end
+
+# Inherit restrictions from the closest component ancestor when this component
+# does not define its own. Collection-level restrictions remain in parent_*.
+RESTRICTION_FIELDS.each do |selector|
+  ancestor_path = "./ancestor::*[#{selector}][ancestor::dsc][1]/#{selector}/*[local-name()!='head']"
+
+  to_field "#{selector}_html_tesm", extract_xpath(ancestor_path, to_text: false) do |_record, accumulator, context|
+    accumulator.replace([]) if context.output_hash["#{selector}_html_tesm"].present?
+  end
+
+  to_field "#{selector}_tesim", extract_xpath(ancestor_path) do |_record, accumulator, context|
+    accumulator.replace([]) if context.output_hash["#{selector}_tesim"].present?
+  end
+end
+
 DID_SEARCHABLE_NOTES_FIELDS.map do |selector|
   to_field "#{selector}_html_tesm", extract_xpath("./did/#{selector}", to_text: false)
   to_field "#{selector}_tesim", extract_xpath("./did/#{selector}")
@@ -327,6 +376,10 @@ to_field "container_types_ssim" do |record, accumulator|
   record.xpath("./did/container[normalize-space(@type)]").each do |node|
     accumulator << node["type"]
   end
+end
+
+to_field "total_digital_object_count_isim" do |record, accumulator|
+  accumulator << record.xpath(".//dao").count
 end
 
 # =============================

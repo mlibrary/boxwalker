@@ -231,10 +231,9 @@ module Package
       params = {
         fl: "*",
         # Components are indexed as Solr block-join child documents rooted at
-        # the collection's id (they carry no ead_ssi of their own), so harvest
-        # the whole nested block via the _root_ field.
+        # the collection's id, so harvest the whole nested block via _root_.
         q: [ "_root_:#{id}" ],
-        sort: "sort_ii asc, title_sort asc",
+        sort: "sort_isi asc, title_sort asc",
         start: 0,
         rows: 1000
       }
