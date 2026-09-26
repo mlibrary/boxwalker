@@ -390,6 +390,9 @@ class CatalogController < ApplicationController
     config.add_component_field "abstract", field: "abstract_html_tesm", helper_method: :render_html_tags
     config.add_component_field "extent", field: "extent_ssm"
     config.add_component_field "scopecontent", field: "scopecontent_html_tesm", helper_method: :render_html_tags
+    # UM customization: show related/separated material directly after scopecontent
+    config.add_component_field "relatedmaterial", field: "relatedmaterial_html_tesm", helper_method: :render_html_tags
+    config.add_component_field "separatedmaterial", field: "separatedmaterial_html_tesm", helper_method: :render_html_tags
     config.add_component_field "language", field: "language_ssim"
     config.add_component_field "acqinfo", field: "acqinfo_ssim", helper_method: :render_html_tags
     config.add_component_field "bioghist", field: "bioghist_html_tesm", helper_method: :render_html_tags
@@ -408,8 +411,6 @@ class CatalogController < ApplicationController
     config.add_component_field "altformavail", field: "altformavail_html_tesm", helper_method: :render_html_tags
     config.add_component_field "otherfindaid", field: "otherfindaid_html_tesm", helper_method: :render_html_tags
     config.add_component_field "odd", field: "odd_html_tesm", helper_method: :render_html_tags
-    config.add_component_field "relatedmaterial", field: "relatedmaterial_html_tesm", helper_method: :render_html_tags
-    config.add_component_field "separatedmaterial", field: "separatedmaterial_html_tesm", helper_method: :render_html_tags
     config.add_component_field "originalsloc", field: "originalsloc_html_tesm", helper_method: :render_html_tags
     config.add_component_field "note", field: "note_html_tesm", helper_method: :render_html_tags
 
