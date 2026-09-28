@@ -15,15 +15,15 @@ RSpec.describe FindingAid::DeleteGeneratedFiles do
     allow(index).to receive(:find).and_return(
       Blacklight::Solr::Response.new({
         "response": {
-          "docs": [{
+          "docs": [ {
             'id': eadid,
             'ead_ssi': eadid,
             'normalized_title_ssm': [ 'Finding Aid' ],
             'authors_creators_tesim': [ 'Finding Aid written by E. A. Document' ],
             'repository_ssm': [ 'University of Michigan Bentley Historical Library' ]
-          }]
+          } ]
         }
-      }, nil, blacklight_config: CatalogController.blacklight_config )
+      }, nil, blacklight_config: CatalogController.blacklight_config)
     )
     allow(ENV).to receive(:fetch).and_return(data_dir)
 
