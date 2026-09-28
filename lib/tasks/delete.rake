@@ -4,4 +4,3 @@ namespace :boxwalker do
     DeleteFindingAidJob.perform_later(args[:eadid])
   end
 end
-
