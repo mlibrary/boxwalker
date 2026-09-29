@@ -19,4 +19,9 @@ RSpec.describe FindingAid::DeleteFromIndex do
     expect(connection).to have_received(:delete_by_query).with("id:#{eadid}")
     expect(connection).to have_received(:commit)
   end
+
+  it 'escapes special characters in eadids that are relevant to Solr' do
+    expect { described_class.call("some*funky*eadid") }.not_to raise_error
+    expect(connection).to have_received(:delete_by_query).with("_root_:some\\*funky\\*eadid")
+  end
 end

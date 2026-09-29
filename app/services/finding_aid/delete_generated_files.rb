@@ -9,7 +9,7 @@ module FindingAid
         download_utility.pdf_file_path,
         download_utility.html_file_path,
         download_utility.xml_file_path
-      ])
+      ], force: true)
     end
   end
 end
