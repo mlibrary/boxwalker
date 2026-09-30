@@ -196,6 +196,9 @@ to_field "formats_ssm" do |_record, accumulator, context|
   accumulator.concat Array.wrap(context.output_hash["formats_ssim"])
 end
 
+# UM customization: Add title subjects from under control access
+to_field "title_subjects_ssim", extract_xpath("/ead/archdesc/controlaccess/title")
+
 to_field "has_online_content_ssim", extract_xpath(".//dao") do |_record, accumulator|
   accumulator.replace([ accumulator.any? ])
 end
