@@ -468,6 +468,9 @@ class CatalogController < ApplicationController
   private
 
   def default_to_grouped_results
-    params[:group] = "true" if params[:group].blank?
+    return if params.dig(:f, :collection).present?
+    return if %w[true false].include?(params[:group])
+
+    params[:group] = "true"
   end
 end
