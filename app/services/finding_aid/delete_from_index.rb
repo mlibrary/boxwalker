@@ -2,11 +2,10 @@
 
 module FindingAid
   class DeleteFromIndex
-    def self.call(eadid)
+    def self.call(finding_aid_id)
       connection = Blacklight.default_index.connection
-      connection.delete_by_query("ead_ssi:#{eadid}")
-      connection.delete_by_query("parent_ssim:#{eadid}")
-      connection.delete_by_query("id:#{eadid}")
+      normalized_id = UmArclight::NormalizedId.new(finding_aid_id).to_s
+      connection.delete_by_query("_root_:#{RSolr.solr_escape(normalized_id)}")
       connection.commit
     end
   end

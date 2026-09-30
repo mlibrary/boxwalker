@@ -48,6 +48,6 @@ class DownloadUtility
   end
 
   def ead_slug
-    document&.document_id || "ead_slug"
+    document&.finding_aid_id || "ead_slug"
   end
 end

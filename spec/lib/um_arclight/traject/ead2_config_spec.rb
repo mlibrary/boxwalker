@@ -31,6 +31,41 @@ RSpec.describe "um_arclight/traject/ead2_config.rb" do
       expect(result["ead_ssi"]).to eq [ "umich-bhl-032" ]
     end
 
+    it "maps collection metadata needed by request integrations" do
+      expect(result["collection_unitid_ssm"]).to include "032 Bimu 2"
+      expect(result["collection_date_inclusive_ssm"]).to include "1974-1996"
+      expect(result["collection_date_inclusive_ssm"]).to include "2004-2019"
+      expect(result["collection_creator_ssm"].first).to include "University of Michigan"
+      expect(result["collection_ssm"]).to eq result["normalized_title_ssm"]
+    end
+
+    it "uses a lowercase Solr id while preserving the source EAD id as metadata" do
+      fixture_path = Rails.root.join("spec/fixtures/bhl/umich-bhl-032.xml")
+      source = File.read(fixture_path).sub(
+        "<eadid>umich-bhl-032</eadid>",
+        "<eadid>Umich-BHL-032.1</eadid>"
+      ).sub(
+        'id="aspace_4741cf8cff30c4c9418385776b6c5c75"',
+        'id="ASPACE.4741CF8CFF30C4C9418385776B6C5C75"'
+      )
+      record = CompressedReader.new(StringIO.new(source), {}).first
+      indexer = Traject::Indexer::NokogiriIndexer.new.tap do |i|
+        i.settings do
+          provide "repository", "bhl"
+          provide "writer_class_name", "Traject::ArrayWriter"
+        end
+        i.load_config_file(Rails.root.join("lib/um_arclight/traject/ead2_config.rb"))
+      end
+
+      mixed_case_result = indexer.map_record(record)
+
+      expect(mixed_case_result["id"]).to eq [ "umich-bhl-032.1" ]
+      expect(mixed_case_result["ead_ssi"]).to eq [ "Umich-BHL-032.1" ]
+      expect(mixed_case_result["components"].first["id"]).to eq(
+        [ "umich-bhl-032.1_aspace.4741cf8cff30c4c9418385776b6c5c75" ]
+      )
+    end
+
     it "maps unitid_ssm" do
       expect(result["unitid_ssm"]).to include "032 Bimu 2"
     end
@@ -203,6 +238,14 @@ RSpec.describe "um_arclight/traject/ead2_config.rb" do
         expect(component["repository_ssim"]).to eq [ "University of Michigan Bentley Historical Library" ]
       end
 
+      it "carries collection metadata needed outside a nested Solr response" do
+        expect(component["ead_ssi"]).to eq result["ead_ssi"]
+        expect(component["collection_unitid_ssm"]).to eq result["collection_unitid_ssm"]
+        expect(component["collection_date_inclusive_ssm"]).to eq result["collection_date_inclusive_ssm"]
+        expect(component["collection_creator_ssm"]).to eq result["collection_creator_ssm"]
+        expect(component["collection_ssm"]).to eq result["normalized_title_ssm"]
+      end
+
       it "has component_level_isim of 1" do
         expect(component["component_level_isim"]).to eq [ 1 ]
       end
@@ -211,5 +254,65 @@ RSpec.describe "um_arclight/traject/ead2_config.rb" do
         expect(component["parent_ssi"]).to include "umich-bhl-032"
       end
     end
+  end
+
+  describe "legacy integration compatibility" do
+    it "indexes publicid on the collection and its components" do
+      source = File.read(Rails.root.join("spec/fixtures/bhl/umich-bhl-032.xml")).sub(
+        "<eadid>umich-bhl-032</eadid>",
+        '<eadid publicid="-//us::MiU//TEXT us::MiU::sample.xml//EN">umich-bhl-032</eadid>'
+      )
+
+      mapped = map_source(source)
+
+      expect(mapped["publicid_ssi"]).to eq [ "-//us::MiU//TEXT us::MiU::sample.xml//EN" ]
+      expect(mapped["components"].first["publicid_ssi"]).to eq(mapped["publicid_ssi"])
+    end
+
+    it "inherits component restrictions and counts descendant digital objects" do
+      mapped = map_source(<<~XML)
+        <ead>
+          <eadheader><eadid>Test.FindingAid</eadid></eadheader>
+          <archdesc level="collection">
+            <did><unittitle>Test collection</unittitle><unitid>TEST 1</unitid></did>
+            <accessrestrict><p>Collection access restriction</p></accessrestrict>
+            <userestrict><p>Collection use restriction</p></userestrict>
+            <dsc>
+              <c id="Series.MixedCase" level="series">
+                <did><unittitle>Series</unittitle></did>
+                <accessrestrict><p>Series access restriction</p></accessrestrict>
+                <userestrict><p>Series use restriction</p></userestrict>
+                <phystech><p>Series technical restriction</p></phystech>
+                <c id="Item.MixedCase" level="item">
+                  <did><unittitle>Item</unittitle></did>
+                  <dao href="https://example.com/item"/>
+                </c>
+              </c>
+            </dsc>
+          </archdesc>
+        </ead>
+      XML
+      series = mapped["components"].first
+      item = series["components"].first
+
+      expect(series["parent_access_restrict_tesm"]).to eq [ "Collection access restriction" ]
+      expect(series["parent_access_terms_tesm"]).to eq [ "Collection use restriction" ]
+      expect(item["accessrestrict_tesim"]).to eq [ "Series access restriction" ]
+      expect(item["userestrict_tesim"]).to eq [ "Series use restriction" ]
+      expect(item["phystech_tesim"]).to eq [ "Series technical restriction" ]
+      expect(series["total_digital_object_count_isim"]).to eq [ 1 ]
+      expect(item["total_digital_object_count_isim"]).to eq [ 1 ]
+    end
+  end
+
+  def map_source(source)
+    record = CompressedReader.new(StringIO.new(source), {}).first
+    Traject::Indexer::NokogiriIndexer.new.tap do |indexer|
+      indexer.settings do
+        provide "repository", "bhl"
+        provide "writer_class_name", "Traject::ArrayWriter"
+      end
+      indexer.load_config_file(Rails.root.join("lib/um_arclight/traject/ead2_config.rb"))
+    end.map_record(record)
   end
 end
