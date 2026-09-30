@@ -31,6 +31,33 @@ RSpec.describe "um_arclight/traject/ead2_config.rb" do
       expect(result["ead_ssi"]).to eq [ "umich-bhl-032" ]
     end
 
+    it "uses a lowercase Solr id while preserving the source EAD id as metadata" do
+      fixture_path = Rails.root.join("spec/fixtures/bhl/umich-bhl-032.xml")
+      source = File.read(fixture_path).sub(
+        "<eadid>umich-bhl-032</eadid>",
+        "<eadid>Umich-BHL-032.1</eadid>"
+      ).sub(
+        'id="aspace_4741cf8cff30c4c9418385776b6c5c75"',
+        'id="ASPACE.4741CF8CFF30C4C9418385776B6C5C75"'
+      )
+      record = CompressedReader.new(StringIO.new(source), {}).first
+      indexer = Traject::Indexer::NokogiriIndexer.new.tap do |i|
+        i.settings do
+          provide "repository", "bhl"
+          provide "writer_class_name", "Traject::ArrayWriter"
+        end
+        i.load_config_file(Rails.root.join("lib/um_arclight/traject/ead2_config.rb"))
+      end
+
+      mixed_case_result = indexer.map_record(record)
+
+      expect(mixed_case_result["id"]).to eq [ "umich-bhl-032.1" ]
+      expect(mixed_case_result["ead_ssi"]).to eq [ "Umich-BHL-032.1" ]
+      expect(mixed_case_result["components"].first["id"]).to eq(
+        [ "umich-bhl-032.1_aspace.4741cf8cff30c4c9418385776b6c5c75" ]
+      )
+    end
+
     it "maps unitid_ssm" do
       expect(result["unitid_ssm"]).to include "032 Bimu 2"
     end

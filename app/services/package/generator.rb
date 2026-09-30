@@ -178,7 +178,7 @@ module Package
     private
 
     def generate_output_filename(ext)
-      filename = File.join(finding_aid_data_path, "pdf", collection_repository_id, "#{collection.document_id}#{ext}")
+      filename = File.join(finding_aid_data_path, "pdf", collection_repository_id, "#{collection.finding_aid_id}#{ext}")
       filename = File.join(Rails.root, filename) if filename.start_with?("./")
       filename
     end
@@ -202,7 +202,7 @@ module Package
     end
 
     def generate_local_html_filename
-      File.join(working_path_name, "#{@collection.document_id}.local.html")
+      File.join(working_path_name, "#{@collection.finding_aid_id}.local.html")
     end
 
     def get(url)
