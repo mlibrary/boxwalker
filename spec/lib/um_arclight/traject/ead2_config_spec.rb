@@ -143,7 +143,6 @@ RSpec.describe "um_arclight/traject/ead2_config.rb" do
     it "maps title_subjects_ssim from controlaccess" do
       expect(result["title_subjects_ssim"]).to include "Some Fabricated Title"
     end
-
   end
 
   describe "searchable notes" do
