@@ -139,6 +139,10 @@ RSpec.describe "um_arclight/traject/ead2_config.rb" do
     it "maps genreform_ssim from controlaccess" do
       expect(result["genreform_ssim"]).to include "Photographs."
     end
+
+    it "maps title_subjects_ssim from controlaccess" do
+      expect(result["title_subjects_ssim"]).to include "Some Fabricated Title"
+    end
   end
 
   describe "searchable notes" do
