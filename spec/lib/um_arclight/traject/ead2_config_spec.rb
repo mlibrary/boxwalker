@@ -159,6 +159,20 @@ RSpec.describe "um_arclight/traject/ead2_config.rb" do
     it "maps acqinfo_ssim from descgrp/acqinfo" do
       expect(result["acqinfo_ssim"]).not_to be_empty
     end
+
+    # This fixture nests <relatedmaterial> inside <descgrp type="add">, not directly
+    # under <archdesc>; the SEARCHABLE_NOTES_FIELDS loop must read both locations.
+    it "maps relatedmaterial_html_tesm from descgrp/relatedmaterial" do
+      expect(result["relatedmaterial_html_tesm"].join).to include "Researchers may wish to consult"
+    end
+
+    it "maps relatedmaterial_tesim from descgrp/relatedmaterial" do
+      expect(result["relatedmaterial_tesim"].join).to include "Researchers may wish to consult"
+    end
+
+    it "maps relatedmaterial_heading_ssm from descgrp/relatedmaterial/head" do
+      expect(result["relatedmaterial_heading_ssm"]).to eq [ "Related Material" ]
+    end
   end
 
   describe "counters" do
@@ -210,6 +224,54 @@ RSpec.describe "um_arclight/traject/ead2_config.rb" do
       it "has parent_ssi pointing to root id" do
         expect(component["parent_ssi"]).to include "umich-bhl-032"
       end
+    end
+  end
+
+  # Regression coverage for the non-BHL descgrp variant. BHL nests notes in
+  # <descgrp type="add">, but SCRC finding aids put <relatedmaterial> and
+  # <separatedmaterial> inside <descgrp type="admin">. The SEARCHABLE_NOTES_FIELDS
+  # loop must read descgrp regardless of @type so these are indexed too.
+  describe "searchable notes nested in descgrp[@type='admin'] (SCRC)" do
+    before(:context) do
+      fixture_path = Rails.root.join("spec/fixtures/scrc/umich-scl-asis.xml")
+      record = File.open(fixture_path, "r:UTF-8:UTF-8") do |file|
+        CompressedReader.new(file, {}).first
+      end
+      indexer = Traject::Indexer::NokogiriIndexer.new.tap do |i|
+        i.settings do
+          provide "repository", "scrc"
+          provide "writer_class_name", "Traject::ArrayWriter"
+        end
+        i.load_config_file(Rails.root.join("lib/um_arclight/traject/ead2_config.rb"))
+      end
+      @scrc_result = indexer.map_record(record)
+    end
+
+    let(:scrc_result) { @scrc_result }
+
+    it "maps relatedmaterial_html_tesm from descgrp[@type='admin']/relatedmaterial" do
+      expect(scrc_result["relatedmaterial_html_tesm"].join).to include "Cloyd Dake Gull Papers"
+    end
+
+    it "maps relatedmaterial_tesim from descgrp[@type='admin']/relatedmaterial" do
+      expect(scrc_result["relatedmaterial_tesim"].join).to include "Cloyd Dake Gull Papers"
+    end
+
+    it "maps relatedmaterial_heading_ssm from descgrp[@type='admin']/relatedmaterial/head" do
+      expect(scrc_result["relatedmaterial_heading_ssm"]).to eq [ "Related Material" ]
+    end
+
+    it "maps separatedmaterial_html_tesm from descgrp[@type='admin']/separatedmaterial" do
+      expect(scrc_result["separatedmaterial_html_tesm"].join).to include "cataloged separately"
+    end
+
+    it "maps separatedmaterial_tesim from descgrp[@type='admin']/separatedmaterial" do
+      expect(scrc_result["separatedmaterial_tesim"].join).to include "cataloged separately"
+    end
+
+    it "still maps notes placed directly under archdesc" do
+      expect(scrc_result["bioghist_tesim"]).not_to be_empty
+      expect(scrc_result["scopecontent_tesim"]).not_to be_empty
     end
   end
 end
