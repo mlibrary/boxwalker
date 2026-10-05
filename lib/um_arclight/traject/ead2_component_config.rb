@@ -232,17 +232,21 @@ to_field "sort_isi" do |_record, accumulator, _context|
   accumulator.replace([ settings[:counter].increment ])
 end
 
-# Get the <accessrestrict> from the closest ancestor that has one (includes top-level)
+# Get the collection-level <accessrestrict> (anchored to <archdesc>, matching
+# production which always inherits the top-level collection, never a parent series).
+# The union covers both EAD structures: directly under <archdesc> and inside <descgrp>.
 to_field "parent_access_restrict_tesm" do |record, accumulator|
   accumulator.concat Array
-                       .wrap(record.xpath('(./ancestor::*/accessrestrict | ./ancestor::*/descgrp/accessrestrict)[last()]/*[local-name()!="head"]')
+                       .wrap(record.xpath('(./ancestor::archdesc/accessrestrict | ./ancestor::archdesc/descgrp/accessrestrict)/*[local-name()!="head"]')
                                    .map(&:text))
 end
 
-# Get the <userestrict> from self OR the closest ancestor that has one (includes top-level)
-to_field "parent_access_restrict_tesm" do |record, accumulator|
+# Get the collection-level <userestrict> (anchored to <archdesc>, matching production).
+# The component's own <userestrict> is shown by the `terms` row (catalog_controller.rb:448),
+# so it is deliberately excluded here to match production (two separate rows, no duplication).
+to_field "parent_access_terms_tesm" do |record, accumulator|
   accumulator.concat Array
-                       .wrap(record.xpath('(./ancestor-or-self::*/userestrict | ./ancestor-or-self::*/descgrp/userestrict)[last()]/*[local-name()!="head"]')
+                       .wrap(record.xpath('(./ancestor::archdesc/userestrict | ./ancestor::archdesc/descgrp/userestrict)/*[local-name()!="head"]')
                                    .map(&:text))
 end
 

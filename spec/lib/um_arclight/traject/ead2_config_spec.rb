@@ -210,6 +210,72 @@ RSpec.describe "um_arclight/traject/ead2_config.rb" do
       it "has parent_ssi pointing to root id" do
         expect(component["parent_ssi"]).to include "umich-bhl-032"
       end
+
+      it "inherits only the collection <accessrestrict> in parent_access_restrict_tesm" do
+        expect(component["parent_access_restrict_tesm"]).to contain_exactly(
+          "Restrictions apply; see item listing for details.",
+          "Access to select audiovisual content in the Programming series is restricted to the reading room of the Bentley Historical Library."
+        )
+      end
+
+      it "inherits the collection <userestrict> in parent_access_terms_tesm" do
+        expect(component["parent_access_terms_tesm"].join(" ")).to include "Copyright is held by the Regents"
+      end
+    end
+  end
+
+  # The component's own <userestrict> is displayed by the `terms` row
+  # (catalog_controller.rb), so the inherited parent rows must show only the
+  # collection-level text and must not duplicate the component's own text.
+  describe "component with its own userestrict" do
+    def find_component(node, id_fragment)
+      (node["components"] || []).each do |child|
+        return child if child["id"]&.first&.to_s&.include?(id_fragment)
+
+        found = find_component(child, id_fragment)
+        return found if found
+      end
+      nil
+    end
+
+    before(:context) do
+      fixture_path = Rails.root.join("spec/fixtures/bhl/umich-bhl-032.xml")
+      xml = File.read(fixture_path, encoding: "UTF-8")
+      target = '<c02 id="aspace_284d207da04e9640277a58b23d9576af" level="file">' \
+               "<did><unittitle>Background/History</unittitle></did>"
+      xml = xml.sub(
+        target,
+        target + "<userestrict><p>Component-specific use and permissions statement.</p></userestrict>"
+      )
+      record = CompressedReader.new(StringIO.new(xml), {}).first
+      indexer = Traject::Indexer::NokogiriIndexer.new.tap do |i|
+        i.settings do
+          provide "repository", "bhl"
+          provide "writer_class_name", "Traject::ArrayWriter"
+        end
+        i.load_config_file(Rails.root.join("lib/um_arclight/traject/ead2_config.rb"))
+      end
+      @injected_result = indexer.map_record(record)
+    end
+
+    subject(:component) do
+      find_component(@injected_result, "aspace_284d207da04e9640277a58b23d9576af")
+    end
+
+    it "keeps the component's own text in userestrict_html_tesm" do
+      expect(component["userestrict_html_tesm"].map(&:text).join(" "))
+        .to include "Component-specific use and permissions statement."
+    end
+
+    it "shows only the collection copyright in parent_access_terms_tesm" do
+      joined = component["parent_access_terms_tesm"].join(" ")
+      expect(joined).to include "Copyright is held by the Regents"
+      expect(joined).not_to include "Component-specific use and permissions statement."
+    end
+
+    it "does not leak the component's own text into parent_access_restrict_tesm" do
+      expect(component["parent_access_restrict_tesm"].join(" "))
+        .not_to include "Component-specific use and permissions statement."
     end
   end
 end
