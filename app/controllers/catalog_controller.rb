@@ -14,7 +14,11 @@ class CatalogController < ApplicationController
   include Arclight::Catalog
 
   include UmArclight::Catalog
+
+  # default search results to "Grouped by collection"
   prepend_before_action :default_to_grouped_results, only: :index
+  # "All results" must send group=false and ensures Arclight won't override
+  helper_method :search_without_group
 
   configure_blacklight do |config|
     ## Class for sending and receiving requests from a search index
@@ -472,5 +476,9 @@ class CatalogController < ApplicationController
     return if %w[true false].include?(params[:group])
 
     params[:group] = "true"
+  end
+
+  def search_without_group
+    search_state.params_for_search("group" => "false").except("page")
   end
 end
