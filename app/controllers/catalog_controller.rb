@@ -375,13 +375,6 @@ class CatalogController < ApplicationController
       last_word_connector: "<br/>"
     }
 
-    # UM customization: Surface titles under Subjects
-    config.add_indexed_terms_field "titles", field: "title_subjects_ssim", separator_options: {
-      words_connector: "<br/>",
-      two_words_connector: "<br/>",
-      last_word_connector: "<br/>"
-    }
-
     config.add_indexed_terms_field "indexes", field: "indexes_html_tesm",
                                    helper_method: :render_html_tags
 
