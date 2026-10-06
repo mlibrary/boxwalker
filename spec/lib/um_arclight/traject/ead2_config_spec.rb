@@ -132,16 +132,16 @@ RSpec.describe "um_arclight/traject/ead2_config.rb" do
       expect(result["access_subjects_ssim"]).to include "Women engineers."
     end
 
+    it "includes controlaccess titles in access_subjects_ssim" do
+      expect(result["access_subjects_ssim"]).to include "Some Fabricated Title"
+    end
+
     it "maps access_subjects_ssm from access_subjects_ssim" do
       expect(result["access_subjects_ssm"]).to eq result["access_subjects_ssim"]
     end
 
     it "maps genreform_ssim from controlaccess" do
       expect(result["genreform_ssim"]).to include "Photographs."
-    end
-
-    it "maps title_subjects_ssim from controlaccess" do
-      expect(result["title_subjects_ssim"]).to include "Some Fabricated Title"
     end
   end
 
