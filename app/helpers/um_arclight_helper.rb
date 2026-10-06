@@ -6,12 +6,6 @@ module UmArclightHelper
     current_page?(root_path) && request.query_parameters.empty?
   end
 
-  def search_without_group
-    search_state.params_for_search
-                .merge("group" => "false")
-                .except("page")
-  end
-
   def formatted_last_indexed(timestamp)
     date = DateTime.parse(timestamp)
     date.strftime("%F")
