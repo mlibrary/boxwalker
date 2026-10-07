@@ -232,9 +232,6 @@ to_field "sort_isi" do |_record, accumulator, _context|
   accumulator.replace([ settings[:counter].increment ])
 end
 
-# Get the collection-level <accessrestrict> (anchored to <archdesc>, matching
-# production which always inherits the top-level collection, never a parent series).
-# The union covers both EAD structures: directly under <archdesc> and inside <descgrp>.
 to_field "parent_access_restrict_tesm" do |record, accumulator|
   accumulator.concat Array
                        .wrap(record.xpath('(./ancestor::archdesc/accessrestrict | ./ancestor::archdesc/descgrp/accessrestrict)/*[local-name()!="head"]')

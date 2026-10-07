@@ -345,7 +345,7 @@ RSpec.describe "um_arclight/traject/ead2_config.rb" do
       end
     end
 
-    context "formerly descgrp-only bug fields" do
+    context "descgrp-only fields" do
       it "indexes altformavail_tesim from descgrp" do
         expect(dual_result["altformavail_tesim"].join(" ")).to include "DESCGRP alternative form text."
       end
