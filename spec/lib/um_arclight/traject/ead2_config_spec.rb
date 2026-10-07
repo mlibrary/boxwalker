@@ -159,6 +159,12 @@ RSpec.describe "um_arclight/traject/ead2_config.rb" do
     it "maps acqinfo_ssim from descgrp/acqinfo" do
       expect(result["acqinfo_ssim"]).not_to be_empty
     end
+
+    # access_terms_ssm previously queried only direct /archdesc/userestrict, so it was
+    # empty for descgrp-nested finding aids like this one. The union now captures it.
+    it "maps access_terms_ssm from descgrp/userestrict" do
+      expect(result["access_terms_ssm"].join(" ")).to include "Copyright is held by the Regents"
+    end
   end
 
   describe "counters" do

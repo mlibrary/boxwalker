@@ -178,7 +178,7 @@ end
 
 to_field "places_ssim", extract_xpath("/ead/archdesc/controlaccess/geogname")
 
-to_field "access_terms_ssm", extract_xpath('/ead/archdesc/userestrict/*[local-name()!="head"]')
+to_field "access_terms_ssm", extract_xpath('/ead/archdesc/userestrict/*[local-name()!="head"] | /ead/archdesc/descgrp/userestrict/*[local-name()!="head"]')
 
 to_field "acqinfo_ssim", extract_xpath('/ead/archdesc/acqinfo/*[local-name()!="head"]')
 to_field "acqinfo_ssim", extract_xpath('/ead/archdesc/descgrp/acqinfo/*[local-name()!="head"]')
