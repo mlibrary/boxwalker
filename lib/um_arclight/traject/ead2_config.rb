@@ -22,7 +22,15 @@ extend TrajectPlus::Macros
 
 NAME_ELEMENTS = %w[corpname famname name persname].freeze
 
+# UM customization: single notes list covering both EAD 2002 placements. In EAD 2002
+# a <descgrp> wrapper can hold the same note elements that also appear directly under
+# <archdesc>, and placement tracks export tooling/vintage rather than the repository.
+# The loop below queries the union /ead/archdesc/X | /ead/archdesc/descgrp/X so data is
+# indexed regardless of where it sits (previously split across SEARCHABLE_NOTES_FIELDS and
+# DESCGRP_FIELDS, which each queried only one location and silently dropped the other).
 SEARCHABLE_NOTES_FIELDS = %w[
+  accessrestrict
+  accruals
   altformavail
   appraisal
   arrangement
@@ -35,9 +43,12 @@ SEARCHABLE_NOTES_FIELDS = %w[
   originalsloc
   otherfindaid
   phystech
+  prefercite
+  processinfo
   relatedmaterial
   scopecontent
   separatedmaterial
+  userestrict
 ].freeze
 
 DID_SEARCHABLE_NOTES_FIELDS = %w[
@@ -45,15 +56,6 @@ DID_SEARCHABLE_NOTES_FIELDS = %w[
   materialspec
   physloc
   note
-].freeze
-
-# UM customization: separated out items in desgrp from SEARCHABLE_NOTES_FIELDS as they need a different XPath query.
-DESCGRP_FIELDS = %w[
-  accessrestrict
-  accruals
-  prefercite
-  processinfo
-  userestrict
 ].freeze
 
 settings do
@@ -284,20 +286,14 @@ to_field "indexes_html_tesm", extract_xpath("/ead/archdesc/index", to_text: fals
 to_field "indexes_tesim", extract_xpath("/ead/archdesc/index")
 
 SEARCHABLE_NOTES_FIELDS.map do |selector|
-  to_field "#{selector}_html_tesm", extract_xpath("/ead/archdesc/#{selector}/*[local-name()!='head']", to_text: false) do |_record, accumulator|
+  # UM customization: union both EAD 2002 placements (directly under <archdesc> and inside
+  # <descgrp>). The descgrp branch intentionally does not filter legacy @type attributes
+  # "add" & "admininfo". `both*` never occurs in one file, so the union cannot double-count.
+  to_field "#{selector}_html_tesm", extract_xpath("/ead/archdesc/#{selector}/*[local-name()!='head'] | /ead/archdesc/descgrp/#{selector}/*[local-name()!='head']", to_text: false) do |_record, accumulator|
     accumulator.map!(&:to_html)
   end
-  to_field "#{selector}_heading_ssm", extract_xpath("/ead/archdesc/#{selector}/head")
-  to_field "#{selector}_tesim", extract_xpath("/ead/archdesc/#{selector}/*[local-name()!='head']")
-end
-
-DESCGRP_FIELDS.map do |selector|
-  # UM modified queries to remove filtering on legacy @type attributes "add" & "admininfo."
-  to_field "#{selector}_html_tesm", extract_xpath("/ead/archdesc/descgrp/#{selector}/*[local-name()!='head']", to_text: false) do |_record, accumulator|
-    accumulator.map!(&:to_html)
-  end
-  to_field "#{selector}_heading_ssm", extract_xpath("/ead/archdesc/descgrp/#{selector}/head") unless selector == "prefercite"
-  to_field "#{selector}_tesim", extract_xpath("/ead/archdesc/descgrp/#{selector}/*[local-name()!='head']")
+  to_field "#{selector}_heading_ssm", extract_xpath("/ead/archdesc/#{selector}/head | /ead/archdesc/descgrp/#{selector}/head") unless selector == "prefercite"
+  to_field "#{selector}_tesim", extract_xpath("/ead/archdesc/#{selector}/*[local-name()!='head'] | /ead/archdesc/descgrp/#{selector}/*[local-name()!='head']")
 end
 
 DID_SEARCHABLE_NOTES_FIELDS.map do |selector|
