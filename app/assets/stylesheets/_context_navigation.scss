@@ -12,6 +12,13 @@
   top: 0;
 }
 
+.sidebar-scroll-wrapper {
+  height: calc(100vh - 270px);
+  overflow-y: auto;
+  overflow-x: hidden;
+  padding-bottom: 15px;
+}
+
 @media (max-width: 991.98px) {
   #sidebar {
     position: fixed;
