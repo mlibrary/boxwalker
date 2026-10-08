@@ -177,9 +177,10 @@ to_field "access_terms_ssm", extract_xpath('/ead/archdesc/userestrict/*[local-na
 to_field "acqinfo_ssim", extract_xpath('/ead/archdesc/acqinfo/*[local-name()!="head"]')
 to_field "acqinfo_ssim", extract_xpath('/ead/archdesc/descgrp/acqinfo/*[local-name()!="head"]')
 
+# UM customization: Added title to array
 to_field "access_subjects_ssim", extract_xpath("/ead/archdesc/controlaccess", to_text: false) do |_record, accumulator|
   accumulator.map! do |element|
-    %w[subject function occupation].map do |selector|
+    %w[subject function occupation title].map do |selector|
       element.xpath(".//#{selector}").map(&:text)
     end
   end.flatten!
