@@ -7,7 +7,7 @@
         <%= link_to section_label(section),
                     document_section_path(section),
                     class: 'nav-link pl-0 ps-0 py-1',
-                    data: { turbolinks: 'false' }
+                    data: { turbo: 'false' }
         %>
       </li>
     <% end %>
@@ -15,14 +15,14 @@
       <%= link_to "Contents",
                   "#{document_path}#contents",
                   class: 'nav-link pl-0 ps-0 py-1',
-                  data: { turbolinks: 'false' }
+                  data: { turbo: 'false' }
       %>
     </li>
     <li class="nav-item">
       <%= link_to t('arclight.views.show.sections.access_field'),
                   "#{document_path}#using-these-materials",
                   class: 'nav-link pl-0 ps-0 py-1',
-                  data: { turbolinks: 'false' }
+                  data: { turbo: 'false' }
       %>
     </li>
   </ul>
