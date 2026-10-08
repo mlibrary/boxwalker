@@ -64,10 +64,10 @@ en:
         names: Names
 
         restrictions: Restrictions
-        terms: 'Use & Restrictions'
+        terms: 'Use & Permissions'
         show:
           parent_restrictions: Restrictions
-          parent_terms: 'Use & Restrictions'
+          parent_terms: 'Use & Permissions'
         parent_terms: Parent terms of access
         repository_location: Location of this collection
         before_you_visit: Before you visit

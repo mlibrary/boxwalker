@@ -23,6 +23,8 @@ extend TrajectPlus::Macros
 NAME_ELEMENTS = %w[corpname famname name persname].freeze
 
 SEARCHABLE_NOTES_FIELDS = %w[
+  accessrestrict
+  accruals
   altformavail
   appraisal
   arrangement
@@ -35,9 +37,12 @@ SEARCHABLE_NOTES_FIELDS = %w[
   originalsloc
   otherfindaid
   phystech
+  prefercite
+  processinfo
   relatedmaterial
   scopecontent
   separatedmaterial
+  userestrict
 ].freeze
 
 DID_SEARCHABLE_NOTES_FIELDS = %w[
@@ -45,15 +50,6 @@ DID_SEARCHABLE_NOTES_FIELDS = %w[
   materialspec
   physloc
   note
-].freeze
-
-# UM customization: separated out items in desgrp from SEARCHABLE_NOTES_FIELDS as they need a different XPath query.
-DESCGRP_FIELDS = %w[
-  accessrestrict
-  accruals
-  prefercite
-  processinfo
-  userestrict
 ].freeze
 
 settings do
@@ -176,7 +172,7 @@ end
 
 to_field "places_ssim", extract_xpath("/ead/archdesc/controlaccess/geogname")
 
-to_field "access_terms_ssm", extract_xpath('/ead/archdesc/userestrict/*[local-name()!="head"]')
+to_field "access_terms_ssm", extract_xpath('/ead/archdesc/userestrict/*[local-name()!="head"] | /ead/archdesc/descgrp/userestrict/*[local-name()!="head"]')
 
 to_field "acqinfo_ssim", extract_xpath('/ead/archdesc/acqinfo/*[local-name()!="head"]')
 to_field "acqinfo_ssim", extract_xpath('/ead/archdesc/descgrp/acqinfo/*[local-name()!="head"]')
@@ -284,20 +280,11 @@ to_field "indexes_html_tesm", extract_xpath("/ead/archdesc/index", to_text: fals
 to_field "indexes_tesim", extract_xpath("/ead/archdesc/index")
 
 SEARCHABLE_NOTES_FIELDS.map do |selector|
-  to_field "#{selector}_html_tesm", extract_xpath("/ead/archdesc/#{selector}/*[local-name()!='head']", to_text: false) do |_record, accumulator|
+  to_field "#{selector}_html_tesm", extract_xpath("/ead/archdesc/#{selector}/*[local-name()!='head'] | /ead/archdesc/descgrp/#{selector}/*[local-name()!='head']", to_text: false) do |_record, accumulator|
     accumulator.map!(&:to_html)
   end
-  to_field "#{selector}_heading_ssm", extract_xpath("/ead/archdesc/#{selector}/head")
-  to_field "#{selector}_tesim", extract_xpath("/ead/archdesc/#{selector}/*[local-name()!='head']")
-end
-
-DESCGRP_FIELDS.map do |selector|
-  # UM modified queries to remove filtering on legacy @type attributes "add" & "admininfo."
-  to_field "#{selector}_html_tesm", extract_xpath("/ead/archdesc/descgrp/#{selector}/*[local-name()!='head']", to_text: false) do |_record, accumulator|
-    accumulator.map!(&:to_html)
-  end
-  to_field "#{selector}_heading_ssm", extract_xpath("/ead/archdesc/descgrp/#{selector}/head") unless selector == "prefercite"
-  to_field "#{selector}_tesim", extract_xpath("/ead/archdesc/descgrp/#{selector}/*[local-name()!='head']")
+  to_field "#{selector}_heading_ssm", extract_xpath("/ead/archdesc/#{selector}/head | /ead/archdesc/descgrp/#{selector}/head") unless selector == "prefercite"
+  to_field "#{selector}_tesim", extract_xpath("/ead/archdesc/#{selector}/*[local-name()!='head'] | /ead/archdesc/descgrp/#{selector}/*[local-name()!='head']")
 end
 
 DID_SEARCHABLE_NOTES_FIELDS.map do |selector|

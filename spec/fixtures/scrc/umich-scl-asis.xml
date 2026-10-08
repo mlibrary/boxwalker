@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ead>
+ <eadheader audience="internal" langencoding="iso639-2b" repositoryencoding="iso15511" dateencoding="iso8601" relatedencoding="Dublin Core" countryencoding="iso3166-1" scriptencoding="iso15924">
+ <eadid countrycode="us" mainagencycode="MiU" publicid="-//us::MiU//TEXT us::MiU::asis.xml//EN" encodinganalog="identifier">umich-scl-asis</eadid>
+ <filedesc>
+ <titlestmt>
+ <titleproper encodinganalog="title">Finding Aid for American Society for Information Science and Technology Records, <date era="ce" calendar="gregorian">1925-2001</date> </titleproper>
+ <author encodinganalog="creator">Collection processed and finding aid created by Marilyn McNitt; Rebecca Bizonet, 2004-2005</author>
+ </titlestmt>
+ <publicationstmt>
+ <publisher>University of Michigan Library (Special Collections Research Center)</publisher>
+ <date encodinganalog="date" era="ce" calendar="gregorian">2005</date>
+ </publicationstmt>
+ </filedesc>
+ </eadheader>
+ <archdesc level="recordgrp" audience="external" type="inventory" relatedencoding="marc21">
+ <did>
+ <origination>
+ <corpname encodinganalog="110" source="lcnaf">American Society for Information Science and Technology</corpname>
+ </origination>
+ <unittitle encodinganalog="245">American Society for Information Science and Technology Records<unitdate type="inclusive" encodinganalog="245$f" era="ce" calendar="gregorian">1925-2001</unitdate></unittitle>
+ <physdesc>
+ <extent encodinganalog="300"> 185 linear feet in 188 boxes</extent>
+ </physdesc>
+ <unitid countrycode="us" repositorycode="MiU" type="call number" encodinganalog="099">ASIS&amp;T</unitid>
+ <langmaterial>The material is in <language langcode="eng" encodinganalog="041">English</language> </langmaterial>
+ <abstract>ASIS&amp;T is a professional association which creates, organizes, disseminates, and applies knowledge regarding information and its transfer.</abstract>
+ <repository><corpname>University of Michigan Library (Special Collections Research Center)</corpname>
+ </repository>
+ </did>
+ <descgrp type="admin">
+ <acqinfo encodinganalog="541">
+ <p>1988- ; additions are anticipated.</p>
+ </acqinfo>
+ <accessrestrict>
+ <p>The record group is open for research, with some exceptions.</p>
+ </accessrestrict>
+ <userestrict>
+ <p>Copyright has not been transferred to the Regents of the University of Michigan.</p>
+ </userestrict>
+ <prefercite>
+ <p>American Society for Information Science and Technology Records, University of Michigan Library (Special Collections Research Center)</p>
+ </prefercite>
+ <processinfo>
+ <p>Collection processed and finding aid created by Marilyn McNitt; Rebecca Bizonet, 2004-2005.</p>
+ </processinfo>
+ <relatedmaterial>
+ <head>Related Material</head>
+ <p>The holdings of the Special Collections Library include several other collections that researchers interested in ADI/ASIS/ASIS&amp;T should consult, including the Cloyd Dake Gull Papers and the National Microfilm Association Records.</p>
+ </relatedmaterial>
+ <separatedmaterial>
+ <head>Separated Material</head>
+ <p>Most printed materials have been removed and cataloged separately.</p>
+ </separatedmaterial>
+ </descgrp>
+ <bioghist encodinganalog="545">
+ <p>The American Society for Information Science is a non-profit professional association that creates, organizes, disseminates and applies knowledge regarding information and its transfer.</p>
+ </bioghist>
+ <scopecontent encodinganalog="520">
+ <p>The records consist of correspondence, business and financial documents, minutes, bylaws, and memoranda covering the society's activities from 1925 to 2001.</p>
+ </scopecontent>
+ <dsc type="combined">
+ <c01 id="aspace_scl_asis_series1" level="series">
+ <did>
+ <unittitle>Council Files</unittitle>
+ <unitdate type="inclusive" era="ce" calendar="gregorian">1937-2000</unitdate>
+ </did>
+ </c01>
+ </dsc>
+ </archdesc>
+</ead>
