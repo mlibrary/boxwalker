@@ -3,7 +3,7 @@
 class DeleteFindingAidJob < ApplicationJob
   queue_as :delete
 
-  def perform(eadid)
-    FindingAid::DeleteFromIndex.call(eadid)
+  def perform(document_id)
+    FindingAid::DeleteFromIndex.call(document_id)
   end
 end
