@@ -5,7 +5,7 @@ require 'rails_helper'
 RSpec.describe DeleteFindingAidJob, type: :job do
   include ActiveJob::TestHelper
 
-  let(:eadid) { 'eadid.slug' }
+  let(:document_id) { 'eadid.slug' }
 
   before do
     allow(FindingAid::DeleteFromIndex).to receive(:call)
@@ -17,12 +17,12 @@ RSpec.describe DeleteFindingAidJob, type: :job do
   end
 
   it 'queues the job on the delete queue' do
-    expect { described_class.perform_later(eadid) }
-      .to have_enqueued_job(described_class).with(eadid).on_queue('delete')
+    expect { described_class.perform_later(document_id) }
+      .to have_enqueued_job(described_class).with(document_id).on_queue('delete')
   end
 
   it 'delegates deletion to the service' do
-    expect { described_class.perform_now(eadid) }.not_to raise_error
-    expect(FindingAid::DeleteFromIndex).to have_received(:call).with(eadid)
+    expect { described_class.perform_now(document_id) }.not_to raise_error
+    expect(FindingAid::DeleteFromIndex).to have_received(:call).with(document_id)
   end
 end
