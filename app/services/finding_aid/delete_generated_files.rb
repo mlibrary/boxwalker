@@ -1,15 +1,12 @@
 module FindingAid
   class DeleteGeneratedFiles
     def self.call(eadid)
-      response = Blacklight.default_index.find(eadid)
-      doc = response.documents.first
-      raise Boxwalker::Error, "No document found for id #{eadid}" if doc.nil?
-      download_utility = DownloadUtility.new(doc)
-      FileUtils.rm([
-        download_utility.pdf_file_path,
-        download_utility.html_file_path,
-        download_utility.xml_file_path
-      ], force: true)
+      data_dir = ENV.fetch("FINDING_AID_DATA")
+      files_to_delete = Dir.glob("#{data_dir}/pdf/**/#{eadid}.pdf") \
+        + Dir.glob("#{data_dir}/pdf/**/#{eadid}.html") \
+        + Dir.glob("#{data_dir}/pdf/tmp/**/#{eadid}.local.html") \
+        + Dir.glob("#{data_dir}/xml/**/#{eadid}.xml")
+      FileUtils.rm(files_to_delete, force: true, verbose: true)
     end
   end
 end
