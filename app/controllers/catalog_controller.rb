@@ -16,7 +16,7 @@ class CatalogController < ApplicationController
   include UmArclight::Catalog
 
   # default search results to "Grouped by collection"
-  prepend_before_action :default_to_grouped_results, only: :index
+  ## prepend_before_action :default_to_grouped_results, only: :index
   # "All results" must send group=false and ensures Arclight won't override
   helper_method :search_without_group
 
