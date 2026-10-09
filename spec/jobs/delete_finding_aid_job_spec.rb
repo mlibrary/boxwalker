@@ -8,6 +8,7 @@ RSpec.describe DeleteFindingAidJob, type: :job do
   let(:eadid) { 'eadid.slug' }
 
   before do
+    allow(FindingAid::DeleteGeneratedFiles).to receive(:call)
     allow(FindingAid::DeleteFromIndex).to receive(:call)
   end
 
@@ -21,8 +22,9 @@ RSpec.describe DeleteFindingAidJob, type: :job do
       .to have_enqueued_job(described_class).with(eadid).on_queue('delete')
   end
 
-  it 'delegates deletion to the service' do
+  it 'delegates deletion to the services' do
     expect { described_class.perform_now(eadid) }.not_to raise_error
+    expect(FindingAid::DeleteGeneratedFiles).to have_received(:call).with(eadid)
     expect(FindingAid::DeleteFromIndex).to have_received(:call).with(eadid)
   end
 end
