@@ -1,6 +1,6 @@
 # frozen_string_literal: true
 
-class UmSearchBarComponent < Blacklight::SearchBarComponent
+class UmSearchBarComponent < Arclight::SearchBarComponent
   # Searches submitted from the form always start "Grouped by collection".
   # Browse links (e.g. repository pages) don't use this form, so they're unaffected.
   def initialize(params: {}, **kwargs)
