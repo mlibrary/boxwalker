@@ -19,6 +19,7 @@ pin "chart.js", to: "https://ga.jspm.io/npm:chart.js@4.2.0/dist/chart.js"
 # single dependency of chart.js:
 pin "@kurkle/color", to: "https://ga.jspm.io/npm:@kurkle/color@0.3.2/dist/color.esm.js"
 pin "aeonform"
+pin "searchform"
 pin "arclight/truncate_controller", to: "arclight/truncate_controller.js"
 pin "arclight/oembed_controller", to: "arclight/oembed_controller.js"
 pin "arclight/iiif_controller", to: "arclight/iiif_controller.js"
