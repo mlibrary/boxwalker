@@ -14,7 +14,7 @@ RSpec.describe FindingAid::DeleteGeneratedFiles do
 
     FileUtils.mkdir_p(pdf_bhl_path)
     FileUtils.mkdir_p(pdf_tmp_bhl_path)
-    FileUtils.mkdir_p(File.join(data_dir, "xml", "bhl"))
+    FileUtils.mkdir_p(xml_bhl_path)
     FileUtils.touch(File.join(pdf_bhl_path, "eadid.slug.pdf"))
     FileUtils.touch(File.join(pdf_bhl_path, "eadid.slug.html"))
     FileUtils.touch(File.join(pdf_tmp_bhl_path, "eadid.slug.local.html"))
