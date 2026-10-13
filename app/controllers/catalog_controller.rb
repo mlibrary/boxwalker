@@ -63,7 +63,7 @@ class CatalogController < ApplicationController
     config.add_results_collection_tool(:group_toggle)
     config.add_results_collection_tool(:sort_widget)
     config.add_results_collection_tool(:per_page_widget)
-    config.add_results_collection_tool(:view_type_group)
+    # UM customization: Removed view_type_group tool
 
     config.add_nav_action(:bookmark, partial: "blacklight/nav/bookmark", if: :render_bookmarks_control?)
     config.add_nav_action(:search_history, partial: "blacklight/nav/search_history")
