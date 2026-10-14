@@ -121,6 +121,10 @@ RSpec.describe "um_arclight/traject/ead2_config.rb" do
       expect(result["extent_ssm"]).to include "1 archived websites"
     end
 
+    it "maps extent_ssm from physdesc even when there is no extent" do
+      expect(result["extent_ssm"]).to include "More physical description info"
+    end
+
     it "maps extent_tesim from extent_ssm" do
       expect(result["extent_tesim"]).to eq result["extent_ssm"]
     end

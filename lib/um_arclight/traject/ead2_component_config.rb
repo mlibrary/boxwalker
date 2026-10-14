@@ -179,17 +179,8 @@ to_field "physdesc_tesim", extract_xpath("./did/physdesc", to_text: false) do |_
   end
 end
 
-to_field "extent_ssm" do |record, accumulator|
-  physdescs = record.xpath("./did/physdesc")
-  extents_per_physdesc = physdescs.map do |physdesc|
-    extents = physdesc.xpath("./extent").map { |e| e.text.strip }
-    # Join extents within the same physdesc with an empty string
-    extents.join(" ") unless extents.empty?
-  end
-
-  # Add each physdesc separately to the accumulator
-  accumulator.concat(extents_per_physdesc)
-end
+# UM customization: Treat all physdescs as extents
+to_field "extent_ssm", extract_xpath("./did/physdesc")
 
 to_field "extent_tesim" do |_record, accumulator, context|
   accumulator.concat context.output_hash["extent_ssm"] || []
