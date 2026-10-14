@@ -1,0 +1,11 @@
+<%#
+UM customization: Overrides Arclight core partial
+Last checked: v1.6.3
+%>
+<% document ||= @document %>
+<% if DownloadUtility.new(document).ead_available? %>
+  <% ead_url = ead_download_url(document.eadid) %>
+  <% aeon_web_ead ||= Arclight::Requests::AeonWebEad.new(document, ead_url) %>
+  <% aeon_web_ead_url = aeon_web_ead&.url %>
+  <%= link_to "Request", aeon_web_ead_url, class: "btn btn-primary btn-sm", target: "_blank" %>
+<% end %>

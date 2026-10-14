@@ -83,10 +83,7 @@ scrc:
   request_types:
     aeon_web_ead:
       request_url: 'https://aeon.lib.umich.edu/logon'
-      request_mappings: 'Action=10&Form=31&Value=parsed_ead_url'
-  request_id:
-    field: 'publicid_ssi'
-    pattern: '-\/\/us::MiU\/\/TEXT us::MiU::(.*)\/\/EN'
+      request_mappings: 'Action=10&Form=31&Value=ead_url'
   dlxs_iiif:
     image:
       - scl
@@ -126,10 +123,7 @@ clements:
   request_types:
     aeon_web_ead:
       request_url: 'https://aeon.clements.umich.edu/logon'
-      request_mappings: 'Action=10&Form=31&Value=parsed_ead_url'
-  request_id:
-    field: 'publicid_ssi'
-    pattern: 'us//::miu-c//TXT us::miu-c::(.*.xml)\/\/EN'
+      request_mappings: 'Action=10&Form=31&Value=ead_url'
   dlxs_iiif:
     image:
       - pohrt
