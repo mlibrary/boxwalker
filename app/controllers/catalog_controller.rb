@@ -75,7 +75,7 @@ class CatalogController < ApplicationController
     config.index.document_component = UmSearchResultComponent
     config.index.group_component = Arclight::GroupComponent
     config.index.constraints_component = UmConstraintsComponent
-    config.index.document_presenter_class = Arclight::IndexPresenter
+    config.index.document_presenter_class = UmIndexPresenter
     config.index.search_bar_component = UmSearchBarComponent
     # config.index.thumbnail_field = 'thumbnail_path_ss'
 
