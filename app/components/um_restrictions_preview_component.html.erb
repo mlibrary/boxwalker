@@ -1,15 +1,31 @@
 <div class="restrictions-preview">
   <dl>
-    <dt class="blacklight-restrictions">
-      <i class="bi bi-exclamation-triangle-fill"></i>
-      <strong><%= t("blacklight.search.fields.restrictions") %>:</strong>
-    </dt>
+    <% if restrictions.present? %>
+      <dt class="blacklight-restrictions">
+        <i class="bi bi-exclamation-triangle-fill"></i>
+        <strong><%= t("blacklight.search.fields.restrictions") %>:</strong>
+      </dt>
 
+      <% restrictions.each do |restriction| %>
+        <dd class="blacklight-restrictions">
+          <%= helpers.render_html_tags(value: restriction) %>
+        </dd>
+      <% end %>
+    <% end %>
 
-    <% restrictions.each do |restriction| %>
-      <dd class="blacklight-restrictions">
-        <%= helpers.render_html_tags(value: restriction) %>
-      </dd>
+    <% if terms.present? %>
+      <dt class="blacklight-terms">
+        <% if restrictions.blank? %>
+          <i class="bi bi-exclamation-triangle-fill"></i>
+        <% end %>
+        <strong><%= t("blacklight.search.fields.terms") %>:</strong>
+      </dt>
+
+      <% terms.each do |term| %>
+        <dd class="blacklight-terms">
+          <%= helpers.render_html_tags(value: term) %>
+        </dd>
+      <% end %>
     <% end %>
   </dl>
 
