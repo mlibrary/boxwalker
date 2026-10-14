@@ -5,7 +5,7 @@ require 'rails_helper'
 RSpec.describe DeleteFindingAidJob, type: :job do
   include ActiveJob::TestHelper
 
-  let(:eadid) { 'eadid.slug' }
+  let(:eadid) { 'Some*Funky*EadId.With.Dots' }
 
   before do
     allow(FindingAid::DeleteGeneratedFiles).to receive(:call)
