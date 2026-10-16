@@ -114,7 +114,6 @@ module UmArclight
       target_id = redirect_resolver.resolve(params[:id])
       return if target_id == params[:id]
 
-
       Rails.logger.info do
         "Finding aid redirect (301): #{params[:id].inspect} -> #{target_id.inspect}"
       end
