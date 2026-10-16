@@ -153,7 +153,7 @@ GEM
     ed25519 (1.4.0)
     erb (6.0.7)
     erubi (1.13.1)
-    et-orbi (1.4.1)
+    et-orbi (1.4.2)
       tzinfo
     faraday (2.14.3)
       faraday-net_http (>= 2.0, < 3.5)
@@ -170,7 +170,7 @@ GEM
     ffi (1.17.4-arm64-darwin)
     ffi (1.17.4-x86_64-linux-gnu)
     ffi (1.17.4-x86_64-linux-musl)
-    fugit (1.13.0)
+    fugit (1.14.0)
       et-orbi (~> 1.4)
       raabro (~> 1.4)
     globalid (1.4.0)
@@ -392,7 +392,7 @@ GEM
       redis (>= 4.0)
       redis-namespace (~> 1.6)
       sinatra (>= 2.0)
-    resque-scheduler (5.0.0)
+    resque-scheduler (5.0.1)
       base64 (~> 0.1)
       logger
       mono_logger (~> 1.0)
@@ -662,7 +662,7 @@ CHECKSUMS
   ed25519 (1.4.0) sha256=16e97f5198689a154247169f3453ef4cfd3f7a47481fde0ae33206cdfdcac506
   erb (6.0.7) sha256=c5ca6dc25b0ef974a44dc8f59fe847577122483b1968a38dec305c60bf91ee92
   erubi (1.13.1) sha256=a082103b0885dbc5ecf1172fede897f9ebdb745a4b97a5e8dc63953db1ee4ad9
-  et-orbi (1.4.1) sha256=007e2685b1d873415a7587ef889336c6dcdf8a47fc9c9a63547582b21660a11b
+  et-orbi (1.4.2) sha256=bb555dae668419cb24caa2a293a170e58be6d4df1e017c51f5030bdc133cd20c
   faraday (2.14.3) sha256=1882247e6766615c8220b4392bf1d27f6ebb63d8e28267587cef1fb0bf37f278
   faraday-follow_redirects (0.5.0) sha256=5cde93c894b30943a5d2b93c2fe9284216a6b756f7af406a1e55f211d97d10ad
   faraday-net_http (3.4.4) sha256=0e78af151747ed1b00f33e25973b4bc220d7f16c00c39676817c8b12331eb588
@@ -673,7 +673,7 @@ CHECKSUMS
   ffi (1.17.4-arm64-darwin) sha256=19071aaf1419251b0a46852abf960e77330a3b334d13a4ab51d58b31a937001b
   ffi (1.17.4-x86_64-linux-gnu) sha256=9d3db14c2eae074b382fa9c083fe95aec6e0a1451da249eab096c34002bc752d
   ffi (1.17.4-x86_64-linux-musl) sha256=3fdf9888483de005f8ef8d1cf2d3b20d86626af206cbf780f6a6a12439a9c49e
-  fugit (1.13.0) sha256=a4f093fce740da52f216740a5041e2a594ea763cdb89e8b2754ca4399634ab18
+  fugit (1.14.0) sha256=e311a9cc85a54bb67649df45060e721282a1e2c8ebad40e41874a3a7d576f37e
   globalid (1.4.0) sha256=037f12fbf1d9d7a014d501c2d5c77356fd4ddd96d7a7991d6700bba96706f427
   gretel (5.1.0) sha256=7324d255dca34b8997cba2d207f29c11b9cdbd4e72bd5d6392cf67da46b9cdaf
   hashie (5.1.0) sha256=c266471896f323c446ea8207f8ffac985d2718df0a0ba98651a3057096ca3870
@@ -768,7 +768,7 @@ CHECKSUMS
   reline (0.7.0) sha256=5b012d8e55dbf9d450f12bde2cf7d15ff546ae80b3f8f3b30e570d431815583d
   responders (3.2.0) sha256=89c2d6ac0ae16f6458a11524cae4a8efdceba1a3baea164d28ee9046bd3df55a
   resque (3.1.0) sha256=b3cc063308c8bc0e0a2faf132bc92c7dbfce0bacd9f09c86576f49a51f56cf8c
-  resque-scheduler (5.0.0) sha256=f199df7ae73b5c7972acd27c7e2f8a1f1ff4339eca5b794d0b2ba74c3d998aff
+  resque-scheduler (5.0.1) sha256=4466be3d37dbcac4008c435749070063575927f1a48b9a78941e28cbcfc61a49
   retriable (4.2.0) sha256=90c3b257472a1c02f2a3dfa64dd35a420f7a624cef1a5981e20fdac5730f8cdc
   rexml (3.4.4) sha256=19e0a2c3425dfbf2d4fc1189747bdb2f849b6c5e74180401b15734bc97b5d142
   rsolr (2.6.0) sha256=4b3bcea772cac300562775c20eeddedf63a6b7516a070cb6fbde000b09cfe12b
