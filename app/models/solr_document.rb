@@ -46,6 +46,10 @@ class SolrDocument
     fetch("accessrestrict_html_tesm", [])
   end
 
+  def terms
+    fetch("userestrict_html_tesm", [])
+  end
+
   def accessrestrict
     fetch("accessrestrict_tesim", [])
   end

@@ -444,8 +444,9 @@ class CatalogController < ApplicationController
     config.add_terms_field "terms", field: "userestrict_html_tesm", helper_method: :render_html_tags
 
     # Component Show Page Access Tab - Terms and Condition Section
-    # Removed config.add_component_terms_field "restrictions" to avoid duplicating content in components restrictions_preview and using_these_materials
-    config.add_component_terms_field "terms", field: "userestrict_html_tesm", helper_method: :render_html_tags
+    # Removed config.add_component_terms_field "restrictions" and "terms" to avoid duplicating content:
+    # the component's own accessrestrict/userestrict are shown in restrictions_preview (the top box),
+    # so this section shows only the collection-level (parent) rows.
     config.add_component_terms_field "parent_restrictions", field: "parent_access_restrict_tesm", helper_method: :render_html_tags
     config.add_component_terms_field "parent_terms", field: "parent_access_terms_tesm", helper_method: :render_html_tags
 
