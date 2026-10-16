@@ -3,7 +3,9 @@
 require 'rails_helper'
 
 RSpec.describe FindingAid::DeleteFromIndex do
-  let(:eadid) { 'eadid.slug' }
+  let(:eadid) { 'Some*Funky*EadId.With.Dots' }
+  let(:normalize_eadid) { UmArclight::NormalizedId.new(eadid).to_s }
+  let(:solr_escaped_normalized_eadid) { RSolr.solr_escape(normalize_eadid) }
   let(:connection) { instance_double(RSolr::Client) }
   let(:index) { instance_double(Blacklight::Solr::Repository, connection: connection) }
 
@@ -15,13 +17,13 @@ RSpec.describe FindingAid::DeleteFromIndex do
 
   it 'deletes documents matching the ead id and commits' do
     expect { described_class.call(eadid) }.not_to raise_error
-    expect(connection).to have_received(:delete_by_query).with("_root_:#{eadid}")
-    expect(connection).to have_received(:delete_by_query).with("id:#{eadid}")
+    expect(connection).to have_received(:delete_by_query).with("_root_:#{solr_escaped_normalized_eadid}")
+    expect(connection).to have_received(:delete_by_query).with("id:#{solr_escaped_normalized_eadid}")
     expect(connection).to have_received(:commit)
   end
 
   it 'escapes special characters in eadids that are relevant to Solr' do
-    expect { described_class.call("some*funky*eadid") }.not_to raise_error
-    expect(connection).to have_received(:delete_by_query).with("_root_:some\\*funky\\*eadid")
+    expect { described_class.call(eadid) }.not_to raise_error
+    expect(connection).to have_received(:delete_by_query).with("_root_:#{solr_escaped_normalized_eadid}")
   end
 end

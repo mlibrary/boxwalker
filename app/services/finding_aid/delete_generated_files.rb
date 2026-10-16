@@ -1,6 +1,7 @@
 module FindingAid
   class DeleteGeneratedFiles
     def self.call(eadid)
+      eadid = UmArclight::NormalizedId.new(eadid).to_s
       data_dir = ENV.fetch("FINDING_AID_DATA")
       files_to_delete = Dir.glob("#{data_dir}/pdf/**/#{eadid}.pdf") \
         + Dir.glob("#{data_dir}/pdf/**/#{eadid}.html") \

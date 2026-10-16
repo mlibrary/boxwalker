@@ -5,6 +5,7 @@ require "rsolr"
 module FindingAid
   class DeleteFromIndex
     def self.call(eadid)
+      eadid = UmArclight::NormalizedId.new(eadid).to_s
       escaped_eadid = RSolr.solr_escape(eadid)
       connection = Blacklight.default_index.connection
       connection.delete_by_query("_root_:#{escaped_eadid}")
