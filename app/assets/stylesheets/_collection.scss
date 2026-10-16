@@ -31,6 +31,12 @@ span.request-checkbox-label {
   }
 }
 
+.badge.badge-request {
+  background-color: var.$color-pink-500 !important;
+  color: #fff !important;
+  font-size: 85%;
+}
+
 .al-show-sub-heading {
   font-size: 1.5rem;
   text-transform: unset;
