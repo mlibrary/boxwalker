@@ -82,7 +82,7 @@ h3.document-title-heading {
   margin-top: 0.3rem;
 }
 
-.al-digital-object a::after {
+.al-digital-object > a::after {
   content: "";
   display: inline-block;
   width: 1em;
