@@ -67,7 +67,7 @@ class SolrDocument
   end
 
   def document_id
-    fetch("ead_ssi", nil)&.strip
+    root&.strip
   end
 
   def is_linkable?
