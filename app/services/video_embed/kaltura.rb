@@ -13,7 +13,7 @@ module VideoEmbed
     def entry_id(href)
       uri = VideoEmbed.parse_http_uri(href)
       return unless uri&.host&.match?(HOST_PATTERN)
-      [query_entry_id(uri), *uri.path.to_s.split("/")]
+      [ query_entry_id(uri), *uri.path.to_s.split("/") ]
         .find { |s| s&.match?(ENTRY_ID_PATTERN) }
     end
 

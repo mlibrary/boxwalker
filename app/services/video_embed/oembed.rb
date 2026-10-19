@@ -1,7 +1,7 @@
 # frozen_string_literal: true
 
-require 'open-uri'
-require 'json'
+require "open-uri"
+require "json"
 module VideoEmbed
   # Looks up oEmbed HTML for a URL by reading the page's <head> for an
   # oEmbed discovery link. Results (including "nothing found") are cached.
@@ -17,12 +17,12 @@ module VideoEmbed
       key = "video_embed/oembed/#{Digest::SHA256.hexdigest(uri.to_s)}"
       Rails.cache.fetch(key, expires_in: CACHE_TTL) { fetch(uri).to_s }.presence
     end
-    
+
     def self.fetch(uri)
-      page     = read(uri)
-      href     = Nokogiri::HTML(page).at_css(LINK_SELECTOR)&.[]('href') or return
+      page = read(uri)
+      href = Nokogiri::HTML(page).at_css(LINK_SELECTOR)&.[]("href") or return
       endpoint = URI.join(uri.to_s, href)
-      html     = JSON.parse(read(endpoint))['html']
+      html = JSON.parse(read(endpoint))["html"]
       Rails::Html::SafeListSanitizer.new
                                     .sanitize(html, tags: ALLOWED_TAGS, attributes: ALLOWED_ATTRIBUTES)
                                     .presence if html.is_a?(String)
@@ -39,5 +39,4 @@ module VideoEmbed
 
     private_class_method :read
   end
-
 end
