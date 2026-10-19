@@ -32,6 +32,7 @@
       <span class="sr-only visually-hidden"><%= t(:'arclight.views.index.number_of_components', count: document.number_of_children) %></span></span>
     <% end %>
     <%= online_status %>
+    <%= render "catalog/restricted_component_badge", document: document %>
   </div>
     <%= content_tag('div', class: 'al-document-container text-muted') do %>
       <%= document.containers.join(', ') %>
