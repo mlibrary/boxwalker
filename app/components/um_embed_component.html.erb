@@ -1,15 +1,15 @@
+<h2 class="online-content-heading">
+  Online content
+  <span class="al-online-content-icon" aria-hidden="true"
+        data-bs-toggle="tooltip" title="Includes Digital Content">
+    <%= helpers.blacklight_icon(:online) %>
+  </span>
+</h2>
 <div class="al-digital-objects">
   <% @document.digital_objects.each do |dao| %>
     <% embed_url = helpers.quod_embed_url(dao.href) %>
     <% if embed_url %>
       <div class="al-digital-object mb-4">
-        <h2>
-          Online content
-          <span class="al-online-content-icon" aria-hidden="true"
-                data-bs-toggle="tooltip" title="Includes Digital Content">
-            <%= helpers.blacklight_icon(:online) %>
-          </span>
-        </h2>
         <iframe src="<%= embed_url %>"
                 height="600"
                 width="100%"
