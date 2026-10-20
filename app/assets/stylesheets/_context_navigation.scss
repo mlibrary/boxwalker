@@ -21,7 +21,7 @@
     padding-bottom: 15px;
   }
 
-  @include bs.media-breakpoint-down(lg) {
+  @include bs.media-breakpoint-down(md) {
     #sidebar {
       position: fixed;
       top: 0;
