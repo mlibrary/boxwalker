@@ -2,6 +2,10 @@ en:
   blacklight:
     application_name: "University of Michigan Finding Aids"
     search:
+      facets:
+        group:
+          close: "Hide filters"
+          open: "Show filters"
       page_title:
         title: "%{constraints} - %{application_name}"
         prefix: "Results for"
