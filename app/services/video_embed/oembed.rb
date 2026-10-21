@@ -2,6 +2,7 @@
 
 require "open-uri"
 require "json"
+
 module VideoEmbed
   # Looks up oEmbed HTML for a URL by reading the page's <head> for an
   # oEmbed discovery link. Results (including "nothing found") are cached.
