@@ -1,26 +1,32 @@
-
 module QuodHelper
-  QUOD_HOST = "quod.lib.umich.edu"
+  QUOD_HOST = "quod.lib.umich.edu".freeze
 
-  IMAGE_CLASS_PATTERN =
-    %r{quod\.lib\.umich\.edu/[a-z]/(\w+)/(x-[^/?#]+)/([^/?#]+)}
+  # /b/bhl/x-bl000001/bl000001
+  IMAGE_CLASS_PATH =
+    %r{\A/[a-z]/(?<collid>\w+)/(?<idno>x-[^/]+)/(?<filename>[^/]+)/?\z}
 
-  TEXT_CLASS_PATTERN =
-    %r{quod\.lib\.umich\.edu/[a-z]/(\w+)/([^/?#]+)/(\d+)}
+  # /m/micounty/bad0872.0001.001/5
+  TEXT_CLASS_PATH =
+    %r{\A/[a-z]/(?<collid>\w+)/(?<idno>[^/]+)/(?<seq>\d+)/?\z}
 
   def quod_embed_url(href)
     return if href.blank?
-    return unless href.include?(QUOD_HOST)
 
-    return href if href.include?("/api/embed/")
+    uri = begin
+            URI.parse(href.strip)
+          rescue URI::InvalidURIError
+            return
+          end
 
-    case href
-    when IMAGE_CLASS_PATTERN
-      collid, idno, filename = Regexp.last_match.captures
-      "https://#{QUOD_HOST}/cgi/i/image/api/embed/#{collid}:#{idno}:#{filename}"
-    when TEXT_CLASS_PATTERN
-      collid, idno, seq = Regexp.last_match.captures
-      "https://#{QUOD_HOST}/cgi/t/text/api/embed/#{collid}:#{idno}:#{seq}"
+    return unless uri.host&.casecmp?(QUOD_HOST)
+
+    path = uri.path.to_s
+    return uri.to_s if path.include?("/api/embed/")
+
+    if (m = IMAGE_CLASS_PATH.match(path))
+      "https://#{QUOD_HOST}/cgi/i/image/api/embed/#{m[:collid]}:#{m[:idno]}:#{m[:filename]}"
+    elsif (m = TEXT_CLASS_PATH.match(path))
+      "https://#{QUOD_HOST}/cgi/t/text/api/embed/#{m[:collid]}:#{m[:idno]}:#{m[:seq]}"
     end
   end
 end
