@@ -7,8 +7,11 @@
 </h2>
 <div class="al-digital-objects">
   <% @document.digital_objects.each do |dao| %>
-    <% embed_url = helpers.quod_embed_url(dao.href) %>
+    <% embed_url   = helpers.quod_embed_url(dao.href) %>
+    <% kaltura_url = embed_url ? nil : helpers.kaltura_embed_url(dao.href) %>
+
     <% if embed_url %>
+      <%# Quod / DDR image viewer (unchanged) %>
       <div class="al-digital-object mb-4">
         <iframe src="<%= embed_url %>"
                 height="600"
@@ -26,10 +29,29 @@
           <% end %>
         </div>
       </div>
+
+    <% elsif kaltura_url %>
+      <%# Kaltura: rendered server-side by VideoObjectHelper.
+          No data-controller here, so upstream JS never touches Kaltura links %>
+      <div class="mb-2">
+        <%= helpers.kaltura_iframe_tag(kaltura_url,
+                                       title: dao.label.presence || 'Media player') %>
+        <%# Original link kept as a fallback %>
+        <div class="al-digital-object">
+          <%= link_to (dao.label.presence || dao.href), dao.href,
+                      target: "_blank", rel: "noopener" %>
+        </div>
+      </div>
+
     <% else %>
+      <% oembed = helpers.oembed_html(dao.href) %>
       <div class="al-digital-object mb-2">
-        <%= link_to (dao.label.presence || dao.href), dao.href,
-                    target: "_blank", rel: "noopener" %>
+        <% if oembed %>
+          <%= oembed %>
+        <% else %>
+          <%= link_to (dao.label.presence || dao.href), dao.href,
+                      target: "_blank", rel: "noopener" %>
+        <% end %>
       </div>
     <% end %>
   <% end %>
