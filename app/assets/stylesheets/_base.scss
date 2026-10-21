@@ -119,6 +119,55 @@ mark, .mark {
   }
 }
 
+/* ======================== */
+/* Banner search box for mobile
+    breakpoint 768px */
+/* ====================== */
+
+@include bs.media-breakpoint-down(md) {
+  .header-utilities,
+  #search-col,
+  #search-col .search-query-form {
+    width: 100%;
+    min-width: 0;
+  }
+
+  #search-col {
+    .within-collection-dropdown,
+    .search-extra-controls,
+    #clear-search {
+      display: none !important;
+    }
+
+    .search-query-form > .input-group {
+      width: 100%;
+      min-width: 0;
+      flex-wrap: nowrap;
+    }
+
+    select[name="search_field"] {
+      flex: 0 0 25%;
+      width: 25%;
+      min-width: 0;
+    }
+
+    .search-autocomplete-wrapper {
+      flex: 1 1 auto;
+      width: auto;
+      min-width: 0;
+    }
+
+    .search-q {
+      width: 100%;
+      min-width: 0;
+    }
+
+    .search-btn {
+      flex: 0 0 auto;
+    }
+  }
+}
+
 /* Fix position:relative missing from BS5 col-md-12, homepage only */
 .col-md-12.home {
   position: relative;

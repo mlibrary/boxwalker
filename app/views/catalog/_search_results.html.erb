@@ -30,12 +30,6 @@
     <%= render 'shared/breadcrumbs' %>
   </div>
 
-  <div class="mb-2 d-lg-none">
-    <a class="btn btn-secondary btn-block sidebar-nav-toggle" href="#" id="navigate-collection-toggle" data-turbo="false">
-      <i class="fas fa-filter"></i> Search Filters
-    </a>
-  </div>
-
   <div class="constraints-wrapper">
     <%= render blacklight_config.view_config(document_index_view_type).constraints_component.new(search_state: search_state) %>
   </div>

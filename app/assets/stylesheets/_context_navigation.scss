@@ -6,48 +6,53 @@
 /* Styles for sidebar context navigation */
 /* ===================================== */
 
-/* sidebar set to fixed sticky position */
-#sidebar {
-  position: sticky;
-  top: 0;
-}
-
-.sidebar-scroll-wrapper {
-  height: calc(100vh - 270px);
-  overflow-y: auto;
-  overflow-x: hidden;
-  padding-bottom: 15px;
-}
-
-@media (max-width: 991.98px) {
+/* Collection navigation: sticky on desktop, offcanvas below lg. */
+.blacklight-catalog-show {
   #sidebar {
-    position: fixed;
-  }
-}
-#sidebar {
-  background: var.$color-background-primary;
-  @include bs.media-breakpoint-down(md) {
-    height: 100%;
-    overflow-y: auto;
-    position: fixed;
+    position: sticky;
     top: 0;
-    left: 0;
-    margin-top: 0;
-    padding-top: 0;
-    padding-left: 1rem !important;
-    padding-right: 1rem !important;
-    width: 85%;
-    transform: translateX(-100%);
-    transition: transform 250ms ease-in-out;
-    z-index: 1050;
-    &.expanded, &.show {
-      transform: translateX(0) !important;
-    }
-    button.close {
-      font-size: 2rem;
-      margin: 0.5rem 0.75rem;
+    background: var.$color-background-primary;
+  }
+
+  .sidebar-scroll-wrapper {
+    height: calc(100vh - 270px);
+    overflow-x: hidden;
+    overflow-y: auto;
+    padding-bottom: 15px;
+  }
+
+  @include bs.media-breakpoint-down(md) {
+    #sidebar {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 85%;
+      height: 100vh;
+      height: 100dvh;
+      margin-top: 0;
+      padding-top: 0;
+      padding-right: 1rem !important;
+      padding-left: 1rem !important;
+      overflow-y: auto;
+      transform: translateX(-100%);
+      transition: transform 250ms ease-in-out;
+      z-index: 1050;
+
+      &.expanded,
+      &.show {
+        transform: translateX(0) !important;
+      }
+
+      .btn-close {
+        margin: 0.5rem 0.75rem;
+        font-size: 2rem;
+      }
     }
 
+    .sidebar-scroll-wrapper {
+      height: auto;
+      overflow: visible;
+    }
   }
 }
 
