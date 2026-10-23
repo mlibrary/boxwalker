@@ -290,6 +290,10 @@ NAME_ELEMENTS.map do |selector|
   to_field "#{selector}_ssim", extract_xpath("//#{selector}"), unique
 end
 
+to_field "index_html_tesm", extract_xpath("/ead/archdesc/index | /ead/archdesc/descgrp/index", to_text: false) do |_record, accumulator|
+  accumulator.map!(&:to_html)
+end
+
 to_field "language_ssim", extract_xpath("/ead/archdesc/did/langmaterial")
 
 to_field "descrules_ssm", extract_xpath("/ead/eadheader/profiledesc/descrules")
