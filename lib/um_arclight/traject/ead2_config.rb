@@ -279,6 +279,9 @@ SEARCHABLE_NOTES_FIELDS.map do |selector|
   to_field "#{selector}_tesim", extract_xpath("/ead/archdesc/#{selector}/*[local-name()!='head'] | /ead/archdesc/descgrp/#{selector}/*[local-name()!='head']")
 end
 
+# UM customization: Indexing all of descgrp with type "add" as add
+to_field "add_tesim", extract_xpath("/ead/archdesc/descgrp[@type = 'add']", to_text: false)
+
 DID_SEARCHABLE_NOTES_FIELDS.map do |selector|
   to_field "#{selector}_html_tesm", extract_xpath("/ead/archdesc/did/#{selector}", to_text: false)
   to_field "#{selector}_tesim", extract_xpath("/ead/archdesc/did/#{selector}")

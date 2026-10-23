@@ -12,6 +12,7 @@ Rails.application.config.to_prepare do
         format_lists(node) if %w[list chronlist].include? node.name
         format_indexes(node) if node.name == "index"
         format_tables(node) if node.name == "table"
+        format_compound_elements(node) if %w[separatedmaterial relatedmaterial bibliography].include? node.name
         node
       end
     end
@@ -23,6 +24,14 @@ Rails.application.config.to_prepare do
       node["class"] = "external-link"
       node.wrap("<#{node.name}/>") unless Arclight::EadFormatHelpers::CONVERT_TO_SPAN_TAGS.include?(node.name)
       node.name = "a"
+    end
+
+    def format_compound_elements(node)
+      head = node.xpath("./head").first
+      head.name = "h3" if !head.nil?
+      return if head.present?
+      label = I18n.t("um_arclight.ead_element_labels.#{node.name}")
+      node.add_previous_sibling("<h3>#{label}</h3>")
     end
   end
 end

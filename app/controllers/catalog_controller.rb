@@ -337,8 +337,9 @@ class CatalogController < ApplicationController
     config.add_background_field "note", field: "note_html_tesm", helper_method: :render_html_tags
 
     # Collection Show Page - Related Section
-    config.add_related_field "relatedmaterial", field: "relatedmaterial_html_tesm", helper_method: :render_html_tags
-    config.add_related_field "separatedmaterial", field: "separatedmaterial_html_tesm", helper_method: :render_html_tags
+    # UM customization: Replaced relatedmaterial and separatedmaterial with
+    # broader Additional Descriptive Data (add) field
+    config.add_related_field "Additional Descriptive Data", field: "add_tesim", helper_method: :render_html_tags
     config.add_related_field "otherfindaid", field: "otherfindaid_html_tesm", helper_method: :render_html_tags
     config.add_related_field "altformavail", field: "altformavail_html_tesm", helper_method: :render_html_tags
     config.add_related_field "originalsloc", field: "originalsloc_html_tesm", helper_method: :render_html_tags
