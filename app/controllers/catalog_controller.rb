@@ -339,6 +339,8 @@ class CatalogController < ApplicationController
     # Collection Show Page - Related Section
     config.add_related_field "relatedmaterial", field: "relatedmaterial_html_tesm", helper_method: :render_html_tags
     config.add_related_field "separatedmaterial", field: "separatedmaterial_html_tesm", helper_method: :render_html_tags
+    config.add_related_field "bibliography", field: "bibliography_html_tesm", helper_method: :render_html_tags
+    config.add_related_field "Index(es)", field: "index_html_tesm", helper_method: :render_html_tags
     config.add_related_field "otherfindaid", field: "otherfindaid_html_tesm", helper_method: :render_html_tags
     config.add_related_field "altformavail", field: "altformavail_html_tesm", helper_method: :render_html_tags
     config.add_related_field "originalsloc", field: "originalsloc_html_tesm", helper_method: :render_html_tags
