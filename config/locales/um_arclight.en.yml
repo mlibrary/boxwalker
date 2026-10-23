@@ -79,6 +79,11 @@ en:
         Please <strong><a href="%{contact_link}" referrerpolicy="unsafe-url">contact us</a></strong> if 
         you cannot find what you're looking for.
 
+    ead_element_labels:
+      separatedmaterial: "Alternate Locations"
+      relatedmaterial: "Related Materials"
+      bibliography: "Bibliography"
+
   um_collection_info_component:
     more_info: "More info"
     collection_id: "Call number"
