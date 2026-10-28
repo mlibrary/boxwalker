@@ -2,7 +2,7 @@
 default: &default
   adapter: postgresql
   encoding: unicode
-  pool: 5
+  pool: <%= Integer(ENV.fetch("DB_POOL", "5")) %>
   host: <%= ENV.fetch("DB_HOST", "127.0.0.1") %>
   username: <%= ENV.fetch("DB_USERNAME", "myuser") %>
   password: <%= ENV.fetch("DB_PASSWORD", "secret") %>
@@ -15,7 +15,7 @@ default: &default
   # timeout (~34s). This matters in hybrid dev (host Ruby -> Postgres in Docker
   # Desktop), whose network proxy silently drops idle connections. The keepalive
   # probes also keep pooled connections warm so they never go stale.
-  connect_timeout: <%= ENV.fetch("DB_CONNECT_TIMEOUT", 5) %>
+  connect_timeout: <%= Integer(ENV.fetch("DB_CONNECT_TIMEOUT", "5")) %>
   keepalives: 1
   keepalives_idle: 10
   keepalives_interval: 5
