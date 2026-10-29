@@ -13,4 +13,4 @@ task start_prometheus: :environment do
   Yabeda::Prometheus::Exporter.start_metrics_server!
 end
 
-task('resque:work').enhance([:start_prometheus])
+task('resque:work').enhance([ :start_prometheus ])
