@@ -90,3 +90,10 @@ gem "devise"
 gem "devise-guests", "~> 0.8"
 gem "blacklight-locale_picker"
 gem "benchmark"
+
+# Metrics (yabeda)
+gem "yabeda-rails", "~> 0.11"
+gem "yabeda-puma-plugin", "~> 0.9"
+gem "yabeda-prometheus", '~> 0.9.1'
+gem "yabeda-http_requests", '~> 0.3.0'
+gem "webrick"
