@@ -400,7 +400,6 @@ RSpec.describe "um_arclight/traject/ead2_config.rb" do
       end
 
       it "indexes some generic elements from descgrp as other" do
-        p dual_result["other_html_tesm"]
         expect(dual_result["other_html_tesm"].join(" ")).to include "Some text data"
         expect(dual_result["other_html_tesm"].join(" ")).to include "Some item"
       end
