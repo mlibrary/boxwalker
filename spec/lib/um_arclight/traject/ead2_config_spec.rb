@@ -345,6 +345,8 @@ RSpec.describe "um_arclight/traject/ead2_config.rb" do
               <bibliography><head>Bibliography</head><p>DESCGRP bibliography text.</p></bibliography>
               <custodhist><head>Custodial History</head><p>DESCGRP custodial history text.</p></custodhist>
               <userestrict><head>Terms</head><p>DESCGRP use restriction text.</p></userestrict>
+              <p>Some text data</p>
+              <list><item>Some item</item></list>
             </descgrp>
           </archdesc>
         </ead>
@@ -395,6 +397,12 @@ RSpec.describe "um_arclight/traject/ead2_config.rb" do
 
       it "indexes userestrict_tesim from descgrp" do
         expect(dual_result["userestrict_tesim"].join(" ")).to include "DESCGRP use restriction text."
+      end
+
+      it "indexes some generic elements from descgrp as other" do
+        p dual_result["other_html_tesm"]
+        expect(dual_result["other_html_tesm"].join(" ")).to include "Some text data"
+        expect(dual_result["other_html_tesm"].join(" ")).to include "Some item"
       end
     end
 

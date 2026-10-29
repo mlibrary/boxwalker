@@ -268,8 +268,11 @@ to_field "date_range_isim",
   accumulator.replace(range.years.map(&:to_i))
 end
 
-to_field "indexes_html_tesm", extract_xpath("/ead/archdesc/index", to_text: false)
-to_field "indexes_tesim", extract_xpath("/ead/archdesc/index")
+# UM customization: Also look for indexes under descgrp
+to_field "indexes_html_tesm", extract_xpath("/ead/archdesc/index | /ead/archdesc/descgrp/index", to_text: false) do |_record, accumulator|
+  accumulator.map!(&:to_html)
+end
+to_field "indexes_tesim", extract_xpath("/ead/archdesc/index | /ead/archdesc/descgrp/index")
 
 SEARCHABLE_NOTES_FIELDS.map do |selector|
   to_field "#{selector}_html_tesm", extract_xpath("/ead/archdesc/#{selector}/*[local-name()!='head'] | /ead/archdesc/descgrp/#{selector}/*[local-name()!='head']", to_text: false) do |_record, accumulator|
@@ -290,9 +293,10 @@ NAME_ELEMENTS.map do |selector|
   to_field "#{selector}_ssim", extract_xpath("//#{selector}"), unique
 end
 
-to_field "index_html_tesm", extract_xpath("/ead/archdesc/index | /ead/archdesc/descgrp/index", to_text: false) do |_record, accumulator|
-  accumulator.map!(&:to_html)
-end
+# UM customization: Capture bare p, list, and chronlist elements under descgrp as Other
+other_xpath = "/ead/archdesc/descgrp/p | /ead/archdesc/descgrp/list | /ead/archdesc/descgrp/chronlist"
+to_field "other_html_tesm", extract_xpath(other_xpath, to_text: false)
+to_field "other_tesim", extract_xpath(other_xpath)
 
 to_field "language_ssim", extract_xpath("/ead/archdesc/did/langmaterial")
 
