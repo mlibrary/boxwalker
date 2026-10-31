@@ -3,6 +3,9 @@
 require "rails_helper"
 
 RSpec.describe "Google Tag Manager", type: :request do
+  # CI specs run without built CSS, which the layout links to
+  before { allow_any_instance_of(ActionView::Base).to receive(:stylesheet_link_tag).and_return("") }
+
   it "renders both snippets when the id is set" do
     allow(Rails.configuration.settings).to receive(:google_tag_manager_id).and_return("GTM-TEST000")
 
