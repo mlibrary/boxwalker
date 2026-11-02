@@ -246,7 +246,7 @@ $bi-exclamation-triangle-fill: url("data:image/svg+xml,%3Csvg xmlns='http://www.
 
 #content {
   .paginate-section {
-  padding-left: 1rem;
+    padding-left: 1rem;
   }
 }
 
@@ -356,6 +356,7 @@ $bi-exclamation-triangle-fill: url("data:image/svg+xml,%3Csvg xmlns='http://www.
     width: unset;
   }
   select[name="search_field"] {
+    flex: 0 0 auto;
     width: auto;
   }
 }
