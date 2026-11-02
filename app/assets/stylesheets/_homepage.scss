@@ -105,9 +105,10 @@
 }
 
 .main-title {
-  margin: 0.5em 0;
+  font-size: clamp(2rem, 1.25rem + 2vw, 3rem);
+   margin: 0.5em 0;
 }
-
+ 
 .card-icon {
   color: var.$color-teal-400;
   background-color: var.$color-teal-100;
