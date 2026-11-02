@@ -243,13 +243,20 @@ mark, .mark {
   }
 }
 
-/* Prevent FOUC for the universal header */
+/* Universal Header FOUC (Design System) */
 
 m-universal-header {
   display: block;
+  min-height: 37px;
+  transition: opacity 0.3s ease-in;
 }
 
 m-universal-header:not(.hydrated) {
+  background: var(--color-blue-100);
   opacity: 0;
-  visibility: hidden;
+  
+}
+
+m-universal-header.hydrated {
+  opacity: 1;
 }
