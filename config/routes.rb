@@ -12,6 +12,13 @@ Rails.application.routes.draw do
   root to: "catalog#index"
   concern :searchable, Blacklight::Routes::Searchable.new
 
+  # Define permissive track/raw routes first because Blacklight's default :id
+  # constraint rejects the periods in our finding-aid IDs.
+  constraints(id: dynamic_constraint) do
+    post "/catalog/:id/track", to: "catalog#track"
+    get "/catalog/:id/raw", to: "catalog#raw", defaults: { format: "json" }
+  end
+
   resource :catalog, only: [], as: "catalog", path: "/catalog", controller: "catalog" do
     concerns :searchable
     concerns :range_searchable
