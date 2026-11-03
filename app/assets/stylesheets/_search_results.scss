@@ -34,7 +34,7 @@
 
     .constraint-value {
       @include bs.media-breakpoint-down(lg) {
-        max-width: 20rem;
+       max-width: min(20rem, calc(100vw - 7rem));
       }
     }
 
