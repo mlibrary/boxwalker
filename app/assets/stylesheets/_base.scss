@@ -120,9 +120,32 @@ mark, .mark {
 }
 
 /* ======================== */
-/* Banner search box for mobile
-    breakpoint 768px */
+/* Banner search box button color and
+   for mobile breakpoint 768px */
 /* ====================== */
+
+#search-col {
+  .search-btn {
+      color: var.$text-primary;
+      background-color: var.$color-maize-400;
+      border-color: var.$color-maize-400;
+
+      &:hover {
+        color: var.$text-primary;
+        background-color: var.$color-maize-400;
+        border-color: var.$color-maize-400;
+      }
+      &:focus {
+        outline: 0;
+        box-shadow: 0 0 0 2px var.$color-maize-400,
+        0 0 0 3px var.$color-neutral-400;
+        border-radius: 2px !important;
+        color: var.$text-primary;
+        background-color: var.$color-maize-400;
+        border-color: var.$color-maize-400;
+      }
+    }
+}
 
 @include bs.media-breakpoint-down(md) {
   .header-utilities,
@@ -179,6 +202,7 @@ mark, .mark {
   font-size: 16px;
   margin-bottom: 2rem;
   padding-top: 1rem;
+  padding-left: 1rem;
 }
 
 /* Navbars */
@@ -187,4 +211,52 @@ mark, .mark {
   position: sticky !important;
   top: 0;
   z-index: 2;
+}
+
+/* Spacing */
+
+#content {
+  padding-bottom: 2rem;
+}
+
+/* Accessibility */
+
+:focus-visible {
+  outline: 0 !important;
+  box-shadow: 0 0 0 2px var.$color-maize-400,
+    0 0 0 3px var.$color-neutral-400 !important;
+  border-radius: 2px !important;
+}
+
+@media (prefers-reduced-motion: reduce) {
+
+  *,
+  ::before,
+  ::after {
+    animation-delay: -1ms !important;
+    animation-duration: 1ms !important;
+    animation-iteration-count: 1 !important;
+    background-attachment: initial !important;
+    scroll-behavior: auto !important;
+    transition-duration: 0s !important;
+    transition-delay: 0s !important;
+  }
+}
+
+/* Universal Header FOUC (Design System) */
+
+m-universal-header {
+  display: block;
+  min-height: 37px;
+  transition: opacity 0.3s ease-in;
+}
+
+m-universal-header:not(.hydrated) {
+  background: var(--color-blue-100);
+  opacity: 0;
+  
+}
+
+m-universal-header.hydrated {
+  opacity: 1;
 }
