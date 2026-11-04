@@ -1,2 +1,4 @@
 shared:
   default_contact_link: mailto:digital-collections-help@umich.edu
+  # Set only in production via findingaids-argocd env_additions; blank disables GTM
+  google_tag_manager_id: <%= ENV["GOOGLE_TAG_MANAGER_ID"] %>
