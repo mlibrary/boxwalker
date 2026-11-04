@@ -29,4 +29,21 @@ RSpec.describe "catalog routing", type: :routing do
       id: "Current.Finding-Aid"
     )
   end
+
+  it "routes a POST to a dotted id's track path to the track action" do
+    expect(post: "/catalog/umich-bhl-87265.11/track").to route_to(
+      controller: "catalog",
+      action: "track",
+      id: "umich-bhl-87265.11"
+    )
+  end
+
+  it "routes a dotted id's raw path to the raw action" do
+    expect(get: "/catalog/umich-bhl-87265.11/raw").to route_to(
+      controller: "catalog",
+      action: "raw",
+      id: "umich-bhl-87265.11",
+      format: "json"
+    )
+  end
 end
