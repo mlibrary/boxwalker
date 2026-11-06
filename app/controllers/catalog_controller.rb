@@ -16,6 +16,9 @@ class CatalogController < ApplicationController
   include UmArclight::Catalog
 
   configure_blacklight do |config|
+    # Disable server-side search session persistence to the searches table.
+    config.track_search_session.storage = false
+
     ## Class for sending and receiving requests from a search index
     # config.repository_class = Blacklight::Solr::Repository
     #
