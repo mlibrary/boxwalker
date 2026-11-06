@@ -19,7 +19,7 @@ class UmCollapsibleHierarchyComponent < Blacklight::Component
   end
 
   def list_classes
-    ["documents", ("collapse show" if collapsible?)].compact.join(" ")
+    [ "documents", ("collapse show" if collapsible?) ].compact.join(" ")
   end
 
   def hierarchy_collection
