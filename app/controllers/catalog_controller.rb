@@ -87,7 +87,7 @@ class CatalogController < ApplicationController
     config.show.embed_component = UmEmbedComponent
     config.show.access_component = UmAccessComponent
     config.show.online_status_component = Arclight::OnlineStatusIndicatorComponent
-    config.show.expand_hierarchy_component = Arclight::ExpandHierarchyButtonComponent
+    config.show.expand_hierarchy_component = UmExpandHierarchyButtonComponent
     config.show.display_type_field = "level_ssm"
     # config.show.thumbnail_field = 'thumbnail_path_ss'
     config.show.document_presenter_class = Arclight::ShowPresenter

@@ -9,17 +9,23 @@
     current_target?)].compact).join(' ') do %>
 
   <div class="documentHeader" data-document-id="<%= document.id %>">
-    <% if document.children? %>
-      <%= link_to(
-        "#collapsible-hierarchy-#{document.id}",
-        class: "al-toggle-view-children#{' collapsed' unless show_expanded?}",
-        aria: { label: t('arclight.hierarchy.view_all'), expanded: show_expanded? },
-        data: { bs_toggle: 'collapse', toggle: 'collapse' }
-        ) do %>
-        <%# um span class needed to style plus-minus icon with fill and border %>
-        <span class="al-toggle-icon" aria-hidden="true"></span>
+<% if document.children? %>
+        <%= content_tag(
+              :button,
+              type: "button",
+              class: "al-toggle-view-children#{' collapsed' unless show_expanded?}",
+              aria: {
+                label: t("um_arclight.hierarchy.toggle_children",
+                         title: document.normalized_title,
+                         default: "Show or hide components within %{title}"),
+                expanded: show_expanded?,
+                controls: "collapsible-hierarchy-#{document.id}"
+              },
+              data: { bs_toggle: "collapse", bs_target: "#collapsible-hierarchy-#{document.id}" }
+            ) do %>
+          <span class="al-toggle-icon" aria-hidden="true"></span>
+        <% end %>
       <% end %>
-    <% end %>
 
   <div class="index_title document-title-heading" data-turbo="false">
     <% if current_target? || !helpers.is_interesting_component?(document) %>
