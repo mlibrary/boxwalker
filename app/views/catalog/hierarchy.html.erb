@@ -1,13 +1,13 @@
-<p><%= params[:id] %></p>
 <%= turbo_frame_tag "al-hierarchy-#{params[:id]}#{params[:key]}" do %>
   <%= render partial: "paginate_compact", object: @response if show_pagination? && params[:paginate] %>
   <% presenters = @response.documents.map{ | document | document_presenter(document) } %>
   <% if params[:hierarchy].present? %>
-    <ul class="documents">
-      <%= render UmDocumentCollectionHierarchyComponent.with_collection(presenters,
-                                                                                blacklight_config: blacklight_config,
-                                                                                nest_path: params[:nest_path]) %>
-    </ul>
+    <%= render UmCollapsibleHierarchyComponent.new(
+      presenters: presenters,
+      blacklight_config: blacklight_config,
+      nest_path: params[:nest_path],
+      frame_key: "#{params[:id]}#{params[:key]}",
+      collapsible: params[:collapsible].present?) %>
   <% elsif params[:contents].present? %>
     <ul class="documents">
       <%= render UmContentsDocumentCollectionHierarchyComponent.with_collection(

@@ -141,3 +141,19 @@
   font-weight: var.$regular;
   font-size: 0.875rem;
 }
+
+.al-hierarchy-collapse-toggle {
+  .al-collapse-label-expand {
+    display: none;
+  }
+
+  &.collapsed {
+    .al-collapse-label-collapse {
+      display: none;
+    }
+
+    .al-collapse-label-expand {
+      display: inline;
+    }
+  }
+}
