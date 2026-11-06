@@ -192,7 +192,7 @@ vrc:
   country: 'USA'
   phone: ''
   contact_info: 'vrum@umich.edu'
-  thumbnail_url: 'https://mapproxy.studentlife.umich.edu/images/tappan-hall/AXP2S1698.jpg'
+  thumbnail_url: '/thumbnails/tappan.png'
   repo_about:
     using_materials: 'Finding aids describe collections of primary sources and other unique, original, or rare materials. Access to the original physical items, when available, requires requesting items for use in the reading room associated with a given collection. Items may not be requested for offsite use.'
     visitor_info: 'See <a href="https://lsa.umich.edu/histartvrc/faculty-students.html">https://lsa.umich.edu/histartvrc/faculty-students.html</a>'
