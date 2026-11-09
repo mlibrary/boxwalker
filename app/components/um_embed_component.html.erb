@@ -9,9 +9,10 @@
   <% @document.digital_objects.each do |dao| %>
     <% embed_url   = helpers.quod_embed_url(dao.href) %>
     <% kaltura_url = embed_url ? nil : helpers.kaltura_embed_url(dao.href) %>
+    <% link_label  = dao.label.presence || dao.href %>
 
     <% if embed_url %>
-      <%# Quod / DDR image viewer (unchanged) %>
+      <%# Quod / DDR image viewer %>
       <div class="al-digital-object mb-4">
         <iframe src="<%= embed_url %>"
                 height="600"
@@ -22,10 +23,10 @@
                 style="border: 0;"
                 title="<%= dao.label.presence || 'Embedded image viewer' %>"></iframe>
         <div class="ddr-link-under">
-          <%= link_to dao.href, target: "_blank", rel: "noopener" do %>
-            <span>View Item Page / More Info / Download</span>
-            <strong class="bi bi-box-arrow-up-right" aria-hidden="true"></strong>
-            <span class="visually-hidden">(opens in new tab)</span>
+          <%= link_to dao.href, target: "_blank", rel: "noopener noreferrer" do %>
+            View Item Page / More Info / Download
+            <i class="bi bi-box-arrow-up-right" aria-hidden="true"></i>
+            <span class="visually-hidden">(opens in a new window)</span>
           <% end %>
         </div>
       </div>
@@ -38,8 +39,11 @@
                                        title: dao.label.presence || 'Media player') %>
         <%# Original link kept as a fallback %>
         <div class="al-digital-object">
-          <%= link_to (dao.label.presence || dao.href), dao.href,
-                      target: "_blank", rel: "noopener" %>
+          <%= link_to dao.href, target: "_blank", rel: "noopener noreferrer" do %>
+            <%= link_label %>
+            <i class="bi bi-box-arrow-up-right" aria-hidden="true"></i>
+            <span class="visually-hidden">(opens in a new window)</span>
+          <% end %>
         </div>
       </div>
 
@@ -49,8 +53,11 @@
         <% if oembed %>
           <%= oembed %>
         <% else %>
-          <%= link_to (dao.label.presence || dao.href), dao.href,
-                      target: "_blank", rel: "noopener" %>
+          <%= link_to dao.href, target: "_blank", rel: "noopener noreferrer" do %>
+            <%= link_label %>
+            <i class="bi bi-box-arrow-up-right" aria-hidden="true"></i>
+            <span class="visually-hidden">(opens in a new window)</span>
+          <% end %>
         <% end %>
       </div>
     <% end %>
