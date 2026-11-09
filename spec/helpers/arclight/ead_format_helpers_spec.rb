@@ -2,9 +2,10 @@
 
 require "rails_helper"
 
-# Covers the UM customization in
-# config/initializers/arclight_ead_format_href.rb, which restores hyperlinking
-# of href-bearing EAD elements (notably <title href>) that stock Arclight drops.
+# Covers the UM customizations in
+# config/initializers/arclight_ead_format.rb, which
+# - restores hyperlinking of href-bearing EAD elements (notably <title href>) that stock Arclight drops.
+# - uses the correct heading level (h4) for indexes and tables
 RSpec.describe Arclight::EadFormatHelpers, type: :helper do
   describe "#render_html_tags" do
     it "renders <title href> as an external anchor (ARC-190 regression)" do
@@ -42,5 +43,15 @@ RSpec.describe Arclight::EadFormatHelpers, type: :helper do
       expect(html).to include('class="external-link"')
       expect(html).to include(">Example</a>")
     end
+  end
+
+  it "uses the correct heading level for indexes" do
+    html = helper.render_html_tags(value: "<index><head>Some Index</head></index>")
+    expect(html).to include("<h4 class=\"index-head\" id=\"index-some-index\">Some Index</h4>")
+  end
+
+  it "uses the correct heading level for tables" do
+    html = helper.render_html_tags(value: "<table><head>Some Table</head></index>")
+    expect(html).to include("<h4 class=\"table-head\">Some Table</h4>")
   end
 end
