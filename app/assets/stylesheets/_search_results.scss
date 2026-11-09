@@ -185,13 +185,13 @@
   margin-top: 1rem;
 }
 
-.advanced-search-submit {
+.btn-primary.advanced-search-submit {
   color: var(--color-neutral-400);
   background-color: var(--color-maize-400);
   border-color: var(--color-maize-400);
 }
 
-.advanced-search-submit:focus {
+.btn-primary.advanced-search-submit:focus, .btn-primary.advanced-search-submit:hover, .btn-primary.advanced-search-submit:active {
   color: var(--color-neutral-400);
   background-color: var(--color-maize-400);
   border-color: var(--color-maize-400);
