@@ -145,7 +145,7 @@
   }
 }
 
-.blacklight-has_online_content_ssim .card-header {
+#facets .blacklight-has_online_content_ssim .card-header {
   display: none;
 }
 /* online-icon hard-coded, green fill embedded via hex */
@@ -157,7 +157,7 @@
   padding-left: 45px;
 }
 
-.facet-values .facet-label {
+#facets .facet-values .facet-label {
   display: table-cell;
   padding-right: 1em;
   text-indent: -15px;
@@ -170,11 +170,31 @@
   hyphens: auto;
 }
 
-.facet-values .remove {
+#facets .facet-values .remove {
   color: var.$gray-light;
   font-weight: bold;
   padding-left: 0.5rem;
   text-decoration: none;
+}
+
+#advanced_search_facets .facet-content .card-body {
+  padding: 0.75rem 1.438rem;
+}
+
+.advanced-facet-limits .card + .card {
+  margin-top: 1rem;
+}
+
+.btn-primary.advanced-search-submit {
+  color: var(--color-neutral-400);
+  background-color: var(--color-maize-400);
+  border-color: var(--color-maize-400);
+}
+
+.btn-primary.advanced-search-submit:focus, .btn-primary.advanced-search-submit:hover, .btn-primary.advanced-search-submit:active {
+  color: var(--color-neutral-400);
+  background-color: var(--color-maize-400);
+  border-color: var(--color-maize-400);
 }
 
 .blacklight-icons svg {
