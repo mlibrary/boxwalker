@@ -181,6 +181,22 @@
   padding: 0.75rem 1.438rem;
 }
 
+.advanced-facet-limits .card + .card {
+  margin-top: 1rem;
+}
+
+.advanced-search-submit {
+  color: var(--color-neutral-400);
+  background-color: var(--color-maize-400);
+  border-color: var(--color-maize-400);
+}
+
+.advanced-search-submit:focus {
+  color: var(--color-neutral-400);
+  background-color: var(--color-maize-400);
+  border-color: var(--color-maize-400);
+}
+
 .blacklight-icons svg {
   height: 1rem;
   width: 1rem
