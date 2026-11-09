@@ -1,6 +1,7 @@
 <h2 class="online-content-heading">
   Online content
   <span class="al-online-content-icon" aria-hidden="true"
+        data-bs-toggle="tooltip" title="Includes Digital Content">
     <%= helpers.blacklight_icon(:online) %>
   </span>
 </h2>
@@ -12,7 +13,7 @@
 
     <% if embed_url %>
       <%# Quod / DDR image viewer %>
-      <div class="al-digital-object mb-4">
+      <div class="al-digital-object">
         <iframe src="<%= embed_url %>"
                 height="600"
                 width="100%"
@@ -33,11 +34,11 @@
     <% elsif kaltura_url %>
       <%# Kaltura: rendered server-side by VideoObjectHelper.
           No data-controller here, so upstream JS never touches Kaltura links %>
-      <div class="mb-2">
+      <div class="al-digital-object">
         <%= helpers.kaltura_iframe_tag(kaltura_url,
                                        title: dao.label.presence || 'Media player') %>
         <%# Original link kept as a fallback %>
-        <div class="al-digital-object">
+        <div class="ddr-link-under">
           <%= link_to dao.href, target: "_blank", rel: "noopener noreferrer" do %>
             <%= link_label %>
             <i class="bi bi-box-arrow-up-right" aria-hidden="true"></i>
@@ -48,7 +49,7 @@
 
     <% else %>
       <% oembed = helpers.oembed_html(dao.href) %>
-      <div class="al-digital-object mb-2">
+      <div class="al-digital-object">
         <% if oembed %>
           <%= oembed %>
         <% else %>
