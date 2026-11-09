@@ -216,9 +216,9 @@ archivemi:
     using_materials: 'Finding aids describe collections of primary sources and other unique, original, or rare materials. Access to the original physical items, when available, requires requesting items for use in the reading room associated with a given collection. Items may not be requested for offsite use.'
     visitor_info: 'See <a href="https://www.michigan.gov/mhc/archives/plan-your-archives-visit">https://www.michigan.gov/mhc/archives/plan-your-archives-visit</a> for information on policies and parking'
     how_to_order: 'See <a href="https://www.michigan.gov/mhc/archives/plan-your-archives-visit#Copies">https://www.michigan.gov/mhc/archives/plan-your-archives-visit#Copies</a> for policies and pricing'
-umlibraryead:
+mlibraryead:
   name: 'U-M Library Finding Aids'
-  slug: 'umlibraryead'
+  slug: 'mlibraryead'
   about_url: http://lib.umich.edu/
   description: "U-M Library's Finding Aids site provides access to finding aids or descriptive inventories for archival records and manuscript collections not held in the Special Collections Research Center."
   visit_note: ''
