@@ -17,6 +17,9 @@ en:
         download:
           pdf: Download PDF Finding Aid
           html: Download HTML Finding Aid
+          multiple:
+            pdf: Finding aid (PDF)
+            ead: EAD (XML)
       repositories:
         title: "Repositories - %{application_name}"
     truncation:
