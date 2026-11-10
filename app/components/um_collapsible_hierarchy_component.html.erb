@@ -1,0 +1,19 @@
+<ul id="<%= list_id %>" class="<%= list_classes %>">
+  <%= render hierarchy_collection %>
+</ul>
+
+<% if collapsible? %>
+  <button class="btn btn-secondary btn-sm al-hierarchy-collapse-toggle"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#<%= list_id %>"
+          aria-expanded="true"
+          aria-controls="<%= list_id %>">
+    <span class="al-collapse-label-collapse">
+      <%= t("arclight.views.show.collapse") %>
+    </span>
+    <span class="al-collapse-label-expand">
+      <%= t("arclight.views.show.expand") %>
+    </span>
+  </button>
+<% end %>

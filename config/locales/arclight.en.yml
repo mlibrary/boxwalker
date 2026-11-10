@@ -4,6 +4,7 @@ en:
       home:
         title: "Home - %{application_name}"
       show:
+        collapse: Collapse
         has_content: Navigate The Collection
         sections:
           component_indexed_terms_field: Subjects

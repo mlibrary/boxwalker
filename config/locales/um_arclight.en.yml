@@ -79,6 +79,10 @@ en:
         Please <strong><a href="%{contact_link}" referrerpolicy="unsafe-url">contact us</a></strong> if 
         you cannot find what you're looking for.
 
+    hierarchy:
+      toggle_children: "Show or hide components within %{title}"
+
+
   um_collection_info_component:
     more_info: "More info"
     collection_id: "Call number"

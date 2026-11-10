@@ -113,6 +113,10 @@
   background-color: var.$color-teal-100;
   border: 1px solid var.$color-teal-400;
   border-radius: 50%;
+    &:hover {
+      box-shadow: 0 0 0 2px var.$color-maize-400,
+      0 0 0 3px var.$color-neutral-400;
+    }
 }
 
 .al-toggle-icon {
@@ -140,4 +144,20 @@
   background-color: var.$color-neutral-100 !important;
   font-weight: var.$regular;
   font-size: 0.875rem;
+}
+
+.al-hierarchy-collapse-toggle {
+  .al-collapse-label-expand {
+    display: none;
+  }
+
+  &.collapsed {
+    .al-collapse-label-collapse {
+      display: none;
+    }
+
+    .al-collapse-label-expand {
+      display: inline;
+    }
+  }
 }
