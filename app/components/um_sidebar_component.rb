@@ -12,6 +12,6 @@ class UmSidebarComponent < Arclight::SidebarComponent
   def collection_context
     render UmCollectionContextComponent.new(
       presenter: document_presenter(document),
-      download_component: UmDocumentDownloadComponent)
+      download_component: Arclight::DocumentDownloadComponent)
   end
 end
