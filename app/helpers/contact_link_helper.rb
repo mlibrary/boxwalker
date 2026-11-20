@@ -4,7 +4,7 @@
 # Uses the Qualtrics survey link from ArgoCD (QUALTRICS_SURVEY_LINK)
 # Use this helper to integrate survey_link into error and other help pages
 module ContactLinkHelper
-  FALLBACK_CONTACT_LINK = 'mailto:digital-collections-help@umich.edu'
+  FALLBACK_CONTACT_LINK = "mailto:digital-collections-help@umich.edu"
 
   def contact_link
     Rails.configuration.settings[:qualtrics_survey_link].presence || default_contact_link
