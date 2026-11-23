@@ -27,7 +27,7 @@
         <% end %>
         <div class="col">
           <hgroup data-document-id="<%= document.id %>" role="group" aria-roledescription="Heading group">
-            <h3 class="document-title-heading">
+            <h3 class="document-title-heading" data-turbo="false">
               <% if helpers.is_interesting_component?(document) %>
                 <%= helpers.link_to_document document %>
               <% else %>
