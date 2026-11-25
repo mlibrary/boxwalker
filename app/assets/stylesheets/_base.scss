@@ -18,6 +18,12 @@ html {
   scroll-padding-top: 2rem;
 }
 
+html:has(body.blacklight-catalog-show) {
+  // Lazy-loaded Contents can move anchor targets during an animated scroll.
+  scroll-behavior: auto;
+  scroll-padding-top: 6rem;
+}
+
 body, html {
   padding: 0;
   margin: 0;
