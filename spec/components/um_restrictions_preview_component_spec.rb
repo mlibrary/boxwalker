@@ -34,6 +34,14 @@ RSpec.describe UmRestrictionsPreviewComponent, type: :component do
   end
 
   describe "rendered output" do
+    it "links directly to the access section without a Turbo visit" do
+      doc = document("accessrestrict_html_tesm" => [ "<p>Open for research.</p>" ])
+      render_inline(described_class.new(document: doc))
+
+      expect(page).to have_css('a[href="#using-these-materials"][data-turbo="false"]',
+                              text: "More about accessing and using these materials...")
+    end
+
     it "shows the Use & Permissions section from the component's own userestrict" do
       doc = document("userestrict_html_tesm" => [ "<p>Access is restricted to the reading room.</p>" ])
       render_inline(described_class.new(document: doc))
